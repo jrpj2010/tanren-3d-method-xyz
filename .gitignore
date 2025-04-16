@@ -52,3 +52,24 @@ figma-test.zip
 .roo/
 .specstory/
 # .cursorindexingignore # This file itself might be useful to keep track of
+
+# Embedded repositories
+figma-test/my-app/
+import/01_prompt-generator_20250319/
+my-shopping-list-app/
+import/03_research-app/
+
+# Other projects or generated content directories
+05_tanren_new9/
+AI森本千賀子/
+business-card-scanner/
+figma-test/
+figma-test2/
+import/ # Includes sub-repositories listed above
+infographic-gen/
+pdf_env/
+projects/
+vibe-coding/
+vibecoding-site/
+昭和明治スライド/
+中小企業向け営業改革書籍作成プロジェクト/

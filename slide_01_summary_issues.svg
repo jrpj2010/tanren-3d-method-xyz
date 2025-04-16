@@ -1,0 +1,131 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="background-color: #f4f1ea; font-family: 'Noto Sans JP', sans-serif;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&display=swap');
+      .title { font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700; fill: #2c2c2c; letter-spacing: 0.1em; }
+      .subtitle { font-size: 14px; font-weight: 700; fill: #2c2c2c; letter-spacing: 0.05em; }
+      .body { font-size: 11px; fill: #2c2c2c; letter-spacing: 0.05em; line-height: 1.6; }
+      .highlight { fill: #b3322b; font-weight: bold; }
+      .tag { font-size: 9px; fill: #f4f1ea; font-weight: bold; border-radius: 3px; padding: 1px 4px; display: inline-block; margin-right: 5px;}
+      .col1-accent { fill: #b3322b; } /* 朱色 */
+      .col2-accent { fill: #1a5b66; } /* 藍色 */
+      .col3-accent { fill: #653a5e; } /* 紫色 */
+      .line-dot { stroke: #2c2c2c; stroke-width: 1; }
+      .dot { fill: #2c2c2c; }
+      .card { fill: #ffffff; stroke: #cccccc; stroke-width: 0.5; rx: 3px; ry: 3px; }
+      .header-text { font-size: 10px; fill: #555; }
+      .footer-text { font-size: 9px; fill: #777; }
+    </style>
+  </defs>
+
+  <!-- Header -->
+  <text x="40" y="35" class="header-text">TANREN 定例会議議事録サマリー</text>
+  <line x1="40" y1="45" x2="1240" y2="45" class="line-dot" />
+
+  <!-- Main Title -->
+  <text x="640" y="80" text-anchor="middle" class="title">📜 定例報告：現状と課題認識</text>
+  <line x1="540" y1="90" x2="740" y2="90" class="line-dot" />
+  <circle cx="535" cy="90" r="3" class="dot col1-accent" />
+  <circle cx="745" cy="90" r="3" class="dot col1-accent" />
+
+  <!-- Columns -->
+  <g transform="translate(40, 120)">
+    <!-- Column 1: 要点 (抽象) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#b3322b;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;">📌 要点サマリー</text>
+
+    <text x="20" y="70" class="subtitle col1-accent">定例会議の概要</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em">・主要議題：プレゼン甲子園準備、Ver9.0計画</tspan>
+      <tspan x="20" dy="1.2em">・参加者：佐藤氏、Toya氏、暮石氏 他</tspan>
+    </text>
+
+    <text x="20" y="150" class="subtitle col1-accent">運用・保守状況</text>
+    <text x="20" y="175" class="body">
+      <tspan x="20" dy="1.2em">・新規問い合わせ：<tspan class="highlight">ゼロ件</tspan></tspan>
+      <tspan x="20" dy="1.2em">・継続案件：PC動画アップ不可、AI FBプロンプト</tspan>
+    </text>
+
+    <text x="20" y="230" class="subtitle col1-accent">主要決定事項（概要）</text>
+     <text x="20" y="255" class="body">
+      <tspan x="20" dy="1.2em">・甲子園：<tspan class="highlight">SQL修正</tspan>、デモ環境テスト要</tspan>
+      <tspan x="20" dy="1.2em">・開発：Ver9.0計画、<tspan class="highlight">来週提示</tspan></tspan>
+      <tspan x="20" dy="1.2em">・保守：AI FBプロンプト<tspan class="highlight">リリース済</tspan></tspan>
+    </text>
+
+    <text x="20" y="320" class="subtitle col1-accent">特記事項</text>
+     <text x="20" y="345" class="body">
+      <tspan x="20" dy="1.2em">・Gemini 1.5 Proの<tspan class="highlight">高精度動画評価</tspan>能力共有</tspan>
+      <tspan x="20" dy="1.2em">・福井県メンバー<tspan class="highlight">交代</tspan>、ID追加可能性</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(450, 120)">
+    <!-- Column 2: 詳細 (具体) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#1a5b66;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;"> F 詳細情報</text>
+
+    <text x="20" y="70" class="subtitle col2-accent">プレゼン甲子園準備</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em">・エントリー状況把握：<tspan class="highlight">Exploratory運用踏襲</tspan></tspan>
+      <tspan x="20" dy="1.2em">・仕様変更対応：ユーザー登録/エントリー分離</tspan>
+      <tspan x="20" dy="1.2em">・必要情報：高校情報、AI先生利用状況等</tspan>
+      <tspan x="20" dy="1.2em">・対応：<tspan class="highlight">SQL修正必須</tspan>、佐藤氏要件整理</tspan>
+    </text>
+
+    <text x="20" y="180" class="subtitle col2-accent">Ver9.0 開発計画</text>
+    <text x="20" y="205" class="body">
+      <tspan x="20" dy="1.2em">・主要テーマ案(佐藤氏)：<tspan class="highlight">RAG</tspan>、<tspan class="highlight">ビジュアル評価</tspan>、<tspan class="highlight">TANRENスコア</tspan></tspan>
+      <tspan x="20" dy="1.2em">・課題対応案(アジルコア)：mp4エンコードスキップ、BLOB削減</tspan>
+      <tspan x="20" dy="1.2em">・進め方：<tspan class="highlight">来週Toya氏が計画案提示</tspan></tspan>
+    </text>
+
+     <text x="20" y="290" class="subtitle col2-accent">運用保守：継続案件詳細</text>
+     <text x="20" y="315" class="body">
+      <tspan x="20" dy="1.2em">・PC動画アップ不可(目野氏): 代替手段あり、<tspan class="highlight">優先度低下</tspan></tspan>
+      <tspan x="20" dy="1.2em">・AI FBプロンプト同期: <tspan class="highlight">3/14本番リリース済</tspan></tspan>
+      <tspan x="20" dy="1.2em">  └ 顧客告知/影響確認: <tspan class="highlight">問題なし</tspan> (喜田氏確認)</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(860, 120)">
+    <!-- Column 3: まとめ (構造) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#653a5e;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;">📊 構造化サマリー</text>
+
+    <text x="20" y="70" class="subtitle col3-accent">決定/確認事項</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em">1. 甲子園SQL修正：<tspan class="highlight">実施確定</tspan> (仕様変更対応)</tspan>
+      <tspan x="20" dy="1.2em">2. 甲子園デモ環境：<tspan class="highlight">来週提供</tspan>、評価フローテストへ</tspan>
+      <tspan x="20" dy="1.2em">3. 甲子園一括申請：<tspan class="highlight">リハーサル実施決定</tspan> (約200チーム想定)</tspan>
+      <tspan x="20" dy="1.2em">4. TANREN CHAT：<tspan class="highlight">最新化対応</tspan> (アジルコア依頼)</tspan>
+      <tspan x="20" dy="1.2em">5. Ver9.0計画：<tspan class="highlight">来週Toya氏が具体案提示</tspan></tspan>
+      <tspan x="20" dy="1.2em">6. AI FBプロンプト：<tspan class="highlight">リリース完了</tspan>、問題なし確認</tspan>
+      <tspan x="20" dy="1.2em">7. PC動画問題：<tspan class="highlight">優先度下げ</tspan>て対応</tspan>
+    </text>
+
+    <text x="20" y="260" class="subtitle col3-accent">主要TODO</text>
+     <text x="20" y="285" class="body">
+      <tspan x="20" dy="1.2em">【佐藤氏】</tspan>
+      <tspan x="35" dy="1.2em">・甲子園SQL要件整理</tspan>
+      <tspan x="35" dy="1.2em">・デモ環境での評価フロー確認 (来週)</tspan>
+      <tspan x="35" dy="1.2em">・福井県への連絡 (PDF除外、規約確認)</tspan>
+      <tspan x="35" dy="1.2em">・次回定例カレンダー登録</tspan>
+      <tspan x="20" dy="1.6em">【アジルコア/Toya氏】</tspan>
+      <tspan x="35" dy="1.2em">・甲子園SQL修正実装</tspan>
+      <tspan x="35" dy="1.2em">・TANREN CHAT最新化</tspan>
+      <tspan x="35" dy="1.2em">・ユーザー登録手順作成 (来週頭)</tspan>
+      <tspan x="35" dy="1.2em">・デモ環境準備 (来週)</tspan>
+      <tspan x="35" dy="1.2em">・一括申請リハーサル準備/実施</tspan>
+      <tspan x="35" dy="1.2em">・Ver9.0計画案提示 (来週)</tspan>
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="40" y1="685" x2="1240" y2="685" class="line-dot" />
+  <text x="40" y="705" class="footer-text">Slide 1/5: 現状と課題</text>
+  <text x="1240" y="705" text-anchor="end" class="footer-text">TANREN 定例会議 | {生成日付}</text>
+</svg>

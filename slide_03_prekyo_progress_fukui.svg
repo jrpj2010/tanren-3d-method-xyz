@@ -1,0 +1,150 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="background-color: #f4f1ea; font-family: 'Noto Sans JP', sans-serif;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&display=swap');
+      .title { font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700; fill: #2c2c2c; letter-spacing: 0.1em; }
+      .subtitle { font-size: 14px; font-weight: 700; fill: #2c2c2c; letter-spacing: 0.05em; }
+      .body { font-size: 11px; fill: #2c2c2c; letter-spacing: 0.05em; line-height: 1.6; }
+      .highlight { fill: #b3322b; font-weight: bold; }
+      .tag { font-size: 9px; fill: #f4f1ea; font-weight: bold; border-radius: 3px; padding: 1px 4px; display: inline-block; margin-right: 5px;}
+      .col1-accent { fill: #b3322b; } /* 朱色 */
+      .col2-accent { fill: #1a5b66; } /* 藍色 */
+      .col3-accent { fill: #653a5e; } /* 紫色 */
+      .line-dot { stroke: #2c2c2c; stroke-width: 1; }
+      .dot { fill: #2c2c2c; }
+      .card { fill: #ffffff; stroke: #cccccc; stroke-width: 0.5; rx: 3px; ry: 3px; }
+      .header-text { font-size: 10px; fill: #555; }
+      .footer-text { font-size: 9px; fill: #777; }
+    </style>
+  </defs>
+
+  <!-- Header -->
+  <text x="40" y="35" class="header-text">TANREN 定例会議議事録サマリー</text>
+  <line x1="40" y1="45" x2="1240" y2="45" class="line-dot" />
+
+  <!-- Main Title -->
+  <text x="640" y="80" text-anchor="middle" class="title">🏃 プレゼン甲子園：進捗とTODO、福井県連携</text>
+  <line x1="420" y1="90" x2="860" y2="90" class="line-dot" />
+  <circle cx="415" cy="90" r="3" class="dot col3-accent" />
+  <circle cx="865" cy="90" r="3" class="dot col3-accent" />
+
+  <!-- Columns -->
+  <g transform="translate(40, 120)">
+    <!-- Column 1: 要点 (抽象) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#b3322b;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;">✅ 進捗ハイライト</text>
+
+    <text x="20" y="70" class="subtitle col1-accent">評価プロセス</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em">・評価者：<tspan class="highlight">プレキョウと福井県の両方</tspan>が実施</tspan>
+      <tspan x="35" dy="1.2em">└ メインはプレキョウ、福井県も実施 (昨年実績)</tspan>
+    </text>
+
+    <text x="20" y="150" class="subtitle col1-accent">完了・確認済みタスク</text>
+    <text x="20" y="175" class="body">
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">完了</tspan>：アンケートフォーム、利用規約差し替えリリース</tspan>
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">確認</tspan>：問い合わせフォームURL継続利用 (動作確認済)</tspan>
+    </text>
+
+    <text x="20" y="240" class="subtitle col1-accent">進行中・新規TODO概要</text>
+    <text x="20" y="265" class="body">
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">新規</tspan>：TANREN CHAT最新化</tspan>
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">進行中</tspan>：ユーザー登録手順作成 (来週頭完了予定)</tspan>
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">次</tspan>：デモ環境準備 (来週提供予定)</tspan>
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">予定</tspan>：一括チーム申請リハーサル (約200チーム)</tspan>
+    </text>
+
+     <text x="20" y="360" class="subtitle col1-accent">福井県フィードバック要点</text>
+    <text x="20" y="385" class="body">
+      <tspan x="20" dy="1.2em">・全体評価：<tspan class="highlight">非常に好評</tspan></tspan>
+      <tspan x="20" dy="1.2em">・アジルコア影響：<tspan class="highlight">ID追加可能性</tspan>のみ</tspan>
+      <tspan x="20" dy="1.2em">・その他：PDF除外了承、規約確認依頼等</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(450, 120)">
+    <!-- Column 2: 詳細 (具体) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#1a5b66;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;">📋 タスク詳細と状況</text>
+
+    <text x="20" y="70" class="subtitle col2-accent">新規TODO：TANREN CHAT最新化</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em">・問題：関連チャット仕様が古い (8月6日モデル等)</tspan>
+      <tspan x="20" dy="1.2em">・原因：設定ファイル修正漏れの可能性</tspan>
+      <tspan x="20" dy="1.2em">・対応：<tspan class="highlight">設定ファイル上書きで修正可能</tspan></tspan>
+      <tspan x="20" dy="1.2em">・依頼(アジルコア)：<tspan class="highlight">最新仕様へアップグレード</tspan></tspan>
+    </text>
+
+    <text x="20" y="180" class="subtitle col2-accent">進行中：ユーザー登録手順作成</text>
+    <text x="20" y="205" class="body">
+      <tspan x="20" dy="1.2em">・完了見込み：<tspan class="highlight">来週頭 (4/8頃)</tspan></tspan>
+      <tspan x="20" dy="1.2em">・次のステップ：<tspan class="highlight">デモ環境準備</tspan></tspan>
+      <tspan x="35" dy="1.2em">└ 内容：クリーンアップ (エントリーユーザー削除等)</tspan>
+      <tspan x="35" dy="1.2em">└ 提供時期：<tspan class="highlight">来週 (4/8以降)</tspan></tspan>
+      <tspan x="35" dy="1.2em">└ 目的：<tspan class="highlight">受け入れ検証 (評価フローテスト)</tspan></tspan>
+      <tspan x="50" dy="1.2em">→ テスト内容：エントリーから評価、点数確認まで</tspan>
+      <tspan x="50" dy="1.2em">→ TODO(佐藤氏)：来週デモ環境で確認</tspan>
+    </text>
+
+    <text x="20" y="355" class="subtitle col2-accent">予定：一括チーム申請リハーサル</text>
+    <text x="20" y="380" class="body">
+      <tspan x="20" dy="1.2em">・現状：Excelテンプレート提供済み</tspan>
+      <tspan x="20" dy="1.2em">・TODO：<tspan class="highlight">手順完成後にリハーサル実施</tspan></tspan>
+      <tspan x="35" dy="1.2em">└ 方法：アジルコアがダミーデータでインポート確認</tspan>
+      <tspan x="35" dy="1.2em">└ 規模：<tspan class="highlight">約200チーム想定</tspan> (昨年実績+反響)</tspan>
+      <tspan x="35" dy="1.2em">└ 確認内容：インポート成功、ログイン、マイTANREN利用</tspan>
+      <tspan x="35" dy="1.2em">└ タイミング：受け入れ検証期間中</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(860, 120)">
+    <!-- Column 3: まとめ (構造) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#653a5e;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;">🤝 福井県連携とアクション</text>
+
+    <text x="20" y="70" class="subtitle col3-accent">福井県フィードバック連携</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em"><tspan class="tag" style="background-color:#653a5e;">共有事項</tspan></tspan>
+      <tspan x="35" dy="1.2em">・PDF添付除外：<tspan class="highlight">了承</tspan> (佐藤氏返答予定)</tspan>
+      <tspan x="35" dy="1.2em">・利用規約差し替え：<tspan class="highlight">確認依頼</tspan> (佐藤氏メール予定)</tspan>
+      <tspan x="35" dy="1.2em">・団体登録：<tspan class="highlight">プレキョウ主体</tspan>でOK</tspan>
+      <tspan x="35" dy="1.2em">・Exploratory運用：ルール固め、<tspan class="highlight">事務局連携</tspan>へ</tspan>
+      <tspan x="35" dy="1.2em">・マニュアル動画：<tspan class="highlight">高評価</tspan></tspan>
+      <tspan x="35" dy="1.2em">・サンプル動画：バイアス懸念 → <tspan class="highlight">佐藤氏が除外済</tspan></tspan>
+    </text>
+
+    <text x="20" y="245" class="subtitle col3-accent">アジルコアへの影響</text>
+     <text x="20" y="270" class="body">
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">ID追加の可能性のみ留意</tspan></tspan>
+      <tspan x="35" dy="1.6em">└ 福井県メンバー入れ替えに伴う人数増の可能性。</tspan>
+      <tspan x="35" dy="1.6em">└ 具体的な人数は未確認だが、増加時は別途依頼。</tspan>
+    </text>
+
+    <text x="20" y="345" class="subtitle col3-accent">全体的な評価</text>
+    <text x="20" y="370" class="body">
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">非常に好評</tspan></tspan>
+      <tspan x="35" dy="1.6em">└ 特に地方の学校から驚きの声が上がっている。</tspan>
+      <tspan x="35" dy="1.6em">└ プロジェクトへの期待感が高い状況。</tspan>
+    </text>
+
+    <text x="20" y="445" class="subtitle col3-accent">アクションアイテム (再掲)</text>
+    <text x="20" y="470" class="body">
+      <tspan x="20" dy="1.2em"><tspan style="font-weight:bold;">佐藤氏:</tspan></tspan>
+      <tspan x="35" dy="1.2em">・デモ環境での評価フロー確認 (来週)</tspan>
+      <tspan x="35" dy="1.2em">・福井県への連絡 (PDF除外、規約確認)</tspan>
+      <tspan x="20" dy="1.6em"><tspan style="font-weight:bold;">アジルコア:</tspan></tspan>
+      <tspan x="35" dy="1.2em">・TANREN CHAT最新化</tspan>
+      <tspan x="35" dy="1.2em">・ユーザー登録手順作成 (来週頭)</tspan>
+      <tspan x="35" dy="1.2em">・デモ環境準備 (来週)</tspan>
+      <tspan x="35" dy="1.2em">・一括申請リハーサル準備/実施</tspan>
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="40" y1="685" x2="1240" y2="685" class="line-dot" />
+  <text x="40" y="705" class="footer-text">Slide 3/5: プレゼン甲子園 進捗とTODO、福井県連携</text>
+  <text x="1240" y="705" text-anchor="end" class="footer-text">TANREN 定例会議 | {生成日付}</text>
+</svg>

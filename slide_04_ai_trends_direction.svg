@@ -1,0 +1,129 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="background-color: #f4f1ea; font-family: 'Noto Sans JP', sans-serif;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&display=swap');
+      .title { font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700; fill: #2c2c2c; letter-spacing: 0.1em; }
+      .subtitle { font-size: 14px; font-weight: 700; fill: #2c2c2c; letter-spacing: 0.05em; }
+      .body { font-size: 11px; fill: #2c2c2c; letter-spacing: 0.05em; line-height: 1.6; }
+      .highlight { fill: #b3322b; font-weight: bold; }
+      .tag { font-size: 9px; fill: #f4f1ea; font-weight: bold; border-radius: 3px; padding: 1px 4px; display: inline-block; margin-right: 5px;}
+      .col1-accent { fill: #b3322b; } /* 朱色 */
+      .col2-accent { fill: #1a5b66; } /* 藍色 */
+      .col3-accent { fill: #653a5e; } /* 紫色 */
+      .line-dot { stroke: #2c2c2c; stroke-width: 1; }
+      .dot { fill: #2c2c2c; }
+      .card { fill: #ffffff; stroke: #cccccc; stroke-width: 0.5; rx: 3px; ry: 3px; }
+      .header-text { font-size: 10px; fill: #555; }
+      .footer-text { font-size: 9px; fill: #777; }
+    </style>
+  </defs>
+
+  <!-- Header -->
+  <text x="40" y="35" class="header-text">TANREN 定例会議議事録サマリー</text>
+  <line x1="40" y1="45" x2="1240" y2="45" class="line-dot" />
+
+  <!-- Main Title -->
+  <text x="640" y="80" text-anchor="middle" class="title">💡 AI関連動向とTANRENの方向性</text>
+  <line x1="460" y1="90" x2="820" y2="90" class="line-dot" />
+  <circle cx="455" cy="90" r="3" class="dot col1-accent" />
+  <circle cx="825" cy="90" r="3" class="dot col1-accent" />
+
+  <!-- Columns -->
+  <g transform="translate(40, 120)">
+    <!-- Column 1: 要点 (抽象) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#b3322b;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;">🚀 技術トレンド</text>
+
+    <text x="20" y="70" class="subtitle col1-accent">Gemini 1.5 Pro の衝撃</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em">・特筆すべき能力：<tspan class="highlight">高精度な動画評価</tspan></tspan>
+      <tspan x="20" dy="1.2em">・評価形式：時間軸に沿ったJSON出力</tspan>
+      <tspan x="20" dy="1.2em">・評価内容：ルーブリック＋<tspan class="highlight">視覚情報</tspan>＋潜在スキル</tspan>
+      <tspan x="20" dy="1.2em">・所感：<tspan class="highlight">驚異的な性能</tspan>、将来の変化を予感</tspan>
+    </text>
+
+    <text x="20" y="190" class="subtitle col1-accent">競合の動向</text>
+    <text x="20" y="215" class="body">
+      <tspan x="20" dy="1.2em">・情報元：ティガヤ氏</tspan>
+      <tspan x="20" dy="1.2em">・サービス：AIアバターによる<tspan class="highlight">AIロープレ</tspan></tspan>
+      <tspan x="20" dy="1.2em">・技術要素：AIアバター、音声API、LLM</tspan>
+    </text>
+
+    <text x="20" y="290" class="subtitle col1-accent">TANRENのスタンス</text>
+    <text x="20" y="315" class="body">
+      <tspan x="20" dy="1.2em">・競合追随：<tspan class="highlight">現時点では行わない</tspan></tspan>
+      <tspan x="20" dy="1.2em">・優先事項：ロープレ相手より<tspan class="highlight">評価の質向上</tspan></tspan>
+    </text>
+  </g>
+
+  <g transform="translate(450, 120)">
+    <!-- Column 2: 詳細 (具体) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#1a5b66;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;">🔬 詳細分析</text>
+
+    <text x="20" y="70" class="subtitle col2-accent">Gemini 1.5 Pro 評価詳細</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em">・入力：動画(約3分) + ルーブリック</tspan>
+      <tspan x="20" dy="1.2em">・出力：<tspan class="highlight">時間軸JSON</tspan>での高精度評価</tspan>
+      <tspan x="20" dy="1.2em">・特徴：</tspan>
+      <tspan x="35" dy="1.2em">└ <tspan class="highlight">潜在スキル</tspan>や<tspan class="highlight">心に響くFB</tspan>も生成可能 (プロンプト次第)</tspan>
+      <tspan x="35" dy="1.2em">└ 動画内の<tspan class="highlight">視覚情報(絵)</tspan>も判断・評価</tspan>
+      <tspan x="20" dy="1.2em">・示唆：AIによる<tspan class="highlight">ビジュアル評価</tspan>の実現可能性向上</tspan>
+    </text>
+
+    <text x="20" y="210" class="subtitle col2-accent">競合AIロープレサービス分析</text>
+    <text x="20" y="235" class="body">
+      <tspan x="20" dy="1.2em">・技術構成：AIアバター + Adv. Voice API + LLM (Gemini等)</tspan>
+      <tspan x="20" dy="1.2em">・佐藤氏見解：</tspan>
+      <tspan x="35" dy="1.2em">└ <tspan class="highlight">ルーブリック評価の観点なし</tspan> (AI任せ)</tspan>
+      <tspan x="35" dy="1.2em">└ 技術的には模倣可能</tspan>
+    </text>
+
+    <text x="20" y="320" class="subtitle col2-accent">TANRENが目指すAI活用</text>
+    <text x="20" y="345" class="body">
+      <tspan x="20" dy="1.2em">・コアバリュー：動画アップロード → <tspan class="highlight">高精度フィードバック</tspan></tspan>
+      <tspan x="20" dy="1.2em">・フィードバック内容：</tspan>
+      <tspan x="35" dy="1.2em">└ ルーブリック評価に基づく<tspan class="highlight">スコアリング</tspan></tspan>
+      <tspan x="35" dy="1.2em">└ <tspan class="highlight">時間軸</tspan>に沿った指摘</tspan>
+      <tspan x="35" dy="1.2em">└ 動画内の<tspan class="highlight">ビジュアル情報</tspan>の読み込み・評価</tspan>
+      <tspan x="20" dy="1.2em">・期待技術：<tspan class="highlight">GPT-5</tspan>等の次世代AI</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(860, 120)">
+    <!-- Column 3: まとめ (構造) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#653a5e;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;">🧭 TANRENの戦略的方向性</text>
+
+    <text x="20" y="70" class="subtitle col3-accent">AI技術の進化と機会</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em"><tspan class="tag" style="background-color:#653a5e;">注目技術</tspan> <tspan class="highlight">Gemini 1.5 Pro</tspan></tspan>
+      <tspan x="35" dy="1.6em">・動画内の視覚情報を含む高精度な評価能力は、TANRENの目指す「ビジュアル評価」の実現可能性を大きく高める。</tspan>
+      <tspan x="35" dy="1.6em">・時間軸に沿った評価や潜在スキルへの言及は、フィードバックの質を飛躍的に向上させる可能性。</tspan>
+    </text>
+
+    <text x="20" y="200" class="subtitle col3-accent">競合との差別化</text>
+    <text x="20" y="225" class="body">
+      <tspan x="20" dy="1.2em"><tspan class="tag" style="background-color:#653a5e;">競合</tspan> AIアバターロープレ</tspan>
+      <tspan x="35" dy="1.6em">・技術的には模倣可能だが、ルーブリック評価に基づかない「AI任せ」の評価である可能性が高い。</tspan>
+      <tspan x="20" dy="1.6em"><tspan class="tag" style="background-color:#653a5e;">TANREN</tspan> <tspan class="highlight">評価の質</tspan>を追求</tspan>
+      <tspan x="35" dy="1.6em">・ロープレ体験そのものよりも、アップロードされた動画に対する<tspan class="highlight">高精度で多角的なフィードバック</tspan>提供に注力。</tspan>
+      <tspan x="35" dy="1.6em">・ルーブリック、時間軸、ビジュアル情報を組み合わせた独自の評価軸を確立。</tspan>
+    </text>
+
+    <text x="20" y="360" class="subtitle col3-accent">将来展望</text>
+    <text x="20" y="385" class="body">
+      <tspan x="20" dy="1.2em"><tspan class="tag" style="background-color:#653a5e;">目指す姿</tspan> <tspan class="highlight">次世代AIによる評価革新</tspan></tspan>
+      <tspan x="35" dy="1.6em">・GPT-5等、将来登場するであろう更に高性能なAIを活用し、スコアリング、時間軸指摘、ビジュアル評価を含む、<tspan class="highlight">人間を超えるレベルのフィードバック</tspan>実現を目指す。</tspan>
+      <tspan x="35" dy="1.6em">・これにより、ユーザーのスキル向上を最大化する。</tspan>
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="40" y1="685" x2="1240" y2="685" class="line-dot" />
+  <text x="40" y="705" class="footer-text">Slide 4/5: AI関連動向とTANRENの方向性</text>
+  <text x="1240" y="705" text-anchor="end" class="footer-text">TANREN 定例会議 | {生成日付}</text>
+</svg>

@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id        String   @id @default(uuid())
+  name      String
+  content   String   // 元の議事録テキスト
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  slides    Slide[]
+}
+
+model Slide {
+  id        String   @id @default(uuid())
+  title     String
+  order     Int
+  svgData   String   // SVGデータ
+  talkScript String? // プレゼン用トークスクリプト
+  imagePrompts String? // 画像生成AI用プロンプト 
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// 新しい SystemPrompt モデル
+model SystemPrompt {
+  id        String   @id @default(cuid())
+  name      String   @unique // プロンプト名は一意とする
+  content   String   // @db.Text を削除 (SQLiteでは不要)
+  isDefault Boolean  @default(false) // デフォルトは false
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

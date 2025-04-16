@@ -1,0 +1,132 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="background-color: #f4f1ea; font-family: 'Noto Sans JP', sans-serif;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&display=swap');
+      .title { font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700; fill: #2c2c2c; letter-spacing: 0.1em; }
+      .subtitle { font-size: 14px; font-weight: 700; fill: #2c2c2c; letter-spacing: 0.05em; }
+      .body { font-size: 11px; fill: #2c2c2c; letter-spacing: 0.05em; line-height: 1.6; }
+      .highlight { fill: #b3322b; font-weight: bold; }
+      .tag { font-size: 9px; fill: #f4f1ea; font-weight: bold; border-radius: 3px; padding: 1px 4px; display: inline-block; margin-right: 5px;}
+      .col1-accent { fill: #b3322b; } /* 朱色 */
+      .col2-accent { fill: #1a5b66; } /* 藍色 */
+      .col3-accent { fill: #653a5e; } /* 紫色 */
+      .line-dot { stroke: #2c2c2c; stroke-width: 1; }
+      .dot { fill: #2c2c2c; }
+      .card { fill: #ffffff; stroke: #cccccc; stroke-width: 0.5; rx: 3px; ry: 3px; }
+      .header-text { font-size: 10px; fill: #555; }
+      .footer-text { font-size: 9px; fill: #777; }
+    </style>
+  </defs>
+
+  <!-- Header -->
+  <text x="40" y="35" class="header-text">TANREN 定例会議議事録サマリー</text>
+  <line x1="40" y1="45" x2="1240" y2="45" class="line-dot" />
+
+  <!-- Main Title -->
+  <text x="640" y="80" text-anchor="middle" class="title">📅 TANREN Ver9.0 開発計画と次回定例</text>
+  <line x1="430" y1="90" x2="850" y2="90" class="line-dot" />
+  <circle cx="425" cy="90" r="3" class="dot col2-accent" />
+  <circle cx="855" cy="90" r="3" class="dot col2-accent" />
+
+  <!-- Columns -->
+  <g transform="translate(40, 120)">
+    <!-- Column 1: 要点 (抽象) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#b3322b;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;">🚀 Ver9.0 計画概要</text>
+
+    <text x="20" y="70" class="subtitle col1-accent">開発スピードアップ</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em">・目的：Ver8.1以降の<tspan class="highlight">実装加速</tspan></tspan>
+      <tspan x="20" dy="1.2em">・体制：<tspan class="highlight">5月頃リソース増強</tspan>を検討中</tspan>
+    </text>
+
+    <text x="20" y="150" class="subtitle col1-accent">Ver9.0 主要テーマ案</text>
+    <text x="20" y="175" class="body">
+      <tspan x="20" dy="1.2em">【佐藤氏提案】</tspan>
+      <tspan x="35" dy="1.2em">1. <tspan class="highlight">RAG</tspan> (データ活用・内省相談)</tspan>
+      <tspan x="35" dy="1.2em">2. <tspan class="highlight">ビジュアル評価</tspan> (AIによる動画内視覚評価)</tspan>
+      <tspan x="35" dy="1.2em">3. <tspan class="highlight">TANRENスコア</tspan> (AI評価・点数付け) ← <tspan style="font-weight:bold;">最重要</tspan></tspan>
+      <tspan x="20" dy="1.6em">【アジルコア提案 (課題対応)】</tspan>
+      <tspan x="35" dy="1.2em">・mp4エンコードスキップ (MediaKind問題)</tspan>
+      <tspan x="35" dy="1.2em">・BLOBストレージ削減 (継続)</tspan>
+    </text>
+
+    <text x="20" y="330" class="subtitle col1-accent">開発の進め方</text>
+    <text x="20" y="355" class="body">
+      <tspan x="20" dy="1.2em">・基本方針：Ver8.1計画リスト参照</tspan>
+      <tspan x="20" dy="1.2em">・課題：新規機能、残課題、改善タスクの<tspan class="highlight">バランス</tspan></tspan>
+      <tspan x="20" dy="1.2em">・次アクション：<tspan class="highlight">来週Toya氏が計画案提示</tspan></tspan>
+    </text>
+  </g>
+
+  <g transform="translate(450, 120)">
+    <!-- Column 2: 詳細 (具体) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#1a5b66;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;">📝 具体的な計画要素</text>
+
+    <text x="20" y="70" class="subtitle col2-accent">Ver9.0 主要テーマ詳細</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">RAG</tspan>: 個人/グループ/企業のデータ(TANRENスコア等)を参照し、内省相談に活用</tspan>
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">ビジュアル評価</tspan>: AIが動画内の視覚的要素（表情、姿勢、資料等）を評価</tspan>
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">TANRENスコア</tspan>: AIによる客観的な評価・点数付け。Ver9.0の<tspan style="font-weight:bold;">目玉機能</tspan>候補。</tspan>
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">mp4エンコードスキップ</tspan>: MediaKind関連の問題解決、アップロード安定化</tspan>
+      <tspan x="20" dy="1.2em">・<tspan class="highlight">BLOBストレージ削減</tspan>: コスト最適化のための継続的な取り組み</tspan>
+    </text>
+
+    <text x="20" y="240" class="subtitle col2-accent">開発計画立案の課題</text>
+    <text x="20" y="265" class="body">
+      <tspan x="20" dy="1.2em">・優先度の高い<tspan class="highlight">新規機能</tspan> (佐藤氏提案)</tspan>
+      <tspan x="20" dy="1.2em">・既存の<tspan class="highlight">残課題</tspan>や改善タスク (アジルコア提案)</tspan>
+      <tspan x="20" dy="1.2em">・効果が大きいが<tspan class="highlight">簡単な改善</tspan></tspan>
+      <tspan x="20" dy="1.2em">・検討が必要な<tspan class="highlight">複雑な機能</tspan></tspan>
+      <tspan x="20" dy="1.2em">→ 上記<tspan class="highlight">4要素のバランス</tspan>を取りながら計画する必要性</tspan>
+    </text>
+
+    <text x="20" y="370" class="subtitle col2-accent">TODO (Toya氏)</text>
+    <text x="20" y="395" class="body">
+      <tspan x="20" dy="1.2em">・実施時期：<tspan class="highlight">来週</tspan></tspan>
+      <tspan x="20" dy="1.2em">・内容：</tspan>
+      <tspan x="35" dy="1.2em">└ 各タスクの<tspan class="highlight">優先度付け</tspan></tspan>
+      <tspan x="35" dy="1.2em">└ <tspan class="highlight">実装方法</tspan>の検討</tspan>
+      <tspan x="35" dy="1.2em">└ 全体の<tspan class="highlight">スケジュール感</tspan>の整理</tspan>
+      <tspan x="20" dy="1.2em">・目的：具体的な<tspan class="highlight">Ver9.0開発計画案</tspan>を提示</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(860, 120)">
+    <!-- Column 3: まとめ (構造) -->
+    <rect x="0" y="0" width="380" height="550" class="card"/>
+    <rect x="0" y="0" width="380" height="40" style="fill:#653a5e;" rx="3" ry="3"/>
+    <text x="190" y="25" text-anchor="middle" class="subtitle" style="fill:#f4f1ea;">🗓️ 次回定例と確認事項</text>
+
+    <text x="20" y="70" class="subtitle col3-accent">次回定例日程</text>
+    <text x="20" y="95" class="body">
+      <tspan x="20" dy="1.2em"><tspan class="tag" style="background-color:#653a5e;">候補日</tspan> 4月4日(金)</tspan>
+      <tspan x="20" dy="1.2em"><tspan class="tag" style="background-color:#653a5e;">時間希望</tspan> 午前中 (暮石氏)</tspan>
+      <tspan x="20" dy="1.6em"><tspan class="tag" style="background-color:#653a5e;">決定日時</tspan> <tspan class="highlight" style="font-size: 14px;">4月4日(木) 11:00 - 11:30</tspan></tspan>
+      <tspan x="20" dy="1.6em"><tspan class="tag" style="background-color:#653a5e;">TODO</tspan> 佐藤氏がカレンダー登録</tspan>
+    </text>
+
+    <text x="20" y="200" class="subtitle col3-accent">その他確認事項</text>
+    <text x="20" y="225" class="body">
+      <tspan x="20" dy="1.2em">・AIフィードバック課題プロンプト変更影響:</tspan>
+      <tspan x="35" dy="1.6em">└ 喜田氏より<tspan class="highlight">「特に問題なし」</tspan>との連絡あり。</tspan>
+      <tspan x="35" dy="1.6em">└ 3/14のリリース後、安定稼働していることを確認。</tspan>
+    </text>
+
+    <text x="20" y="310" class="subtitle col3-accent">Ver9.0 計画立案のポイント</text>
+    <text x="20" y="335" class="body">
+      <tspan x="20" dy="1.2em"><tspan class="tag" style="background-color:#653a5e;">Input</tspan> 佐藤氏提案 (RAG, ビジュアル評価, TANRENスコア), アジルコア課題 (mp4, BLOB), Ver8.1リスト</tspan>
+      <tspan x="20" dy="1.6em"><tspan class="tag" style="background-color:#653a5e;">Consideration</tspan> 新規性、課題解決、改善効果、実現難易度のバランス</tspan>
+      <tspan x="20" dy="1.6em"><tspan class="tag" style="background-color:#653a5e;">Output</tspan> <tspan class="highlight">来週提示されるToya氏の計画案</tspan> (優先度、実装方法、スケジュール)</tspan>
+      <tspan x="20" dy="1.6em"><tspan class="tag" style="background-color:#653a5e;">Next Step</tspan> 計画案に基づき、Ver9.0開発に着手</tspan>
+    </text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="40" y1="685" x2="1240" y2="685" class="line-dot" />
+  <text x="40" y="705" class="footer-text">Slide 5/5: TANREN Ver9.0 開発計画と次回定例</text>
+  <text x="1240" y="705" text-anchor="end" class="footer-text">TANREN 定例会議 | {生成日付}</text>
+</svg>
