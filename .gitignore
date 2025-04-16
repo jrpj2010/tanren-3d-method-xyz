@@ -51,7 +51,7 @@ figma-test.zip
 .cursor/
 .roo/
 .specstory/
-# .cursorindexingignore # This file itself might be useful to keep track of
+.cursorindexingignore # This file itself might be useful to keep track of
 
 # Embedded repositories
 figma-test/my-app/
