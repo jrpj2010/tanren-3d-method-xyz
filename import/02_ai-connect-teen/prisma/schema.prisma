@@ -1,0 +1,162 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String      @id @default(cuid())
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+  email         String      @unique
+  passwordHash  String
+  username      String      @unique
+  displayName   String?
+  bio           String?
+  avatarUrl     String?
+  role          UserRole    @default(STUDENT)
+  isVerified    Boolean     @default(false)
+  lastLoginAt   DateTime?
+  status        UserStatus  @default(ACTIVE)
+  
+  // リレーション
+  profile       Profile?
+  sentMessages     Message[]   @relation("SentMessages")
+  receivedMessages Message[]   @relation("ReceivedMessages")
+  aiSessions    AISession[]
+  notifications Notification[]
+  
+  @@index([email])
+  @@index([username])
+}
+
+enum UserRole {
+  STUDENT
+  PARENT
+  TEACHER
+  ADMIN
+}
+
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+  DEACTIVATED
+}
+
+model Profile {
+  id            String    @id @default(cuid())
+  userId        String    @unique
+  age           Int?
+  grade         String?
+  schoolName    String?
+  interests     String[]
+  learningGoals String[]
+  parentEmail   String?
+  
+  // リレーション
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+}
+
+model Message {
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  content       String
+  senderId      String
+  receiverId    String
+  isRead        Boolean   @default(false)
+  readAt        DateTime?
+  
+  // リレーション
+  sender        User      @relation("SentMessages", fields: [senderId], references: [id])
+  receiver      User      @relation("ReceivedMessages", fields: [receiverId], references: [id])
+  attachments   Attachment[]
+  
+  @@index([senderId])
+  @@index([receiverId])
+  @@index([createdAt])
+}
+
+model Attachment {
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  messageId     String
+  fileUrl       String
+  fileName      String
+  fileSize      Int
+  fileType      String
+  
+  // リレーション
+  message       Message   @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  
+  @@index([messageId])
+}
+
+model AISession {
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  userId        String
+  title         String
+  isActive      Boolean   @default(true)
+  
+  // リレーション
+  user          User      @relation(fields: [userId], references: [id])
+  messages      AIMessage[]
+  
+  @@index([userId])
+  @@index([createdAt])
+}
+
+model AIMessage {
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  sessionId     String
+  content       String
+  role          AIMessageRole
+  
+  // リレーション
+  session       AISession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  @@index([sessionId])
+  @@index([createdAt])
+}
+
+enum AIMessageRole {
+  USER
+  ASSISTANT
+  SYSTEM
+}
+
+model Notification {
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  userId        String
+  type          NotificationType
+  title         String
+  message       String
+  isRead        Boolean   @default(false)
+  readAt        DateTime?
+  data          Json?
+  
+  // リレーション
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@index([createdAt])
+}
+
+enum NotificationType {
+  NEW_MESSAGE
+  SYSTEM
+  SECURITY
+  ANNOUNCEMENT
+}

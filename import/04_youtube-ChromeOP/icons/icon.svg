@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect x="0" y="0" width="128" height="128" rx="16" fill="#FF0000" />
+  
+  <!-- YouTubeロゴ風の再生ボタン -->
+  <polygon points="48,40 88,64 48,88" fill="white" />
+  
+  <!-- データ抽出を表す要素 -->
+  <rect x="24" y="100" width="80" height="12" rx="2" fill="white" opacity="0.8" />
+  <rect x="24" y="116" width="60" height="6" rx="2" fill="white" opacity="0.6" />
+</svg> 

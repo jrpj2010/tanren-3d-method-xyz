@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Data Extractor",
+  "version": "1.0",
+  "description": "Extract video metadata, subtitles, and comments from YouTube videos and save as Markdown",
+  "permissions": ["downloads", "activeTab", "scripting", "storage"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"]
+    }
+  ],
+  "options_page": "options.html"
+}
