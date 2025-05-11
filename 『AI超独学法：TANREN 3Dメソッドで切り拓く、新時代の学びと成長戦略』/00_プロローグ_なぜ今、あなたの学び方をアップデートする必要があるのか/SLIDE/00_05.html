@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIを活用するためのカギ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #4169E1 0%, #8A2BE2 100%);
+            color: white;
+            position: relative;
+        }
+        .slide-content {
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide-title {
+            font-size: 52px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .content-container {
+            display: flex;
+            flex: 1;
+            gap: 40px;
+        }
+        .key-points {
+            flex: 1;
+        }
+        .visual-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .key-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #FFD700;
+        }
+        .key-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .key-item {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .key-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        .key-content {
+            flex: 1;
+        }
+        .key-heading {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .key-description {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+        .highlight {
+            color: #FFD700;
+            font-weight: 700;
+        }
+        .evolution-diagram {
+            width: 100%;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        .evolution-stage {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 120px;
+        }
+        .stage-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .stage-label {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .evolution-arrow {
+            position: absolute;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .conclusion-box {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .conclusion-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #FFD700;
+        }
+        .direction-label {
+            position: absolute;
+            font-size: 18px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-content">
+            <h1 class="slide-title">AIを活用するためのカギ</h1>
+            
+            <div class="content-container">
+                <div class="key-points">
+                    <h2 class="key-title">AIパートナーシップの原則</h2>
+                    
+                    <ul class="key-list">
+                        <li class="key-item">
+                            <div class="key-number">1</div>
+                            <div class="key-content">
+                                <div class="key-heading">丸投げではなく<span class="highlight">共創</span></div>
+                                <div class="key-description">AIは魔法の杖ではなく、協働するパートナー。指示の質がアウトプットの質を決定する</div>
+                            </div>
+                        </li>
+                        
+                        <li class="key-item">
+                            <div class="key-number">2</div>
+                            <div class="key-content">
+                                <div class="key-heading"><span class="highlight">人間側の思考力</span>が重要</div>
+                                <div class="key-description">情報の本質を見抜き、構造化する能力。AIの出力を評価・統合する批判的思考</div>
+                            </div>
+                        </li>
+                        
+                        <li class="key-item">
+                            <div class="key-number">3</div>
+                            <div class="key-content">
+                                <div class="key-heading">目的意識と<span class="highlight">主体性</span></div>
+                                <div class="key-description">何のために学ぶのか、どう活用するのかという明確な意図が成果を左右</div>
+                            </div>
+                        </li>
+                        
+                        <li class="key-item">
+                            <div class="key-number">4</div>
+                            <div class="key-content">
+                                <div class="key-heading"><span class="highlight">継続的な進化</span>と実験</div>
+                                <div class="key-description">AIとの対話を通じて自らも進化し続ける姿勢。試行錯誤を恐れない</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="visual-container">
+                    <div class="evolution-diagram">
+                        <!-- 進化の図 -->
+                        <div class="evolution-stage" style="bottom: 20px; left: 30px;">
+                            <div class="stage-icon" style="background: rgba(255, 105, 180, 0.3);">👶</div>
+                            <div class="stage-label">AIに依存<br>丸投げ思考</div>
+                        </div>
+                        
+                        <div class="evolution-stage" style="bottom: 120px; left: 160px;">
+                            <div class="stage-icon" style="background: rgba(255, 165, 0, 0.3);">👤</div>
+                            <div class="stage-label">道具として<br>基本活用</div>
+                        </div>
+                        
+                        <div class="evolution-stage" style="bottom: 220px; left: 290px;">
+                            <div class="stage-icon" style="background: rgba(255, 215, 0, 0.3);">💪</div>
+                            <div class="stage-label">対話による<br>思考拡張</div>
+                        </div>
+                        
+                        <div class="evolution-stage" style="bottom: 320px; left: 420px;">
+                            <div class="stage-icon" style="background: rgba(124, 252, 0, 0.4);">🧠</div>
+                            <div class="stage-label">共創による<br>創造と統合</div>
+                        </div>
+                        
+                        <!-- AI側の進化 -->
+                        <div class="evolution-stage" style="top: 20px; right: 30px;">
+                            <div class="stage-icon" style="background: rgba(30, 144, 255, 0.3);">🤖</div>
+                            <div class="stage-label">AIの<br>高性能化</div>
+                        </div>
+                        
+                        <!-- 矢印 -->
+                        <div class="evolution-arrow" style="width: 400px; bottom: 70px; left: 80px; transform: rotate(-15deg);"></div>
+                        <div class="evolution-arrow" style="width: 200px; top: 70px; right: 90px; transform: rotate(0deg);"></div>
+                        
+                        <!-- 方向ラベル -->
+                        <div class="direction-label" style="bottom: 80px; left: 250px;">人間側の進化</div>
+                        <div class="direction-label" style="top: 40px; right: 200px;">AI技術の進化</div>
+                        
+                        <!-- メッセージ -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                            <div style="font-size: 36px; font-weight: 900; color: #FFD700; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+                                共に進化する<br>パートナーシップ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="conclusion-box">
+                <div class="conclusion-text">AIの活用には「人間側のOSアップデート」が不可欠</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

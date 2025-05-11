@@ -71,5 +71,7 @@ pdf_env/
 projects/
 vibe-coding/
 vibecoding-site/
-昭和明治スライド/
+# 昭和明治スライド/ (temporarily commented for slide creation)
 中小企業向け営業改革書籍作成プロジェクト/
+# SpecStory explanation file
+.specstory/.what-is-this.md

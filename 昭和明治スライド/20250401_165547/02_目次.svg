@@ -1,0 +1,70 @@
+<svg width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1280" height="720" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1280" height="80" fill="#2c2c2c"/>
+  <text x="640" y="50" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea" text-anchor="middle" letter-spacing="0.1em">本気で日本の営業を改革する</text>
+  <line x1="40" y1="80" x2="1240" y2="80" stroke="#b3322b" stroke-width="3"/>
+  
+  <!-- タイトル -->
+  <text x="640" y="130" font-family="'Noto Serif JP', serif" font-size="36" fill="#2c2c2c" text-anchor="middle" letter-spacing="0.05em">目 次</text>
+  <circle cx="590" cy="130" r="4" fill="#b3322b"/>
+  <circle cx="690" cy="130" r="4" fill="#b3322b"/>
+  
+  <!-- 3カラムレイアウト -->
+  <!-- 左カラム -->
+  <rect x="60" y="180" width="360" height="450" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="240" y="210" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#1a5b66" text-anchor="middle" font-weight="bold">序章と基礎</text>
+  
+  <text x="80" y="250" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">はじめに 〜なぜ日本の営業生産性は低いのか〜</text>
+  <text x="100" y="280" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・変革の時代に取り残される日本の営業</text>
+  <text x="100" y="310" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・データが示す日本の営業生産性の現実</text>
+  <text x="100" y="340" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・日本特有の営業課題</text>
+  <text x="100" y="370" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・自治体向け営業の特殊性と課題</text>
+  <text x="100" y="400" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・佐藤の悩み 〜自治体営業の現場から〜</text>
+  
+  <text x="80" y="440" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">第1章：日本の営業慣習が生産性を下げる理由</text>
+  <text x="100" y="470" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・日本の営業慣習と非効率性</text>
+  <text x="100" y="500" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・属人化がもたらす組織的弱さ</text>
+  <text x="100" y="530" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・自治体営業における特殊課題</text>
+  <text x="100" y="560" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・海外との営業スタイル比較</text>
+  
+  <!-- 中央カラム -->
+  <rect x="460" y="180" width="360" height="450" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  <text x="640" y="210" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#b3322b" text-anchor="middle" font-weight="bold">データドリブン経営への転換</text>
+  
+  <text x="480" y="250" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">第2章：DX化による営業活動のデータ化</text>
+  <text x="500" y="280" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・データドリブン営業への転換</text>
+  <text x="500" y="310" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・顧客情報の統合と分析</text>
+  <text x="500" y="340" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・CRM/SFAの導入と活用方法</text>
+  <text x="500" y="370" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・中小企業のデータ活用アプローチ</text>
+  
+  <text x="480" y="410" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">第3章：営業活動の分業化による効率向上</text>
+  <text x="500" y="440" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・従来の「一人ですべて」モデルの限界</text>
+  <text x="500" y="470" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・インサイドセールスとフィールドセールス</text>
+  <text x="500" y="500" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・BDR/SDRとカスタマーサクセス</text>
+  <text x="500" y="530" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・組織改革と評価制度の見直し</text>
+  <text x="500" y="560" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・自治体営業における分業化モデル</text>
+  
+  <!-- 右カラム -->
+  <rect x="860" y="180" width="360" height="450" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+  <text x="1040" y="210" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#653a5e" text-anchor="middle" font-weight="bold">AI活用と実践ステップ</text>
+  
+  <text x="880" y="250" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">第4章：データ＋分業＋AIによる営業革命</text>
+  <text x="900" y="280" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・AIが変える営業の未来</text>
+  <text x="900" y="310" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・営業担当者の役割の変化</text>
+  <text x="900" y="340" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・AIと人間の効果的協働モデル</text>
+  <text x="900" y="370" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・営業プロセスの自動化</text>
+  <text x="900" y="400" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・自治体営業におけるAI活用</text>
+  
+  <text x="880" y="440" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">おわりに：本気で日本の営業を改革する</text>
+  <text x="900" y="470" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・本書のまとめ</text>
+  <text x="900" y="500" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・日本の営業の未来展望</text>
+  <text x="900" y="530" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・自治体向け営業の特別な意義</text>
+  <text x="900" y="560" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・変革への第一歩</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="670" width="1280" height="50" fill="#2c2c2c"/>
+  <text x="640" y="700" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">企画書 2025年版</text>
+</svg> 

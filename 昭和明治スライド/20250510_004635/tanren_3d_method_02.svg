@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 定義 -->
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;family=Noto+Sans+JP:wght@400;700&amp;display=swap');
+      
+      .slide-bg { fill: #f4f1ea; }
+      .header-bg { fill: #2c2c2c; }
+      .footer-bg { fill: #2c2c2c; }
+      
+      .title { 
+        font-family: 'Noto Serif JP', serif; 
+        font-size: 40px; 
+        fill: #f4f1ea; 
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      
+      .subtitle { 
+        font-family: 'Noto Serif JP', serif; 
+        font-size: 24px; 
+        fill: #f4f1ea; 
+        letter-spacing: 1px;
+      }
+      
+      .column-title {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      
+      .column-subtitle {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+      }
+      
+      .body-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 16px;
+        fill: #2c2c2c;
+      }
+      
+      .caption {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+        fill: #2c2c2c;
+        opacity: 0.8;
+      }
+      
+      .highlight-text {
+        font-weight: 700;
+      }
+      
+      .column-1-accent { fill: #b3322b; }
+      .column-2-accent { fill: #1a5b66; }
+      .column-3-accent { fill: #653a5e; }
+      
+      .footer-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+        fill: #f4f1ea;
+      }
+      
+      .accent-line { stroke-width: 2px; }
+      .dot { stroke-width: 0; }
+      
+      .highlight-box { 
+        stroke-width: 1px; 
+        fill: none; 
+      }
+      
+      .highlight-bg {
+        fill-opacity: 0.1;
+      }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" class="slide-bg" />
+  
+  <!-- ヘッダー -->
+  <rect width="1920" height="90" class="header-bg" />
+  <text x="80" y="60" class="title">TANREN 3Dメソッドの実践活用法</text>
+  <text x="1600" y="60" class="subtitle">効果的な学びの設計と実装</text>
+  
+  <!-- フッター -->
+  <rect y="1020" width="1920" height="60" class="footer-bg" />
+  <text x="80" y="1055" class="footer-text">AI超独学法：TANREN 3Dメソッド完全インストール</text>
+  <text x="1600" y="1055" class="footer-text">02章</text>
+  
+  <!-- カラム1：3Dメソッドの学習計画への適用 -->
+  <g transform="translate(80, 120)">
+    <!-- カラムタイトル -->
+    <text x="0" y="40" class="column-title" fill="#2c2c2c">学習計画への3D適用法</text>
+    <line x1="0" y1="55" x2="150" y2="55" class="accent-line column-1-accent" stroke="#b3322b" />
+    <circle cx="155" cy="55" r="4" class="dot column-1-accent" fill="#b3322b" />
+    
+    <!-- 本質説明 -->
+    <text x="0" y="85">
+      <tspan x="0" dy="0" class="column-subtitle">📅 立体的な学習設計</tspan>
+      <tspan x="0" dy="35" class="body-text">TANREN 3Dメソッドを学習計画に組み込むことで、</tspan>
+      <tspan x="0" dy="25" class="body-text">より効率的で持続可能なシステムを構築できます。</tspan>
+      <tspan x="0" dy="25" class="body-text">3軸の視点から学習を設計することで、従来の計画の</tspan>
+      <tspan x="0" dy="25" class="body-text">弱点を補い、継続性と効果を同時に高めます。</tspan>
+    </text>
+    
+    <!-- 3D学習計画表 -->
+    <g transform="translate(0, 220)">
+      <rect x="0" y="0" width="500" height="250" fill="#f9f8f5" rx="5" ry="5" />
+      
+      <!-- 計画表タイトル -->
+      <text x="250" y="30" class="body-text" text-anchor="middle">3D学習計画マトリックス</text>
+      
+      <!-- 計画表フレーム -->
+      <rect x="50" y="50" width="400" height="150" fill="none" stroke="#2c2c2c" stroke-width="1" />
+      
+      <!-- 縦軸ラベル（Y軸：時間） -->
+      <text x="30" y="85" class="caption" text-anchor="end">短期</text>
+      <text x="30" y="125" class="caption" text-anchor="end">中期</text>
+      <text x="30" y="165" class="caption" text-anchor="end">長期</text>
+      <line x1="50" y1="50" x2="50" y2="200" stroke="#2c2c2c" stroke-width="1.5" />
+      
+      <!-- 横軸ラベル（X軸：構造/深さ） -->
+      <text x="120" y="215" class="caption" text-anchor="middle">基礎</text>
+      <text x="250" y="215" class="caption" text-anchor="middle">応用</text>
+      <text x="380" y="215" class="caption" text-anchor="middle">統合</text>
+      <line x1="50" y1="200" x2="450" y2="200" stroke="#2c2c2c" stroke-width="1.5" />
+      
+      <!-- グリッド線 -->
+      <line x1="50" y1="100" x2="450" y2="100" stroke="#2c2c2c" stroke-width="0.5" stroke-dasharray="2,2" />
+      <line x1="50" y1="150" x2="450" y2="150" stroke="#2c2c2c" stroke-width="0.5" stroke-dasharray="2,2" />
+      <line x1="183" y1="50" x2="183" y2="200" stroke="#2c2c2c" stroke-width="0.5" stroke-dasharray="2,2" />
+      <line x1="317" y1="50" x2="317" y2="200" stroke="#2c2c2c" stroke-width="0.5" stroke-dasharray="2,2" />
+      
+      <!-- Z軸レベル表現（円の大きさ） -->
+      <!-- 初級レベル：小さい円 -->
+      <circle cx="120" cy="75" r="15" fill="#b3322b" fill-opacity="0.2" stroke="#b3322b" stroke-width="1" />
+      <text x="120" y="80" class="caption" text-anchor="middle" fill="#b3322b">入門</text>
+      
+      <!-- 中級レベル：中サイズ円 -->
+      <circle cx="250" cy="125" r="20" fill="#b3322b" fill-opacity="0.3" stroke="#b3322b" stroke-width="1" />
+      <text x="250" y="130" class="caption" text-anchor="middle" fill="#b3322b">発展</text>
+      
+      <!-- 上級レベル：大きい円 -->
+      <circle cx="380" cy="175" r="25" fill="#b3322b" fill-opacity="0.4" stroke="#b3322b" stroke-width="1" />
+      <text x="380" y="180" class="caption" text-anchor="middle" fill="#b3322b">熟達</text>
+    </g>
+    
+    <!-- 実践ポイント -->
+    <g transform="translate(0, 490)">
+      <rect x="0" y="0" width="500" height="130" rx="5" ry="5" class="highlight-bg" fill="#b3322b" />
+      <rect x="0" y="0" width="500" height="130" rx="5" ry="5" class="highlight-box" stroke="#b3322b" />
+      <text x="20" y="30" class="column-subtitle" fill="#b3322b">👉 実践ポイント</text>
+      <text x="20" y="70">
+        <tspan x="20" dy="0" class="body-text">• 学習開始前に3Dマトリックスで全体像を設計する</tspan>
+        <tspan x="20" dy="25" class="body-text">• 1週間単位で3次元のバランスを確認し調整する</tspan>
+        <tspan x="20" dy="25" class="body-text">• 学習の進捗を3D空間上で可視化し達成感を得る</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- カラム2：AIとの連携による3D学習強化 -->
+  <g transform="translate(630, 120)">
+    <!-- カラムタイトル -->
+    <text x="0" y="40" class="column-title" fill="#2c2c2c">AIとの連携による学習強化</text>
+    <line x1="0" y1="55" x2="150" y2="55" class="accent-line column-2-accent" stroke="#1a5b66" />
+    <circle cx="155" cy="55" r="4" class="dot column-2-accent" fill="#1a5b66" />
+    
+    <!-- 本質説明 -->
+    <text x="0" y="85">
+      <tspan x="0" dy="0" class="column-subtitle">🤖 AIとの共創学習</tspan>
+      <tspan x="0" dy="35" class="body-text">TANREN 3Dメソッドはその構造的特性から、</tspan>
+      <tspan x="0" dy="25" class="body-text">AI技術との親和性が高く、共創による学習効果の</tspan>
+      <tspan x="0" dy="25" class="body-text">最大化が可能です。AIの特性を活かしながら</tspan>
+      <tspan x="0" dy="25" class="body-text">人間の強みを組み合わせた学習体験を設計します。</tspan>
+    </text>
+    
+    <!-- AI連携フロー図 -->
+    <g transform="translate(0, 200)">
+      <rect x="0" y="0" width="500" height="280" fill="#f9f8f5" rx="5" ry="5" />
+      
+      <!-- フロータイトル -->
+      <text x="250" y="30" class="body-text" text-anchor="middle">AIと連携した3D学習フロー</text>
+      
+      <!-- ステップ1：計画設計 -->
+      <rect x="100" y="60" width="300" height="50" rx="5" ry="5" fill="#1a5b66" fill-opacity="0.1" stroke="#1a5b66" stroke-width="1" />
+      <text x="120" y="90" class="body-text">①知識マップ共同作成</text>
+      <text x="370" y="90" class="caption" text-anchor="end" fill="#1a5b66">X軸強化</text>
+      
+      <!-- ステップ2：学習実行 -->
+      <rect x="100" y="130" width="300" height="50" rx="5" ry="5" fill="#1a5b66" fill-opacity="0.1" stroke="#1a5b66" stroke-width="1" />
+      <text x="120" y="160" class="body-text">②対話型コンテンツ探索</text>
+      <text x="370" y="160" class="caption" text-anchor="end" fill="#1a5b66">Z軸強化</text>
+      
+      <!-- ステップ3：振り返り -->
+      <rect x="100" y="200" width="300" height="50" rx="5" ry="5" fill="#1a5b66" fill-opacity="0.1" stroke="#1a5b66" stroke-width="1" />
+      <text x="120" y="230" class="body-text">③フィードバック最適化</text>
+      <text x="370" y="230" class="caption" text-anchor="end" fill="#1a5b66">Y軸強化</text>
+      
+      <!-- 矢印接続 -->
+      <line x1="250" y1="110" x2="250" y2="130" stroke="#1a5b66" stroke-width="1.5" />
+      <polygon points="250,130 245,120 255,120" fill="#1a5b66" />
+      
+      <line x1="250" y1="180" x2="250" y2="200" stroke="#1a5b66" stroke-width="1.5" />
+      <polygon points="250,200 245,190 255,190" fill="#1a5b66" />
+      
+      <!-- 循環矢印 -->
+      <path d="M250,250 C350,250 350,40 250,40 C150,40 150,40 100,60" fill="none" stroke="#1a5b66" stroke-width="1.5" stroke-dasharray="5,3" />
+      <polygon points="100,60 110,55 105,65" fill="#1a5b66" />
+    </g>
+    
+    <!-- 実践ポイント -->
+    <g transform="translate(0, 490)">
+      <rect x="0" y="0" width="500" height="130" rx="5" ry="5" class="highlight-bg" fill="#1a5b66" />
+      <rect x="0" y="0" width="500" height="130" rx="5" ry="5" class="highlight-box" stroke="#1a5b66" />
+      <text x="20" y="30" class="column-subtitle" fill="#1a5b66">👉 実践ポイント</text>
+      <text x="20" y="70">
+        <tspan x="20" dy="0" class="body-text">• AIに3D構造を説明し、学習パートナーとして設定する</tspan>
+        <tspan x="20" dy="25" class="body-text">• 各軸の強化に適したAIプロンプトテンプレートを用意</tspan>
+        <tspan x="20" dy="25" class="body-text">• 定期的に学習データをAIと共有し進捗分析を依頼する</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- カラム3：事例と成果測定 -->
+  <g transform="translate(1180, 120)">
+    <!-- カラムタイトル -->
+    <text x="0" y="40" class="column-title" fill="#2c2c2c">3Dメソッド活用事例と効果測定</text>
+    <line x1="0" y1="55" x2="150" y2="55" class="accent-line column-3-accent" stroke="#653a5e" />
+    <circle cx="155" cy="55" r="4" class="dot column-3-accent" fill="#653a5e" />
+    
+    <!-- 本質説明 -->
+    <text x="0" y="85">
+      <tspan x="0" dy="0" class="column-subtitle">📈 3D学習の実証効果</tspan>
+      <tspan x="0" dy="35" class="body-text">実際の活用事例からTANREN 3Dメソッドの</tspan>
+      <tspan x="0" dy="25" class="body-text">効果を検証し、適切な成果指標で測定することで</tspan>
+      <tspan x="0" dy="25" class="body-text">学習方法の継続的な改善が可能になります。</tspan>
+      <tspan x="0" dy="25" class="body-text">多角的な評価が3D学習の真価を引き出します。</tspan>
+    </text>
+    
+    <!-- 事例と効果測定 -->
+    <g transform="translate(0, 200)">
+      <rect x="0" y="0" width="500" height="280" fill="#f9f8f5" rx="5" ry="5" />
+      
+      <!-- 左: 事例 -->
+      <rect x="20" y="20" width="220" height="240" fill="#f9f8f5" rx="5" ry="5" stroke="#653a5e" stroke-width="1" stroke-dasharray="2,2" />
+      <text x="130" y="45" class="body-text" text-anchor="middle" fill="#653a5e">活用事例</text>
+      
+      <!-- 事例1 -->
+      <rect x="30" y="60" width="200" height="60" fill="#653a5e" fill-opacity="0.05" rx="3" ry="3" />
+      <text x="40" y="80" class="body-text highlight-text">プログラミング学習</text>
+      <text x="40" y="100" class="caption">構造理解と反復練習の</text>
+      <text x="40" y="115" class="caption">バランスで習得速度2倍</text>
+      
+      <!-- 事例2 -->
+      <rect x="30" y="130" width="200" height="60" fill="#653a5e" fill-opacity="0.05" rx="3" ry="3" />
+      <text x="40" y="150" class="body-text highlight-text">語学習得</text>
+      <text x="40" y="170" class="caption">文法構造と会話練習の</text>
+      <text x="40" y="185" class="caption">3D配置で定着率向上</text>
+      
+      <!-- 事例3 -->
+      <rect x="30" y="200" width="200" height="60" fill="#653a5e" fill-opacity="0.05" rx="3" ry="3" />
+      <text x="40" y="220" class="body-text highlight-text">資格試験対策</text>
+      <text x="40" y="240" class="caption">体系的理解と時間管理で</text>
+      <text x="40" y="255" class="caption">合格率95%達成</text>
+      
+      <!-- 右: 効果測定指標 -->
+      <rect x="260" y="20" width="220" height="240" fill="#f9f8f5" rx="5" ry="5" stroke="#653a5e" stroke-width="1" stroke-dasharray="2,2" />
+      <text x="370" y="45" class="body-text" text-anchor="middle" fill="#653a5e">効果測定指標</text>
+      
+      <!-- X軸指標 -->
+      <rect x="270" y="60" width="200" height="70" fill="#653a5e" fill-opacity="0.05" rx="3" ry="3" />
+      <text x="290" y="80" class="body-text">X軸（構造）評価:</text>
+      <text x="290" y="100" class="caption">• 概念関連付け能力</text>
+      <text x="290" y="115" class="caption">• 問題解決の多角化</text>
+      <text x="290" y="130" class="caption">• 応用力テスト</text>
+      
+      <!-- Y軸指標 -->
+      <rect x="270" y="140" width="200" height="70" fill="#653a5e" fill-opacity="0.05" rx="3" ry="3" />
+      <text x="290" y="160" class="body-text">Y軸（時間）評価:</text>
+      <text x="290" y="180" class="caption">• 長期記憶定着率</text>
+      <text x="290" y="195" class="caption">• 学習習慣の定着度</text>
+      <text x="290" y="210" class="caption">• 実践頻度と継続性</text>
+      
+      <!-- Z軸指標 -->
+      <rect x="270" y="220" width="200" height="40" fill="#653a5e" fill-opacity="0.05" rx="3" ry="3" />
+      <text x="290" y="240" class="body-text">Z軸（レベル）評価:</text>
+      <text x="290" y="255" class="caption">• 難易度適応スピード</text>
+    </g>
+    
+    <!-- 実践ポイント -->
+    <g transform="translate(0, 490)">
+      <rect x="0" y="0" width="500" height="130" rx="5" ry="5" class="highlight-bg" fill="#653a5e" />
+      <rect x="0" y="0" width="500" height="130" rx="5" ry="5" class="highlight-box" stroke="#653a5e" />
+      <text x="20" y="30" class="column-subtitle" fill="#653a5e">👉 実践ポイント</text>
+      <text x="20" y="70">
+        <tspan x="20" dy="0" class="body-text">• 学習領域に適した3D評価指標を設定する</tspan>
+        <tspan x="20" dy="25" class="body-text">• 定期的な測定で3軸それぞれの進捗を確認する</tspan>
+        <tspan x="20" dy="25" class="body-text">• 他者の成功事例を参考に自分の学習に取り入れる</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- 装飾要素 -->
+  <rect x="0" y="90" width="1920" height="2" fill="#2c2c2c" />
+  <rect x="0" y="1018" width="1920" height="2" fill="#2c2c2c" />
+</svg> 

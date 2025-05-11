@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI共創によるアウトプット革命</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #2c3e50, #4a69bd, #6c5ce7, #a29bfe);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+        .title {
+            font-size: 3.2rem;
+            font-weight: 900;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-align: center;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+            background: linear-gradient(90deg, #ffffff, #e0e0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+        .icon-container {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0;
+            gap: 2rem;
+        }
+        .icon-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .icon-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        .icon {
+            font-size: 2.8rem;
+            color: white;
+        }
+        .icon-text {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        .connection {
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(90deg, #ffffff, #a29bfe);
+            position: relative;
+        }
+        .date {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        .glowing-effect {
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(108, 92, 231, 0.4) 0%, rgba(108, 92, 231, 0) 70%);
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- 背景効果 -->
+        <div class="glowing-effect" style="top: 80px; left: 200px;"></div>
+        <div class="glowing-effect" style="bottom: 80px; right: 200px;"></div>
+        
+        <div class="content">
+            <h1 class="title">第5章 実践編1<br>AI共創によるアウトプット革命</h1>
+            <h2 class="subtitle">企画・文章・資料作成</h2>
+            
+            <div class="icon-container">
+                <div class="icon-group">
+                    <div class="icon-circle">
+                        <i class="fas fa-lightbulb icon"></i>
+                    </div>
+                    <div class="icon-text">企画立案</div>
+                </div>
+                
+                <div class="connection"></div>
+                
+                <div class="icon-group">
+                    <div class="icon-circle">
+                        <i class="fas fa-edit icon"></i>
+                    </div>
+                    <div class="icon-text">文章作成</div>
+                </div>
+                
+                <div class="connection"></div>
+                
+                <div class="icon-group">
+                    <div class="icon-circle">
+                        <i class="fas fa-file-powerpoint icon"></i>
+                    </div>
+                    <div class="icon-text">資料作成</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="date">2025年5月</div>
+    </div>
+</body>
+</html>

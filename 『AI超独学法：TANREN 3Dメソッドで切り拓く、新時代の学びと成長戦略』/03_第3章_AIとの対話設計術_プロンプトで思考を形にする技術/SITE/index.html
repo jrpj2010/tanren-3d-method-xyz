@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI超独学法：第3章 - AIとの対話設計術</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Preline UI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.css" />
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Noto Sans JP -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Noto Sans JP', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            50: '#e0f7fa',
+                            100: '#b2ebf2',
+                            200: '#80deea',
+                            300: '#4dd0e1',
+                            400: '#26c6da',
+                            500: '#00bcd4',
+                            600: '#00acc1',
+                            700: '#0097a7',
+                            800: '#00838f',
+                            900: '#006064',
+                        },
+                        secondary: {
+                            50: '#fff8e1',
+                            100: '#ffecb3',
+                            200: '#ffe082',
+                            300: '#ffd54f',
+                            400: '#ffca28',
+                            500: '#ffc107',
+                            600: '#ffb300',
+                            700: '#ffa000',
+                            800: '#ff8f00',
+                            900: '#ff6f00',
+                        },
+                        tertiary: {
+                            50: '#f3e5f5',
+                            100: '#e1bee7',
+                            200: '#ce93d8',
+                            300: '#ba68c8',
+                            400: '#ab47bc',
+                            500: '#9c27b0',
+                            600: '#8e24aa',
+                            700: '#7b1fa2',
+                            800: '#6a1b9a',
+                            900: '#4a148c',
+                        },
+                        dark: {
+                            50: '#eceff1',
+                            100: '#cfd8dc',
+                            200: '#b0bec5',
+                            300: '#90a4ae',
+                            400: '#78909c',
+                            500: '#607d8b',
+                            600: '#546e7a',
+                            700: '#455a64',
+                            800: '#37474f',
+                            900: '#263238',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-900 text-white font-sans">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-dark-800/90 backdrop-blur-sm border-b border-dark-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-xl font-bold text-gradient">AI超独学法</h1>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
+                    <a href="#intro" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-dark-700 active-nav">イントロダクション</a>
+                    <a href="#prompt-essence" class="px-3 py-2 rounded-md text-sm font-medium text-dark-300 hover:bg-dark-700">プロンプトの本質</a>
+                    <a href="#prompt-structure" class="px-3 py-2 rounded-md text-sm font-medium text-dark-300 hover:bg-dark-700">対話設計の構造</a>
+                    <a href="#techniques" class="px-3 py-2 rounded-md text-sm font-medium text-dark-300 hover:bg-dark-700">実践テクニック</a>
+                    <a href="#frameworks" class="px-3 py-2 rounded-md text-sm font-medium text-dark-300 hover:bg-dark-700">活用フレームワーク</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-dark-300 hover:text-white hover:bg-dark-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
+                        <span class="sr-only">メニューを開く</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#intro" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-dark-700">イントロダクション</a>
+                <a href="#prompt-essence" class="block px-3 py-2 rounded-md text-base font-medium text-dark-300 hover:bg-dark-700">プロンプトの本質</a>
+                <a href="#prompt-structure" class="block px-3 py-2 rounded-md text-base font-medium text-dark-300 hover:bg-dark-700">対話設計の構造</a>
+                <a href="#techniques" class="block px-3 py-2 rounded-md text-base font-medium text-dark-300 hover:bg-dark-700">実践テクニック</a>
+                <a href="#frameworks" class="block px-3 py-2 rounded-md text-base font-medium text-dark-300 hover:bg-dark-700">活用フレームワーク</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative">
+        <!-- Grid background -->
+        <div class="fixed inset-0 grid-background"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Hero Section -->
+            <section id="intro" class="py-16 min-h-[90vh] flex flex-col justify-center">
+                <div class="max-w-4xl mx-auto text-center relative z-10">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-6">
+                        AIとの対話設計術
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-medium text-dark-300 mb-8">
+                        プロンプトで思考を形にする技術
+                    </h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-primary-400 via-secondary-400 to-tertiary-400 mx-auto mb-10 rounded-full"></div>
+                    <p class="text-lg text-dark-300 mb-12">
+                        プロンプトエンジニアリングの本質を理解し、AIとの対話を設計する力を身につける。<br>
+                        思考を形にする新しいコミュニケーション技術の全体像を学びます。
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#prompt-essence" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-primary-600 to-tertiary-600 hover:from-primary-700 hover:to-tertiary-700">
+                            学習を始める
+                            <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Visual -->
+                <div class="mt-8 flex justify-center">
+                    <div class="w-full max-w-md h-64 relative">
+                        <div class="prompt-visual absolute inset-0 flex items-center justify-center">
+                            <div class="human-bubble">人間</div>
+                            <div class="prompt-flow"></div>
+                            <div class="ai-bubble">AI</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prompt Essence Section -->
+            <section id="prompt-essence" class="py-16 scroll-mt-20">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex items-center mb-8">
+                        <div class="bg-primary-900/30 text-primary-400 px-4 py-2 rounded-md border border-primary-700/50 mr-4">01</div>
+                        <h2 class="text-3xl font-bold text-white">プロンプトの本質</h2>
+                    </div>
+                    <div class="w-24 h-1 bg-primary-500 mb-8 rounded-full"></div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-12">
+                        <div>
+                            <p class="text-dark-300 mb-6">
+                                プロンプトとはAIに与える「思考の設計図」です。単なる質問や指示ではなく、AIの思考プロセスに方向性と構造を与え、意図した結果へと導くための青写真です。
+                            </p>
+                            
+                            <div class="space-y-6">
+                                <!-- Key Point 1 -->
+                                <div class="bg-dark-800/50 border-l-4 border-primary-400 rounded-r-lg p-4">
+                                    <h3 class="text-xl font-bold text-primary-400 mb-2">単なる指示ではない</h3>
+                                    <p class="text-dark-300">AIに思考の道筋と枠組みを与え、意図した結果へ導く<span class="text-white font-bold">「設計図」</span>としての役割を持ちます。</p>
+                                </div>
+                                
+                                <!-- Key Point 2 -->
+                                <div class="bg-dark-800/50 border-l-4 border-primary-500 rounded-r-lg p-4">
+                                    <h3 class="text-xl font-bold text-primary-500 mb-2">プロンプトの質が出力を決定する</h3>
+                                    <p class="text-dark-300">AIの出力は入力されたプロンプトの質に大きく依存します。優れたプロンプトは、AIの可能性を最大限に引き出します。</p>
+                                </div>
+                                
+                                <!-- Key Point 3 -->
+                                <div class="bg-dark-800/50 border-l-4 border-primary-600 rounded-r-lg p-4">
+                                    <h3 class="text-xl font-bold text-primary-600 mb-2">思考を形にする技術</h3>
+                                    <p class="text-dark-300">プロンプト設計は、自分の思考を言語化し、構造化する過程でもあります。この過程自体が思考力を鍛えます。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <!-- Blueprint Metaphor -->
+                            <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6 mb-6">
+                                <h3 class="text-xl font-bold text-primary-400 mb-4 flex items-center">
+                                    <i class="fas fa-drafting-compass text-2xl mr-3"></i>
+                                    建築の比喩
+                                </h3>
+                                
+                                <div class="bg-dark-900/50 p-4 rounded-lg border border-dark-700 mb-4">
+                                    <div class="flex items-start">
+                                        <div class="bg-primary-900/30 text-primary-400 px-2 py-1 rounded text-sm mr-3 mt-1">設計図</div>
+                                        <div>
+                                            <p class="font-bold text-white mb-1">プロンプト</p>
+                                            <p class="text-dark-300 text-sm">明確な意図と構造を持った設計図</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-dark-900/50 p-4 rounded-lg border border-dark-700 mb-4">
+                                    <div class="flex items-start">
+                                        <div class="bg-primary-900/30 text-primary-400 px-2 py-1 rounded text-sm mr-3 mt-1">職人</div>
+                                        <div>
+                                            <p class="font-bold text-white mb-1">AI</p>
+                                            <p class="text-dark-300 text-sm">設計図に基づいて作業する熟練工</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-dark-900/50 p-4 rounded-lg border border-dark-700">
+                                    <div class="flex items-start">
+                                        <div class="bg-primary-900/30 text-primary-400 px-2 py-1 rounded text-sm mr-3 mt-1">建築物</div>
+                                        <div>
+                                            <p class="font-bold text-white mb-1">出力結果</p>
+                                            <p class="text-dark-300 text-sm">設計図の質に依存した最終成果物</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- TANREN Connection -->
+                            <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6">
+                                <h3 class="text-xl font-bold text-primary-400 mb-4">TANREN 3Dメソッドとの連携</h3>
+                                
+                                <div class="grid grid-cols-1 gap-3">
+                                    <div class="bg-dark-900/50 p-4 rounded-lg border border-dark-700">
+                                        <div class="flex items-center">
+                                            <div class="bg-primary-800 w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <span class="font-bold">X</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-white">思考の深度と構造</p>
+                                                <p class="text-sm text-dark-300">プロンプトを通じて、超抽象化・超具体化・超構造化の思考プロセスを実践</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-dark-900/50 p-4 rounded-lg border border-dark-700">
+                                        <div class="flex items-center">
+                                            <div class="bg-secondary-800 w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <span class="font-bold">Y</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-white">時間軸の視座</p>
+                                                <p class="text-sm text-dark-300">プロンプトに過去・現在・未来の文脈を組み込む</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-dark-900/50 p-4 rounded-lg border border-dark-700">
+                                        <div class="flex items-center">
+                                            <div class="bg-tertiary-800 w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                                <span class="font-bold">Z</span>
+                                            </div>
+                                            <div>
+                                                <p class="font-medium text-white">レベル感の把握</p>
+                                                <p class="text-sm text-dark-300">プロンプトでAIと自分のレベルを適切に設定し、成長を促進</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prompt Structure Section -->
+            <section id="prompt-structure" class="py-16 scroll-mt-20">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex items-center mb-8">
+                        <div class="bg-secondary-900/30 text-secondary-400 px-4 py-2 rounded-md border border-secondary-700/50 mr-4">02</div>
+                        <h2 class="text-3xl font-bold text-white">対話設計の構造</h2>
+                    </div>
+                    <div class="w-24 h-1 bg-secondary-500 mb-8 rounded-full"></div>
+                    
+                    <!-- Overview -->
+                    <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6 mb-10">
+                        <p class="text-dark-300 mb-6">
+                            効果的なプロンプトには一定の構造があります。この構造を理解し、意識的に組み立てることで、AIとの対話の質が飛躍的に向上します。以下に、プロンプトの6つの基本要素と、それらを組み合わせた主要なパターンを紹介します。
+                        </p>
+                        
+                        <div class="flex justify-center mb-6">
+                            <div class="w-full max-w-md h-64">
+                                <canvas id="prompt-effectiveness-chart"></canvas>
+                            </div>
+                        </div>
+                        
+                        <p class="text-center text-dark-300 text-sm italic">
+                            基本的なプロンプトと構造化されたプロンプトの効果の違い
+                        </p>
+                    </div>
+                    
+                    <!-- 6 Elements of Prompt -->
+                    <div class="mb-10">
+                        <h3 class="text-2xl font-bold text-secondary-400 mb-6 flex items-center">
+                            <i class="fas fa-cubes text-secondary-400 mr-3"></i>
+                            プロンプトの6つの基本要素
+                        </h3>
+                        
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <!-- Element 1 -->
+                            <div class="feature-card p-5">
+                                <div class="bg-secondary-800/40 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-secondary-400">
+                                    <i class="fas fa-bullseye text-xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-secondary-400 mb-2">目的設定</h4>
+                                <p class="text-dark-300 text-sm">
+                                    何を達成したいのか、最終的なゴールを明確に定義します。目的が曖昧だと結果も曖昧になります。
+                                </p>
+                            </div>
+                            
+                            <!-- Element 2 -->
+                            <div class="feature-card p-5">
+                                <div class="bg-secondary-800/40 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-secondary-400">
+                                    <i class="fas fa-user-tie text-xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-secondary-400 mb-2">ロール指定</h4>
+                                <p class="text-dark-300 text-sm">
+                                    AIにどのような役割や専門性を持たせるかを指定します。適切なロール設定が専門的な視点をもたらします。
+                                </p>
+                            </div>
+                            
+                            <!-- Element 3 -->
+                            <div class="feature-card p-5">
+                                <div class="bg-secondary-800/40 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-secondary-400">
+                                    <i class="fas fa-brain text-xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-secondary-400 mb-2">思考プロセスの誘導</h4>
+                                <p class="text-dark-300 text-sm">
+                                    AIにどのように考えてほしいか、思考の道筋を示します。「ステップバイステップで考えて」など。
+                                </p>
+                            </div>
+                            
+                            <!-- Element 4 -->
+                            <div class="feature-card p-5">
+                                <div class="bg-secondary-800/40 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-secondary-400">
+                                    <i class="fas fa-sitemap text-xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-secondary-400 mb-2">出力形式の指定</h4>
+                                <p class="text-dark-300 text-sm">
+                                    結果をどのような形式で出力してほしいかを指定します。表、箇条書き、段落など。
+                                </p>
+                            </div>
+                            
+                            <!-- Element 5 -->
+                            <div class="feature-card p-5">
+                                <div class="bg-secondary-800/40 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-secondary-400">
+                                    <i class="fas fa-info-circle text-xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-secondary-400 mb-2">コンテキスト提供</h4>
+                                <p class="text-dark-300 text-sm">
+                                    背景情報や文脈を与え、AIが状況を正確に理解できるようにします。
+                                </p>
+                            </div>
+                            
+                            <!-- Element 6 -->
+                            <div class="feature-card p-5">
+                                <div class="bg-secondary-800/40 w-12 h-12 rounded-full flex items-center justify-center mb-4 text-secondary-400">
+                                    <i class="fas fa-filter text-xl"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-secondary-400 mb-2">制約条件の設定</h4>
+                                <p class="text-dark-300 text-sm">
+                                    文字数、スタイル、使うべき/避けるべき表現などの制約を設け、出力を調整します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Prompt Patterns -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-secondary-400 mb-6 flex items-center">
+                            <i class="fas fa-puzzle-piece text-secondary-400 mr-3"></i>
+                            主要なプロンプトパターン
+                        </h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <div class="space-y-6">
+                                    <!-- Pattern 1 -->
+                                    <div class="bg-dark-800/50 border-l-4 border-secondary-400 rounded-r-lg p-4">
+                                        <h4 class="text-xl font-bold text-secondary-400 mb-2">ロールプレイ型</h4>
+                                        <p class="text-dark-300 mb-2">AIに特定の役割を与え、その専門知識や視点からの応答を求めます。</p>
+                                        <div class="code-block text-sm">
+                                            あなたは{専門家の役割}として、{目的}について{出力形式}で{制約}を踏まえて回答してください。
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Pattern 2 -->
+                                    <div class="bg-dark-800/50 border-l-4 border-secondary-500 rounded-r-lg p-4">
+                                        <h4 class="text-xl font-bold text-secondary-500 mb-2">構造指定型</h4>
+                                        <p class="text-dark-300 mb-2">出力の構造や形式を詳細に指定し、整理された情報を得ます。</p>
+                                        <div class="code-block text-sm">
+                                            {目的}について、以下の構造で回答してください：
+                                            1. {セクション1のタイトル}
+                                            2. {セクション2のタイトル}
+                                            各セクションでは{指示内容}を含めてください。
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Pattern 3 -->
+                                    <div class="bg-dark-800/50 border-l-4 border-secondary-600 rounded-r-lg p-4">
+                                        <h4 class="text-xl font-bold text-secondary-600 mb-2">ステップバイステップ型</h4>
+                                        <p class="text-dark-300 mb-2">AIに段階的な思考プロセスを促し、論理的な回答を導きます。</p>
+                                        <div class="code-block text-sm">
+                                            {問題/課題}について、ステップバイステップで考えてください。各ステップでは{考慮すべき点}を考慮し、最終的に{目的}を達成してください。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6 mb-6">
+                                    <h4 class="text-xl font-bold text-secondary-400 mb-4">プロンプトパターンの使用割合</h4>
+                                    <div class="w-full h-64">
+                                        <canvas id="prompt-patterns-chart"></canvas>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-dark-800/50 border-l-4 border-secondary-700 rounded-r-lg p-4">
+                                    <h4 class="text-xl font-bold text-secondary-700 mb-2">パターン組み合わせの威力</h4>
+                                    <p class="text-dark-300 mb-2">
+                                        これらのパターンは単独でも効果的ですが、複数を組み合わせることでさらに強力になります。特に「ロールプレイ型」と「ステップバイステップ型」の組み合わせは、専門的かつ論理的な回答を導きやすくなります。
+                                    </p>
+                                    <p class="text-dark-300">
+                                        パターンの選択は目的によって異なりますが、6つの基本要素をバランスよく取り入れることが重要です。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Techniques Section -->
+            <section id="techniques" class="py-16 scroll-mt-20">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex items-center mb-8">
+                        <div class="bg-tertiary-900/30 text-tertiary-400 px-4 py-2 rounded-md border border-tertiary-700/50 mr-4">03</div>
+                        <h2 class="text-3xl font-bold text-white">実践テクニック</h2>
+                    </div>
+                    <div class="w-24 h-1 bg-tertiary-500 mb-8 rounded-full"></div>
+                    
+                    <p class="text-dark-300 mb-10">
+                        プロンプトの本質と構造を理解したら、次は具体的な実践テクニックを習得しましょう。以下に、AIとの対話品質を飛躍的に向上させる実践的なテクニックを紹介します。
+                    </p>
+                    
+                    <!-- Core Techniques Grid -->
+                    <h3 class="text-2xl font-bold text-tertiary-400 mb-6 flex items-center">
+                        <i class="fas fa-tools text-tertiary-400 mr-3"></i>
+                        核心的なプロンプトテクニック
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-12">
+                        <!-- Technique 1 -->
+                        <div class="technique-card p-5">
+                            <h4 class="text-xl font-bold text-tertiary-400 mb-3">コンテキスト注入</h4>
+                            <p class="text-dark-300 mb-4">
+                                AIに十分な背景情報を与え、文脈を理解させるテクニック。AIに何を知っていてほしいかを明確に伝えます。
+                            </p>
+                            <div class="bg-dark-900/50 p-3 rounded border border-dark-700">
+                                <p class="text-sm text-dark-300 mb-2"><strong class="text-white">Before:</strong> 「このプロジェクトの課題は何ですか？」</p>
+                                <p class="text-sm text-dark-300"><strong class="text-white">After:</strong> 「このプロジェクトは3か月前に開始し、現在5人のチームで取り組んでいます。予算は300万円、期限は2か月後です。現状の主な課題と解決策を教えてください。」</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Technique 2 -->
+                        <div class="technique-card p-5">
+                            <h4 class="text-xl font-bold text-tertiary-400 mb-3">チェーンオブソート</h4>
+                            <p class="text-dark-300 mb-4">
+                                AIに「ステップバイステップで考える」よう促し、複雑な問題を段階的に解決するテクニック。論理的思考を促進します。
+                            </p>
+                            <div class="bg-dark-900/50 p-3 rounded border border-dark-700">
+                                <p class="text-sm text-dark-300 mb-2"><strong class="text-white">Before:</strong> 「この数学の問題を解いてください。」</p>
+                                <p class="text-sm text-dark-300"><strong class="text-white">After:</strong> 「この数学の問題を解くとき、まず考えるべきポイントを挙げ、次に解法を段階的に示し、最後に答えを導いてください。各ステップの理由も説明してください。」</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Technique 3 -->
+                        <div class="technique-card p-5">
+                            <h4 class="text-xl font-bold text-tertiary-400 mb-3">フューショットラーニング</h4>
+                            <p class="text-dark-300 mb-4">
+                                少数の具体例を示すことで、AIに期待する出力パターンを学習させるテクニック。「このような例のように回答してください」
+                            </p>
+                            <div class="bg-dark-900/50 p-3 rounded border border-dark-700">
+                                <p class="text-sm text-dark-300 mb-2"><strong class="text-white">Before:</strong> 「俳句を作ってください。」</p>
+                                <p class="text-sm text-dark-300"><strong class="text-white">After:</strong> 「以下のような現代的で都会的なイメージの俳句を3つ作ってください。例：『高層ビル 光のシャワーを 浴びて立つ』『電車走る 窓に映る顔 知らぬ人』」</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Technique 4 -->
+                        <div class="technique-card p-5">
+                            <h4 class="text-xl font-bold text-tertiary-400 mb-3">役割演出法</h4>
+                            <p class="text-dark-300 mb-4">
+                                AIに特定の役割や専門家の立場を与え、その視点からの回答を引き出すテクニック。専門性と深みを増します。
+                            </p>
+                            <div class="bg-dark-900/50 p-3 rounded border border-dark-700">
+                                <p class="text-sm text-dark-300 mb-2"><strong class="text-white">Before:</strong> 「この投資は良いでしょうか？」</p>
+                                <p class="text-sm text-dark-300"><strong class="text-white">After:</strong> 「あなたは20年の経験を持つ金融アナリストとして、このプロジェクトへの投資について、リスク分析、期待リターン、市場動向の観点から専門的な見解を教えてください。」</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dialog Simulator -->
+                    <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6 mb-12">
+                        <h3 class="text-2xl font-bold text-tertiary-400 mb-6">プロンプト実験室</h3>
+                        
+                        <div id="dialog-simulator" class="bg-dark-900/50 rounded-lg border border-dark-700 p-4">
+                            <p class="text-dark-300 mb-4">
+                                下記のプロンプトを試してみましょう。実際にどのような回答が得られるかを体験できます。
+                            </p>
+                            
+                            <div class="preset-prompts flex flex-wrap gap-2 mb-4">
+                                <!-- Preset buttons will be added by JS -->
+                            </div>
+                            
+                            <div class="flex flex-col md:flex-row gap-4 mb-4">
+                                <textarea class="human-input bg-dark-800 border border-dark-600 rounded-lg p-3 text-white w-full md:w-2/3 h-24" placeholder="プロンプトを入力してください..."></textarea>
+                                <div class="flex flex-col justify-end">
+                                    <button class="send-button bg-tertiary-600 hover:bg-tertiary-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                                        送信
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="ai-output bg-dark-800 border border-dark-600 rounded-lg p-4 min-h-[200px] text-white">
+                                ここにAIの応答が表示されます...
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Advanced Techniques -->
+                    <h3 class="text-2xl font-bold text-tertiary-400 mb-6 flex items-center">
+                        <i class="fas fa-graduation-cap text-tertiary-400 mr-3"></i>
+                        高度なプロンプト技法
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <!-- Advanced Technique 1 -->
+                        <div class="technique-card p-5">
+                            <h4 class="text-xl font-bold text-tertiary-400 mb-3">自己批評ループ</h4>
+                            <p class="text-dark-300 mb-4">
+                                AIに自分の回答を批評・改善させるテクニック。「あなたの回答を批評し、より良い解決策を提案してください」
+                            </p>
+                        </div>
+                        
+                        <!-- Advanced Technique 2 -->
+                        <div class="technique-card p-5">
+                            <h4 class="text-xl font-bold text-tertiary-400 mb-3">マルチパースペクティブ</h4>
+                            <p class="text-dark-300 mb-4">
+                                複数の視点や立場からの考察を促すテクニック。「この問題について、3つの異なる専門家の視点から考察してください」
+                            </p>
+                        </div>
+                        
+                        <!-- Advanced Technique 3 -->
+                        <div class="technique-card p-5">
+                            <h4 class="text-xl font-bold text-tertiary-400 mb-3">逆説的質問法</h4>
+                            <p class="text-dark-300 mb-4">
+                                反対の立場や想定に立って質問するテクニック。「なぜこのアプローチが失敗する可能性があるか説明してください」
+                            </p>
+                        </div>
+                        
+                        <!-- Advanced Technique 4 -->
+                        <div class="technique-card p-5">
+                            <h4 class="text-xl font-bold text-tertiary-400 mb-3">漸進的精緻化</h4>
+                            <p class="text-dark-300 mb-4">
+                                最初は大まかに、徐々に細部へと詳細化していくテクニック。複雑なタスクを段階的に進めるのに効果的。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Techniques Summary -->
+                    <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6">
+                        <h4 class="text-xl font-bold text-tertiary-400 mb-4">テクニック活用のポイント</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-tertiary-400 mt-1 mr-2"></i>
+                                <span class="text-dark-300">目的に応じて適切なテクニックを選択する</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-tertiary-400 mt-1 mr-2"></i>
+                                <span class="text-dark-300">複数のテクニックを組み合わせることで相乗効果を生む</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-tertiary-400 mt-1 mr-2"></i>
+                                <span class="text-dark-300">AIの出力を観察し、プロンプトを調整する反復プロセスを意識する</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-tertiary-400 mt-1 mr-2"></i>
+                                <span class="text-dark-300">実践を通じて自分なりのテクニックやパターンを発見・改良する</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Frameworks Section -->
+            <section id="frameworks" class="py-16 scroll-mt-20">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex items-center mb-8">
+                        <div class="bg-dark-700 text-white px-4 py-2 rounded-md border border-dark-600/50 mr-4">04</div>
+                        <h2 class="text-3xl font-bold text-white">活用フレームワーク</h2>
+                    </div>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-tertiary-500 mb-8 rounded-full"></div>
+                    
+                    <p class="text-dark-300 mb-10">
+                        プロンプトの本質、構造、実践テクニックを理解したところで、これらを実際の活用シーンで組み合わせるフレームワークを紹介します。以下のフレームワークを活用することで、AIとの対話を体系的に設計し、成果を最大化できます。
+                    </p>
+                    
+                    <!-- CAPE Framework -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold text-gradient mb-6 flex items-center">
+                            <i class="fas fa-crown text-primary-400 mr-3"></i>
+                            CAPEフレームワーク
+                        </h3>
+                        
+                        <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6 mb-6">
+                            <p class="text-dark-300 mb-6">
+                                CAPEフレームワークは、あらゆる目的のプロンプト設計に活用できる汎用的なアプローチです。4つの要素を組み込むことで、AIとの対話の質を高めます。
+                            </p>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <!-- C: Context -->
+                                <div class="framework-box">
+                                    <div class="flex items-start">
+                                        <div class="bg-primary-900/30 text-primary-400 w-10 h-10 flex items-center justify-center rounded-full font-bold mr-4 flex-shrink-0">C</div>
+                                        <div>
+                                            <h4 class="text-xl font-bold text-primary-400 mb-2">Context（文脈）</h4>
+                                            <p class="text-dark-300 text-sm">
+                                                背景情報、前提条件、制約事項など、AIが状況を理解するために必要な文脈を提供します。
+                                            </p>
+                                            <p class="text-dark-300 text-sm mt-2">
+                                                <strong class="text-white">例：</strong> 「私は30代のWebデザイナーで、初めて講演をすることになりました。対象は100人程度のビジネスパーソンです。」
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- A: Action -->
+                                <div class="framework-box">
+                                    <div class="flex items-start">
+                                        <div class="bg-secondary-900/30 text-secondary-400 w-10 h-10 flex items-center justify-center rounded-full font-bold mr-4 flex-shrink-0">A</div>
+                                        <div>
+                                            <h4 class="text-xl font-bold text-secondary-400 mb-2">Action（行動）</h4>
+                                            <p class="text-dark-300 text-sm">
+                                                AIに実行してほしい具体的な行動や作業を明確に指示します。単一または複数のステップを含みます。
+                                            </p>
+                                            <p class="text-dark-300 text-sm mt-2">
+                                                <strong class="text-white">例：</strong> 「5分間のプレゼンテーション原稿を作成し、導入・本論・結論の構成で書いてください。」
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- P: Purpose -->
+                                <div class="framework-box">
+                                    <div class="flex items-start">
+                                        <div class="bg-tertiary-900/30 text-tertiary-400 w-10 h-10 flex items-center justify-center rounded-full font-bold mr-4 flex-shrink-0">P</div>
+                                        <div>
+                                            <h4 class="text-xl font-bold text-tertiary-400 mb-2">Purpose（目的）</h4>
+                                            <p class="text-dark-300 text-sm">
+                                                最終的に達成したい目標や成果を明示します。AIが最適な方向性を判断する基準になります。
+                                            </p>
+                                            <p class="text-dark-300 text-sm mt-2">
+                                                <strong class="text-white">例：</strong> 「聴衆を引き込み、私の専門性をアピールしつつ、実用的なデザインのコツを伝えることが目的です。」
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- E: Extras -->
+                                <div class="framework-box">
+                                    <div class="flex items-start">
+                                        <div class="bg-dark-600/30 text-dark-300 w-10 h-10 flex items-center justify-center rounded-full font-bold mr-4 flex-shrink-0">E</div>
+                                        <div>
+                                            <h4 class="text-xl font-bold text-dark-300 mb-2">Extras（追加情報）</h4>
+                                            <p class="text-dark-300 text-sm">
+                                                出力形式、スタイル、追加条件など、AIの回答をより適切に調整するための補足情報を提供します。
+                                            </p>
+                                            <p class="text-dark-300 text-sm mt-2">
+                                                <strong class="text-white">例：</strong> 「カジュアルで親しみやすい口調で、専門用語は最小限に抑え、実例を交えてください。また、質問を投げかける部分も入れてください。」
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 p-4 bg-dark-900/50 rounded-lg border border-dark-700">
+                                <h5 class="text-lg font-bold text-white mb-2">CAPEフレームワーク - 完全なプロンプト例</h5>
+                                <div class="code-block text-sm">
+                                    <span class="text-primary-400">【Context】</span> 私は30代のWebデザイナーで、初めて講演をすることになりました。対象は100人程度のビジネスパーソンです。<br><br>
+                                    <span class="text-secondary-400">【Action】</span> 5分間のプレゼンテーション原稿を作成し、導入・本論・結論の構成で書いてください。<br><br>
+                                    <span class="text-tertiary-400">【Purpose】</span> 聴衆を引き込み、私の専門性をアピールしつつ、実用的なデザインのコツを伝えることが目的です。<br><br>
+                                    <span class="text-dark-300">【Extras】</span> カジュアルで親しみやすい口調で、専門用語は最小限に抑え、実例を交えてください。また、質問を投げかける部分も入れてください。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Iterative Approach -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold text-gradient mb-6 flex items-center">
+                            <i class="fas fa-sync-alt text-secondary-400 mr-3"></i>
+                            反復的プロンプト改善プロセス
+                        </h3>
+                        
+                        <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6">
+                            <p class="text-dark-300 mb-6">
+                                プロンプト設計は一度で完成させるものではなく、反復的に改善していくプロセスです。以下のサイクルを繰り返すことで、AIとの対話の質を継続的に向上させましょう。
+                            </p>
+                            
+                            <div class="flex justify-center mb-6">
+                                <div class="w-full max-w-xl rounded-lg bg-dark-900/50 p-4 border border-dark-700">
+                                    <div class="grid grid-cols-5 gap-4">
+                                        <!-- Step 1 -->
+                                        <div class="p-4 bg-dark-800 rounded-lg text-center flex flex-col items-center col-span-1">
+                                            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-primary-500 to-primary-700 flex items-center justify-center text-white font-bold mb-2">1</div>
+                                            <p class="text-sm text-primary-400 font-bold">設計</p>
+                                        </div>
+                                        
+                                        <!-- Arrow -->
+                                        <div class="flex items-center justify-center">
+                                            <i class="fas fa-chevron-right text-dark-500"></i>
+                                        </div>
+                                        
+                                        <!-- Step 2 -->
+                                        <div class="p-4 bg-dark-800 rounded-lg text-center flex flex-col items-center col-span-1">
+                                            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-secondary-500 to-secondary-700 flex items-center justify-center text-white font-bold mb-2">2</div>
+                                            <p class="text-sm text-secondary-400 font-bold">実行</p>
+                                        </div>
+                                        
+                                        <!-- Arrow -->
+                                        <div class="flex items-center justify-center">
+                                            <i class="fas fa-chevron-right text-dark-500"></i>
+                                        </div>
+                                        
+                                        <!-- Step 3 -->
+                                        <div class="p-4 bg-dark-800 rounded-lg text-center flex flex-col items-center col-span-1">
+                                            <div class="w-10 h-10 rounded-full bg-gradient-to-r from-tertiary-500 to-tertiary-700 flex items-center justify-center text-white font-bold mb-2">3</div>
+                                            <p class="text-sm text-tertiary-400 font-bold">評価</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Arrows for loop -->
+                                    <div class="mt-4 flex justify-center">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-undo-alt text-dark-500 mr-2"></i>
+                                            <p class="text-sm text-dark-400">4. 改善して再実行</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="framework-box">
+                                    <h5 class="text-lg font-bold text-primary-400 mb-2">1. 設計</h5>
+                                    <p class="text-dark-300 text-sm">
+                                        目的を明確にし、CAPEフレームワークを活用して初期プロンプトを設計します。必要に応じて複数のテクニックを組み合わせます。
+                                    </p>
+                                </div>
+                                
+                                <div class="framework-box">
+                                    <h5 class="text-lg font-bold text-secondary-400 mb-2">2. 実行</h5>
+                                    <p class="text-dark-300 text-sm">
+                                        設計したプロンプトをAIに入力し、結果を得ます。AIの思考プロセスや出力内容を観察します。
+                                    </p>
+                                </div>
+                                
+                                <div class="framework-box">
+                                    <h5 class="text-lg font-bold text-tertiary-400 mb-2">3. 評価</h5>
+                                    <p class="text-dark-300 text-sm">
+                                        得られた結果を評価し、目的達成度、質、適切さを確認します。不足点や改善点を特定します。
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 p-4 bg-dark-900/50 rounded-lg border border-dark-700">
+                                <h5 class="text-lg font-bold text-white mb-2">4. 改善点の例</h5>
+                                <ul class="space-y-2 text-sm text-dark-300">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-plus-circle text-green-500 mt-1 mr-2"></i>
+                                        <span>具体例や事例を追加して説明を強化する</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-edit text-blue-500 mt-1 mr-2"></i>
+                                        <span>より明確な指示や構造を提供する</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-minus-circle text-red-500 mt-1 mr-2"></i>
+                                        <span>不要な制約や曖昧な表現を削除する</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-exchange-alt text-yellow-500 mt-1 mr-2"></i>
+                                        <span>別のプロンプトテクニックを試す</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Summary -->
+                    <div class="bg-gradient-to-r from-primary-900/30 via-secondary-900/30 to-tertiary-900/30 rounded-xl border border-dark-700 p-8">
+                        <h3 class="text-2xl font-bold text-gradient mb-6 text-center">AIとの対話設計術の総括</h3>
+                        
+                        <div class="grid md:grid-cols-3 gap-6 mb-6">
+                            <div class="bg-dark-800/60 rounded-lg p-4 text-center">
+                                <i class="fas fa-lightbulb text-4xl text-primary-400 mb-3"></i>
+                                <h4 class="text-lg font-bold text-white mb-2">本質を理解する</h4>
+                                <p class="text-sm text-dark-300">
+                                    プロンプトを「思考の設計図」として捉え、AIとの共創関係を構築する
+                                </p>
+                            </div>
+                            
+                            <div class="bg-dark-800/60 rounded-lg p-4 text-center">
+                                <i class="fas fa-tools text-4xl text-secondary-400 mb-3"></i>
+                                <h4 class="text-lg font-bold text-white mb-2">技術を磨く</h4>
+                                <p class="text-sm text-dark-300">
+                                    構造とテクニックを習得し、継続的に実践して独自のスタイルを確立する
+                                </p>
+                            </div>
+                            
+                            <div class="bg-dark-800/60 rounded-lg p-4 text-center">
+                                <i class="fas fa-brain text-4xl text-tertiary-400 mb-3"></i>
+                                <h4 class="text-lg font-bold text-white mb-2">思考を拡張する</h4>
+                                <p class="text-sm text-dark-300">
+                                    AIとの対話を通じて自らの思考も整理・深化させ、共に成長していく
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <p class="text-dark-300 mb-4">
+                                プロンプトエンジニアリングの技術は、AIとの対話だけでなく、自分自身の思考力や問題解決能力も高めてくれます。この技術を磨き続けることで、AI時代の可能性を最大限に活かすことができるでしょう。
+                            </p>
+                            
+                            <a href="#intro" class="inline-flex items-center px-5 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-primary-600 to-tertiary-600 hover:from-primary-700 hover:to-tertiary-700">
+                                <i class="fas fa-arrow-up mr-2"></i>
+                                トップに戻る
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-800 border-t border-dark-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-center justify-center text-center">
+                <h2 class="text-2xl font-bold text-gradient mb-4">AI超独学法</h2>
+                <p class="text-dark-400 mb-4">第3章：AIとの対話設計術</p>
+                <p class="text-dark-400 text-sm">© 2025 AI超独学法. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Preline UI Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html> 

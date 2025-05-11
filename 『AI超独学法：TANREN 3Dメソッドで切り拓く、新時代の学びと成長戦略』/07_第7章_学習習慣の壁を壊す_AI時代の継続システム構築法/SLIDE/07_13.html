@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第7章まとめ：継続は「仕組み」と「マインド」で実現する</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #311b92 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background-color: #e1bee7;
+            border-radius: 2.5px;
+        }
+        .summary-item {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            transform: translateX(-30px);
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-left: 4px solid #e1bee7;
+        }
+        .summary-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-right: 16px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .summary-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(225, 190, 231, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            font-size: 1.4rem;
+            color: #e1bee7;
+            flex-shrink: 0;
+        }
+        .summary-content {
+            flex-grow: 1;
+        }
+        .summary-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #e1bee7;
+            line-height: 1.3;
+        }
+        .summary-desc {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        .highlight {
+            color: #ffd700;
+            font-weight: 600;
+        }
+        .section-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.3);
+        }
+        .spiral-staircase {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .stair {
+            position: absolute;
+            background: linear-gradient(90deg, rgba(225, 190, 231, 0.7), rgba(225, 190, 231, 0.1));
+            border-radius: 10px;
+            transform-origin: center left;
+            opacity: 0;
+            animation: stairFadeIn 0.8s forwards;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .stair-label {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #4a148c;
+        }
+        .final-message {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 2.5s;
+        }
+        .path-circle {
+            fill: #9c27b0;
+            opacity: 0.7;
+            filter: drop-shadow(0 0 8px rgba(225, 190, 231, 0.8));
+        }
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes stairFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scaleX(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scaleX(1);
+            }
+        }
+        .path-animation {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: drawPath 2s ease-out forwards;
+            animation-delay: 1.5s;
+        }
+        @keyframes drawPath {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Background pattern -->
+        <svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="position: absolute; opacity: 0.05;">
+            <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        
+        <div class="section-number">まとめ</div>
+        
+        <div class="p-16 flex">
+            <!-- Left Side - Summary List -->
+            <div class="w-1/2 pr-6">
+                <h1 class="title">第7章まとめ：継続は「仕組み」と「マインド」で実現する</h1>
+                
+                <div class="summary-item" style="animation-delay: 0.1s;">
+                    <div class="summary-number">1</div>
+                    <div class="summary-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <div class="summary-content">
+                        <div class="summary-title">挫折のメカニズムを理解し、「仕組み」で解決</div>
+                        <div class="summary-desc">
+                            継続できない原因は<span class="highlight">意志の弱さではなく構造的問題</span>。
+                            7つの挫折メカニズムを適切な仕組みで克服する。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="summary-item" style="animation-delay: 0.3s;">
+                    <div class="summary-number">2</div>
+                    <div class="summary-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <div class="summary-content">
+                        <div class="summary-title">解決策①：マイクロラーニングで学習のハードルを下げる</div>
+                        <div class="summary-desc">
+                            巨大な目標を<span class="highlight">5分で完結する最小単位</span>に分解。
+                            3Dメソッド（X軸具体化・Z軸レベル感）で学習を設計し、
+                            AIが最適なマイクロタスクを提案。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="summary-item" style="animation-delay: 0.5s;">
+                    <div class="summary-number">3</div>
+                    <div class="summary-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="summary-content">
+                        <div class="summary-title">解決策②：インプットを仕組み化しAIナレッジベースを構築</div>
+                        <div class="summary-desc">
+                            <span class="highlight">多様性と容易性</span>を担保し、AIによる自動処理で価値を高め、
+                            組織ナレッジとして集約。RAG技術で知識活用を前提とした設計。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="summary-item" style="animation-delay: 0.7s;">
+                    <div class="summary-number">4</div>
+                    <div class="summary-icon">
+                        <i class="fas fa-comment-alt"></i>
+                    </div>
+                    <div class="summary-content">
+                        <div class="summary-title">解決策③：アウトプットを習慣化しAIと振り返り対話</div>
+                        <div class="summary-desc">
+                            <span class="highlight">ラーニングピラミッド</span>の高定着率ゾーンに相当する
+                            AIとの対話で学習を定着。「魂入れ」プロセスで
+                            AIフィードバックを血肉に変える。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="summary-item" style="animation-delay: 0.9s;">
+                    <div class="summary-number">5</div>
+                    <div class="summary-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="summary-content">
+                        <div class="summary-title">「学び続けるマインドセット」でサイクルを回し続ける</div>
+                        <div class="summary-desc">
+                            <span class="highlight">B</span>uild（構築）→<span class="highlight">O</span>bserve（観察）→
+                            <span class="highlight">L</span>everage（活用）→<span class="highlight">T</span>ransform（変革）の
+                            サイクルで螺旋階段を昇るように成長し続ける。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - Spiral Staircase Illustration -->
+            <div class="w-1/2 pl-6 relative flex justify-center items-center">
+                <div class="spiral-staircase w-full h-full">
+                    <!-- Spiral Path -->
+                    <svg width="100%" height="100%" viewBox="0 0 500 500" style="position: absolute; top: 0; left: 0;">
+                        <!-- Spiral Path Animation -->
+                        <path d="M 250,450 
+                                 C 150,450 70,400 70,300 
+                                 C 70,200 160,140 250,140
+                                 C 340,140 430,200 430,300
+                                 C 430,350 400,380 350,380
+                                 C 300,380 270,350 270,300
+                                 C 270,250 300,220 350,220
+                                 C 375,220 390,235 390,260
+                                 C 390,285 375,300 350,300"
+                              fill="none" stroke="#e1bee7" stroke-width="3" 
+                              stroke-dasharray="10,5" class="path-animation" />
+                              
+                        <!-- Moving Ball on Path -->
+                        <circle id="movingBall" cx="250" cy="450" r="10" class="path-circle" />
+                        
+                        <!-- Animate the ball along the path -->
+                        <animateMotion xlink:href="#movingBall" dur="3s" begin="1.5s" fill="freeze">
+                            <mpath xlink:href="#pathToFollow" />
+                        </animateMotion>
+                        
+                        <!-- Define the path for the ball -->
+                        <path id="pathToFollow" d="M 250,450 
+                                 C 150,450 70,400 70,300 
+                                 C 70,200 160,140 250,140
+                                 C 340,140 430,200 430,300
+                                 C 430,350 400,380 350,380
+                                 C 300,380 270,350 270,300
+                                 C 270,250 300,220 350,220
+                                 C 375,220 390,235 390,260
+                                 C 390,285 375,300 350,300" 
+                              fill="none" stroke="transparent" />
+                    </svg>
+                    
+                    <!-- Stairs -->
+                    <div class="stair" style="width: 80%; height: 50px; bottom: 80px; left: 10%; animation-delay: 1.0s;">
+                        <div class="stair-label">挫折メカニズムの理解</div>
+                    </div>
+                    
+                    <div class="stair" style="width: 70%; height: 50px; bottom: 150px; left: 15%; animation-delay: 1.2s;">
+                        <div class="stair-label">マイクロラーニング</div>
+                    </div>
+                    
+                    <div class="stair" style="width: 60%; height: 50px; bottom: 220px; left: 20%; animation-delay: 1.4s;">
+                        <div class="stair-label">インプットの仕組み化</div>
+                    </div>
+                    
+                    <div class="stair" style="width: 50%; height: 50px; bottom: 290px; left: 25%; animation-delay: 1.6s;">
+                        <div class="stair-label">アウトプットの習慣化</div>
+                    </div>
+                    
+                    <div class="stair" style="width: 40%; height: 50px; bottom: 360px; left: 30%; animation-delay: 1.8s;">
+                        <div class="stair-label">学び続けるマインドセット</div>
+                    </div>
+                    
+                    <!-- Icon Elements -->
+                    <div style="position: absolute; top: 50px; right: 50px; opacity: 0; animation: fadeIn 1s forwards; animation-delay: 2.0s;">
+                        <i class="fas fa-brain text-7xl text-yellow-300"></i>
+                    </div>
+                    
+                    <div style="position: absolute; top: 150px; left: 50px; opacity: 0; animation: fadeIn 1s forwards; animation-delay: 2.1s;">
+                        <i class="fas fa-robot text-5xl text-purple-300"></i>
+                    </div>
+                    
+                    <div style="position: absolute; top: 300px; right: 100px; opacity: 0; animation: fadeIn 1s forwards; animation-delay: 2.2s;">
+                        <i class="fas fa-sync-alt text-4xl text-blue-300"></i>
+                    </div>
+                    
+                    <div class="absolute flex items-center justify-center" style="width: 100px; height: 100px; top: 70px; left: 30%; opacity: 0; animation: fadeIn 1s forwards; animation-delay: 2.3s;">
+                        <div class="absolute inset-0 bg-yellow-500 bg-opacity-10 rounded-full animate-ping"></div>
+                        <div class="bg-yellow-500 bg-opacity-50 rounded-full w-16 h-16 flex items-center justify-center">
+                            <i class="fas fa-trophy text-3xl text-yellow-300"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- BOLT Icons along path -->
+                <div style="position: absolute; top: 390px; left: 200px; opacity: 0; animation: fadeIn 0.5s forwards; animation-delay: 2.0s;">
+                    <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center">
+                        <span class="text-white font-bold">B</span>
+                    </div>
+                </div>
+                
+                <div style="position: absolute; top: 300px; left: 100px; opacity: 0; animation: fadeIn 0.5s forwards; animation-delay: 2.1s;">
+                    <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
+                        <span class="text-white font-bold">O</span>
+                    </div>
+                </div>
+                
+                <div style="position: absolute; top: 200px; left: 180px; opacity: 0; animation: fadeIn 0.5s forwards; animation-delay: 2.2s;">
+                    <div class="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center">
+                        <span class="text-white font-bold">L</span>
+                    </div>
+                </div>
+                
+                <div style="position: absolute; top: 150px; left: 300px; opacity: 0; animation: fadeIn 0.5s forwards; animation-delay: 2.3s;">
+                    <div class="w-10 h-10 rounded-full bg-yellow-600 flex items-center justify-center">
+                        <span class="text-white font-bold">T</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Final Message -->
+        <div class="final-message mx-16">
+            もはや<span class="highlight">「継続できない」は言い訳にならない</span>。<br>
+            AI時代の新しい<span class="highlight">「仕組み」</span>と<span class="highlight">「マインドセット」</span>を武器に、<br>
+            持続的な成長を実現しよう！
+        </div>
+    </div>
+</body>
+</html>

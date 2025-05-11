@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c"/>
+  <text x="60" y="65" font-family="'Noto Serif JP', serif" font-size="40" fill="#f4f1ea" letter-spacing="2">AI時代の人間の役割</text>
+  <text x="1700" y="65" font-family="'Noto Sans JP', sans-serif" font-size="24" fill="#f4f1ea">2025.04.18</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c"/>
+  <text x="60" y="1060" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#f4f1ea">マーシュ・マーサージャパン社内セミナー</text>
+  <text x="1700" y="1060" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#f4f1ea">5/5</text>
+  
+  <!-- 装飾ライン -->
+  <line x1="60" y1="120" x2="1860" y2="120" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="960" cy="120" r="4" fill="#653a5e"/>
+  
+  <!-- カラム1 -->
+  <rect x="60" y="150" width="580" height="850" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="60" y="150" width="580" height="60" fill="#b3322b"/>
+  <text x="80" y="190" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea" letter-spacing="1">AIに代替される仕事と残る仕事</text>
+  
+  <!-- カラム1コンテンツ -->
+  <text x="80" y="240" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🔄 変わりゆく仕事の風景</text>
+  <text x="80" y="280" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="80" dy="0">• AIの業務代替加速が定型業務から非定型へ</tspan>
+    <tspan x="80" dy="30">• 「人間らしさ」に価値が集中する傾向</tspan>
+    <tspan x="80" dy="30">• 意思決定と創造性が人間の主戦場に</tspan>
+  </text>
+  
+  <!-- 代替性マップ -->
+  <rect x="80" y="350" width="540" height="280" fill="#f9f7f2" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="100" y="375" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">業種・職種のAI代替性マップ</text>
+  
+  <!-- マトリックス図 -->
+  <line x1="130" y1="400" x2="130" y2="600" stroke="#2c2c2c" stroke-width="2"/>
+  <line x1="130" y1="600" x2="570" y2="600" stroke="#2c2c2c" stroke-width="2"/>
+  
+  <!-- 軸ラベル -->
+  <text x="330" y="620" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">← AI代替の容易さ →</text>
+  <text x="90" y="500" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" transform="rotate(-90, 90, 500)">← 人間的要素の重要度 →</text>
+  
+  <!-- プロット：代替されやすい仕事 -->
+  <circle cx="250" cy="550" r="25" fill="#b3322b" fill-opacity="0.7"/>
+  <text x="250" y="555" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">定型事務</text>
+  
+  <circle cx="320" cy="530" r="20" fill="#b3322b" fill-opacity="0.5"/>
+  <text x="320" y="535" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">データ集計</text>
+  
+  <circle cx="410" cy="550" r="22" fill="#b3322b" fill-opacity="0.6"/>
+  <text x="410" y="555" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">基本分析</text>
+  
+  <circle cx="480" cy="560" r="23" fill="#b3322b" fill-opacity="0.8"/>
+  <text x="480" y="565" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">文書作成</text>
+  
+  <!-- プロット：中間的な仕事 -->
+  <circle cx="350" cy="470" r="20" fill="#1a5b66" fill-opacity="0.7"/>
+  <text x="350" y="475" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">市場調査</text>
+  
+  <circle cx="430" cy="450" r="22" fill="#1a5b66" fill-opacity="0.7"/>
+  <text x="430" y="455" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">プロジェクト管理</text>
+  
+  <!-- プロット：代替されにくい仕事 -->
+  <circle cx="200" cy="420" r="25" fill="#653a5e" fill-opacity="0.7"/>
+  <text x="200" y="425" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">コンサル</text>
+  
+  <circle cx="280" cy="390" r="20" fill="#653a5e" fill-opacity="0.7"/>
+  <text x="280" y="395" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">戦略立案</text>
+  
+  <circle cx="360" cy="410" r="23" fill="#653a5e" fill-opacity="0.7"/>
+  <text x="360" y="415" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">危機管理</text>
+  
+  <circle cx="450" cy="390" r="27" fill="#653a5e" fill-opacity="0.7"/>
+  <text x="450" y="395" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">顧客体験設計</text>
+  
+  <text x="80" y="650" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🛡️ 保険・金融業界への影響</text>
+  <text x="80" y="690" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="80" dy="0">• 定型的な保険プランニングはAI化が加速</tspan>
+    <tspan x="80" dy="30">• リスクコンサルティングは人間価値が高い</tspan>
+    <tspan x="80" dy="30">• 顧客との信頼関係構築は人間の領域</tspan>
+  </text>
+  
+  <!-- 実践ポイント -->
+  <rect x="80" y="780" width="540" height="140" fill="#f9f7f2" stroke="#b3322b" stroke-width="2"/>
+  <text x="100" y="810" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">AI時代に生き残る仕事の特徴</text>
+  <text x="100" y="850" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="100" dy="0">1. 高度な対人能力が求められる仕事</tspan>
+    <tspan x="100" dy="30">2. リスク判断と最終意思決定が必要な仕事</tspan>
+    <tspan x="100" dy="30">3. 共感と創造性を併せ持つ仕事</tspan>
+  </text>
+  
+  <!-- カラム2 -->
+  <rect x="670" y="150" width="580" height="850" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="670" y="150" width="580" height="60" fill="#1a5b66"/>
+  <text x="690" y="190" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea" letter-spacing="1">自分軸の重要性とAI活用法</text>
+  
+  <!-- カラム2コンテンツ -->
+  <text x="690" y="240" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🧭 「自分軸」の定義と意義</text>
+  <text x="690" y="280" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="690" dy="0">• AI時代に必要なのは確固たる「自分軸」</tspan>
+    <tspan x="690" dy="30">• 個性と専門性がAIとの差別化要因に</tspan>
+    <tspan x="690" dy="30">• 言語化能力がテキスト力の核心</tspan>
+  </text>
+  
+  <!-- 自分軸の図 -->
+  <rect x="690" y="350" width="540" height="230" fill="#f9f7f2" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="710" y="375" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">AI時代の「自分軸」の構成要素</text>
+  
+  <!-- 中心円 -->
+  <circle cx="960" cy="465" r="60" fill="#1a5b66" fill-opacity="0.8" stroke="#f4f1ea" stroke-width="2"/>
+  <text x="960" y="455" font-family="'Noto Serif JP', serif" font-size="18" fill="#ffffff" text-anchor="middle">自分軸</text>
+  <text x="960" y="480" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">人間として</text>
+  <text x="960" y="500" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">の価値</text>
+  
+  <!-- 周辺要素：放射状配置 -->
+  <circle cx="860" cy="400" r="35" fill="#b3322b" fill-opacity="0.7" stroke="#f4f1ea" stroke-width="1.5"/>
+  <text x="860" y="390" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">センス</text>
+  <text x="860" y="410" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">個性</text>
+  <line x1="910" y1="425" x2="950" y2="445" stroke="#f4f1ea" stroke-width="1.5"/>
+  
+  <circle cx="780" cy="465" r="35" fill="#b3322b" fill-opacity="0.7" stroke="#f4f1ea" stroke-width="1.5"/>
+  <text x="780" y="455" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">倫理観</text>
+  <text x="780" y="475" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">価値観</text>
+  <line x1="815" y1="465" x2="900" y2="465" stroke="#f4f1ea" stroke-width="1.5"/>
+  
+  <circle cx="860" cy="530" r="35" fill="#b3322b" fill-opacity="0.7" stroke="#f4f1ea" stroke-width="1.5"/>
+  <text x="860" y="520" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">共感力</text>
+  <text x="860" y="540" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">感性</text>
+  <line x1="890" y1="510" x2="930" y2="490" stroke="#f4f1ea" stroke-width="1.5"/>
+  
+  <circle cx="1060" cy="400" r="35" fill="#653a5e" fill-opacity="0.7" stroke="#f4f1ea" stroke-width="1.5"/>
+  <text x="1060" y="390" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">言語化</text>
+  <text x="1060" y="410" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">能力</text>
+  <line x1="1030" y1="425" x2="990" y2="445" stroke="#f4f1ea" stroke-width="1.5"/>
+  
+  <circle cx="1140" cy="465" r="35" fill="#653a5e" fill-opacity="0.7" stroke="#f4f1ea" stroke-width="1.5"/>
+  <text x="1140" y="455" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">判断力</text>
+  <text x="1140" y="475" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">決断力</text>
+  <line x1="1105" y1="465" x2="1020" y2="465" stroke="#f4f1ea" stroke-width="1.5"/>
+  
+  <circle cx="1060" cy="530" r="35" fill="#653a5e" fill-opacity="0.7" stroke="#f4f1ea" stroke-width="1.5"/>
+  <text x="1060" y="520" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">創造性</text>
+  <text x="1060" y="540" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">独自性</text>
+  <line x1="1030" y1="510" x2="990" y2="490" stroke="#f4f1ea" stroke-width="1.5"/>
+  
+  <text x="690" y="620" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🤝 AIとの協働アプローチ</text>
+  <text x="690" y="660" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="690" dy="0">• AIを「バディ」として位置づける</tspan>
+    <tspan x="690" dy="30">• AIファーストの思考：まずAIに任せてみる</tspan>
+    <tspan x="690" dy="30">• 鵜呑みにせず改変・応用する力が重要</tspan>
+  </text>
+  
+  <!-- 実践ポイント -->
+  <rect x="690" y="760" width="540" height="160" fill="#f9f7f2" stroke="#1a5b66" stroke-width="2"/>
+  <text x="710" y="790" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">AIを活用する「自分軸」の磨き方</text>
+  <text x="710" y="830" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="710" dy="0">1. 自分の強みを言語化し、明確に表現する</tspan>
+    <tspan x="710" dy="30">2. AIに指示する際は自分のこだわりを詳細に伝える</tspan>
+    <tspan x="710" dy="30">3. AIの出力を自分の視点で批評・改善する</tspan>
+    <tspan x="710" dy="30">4. 人間らしい個性を意識的に磨く習慣をつける</tspan>
+  </text>
+  
+  <!-- カラム3 -->
+  <rect x="1280" y="150" width="580" height="850" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="1280" y="150" width="580" height="60" fill="#653a5e"/>
+  <text x="1300" y="190" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea" letter-spacing="1">AI時代に求められるスキルと素養</text>
+  
+  <!-- カラム3コンテンツ -->
+  <text x="1300" y="240" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🌟 これからの人材の条件</text>
+  <text x="1300" y="280" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="1300" dy="0">• AI武装より人間性が重要に</tspan>
+    <tspan x="1300" dy="30">• 「多様性」が進化の鍵（変数としての人間）</tspan>
+    <tspan x="1300" dy="30">• 即興力・応用力がAI時代の差別化要因</tspan>
+  </text>
+  
+  <!-- スキルセット表 -->
+  <rect x="1300" y="350" width="540" height="250" fill="#f9f7f2" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="1320" y="375" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">AI時代の必須スキルマップ</text>
+  
+  <!-- スキル区分テーブル -->
+  <!-- ヘッダー行 -->
+  <rect x="1320" y="390" width="180" height="40" fill="#653a5e" fill-opacity="0.2"/>
+  <rect x="1500" y="390" width="320" height="40" fill="#653a5e" fill-opacity="0.2"/>
+  
+  <text x="1400" y="415" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold" text-anchor="middle">スキル区分</text>
+  <text x="1660" y="415" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold" text-anchor="middle">具体的能力</text>
+  
+  <!-- 1行目：AI活用スキル -->
+  <rect x="1320" y="430" width="180" height="50" fill="#f4f1ea"/>
+  <rect x="1500" y="430" width="320" height="50" fill="#f4f1ea"/>
+  <text x="1410" y="460" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c" text-anchor="middle">AI活用スキル</text>
+  <text x="1510" y="450" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="1510" dy="0">• 的確なプロンプト設計能力</tspan>
+    <tspan x="1510" dy="20">• 出力結果の批判的評価・改善力</tspan>
+  </text>
+  
+  <!-- 2行目：人間固有スキル -->
+  <rect x="1320" y="480" width="180" height="50" fill="#f4f1ea"/>
+  <rect x="1500" y="480" width="320" height="50" fill="#f4f1ea"/>
+  <text x="1410" y="510" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c" text-anchor="middle">人間固有スキル</text>
+  <text x="1510" y="500" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="1510" dy="0">• 共感力と状況適応能力</tspan>
+    <tspan x="1510" dy="20">• 複雑な状況下での倫理的判断力</tspan>
+  </text>
+  
+  <!-- 3行目：クリエイティブスキル -->
+  <rect x="1320" y="530" width="180" height="50" fill="#f4f1ea"/>
+  <rect x="1500" y="530" width="320" height="50" fill="#f4f1ea"/>
+  <text x="1410" y="560" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c" text-anchor="middle">創造的素養</text>
+  <text x="1510" y="550" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="1510" dy="0">• 「無駄」を愛する心</tspan>
+    <tspan x="1510" dy="20">• オリジナリティ（独自の視点）</tspan>
+  </text>
+  
+  <text x="1300" y="630" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🎓 新世代の教育と人材育成</text>
+  <text x="1300" y="670" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="1300" dy="0">• AIチェッカー回避能力こそ「応用力」</tspan>
+    <tspan x="1300" dy="30">• 個性を伸ばす教育（出る杭を打たない）</tspan>
+    <tspan x="1300" dy="30">• AIファーストを前提とした思考訓練</tspan>
+  </text>
+  
+  <!-- 実践ポイント -->
+  <rect x="1300" y="760" width="540" height="160" fill="#f9f7f2" stroke="#653a5e" stroke-width="2"/>
+  <text x="1320" y="790" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">人材育成のための4つの実践</text>
+  <text x="1320" y="830" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="1320" dy="0">1. 新入社員AI研修の必須化</tspan>
+    <tspan x="1320" dy="30">2. 「正解のない問い」への挑戦機会の提供</tspan>
+    <tspan x="1320" dy="30">3. AI活用成功事例の横展開と表彰</tspan>
+    <tspan x="1320" dy="30">4. 異質な経験・知識を持つ人材の積極採用</tspan>
+  </text>
+</svg> 

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="1920" height="1080" fill="#F4F1EA"/>
+  <g clip-path="url(#clip0_0_1)">
+    <path d="M1920 0H0V1080H1920V0Z" fill="#F4F1EA"/>
+    <path d="M1920 0H0V120H1920V0Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="36" letter-spacing="0em"><tspan x="706.734" y="54.9">Day5: AIエージェントの魔法</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="24" letter-spacing="0em"><tspan x="768" y="100.1">個性・特性のパラメーター設定</tspan></text>
+    <path d="M520 83C524.418 83 528 79.4183 528 75C528 70.5817 524.418 67 520 67C515.582 67 512 70.5817 512 75C512 79.4183 515.582 83 520 83Z" fill="#B3322B"/>
+    <path d="M540 75H740" stroke="#B3322B" stroke-width="3"/>
+    <path d="M1380 83C1384.42 83 1388 79.4183 1388 75C1388 70.5817 1384.42 67 1380 67C1375.58 67 1372 70.5817 1372 75C1372 79.4183 1375.58 83 1380 83Z" fill="#B3322B"/>
+    <path d="M1160 75H1360" stroke="#B3322B" stroke-width="3"/>
+    
+    <!-- 左カラム: フィラーと口調の実装 -->
+    <path d="M640 160H40V1020H640V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="214" y="210.2">フィラーと口調の実装</tspan></text>
+    <path d="M140 220H540" stroke="#B3322B" stroke-width="3"/>
+    <path d="M140 226C143.314 226 146 223.314 146 220C146 216.686 143.314 214 140 214C136.686 214 134 216.686 134 220C134 223.314 136.686 226 140 226Z" fill="#B3322B"/>
+    <path d="M540 226C543.314 226 546 223.314 546 220C546 216.686 543.314 214 540 214C536.686 214 534 216.686 534 220C534 223.314 536.686 226 540 226Z" fill="#B3322B"/>
+    
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="70" y="270">💬 フィラーの重要性</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="70" y="309.9">人間らしい思考の間を表現する言葉</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="70" y="339.9">自然な対話感を生み出す重要な要素</tspan></text>
+    
+    <path d="M610 370H70V570H610V370Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="2"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="275" y="400.2">日本語フィラー例</tspan></text>
+    
+    <!-- 日本語フィラー表 -->
+    <path d="M570 430H110V550H570V430Z" fill="#F4F1EA" stroke="#2C2C2C"/>
+    <path d="M110 470H570" stroke="#2C2C2C"/>
+    <path d="M110 510H570" stroke="#2C2C2C"/>
+    <path d="M340 430V550" stroke="#2C2C2C"/>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="180" y="454.9">フィラータイプ</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="430" y="454.9">具体例</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="190" y="494.1">思考表現</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="370" y="494.1">えっと、あのー、うーんと</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="190" y="534.1">情感表現</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="380" y="534.1">そうですね、なるほど</tspan></text>
+    
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="70" y="610">👄 口調・語尾の特徴</tspan></text>
+    
+    <path d="M610 630H70V780H610V630Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="2"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="220" y="660.2">口調スタイルの対比</tspan></text>
+    
+    <path d="M340 680H90V760H340V680Z" fill="#F4F1EA" stroke="#B3322B" stroke-dasharray="2 2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="704.9">フォーマル調</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="110" y="736.1">「〜でございます」「〜と存じます」</tspan></text>
+    
+    <path d="M590 680H340V760H590V680Z" fill="#F4F1EA" stroke="#B3322B" stroke-dasharray="2 2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="400" y="704.9">カジュアル調</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="370" y="736.1">「〜だよね」「〜かな」「〜じゃん」</tspan></text>
+    
+    <path d="M610 800H70V970H610V800Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="2"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="199" y="830.2">プロンプトでの口調指定例</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="90" y="865.1">「あなたは優しい女性の先輩のように話してください。</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="90" y="895.1">文末には『〜だよ』『〜ね』などの柔らかい表現を</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="90" y="925.1">使い、時折『あのね』『そうそう』などの親しみを</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="90" y="955.1">感じる言葉を挿入してください。」</tspan></text>
+    
+    <!-- 中央カラム: 感情表現の実装 -->
+    <path d="M1260 160H660V1020H1260V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="850" y="210.2">感情表現の実装</tspan></text>
+    <path d="M760 220H1160" stroke="#1A5B66" stroke-width="3"/>
+    <path d="M760 226C763.314 226 766 223.314 766 220C766 216.686 763.314 214 760 214C756.686 214 754 216.686 754 220C754 223.314 756.686 226 760 226Z" fill="#1A5B66"/>
+    <path d="M1160 226C1163.31 226 1166 223.314 1166 220C1166 216.686 1163.31 214 1160 214C1156.69 214 1154 216.686 1154 220C1154 223.314 1156.69 226 1160 226Z" fill="#1A5B66"/>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="270">😊 感情表現の度合い</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="690" y="309.9">AIの応答に感情的温度を与える設定</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="690" y="339.9">熱量の高さと冷静さのバランス調整</tspan></text>
+    
+    <path d="M1230 370H690V530H1230V370Z" fill="#F4F1EA" stroke="#1A5B66" stroke-width="2"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="900" y="400.2">感情表現の軸</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="440.1">冷静・論理的</tspan></text>
+    <path d="M1120 425H800C794.477 425 790 429.477 790 435C790 440.523 794.477 445 800 445H1120C1125.52 445 1130 440.523 1130 435C1130 429.477 1125.52 425 1120 425Z" fill="#F4F1EA" stroke="#1A5B66"/>
+    <path d="M890 445C895.523 445 900 440.523 900 435C900 429.477 895.523 425 890 425C884.477 425 880 429.477 880 435C880 440.523 884.477 445 890 445Z" fill="#1A5B66"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1140" y="440.1">情熱的</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="490.1">客観的</tspan></text>
+    <path d="M1120 475H800C794.477 475 790 479.477 790 485C790 490.523 794.477 495 800 495H1120C1125.52 495 1130 490.523 1130 485C1130 479.477 1125.52 475 1120 475Z" fill="#F4F1EA" stroke="#1A5B66"/>
+    <path d="M1020 495C1025.52 495 1030 490.523 1030 485C1030 479.477 1025.52 475 1020 475C1014.48 475 1010 479.477 1010 485C1010 490.523 1014.48 495 1020 495Z" fill="#1A5B66"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1135" y="490.1">共感的</tspan></text>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="570">🔄 思考プロセスの見せ方</tspan></text>
+    
+    <path d="M1230 590H690V750H1230V590Z" fill="#F4F1EA" stroke="#1A5B66" stroke-width="2"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="875" y="620.2">思考スタイル</tspan></text>
+    
+    <path d="M960 640H710V730H960V640Z" fill="#F4F1EA" stroke="#1A5B66" stroke-dasharray="2 2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="790" y="664.9">直観的</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="725" y="696.1">• ひらめきを重視</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="725" y="721.1">• 感覚的な総合判断</tspan></text>
+    
+    <path d="M1210 640H960V730H1210V640Z" fill="#F4F1EA" stroke="#1A5B66" stroke-dasharray="2 2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1050" y="664.9">論理的</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="975" y="696.1">• ステップバイステップ</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="975" y="721.1">• 分析的な判断過程</tspan></text>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="800">📝 実装例：プロンプト</tspan></text>
+    
+    <path d="M1230 820H690V970H1230V820Z" fill="#1A5B66"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="850.9">「回答の際、一度自問自答するような形で『うーん、</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="880.9">これはどう考えればいいだろう？』といった思考プロセス</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="910.9">を見せてから、『あ、そうだ！』のように直観が働いた</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="940.9">かのような表現を使って結論を述べてください。」</tspan></text>
+    
+    <!-- 右カラム: プロンプト設計の実践 -->
+    <path d="M1880 160H1280V1020H1880V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="1482" y="210.2">プロンプト設計の実践</tspan></text>
+    <path d="M1380 220H1780" stroke="#653A5E" stroke-width="3"/>
+    <path d="M1380 226C1383.31 226 1386 223.314 1386 220C1386 216.686 1383.31 214 1380 214C1376.69 214 1374 216.686 1374 220C1374 223.314 1376.69 226 1380 226Z" fill="#653A5E"/>
+    <path d="M1780 226C1783.31 226 1786 223.314 1786 220C1786 216.686 1783.31 214 1780 214C1776.69 214 1774 216.686 1774 220C1774 223.314 1776.69 226 1780 226Z" fill="#653A5E"/>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1310" y="270">🛠️ 統合プロンプトの構築</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1310" y="309.9">個性パラメーターの統合方法</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1310" y="339.9">システムプロンプトへの効果的な組み込み</tspan></text>
+    
+    <path d="M1846 370H1306V580H1846V370Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1445" y="400.2">プロンプト構造の設計</tspan></text>
+    
+    <path d="M1830 420H1320V570H1830V420Z" fill="#F4F1EA" stroke="#653A5E" stroke-dasharray="2 2"/>
+    <path d="M1320 470H1830" stroke="#653A5E" stroke-width="1"/>
+    <path d="M1320 520H1830" stroke="#653A5E" stroke-width="1"/>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1330" y="450.9">1. 役割定義（例: あなたは親しみやすい友人です）</tspan></text>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1330" y="500.9">2. 行動指針（知識・スキル・対応範囲）</tspan></text>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1330" y="550.9">3. 個性パラメーター（口調・思考スタイル・感情表現）</tspan></text>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1310" y="620">📊 個性設定のバランス</tspan></text>
+    
+    <path d="M1846 640H1306V770H1846V640Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1326" y="669.9">• 極端な設定を避け、自然な印象を維持する</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1326" y="699.9">• 特定の性格傾向を強調しつつも極端にしない</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1326" y="729.9">• 複数の個性要素を組み合わせて立体的に</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1326" y="759.9">• 一貫性を保ちながらも多様な反応を可能に</tspan></text>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1310" y="810">✍️ 実践ワーク</tspan></text>
+    
+    <path d="M1846 830H1306V970H1846V830Z" fill="#653A5E"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1445" y="860.2">AIエージェント作成演習</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1326" y="900.9">• 自分の理想のAIバディの個性を定義する</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1326" y="930.9">• 具体的なフィラー・口調・感情表現を設計</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1326" y="960.9">• グループでテスト会話を行い相互フィードバック</tspan></text>
+    
+    <!-- フッター -->
+    <path d="M1920 1040H0V1080H1920V1040Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="694.32" y="1064.9">TANREN株式会社 / 株式会社MVP | AI人材育成プログラム | 2025年春季講座</tspan></text>
+  </g>
+  <defs>
+    <clipPath id="clip0_0_1">
+      <rect width="1920" height="1080" fill="white"/>
+    </clipPath>
+  </defs>
+</svg> 

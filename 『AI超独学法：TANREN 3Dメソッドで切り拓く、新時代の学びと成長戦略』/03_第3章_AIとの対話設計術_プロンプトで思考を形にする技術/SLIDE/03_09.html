@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI対話の必須要素⑤と⑥</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a192f 0%, #172a46 100%);
+            color: white;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+        }
+        .heading-underline {
+            height: 3px;
+            width: 60px;
+            background: linear-gradient(90deg, #2196F3, rgba(33, 150, 243, 0.3));
+            border-radius: 2px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+        .element-card {
+            background: rgba(33, 150, 243, 0.1);
+            border-radius: 8px;
+            border-top: 3px solid #2196F3;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .element-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(33, 150, 243, 0.2);
+        }
+        .element-title {
+            border-bottom: 1px solid rgba(33, 150, 243, 0.3);
+        }
+        .section-title {
+            font-size: 0.9rem;
+            color: #64B5F6;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+        .element-number {
+            background: #2196F3;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        .example-box {
+            background-color: rgba(13, 71, 161, 0.3);
+            border-left: 3px solid #64B5F6;
+            padding: 8px 12px;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+        .tanren-tag {
+            display: inline-block;
+            background-color: rgba(33, 150, 243, 0.15);
+            color: #90CAF9;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            margin-right: 4px;
+        }
+        .advanced-badge {
+            background: linear-gradient(90deg, #9c27b0, #673ab7);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Title -->
+        <div class="mb-6">
+            <h1 class="text-3xl font-bold">AI対話 必須要素⑤・⑥</h1>
+            <div class="heading-underline"></div>
+        </div>
+        
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-2 gap-6 h-4/5">
+            <!-- Element 5: Format and Example -->
+            <div class="element-card flex flex-col">
+                <!-- Element Header -->
+                <div class="element-title p-4 flex items-center">
+                    <div class="element-number mr-3">5</div>
+                    <h2 class="text-2xl font-bold">出力形式と具体例 (Format/Example)</h2>
+                </div>
+                
+                <!-- Element Content -->
+                <div class="p-4 flex flex-col justify-between flex-grow">
+                    <!-- Why Important -->
+                    <div class="mb-3">
+                        <p class="section-title">なぜ重要か？</p>
+                        <p class="font-medium">AIに<span class="text-blue-300">「完成イメージ」</span>を見せる</p>
+                        <p class="text-sm text-blue-100 mt-1">どのような形式（ファイル形式、文体、長さ、トーン）でアウトプットが欲しいかを明確にし、手戻りを減らす</p>
+                    </div>
+                    
+                    <!-- How to Set -->
+                    <div class="mb-3">
+                        <p class="section-title">どう設定するか？</p>
+                        <p class="text-sm text-blue-100 mb-1">形式：具体的な出力形式を指定</p>
+                        <p class="text-sm text-blue-100">具体例：お手本となる例を提示</p>
+                        <div class="example-box mt-2">
+                            「Markdown形式で」「表形式で」「〇〇文字以内で」<br>
+                            「例えば、以下のような応答を期待しています：[お手本]」
+                        </div>
+                    </div>
+                    
+                    <!-- 3D Method Connection -->
+                    <div class="mb-3">
+                        <p class="section-title">3Dメソッドとの連携</p>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            <span class="tanren-tag"><i class="fas fa-cube mr-1"></i>X軸</span>
+                            <span class="text-xs">超具体化で期待するアウトプットの細部を定義</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            <span class="tanren-tag"><i class="fas fa-cube mr-1"></i>X軸</span>
+                            <span class="text-xs">超構造化でデータ構造や文書テンプレートを指定</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Key Point -->
+                    <div class="bg-blue-900 bg-opacity-30 p-3 rounded mt-auto">
+                        <div class="flex">
+                            <i class="fas fa-lightbulb text-yellow-300 mt-1 mr-2"></i>
+                            <div>
+                                <p class="font-medium text-white">ポイント</p>
+                                <p class="text-sm text-blue-100">「具体例」の提示はAIの応答精度を劇的に向上させる強力なテクニック（インコンテキストラーニング）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Element 6: Thought Process -->
+            <div class="element-card flex flex-col">
+                <!-- Element Header -->
+                <div class="element-title p-4 flex items-center">
+                    <div class="element-number mr-3">6</div>
+                    <h2 class="text-2xl font-bold">思考プロセス (Thought Process) の誘導
+                        <span class="advanced-badge">高度</span>
+                    </h2>
+                </div>
+                
+                <!-- Element Content -->
+                <div class="p-4 flex flex-col justify-between flex-grow">
+                    <!-- Why Important -->
+                    <div class="mb-3">
+                        <p class="section-title">なぜ重要か？</p>
+                        <p class="font-medium">AIに<span class="text-blue-300">「考え方」</span>を教える</p>
+                        <p class="text-sm text-blue-100 mt-1">単に結果だけでなく思考のステップを誘導することで、より深く、信頼性の高い、独創的なアウトプットを引き出す</p>
+                    </div>
+                    
+                    <!-- How to Set -->
+                    <div class="mb-3">
+                        <p class="section-title">どう設定するか？</p>
+                        <p class="text-sm text-blue-100">段階的な思考を促す指示を与える</p>
+                        <div class="example-box mt-2">
+                            「まずAを分析し、次にその結果をBと比較し、最後にCについて結論を述べてください」<br>
+                            「生成した提案について、その実現可能性と潜在的リスクを自己評価してください」
+                        </div>
+                    </div>
+                    
+                    <!-- 3D Method Connection -->
+                    <div class="mb-3">
+                        <p class="section-title">3Dメソッドとの連携</p>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            <span class="tanren-tag"><i class="fas fa-cube mr-1"></i>X軸</span>
+                            <span class="text-xs">超構造化で思考の論理的な流れやステップを設計</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            <span class="tanren-tag"><i class="fas fa-cube mr-1"></i>X軸</span>
+                            <span class="text-xs">超具体化で各ステップで考慮すべき点を指示</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Key Point -->
+                    <div class="bg-blue-900 bg-opacity-30 p-3 rounded mt-auto">
+                        <div class="flex">
+                            <i class="fas fa-lightbulb text-yellow-300 mt-1 mr-2"></i>
+                            <div>
+                                <p class="font-medium text-white">ポイント</p>
+                                <p class="text-sm text-blue-100">高度なテクニックだが、AIの「ブラックボックス」性を低減し、応答の質と信頼性を向上させることができる</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Message -->
+        <div class="flex justify-center mt-4">
+            <div class="bg-gradient-to-r from-blue-900 to-purple-900 bg-opacity-30 p-3 rounded-lg w-2/3 text-center">
+                <p class="text-blue-100">
+                    <i class="fas fa-star text-yellow-300 mr-2"></i>
+                    <span class="text-white font-medium">6つの要素は「組み合わせ」で最強になる</span> — 完璧を目指さず、まず「意識」から
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

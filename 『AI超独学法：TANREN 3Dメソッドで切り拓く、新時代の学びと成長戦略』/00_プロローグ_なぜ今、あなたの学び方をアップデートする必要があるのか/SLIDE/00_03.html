@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI格差：新たな課題</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #4169E1 0%, #8A2BE2 100%);
+            color: white;
+            position: relative;
+        }
+        .slide-content {
+            display: flex;
+            height: 100%;
+        }
+        .left-content {
+            flex: 1;
+            padding: 60px 40px 60px 60px;
+        }
+        .right-content {
+            flex: 1;
+            padding: 60px 60px 60px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .slide-title {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .gap-section {
+            margin-bottom: 30px;
+        }
+        .gap-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 5px solid #FFD700;
+        }
+        .gap-desc {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .comparison-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+        .comparison-table th {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            font-size: 22px;
+            border-radius: 5px;
+        }
+        .comparison-table td {
+            padding: 12px 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            font-size: 18px;
+        }
+        .highlight {
+            color: #FFD700;
+            font-weight: 700;
+        }
+        .stair-chart-container {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+        .conclusion-box {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .conclusion-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: #FFD700;
+        }
+        .vs-text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-content">
+            <div class="left-content">
+                <h1 class="slide-title">AI格差：新たな課題</h1>
+                
+                <div class="gap-section">
+                    <div class="gap-title">AI活用格差の実態</div>
+                    <div class="gap-desc">
+                        AIを戦略的に使いこなす人と、使えない人の間に<span class="highlight">指数関数的な差</span>が拡大中
+                    </div>
+                </div>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th width="50%">AIを活用できる人</th>
+                            <th width="50%">AIを活用できない人</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AIを<span class="highlight">思考拡張パートナー</span>として活用</td>
+                            <td>AIを<span class="highlight">使うことに恐れ</span>や抵抗感</td>
+                        </tr>
+                        <tr>
+                            <td>情報を<span class="highlight">選別・構造化</span>する力がある</td>
+                            <td>情報の<span class="highlight">受け身の消費者</span>に留まる</td>
+                        </tr>
+                        <tr>
+                            <td>学習速度が<span class="highlight">加速度的に上昇</span></td>
+                            <td>従来の<span class="highlight">遅い学習ペース</span>のまま</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="conclusion-box">
+                    <div class="conclusion-text">この格差は、ただのスキル差ではなく<br>未来を切り拓く「生存戦略」の差に</div>
+                </div>
+            </div>
+            
+            <div class="right-content">
+                <div class="stair-chart-container">
+                    <canvas id="gapChart"></canvas>
+                </div>
+                <div class="vs-text">VS</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // チャートの作成
+        const ctx = document.getElementById('gapChart').getContext('2d');
+        const gapChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['現在', '半年後', '1年後', '2年後', '3年後'],
+                datasets: [
+                    {
+                        label: 'AIを活用できる人',
+                        data: [10, 30, 65, 120, 200],
+                        borderColor: 'rgba(255, 215, 0, 1)',
+                        backgroundColor: 'rgba(255, 215, 0, 0.3)',
+                        borderWidth: 4,
+                        pointRadius: 6,
+                        pointBackgroundColor: 'rgba(255, 215, 0, 1)',
+                        tension: 0.4,
+                        fill: true
+                    },
+                    {
+                        label: 'AIを活用できない人',
+                        data: [10, 12, 15, 18, 22],
+                        borderColor: 'rgba(176, 196, 222, 1)',
+                        backgroundColor: 'rgba(176, 196, 222, 0.3)',
+                        borderWidth: 4,
+                        pointRadius: 6,
+                        pointBackgroundColor: 'rgba(176, 196, 222, 1)',
+                        tension: 0.1,
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            color: 'white',
+                            font: {
+                                size: 16,
+                                family: "'Noto Sans JP', sans-serif",
+                                weight: 'bold'
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'AI活用による能力格差の拡大',
+                        color: 'white',
+                        font: {
+                            size: 20,
+                            family: "'Noto Sans JP', sans-serif",
+                            weight: 'bold'
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: 'white',
+                            font: {
+                                family: "'Noto Sans JP', sans-serif"
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: '能力・成果',
+                            color: 'white',
+                            font: {
+                                family: "'Noto Sans JP', sans-serif",
+                                weight: 'bold'
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: 'white',
+                            font: {
+                                family: "'Noto Sans JP', sans-serif"
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

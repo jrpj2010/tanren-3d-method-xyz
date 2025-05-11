@@ -1,0 +1,58 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" style="background:#f4f1ea">
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="120" fill="#2c2c2c"/>
+  <text x="960" y="80" text-anchor="middle" font-family="Noto Serif JP" font-size="48" fill="#f4f1ea" letter-spacing="4">GPT-4.1 モデルファミリー発表</text>
+  <!-- タイトル下の線と丸 -->
+  <line x1="860" y1="100" x2="1060" y2="100" stroke="#b3322b" stroke-width="4"/>
+  <circle cx="960" cy="100" r="10" fill="#b3322b"/>
+  <!-- 3カラム -->
+  <!-- カラム1：登壇者紹介 -->
+  <rect x="80" y="160" width="540" height="800" rx="32" fill="#fff" stroke="#1a5b66" stroke-width="4"/>
+  <text x="350" y="220" text-anchor="middle" font-family="Noto Serif JP" font-size="32" fill="#1a5b66">登壇者</text>
+  <text x="120" y="270" font-family="Noto Sans JP" font-size="22" fill="#2c2c2c">
+    Kevin（プロダクトリード）{"\n"}
+    Michelle（リサーチリード）{"\n"}
+    Ishaan（ポストトレーニング）{"\n"}
+  </text>
+  <rect x="120" y="320" width="120" height="120" rx="60" fill="#b3322b"/>
+  <rect x="260" y="320" width="120" height="120" rx="60" fill="#1a5b66"/>
+  <rect x="400" y="320" width="120" height="120" rx="60" fill="#653a5e"/>
+  <text x="180" y="400" text-anchor="middle" font-family="Noto Sans JP" font-size="18" fill="#fff">K</text>
+  <text x="320" y="400" text-anchor="middle" font-family="Noto Sans JP" font-size="18" fill="#fff">M</text>
+  <text x="460" y="400" text-anchor="middle" font-family="Noto Sans JP" font-size="18" fill="#fff">I</text>
+  <text x="350" y="480" text-anchor="middle" font-family="Noto Sans JP" font-size="20" fill="#2c2c2c">OpenAIのミッション：<tspan font-weight="bold" fill="#b3322b">AIの恩恵を全人類に</tspan></text>
+  <!-- カラム2：モデルファミリー -->
+  <rect x="690" y="160" width="540" height="800" rx="32" fill="#fff" stroke="#b3322b" stroke-width="4"/>
+  <text x="960" y="220" text-anchor="middle" font-family="Noto Serif JP" font-size="32" fill="#b3322b">GPT-4.1 ファミリー</text>
+  <text x="730" y="270" font-family="Noto Sans JP" font-size="22" fill="#2c2c2c">
+    ・GPT-4.1（主力）{"\n"}
+    ・GPT-4.1 mini（小型・高速）{"\n"}
+    ・GPT-4.1 nano（最小・最速・最安）{"\n"}
+  </text>
+  <!-- モデルアイコン -->
+  <circle cx="820" cy="350" r="40" fill="#b3322b"/>
+  <circle cx="960" cy="350" r="40" fill="#1a5b66"/>
+  <circle cx="1100" cy="350" r="40" fill="#653a5e"/>
+  <text x="820" y="360" text-anchor="middle" font-family="Noto Sans JP" font-size="20" fill="#fff">4.1</text>
+  <text x="960" y="360" text-anchor="middle" font-family="Noto Sans JP" font-size="20" fill="#fff">mini</text>
+  <text x="1100" y="360" text-anchor="middle" font-family="Noto Sans JP" font-size="20" fill="#fff">nano</text>
+  <text x="960" y="440" text-anchor="middle" font-family="Noto Sans JP" font-size="20" fill="#2c2c2c">APIで本日より利用可能</text>
+  <!-- カラム3：従来モデル比較・命名 -->
+  <rect x="1300" y="160" width="540" height="800" rx="32" fill="#fff" stroke="#653a5e" stroke-width="4"/>
+  <text x="1570" y="220" text-anchor="middle" font-family="Noto Serif JP" font-size="32" fill="#653a5e">従来モデル比較</text>
+  <text x="1340" y="270" font-family="Noto Sans JP" font-size="22" fill="#2c2c2c">
+    ・GPT-4o(omni)より全方位で優秀{"\n"}
+    ・GPT-4.5と同等/上回る性能{"\n"}
+    ・命名「4.1」は意図的{"\n"}
+  </text>
+  <!-- 簡易棒グラフ -->
+  <rect x="1350" y="350" width="80" height="120" fill="#b3322b"/>
+  <rect x="1450" y="370" width="80" height="100" fill="#1a5b66"/>
+  <rect x="1550" y="390" width="80" height="80" fill="#653a5e"/>
+  <text x="1390" y="490" text-anchor="middle" font-family="Noto Sans JP" font-size="18" fill="#fff">4.1</text>
+  <text x="1490" y="490" text-anchor="middle" font-family="Noto Sans JP" font-size="18" fill="#fff">mini</text>
+  <text x="1590" y="490" text-anchor="middle" font-family="Noto Sans JP" font-size="18" fill="#fff">nano</text>
+  <!-- フッター -->
+  <rect x="0" y="1000" width="1920" height="80" fill="#2c2c2c"/>
+  <text x="960" y="1050" text-anchor="middle" font-family="Noto Sans JP" font-size="24" fill="#f4f1ea">OpenAI GPT-4.1 Family | 2024</text>
+</svg>

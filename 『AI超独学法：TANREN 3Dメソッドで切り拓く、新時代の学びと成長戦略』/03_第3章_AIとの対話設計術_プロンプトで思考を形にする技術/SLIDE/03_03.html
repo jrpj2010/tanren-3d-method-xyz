@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロンプトの本質</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a192f 0%, #172a46 100%);
+            color: white;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            padding: 60px;
+        }
+        .blueprint-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            background-image: 
+                linear-gradient(rgba(13, 71, 161, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(13, 71, 161, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+        .section-number {
+            font-size: 1.5rem;
+            background: linear-gradient(90deg, #2196F3, #64B5F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        .heading-underline {
+            height: 4px;
+            width: 80px;
+            background: linear-gradient(90deg, #2196F3, rgba(33, 150, 243, 0.3));
+            border-radius: 2px;
+            margin-top: 12px;
+            margin-bottom: 20px;
+        }
+        .key-point {
+            border-left: 3px solid #2196F3;
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+        .blueprint-element {
+            border: 2px solid rgba(33, 150, 243, 0.6);
+            border-radius: 5px;
+            padding: 12px;
+            margin: 6px;
+            background-color: rgba(33, 150, 243, 0.1);
+            transition: all 0.3s ease;
+        }
+        .blueprint-element:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex">
+        <!-- Blueprint background pattern -->
+        <div class="blueprint-bg"></div>
+        
+        <!-- Content Container -->
+        <div class="z-10 flex flex-col justify-between w-full">
+            <!-- Header -->
+            <div>
+                <p class="section-number mb-2">01</p>
+                <h1 class="text-5xl font-bold mb-1">プロンプトの本質</h1>
+                <h2 class="text-2xl font-light text-blue-300 mb-4">AIへの「思考の設計図」</h2>
+                <div class="heading-underline"></div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="flex mt-4">
+                <!-- Left Column - Main Concepts -->
+                <div class="w-1/2 pr-10">
+                    <!-- Key Point 1 -->
+                    <div class="key-point">
+                        <h3 class="text-2xl font-semibold mb-2">単なる指示ではない</h3>
+                        <p class="text-blue-100">AIに思考の道筋と枠組みを与え、意図した結果へ導く<span class="text-white font-bold">「設計図」</span></p>
+                    </div>
+                    
+                    <!-- Key Point 2 - Blueprint Metaphor -->
+                    <div class="flex items-center my-8 bg-blue-900 bg-opacity-20 p-4 rounded-lg">
+                        <i class="fas fa-drafting-compass text-4xl text-blue-300 mr-4"></i>
+                        <div>
+                            <p class="font-medium">建築の比喩</p>
+                            <p class="text-sm text-blue-100 mt-1">優れた設計図（プロンプト）があってこそ<br>熟練の職人（AI）は素晴らしい建築物を建てられる</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Key Point 3 -->
+                    <div class="key-point">
+                        <h3 class="text-xl font-medium mb-1">プロンプトの質が</h3>
+                        <p class="text-blue-100">AIの<span class="text-white font-bold">思考の質と方向性</span>を決定づける</p>
+                    </div>
+                </div>
+                
+                <!-- Right Column - TANREN Connection -->
+                <div class="w-1/2 pl-6">
+                    <h3 class="text-2xl font-semibold mb-4">TANREN 3Dメソッドとの連携</h3>
+                    
+                    <div class="grid grid-cols-1 gap-3">
+                        <div class="blueprint-element">
+                            <div class="flex items-center">
+                                <div class="bg-blue-800 w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                    <span class="font-bold">X</span>
+                                </div>
+                                <div>
+                                    <p class="font-medium">超抽象化・超具体化・超構造化</p>
+                                    <p class="text-sm text-blue-100">本質的な目的と具体的なタスクを明確化</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="blueprint-element">
+                            <div class="flex items-center">
+                                <div class="bg-blue-800 w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                    <span class="font-bold">Y</span>
+                                </div>
+                                <div>
+                                    <p class="font-medium">時間軸</p>
+                                    <p class="text-sm text-blue-100">過去の経緯・現状・未来の目標を踏まえた文脈を付与</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="blueprint-element">
+                            <div class="flex items-center">
+                                <div class="bg-blue-800 w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                    <span class="font-bold">Z</span>
+                                </div>
+                                <div>
+                                    <p class="font-medium">レベル感</p>
+                                    <p class="text-sm text-blue-100">期待するアウトプットと対象者のレベルを考慮</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Message -->
+            <div class="mt-10 bg-gradient-to-r from-blue-900 to-transparent bg-opacity-20 p-4 rounded-lg">
+                <p class="text-center text-lg font-medium">
+                    <i class="fas fa-lightbulb text-yellow-300 mr-2"></i>
+                    プロンプトはスキルであり、アート。実践と試行錯誤を通じて磨き続ける
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize mermaid
+        mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    </script>
+</body>
+</html>

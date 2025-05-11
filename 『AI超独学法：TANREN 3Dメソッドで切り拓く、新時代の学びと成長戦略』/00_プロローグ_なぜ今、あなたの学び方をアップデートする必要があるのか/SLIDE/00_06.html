@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TANREN 3Dメソッド：思考OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #4169E1 0%, #8A2BE2 100%);
+            color: white;
+            position: relative;
+        }
+        .slide-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide-title {
+            font-size: 52px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        .method-explanation {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+        .highlight {
+            color: #FFD700;
+            font-weight: 700;
+        }
+        .main-content {
+            display: flex;
+            height: 500px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .axis-visualization {
+            flex: 5;
+            position: relative;
+            perspective: 1000px;
+        }
+        .axis-description {
+            flex: 2;
+        }
+        .axis-box {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .axis-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .axis-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .axis-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .axis-content {
+            font-size: 16px;
+        }
+        .axis-content ul {
+            padding-left: 20px;
+            margin: 5px 0;
+        }
+        .axis-content li {
+            margin-bottom: 5px;
+        }
+        .conclusion-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .conclusion-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: #FFD700;
+        }
+        
+        /* 3D空間の軸表現 */
+        .coordinate-system {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-style: preserve-3d;
+            transform: translate(-50%, -50%) rotateX(60deg) rotateZ(-45deg);
+            width: 400px;
+            height: 400px;
+        }
+        .axis {
+            position: absolute;
+            transform-style: preserve-3d;
+        }
+        .x-axis {
+            width: 400px;
+            height: 4px;
+            background: linear-gradient(to right, rgba(255, 0, 0, 0.8), #FF6347);
+            transform: translateZ(2px);
+        }
+        .y-axis {
+            width: 4px;
+            height: 400px;
+            background: linear-gradient(to bottom, rgba(0, 255, 0, 0.8), #32CD32);
+            transform: translateZ(2px);
+        }
+        .z-axis {
+            width: 4px;
+            height: 400px;
+            background: linear-gradient(to bottom, rgba(0, 0, 255, 0.8), #4169E1);
+            transform-origin: top;
+            transform: rotateX(-90deg);
+        }
+        .axis-label {
+            position: absolute;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        .plane {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            transform-style: preserve-3d;
+        }
+        .xy-plane {
+            transform: translateZ(2px);
+        }
+        .xz-plane {
+            transform: rotateX(90deg) translateZ(2px);
+            background: rgba(255, 255, 255, 0.07);
+        }
+        .yz-plane {
+            transform: rotateY(-90deg) translateZ(2px);
+            background: rgba(255, 255, 255, 0.07);
+        }
+        .dimension-point {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+            transform-style: preserve-3d;
+            animation: pulse 2s infinite alternate;
+        }
+        .dimension-label {
+            position: absolute;
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        
+        @keyframes pulse {
+            from { transform: scale(1) translateZ(0); }
+            to { transform: scale(1.1) translateZ(5px); }
+        }
+        
+        .method-name-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .method-name-box {
+            padding: 10px 30px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .method-name-part {
+            padding: 0 15px;
+        }
+        .method-name-separator {
+            width: 2px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+        .method-part-title {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+        .method-part-value {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-content">
+            <h1 class="slide-title">TANREN 3Dメソッド：思考OS</h1>
+            
+            <div class="method-name-container">
+                <div class="method-name-box">
+                    <div class="method-name-part">
+                        <div class="method-part-title">鍛錬</div>
+                        <div class="method-part-value">TANREN</div>
+                    </div>
+                    <div class="method-name-separator"></div>
+                    <div class="method-name-part">
+                        <div class="method-part-title">立体思考</div>
+                        <div class="method-part-value">3D</div>
+                    </div>
+                    <div class="method-name-separator"></div>
+                    <div class="method-name-part">
+                        <div class="method-part-title">体系</div>
+                        <div class="method-part-value">メソッド</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="method-explanation">
+                AI時代を生き抜くために必要な<span class="highlight">思考OS</span>。日々の意識的な鍛錬によって磨かれ、<br>
+                課題に対して<span class="highlight">立体的（3次元）</span>な視点から本質に迫る思考法
+            </div>
+            
+            <div class="main-content">
+                <div class="axis-visualization">
+                    <!-- 3D座標系の表現 -->
+                    <div class="coordinate-system">
+                        <!-- 面の表現 -->
+                        <div class="plane xy-plane"></div>
+                        <div class="plane xz-plane"></div>
+                        <div class="plane yz-plane"></div>
+                        
+                        <!-- 軸の表現 -->
+                        <div class="axis x-axis"></div>
+                        <div class="axis y-axis"></div>
+                        <div class="axis z-axis"></div>
+                        
+                        <!-- 軸のラベル -->
+                        <div class="axis-label" style="right: 0; top: 0;">X: 深度と構造</div>
+                        <div class="axis-label" style="left: 0; bottom: 0;">Y: 時間軸の視座</div>
+                        <div class="axis-label" style="left: 0; top: 0; transform: translateZ(350px);">Z: 習熟度とAI活用</div>
+                        
+                        <!-- 各次元のポイント -->
+                        <div class="dimension-point" style="background: rgba(255, 99, 71, 0.7); top: 50px; left: 250px;">
+                            X
+                        </div>
+                        <div class="dimension-label" style="top: 30px; left: 260px;">
+                            思考の深さ・構造
+                        </div>
+                        
+                        <div class="dimension-point" style="background: rgba(50, 205, 50, 0.7); top: 250px; left: 50px;">
+                            Y
+                        </div>
+                        <div class="dimension-label" style="top: 275px; left: 45px;">
+                            時間軸視点
+                        </div>
+                        
+                        <div class="dimension-point" style="background: rgba(65, 105, 225, 0.7); top: 150px; left: 150px; transform: translateZ(100px);">
+                            Z
+                        </div>
+                        <div class="dimension-label" style="top: 140px; left: 210px; transform: translateZ(100px);">
+                            習熟レベル
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="axis-description">
+                    <div class="axis-box" style="border-left: 5px solid #FF6347;">
+                        <div class="axis-title">
+                            <div class="axis-icon" style="background: rgba(255, 99, 71, 0.3);">X</div>
+                            思考の「深度」と「構造」
+                        </div>
+                        <div class="axis-content">
+                            <ul>
+                                <li><strong>超抽象化:</strong> 本質を見抜く力</li>
+                                <li><strong>超具体化:</strong> 行動へ落とし込む力</li>
+                                <li><strong>超構造化:</strong> 論理を整理する力</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="axis-box" style="border-left: 5px solid #32CD32;">
+                        <div class="axis-title">
+                            <div class="axis-icon" style="background: rgba(50, 205, 50, 0.3);">Y</div>
+                            時間軸の「視座」
+                        </div>
+                        <div class="axis-content">
+                            <ul>
+                                <li><strong>過去:</strong> 歴史と経緯からの学び</li>
+                                <li><strong>現代:</strong> 状況把握と最適解探索</li>
+                                <li><strong>未来:</strong> トレンド予測と戦略立案</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="axis-box" style="border-left: 5px solid #4169E1;">
+                        <div class="axis-title">
+                            <div class="axis-icon" style="background: rgba(65, 105, 225, 0.3);">Z</div>
+                            習熟度とAI活用の「レベル」
+                        </div>
+                        <div class="axis-content">
+                            <ul>
+                                <li><strong>レベル0.5-1:</strong> 基本対話・情報収集</li>
+                                <li><strong>レベル2:</strong> 思考OSによる効率化</li>
+                                <li><strong>レベル3:</strong> AIとの共創・価値創造</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="conclusion-box">
+                <div class="conclusion-text">
+                    これら3軸が相互に連携し、立体的に機能することで<br>
+                    AIという強力なツールを真に使いこなす力を生む
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第1章のまとめ：AI超独学を起動するマインドセット</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #e6f7ff 0%, #cce7ff 50%, #b3d7ff 100%);
+            overflow: hidden;
+        }
+        .title {
+            color: #004080;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .summary-card {
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        .summary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        .summary-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        .accent-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+        }
+        .circle-bg {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            z-index: 0;
+        }
+        .door-container {
+            position: relative;
+            width: 200px;
+            height: 120px;
+            margin: 0 auto;
+        }
+        .door {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, #004080, #0066cc);
+            transition: all 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .door-left {
+            left: 0;
+            border-radius: 10px 0 0 10px;
+            transform-origin: left;
+        }
+        .door-right {
+            right: 0;
+            border-radius: 0 10px 10px 0;
+            transform-origin: right;
+        }
+        .door-container:hover .door-left {
+            transform: perspective(1200px) rotateY(-30deg);
+        }
+        .door-container:hover .door-right {
+            transform: perspective(1200px) rotateY(30deg);
+        }
+        .door-light {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        .door-container:hover .door-light {
+            opacity: 1;
+        }
+        .next-chapter-banner {
+            background: linear-gradient(90deg, #004080, #0066cc, #0088cc);
+            transform: rotate(-2deg);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-8">
+        <!-- Background Elements -->
+        <div class="circle-bg" style="width: 300px; height: 300px; top: -100px; right: -50px; opacity: 0.4;"></div>
+        <div class="circle-bg" style="width: 200px; height: 200px; bottom: -50px; left: 100px; opacity: 0.3;"></div>
+        
+        <!-- Header -->
+        <div class="text-center mb-6">
+            <h1 class="title text-4xl">第1章のまとめ：AI超独学を起動するマインドセット</h1>
+            <div class="w-48 h-1 bg-blue-600 mx-auto mt-3 rounded-full"></div>
+        </div>
+        
+        <!-- Summary Cards -->
+        <div class="space-y-6 mb-6 z-10 relative">
+            <!-- Point 1 -->
+            <div class="summary-card bg-white p-5 flex">
+                <div class="accent-bar bg-blue-600"></div>
+                <div class="summary-icon bg-blue-100">
+                    <i class="fas fa-chart-line text-4xl text-blue-600"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-blue-700">「AIと話せる人」は指数関数的に成長する</h2>
+                    <p class="text-gray-700 mt-1">
+                        AIという「翻訳こんにゃく」が、学習の壁を打ち破り、4つの加速エンジン（学習速度・思考深化・行動サイクル・知のネットワーク）を駆動させることで、従来の線形成長を超えた飛躍的な成長が可能に。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Point 2 -->
+            <div class="summary-card bg-white p-5 flex">
+                <div class="accent-bar bg-red-500"></div>
+                <div class="summary-icon bg-red-100">
+                    <i class="fas fa-exclamation-triangle text-4xl text-red-500"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-red-700">「AIを使っているつもり」では、7つの罠にはまる</h2>
+                    <p class="text-gray-700 mt-1">
+                        AIを単なるツールとして表面的に使うだけでは、目的曖昧・情報メタボ・インプット偏重など7つの独学の罠に陥り、成長は停滞する。AIの便利さに頼りすぎると、逆に思考力や創造性が退化する危険性も。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Point 3 -->
+            <div class="summary-card bg-white p-5 flex">
+                <div class="accent-bar bg-green-500"></div>
+                <div class="summary-icon bg-green-100">
+                    <i class="fas fa-sync-alt text-4xl text-green-600"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-green-700">「使う側」から「共創する側」へのマインドセットシフト</h2>
+                    <p class="text-gray-700 mt-1">
+                        AIを対等なパートナーとして捉え、好奇心と実験精神、主体性と批判的思考、対話と共創の意識を持って関わることで、AIとの相乗効果を生み出し、AI時代のプロフェッショナルへと進化できる。
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Door Metaphor -->
+        <div class="text-center mt-8 relative z-10">
+            <div class="door-container">
+                <div class="door door-left">
+                    <i class="fas fa-key text-white text-xl"></i>
+                    <div class="door-light"></div>
+                </div>
+                <div class="door door-right">
+                    <i class="fas fa-brain text-white text-xl"></i>
+                    <div class="door-light"></div>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500" style="opacity: 0; transition: opacity 0.5s ease;">
+                    <div class="text-blue-600 font-bold text-xl">未来</div>
+                </div>
+            </div>
+            <h2 class="text-2xl font-bold text-blue-800 mt-4">未来への扉は、あなたのマインドセットの中にある</h2>
+            <p class="text-gray-700 mt-2">
+                AIは、あなたの未来を明るく照らす希望となるか、あなたを過去に取り残す脅威となるか。<br>
+                その分岐点は、あなた自身の「心の持ち方」にかかっている。
+            </p>
+        </div>
+        
+        <!-- Next Chapter Banner -->
+        <div class="next-chapter-banner p-3 text-white text-center mt-6 mx-auto max-w-3xl">
+            <p class="font-bold">次の章では、AIと共に自らを進化させる旅の最重要装備、<br>思考OS「TANREN 3Dメソッド」の全貌を解き明かします</p>
+        </div>
+    </div>
+    
+    <script>
+        // Door hover effect
+        const doorContainer = document.querySelector('.door-container');
+        const doorMessage = doorContainer.querySelector('.absolute');
+        
+        doorContainer.addEventListener('mouseenter', () => {
+            setTimeout(() => {
+                doorMessage.style.opacity = '1';
+            }, 300);
+        });
+        
+        doorContainer.addEventListener('mouseleave', () => {
+            doorMessage.style.opacity = '0';
+        });
+    </script>
+</body>
+</html>

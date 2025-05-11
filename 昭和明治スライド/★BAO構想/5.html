@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIエグゼクティブチーム - ビジネス・エージェント・オーケストレーター構想</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --black: #2c2c2c;
+            --cream: #f4f1ea;
+            --red: #b3322b;
+            --blue: #1a5b66;
+            --purple: #653a5e;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--cream);
+            color: var(--black);
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .slide-title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            color: var(--black);
+            position: relative;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        .slide-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--red);
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .dot-red {
+            background-color: var(--red);
+        }
+        .dot-blue {
+            background-color: var(--blue);
+        }
+        .dot-purple {
+            background-color: var(--purple);
+        }
+        .cxo-card {
+            border: 2px solid var(--black);
+            background-color: white;
+            padding: 15px;
+            height: 100%;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .cxo-card::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--black);
+            z-index: -1;
+        }
+        .cxo-title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid;
+            padding-bottom: 5px;
+        }
+        .cxo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 10px;
+        }
+        .cxo-task {
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            position: relative;
+            padding-left: 14px;
+        }
+        .cxo-task::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .red-bg {
+            background-color: var(--red);
+        }
+        .blue-bg {
+            background-color: var(--blue);
+        }
+        .purple-bg {
+            background-color: var(--purple);
+        }
+        .red-text {
+            color: var(--red);
+        }
+        .blue-text {
+            color: var(--blue);
+        }
+        .purple-text {
+            color: var(--purple);
+        }
+        .company {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            text-align: right;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+        .intro-box {
+            border-left: 4px solid var(--red);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h1 class="slide-title text-4xl mb-6">AI CXOの役割と機能：未来の経営幹部</h1>
+        
+        <div class="flex justify-center items-center mb-4">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-purple"></span>
+        </div>
+        
+        <div class="intro-box">
+            <p class="text-xl mb-2">BAO構想における<span class="red-text font-bold">AI経営幹部（CXO）</span>は、人間CEOの指示のもと各専門分野を統括するAIエージェントです。</p>
+            <p>各AI CXOは自部門の戦略立案・実行・最適化を担い、他のAI CXOと連携して会社目標の達成に貢献します。</p>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-6 mb-6">
+            <!-- Row 1 -->
+            <div class="cxo-card">
+                <div class="flex items-center mb-2">
+                    <div class="cxo-icon red-bg">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="cxo-title red-text">AI CMO</h3>
+                </div>
+                <p class="text-sm mb-2">最高マーケティング責任者</p>
+                <div class="cxo-task">市場トレンド分析と予測</div>
+                <div class="cxo-task">広告キャンペーンの企画・実行・効果測定</div>
+                <div class="cxo-task">顧客セグメンテーション最適化</div>
+                <div class="cxo-task">コンテンツ戦略の立案と実施</div>
+                <div class="cxo-task">ブランドイメージ管理と強化</div>
+            </div>
+            
+            <div class="cxo-card">
+                <div class="flex items-center mb-2">
+                    <div class="cxo-icon blue-bg">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="cxo-title blue-text">AI CSO</h3>
+                </div>
+                <p class="text-sm mb-2">最高営業責任者</p>
+                <div class="cxo-task">見込み客リスト作成と優先順位付け</div>
+                <div class="cxo-task">パーソナライズされた営業アプローチ提案</div>
+                <div class="cxo-task">営業プロセスの最適化と自動化</div>
+                <div class="cxo-task">契約管理とリスク分析</div>
+                <div class="cxo-task">売上予測と機会発見</div>
+            </div>
+            
+            <div class="cxo-card">
+                <div class="flex items-center mb-2">
+                    <div class="cxo-icon purple-bg">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3 class="cxo-title purple-text">AI CPO</h3>
+                </div>
+                <p class="text-sm mb-2">最高製品責任者</p>
+                <div class="cxo-task">顧客フィードバック収集と分析</div>
+                <div class="cxo-task">製品改善と新機能の提案</div>
+                <div class="cxo-task">開発ロードマップの優先順位付け</div>
+                <div class="cxo-task">競合製品分析と差別化戦略</div>
+                <div class="cxo-task">プロダクトマーケットフィット評価</div>
+            </div>
+            
+            <!-- Row 2 -->
+            <div class="cxo-card">
+                <div class="flex items-center mb-2">
+                    <div class="cxo-icon blue-bg">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="cxo-title blue-text">AI CHRO</h3>
+                </div>
+                <p class="text-sm mb-2">最高人事責任者</p>
+                <div class="cxo-task">採用候補者のスクリーニングと評価</div>
+                <div class="cxo-task">従業員エンゲージメント分析</div>
+                <div class="cxo-task">研修プログラムの最適化</div>
+                <div class="cxo-task">AI部門の性能評価と最適化</div>
+                <div class="cxo-task">組織文化の維持とエージェント調整</div>
+            </div>
+            
+            <div class="cxo-card">
+                <div class="flex items-center mb-2">
+                    <div class="cxo-icon red-bg">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="cxo-title red-text">AI CFO</h3>
+                </div>
+                <p class="text-sm mb-2">最高財務責任者</p>
+                <div class="cxo-task">予算策定と資源配分最適化</div>
+                <div class="cxo-task">経費精算処理の自動化</div>
+                <div class="cxo-task">財務諸表作成と分析</div>
+                <div class="cxo-task">キャッシュフロー予測と管理</div>
+                <div class="cxo-task">投資判断支援と不正検知</div>
+            </div>
+            
+            <div class="cxo-card">
+                <div class="flex items-center mb-2">
+                    <div class="cxo-icon purple-bg">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="cxo-title purple-text">AI CSupO</h3>
+                </div>
+                <p class="text-sm mb-2">最高サポート責任者</p>
+                <div class="cxo-task">問い合わせ自動応答・エスカレーション</div>
+                <div class="cxo-task">FAQ自動生成と更新</div>
+                <div class="cxo-task">顧客満足度分析と改善提案</div>
+                <div class="cxo-task">サポート担当AIの最適配置</div>
+                <div class="cxo-task">顧客体験の継続的改善</div>
+            </div>
+        </div>
+        
+        <div class="bg-white p-5 border-2 border-black mx-auto max-w-4xl">
+            <div class="flex items-center">
+                <div class="mr-5">
+                    <i class="fas fa-brain text-4xl purple-text"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">社内ナレッジハブの中核機能</p>
+                    <p>各AI CXOが収集したデータ・分析結果・成功事例はすべて<span class="red-text font-bold">社内ナレッジハブ</span>に蓄積され、<br>すべてのAIエージェントが<span class="blue-text font-bold">リアルタイムで参照可能</span>。他部門の知見を即座に活用できる環境が、<br>従来のビジネスでは実現不可能だった<span class="purple-text font-bold">部門間連携の壁</span>を完全に取り払います。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="company">
+            <p>TANREN株式会社</p>
+        </div>
+        
+        <div class="page-number">5 / 12</div>
+    </div>
+</body>
+</html>

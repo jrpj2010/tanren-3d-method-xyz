@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特に注意したい2つの罠と脱出策</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #e6f7ff 0%, #cce7ff 50%, #b3d7ff 100%);
+        }
+        .title {
+            color: #004080;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .trap-card {
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .escape-card {
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .trap-header {
+            background: linear-gradient(90deg, #ff6b6b 0%, #ff8585 100%);
+        }
+        .escape-header {
+            background: linear-gradient(90deg, #4ecdc4 0%, #56e0d6 100%);
+        }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .arrow {
+            width: 0; 
+            height: 0; 
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 20px solid #0066cc;
+        }
+        .warning-tape {
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255, 221, 0, 0.8),
+                rgba(255, 221, 0, 0.8) 10px,
+                rgba(0, 0, 0, 0.7) 10px,
+                rgba(0, 0, 0, 0.7) 20px
+            );
+            height: 30px;
+            transform: rotate(-2deg);
+        }
+        .action-item {
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .custom-bullet {
+            min-width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-8">
+        <!-- Header -->
+        <div class="text-center mb-6">
+            <h1 class="title text-4xl mb-2">特に注意したい2つの罠と脱出策</h1>
+            <div class="w-40 h-1 bg-blue-600 mx-auto rounded-full"></div>
+        </div>
+        
+        <!-- Content Container -->
+        <div class="grid grid-cols-2 gap-4 h-full">
+            <!-- Trap 1 Section -->
+            <div class="flex flex-col">
+                <!-- Trap Card -->
+                <div class="trap-card mb-4">
+                    <div class="trap-header p-4 flex items-center">
+                        <div class="icon-circle bg-white text-red-500 mr-4">
+                            <i class="fas fa-database text-3xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-white text-2xl font-bold">情報メタボトラップ</h2>
+                            <p class="text-white opacity-90">集めるだけで満足、消化不良</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4">
+                        <div class="warning-tape mb-4 flex items-center justify-center">
+                            <span class="text-white font-bold px-4 py-1">DANGER ZONE</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700">
+                            <p><i class="fas fa-exclamation-circle text-red-500 mr-2"></i> AIが瞬時に膨大な情報を提供するため、情報の洪水に溺れる</p>
+                            <p><i class="fas fa-exclamation-circle text-red-500 mr-2"></i> AIの回答を鵜呑みにし、批判的思考を怠る</p>
+                            <p><i class="fas fa-exclamation-circle text-red-500 mr-2"></i> 誤情報（ハルシネーション）に気づかず知識の質が低下</p>
+                        </div>
+                        <div class="bg-red-50 mt-4 p-3 rounded-lg">
+                            <p class="text-red-700 text-center font-bold">知識の便秘状態：インプット過多でアウトプット不足</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Escape Card -->
+                <div class="escape-card mt-auto">
+                    <div class="escape-header p-3 flex items-center">
+                        <div class="icon-circle bg-white text-green-500 mr-4">
+                            <i class="fas fa-life-ring text-3xl"></i>
+                        </div>
+                        <h2 class="text-white text-xl font-bold">AIを使った脱出策</h2>
+                    </div>
+                    <div class="bg-white p-4">
+                        <div class="action-item">
+                            <div class="custom-bullet bg-green-500 text-white"><i class="fas fa-check"></i></div>
+                            <p class="text-gray-800">情報の要約・整理をAIに依頼（重要ポイントだけ抽出）</p>
+                        </div>
+                        <div class="action-item">
+                            <div class="custom-bullet bg-green-500 text-white"><i class="fas fa-check"></i></div>
+                            <p class="text-gray-800">事実確認のためのクエリ分割と多角検証をAIと実践</p>
+                        </div>
+                        <div class="action-item">
+                            <div class="custom-bullet bg-green-500 text-white"><i class="fas fa-check"></i></div>
+                            <p class="text-gray-800">AIに学んだことを説明させ、自分の理解を確認</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Trap 2 Section -->
+            <div class="flex flex-col">
+                <!-- Trap Card -->
+                <div class="trap-card mb-4">
+                    <div class="trap-header p-4 flex items-center">
+                        <div class="icon-circle bg-white text-red-500 mr-4">
+                            <i class="fas fa-download text-3xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-white text-2xl font-bold">インプット偏重トラップ</h2>
+                            <p class="text-white opacity-90">知識はあるけど、使えない</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4">
+                        <div class="warning-tape mb-4 flex items-center justify-center">
+                            <span class="text-white font-bold px-4 py-1">DANGER ZONE</span>
+                        </div>
+                        <div class="space-y-2 text-gray-700">
+                            <p><i class="fas fa-exclamation-circle text-red-500 mr-2"></i> AIとの対話だけで満足し「理解できた」と錯覚する</p>
+                            <p><i class="fas fa-exclamation-circle text-red-500 mr-2"></i> AIが生成した文章やコードをそのまま使って思考停止</p>
+                            <p><i class="fas fa-exclamation-circle text-red-500 mr-2"></i> 自分の言葉で説明・実装する機会を失う</p>
+                        </div>
+                        <div class="bg-red-50 mt-4 p-3 rounded-lg">
+                            <p class="text-red-700 text-center font-bold">「知っている」と「できる」のギャップが拡大</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Escape Card -->
+                <div class="escape-card mt-auto">
+                    <div class="escape-header p-3 flex items-center">
+                        <div class="icon-circle bg-white text-green-500 mr-4">
+                            <i class="fas fa-life-ring text-3xl"></i>
+                        </div>
+                        <h2 class="text-white text-xl font-bold">AIを使った脱出策</h2>
+                    </div>
+                    <div class="bg-white p-4">
+                        <div class="action-item">
+                            <div class="custom-bullet bg-green-500 text-white"><i class="fas fa-check"></i></div>
+                            <p class="text-gray-800">AIに学んだ内容を自分の言葉で説明し、フィードバックをもらう</p>
+                        </div>
+                        <div class="action-item">
+                            <div class="custom-bullet bg-green-500 text-white"><i class="fas fa-check"></i></div>
+                            <p class="text-gray-800">AIが生成したコードや文章の改良点を自分で考える練習</p>
+                        </div>
+                        <div class="action-item">
+                            <div class="custom-bullet bg-green-500 text-white"><i class="fas fa-check"></i></div>
+                            <p class="text-gray-800">実践的な課題設定をAIにしてもらい、解決に挑戦する</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Note -->
+        <div class="text-center mt-4">
+            <p class="text-blue-700 font-bold">AIを使いこなす鍵は「受動的な情報収集」から「能動的な知識活用」へのシフト</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>良いプロンプト・悪いプロンプトの分水嶺</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a192f 0%, #172a46 100%);
+            color: white;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            padding: 50px;
+        }
+        .section-number {
+            font-size: 1.5rem;
+            background: linear-gradient(90deg, #2196F3, #64B5F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        .heading-underline {
+            height: 4px;
+            width: 80px;
+            background: linear-gradient(90deg, #2196F3, rgba(33, 150, 243, 0.3));
+            border-radius: 2px;
+            margin-top: 12px;
+            margin-bottom: 20px;
+        }
+        .bad-prompt {
+            border-left: 3px solid #f44336;
+            background: rgba(244, 67, 54, 0.1);
+            transition: all 0.3s ease;
+        }
+        .bad-prompt:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(244, 67, 54, 0.2);
+        }
+        .prompt-example {
+            font-family: monospace;
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            background-color: rgba(10, 25, 47, 0.7);
+            border-radius: 4px;
+            border-left: 3px solid #64B5F6;
+        }
+        .what-wrong {
+            font-size: 0.9rem;
+            color: #f8bbd0;
+        }
+        .result {
+            font-size: 0.85rem;
+            color: #ffcc80;
+        }
+        .tanren-tag {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            background-color: rgba(33, 150, 243, 0.2);
+            color: #90caf9;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Header -->
+        <div class="mb-6">
+            <p class="section-number mb-2">02</p>
+            <h1 class="text-4xl font-bold mb-1">良いプロンプト・悪いプロンプトの分水嶺</h1>
+            <h2 class="text-xl font-light text-blue-300">失敗例から学ぶ「伝わらない」原因</h2>
+            <div class="heading-underline"></div>
+        </div>
+        
+        <!-- Grid of Bad Prompts -->
+        <div class="grid grid-cols-2 gap-6">
+            <!-- Bad Prompt 1 -->
+            <div class="bad-prompt p-5 rounded-md">
+                <div class="flex items-center mb-3">
+                    <div class="bg-red-800 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-question-circle text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold">曖昧模糊プロンプト</h3>
+                </div>
+                <div class="prompt-example mb-3">
+                    「新製品のキャッチコピー、なんかいい感じで10個くらい考えて。」
+                </div>
+                <div class="what-wrong mb-2">
+                    <i class="fas fa-exclamation-triangle mr-1"></i> <strong>問題点:</strong> 「何を」「どのレベルで」「どんな観点で」が不明確
+                </div>
+                <div class="result">
+                    <i class="fas fa-arrow-right mr-1"></i> <strong>末路:</strong> 凡庸なアイデアしか得られない
+                </div>
+                <div class="mt-2">
+                    <span class="tanren-tag">X軸: 構造化不足</span>
+                </div>
+            </div>
+            
+            <!-- Bad Prompt 2 -->
+            <div class="bad-prompt p-5 rounded-md">
+                <div class="flex items-center mb-3">
+                    <div class="bg-red-800 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-hand-point-right text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold">丸投げ思考プロンプト</h3>
+                </div>
+                <div class="prompt-example mb-3">
+                    「（大量の資料を貼り付けて）これ読んで、要点をまとめて提案書作っておいて。」
+                </div>
+                <div class="what-wrong mb-2">
+                    <i class="fas fa-exclamation-triangle mr-1"></i> <strong>問題点:</strong> 目的・重視すべきポイント・期待する形式が示されていない
+                </div>
+                <div class="result">
+                    <i class="fas fa-arrow-right mr-1"></i> <strong>末路:</strong> 焦点の定まらない冗長なアウトプット
+                </div>
+                <div class="mt-2">
+                    <span class="tanren-tag">X軸: 欠落</span>
+                    <span class="tanren-tag">Y軸: 欠落</span>
+                    <span class="tanren-tag">Z軸: 欠落</span>
+                </div>
+            </div>
+            
+            <!-- Bad Prompt 3 -->
+            <div class="bad-prompt p-5 rounded-md">
+                <div class="flex items-center mb-3">
+                    <div class="bg-red-800 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-info-circle text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold">情報不足プロンプト</h3>
+                </div>
+                <div class="prompt-example mb-3">
+                    「競合A社の分析をお願い。」「さっき話した件、メールの下書き作って。」
+                </div>
+                <div class="what-wrong mb-2">
+                    <i class="fas fa-exclamation-triangle mr-1"></i> <strong>問題点:</strong> AIが応答に必要な文脈・背景・前提条件が決定的に不足
+                </div>
+                <div class="result">
+                    <i class="fas fa-arrow-right mr-1"></i> <strong>末路:</strong> 不正確な推測や情報不足エラーの返答
+                </div>
+                <div class="mt-2">
+                    <span class="tanren-tag">X軸: 具体化不足</span>
+                    <span class="tanren-tag">Y軸: 文脈不足</span>
+                </div>
+            </div>
+            
+            <!-- Bad Prompt 4 -->
+            <div class="bad-prompt p-5 rounded-md">
+                <div class="flex items-center mb-3">
+                    <div class="bg-red-800 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-random text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold">構造無視プロンプト</h3>
+                </div>
+                <div class="prompt-example mb-3">
+                    「明日の天気と、あ、そういえば今日の株価どうだった？それから、来週の出張、ホテル予約しなきゃ。おすすめある？あとでメールの返信...」
+                </div>
+                <div class="what-wrong mb-2">
+                    <i class="fas fa-exclamation-triangle mr-1"></i> <strong>問題点:</strong> 複数の異なるタスクが整理されず脈絡なく羅列されている
+                </div>
+                <div class="result">
+                    <i class="fas fa-arrow-right mr-1"></i> <strong>末路:</strong> AIは応答処理しきれず、一部にしか応えられない
+                </div>
+                <div class="mt-2">
+                    <span class="tanren-tag">X軸: 構造化の完全欠如</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dividing Line -->
+        <div class="w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent my-6"></div>
+        
+        <!-- Bottom Message -->
+        <div class="flex items-center p-4 bg-blue-900 bg-opacity-20 rounded-lg">
+            <i class="fas fa-lightbulb text-yellow-300 text-4xl mr-5"></i>
+            <div>
+                <h4 class="text-2xl font-medium mb-1">良いプロンプト = 思考の設計図</h4>
+                <p class="text-blue-200">
+                    共通の問題点：<span class="text-white font-medium">AIに対する敬意の欠如</span>と<span class="text-white font-medium">自分の思考が整理されていないこと</span>
+                </p>
+                <p class="text-blue-200 mt-1">
+                    解決策：<span class="text-white font-medium">TANREN 3Dメソッド</span>で思考を深く、立体的に、明確に整理する
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

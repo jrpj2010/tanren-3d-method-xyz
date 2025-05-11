@@ -1,0 +1,177 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="background-color: #f4f1ea; font-family: 'Noto Sans JP', sans-serif;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&display=swap');
+      .title { font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700; fill: #2c2c2c; letter-spacing: 0.1em; }
+      .subtitle { font-size: 14px; fill: #555; letter-spacing: 0.05em; }
+      .card-title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; letter-spacing: 0.08em; }
+      .card-text { font-size: 11px; fill: #2c2c2c; letter-spacing: 0.05em; line-height: 1.6; }
+      .highlight-red { fill: #b3322b; font-weight: bold; }
+      .highlight-blue { fill: #1a5b66; font-weight: bold; }
+      .highlight-purple { fill: #653a5e; font-weight: bold; }
+      .accent-line-red { stroke: #b3322b; stroke-width: 2; }
+      .accent-dot-red { fill: #b3322b; }
+      .accent-line-blue { stroke: #1a5b66; stroke-width: 2; }
+      .accent-dot-blue { fill: #1a5b66; }
+      .accent-line-purple { stroke: #653a5e; stroke-width: 2; }
+      .accent-dot-purple { fill: #653a5e; }
+      .table-header { font-weight: bold; fill: #f4f1ea; }
+      .table-row-even { fill: #e8e5dd; }
+      .table-row-odd { fill: #f4f1ea; }
+      .table-text { font-size: 10px; fill: #2c2c2c; }
+      .flow-arrow { fill: none; stroke: #2c2c2c; stroke-width: 1.5; marker-end: url(#arrowhead); }
+      .flow-text { font-size: 9px; fill: #555; }
+      .bar-chart-bar { fill: #b3322b; }
+      .bar-chart-axis { stroke: #555; stroke-width: 1; }
+      .bar-chart-label { font-size: 9px; fill: #555; }
+      .bar-chart-value { font-size: 10px; fill: #2c2c2c; font-weight: bold; }
+      .icon { font-size: 14px; margin-right: 5px; }
+      .emphasis-box { fill: #e8e5dd; stroke: #ccc; stroke-width: 1; rx: 3; ry: 3; }
+      .emphasis-text { font-size: 10px; fill: #2c2c2c; font-weight: bold; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c2c2c" />
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="40" y="50" class="title">タスク管理ダッシュボード</text>
+  <text x="40" y="75" class="subtitle">チームのタスク管理と進捗状況を視覚的に把握</text>
+  <line x1="40" y1="85" x2="400" y2="85" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="410" cy="85" r="3" fill="#2c2c2c" />
+
+  <!-- Footer -->
+  <text x="1200" y="700" text-anchor="end" font-size="12px" fill="#555">1 / 20</text>
+
+  <!-- Column 1: 概要と目的 -->
+  <rect x="40" y="110" width="380" height="570" fill="#f4f1ea" stroke="#ccc" stroke-width="0.5" rx="5" ry="5"/>
+  <text x="60" y="145" class="card-title" fill="#b3322b">🎯 目的と背景</text>
+  <line x1="60" y1="155" x2="200" y2="155" class="accent-line-red" />
+  <circle cx="205" cy="155" r="3" class="accent-dot-red" />
+  <text x="60" y="180" class="card-text">
+    <tspan x="60" dy="1.2em">チーム内のタスク管理が分散し、進捗把握が困難。</tspan>
+    <tspan x="60" dy="1.2em">重要なタスクの優先順位付けや期限管理が課題。</tspan>
+  </text>
+  <text x="60" y="230" class="card-text"><tspan font-weight="bold">対象:</tspan> 中小チーム, PM, リーダー, 個人事業主</text>
+
+  <!-- Success Criteria Graph -->
+  <text x="60" y="270" class="card-text" font-weight="bold">成功基準: 期限超過タスク削減</text>
+  <rect x="60" y="290" width="340" height="100" fill="#e8e5dd" rx="3" ry="3"/>
+  <line x1="80" y1="370" x2="380" y2="370" class="bar-chart-axis" />
+  <line x1="80" y1="300" x2="80" y2="370" class="bar-chart-axis" />
+  <text x="70" y="305" class="bar-chart-label" text-anchor="end">100%</text>
+  <text x="70" y="375" class="bar-chart-label" text-anchor="end">0%</text>
+  <!-- Before Bar -->
+  <rect x="120" y="310" width="60" height="60" class="bar-chart-bar" style="fill: #aaa;"/>
+  <text x="150" y="385" class="bar-chart-label" text-anchor="middle">現状</text>
+  <text x="150" y="305" class="bar-chart-value" text-anchor="middle">?</text>
+  <!-- After Bar -->
+  <rect x="240" y="328" width="60" height="42" class="bar-chart-bar" />
+  <text x="270" y="385" class="bar-chart-label" text-anchor="middle">目標</text>
+  <text x="270" y="323" class="bar-chart-value highlight-red" text-anchor="middle">-30%</text>
+
+  <text x="60" y="420" class="card-text" font-weight="bold">期待効果:</text>
+  <text x="70" y="440" class="card-text">
+    <tspan x="70" dy="1.4em">✅ 生産性向上</tspan>
+    <tspan x="70" dy="1.4em">✅ 効率的なリソース配分</tspan>
+    <tspan x="70" dy="1.4em">✅ プロジェクト遅延防止</tspan>
+    <tspan x="70" dy="1.4em">✅ コミュニケーション活性化</tspan>
+  </text>
+
+  <!-- Column 2: 主要機能と操作 -->
+  <rect x="450" y="110" width="380" height="570" fill="#f4f1ea" stroke="#ccc" stroke-width="0.5" rx="5" ry="5"/>
+  <text x="470" y="145" class="card-title" fill="#1a5b66">⚙️ 主要機能</text>
+  <line x1="470" y1="155" x2="610" y2="155" class="accent-line-blue" />
+  <circle cx="615" cy="155" r="3" class="accent-dot-blue" />
+  <text x="470" y="180" class="card-text" font-weight="bold">コア機能:</text>
+  <text x="480" y="200" class="card-text">
+    <tspan x="480" dy="1.4em"><tspan class="icon">📝</tspan>作成/編集 (担当,期限,優先度)</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">📊</tspan>ダッシュボード (進捗可視化)</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">🔍</tspan>フィルタ/ソート</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">🖱️</tspan>ステータス更新 (D&D)</tspan>
+  </text>
+
+  <text x="470" y="300" class="card-text" font-weight="bold">データ管理:</text>
+  <rect x="470" y="320" width="340" height="60" fill="#1a5b66" rx="3" ry="3"/>
+  <text x="480" y="338" class="table-header">データ種別</text>
+  <text x="630" y="338" class="table-header">保存方法</text>
+  <rect x="470" y="345" width="340" height="15" class="table-row-even"/>
+  <text x="480" y="356" class="table-text">タスク情報</text>
+  <text x="630" y="356" class="table-text">Bolt.new DB</text>
+  <rect x="470" y="360" width="340" height="15" class="table-row-odd"/>
+  <text x="480" y="371" class="table-text">ユーザー情報</text>
+  <text x="630" y="371" class="table-text">Bolt.new DB</text>
+
+  <text x="470" y="400" class="card-text" font-weight="bold">ユーザー操作フロー:</text>
+  <rect x="470" y="420" width="340" height="80" class="emphasis-box"/>
+  <text x="490" y="440" class="flow-text">ログイン</text>
+  <line x1="530" y1="438" x2="560" y2="438" class="flow-arrow"/>
+  <text x="570" y="440" class="flow-text">タスク作成</text>
+  <line x1="630" y1="438" x2="660" y2="438" class="flow-arrow"/>
+  <text x="670" y="440" class="flow-text">更新(D&D)</text>
+  <line x1="530" y1="468" x2="560" y2="468" class="flow-arrow"/>
+  <text x="570" y="470" class="flow-text">フィルタ</text>
+  <line x1="490" y1="445" x2="490" y2="465" class="flow-arrow" style="marker-end: none;"/>
+  <line x1="490" y1="468" x2="530" y2="468" class="flow-arrow"/>
+
+
+  <text x="470" y="520" class="card-text" font-weight="bold">UI/UX デザイン:</text>
+   <text x="480" y="540" class="card-text">
+    <tspan x="480" dy="1.4em"><tspan class="icon">🖼️</tspan>レイアウト: 3エリア構成 (ヘッダー, サイドバー, メイン)</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">🎨</tspan>配色: 白ベース、青アクセント、優先度色分け</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">📱</tspan>レスポンシブ対応</tspan>
+  </text>
+
+  <!-- Column 3: 開発と将来性 -->
+  <rect x="860" y="110" width="380" height="570" fill="#f4f1ea" stroke="#ccc" stroke-width="0.5" rx="5" ry="5"/>
+  <text x="880" y="145" class="card-title" fill="#653a5e">🛠️ 開発と展望</text>
+  <line x1="880" y1="155" x2="1020" y2="155" class="accent-line-purple" />
+  <circle cx="1025" cy="155" r="3" class="accent-dot-purple" />
+  <text x="880" y="180" class="card-text"><tspan font-weight="bold">開発PF:</tspan> Bolt.new (理由: DB連携容易)</text>
+
+  <text x="880" y="210" class="card-text" font-weight="bold">開発ステップ (見積):</text>
+  <rect x="880" y="230" width="340" height="130" fill="#653a5e" rx="3" ry="3"/>
+  <text x="890" y="248" class="table-header">ステップ</text>
+  <text x="1150" y="248" class="table-header" text-anchor="end">時間</text>
+  <rect x="880" y="255" width="340" height="15" class="table-row-even"/>
+  <text x="890" y="266" class="table-text">1. プロジェクト設定</text>
+  <text x="1210" y="266" class="table-text" text-anchor="end">3分</text>
+  <rect x="880" y="270" width="340" height="15" class="table-row-odd"/>
+  <text x="890" y="281" class="table-text">2. データモデル定義</text>
+  <text x="1210" y="281" class="table-text" text-anchor="end">5分</text>
+  <rect x="880" y="285" width="340" height="15" class="table-row-even"/>
+  <text x="890" y="296" class="table-text">3. UI設計</text>
+  <text x="1210" y="296" class="table-text" text-anchor="end">7分</text>
+  <rect x="880" y="300" width="340" height="15" class="table-row-odd"/>
+  <text x="890" y="311" class="table-text">4. 機能実装</text>
+  <text x="1210" y="311" class="table-text" text-anchor="end">10分</text>
+  <rect x="880" y="315" width="340" height="15" class="table-row-even"/>
+  <text x="890" y="326" class="table-text">5. フィルター機能実装</text>
+  <text x="1210" y="326" class="table-text" text-anchor="end">5分</text>
+  <rect x="880" y="330" width="340" height="20" class="table-row-odd" style="fill: #e8e5dd;"/>
+  <text x="890" y="345" class="table-text" font-weight="bold">合計</text>
+  <text x="1210" y="345" class="table-text highlight-purple" text-anchor="end" style="font-size: 12px;">30分</text>
+
+  <text x="880" y="380" class="card-text" font-weight="bold">テスト計画:</text>
+   <text x="890" y="400" class="card-text">
+    <tspan x="890" dy="1.4em">🧪 シナリオ: 作成, 更新, フィルター</tspan>
+    <tspan x="890" dy="1.4em">👍 UAT基準: 非エンジニアが5分で基本操作完了</tspan>
+  </text>
+
+  <text x="880" y="450" class="card-text" font-weight="bold">制約:</text>
+   <text x="890" y="470" class="card-text">
+    <tspan x="890" dy="1.4em">🔒 Bolt.new無料プラン制限</tspan>
+    <tspan x="890" dy="1.4em">⏱️ 開発時間30分 (複雑機能除外)</tspan>
+    <tspan x="890" dy="1.4em">🛠️ 非エンジニア実装可能範囲</tspan>
+  </text>
+
+  <text x="880" y="540" class="card-text" font-weight="bold">将来の拡張可能性:</text>
+   <text x="890" y="560" class="card-text">
+    <tspan x="890" dy="1.4em"><tspan class="icon">🔗</tspan>タスク依存関係</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">✉️</tspan>メール通知</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">📈</tspan>進捗レポート</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">📊</tspan>分析ダッシュボード</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">📎</tspan>ファイル添付</tspan>
+  </text>
+
+</svg>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI超独学法：第2章 - TANREN 3Dメソッド完全インストール</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Preline UI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.css" />
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Three.js for 3D cube -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Noto Sans JP -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Noto Sans JP', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            50: '#e0f2fe',
+                            100: '#bae6fd',
+                            200: '#93c5fd',
+                            300: '#60a5fa',
+                            400: '#3b82f6',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            800: '#1e3a8a',
+                            900: '#172554',
+                        },
+                        secondary: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        },
+                        tertiary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                        },
+                        dark: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-900 text-white font-sans">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-dark-800/90 backdrop-blur-sm border-b border-dark-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-xl font-bold text-gradient">AI超独学法</h1>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
+                    <a href="#intro" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-dark-700 active-nav">イントロダクション</a>
+                    <a href="#xaxis" class="px-3 py-2 rounded-md text-sm font-medium text-dark-300 hover:bg-dark-700">X軸：思考の深度と構造</a>
+                    <a href="#yaxis" class="px-3 py-2 rounded-md text-sm font-medium text-dark-300 hover:bg-dark-700">Y軸：時間軸の視座</a>
+                    <a href="#zaxis" class="px-3 py-2 rounded-md text-sm font-medium text-dark-300 hover:bg-dark-700">Z軸：レベル感の把握</a>
+                    <a href="#practice" class="px-3 py-2 rounded-md text-sm font-medium text-dark-300 hover:bg-dark-700">実践と応用</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-dark-300 hover:text-white hover:bg-dark-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
+                        <span class="sr-only">メニューを開く</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#intro" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-dark-700">イントロダクション</a>
+                <a href="#xaxis" class="block px-3 py-2 rounded-md text-base font-medium text-dark-300 hover:bg-dark-700">X軸：思考の深度と構造</a>
+                <a href="#yaxis" class="block px-3 py-2 rounded-md text-base font-medium text-dark-300 hover:bg-dark-700">Y軸：時間軸の視座</a>
+                <a href="#zaxis" class="block px-3 py-2 rounded-md text-base font-medium text-dark-300 hover:bg-dark-700">Z軸：レベル感の把握</a>
+                <a href="#practice" class="block px-3 py-2 rounded-md text-base font-medium text-dark-300 hover:bg-dark-700">実践と応用</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative">
+        <!-- Grid background -->
+        <div class="fixed inset-0 grid-background"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Hero Section -->
+            <section id="intro" class="py-16 min-h-[90vh] flex flex-col justify-center">
+                <div class="max-w-4xl mx-auto text-center relative z-10">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-6">
+                        AI時代の思考OS<br>「TANREN 3Dメソッド」
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-medium text-dark-300 mb-8">
+                        3次元思考で未来を拓く
+                    </h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-primary-400 via-secondary-400 to-tertiary-400 mx-auto mb-10 rounded-full"></div>
+                    <p class="text-lg text-dark-300 mb-12">
+                        AIの進化によって、私たちの思考法もアップデートが求められる時代に。<br>
+                        TANREN 3Dメソッドは、AIと共創するための新しい思考フレームワークです。
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#3d-concept" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-primary-600 to-tertiary-600 hover:from-primary-700 hover:to-tertiary-700">
+                            3D思考を学ぶ
+                            <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 3D Cube Area -->
+                <div class="mt-12 flex justify-center">
+                    <div class="w-full max-w-md h-80">
+                        <div id="3d-cube" class="w-full h-full"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3D Concept Section -->
+            <section id="3d-concept" class="py-16 scroll-mt-20">
+                <div class="max-w-4xl mx-auto bg-dark-800/50 rounded-2xl p-8 backdrop-blur border border-dark-700 relative z-10">
+                    <h2 class="text-3xl font-bold text-gradient mb-6">TANREN 3Dメソッドとは？</h2>
+                    
+                    <p class="text-dark-300 mb-8">
+                        TANREN 3Dメソッドは、あらゆる思考を「3次元空間」として捉え、多角的な視点から問題解決やアイデア創出を行うフレームワークです。X・Y・Z、3つの軸で思考を立体的に構造化することで、AIとの共創をより効果的に行えるようになります。
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-dark-800 border border-primary-600/50 rounded-xl p-6 hover:transform hover:-translate-y-1 transition-all">
+                            <div class="w-12 h-12 bg-primary-900/50 rounded-full flex items-center justify-center mb-4 border border-primary-600">
+                                <i class="fas fa-arrows-alt-v text-xl text-primary-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primary-400 mb-2">X軸</h3>
+                            <p class="text-dark-300 text-sm">思考の深度と構造<br>表層から本質へ、カオスから秩序へ</p>
+                        </div>
+                        
+                        <div class="bg-dark-800 border border-secondary-600/50 rounded-xl p-6 hover:transform hover:-translate-y-1 transition-all">
+                            <div class="w-12 h-12 bg-secondary-900/50 rounded-full flex items-center justify-center mb-4 border border-secondary-600">
+                                <i class="fas fa-history text-xl text-secondary-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-secondary-400 mb-2">Y軸</h3>
+                            <p class="text-dark-300 text-sm">時間軸の視座<br>点から線へ、過去・現在・未来を繋ぐ</p>
+                        </div>
+                        
+                        <div class="bg-dark-800 border border-tertiary-600/50 rounded-xl p-6 hover:transform hover:-translate-y-1 transition-all">
+                            <div class="w-12 h-12 bg-tertiary-900/50 rounded-full flex items-center justify-center mb-4 border border-tertiary-600">
+                                <i class="fas fa-layer-group text-xl text-tertiary-400"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-tertiary-400 mb-2">Z軸</h3>
+                            <p class="text-dark-300 text-sm">レベル感の把握<br>現在地を知り、頂上を目指す</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- X Axis Section -->
+            <section id="xaxis" class="py-16 scroll-mt-20">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex items-center mb-8">
+                        <div class="axis-badge x-axis mr-4">X軸</div>
+                        <h2 class="text-3xl font-bold text-white">思考の深度と構造</h2>
+                    </div>
+                    <div class="w-24 h-1 bg-primary-500 mb-8 rounded-full"></div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-12">
+                        <div>
+                            <p class="text-dark-300 mb-6">
+                                X軸は、思考を表層から本質へと掘り下げ、カオスから構造化された状態へと導きます。抽象と具体の往復運動によって、思考の質が向上していきます。
+                            </p>
+                            
+                            <div class="space-y-6">
+                                <!-- 超抽象化 -->
+                                <div class="bg-dark-800/50 border-l-4 border-primary-400 rounded-r-lg p-4">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-12 h-12 bg-primary-900/50 rounded-full flex items-center justify-center mr-4 border border-primary-600">
+                                            <i class="fas fa-arrow-up text-primary-400"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-primary-400 mb-1">超抽象化：<span class="text-white">Why?</span></h3>
+                                            <p class="text-dark-300">ノイズから本質を見抜く力。具体的な事象から共通する原理原則や上位概念を抽出する思考プロセス。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 超具体化 -->
+                                <div class="bg-dark-800/50 border-l-4 border-primary-500 rounded-r-lg p-4">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-12 h-12 bg-primary-900/50 rounded-full flex items-center justify-center mr-4 border border-primary-600">
+                                            <i class="fas fa-arrow-down text-primary-500"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-primary-500 mb-1">超具体化：<span class="text-white">How?</span></h3>
+                                            <p class="text-dark-300">思考を行動に変えるエンジン。抽象的な概念や目標を実行可能な具体的アクションに落とし込む力。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 超構造化 -->
+                                <div class="bg-dark-800/50 border-l-4 border-primary-600 rounded-r-lg p-4">
+                                    <div class="flex items-start">
+                                        <div class="flex-shrink-0 w-12 h-12 bg-primary-900/50 rounded-full flex items-center justify-center mr-4 border border-primary-600">
+                                            <i class="fas fa-sitemap text-primary-600"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-primary-600 mb-1">超構造化：<span class="text-white">Form</span></h3>
+                                            <p class="text-dark-300">カオス状態の思考に秩序を与え、論理的で明晰な「構造」を設計する技術。AIとの共通言語。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6">
+                                <h3 class="text-xl font-bold text-primary-400 mb-4">抽象と具体の往復運動</h3>
+                                <div class="w-full h-60 mb-8" id="xaxis-diagram"></div>
+                                
+                                <h4 class="text-lg font-semibold text-white mb-3">X軸実践のポイント</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-sync-alt text-primary-400 mt-1 mr-2"></i>
+                                        <span class="text-dark-300">抽象と具体の「往復運動」が思考を深化させる</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-question-circle text-primary-400 mt-1 mr-2"></i>
+                                        <span class="text-dark-300">常に「WHY?」と「HOW?」を問い続ける</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-brain text-primary-400 mt-1 mr-2"></i>
+                                        <span class="text-dark-300">AIとの対話で「超抽象化・超具体化」を加速</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Y Axis Section -->
+            <section id="yaxis" class="py-16 scroll-mt-20">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex items-center mb-8">
+                        <div class="axis-badge y-axis mr-4">Y軸</div>
+                        <h2 class="text-3xl font-bold text-white">時間軸の視座</h2>
+                    </div>
+                    <div class="w-24 h-1 bg-secondary-500 mb-8 rounded-full"></div>
+                    
+                    <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-8 mb-12">
+                        <div class="grid md:grid-cols-3 gap-6 mb-8">
+                            <div class="bg-dark-800 border border-secondary-600/20 rounded-lg p-5 hover:transform hover:-translate-y-1 transition-all">
+                                <div class="w-12 h-12 bg-secondary-900/50 rounded-full flex items-center justify-center mb-4 border border-secondary-600">
+                                    <i class="fas fa-history text-secondary-400"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-secondary-400 mb-2">過去</h3>
+                                <p class="text-dark-300 text-sm">
+                                    知識・経験・教訓を宝の山として活用。AIで過去情報を効率的に分析し、知恵に変換する。
+                                </p>
+                            </div>
+                            
+                            <div class="bg-dark-800 border border-secondary-600/20 rounded-lg p-5 hover:transform hover:-translate-y-1 transition-all">
+                                <div class="w-12 h-12 bg-secondary-900/50 rounded-full flex items-center justify-center mb-4 border border-secondary-600">
+                                    <i class="fas fa-crosshairs text-secondary-400"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-secondary-400 mb-2">現在</h3>
+                                <p class="text-dark-300 text-sm">
+                                    今この瞬間の「状況」と「自分」を正確に把握。AIと情報共有し、客観的視点を獲得。
+                                </p>
+                            </div>
+                            
+                            <div class="bg-dark-800 border border-secondary-600/20 rounded-lg p-5 hover:transform hover:-translate-y-1 transition-all">
+                                <div class="w-12 h-12 bg-secondary-900/50 rounded-full flex items-center justify-center mb-4 border border-secondary-600">
+                                    <i class="fas fa-rocket text-secondary-400"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-secondary-400 mb-2">未来</h3>
+                                <p class="text-dark-300 text-sm">
+                                    未来を「想像」して「創造」。AIを活用して複数のシナリオを考察し、最適な戦略を策定。
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full rounded-xl bg-dark-900/50 p-6 border border-dark-700">
+                            <h3 class="text-lg font-bold text-white mb-4">時間軸を繋ぐ4つの力</h3>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-dark-800 p-4 rounded-lg border border-secondary-600/20">
+                                    <h4 class="text-secondary-400 font-bold mb-2">履歴力</h4>
+                                    <p class="text-dark-300 text-sm">過去から学び、データを蓄積・整理する能力</p>
+                                </div>
+                                <div class="bg-dark-800 p-4 rounded-lg border border-secondary-600/20">
+                                    <h4 class="text-secondary-400 font-bold mb-2">観察力</h4>
+                                    <p class="text-dark-300 text-sm">現在の状況を正確に認識し分析する能力</p>
+                                </div>
+                                <div class="bg-dark-800 p-4 rounded-lg border border-secondary-600/20">
+                                    <h4 class="text-secondary-400 font-bold mb-2">予測力</h4>
+                                    <p class="text-dark-300 text-sm">未来の可能性を論理的に導き出す能力</p>
+                                </div>
+                                <div class="bg-dark-800 p-4 rounded-lg border border-secondary-600/20">
+                                    <h4 class="text-secondary-400 font-bold mb-2">構想力</h4>
+                                    <p class="text-dark-300 text-sm">望ましい未来へのロードマップを描く能力</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6 md:w-1/2">
+                            <h3 class="text-xl font-bold text-secondary-400 mb-4">タイムトラベル思考法</h3>
+                            <p class="text-dark-300 mb-4">
+                                過去・現在・未来を自在に行き来しながら、時間を俯瞰する視座を獲得する思考法です。AIとの対話を通して、より多角的で長期的な視点を育みます。
+                            </p>
+                            <div class="w-full h-48" id="timeline-chart"></div>
+                        </div>
+                        
+                        <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6 md:w-1/2">
+                            <h3 class="text-xl font-bold text-secondary-400 mb-4">Y軸実践のポイント</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-hourglass-half text-secondary-400 mt-1 mr-2"></i>
+                                    <span class="text-dark-300">過去・現在・未来を「線」として捉える</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-exchange-alt text-secondary-400 mt-1 mr-2"></i>
+                                    <span class="text-dark-300">時間を行き来する「タイムトラベル思考」を習慣化</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-robot text-secondary-400 mt-1 mr-2"></i>
+                                    <span class="text-dark-300">AIに過去データの分析と未来予測を依頼</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-map-marked-alt text-secondary-400 mt-1 mr-2"></i>
+                                    <span class="text-dark-300">学びの履歴と成長の軌跡を可視化する</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chart-line text-secondary-400 mt-1 mr-2"></i>
+                                    <span class="text-dark-300">変化のパターンやトレンドを把握する</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Z Axis Section -->
+            <section id="zaxis" class="py-16 scroll-mt-20">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex items-center mb-8">
+                        <div class="axis-badge z-axis mr-4">Z軸</div>
+                        <h2 class="text-3xl font-bold text-white">レベル感の把握</h2>
+                    </div>
+                    <div class="w-24 h-1 bg-tertiary-500 mb-8 rounded-full"></div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-12">
+                        <div>
+                            <p class="text-dark-300 mb-6">
+                                Z軸は、あらゆる事柄の「レベル」を把握し、自分の現在地から目標地点までの道筋を明確にする思考軸です。知識・スキル・課題などの「高さ」や「深さ」を正確に認識することで、効率的な学習と成長が可能になります。
+                            </p>
+                            
+                            <!-- Z軸の要素 -->
+                            <div class="space-y-6">
+                                <div class="bg-dark-800/50 rounded-lg p-5 border-l-4 border-tertiary-400">
+                                    <h3 class="text-xl font-bold text-tertiary-400 mb-2">現在地の把握</h3>
+                                    <p class="text-dark-300">自分の知識・スキルレベルを客観的に評価し、強みと弱みを明確化する。AIとの対話で盲点を発見する。</p>
+                                </div>
+                                
+                                <div class="bg-dark-800/50 rounded-lg p-5 border-l-4 border-tertiary-500">
+                                    <h3 class="text-xl font-bold text-tertiary-500 mb-2">目標レベルの設定</h3>
+                                    <p class="text-dark-300">達成したい最終地点と中間ステップを具体的にイメージ。AIにレベル別の目標設定をサポートしてもらう。</p>
+                                </div>
+                                
+                                <div class="bg-dark-800/50 rounded-lg p-5 border-l-4 border-tertiary-600">
+                                    <h3 class="text-xl font-bold text-tertiary-600 mb-2">最適な学習経路</h3>
+                                    <p class="text-dark-300">現在地から目標レベルまでの最短・最適ルートを設計。AIと共に段階的な成長計画を立案する。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <!-- レベルマップ -->
+                            <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6 mb-6">
+                                <h3 class="text-xl font-bold text-tertiary-400 mb-4">レベルマップの例</h3>
+                                <div class="w-full h-64 mb-4" id="level-chart"></div>
+                                <p class="text-dark-300 text-sm">
+                                    各スキル・知識領域をレベル0-10で可視化し、バランスと現在地を把握。AIとの対話で継続的に更新。
+                                </p>
+                            </div>
+                            
+                            <!-- Z軸実践ポイント -->
+                            <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-6">
+                                <h3 class="text-xl font-bold text-tertiary-400 mb-4">Z軸実践のポイント</h3>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-compass text-tertiary-400 mt-1 mr-2"></i>
+                                        <span class="text-dark-300">AIに自己評価の精度を高めてもらう</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-map text-tertiary-400 mt-1 mr-2"></i>
+                                        <span class="text-dark-300">学習領域のレベル構造を可視化する</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-trophy text-tertiary-400 mt-1 mr-2"></i>
+                                        <span class="text-dark-300">小さな達成体験を積み重ねる</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-users text-tertiary-400 mt-1 mr-2"></i>
+                                        <span class="text-dark-300">ロールモデルをレベルの道標にする</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Practice Section -->
+            <section id="practice" class="py-16 scroll-mt-20">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-gradient mb-8">思考OS「TANREN 3Dメソッド」を実装しよう</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-tertiary-500 mb-8 rounded-full"></div>
+                    
+                    <div class="bg-dark-800/50 rounded-xl border border-dark-700 p-8 mb-12">
+                        <h3 class="text-2xl font-bold text-white mb-6">3次元思考の本質</h3>
+                        
+                        <div class="grid md:grid-cols-3 gap-6 mb-8">
+                            <div class="bg-dark-800/80 rounded-lg p-4 border border-primary-600/30">
+                                <div class="flex items-center mb-2">
+                                    <div class="axis-pill x-axis mr-2">X軸</div>
+                                    <h4 class="text-lg font-bold text-primary-400">思考の深度と構造</h4>
+                                </div>
+                                <p class="text-dark-300 text-sm">表層から本質へ、カオスから秩序へ</p>
+                            </div>
+                            
+                            <div class="bg-dark-800/80 rounded-lg p-4 border border-secondary-600/30">
+                                <div class="flex items-center mb-2">
+                                    <div class="axis-pill y-axis mr-2">Y軸</div>
+                                    <h4 class="text-lg font-bold text-secondary-400">時間軸の視座</h4>
+                                </div>
+                                <p class="text-dark-300 text-sm">点から線へ、過去・現在・未来を繋ぐ</p>
+                            </div>
+                            
+                            <div class="bg-dark-800/80 rounded-lg p-4 border border-tertiary-600/30">
+                                <div class="flex items-center mb-2">
+                                    <div class="axis-pill z-axis mr-2">Z軸</div>
+                                    <h4 class="text-lg font-bold text-tertiary-400">レベル感の把握</h4>
+                                </div>
+                                <p class="text-dark-300 text-sm">現在地を知り、頂上を目指す</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 実装ステップ -->
+                        <div class="bg-dark-900/50 rounded-xl p-6 border border-dark-700">
+                            <h3 class="text-xl font-bold text-white mb-4">OSインストールと実践ステップ</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="step-item">
+                                    <div class="step-number">1</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-primary-400">学習</h4>
+                                        <p class="text-dark-300">3つの軸の概念を理解し、自分の思考に適用する方法を学ぶ</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step-item">
+                                    <div class="step-number">2</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-secondary-400">演習</h4>
+                                        <p class="text-dark-300">身近なテーマで「統合演習」を繰り返し、思考OSを身体化する</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step-item">
+                                    <div class="step-number">3</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-tertiary-400">共創</h4>
+                                        <p class="text-dark-300">AIをパートナーに3D思考を実践し、フィードバックを得る</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="step-item">
+                                    <div class="step-number">4</div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-yellow-400">進化</h4>
+                                        <p class="text-dark-300">継続的な「鍛錬」とOSのアップデートで思考を高度化する</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Final Section -->
+                    <div class="bg-gradient-to-br from-dark-800/50 to-dark-900/50 rounded-xl border border-dark-700 p-8 relative overflow-hidden glow-border">
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold text-white text-center mb-6">
+                                思考OSは静的ではなく動的
+                            </h3>
+                            <p class="text-lg text-center text-dark-200 mb-8">
+                                AIと共に常にアップデートし続けることで、<br>無限の知的進化が可能になる
+                            </p>
+                            
+                            <div class="flex justify-center">
+                                <a href="../03_第3章_AIとの対話設計術_プロンプトで思考を形にする技術/SITE/index.html" class="inline-flex items-center px-6 py-3 text-base font-medium rounded-md shadow-lg text-white bg-gradient-to-r from-primary-600 to-tertiary-600 hover:from-primary-700 hover:to-tertiary-700 transform transition-all hover:-translate-y-1">
+                                    <i class="fas fa-arrow-right mr-2"></i>
+                                    第3章：AI対話設計術へ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-dark-800 border-t border-dark-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold text-gradient mb-2">AI超独学法</h3>
+                    <p class="text-dark-400">TANREN 3Dメソッドで切り拓く、新時代の学びと成長戦略</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#intro" class="text-dark-300 hover:text-white transition-colors">
+                        <i class="fas fa-arrow-up mr-1"></i> トップへ戻る
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-dark-700 text-center text-dark-400">
+                <p>&copy; 2025 AI超独学法. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <!-- Preline UI JS -->
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+</body>
+</html> 

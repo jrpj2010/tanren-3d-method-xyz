@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第7章 学習習慣の壁を壊す</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #311b92 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .network-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+        }
+        .title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 1rem;
+            color: #e1bee7;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .icons-container {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            gap: 20px;
+        }
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Background Network Pattern -->
+        <svg class="network-grid" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                    <path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                </pattern>
+                <radialGradient id="node-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                    <stop offset="0%" stop-color="rgba(255,255,255,0.8)" />
+                    <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                </radialGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            
+            <!-- Network Nodes & Connections -->
+            <g stroke="rgba(255,255,255,0.6)" stroke-width="1">
+                <line x1="200" y1="150" x2="400" y2="250" />
+                <line x1="400" y1="250" x2="600" y2="200" />
+                <line x1="600" y1="200" x2="800" y2="300" />
+                <line x1="800" y1="300" x2="1000" y2="200" />
+                <line x1="1000" y1="200" x2="1100" y2="400" />
+                <line x1="200" y1="400" x2="400" y2="500" />
+                <line x1="400" y1="500" x2="600" y2="450" />
+                <line x1="600" y1="450" x2="800" y2="500" />
+                <line x1="800" y1="500" x2="1000" y2="450" />
+                <line x1="400" y1="250" x2="400" y2="500" />
+                <line x1="600" y1="200" x2="600" y2="450" />
+                <line x1="800" y1="300" x2="800" y2="500" />
+                <line x1="1000" y1="200" x2="1000" y2="450" />
+            </g>
+            
+            <g>
+                <circle cx="200" cy="150" r="8" fill="url(#node-gradient)" />
+                <circle cx="400" cy="250" r="12" fill="url(#node-gradient)" />
+                <circle cx="600" cy="200" r="10" fill="url(#node-gradient)" />
+                <circle cx="800" cy="300" r="14" fill="url(#node-gradient)" />
+                <circle cx="1000" cy="200" r="9" fill="url(#node-gradient)" />
+                <circle cx="1100" cy="400" r="11" fill="url(#node-gradient)" />
+                <circle cx="200" cy="400" r="10" fill="url(#node-gradient)" />
+                <circle cx="400" cy="500" r="12" fill="url(#node-gradient)" />
+                <circle cx="600" cy="450" r="8" fill="url(#node-gradient)" />
+                <circle cx="800" cy="500" r="10" fill="url(#node-gradient)" />
+                <circle cx="1000" cy="450" r="12" fill="url(#node-gradient)" />
+            </g>
+        </svg>
+        
+        <div class="content flex flex-col justify-center items-center h-full px-16">
+            <div class="text-center">
+                <h1 class="title">第7章 学習習慣の壁を壊す</h1>
+                <h2 class="subtitle">AI時代の継続システム構築法</h2>
+            </div>
+        </div>
+        
+        <!-- AI and Learning Icons -->
+        <div class="icons-container">
+            <div class="icon-circle">
+                <i class="fas fa-brain"></i>
+            </div>
+            <div class="icon-circle">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="icon-circle">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

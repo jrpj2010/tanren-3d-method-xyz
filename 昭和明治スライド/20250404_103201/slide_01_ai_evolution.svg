@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c"/>
+  <text x="60" y="65" font-family="'Noto Serif JP', serif" font-size="40" fill="#f4f1ea" letter-spacing="2">AI技術の進化と最新動向</text>
+  <text x="1700" y="65" font-family="'Noto Sans JP', sans-serif" font-size="24" fill="#f4f1ea">2025.04.18</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c"/>
+  <text x="60" y="1060" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#f4f1ea">マーシュ・マーサージャパン社内セミナー</text>
+  <text x="1700" y="1060" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#f4f1ea">1/5</text>
+  
+  <!-- 装飾ライン -->
+  <line x1="60" y1="120" x2="1860" y2="120" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="960" cy="120" r="4" fill="#653a5e"/>
+  
+  <!-- カラム1 -->
+  <rect x="60" y="150" width="580" height="850" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="60" y="150" width="580" height="60" fill="#b3322b"/>
+  <text x="80" y="190" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea" letter-spacing="1">AI技術の驚異的な進化速度</text>
+  
+  <!-- カラム1コンテンツ -->
+  <text x="80" y="240" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">⏱ 技術進化のタイムスケール</text>
+  <text x="80" y="280" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="80" dy="0">• 半年前のAIモデルは現在ランキング外</tspan>
+    <tspan x="80" dy="30">• 毎週〜毎月性能ランキングが塗り替わる</tspan>
+    <tspan x="80" dy="30">• 3ヶ月で過去1年分の進化を凝縮</tspan>
+  </text>
+  
+  <!-- 図: 指数関数的成長グラフ -->
+  <rect x="80" y="350" width="540" height="200" fill="#f9f7f2" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="100" y="375" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">AIモデル性能の指数関数的成長</text>
+  <!-- グラフ -->
+  <polyline points="100,500 150,490 200,480 250,465 300,445 350,415 400,370 450,310 500,240 550,165" 
+            fill="none" stroke="#b3322b" stroke-width="3"/>
+  <!-- 軸 -->
+  <line x1="100" y1="500" x2="600" y2="500" stroke="#2c2c2c" stroke-width="2"/>
+  <line x1="100" y1="500" x2="100" y2="170" stroke="#2c2c2c" stroke-width="2"/>
+  <text x="340" y="530" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">時間経過</text>
+  <text x="80" y="330" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" transform="rotate(-90, 60, 330)">性能向上</text>
+  
+  <text x="80" y="590" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🔄 陳腐化の速さ</text>
+  <text x="80" y="630" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="80" dy="0">• 「3倍ゲーム」のような加速度的進化</tspan>
+    <tspan x="80" dy="30">• バージョンを日付レベルで識別する時代</tspan>
+    <tspan x="80" dy="30">• 数週間でランキングトップが入れ替わる</tspan>
+  </text>
+  
+  <!-- ハイライト情報 -->
+  <rect x="80" y="710" width="540" height="70" fill="#f9f7f2" stroke="#653a5e" stroke-width="2"/>
+  <text x="120" y="750" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">「半年前の知識は古い、1年前は論外」</text>
+  
+  <text x="80" y="820" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="80" dy="0">• 実務者は最低月1回は動向確認が必要</tspan>
+    <tspan x="80" dy="30">• 知識の賞味期限は数ヶ月程度</tspan>
+    <tspan x="80" dy="30">• 専門家やアドバイザーの活用が有効</tspan>
+  </text>
+  
+  <!-- カラム2 -->
+  <rect x="670" y="150" width="580" height="850" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="670" y="150" width="580" height="60" fill="#1a5b66"/>
+  <text x="690" y="190" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea" letter-spacing="1">主要AIモデルの変遷と特徴</text>
+  
+  <!-- カラム2コンテンツ -->
+  <text x="690" y="240" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🤖 主要AIモデルとポジショニング</text>
+  
+  <!-- AIモデル比較表 -->
+  <rect x="690" y="270" width="540" height="270" fill="#f9f7f2" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="690" y1="310" x2="1230" y2="310" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="830" y1="270" x2="830" y2="540" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="960" y1="270" x2="960" y2="540" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="1090" y1="270" x2="1090" y2="540" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <text x="700" y="295" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">モデル</text>
+  <text x="840" y="295" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">会社</text>
+  <text x="970" y="295" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">特徴</text>
+  <text x="1100" y="295" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">主な利用層</text>
+  
+  <!-- 行1 -->
+  <text x="700" y="340" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">GPT-4o</text>
+  <text x="840" y="340" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">OpenAI</text>
+  <text x="970" y="340" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">安定性・汎用性</text>
+  <text x="1100" y="340" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">初心者〜中級者</text>
+  <line x1="690" y1="350" x2="1230" y2="350" stroke="#2c2c2c" stroke-width="1" stroke-opacity="0.3"/>
+  
+  <!-- 行2 -->
+  <text x="700" y="380" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">Gemini</text>
+  <text x="840" y="380" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">Google</text>
+  <text x="970" y="380" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">最新動向取込</text>
+  <text x="1100" y="380" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">スタートアップ</text>
+  <line x1="690" y1="390" x2="1230" y2="390" stroke="#2c2c2c" stroke-width="1" stroke-opacity="0.3"/>
+  
+  <!-- 行3 -->
+  <text x="700" y="420" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">Claude</text>
+  <text x="840" y="420" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">Anthropic</text>
+  <text x="970" y="420" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">高度な思考</text>
+  <text x="1100" y="420" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">マニア・上級者</text>
+  <line x1="690" y1="430" x2="1230" y2="430" stroke="#2c2c2c" stroke-width="1" stroke-opacity="0.3"/>
+  
+  <!-- 行4 -->
+  <text x="700" y="460" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">Grok</text>
+  <text x="840" y="460" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">X (旧Twitter)</text>
+  <text x="970" y="460" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">尖った応答</text>
+  <text x="1100" y="460" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">挑戦者層</text>
+  <line x1="690" y1="470" x2="1230" y2="470" stroke="#2c2c2c" stroke-width="1" stroke-opacity="0.3"/>
+  
+  <!-- 行5 -->
+  <text x="700" y="500" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">Llama</text>
+  <text x="840" y="500" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">Meta</text>
+  <text x="970" y="500" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">オープンソース</text>
+  <text x="1100" y="500" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">開発者・企業</text>
+  
+  <text x="690" y="590" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">📊 AIランキングサイト</text>
+  <text x="690" y="630" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+    <tspan x="690" dy="0">• Chatbot Arena: ユーザー評価集約型ランキング</tspan>
+    <tspan x="690" dy="30">• ベンチマークスコアによる客観評価</tspan>
+    <tspan x="690" dy="30">• APIコール結果に基づく公平比較</tspan>
+  </text>
+  
+  <!-- 新登場モデル -->
+  <rect x="690" y="710" width="540" height="170" fill="#f9f7f2" stroke="#1a5b66" stroke-width="2"/>
+  <text x="710" y="740" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">2025年注目の新モデル</text>
+  <text x="710" y="780" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="710" dy="0">• Apple Intelligence (4月15日〜)</tspan>
+    <tspan x="710" dy="30">• DeepSeek (中国発・急成長)</tspan>
+    <tspan x="710" dy="30">• Runway v4 (動画生成特化)</tspan>
+    <tspan x="710" dy="30">• GenSpark (検索・統合型)</tspan>
+  </text>
+  
+  <!-- カラム3 -->
+  <rect x="1280" y="150" width="580" height="850" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="1280" y="150" width="580" height="60" fill="#653a5e"/>
+  <text x="1300" y="190" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea" letter-spacing="1">AIのビジネスインパクト</text>
+  
+  <!-- カラム3コンテンツ -->
+  <text x="1300" y="240" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">💼 業務への即時影響</text>
+  <text x="1300" y="280" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="1300" dy="0">• 2023年12月頃から能力が飛躍的に向上</tspan>
+    <tspan x="1300" dy="30">• 画像・音声・動画などマルチモーダル対応</tspan>
+    <tspan x="1300" dy="30">• AIエージェントによる自律的タスク実行</tspan>
+  </text>
+  
+  <!-- 図：ビジネスインパクト -->
+  <rect x="1300" y="350" width="540" height="240" fill="#f9f7f2" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="1320" y="380" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">業種別AI影響度マップ</text>
+  
+  <!-- マトリックス図 -->
+  <line x1="1350" y1="410" x2="1350" y2="550" stroke="#2c2c2c" stroke-width="2"/>
+  <line x1="1350" y1="550" x2="1790" y2="550" stroke="#2c2c2c" stroke-width="2"/>
+  
+  <!-- 軸ラベル -->
+  <text x="1560" y="575" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">← AI導入の容易さ →</text>
+  <text x="1310" y="480" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" transform="rotate(-90, 1310, 480)">← 業務変革インパクト →</text>
+  
+  <!-- プロット -->
+  <circle cx="1460" cy="440" r="30" fill="#b3322b" fill-opacity="0.7"/>
+  <text x="1460" y="445" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">コンサル</text>
+  
+  <circle cx="1680" cy="470" r="25" fill="#1a5b66" fill-opacity="0.7"/>
+  <text x="1680" y="475" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">金融</text>
+  
+  <circle cx="1420" cy="510" r="20" fill="#653a5e" fill-opacity="0.7"/>
+  <text x="1420" y="515" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">製造</text>
+  
+  <circle cx="1580" cy="430" r="28" fill="#b3322b" fill-opacity="0.7"/>
+  <text x="1580" y="435" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">IT</text>
+  
+  <text x="1300" y="630" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🔮 今後の予測と準備</text>
+  <text x="1300" y="670" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="1300" dy="0">• 年末までにAGI (汎用人工知能)の前段階へ</tspan>
+    <tspan x="1300" dy="30">• 業務の30-50%が完全自動化の可能性</tspan>
+    <tspan x="1300" dy="30">• 人間の価値は「意思決定」と「創造性」へシフト</tspan>
+  </text>
+  
+  <!-- 実践ポイント -->
+  <rect x="1300" y="780" width="540" height="140" fill="#f9f7f2" stroke="#653a5e" stroke-width="2"/>
+  <text x="1320" y="810" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">企業が今すべきこと</text>
+  <text x="1320" y="850" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="1320" dy="0">1. 社長直轄のAI活用推進チーム組成</tspan>
+    <tspan x="1320" dy="30">2. パブリック情報とコア情報の分離ポリシー策定</tspan>
+    <tspan x="1320" dy="30">3. 定期的な動向把握と技術検証体制の確立</tspan>
+  </text>
+</svg> 

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea" />
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c" />
+  <text x="50" y="65" font-family="'Noto Serif JP'" font-size="36" fill="#f4f1ea" letter-spacing="2">第一の戦略：Copilotプラットフォーム</text>
+  <text x="1700" y="65" font-family="'Noto Sans JP'" font-size="24" fill="#f4f1ea">2025.03.29</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="1030" width="1920" height="50" fill="#2c2c2c" />
+  <text x="50" y="1065" font-family="'Noto Sans JP'" font-size="18" fill="#f4f1ea">明治・昭和モダンテイスト - Microsoft Build Japan 2025</text>
+  <text x="1700" y="1065" font-family="'Noto Sans JP'" font-size="18" fill="#f4f1ea">02/05</text>
+  
+  <!-- メイン3カラムコンテンツ -->
+  <!-- カラム1: コンシューマーCopilot -->
+  <rect x="50" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="50" y="130" width="580" height="60" fill="#b3322b" />
+  <text x="70" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">👤 コンシューマーCopilot</text>
+  
+  <!-- カラム1コンテンツ -->
+  <text x="70" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">「AIのユーザーインターフェース」としてのCopilot</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="70" y1="250" x2="580" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="330" cy="250" r="5" fill="#b3322b" />
+  
+  <!-- Copilotの本質 -->
+  <text x="70" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ 日常生活における新しいインターフェース</text>
+  <text x="70" y="330" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" line-height="1.6">既存のアプリ、ブラウザ、OSに自然な形でCopilotを導入し、日常的な対話からタスク割り当て、通知まで一貫した体験を提供します。</text>
+  
+  <!-- マルチモーダル機能 -->
+  <rect x="70" y="380" width="540" height="200" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" />
+  <text x="90" y="410" font-family="'Noto Serif JP'" font-size="18" fill="#b3322b">マルチモーダル機能の日常活用例</text>
+  <text x="90" y="450" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• iPhoneのアクションボタンで通勤中に音声対話</text>
+  <text x="90" y="480" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• ポッドキャストを文字起こしで高速に消費</text>
+  <text x="90" y="510" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• Copilot Visionでスクリーン内容を解析</text>
+  <text x="90" y="540" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 画像認識による情報抽出と意思決定支援</text>
+  
+  <!-- AIコンパニオンのイメージ図 -->
+  <rect x="200" y="600" width="280" height="180" fill="#f7f4ee" stroke="#b3322b" stroke-width="1" rx="10" />
+  <text x="260" y="630" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" text-anchor="middle">🗣️</text>
+  <text x="340" y="630" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" text-anchor="middle">🤖</text>
+  <text x="420" y="630" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" text-anchor="middle">📱</text>
+  <line x1="220" y1="645" x2="460" y2="645" stroke="#b3322b" stroke-width="1" stroke-dasharray="5,5" />
+  <text x="340" y="680" font-family="'Noto Serif JP'" font-size="16" fill="#2c2c2c" text-anchor="middle">「散歩におすすめの場所は？」</text>
+  <text x="340" y="730" font-family="'Noto Serif JP'" font-size="14" fill="#b3322b" text-anchor="middle">「近くに素敵なドッグパークがあります」</text>
+  <path d="M 240 745 L 440 745 L 410 765 L 270 765 Z" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" />
+  <text x="340" y="760" font-family="'Noto Sans JP'" font-size="12" fill="#2c2c2c" text-anchor="middle">地図と公園情報の表示</text>
+  
+  <!-- カラム2: M365 Copilot -->
+  <rect x="670" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="670" y="130" width="580" height="60" fill="#1a5b66" />
+  <text x="690" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">💼 企業向けM365 Copilot</text>
+  
+  <!-- カラム2コンテンツ -->
+  <text x="690" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">ビジネスアプリケーションと仕事の流れを変革</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="690" y1="250" x2="1200" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="950" cy="250" r="5" fill="#1a5b66" />
+  
+  <!-- M365 Copilotの特徴 -->
+  <text x="690" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ 生産性向上のためのAIパートナー</text>
+  <text x="690" y="330" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" line-height="1.6">Word、Excel、PowerPoint、Teams、Outlookなど既存の生産性アプリにCopilotを統合し、高度な支援を提供します。</text>
+  
+  <!-- 具体的なワークフロー -->
+  <rect x="690" y="380" width="540" height="240" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" />
+  <text x="710" y="410" font-family="'Noto Serif JP'" font-size="18" fill="#1a5b66">ワークフロー例：医療カンファレンス</text>
+  <rect x="710" y="430" width="500" height="170" fill="none" stroke="#1a5b66" stroke-width="1" stroke-dasharray="5,5" />
+  
+  <!-- ワークフロー図 -->
+  <circle cx="750" cy="470" r="20" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" />
+  <text x="750" y="475" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">準備</text>
+  <line x1="770" y1="470" x2="820" y2="470" stroke="#1a5b66" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <circle cx="850" cy="470" r="20" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" />
+  <text x="850" y="475" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">会議</text>
+  <line x1="870" y1="470" x2="920" y2="470" stroke="#1a5b66" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <circle cx="950" cy="470" r="20" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" />
+  <text x="950" y="475" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">記録</text>
+  <line x1="970" y1="470" x2="1020" y2="470" stroke="#1a5b66" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <circle cx="1050" cy="470" r="20" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" />
+  <text x="1050" y="475" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">共有</text>
+  <line x1="1070" y1="470" x2="1120" y2="470" stroke="#1a5b66" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <circle cx="1150" cy="470" r="20" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" />
+  <text x="1150" y="475" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">教育</text>
+  
+  <text x="710" y="510" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c">• 症例に基づいた会議アジェンダ自動作成</text>
+  <text x="710" y="540" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c">• 会議中はTeamsでAIによる高精度な議事録作成</text>
+  <text x="710" y="570" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c">• 会議後はWordで編集、PowerPointでスライド自動生成</text>
+  
+  <!-- 新しい業務形態 -->
+  <text x="690" y="660" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ 新しい業務プロセス: Pagesによる共同作業</text>
+  <rect x="690" y="680" width="540" height="100" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" />
+  <text x="710" y="710" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• AIとの対話履歴とページの多対多関係</text>
+  <text x="710" y="740" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 社内外データから報告書作成、同僚とリアルタイム協働</text>
+  <text x="710" y="770" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• AIによる報告書の継続的改善と洗練</text>
+  
+  <!-- 実践ポイント -->
+  <rect x="690" y="820" width="540" height="120" fill="#f7f4ee" stroke="#1a5b66" stroke-width="2" rx="5" />
+  <text x="710" y="850" font-family="'Noto Serif JP'" font-size="20" fill="#1a5b66">■ 実践：組織生産性の飛躍的向上</text>
+  <text x="710" y="890" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• カスタマーサービスケース解決: <tspan font-weight="bold">+10%以上</tspan></text>
+  <text x="710" y="920" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• マーケティングコンバージョン率: <tspan font-weight="bold">+20%以上</tspan></text>
+  
+  <!-- カラム3: Copilot Studio -->
+  <rect x="1290" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="1290" y="130" width="580" height="60" fill="#653a5e" />
+  <text x="1310" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">🔧 Copilot Studio</text>
+  
+  <!-- カラム3コンテンツ -->
+  <text x="1310" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">自分だけのAIエージェントを構築</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="1310" y1="250" x2="1820" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="1570" cy="250" r="5" fill="#653a5e" />
+  
+  <!-- Copilot Studioの特徴 -->
+  <text x="1310" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ 民主化されるエージェント開発</text>
+  <text x="1310" y="330" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" line-height="1.6">Wordで文書を作成するように、誰もが独自のAIエージェントを簡単に構築できるようになります。</text>
+  
+  <!-- エージェント構築プロセス -->
+  <rect x="1310" y="380" width="540" height="270" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" />
+  <text x="1330" y="410" font-family="'Noto Serif JP'" font-size="18" fill="#653a5e">フィールドサービスエージェント構築例</text>
+  
+  <!-- プロセスの流れ図 -->
+  <rect x="1330" y="430" width="500" height="200" fill="none" stroke="#653a5e" stroke-width="1" stroke-dasharray="5,5" />
+  <rect x="1350" y="450" width="140" height="70" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1420" y="485" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">目的定義</text>
+  <line x1="1490" y1="485" x2="1540" y2="485" stroke="#653a5e" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <rect x="1550" y="450" width="140" height="70" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1620" y="485" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">データ接続</text>
+  <line x1="1620" y1="520" x2="1620" y2="560" stroke="#653a5e" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <rect x="1550" y="570" width="140" height="70" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1620" y="605" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">エージェント生成</text>
+  <line x1="1550" y1="605" x2="1500" y2="605" stroke="#653a5e" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <rect x="1350" y="570" width="140" height="70" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1420" y="605" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">M365連携</text>
+  
+  <!-- データグランディング -->
+  <text x="1310" y="690" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ エンタープライズデータとの連携</text>
+  <rect x="1310" y="710" width="540" height="120" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" />
+  <text x="1330" y="740" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 企業内ウェブインデックスによる情報アクセス</text>
+  <text x="1330" y="770" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• Microsoft 365データ（文書・関係性・プロジェクト）</text>
+  <text x="1330" y="800" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• Data Fabricによる他システム連携</text>
+  
+  <!-- 最新機能: リサーチャーとアナリスト -->
+  <rect x="1310" y="850" width="540" height="130" fill="#f7f4ee" stroke="#653a5e" stroke-width="2" rx="5" />
+  <text x="1330" y="880" font-family="'Noto Serif JP'" font-size="20" fill="#653a5e">■ 最新機能:リサーチャーとアナリスト</text>
+  <text x="1330" y="915" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" font-weight="bold">➢ リサーチャー: 高度な推論モデルによる市場・M&A調査</text>
+  <text x="1330" y="950" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" font-weight="bold">➢ アナリスト: 全従業員にデータサイエンティストを提供</text>
+  
+  <!-- 矢印定義 -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c2c2c" />
+    </marker>
+  </defs>
+</svg> 

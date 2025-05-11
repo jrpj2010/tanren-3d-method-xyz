@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap');
+      
+      :root {
+        --black: #2c2c2c;
+        --cream: #f4f1ea;
+        --red: #b3322b;
+        --blue: #1a5b66;
+        --purple: #653a5e;
+      }
+      
+      .slide-bg {
+        fill: var(--cream);
+      }
+      
+      .title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 42px;
+        fill: var(--black);
+        letter-spacing: 0.05em;
+      }
+      
+      .body-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 24px;
+        fill: var(--black);
+      }
+      
+      .intro-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 22px;
+        fill: var(--black);
+      }
+      
+      .section-title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 28px;
+        fill: var(--black);
+      }
+      
+      .tech-title {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        fill: var(--black);
+      }
+      
+      .tech-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 16px;
+        fill: var(--black);
+      }
+      
+      .readiness-label {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        fill: var(--black);
+      }
+      
+      .readiness-value {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .readiness-status {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+        fill: var(--black);
+      }
+      
+      .challenge-title {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        fill: var(--black);
+      }
+      
+      .challenge-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 16px;
+        fill: var(--black);
+      }
+      
+      .summary-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 22px;
+        fill: var(--black);
+      }
+      
+      .company {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+        text-anchor: end;
+      }
+      
+      .page-number {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .bold {
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" class="slide-bg" />
+  
+  <!-- タイトル -->
+  <g transform="translate(120, 100)">
+    <text class="title">これは単なる夢物語？ 実現可能性について</text>
+    <line x1="0" y1="60" x2="1000" y2="60" stroke="var(--red)" stroke-width="3" />
+  </g>
+  
+  <!-- ドット装飾 -->
+  <g transform="translate(960, 150)">
+    <circle cx="-25" cy="0" r="6" fill="var(--red)" />
+    <circle cx="0" cy="0" r="6" fill="var(--blue)" />
+    <circle cx="25" cy="0" r="6" fill="var(--purple)" />
+  </g>
+  
+  <!-- イントロダクション -->
+  <g transform="translate(120, 200)">
+    <rect x="0" y="0" width="1680" height="120" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="1680" height="120" fill="none" stroke="var(--black)" stroke-width="1" />
+    
+    <text x="40" y="40" class="intro-text">「本当にそんなことが可能なの？」と思われるかもしれません。</text>
+    <text x="40" y="80" class="intro-text">確かに、現時点ですべての業務を完璧にこなせる汎用的なAIエージェントはまだ存在しません。</text>
+    <text x="40" y="110" class="intro-text">しかし、BAO構想を実現するための技術的な「<tspan fill="var(--red)" font-weight="700">ピース</tspan>」は、急速に揃いつつあります。</text>
+  </g>
+  
+  <!-- 2カラムレイアウト -->
+  <g transform="translate(120, 350)">
+    <!-- 現在のAI技術の到達点 -->
+    <g>
+      <text class="section-title">現在のAI技術の到達点</text>
+      <line x1="0" y1="45" x2="710" y2="45" stroke="var(--red)" stroke-width="2" />
+      
+      <!-- 技術アイコンと説明 -->
+      <g transform="translate(0, 70)">
+        <g transform="translate(80, 0)">
+          <circle cx="35" cy="35" r="35" fill="var(--red)" />
+          <text x="35" y="45" text-anchor="middle" font-size="28" fill="white">✒️</text>
+          <text x="35" y="90" text-anchor="middle" class="tech-title">文章生成AI</text>
+          <text x="35" y="115" text-anchor="middle" class="tech-text">高品質なコンテンツ作成が可能</text>
+        </g>
+        
+        <g transform="translate(245, 0)">
+          <circle cx="35" cy="35" r="35" fill="var(--blue)" />
+          <text x="35" y="45" text-anchor="middle" font-size="28" fill="white">🖼️</text>
+          <text x="35" y="90" text-anchor="middle" class="tech-title">画像生成AI</text>
+          <text x="35" y="115" text-anchor="middle" class="tech-text">クリエイティブ制作が自動化</text>
+        </g>
+        
+        <g transform="translate(410, 0)">
+          <circle cx="35" cy="35" r="35" fill="var(--purple)" />
+          <text x="35" y="45" text-anchor="middle" font-size="28" fill="white">📊</text>
+          <text x="35" y="90" text-anchor="middle" class="tech-title">データ分析AI</text>
+          <text x="35" y="115" text-anchor="middle" class="tech-text">複雑なデータから洞察を抽出</text>
+        </g>
+        
+        <g transform="translate(575, 0)">
+          <circle cx="35" cy="35" r="35" fill="var(--red)" />
+          <text x="35" y="45" text-anchor="middle" font-size="28" fill="white">💬</text>
+          <text x="35" y="90" text-anchor="middle" class="tech-title">対話型AI</text>
+          <text x="35" y="115" text-anchor="middle" class="tech-text">自然な会話と指示理解</text>
+        </g>
+      </g>
+      
+      <!-- 補足説明 -->
+      <g transform="translate(0, 160)">
+        <text class="tech-title">大規模言語モデル（LLM）の急速な進化</text>
+        <text y="30" class="tech-text">最新のAIモデルは、複雑な指示の理解、多段階の推論、異なる知識領域の統合など、</text>
+        <text y="55" class="tech-text">より高度なタスクに対応できるようになっています。</text>
+        
+        <text y="95" class="tech-title">API連携技術の発展</text>
+        <text y="125" class="tech-text">異なるAIやシステムを連携させる技術も発展しており、複数のAIが協調して動作する</text>
+        <text y="150" class="tech-text">ための基盤が整いつつあります。</text>
+      </g>
+    </g>
+    
+    <!-- BAO実現に向けた技術的準備度 -->
+    <g transform="translate(860, 0)">
+      <text class="section-title">BAO実現に向けた技術的準備度</text>
+      <line x1="0" y1="45" x2="710" y2="45" stroke="var(--blue)" stroke-width="2" />
+      
+      <!-- 準備度バー -->
+      <g transform="translate(0, 70)">
+        <g>
+          <text class="readiness-label">特定タスク特化型AI</text>
+          <rect x="230" y="0" width="280" height="24" fill="#e0e0e0" rx="4" />
+          <rect x="230" y="0" width="252" height="24" fill="var(--red)" rx="4" />
+          <text x="530" y="17" class="readiness-value">90%</text>
+          <text x="595" y="17" class="readiness-status">実用化済み</text>
+        </g>
+        
+        <g transform="translate(0, 45)">
+          <text class="readiness-label">API連携技術</text>
+          <rect x="230" y="0" width="280" height="24" fill="#e0e0e0" rx="4" />
+          <rect x="230" y="0" width="238" height="24" fill="var(--blue)" rx="4" />
+          <text x="530" y="17" class="readiness-value">85%</text>
+          <text x="595" y="17" class="readiness-status">成熟段階</text>
+        </g>
+        
+        <g transform="translate(0, 90)">
+          <text class="readiness-label">AIユーザーインターフェース</text>
+          <rect x="230" y="0" width="280" height="24" fill="#e0e0e0" rx="4" />
+          <rect x="230" y="0" width="196" height="24" fill="var(--purple)" rx="4" />
+          <text x="530" y="17" class="readiness-value">70%</text>
+          <text x="595" y="17" class="readiness-status">発展中</text>
+        </g>
+        
+        <g transform="translate(0, 135)">
+          <text class="readiness-label">マルチエージェント協調</text>
+          <rect x="230" y="0" width="280" height="24" fill="#e0e0e0" rx="4" />
+          <rect x="230" y="0" width="168" height="24" fill="var(--red)" rx="4" />
+          <text x="530" y="17" class="readiness-value">60%</text>
+          <text x="595" y="17" class="readiness-status">進行中</text>
+        </g>
+        
+        <g transform="translate(0, 180)">
+          <text class="readiness-label">知識共有システム</text>
+          <rect x="230" y="0" width="280" height="24" fill="#e0e0e0" rx="4" />
+          <rect x="230" y="0" width="182" height="24" fill="var(--blue)" rx="4" />
+          <text x="530" y="17" class="readiness-value">65%</text>
+          <text x="595" y="17" class="readiness-status">実証段階</text>
+        </g>
+        
+        <g transform="translate(0, 225)">
+          <text class="readiness-label">自己修正・最適化機能</text>
+          <rect x="230" y="0" width="280" height="24" fill="#e0e0e0" rx="4" />
+          <rect x="230" y="0" width="154" height="24" fill="var(--purple)" rx="4" />
+          <text x="530" y="17" class="readiness-value">55%</text>
+          <text x="595" y="17" class="readiness-status">研究開発中</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 乗り越えるべき課題 -->
+  <g transform="translate(120, 700)">
+    <text class="section-title">乗り越えるべき課題</text>
+    <line x1="0" y1="45" x2="1680" y2="45" stroke="var(--purple)" stroke-width="2" />
+    
+    <g transform="translate(0, 80)">
+      <!-- 課題1 -->
+      <g transform="translate(150, 0)">
+        <circle cx="30" cy="30" r="30" fill="var(--red)" />
+        <text x="30" y="38" text-anchor="middle" font-size="22" fill="white">🔄</text>
+        
+        <g transform="translate(80, 0)">
+          <text class="challenge-title">複数AIエージェントの効果的な連携</text>
+          <text y="30" class="challenge-text">異なる専門性を持つAIが整合性を保ちながら協働する仕組みの確立</text>
+        </g>
+      </g>
+      
+      <!-- 課題2 -->
+      <g transform="translate(750, 0)">
+        <circle cx="30" cy="30" r="30" fill="var(--blue)" />
+        <text x="30" y="38" text-anchor="middle" font-size="22" fill="white">🛡️</text>
+        
+        <g transform="translate(80, 0)">
+          <text class="challenge-title">セキュリティとプライバシーの確保</text>
+          <text y="30" class="challenge-text">重要なビジネスデータを扱うAIシステムのセキュリティ強化</text>
+        </g>
+      </g>
+      
+      <!-- 課題3 -->
+      <g transform="translate(150, 90)">
+        <circle cx="30" cy="30" r="30" fill="var(--purple)" />
+        <text x="30" y="38" text-anchor="middle" font-size="22" fill="white">💾</text>
+        
+        <g transform="translate(80, 0)">
+          <text class="challenge-title">信頼性の高いナレッジハブの構築</text>
+          <text y="30" class="challenge-text">企業全体の知識を効率的に蓄積・共有・活用できる仕組み</text>
+        </g>
+      </g>
+      
+      <!-- 課題4 -->
+      <g transform="translate(750, 90)">
+        <circle cx="30" cy="30" r="30" fill="var(--red)" />
+        <text x="30" y="38" text-anchor="middle" font-size="22" fill="white">👥</text>
+        
+        <g transform="translate(80, 0)">
+          <text class="challenge-title">人間とAIの効果的な協働インターフェース</text>
+          <text y="30" class="challenge-text">人間CEOがAIチームを直感的に指揮できるUIの開発</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- まとめボックス -->
+  <g transform="translate(960, 950)">
+    <rect x="-700" y="-60" width="1400" height="120" fill="white" stroke="var(--black)" stroke-width="2" />
+    
+    <g transform="translate(-650, 0)">
+      <text font-size="54">⏱️</text>
+    </g>
+    
+    <g transform="translate(-550, 0)">
+      <text class="summary-text bold" y="-30">BAO実現への時間軸</text>
+      <text class="summary-text" y="10">個別のAI技術は急速に進化しており、それらを<tspan fill="var(--blue)" font-weight="700">統合・連携させる仕組み</tspan>が今後の焦点です。</text>
+      <text class="summary-text" y="40">AI同士の協調によるLv3エージェントの登場により、BAO構想の<tspan fill="var(--red)" font-weight="700">実証段階へと進む可能性</tspan>があります。</text>
+      <text class="summary-text" y="70">その実現は、私たちが思っているよりも<tspan fill="var(--purple)" font-weight="700">早いかもしれません</tspan>。</text>
+    </g>
+  </g>
+  
+  <!-- 会社名と頁数 -->
+  <g transform="translate(1800, 1050)">
+    <text class="company">TANREN株式会社</text>
+  </g>
+  
+  <g transform="translate(120, 1050)">
+    <text class="page-number">7 / 12</text>
+  </g>
+</svg> 

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>良いプロンプトの特徴</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a192f 0%, #172a46 100%);
+            color: white;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            padding: 50px;
+        }
+        .heading-underline {
+            height: 4px;
+            width: 80px;
+            background: linear-gradient(90deg, #2196F3, rgba(33, 150, 243, 0.3));
+            border-radius: 2px;
+            margin-top: 12px;
+            margin-bottom: 20px;
+        }
+        .good-prompt-item {
+            border-left: 3px solid #4caf50;
+            background: linear-gradient(90deg, rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.03));
+            transition: all 0.3s ease;
+        }
+        .good-prompt-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2);
+        }
+        .feature-icon {
+            background: rgba(76, 175, 80, 0.2);
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #81c784;
+        }
+        .journey-arrow {
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, #64B5F6, #4caf50);
+        }
+        .journey-arrow:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -4px;
+            border-style: solid;
+            border-width: 5px 0 5px 8px;
+            border-color: transparent transparent transparent #4caf50;
+        }
+        .gradient-box {
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.2) 0%, rgba(76, 175, 80, 0.2) 100%);
+            border-radius: 6px;
+            border: 1px solid rgba(76, 175, 80, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold mb-1">良いプロンプトへの道標</h1>
+            <div class="heading-underline"></div>
+        </div>
+        
+        <!-- Thought OS Activation Message -->
+        <div class="gradient-box p-5 mb-8">
+            <div class="flex items-center">
+                <i class="fas fa-power-off text-3xl text-green-400 mr-5"></i>
+                <div>
+                    <h3 class="text-2xl font-medium mb-1">思考OSを起動せよ！</h3>
+                    <p class="text-blue-100">「良いプロンプト」と「悪いプロンプト」を分ける<span class="text-white font-bold">分水嶺</span>は、あなたの思考が整理されているかどうか</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Good Prompt Elements -->
+        <div class="grid grid-cols-2 gap-6 mb-8">
+            <!-- Element 1 -->
+            <div class="good-prompt-item p-5 rounded-md">
+                <div class="flex">
+                    <div class="feature-icon mr-4 flex-shrink-0">
+                        <i class="fas fa-bullseye text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">目的意識 (Why)</h3>
+                        <p class="text-blue-50 text-sm">何のために、AIにこの問いを投げかけるのか？</p>
+                        <div class="mt-2 bg-blue-900 bg-opacity-30 px-3 py-1 rounded text-xs text-green-200">
+                            例：「商品説明のわかりやすさを向上させるために...」
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Element 2 -->
+            <div class="good-prompt-item p-5 rounded-md">
+                <div class="flex">
+                    <div class="feature-icon mr-4 flex-shrink-0">
+                        <i class="fas fa-tasks text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">具体的な要求 (What & How)</h3>
+                        <p class="text-blue-50 text-sm">AIに何をしてほしいのか？どのような手順・レベルで？</p>
+                        <div class="mt-2 bg-blue-900 bg-opacity-30 px-3 py-1 rounded text-xs text-green-200">
+                            例：「専門用語を使わず、中学生でもわかる言葉で書き直してください」
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Element 3 -->
+            <div class="good-prompt-item p-5 rounded-md">
+                <div class="flex">
+                    <div class="feature-icon mr-4 flex-shrink-0">
+                        <i class="fas fa-map text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">必要な前提情報 (Context)</h3>
+                        <p class="text-blue-50 text-sm">AIが判断するために必要な背景・文脈・制約条件は？</p>
+                        <div class="mt-2 bg-blue-900 bg-opacity-30 px-3 py-1 rounded text-xs text-green-200">
+                            例：「当社は高齢者向け健康食品を販売しており、主な顧客層は60代以上です」
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Element 4 -->
+            <div class="good-prompt-item p-5 rounded-md">
+                <div class="flex">
+                    <div class="feature-icon mr-4 flex-shrink-0">
+                        <i class="fas fa-clipboard-check text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">期待する成果物 (Output)</h3>
+                        <p class="text-blue-50 text-sm">どのような形式・トーンで応答してほしいか？</p>
+                        <div class="mt-2 bg-blue-900 bg-opacity-30 px-3 py-1 rounded text-xs text-green-200">
+                            例：「箇条書きで3つのポイントにまとめ、各200字以内で説明してください」
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TANREN 3D Method Connection -->
+        <div class="bg-gradient-to-r from-blue-900 to-green-900 bg-opacity-20 p-6 rounded-lg">
+            <div class="flex items-center">
+                <div class="mr-5">
+                    <i class="fas fa-lightbulb text-4xl text-yellow-300"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">失敗は「学び」の宝庫</h3>
+                    <p class="text-blue-100">
+                        AIとの対話がうまくいかなかった時こそ、<span class="text-white font-semibold">「なぜ伝わらなかったのか？」</span>を
+                        <span class="text-white font-semibold">TANREN 3Dメソッド</span>の視点から分析する絶好の機会
+                    </p>
+                    <p class="mt-2 text-green-300 font-medium">
+                        過去の「失敗」から学び、改善点を見つけ出すプロセスが、あなたを真の「AI対話設計者」へと成長させる
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Journey Path Visual (Optional) -->
+        <div class="absolute bottom-20 right-14 opacity-40">
+            <div class="journey-arrow" style="transform: rotate(45deg);"></div>
+            <div class="journey-arrow" style="transform: rotate(15deg); top: 20px;"></div>
+            <div class="journey-arrow" style="transform: rotate(-15deg); top: 40px;"></div>
+        </div>
+    </div>
+</body>
+</html>

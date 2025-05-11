@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第1章：AI超独学を起動するマインドセット</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #e6f7ff 0%, #cce7ff 50%, #b3d7ff 100%);
+            overflow: hidden;
+        }
+        .title {
+            font-weight: 900;
+            color: #0066cc;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+            line-height: 1.2;
+        }
+        .subtitle {
+            color: #004080;
+            font-weight: 700;
+        }
+        .circle-bg {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            box-shadow: 0 4px 30px rgba(0,102,204,0.1);
+        }
+        .connection-line {
+            position: absolute;
+            height: 3px;
+            background: linear-gradient(90deg, #0066cc, #66b3ff);
+            transform-origin: left center;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col justify-center items-center p-16 relative">
+        <!-- Background Elements -->
+        <div class="circle-bg" style="width: 300px; height: 300px; top: -100px; right: -50px; opacity: 0.7;"></div>
+        <div class="circle-bg" style="width: 200px; height: 200px; bottom: -50px; left: 100px; opacity: 0.5;"></div>
+        
+        <!-- Connection Lines -->
+        <div class="connection-line" style="width: 150px; top: 250px; left: 400px; transform: rotate(45deg);"></div>
+        <div class="connection-line" style="width: 200px; top: 400px; left: 700px; transform: rotate(-30deg);"></div>
+        
+        <!-- Main Content -->
+        <div class="text-center z-10 transform scale-110">
+            <h1 class="title text-6xl mb-6">第1章：AI超独学を起動するマインドセット</h1>
+            <h2 class="subtitle text-4xl mb-12 tracking-wider">「使う側」から「共創する側」へ</h2>
+        </div>
+        
+        <!-- AI and Human Representation -->
+        <div class="absolute right-16 bottom-16 flex items-center">
+            <div class="w-16 h-16 bg-white rounded-full shadow-lg flex justify-center items-center mr-4">
+                <i class="fas fa-robot text-4xl text-blue-500"></i>
+            </div>
+            <div class="w-4 h-1 bg-blue-400 rounded"></div>
+            <div class="w-4 h-1 bg-blue-500 rounded mx-1"></div>
+            <div class="w-4 h-1 bg-blue-600 rounded"></div>
+            <div class="w-16 h-16 bg-white rounded-full shadow-lg flex justify-center items-center ml-4">
+                <i class="fas fa-user text-4xl text-blue-600"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

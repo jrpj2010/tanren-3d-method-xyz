@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>次世代プレゼン資料作成</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #2c3e50 0%, #4a69bd 50%, #6c5ce7 100%);
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide-header {
+            margin-bottom: 25px;
+        }
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #ffffff, #e0e0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            line-height: 1.2;
+        }
+        .slide-subtitle {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+        .content-area {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+        .left-column, .right-column {
+            width: 30%;
+        }
+        .center-column {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .panel {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .panel-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+        .panel-icon {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            background: rgba(162, 155, 254, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .issues-list, .benefits-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .issues-list li, .benefits-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .issue-icon, .benefit-icon {
+            margin-right: 12px;
+            color: #a29bfe;
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+            margin-top: 3px;
+        }
+        .issue-text, .benefit-text {
+            font-size: 1rem;
+            flex: 1;
+            line-height: 1.4;
+        }
+        .comparison-container {
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .tech-tag {
+            display: inline-block;
+            background: rgba(162, 155, 254, 0.3);
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            margin-right: 5px;
+        }
+        .method-footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .method-footer i {
+            margin-right: 8px;
+            color: #a29bfe;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-header">
+            <h1 class="slide-title">03 次世代プレゼン資料作成</h1>
+            <div class="slide-subtitle">AI×SVG/HTMLで「編集」を超える</div>
+        </div>
+        
+        <div class="content-area">
+            <!-- 左カラム：従来の課題 -->
+            <div class="left-column">
+                <div class="panel">
+                    <div class="panel-title">
+                        <div class="panel-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        従来の資料作成の課題
+                    </div>
+                    
+                    <ul class="issues-list">
+                        <li>
+                            <div class="issue-icon"><i class="fas fa-clock"></i></div>
+                            <div class="issue-text">膨大な編集時間の必要性</div>
+                        </li>
+                        <li>
+                            <div class="issue-icon"><i class="fas fa-arrows-alt"></i></div>
+                            <div class="issue-text">煩わしいレイアウト調整作業</div>
+                        </li>
+                        <li>
+                            <div class="issue-icon"><i class="fas fa-search"></i></div>
+                            <div class="issue-text">適切なビジュアル素材の探索</div>
+                        </li>
+                        <li>
+                            <div class="issue-icon"><i class="fas fa-sync"></i></div>
+                            <div class="issue-text">繰り返される細かい修正</div>
+                        </li>
+                        <li>
+                            <div class="issue-icon"><i class="fas fa-laptop"></i></div>
+                            <div class="issue-text">ソフトウェア依存の互換性問題</div>
+                        </li>
+                        <li>
+                            <div class="issue-icon"><i class="fas fa-fill-drip"></i></div>
+                            <div class="issue-text">一貫性のあるデザイン維持の難しさ</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 中央カラム：対比図 -->
+            <div class="center-column">
+                <div class="comparison-container">
+                    <div class="mermaid">
+                        flowchart TB
+                        subgraph 従来["従来のプロセス（編集中心）"]
+                            A1[アイデア] --> B1[PowerPoint起動]
+                            B1 --> C1[スライド一つずつ編集]
+                            C1 --> D1[レイアウト調整]
+                            D1 --> E1[素材探し]
+                            E1 --> F1[微調整・修正]
+                            F1 --> C1
+                        end
+                        subgraph 次世代["AI×SVG/HTML（生成中心）"]
+                            A2[アイデア] --> B2[AIに設計指示]
+                            B2 --> C2[AI:コード生成]
+                            C2 --> D2[一括プレビュー]
+                            D2 --> E2[最小限の調整]
+                            E2 -->|修正指示| B2
+                        end
+                        style 従来 fill:#4a69bd,color:#fff
+                        style 次世代 fill:#6c5ce7,color:#fff
+                        style A1 fill:#4a69bd,color:#fff
+                        style B1 fill:#4a69bd,color:#fff
+                        style C1 fill:#4a69bd,color:#fff
+                        style D1 fill:#4a69bd,color:#fff
+                        style E1 fill:#4a69bd,color:#fff
+                        style F1 fill:#4a69bd,color:#fff
+                        style A2 fill:#6c5ce7,color:#fff
+                        style B2 fill:#6c5ce7,color:#fff
+                        style C2 fill:#6c5ce7,color:#fff
+                        style D2 fill:#6c5ce7,color:#fff
+                        style E2 fill:#6c5ce7,color:#fff
+                    </div>
+                </div>
+                <div style="text-align: center; font-size: 1.2rem; font-weight: 700; margin-top: 10px;">
+                    <span style="color: #4a69bd;">"編集"</span> から <span style="color: #a29bfe;">"生成"</span> へのパラダイムシフト
+                </div>
+            </div>
+            
+            <!-- 右カラム：AI×SVG/HTMLの可能性 -->
+            <div class="right-column">
+                <div class="panel">
+                    <div class="panel-title">
+                        <div class="panel-icon"><i class="fas fa-star"></i></div>
+                        AI×SVG/HTMLの可能性
+                    </div>
+                    
+                    <div class="tech-tag"><i class="fas fa-code"></i> SVG</div>
+                    <div class="tech-tag"><i class="fas fa-file-code"></i> HTML/CSS</div>
+                    
+                    <ul class="benefits-list">
+                        <li>
+                            <div class="benefit-icon"><i class="fas fa-robot"></i></div>
+                            <div class="benefit-text">
+                                <strong>AI理解の容易さ</strong>：テキストベースのコードはAIが処理・生成しやすい
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+                            <div class="benefit-text">
+                                <strong>ベクター形式</strong>：どんなサイズでも高画質、軽量なファイルサイズ
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon"><i class="fas fa-chart-bar"></i></div>
+                            <div class="benefit-text">
+                                <strong>拡張性</strong>：アニメーション、データ連動、インタラクティブ要素の実装
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon"><i class="fas fa-globe"></i></div>
+                            <div class="benefit-text">
+                                <strong>プラットフォーム非依存</strong>：ウェブブラウザがあればどこでも表示可能
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon"><i class="fas fa-paint-brush"></i></div>
+                            <div class="benefit-text">
+                                <strong>デザイン一貫性</strong>：コードによる厳密なスタイル定義と再利用性
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="method-footer">
+            <i class="fas fa-cubes"></i>
+            <strong>X軸（構造化）</strong>：AIにプレゼン設計指示を構造化して伝えることが成功の鍵
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'dark',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true,
+                    curve: 'linear'
+                }
+            });
+        });
+    </script>
+</body>
+</html>

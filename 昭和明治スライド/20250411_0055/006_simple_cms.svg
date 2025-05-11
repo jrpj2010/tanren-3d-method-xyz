@@ -1,0 +1,186 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="background-color: #f4f1ea; font-family: 'Noto Sans JP', sans-serif;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&display=swap');
+      .title { font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700; fill: #2c2c2c; letter-spacing: 0.1em; }
+      .subtitle { font-size: 14px; fill: #555; letter-spacing: 0.05em; }
+      .card-title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; letter-spacing: 0.08em; }
+      .card-text { font-size: 11px; fill: #2c2c2c; letter-spacing: 0.05em; line-height: 1.6; }
+      .highlight-red { fill: #b3322b; font-weight: bold; }
+      .highlight-blue { fill: #1a5b66; font-weight: bold; }
+      .highlight-purple { fill: #653a5e; font-weight: bold; }
+      .accent-line-red { stroke: #b3322b; stroke-width: 2; }
+      .accent-dot-red { fill: #b3322b; }
+      .accent-line-blue { stroke: #1a5b66; stroke-width: 2; }
+      .accent-dot-blue { fill: #1a5b66; }
+      .accent-line-purple { stroke: #653a5e; stroke-width: 2; }
+      .accent-dot-purple { fill: #653a5e; }
+      .table-header { font-weight: bold; fill: #f4f1ea; }
+      .table-row-even { fill: #e8e5dd; }
+      .table-row-odd { fill: #f4f1ea; }
+      .table-text { font-size: 10px; fill: #2c2c2c; }
+      .flow-arrow { fill: none; stroke: #2c2c2c; stroke-width: 1.5; marker-end: url(#arrowhead); }
+      .flow-text { font-size: 9px; fill: #555; }
+      .bar-chart-bar { fill: #b3322b; }
+      .bar-chart-axis { stroke: #555; stroke-width: 1; }
+      .bar-chart-label { font-size: 9px; fill: #555; }
+      .bar-chart-value { font-size: 10px; fill: #2c2c2c; font-weight: bold; }
+      .icon { font-size: 14px; margin-right: 5px; }
+      .emphasis-box { fill: #e8e5dd; stroke: #ccc; stroke-width: 1; rx: 3; ry: 3; }
+      .emphasis-text { font-size: 10px; fill: #2c2c2c; font-weight: bold; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c2c2c" />
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="40" y="50" class="title">シンプルCMSシステム</text>
+  <text x="40" y="75" class="subtitle">コンテンツの作成・管理・公開を簡単に</text>
+  <line x1="40" y1="85" x2="400" y2="85" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="410" cy="85" r="3" fill="#2c2c2c" />
+
+  <!-- Footer -->
+  <text x="1200" y="700" text-anchor="end" font-size="12px" fill="#555">6 / 20</text>
+
+  <!-- Column 1: 目的と効果 -->
+  <rect x="40" y="110" width="380" height="570" fill="#f4f1ea" stroke="#ccc" stroke-width="0.5" rx="5" ry="5"/>
+  <text x="60" y="145" class="card-title" fill="#b3322b">🎯 目的と背景</text>
+  <line x1="60" y1="155" x2="200" y2="155" class="accent-line-red" />
+  <circle cx="205" cy="155" r="3" class="accent-dot-red" />
+  <text x="60" y="180" class="card-text">
+    <tspan x="60" dy="1.2em">課題: 専門CMSは複雑、エディタは機能不足。</tspan>
+    <tspan x="60" dy="1.2em">簡単で必要十分なCMSが求められる。</tspan>
+  </text>
+  <text x="60" y="230" class="card-text"><tspan font-weight="bold">対象:</tspan> 小規模事業者, マーケ担当, クリエイター, ブロガー</text>
+
+  <!-- Success Criteria Graph -->
+  <text x="60" y="270" class="card-text" font-weight="bold">成功基準: 公開時間短縮 & 管理工数削減</text>
+  <rect x="60" y="290" width="340" height="100" fill="#e8e5dd" rx="3" ry="3"/>
+  <line x1="80" y1="370" x2="380" y2="370" class="bar-chart-axis" />
+  <line x1="80" y1="300" x2="80" y2="370" class="bar-chart-axis" />
+  <text x="70" y="305" class="bar-chart-label" text-anchor="end">100%</text>
+  <text x="70" y="375" class="bar-chart-label" text-anchor="end">0%</text>
+  <!-- 公開時間 Before/After -->
+  <rect x="100" y="300" width="40" height="70" class="bar-chart-bar" style="fill: #aaa;"/>
+  <rect x="150" y="356" width="40" height="14" class="bar-chart-bar" />
+  <text x="125" y="385" class="bar-chart-label" text-anchor="middle">公開時間</text>
+  <text x="170" y="351" class="bar-chart-value highlight-red" font-size="9px" text-anchor="middle">10分以内</text>
+  <!-- 管理工数 Before/After -->
+  <rect x="240" y="300" width="40" height="70" class="bar-chart-bar" style="fill: #aaa;"/>
+  <rect x="290" y="328" width="40" height="42" class="bar-chart-bar" />
+  <text x="265" y="385" class="bar-chart-label" text-anchor="middle">管理工数</text>
+  <text x="310" y="323" class="bar-chart-value highlight-red" font-size="9px" text-anchor="middle">-40%</text>
+
+  <text x="60" y="410" class="card-text" font-weight="bold">期待効果:</text>
+  <text x="70" y="430" class="card-text">
+    <tspan x="70" dy="1.4em">✅ 作成・管理効率化</tspan>
+    <tspan x="70" dy="1.4em">✅ デザイン・構造維持</tspan>
+    <tspan x="70" dy="1.4em">✅ 共有・協働促進</tspan>
+    <tspan x="70" dy="1.4em">✅ 整理・再利用容易化</tspan>
+    <tspan x="70" dy="1.4em">✅ 公開プロセス簡素化</tspan>
+  </text>
+
+  <!-- Column 2: 機能と操作 -->
+  <rect x="450" y="110" width="380" height="570" fill="#f4f1ea" stroke="#ccc" stroke-width="0.5" rx="5" ry="5"/>
+  <text x="470" y="145" class="card-title" fill="#1a5b66">⚙️ 主要機能</text>
+  <line x1="470" y1="155" x2="610" y2="155" class="accent-line-blue" />
+  <circle cx="615" cy="155" r="3" class="accent-dot-blue" />
+  <text x="470" y="180" class="card-text" font-weight="bold">コア機能:</text>
+  <text x="480" y="200" class="card-text">
+    <tspan x="480" dy="1.4em"><tspan class="icon">✍️</tspan>作成・編集 (リッチテキスト)</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">📋</tspan>一覧管理 (検索/フィルター)</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">🏷️</tspan>カテゴリ・タグ管理</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">👁️</tspan>プレビュー・公開/非公開</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">🔄</tspan>バージョン管理 (履歴/復元)</tspan>
+  </text>
+
+  <text x="470" y="320" class="card-text" font-weight="bold">データ管理:</text>
+  <rect x="470" y="340" width="340" height="75" fill="#1a5b66" rx="3" ry="3"/>
+  <text x="480" y="358" class="table-header">データ種別</text>
+  <text x="630" y="358" class="table-header">保存方法</text>
+  <rect x="470" y="365" width="340" height="15" class="table-row-even"/>
+  <text x="480" y="376" class="table-text">コンテンツ情報</text>
+  <text x="630" y="376" class="table-text">v0 Storage</text>
+  <rect x="470" y="380" width="340" height="15" class="table-row-odd"/>
+  <text x="480" y="391" class="table-text">カテゴリ・タグ情報</text>
+  <text x="630" y="391" class="table-text">v0 Storage</text>
+  <rect x="470" y="395" width="340" height="15" class="table-row-even"/>
+  <text x="480" y="406" class="table-text">メディアファイル, バージョン履歴</text>
+  <text x="630" y="406" class="table-text">v0 Storage</text>
+
+  <text x="470" y="435" class="card-text" font-weight="bold">ユーザー操作フロー:</text>
+  <rect x="470" y="455" width="340" height="80" class="emphasis-box"/>
+  <text x="485" y="475" class="flow-text">コンテンツ作成</text>
+  <line x1="575" y1="473" x2="605" y2="473" class="flow-arrow"/>
+  <text x="615" y="475" class="flow-text">整理(カテゴリ/タグ)</text>
+  <line x1="720" y1="473" x2="750" y2="473" class="flow-arrow"/>
+  <text x="760" y="475" class="flow-text">プレビュー確認</text>
+  <line x1="615" y1="498" x2="645" y2="498" class="flow-arrow"/>
+  <text x="655" y="500" class="flow-text">コンテンツ公開</text>
+  <line x1="755" y1="478" x2="755" y2="495" class="flow-arrow" style="marker-end: none;"/>
+  <line x1="755" y1="498" x2="725" y2="498" class="flow-arrow"/>
+
+  <text x="470" y="555" class="card-text" font-weight="bold">UI/UX デザイン:</text>
+   <text x="480" y="575" class="card-text">
+    <tspan x="480" dy="1.4em"><tspan class="icon">🖼️</tspan>レイアウト: 3エリア構成</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">🎨</tspan>配色: 白ベース、青アクセント、ステータス色分け</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">💻</tspan>デスクトップ/タブレット最適化</tspan>
+  </text>
+
+  <!-- Column 3: 開発と将来性 -->
+  <rect x="860" y="110" width="380" height="570" fill="#f4f1ea" stroke="#ccc" stroke-width="0.5" rx="5" ry="5"/>
+  <text x="880" y="145" class="card-title" fill="#653a5e">🛠️ 開発と展望</text>
+  <line x1="880" y1="155" x2="1020" y2="155" class="accent-line-purple" />
+  <circle cx="1025" cy="155" r="3" class="accent-dot-purple" />
+  <text x="880" y="180" class="card-text"><tspan font-weight="bold">開発PF:</tspan> v0 (理由: UIデザイン, エディタ実装容易)</text>
+
+  <text x="880" y="210" class="card-text" font-weight="bold">開発ステップ (見積):</text>
+  <rect x="880" y="230" width="340" height="145" fill="#653a5e" rx="3" ry="3"/>
+  <text x="890" y="248" class="table-header">ステップ</text>
+  <text x="1150" y="248" class="table-header" text-anchor="end">時間</text>
+  <rect x="880" y="255" width="340" height="15" class="table-row-even"/>
+  <text x="890" y="266" class="table-text">1. プロジェクト設定</text>
+  <text x="1210" y="266" class="table-text" text-anchor="end">3分</text>
+  <rect x="880" y="270" width="340" height="15" class="table-row-odd"/>
+  <text x="890" y="281" class="table-text">2. UI設計</text>
+  <text x="1210" y="281" class="table-text" text-anchor="end">7分</text>
+  <rect x="880" y="285" width="340" height="15" class="table-row-even"/>
+  <text x="890" y="296" class="table-text">3. コンテンツ管理機能実装</text>
+  <text x="1210" y="296" class="table-text" text-anchor="end">8分</text>
+  <rect x="880" y="300" width="340" height="15" class="table-row-odd"/>
+  <text x="890" y="311" class="table-text">4. カテゴリ・タグ機能実装</text>
+  <text x="1210" y="311" class="table-text" text-anchor="end">5分</text>
+  <rect x="880" y="315" width="340" height="15" class="table-row-even"/>
+  <text x="890" y="326" class="table-text">5. プレビュー・公開機能実装</text>
+  <text x="1210" y="326" class="table-text" text-anchor="end">4分</text>
+  <rect x="880" y="330" width="340" height="15" class="table-row-odd"/>
+  <text x="890" y="341" class="table-text">6. バージョン管理機能実装</text>
+  <text x="1210" y="341" class="table-text" text-anchor="end">3分</text>
+  <rect x="880" y="345" width="340" height="20" class="table-row-even" style="fill: #e8e5dd;"/>
+  <text x="890" y="360" class="table-text" font-weight="bold">合計</text>
+  <text x="1210" y="360" class="table-text highlight-purple" text-anchor="end" style="font-size: 12px;">30分</text>
+
+  <text x="880" y="395" class="card-text" font-weight="bold">テスト計画:</text>
+   <text x="890" y="415" class="card-text">
+    <tspan x="890" dy="1.4em">🧪 シナリオ: 作成, 公開, バージョン管理</tspan>
+    <tspan x="890" dy="1.4em">👍 UAT基準: 一般ユーザーが10分で基本操作完了</tspan>
+  </text>
+
+  <text x="880" y="465" class="card-text" font-weight="bold">制約:</text>
+   <text x="890" y="485" class="card-text">
+    <tspan x="890" dy="1.4em">🔒 v0無料プラン制限</tspan>
+    <tspan x="890" dy="1.4em">⏱️ 開発時間30分 (複雑機能除外)</tspan>
+    <tspan x="890" dy="1.4em">🛠️ 非エンジニア実装可能範囲</tspan>
+  </text>
+
+  <text x="880" y="555" class="card-text" font-weight="bold">将来の拡張可能性:</text>
+   <text x="890" y="575" class="card-text">
+    <tspan x="890" dy="1.4em"><tspan class="icon">👥</tspan>共同編集</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">💬</tspan>コメント機能</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">📈</tspan>SEO支援</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">📊</tspan>分析・統計</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">📅</tspan>公開スケジュール</tspan>
+  </text>
+
+</svg>

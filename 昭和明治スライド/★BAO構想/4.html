@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAOのワークフロー - ビジネス・エージェント・オーケストレーター構想</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --black: #2c2c2c;
+            --cream: #f4f1ea;
+            --red: #b3322b;
+            --blue: #1a5b66;
+            --purple: #653a5e;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--cream);
+            color: var(--black);
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .slide-title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            color: var(--black);
+            position: relative;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        .slide-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--red);
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .dot-red {
+            background-color: var(--red);
+        }
+        .dot-blue {
+            background-color: var(--blue);
+        }
+        .dot-purple {
+            background-color: var(--purple);
+        }
+        .workflow-box {
+            border: 2px solid var(--black);
+            background-color: white;
+            padding: 20px;
+            position: relative;
+            height: 100%;
+        }
+        .workflow-box::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--black);
+            z-index: -1;
+        }
+        .workflow-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            font-size: 22px;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        .arrow-right {
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 20px solid var(--black);
+        }
+        .red-bg {
+            background-color: var(--red);
+        }
+        .blue-bg {
+            background-color: var(--blue);
+        }
+        .purple-bg {
+            background-color: var(--purple);
+        }
+        .red-accent {
+            color: var(--red);
+        }
+        .blue-accent {
+            color: var(--blue);
+        }
+        .purple-accent {
+            color: var(--purple);
+        }
+        .company {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            text-align: right;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+        .workflow-point {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .workflow-point::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .phase-title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            border-bottom: 2px solid;
+            margin-bottom: 10px;
+            padding-bottom: 4px;
+        }
+        .cycle-arrow {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h1 class="slide-title text-4xl mb-6">どうやって動くの？ BAOのワークフロー</h1>
+        
+        <div class="flex justify-center items-center mb-4">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-purple"></span>
+        </div>
+        
+        <p class="text-xl mb-6">BAOはビジネスプロセスを自動化・最適化します。人間とAIが連携して、以下のサイクルを高速かつ継続的に回していきます。</p>
+        
+        <div class="grid grid-cols-3 gap-5 mb-4 h-96">
+            <div class="workflow-box">
+                <div class="flex items-start mb-3">
+                    <div class="workflow-number red-bg">1</div>
+                    <div>
+                        <h3 class="phase-title red-accent text-xl">戦略策定フェーズ</h3>
+                        <p class="text-sm text-gray-600">⇔ 文献レビューフェーズ</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-point">
+                    <p><span class="font-bold">人間CEO</span>が会社の目標を設定</p>
+                    <p class="text-sm">売上目標、市場シェア、新製品投入など</p>
+                </div>
+                
+                <div class="workflow-point">
+                    <p><span class="font-bold">各AI CXO</span>は担当分野の戦略プランを作成</p>
+                    <p class="text-sm">市場調査AIや競合分析AIが情報収集・分析</p>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <i class="fas fa-file-alt text-4xl red-accent"></i>
+                    <p class="text-sm mt-1">目標設定・計画立案</p>
+                </div>
+            </div>
+            
+            <div class="workflow-box">
+                <div class="flex items-start mb-3">
+                    <div class="workflow-number blue-bg">2</div>
+                    <div>
+                        <h3 class="phase-title blue-accent text-xl">実行・運用フェーズ</h3>
+                        <p class="text-sm text-gray-600">⇔ 実験フェーズ</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-point">
+                    <p><span class="font-bold">各AI CXO</span>は部下AIにタスクを割り振り</p>
+                    <p class="text-sm">広告配信、顧客対応、開発作業などを実行</p>
+                </div>
+                
+                <div class="workflow-point">
+                    <p><span class="red-accent font-bold">リアルタイムでの効果測定と改善</span></p>
+                    <p class="text-sm">効果の低い施策は自動で停止・修正</p>
+                </div>
+                
+                <div class="workflow-point">
+                    <p>既存ビジネスシステムと<span class="font-bold">API連携</span></p>
+                    <p class="text-sm">CRM、ERP、MAツールなどと連携して業務遂行</p>
+                </div>
+                
+                <div class="text-center mt-1">
+                    <i class="fas fa-cogs text-4xl blue-accent"></i>
+                    <p class="text-sm mt-1">実行・自己修正</p>
+                </div>
+            </div>
+            
+            <div class="workflow-box">
+                <div class="flex items-start mb-3">
+                    <div class="workflow-number purple-bg">3</div>
+                    <div>
+                        <h3 class="phase-title purple-accent text-xl">分析・報告フェーズ</h3>
+                        <p class="text-sm text-gray-600">⇔ レポート作成フェーズ</p>
+                    </div>
+                </div>
+                
+                <div class="workflow-point">
+                    <p><span class="font-bold">各AI CXO</span>は担当部門の活動結果を集計・分析</p>
+                    <p class="text-sm">KPI達成度をリアルタイムで計測</p>
+                </div>
+                
+                <div class="workflow-point">
+                    <p><span class="font-bold">人間CEOが理解しやすい形式</span>で報告</p>
+                    <p class="text-sm">ダッシュボード、要約レポートなどを自動生成</p>
+                </div>
+                
+                <div class="workflow-point">
+                    <p><span class="font-bold">人間CEO</span>は報告を基に戦略を修正・指示</p>
+                    <p class="text-sm">次のサイクルへと繋げる</p>
+                </div>
+                
+                <div class="text-center mt-1">
+                    <i class="fas fa-chart-bar text-4xl purple-accent"></i>
+                    <p class="text-sm mt-1">分析・フィードバック</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Circular workflow diagram -->
+        <div class="relative h-20 mb-4">
+            <div class="cycle-arrow">
+                <div class="flex items-center justify-between w-full">
+                    <div class="h-px bg-black flex-grow"></div>
+                    <div class="mx-2 transform rotate-180">
+                        <div class="arrow-right"></div>
+                    </div>
+                    <div class="h-px bg-black flex-grow"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white p-5 border-2 border-black mx-auto max-w-4xl">
+            <div class="flex items-center">
+                <div class="mr-5">
+                    <i class="fas fa-lightbulb text-4xl red-accent"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">BAOの核心：人間の感情・意思決定・センス・素養で全てをジャッジメント</p>
+                    <p>AIがどれだけ進化しても<span class="blue-accent font-bold">本質的役割は変わらない</span>——AIチームを率いる人間CEOが<br>最終判断を下し、会社全体の価値観と方向性を定める「<span class="red-accent font-bold">指揮者</span>」として機能する</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="company">
+            <p>TANREN株式会社</p>
+        </div>
+        
+        <div class="page-number">4 / 12</div>
+    </div>
+</body>
+</html>

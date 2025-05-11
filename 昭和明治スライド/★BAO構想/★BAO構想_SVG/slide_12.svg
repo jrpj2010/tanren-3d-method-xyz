@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap');
+      
+      :root {
+        --black: #2c2c2c;
+        --cream: #f4f1ea;
+        --red: #b3322b;
+        --blue: #1a5b66;
+        --purple: #653a5e;
+      }
+      
+      .slide-bg {
+        fill: var(--cream);
+      }
+      
+      .title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 42px;
+        fill: var(--black);
+        letter-spacing: 0.05em;
+      }
+      
+      .subtitle {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 32px;
+        fill: var(--black);
+      }
+      
+      .body-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 24px;
+        fill: var(--black);
+      }
+      
+      .large-text {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 36px;
+        fill: var(--black);
+      }
+      
+      .quote-text {
+        font-family: 'Noto Serif JP', serif;
+        font-style: italic;
+        font-size: 28px;
+        fill: var(--black);
+      }
+      
+      .action-title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 24px;
+      }
+      
+      .action-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .summary-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 22px;
+        fill: var(--black);
+      }
+      
+      .contact-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .company {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+        text-anchor: end;
+      }
+      
+      .page-number {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .bold {
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" class="slide-bg" />
+  
+  <!-- タイトル -->
+  <g transform="translate(120, 100)">
+    <text class="title">BAO構想：未来への招待状</text>
+    <line x1="0" y1="60" x2="1000" y2="60" stroke="var(--red)" stroke-width="3" />
+  </g>
+  
+  <!-- ドット装飾 -->
+  <g transform="translate(960, 150)">
+    <circle cx="-25" cy="0" r="6" fill="var(--red)" />
+    <circle cx="0" cy="0" r="6" fill="var(--blue)" />
+    <circle cx="25" cy="0" r="6" fill="var(--purple)" />
+  </g>
+  
+  <!-- メインビジュアル・コンテンツ -->
+  <g transform="translate(960, 340)">
+    <text text-anchor="middle" class="large-text">未来の企業経営は、</text>
+    <text text-anchor="middle" class="large-text" y="60"><tspan fill="var(--red)">人間</tspan>と<tspan fill="var(--blue)">AI</tspan>の共創により</text>
+    <text text-anchor="middle" class="large-text" y="120">新たな次元へと進化します</text>
+    
+    <g transform="translate(0, 200)">
+      <rect x="-550" y="-50" width="1100" height="100" fill="white" stroke="var(--black)" stroke-width="2" rx="10" />
+      <text text-anchor="middle" class="quote-text">"BAOは単なるAI導入ではなく、</text>
+      <text text-anchor="middle" class="quote-text" y="50">企業と人間の可能性を最大化する経営革命です"</text>
+    </g>
+  </g>
+  
+  <!-- アクションステップ -->
+  <g transform="translate(120, 600)">
+    <text class="action-title" fill="var(--red)">BAO構想への第一歩</text>
+    
+    <g transform="translate(30, 40)">
+      <circle cx="-10" cy="0" r="6" fill="var(--red)" />
+      <text x="10" y="7" class="action-text">現状の<tspan font-weight="700">データ基盤</tspan>を評価し、統合計画を策定する</text>
+      
+      <circle cx="-10" cy="45" r="6" fill="var(--red)" />
+      <text x="10" y="52" class="action-text">小規模な<tspan font-weight="700">実証実験</tspan>から始め、特定業務におけるAI活用を検証する</text>
+      
+      <circle cx="-10" cy="90" r="6" fill="var(--red)" />
+      <text x="10" y="97" class="action-text"><tspan font-weight="700">組織文化の変革</tspan>に向けた啓発・研修プログラムを開始する</text>
+      
+      <circle cx="-10" cy="135" r="6" fill="var(--red)" />
+      <text x="10" y="142" class="action-text">未来の経営体制を見据えた<tspan font-weight="700">長期ロードマップ</tspan>を描く</text>
+    </g>
+  </g>
+  
+  <!-- 業界別の予測時期 -->
+  <g transform="translate(970, 600)">
+    <text class="action-title" fill="var(--blue)">BAO実現の予測時期</text>
+    
+    <g transform="translate(30, 40)">
+      <circle cx="-10" cy="0" r="6" fill="var(--blue)" />
+      <text x="10" y="7" class="action-text"><tspan font-weight="700">IT・テクノロジー企業</tspan>：2025年～2027年</text>
+      
+      <circle cx="-10" cy="45" r="6" fill="var(--blue)" />
+      <text x="10" y="52" class="action-text"><tspan font-weight="700">金融・保険業</tspan>：2026年～2028年</text>
+      
+      <circle cx="-10" cy="90" r="6" fill="var(--blue)" />
+      <text x="10" y="97" class="action-text"><tspan font-weight="700">製造・小売業</tspan>：2027年～2029年</text>
+      
+      <circle cx="-10" cy="135" r="6" fill="var(--blue)" />
+      <text x="10" y="142" class="action-text"><tspan font-weight="700">公共・医療・教育</tspan>：2028年～2030年</text>
+    </g>
+  </g>
+  
+  <!-- ロゴとコンタクト情報 -->
+  <g transform="translate(960, 850)">
+    <rect x="-350" y="-60" width="700" height="120" fill="white" stroke="var(--black)" stroke-width="2" />
+    
+    <g transform="translate(-290, 0)">
+      <text font-size="54">🚀</text>
+    </g>
+    
+    <g transform="translate(-210, 0)">
+      <text class="summary-text bold" fill="var(--purple)">BAO構想実現に向けた支援を提供します</text>
+      <text class="contact-text" y="30">お問い合わせ：contact@tanren.ai</text>
+    </g>
+  </g>
+  
+  <!-- 最終メッセージ -->
+  <g transform="translate(960, 970)">
+    <rect x="-700" y="-40" width="1400" height="80" fill="white" stroke="var(--black)" stroke-width="2" />
+    
+    <text text-anchor="middle" class="summary-text" y="0">
+      <tspan font-weight="700" fill="var(--red)">先駆者</tspan>になるか、<tspan font-weight="700" fill="var(--blue)">追随者</tspan>になるか、それとも<tspan font-weight="700" fill="var(--purple)">取り残される</tspan>か —
+    </text>
+    <text text-anchor="middle" class="summary-text" y="30">
+      BAO構想は待ったなしの経営課題です。未来への準備を今すぐ始めましょう。
+    </text>
+  </g>
+  
+  <!-- 会社名と頁数 -->
+  <g transform="translate(1800, 1050)">
+    <text class="company">TANREN株式会社</text>
+  </g>
+  
+  <g transform="translate(120, 1050)">
+    <text class="page-number">12 / 12</text>
+  </g>
+</svg> 

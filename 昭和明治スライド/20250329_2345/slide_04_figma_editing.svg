@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Background with subtle texture -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  <pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100">
+    <rect width="100" height="100" fill="#f4f1ea"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="40" y="30"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="20" y="50"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="70" y="70"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="10" y="90"/>
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#grain)"/>
+  
+  <!-- Header Section -->
+  <rect x="0" y="0" width="1920" height="120" fill="#2c2c2c" opacity="0.85"/>
+  <text x="60" y="75" font-family="Noto Serif JP, serif" font-size="36" font-weight="700" fill="#f4f1ea" letter-spacing="2">次世代SVGプレゼン講座：Figmaでの編集と仕上げ</text>
+  <text x="1860" y="75" font-family="Noto Sans JP, sans-serif" font-size="28" text-anchor="end" fill="#f4f1ea">04/05</text>
+  
+  <!-- Left Column -->
+  <g transform="translate(60, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" opacity="0.2"/>
+    
+    <!-- Column Title -->
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#1a5b66">Figmaの概要と取り込み</text>
+    <line x1="180" y1="70" x2="380" y2="70" stroke="#1a5b66" stroke-width="2"/>
+    <circle cx="280" cy="70" r="5" fill="#1a5b66"/>
+    
+    <!-- Content -->
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">Figmaとは？</text>
+    
+    <rect x="40" y="160" width="480" height="160" rx="4" fill="white" stroke="#1a5b66" stroke-width="1"/>
+    <text x="50" y="185" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• UI/UXデザインやプレゼン資料作成に適した</text>
+    <text x="50" y="215" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">  無料で始められるクラウドベースのデザインツール</text>
+    <text x="50" y="245" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• ベクター画像の編集に強み</text>
+    <text x="50" y="275" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 共同編集などのコラボ機能も充実</text>
+    <text x="50" y="305" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• UI要素のコンポーネント化やプロトタイピング可能</text>
+    
+    <!-- SVG Import Process -->
+    <text x="20" y="360" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#1a5b66">SVG取り込み方法</text>
+    
+    <g>
+      <rect x="40" y="390" width="480" height="160" rx="4" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+      
+      <rect x="60" y="410" width="440" height="60" rx="4" fill="white" stroke="#1a5b66" stroke-width="1"/>
+      <text x="80" y="435" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">方法A: ドラッグ＆ドロップ</text>
+      <text x="100" y="460" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">生成されたSVGファイルをFigmaに直接ドロップ</text>
+      
+      <rect x="60" y="480" width="440" height="60" rx="4" fill="white" stroke="#1a5b66" stroke-width="1"/>
+      <text x="80" y="505" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">方法B: コピー＆ペースト</text>
+      <text x="100" y="530" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">Cursor上のSVGコードをCtrl+C → Figmaに Ctrl+V</text>
+    </g>
+    
+    <!-- Note -->
+    <rect x="40" y="580" width="480" height="100" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+    <text x="260" y="620" font-family="Noto Sans JP, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#b3322b">どちらの方法でも</text>
+    <text x="260" y="650" font-family="Noto Sans JP, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#b3322b">テキストや図形オブジェクトとして読み込み可能</text>
+    
+    <!-- Image Placeholder -->
+    <rect x="40" y="710" width="480" height="160" rx="4" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+    <text x="280" y="790" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#1a5b66">Figmaインターフェースイメージ</text>
+  </g>
+  
+  <!-- Middle Column -->
+  <g transform="translate(680, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="2" opacity="0.2"/>
+    
+    <!-- Column Title -->
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#b3322b">Figmaでのスライド調整</text>
+    <line x1="180" y1="70" x2="380" y2="70" stroke="#b3322b" stroke-width="2"/>
+    <circle cx="280" cy="70" r="5" fill="#b3322b"/>
+    
+    <!-- Content -->
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">レイヤー構造を理解する</text>
+    
+    <rect x="40" y="160" width="480" height="180" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+    <text x="50" y="185" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• Figmaの左側「レイヤーパネル」でSVG内要素を確認</text>
+    <text x="50" y="215" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 要素は「グループ」や「フレーム」としてまとまっている</text>
+    <text x="50" y="245" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 背景・文字列グループが整理されている</text>
+    <text x="50" y="275" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 誤って全体を動かさないよう注意が必要</text>
+    <text x="50" y="305" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 大枠は「ロック」しておくと便利</text>
+    <text x="50" y="335" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">  （レイヤー選択 → 右クリック → Lock）</text>
+    
+    <!-- Editing Examples -->
+    <text x="20" y="380" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#b3322b">具体的な編集例</text>
+    
+    <g>
+      <rect x="40" y="410" width="480" height="380" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+      
+      <rect x="60" y="430" width="440" height="60" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+      <text x="80" y="455" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#2c2c2c">テキストの改行を揃える</text>
+      <text x="80" y="480" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">ダブルクリックでテキスト選択、改行や文言を修正</text>
+      
+      <rect x="60" y="500" width="440" height="60" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+      <text x="80" y="525" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#2c2c2c">アイコンのサイズ変更</text>
+      <text x="80" y="550" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">Shiftキーを押しながらドラッグで比率を保ったまま変更</text>
+      
+      <rect x="60" y="570" width="440" height="60" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+      <text x="80" y="595" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#2c2c2c">色変更</text>
+      <text x="80" y="620" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">「塗り（Fill）」パネルで色を変更可能</text>
+      
+      <rect x="60" y="640" width="440" height="60" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+      <text x="80" y="665" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#2c2c2c">ロック・アンロック</text>
+      <text x="80" y="690" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">レイヤー右クリック → Lock/Unlock で誤操作防止</text>
+      
+      <rect x="60" y="710" width="440" height="60" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+      <text x="80" y="735" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#2c2c2c">ポイント</text>
+      <text x="80" y="760" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">PowerPoint/Keynoteと同感覚で編集可能</text>
+    </g>
+  </g>
+  
+  <!-- Right Column -->
+  <g transform="translate(1300, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#653a5e" stroke-width="2" opacity="0.2"/>
+    
+    <!-- Column Title -->
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#653a5e">プレゼンモードと応用展開</text>
+    <line x1="180" y1="70" x2="380" y2="70" stroke="#653a5e" stroke-width="2"/>
+    <circle cx="280" cy="70" r="5" fill="#653a5e"/>
+    
+    <!-- Content -->
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">プレゼンテーションモードの活用</text>
+    
+    <rect x="40" y="160" width="480" height="160" rx="4" fill="white" stroke="#653a5e" stroke-width="1"/>
+    <text x="50" y="185" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• Figma上部の「Present」ボタンを押すだけ</text>
+    <text x="50" y="215" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 全画面スライドショーのように表示</text>
+    <text x="50" y="245" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 複数スライドを1ページずつ並べておく</text>
+    <text x="50" y="275" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 左右キーで切り替えて本格的にプレゼン可能</text>
+    <text x="50" y="305" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• プロトタイプ機能で画面遷移も設定できる</text>
+    
+    <!-- Collaborative Features -->
+    <text x="20" y="360" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#653a5e">共有と共同編集</text>
+    
+    <rect x="40" y="390" width="480" height="120" rx="4" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+    <text x="50" y="420" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• Webブラウザ上で動くFigmaの強み</text>
+    <text x="50" y="450" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• URLを共有するだけでリアルタイム共同編集可能</text>
+    <text x="50" y="480" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• チームメンバーと一緒に仕上げ作業ができる</text>
+    <text x="50" y="510" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• コメント機能で修正指示のやり取りも可能</text>
+    
+    <!-- Advanced Tips -->
+    <text x="20" y="550" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#653a5e">応用テクニック</text>
+    
+    <g>
+      <rect x="40" y="580" width="480" height="230" rx="4" fill="white" stroke="#653a5e" stroke-width="1"/>
+      
+      <rect x="60" y="600" width="440" height="60" rx="4" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+      <text x="80" y="625" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#2c2c2c">コンポーネント化</text>
+      <text x="80" y="650" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">繰り返し使うデザイン要素を再利用可能に</text>
+      
+      <rect x="60" y="670" width="440" height="60" rx="4" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+      <text x="80" y="695" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#2c2c2c">スタイル設定</text>
+      <text x="80" y="720" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">配色・フォントの一括変更が可能に</text>
+      
+      <rect x="60" y="740" width="440" height="60" rx="4" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+      <text x="80" y="765" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#2c2c2c">コミュニティリソース活用</text>
+      <text x="80" y="790" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">既存テンプレートを利用した高品質化</text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c" opacity="0.85"/>
+  <text x="60" y="1055" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#f4f1ea">TANREN株式会社 AI秘書・桜木美佳</text>
+  <text x="1860" y="1055" font-family="Noto Sans JP, sans-serif" font-size="16" text-anchor="end" fill="#f4f1ea">次世代SVGプレゼン講座</text>
+</svg> 

@@ -1,0 +1,81 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="background:#f4f1ea">
+  <style>
+    .title { font-family: 'Noto Serif JP', serif; font-size: 36px; fill: #2c2c2c; letter-spacing: 0.12em; font-weight: bold;}
+    .subtitle { font-family: 'Noto Serif JP', serif; font-size: 18px; fill: #1a5b66; letter-spacing: 0.1em;}
+    .coltitle { font-family: 'Noto Serif JP', serif; font-size: 20px; fill: #2c2c2c; font-weight: bold; }
+    .section { font-family: 'Noto Sans JP', sans-serif; font-size: 13px; fill: #2c2c2c; letter-spacing: 0.06em;}
+    .accent1 { fill: #b3322b; font-weight: bold;}
+    .accent2 { fill: #1a5b66; font-weight: bold;}
+    .accent3 { fill: #653a5e; font-weight: bold;}
+    .box1 { fill: #fff6f3; stroke: #b3322b; stroke-width:2;}
+    .box2 { fill: #f2f7fa; stroke: #1a5b66; stroke-width:2;}
+    .box3 { fill: #f7f4fa; stroke: #653a5e; stroke-width:2;}
+    .highlight { font-weight:bold; font-size:18px; fill:#1a5b66;}
+    .foot { font-family: 'Noto Sans JP', sans-serif; font-size: 10px; fill: #888;}
+  </style>
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1280" height="60" fill="#2c2c2c"/>
+  <text x="50" y="42" class="title" fill="#f4f1ea">🛠 技術アーキテクチャ & セキュリティ</text>
+  <!-- 3カラムグリッド -->
+  <g>
+    <!-- カラム1 -->
+    <rect x="40" y="90" width="370" height="540" class="box1" rx="16"/>
+    <text x="60" y="125" class="coltitle accent1">1. システム全体像</text>
+    <text x="60" y="155" class="section">Next.js + Supabase + Docker + Vercel</text>
+    <!-- システム構成図（簡易） -->
+    <rect x="70" y="185" width="90" height="40" fill="#b3322b" rx="8"/>
+    <text x="80" y="210" font-size="14" fill="#fff">Frontend</text>
+    <rect x="170" y="185" width="90" height="40" fill="#1a5b66" rx="8"/>
+    <text x="180" y="210" font-size="14" fill="#fff">API</text>
+    <rect x="270" y="185" width="90" height="40" fill="#653a5e" rx="8"/>
+    <text x="280" y="210" font-size="14" fill="#fff">DB</text>
+    <rect x="370" y="185" width="90" height="40" fill="#2c2c2c" rx="8"/>
+    <text x="380" y="210" font-size="14" fill="#fff">AI</text>
+    <text x="60" y="260" class="section">・Dockerで一元管理</text>
+    <text x="60" y="285" class="section">・Vercelで本番運用</text>
+    <text x="60" y="320" class="coltitle accent1">技術スタック</text>
+    <text x="60" y="345" class="section">Next.js, TypeScript, Supabase, Docker, Vercel, Python</text>
+  </g>
+  <g>
+    <!-- カラム2 -->
+    <rect x="455" y="90" width="370" height="540" class="box2" rx="16"/>
+    <text x="475" y="125" class="coltitle accent2">2. 構成要素と責務</text>
+    <text x="475" y="155" class="section">■ Frontend</text>
+    <text x="495" y="175" class="section">・評価フォームUI</text>
+    <text x="495" y="195" class="section">・レポート画面</text>
+    <text x="475" y="225" class="section">■ Backend(API)</text>
+    <text x="495" y="245" class="section">・評価データ受信/保存</text>
+    <text x="495" y="265" class="section">・AI予測API</text>
+    <text x="495" y="285" class="section">・レポート集計API</text>
+    <text x="475" y="315" class="section">■ Database</text>
+    <text x="495" y="335" class="section">・評価/成果/ユーザー情報</text>
+    <text x="475" y="365" class="section">■ AIモデル</text>
+    <text x="495" y="385" class="section">・候補者成功予測</text>
+    <text x="495" y="405" class="section">・バッチ/サーバレス推論</text>
+    <text x="475" y="440" class="coltitle accent2">エラーハンドリング</text>
+    <text x="495" y="465" class="section">・入力バリデーション</text>
+    <text x="495" y="485" class="section">・DB/AI例外catch</text>
+    <text x="495" y="505" class="section">・フレンドリーな通知</text>
+  </g>
+  <g>
+    <!-- カラム3 -->
+    <rect x="870" y="90" width="370" height="540" class="box3" rx="16"/>
+    <text x="890" y="125" class="coltitle accent3">3. セキュリティ & 運用</text>
+    <text x="890" y="155" class="section">● Supabase Auth認証</text>
+    <text x="890" y="180" class="section">● RBAC（権限制御）</text>
+    <text x="890" y="205" class="section">● HTTPS/TLS暗号化</text>
+    <text x="890" y="230" class="section">● AI推論キャッシュ</text>
+    <text x="890" y="255" class="section">● DBインデックス最適化</text>
+    <text x="890" y="280" class="section">● CI: Lint/UnitTest自動</text>
+    <rect x="890" y="320" width="320" height="60" fill="#fff" stroke="#1a5b66" stroke-width="2" rx="8"/>
+    <text x="900" y="350" class="highlight">「安全・高速・堅牢な運用基盤」</text>
+    <!-- 鍵アイコン -->
+    <circle cx="1100" cy="420" r="28" fill="#1a5b66"/>
+    <rect x="1090" y="410" width="20" height="28" fill="#fff" rx="6"/>
+    <rect x="1095" y="438" width="10" height="10" fill="#fff" rx="3"/>
+    <text x="890" y="480" class="section" fill="#888">全通信暗号化・CI/CD自動化</text>
+  </g>
+  <!-- フッター -->
+  <rect x="0" y="670" width="1280" height="50" fill="#2c2c2c"/>
+  <text x="50" y="700" class="foot">© 2025 Interview Support AI Project | 技術アーキテクチャ&セキュリティ</text>
+</svg>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIエージェント時代の倫理観</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #12283a 0%, #1c3d5a 50%, #2a4365 100%);
+            color: #ffffff;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            padding: 25px 40px 15px;
+            background: rgba(26, 45, 66, 0.8);
+            border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+        }
+        .title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin: 0;
+            text-align: center;
+            color: #ffffff;
+        }
+        .content {
+            padding: 25px 40px;
+        }
+        .grid-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+        }
+        .principles-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1180px;
+            margin: 0 auto;
+        }
+        .principle-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-radius: 12px;
+            padding: 18px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .principle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        .principle-1 {
+            border-top: 4px solid rgba(129, 140, 248, 0.8);
+        }
+        .principle-2 {
+            border-top: 4px solid rgba(139, 92, 246, 0.8);
+        }
+        .principle-3 {
+            border-top: 4px solid rgba(236, 72, 153, 0.8);
+        }
+        .principle-4 {
+            border-top: 4px solid rgba(52, 211, 153, 0.8);
+        }
+        .principle-5 {
+            border-top: 4px solid rgba(251, 146, 60, 0.8);
+        }
+        .principle-6 {
+            border-top: 4px solid rgba(96, 165, 250, 0.8);
+        }
+        .principle-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 15px;
+        }
+        .principle-1 .principle-icon {
+            background: rgba(129, 140, 248, 0.15);
+            color: #818cf8;
+        }
+        .principle-2 .principle-icon {
+            background: rgba(139, 92, 246, 0.15);
+            color: #8b5cf6;
+        }
+        .principle-3 .principle-icon {
+            background: rgba(236, 72, 153, 0.15);
+            color: #ec4899;
+        }
+        .principle-4 .principle-icon {
+            background: rgba(52, 211, 153, 0.15);
+            color: #34d399;
+        }
+        .principle-5 .principle-icon {
+            background: rgba(251, 146, 60, 0.15);
+            color: #fb923c;
+        }
+        .principle-6 .principle-icon {
+            background: rgba(96, 165, 250, 0.15);
+            color: #60a5fa;
+        }
+        .principle-title-en {
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+        .principle-title {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 5px 0 12px;
+        }
+        .principle-1 .principle-title {
+            color: #a5b4fc;
+        }
+        .principle-2 .principle-title {
+            color: #c4b5fd;
+        }
+        .principle-3 .principle-title {
+            color: #f9a8d4;
+        }
+        .principle-4 .principle-title {
+            color: #86efac;
+        }
+        .principle-5 .principle-title {
+            color: #fdba74;
+        }
+        .principle-6 .principle-title {
+            color: #93c5fd;
+        }
+        .principle-description {
+            font-size: 0.9rem;
+            text-align: center;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        .principle-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            text-align: center;
+            width: fit-content;
+            margin: 10px auto 0;
+        }
+        .principle-1 .principle-tag {
+            background: rgba(129, 140, 248, 0.1);
+            border: 1px solid rgba(129, 140, 248, 0.3);
+        }
+        .principle-2 .principle-tag {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+        .principle-3 .principle-tag {
+            background: rgba(236, 72, 153, 0.1);
+            border: 1px solid rgba(236, 72, 153, 0.3);
+        }
+        .principle-4 .principle-tag {
+            background: rgba(52, 211, 153, 0.1);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+        }
+        .principle-5 .principle-tag {
+            background: rgba(251, 146, 60, 0.1);
+            border: 1px solid rgba(251, 146, 60, 0.3);
+        }
+        .principle-6 .principle-tag {
+            background: rgba(96, 165, 250, 0.1);
+            border: 1px solid rgba(96, 165, 250, 0.3);
+        }
+        .bottom-message {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 25px auto 0;
+            max-width: 90%;
+            text-align: center;
+            position: relative;
+        }
+        .message-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #c4b5fd;
+        }
+        .message-content {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .message-icon {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(139, 92, 246, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c4b5fd;
+            font-size: 1.2rem;
+            border: 1px solid rgba(139, 92, 246, 0.5);
+        }
+        .highlight {
+            font-weight: 700;
+            color: #c4b5fd;
+        }
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.05) 0%, rgba(139, 92, 246, 0) 90%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="grid-pattern"></div>
+        <div class="pattern-overlay"></div>
+        <header class="header">
+            <h1 class="title">AIエージェント時代の倫理観：私たちが守るべき原則</h1>
+        </header>
+        <div class="content">
+            <div class="principles-container">
+                <!-- 原則1: 人間中心の設計 -->
+                <div class="principle-card principle-1">
+                    <div class="principle-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <p class="principle-title-en">Human-Centricity</p>
+                    <h2 class="principle-title">人間中心の設計</h2>
+                    <p class="principle-description">
+                        AIエージェントは、あくまで人間の幸福と社会の発展に貢献するために存在する。技術のための技術ではなく、人間の尊厳、自律性、ウェルビーイングを高める設計を徹底する。
+                    </p>
+                    <div class="principle-tag">人間の尊厳を最優先</div>
+                </div>
+                
+                <!-- 原則2: 透明性と説明責任 -->
+                <div class="principle-card principle-2">
+                    <div class="principle-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <p class="principle-title-en">Transparency & Accountability</p>
+                    <h2 class="principle-title">透明性と説明責任</h2>
+                    <p class="principle-description">
+                        AIエージェントの判断プロセスは可能な限り透明であるべき。その行動の結果に対して、誰が責任を負うのかを明確にし、AIの「ブラックボックス」化を防ぎ、人間が理解・制御できる範囲を維持する。
+                    </p>
+                    <div class="principle-tag">判断プロセスの明確化</div>
+                </div>
+                
+                <!-- 原則3: 公平性とバイアス排除 -->
+                <div class="principle-card principle-3">
+                    <div class="principle-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <p class="principle-title-en">Fairness & Bias Mitigation</p>
+                    <h2 class="principle-title">公平性とバイアス排除</h2>
+                    <p class="principle-description">
+                        AIエージェントは、特定の属性（性別、人種、年齢、信条など）に基づいて差別的な判断や行動をしてはならない。学習データに含まれるバイアスを排除し、公平性を技術的・制度的に担保する。
+                    </p>
+                    <div class="principle-tag">差別のない公正な判断</div>
+                </div>
+                
+                <!-- 原則4: プライバシーとデータ保護 -->
+                <div class="principle-card principle-4">
+                    <div class="principle-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <p class="principle-title-en">Privacy & Data Protection</p>
+                    <h2 class="principle-title">プライバシーとデータ保護</h2>
+                    <p class="principle-description">
+                        AIエージェントが扱う個人情報は厳格なルールに基づいて保護されなければならない。データの収集、利用、管理において個人のプライバシー権を最大限に尊重し、不正利用や漏洩を防ぐ。
+                    </p>
+                    <div class="principle-tag">個人情報の厳格な保護</div>
+                </div>
+                
+                <!-- 原則5: 安全性と信頼性 -->
+                <div class="principle-card principle-5">
+                    <div class="principle-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <p class="principle-title-en">Safety & Reliability</p>
+                    <h2 class="principle-title">安全性と信頼性</h2>
+                    <p class="principle-description">
+                        AIエージェントは、意図しない危害を人間や社会に与えることがないよう安全に設計・運用される必要がある。その動作は信頼できるもので、予測可能で、制御可能であることが基本となる。
+                    </p>
+                    <div class="principle-tag">危害のない安全設計</div>
+                </div>
+                
+                <!-- 原則6: 持続可能性と社会的貢献 -->
+                <div class="principle-card principle-6">
+                    <div class="principle-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <p class="principle-title-en">Sustainability & Social Good</p>
+                    <h2 class="principle-title">持続可能性と社会的貢献</h2>
+                    <p class="principle-description">
+                        AIエージェントの開発と活用は環境への負荷を考慮し、持続可能な社会の実現に貢献すべき。教育、医療、福祉、環境問題といった地球規模の課題解決に、その能力が積極的に活用される。
+                    </p>
+                    <div class="principle-tag">社会課題への貢献</div>
+                </div>
+            </div>
+            
+            <div class="bottom-message">
+                <div class="message-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="message-title">倫理観はすべての人の責任</h3>
+                <p class="message-content">
+                    これらの倫理原則は、法律や規制だけで担保できるものではありません。AIを開発するエンジニア、AIを活用するビジネスパーソン、<br>そしてAIと共に生きる私たち市民一人ひとりが、常にこれらの原則を意識し、自らの行動を律していく<span class="highlight">倫理観</span>を持つこと。<br>それが、<span class="highlight">AIと人間が共生する健全な未来</span>を築くための礎となるのです。
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

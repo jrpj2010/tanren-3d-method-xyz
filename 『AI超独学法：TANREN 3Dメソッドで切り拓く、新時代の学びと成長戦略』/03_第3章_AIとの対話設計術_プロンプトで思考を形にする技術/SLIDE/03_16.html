@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a192f 0%, #172a46 100%);
+            color: white;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            padding: 50px;
+        }
+        .qa-bubble {
+            position: absolute;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: rgba(33, 150, 243, 0.7);
+            background: rgba(33, 150, 243, 0.1);
+            box-shadow: 0 0 20px rgba(33, 150, 243, 0.1);
+        }
+        .question-box {
+            background: rgba(33, 150, 243, 0.1);
+            border-left: 3px solid #2196F3;
+            transition: all 0.3s ease;
+        }
+        .question-box:hover {
+            transform: translateX(5px);
+            background: rgba(33, 150, 243, 0.15);
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #2196F3, #64B5F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .dots-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        .dot {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .thanks-box {
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.2) 0%, rgba(33, 150, 243, 0.05) 100%);
+            border-radius: 15px;
+            border: 1px solid rgba(33, 150, 243, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col justify-between">
+        <!-- Background Dots -->
+        <div class="dots-bg" id="dots-bg"></div>
+        
+        <!-- Q&A Bubbles Decoration -->
+        <div class="qa-bubble w-20 h-20 top-10 left-20 opacity-30">Q</div>
+        <div class="qa-bubble w-16 h-16 bottom-20 left-10 opacity-20">A</div>
+        <div class="qa-bubble w-24 h-24 top-40 right-20 opacity-20">Q</div>
+        <div class="qa-bubble w-18 h-18 bottom-30 right-40 opacity-30">A</div>
+        
+        <!-- Header -->
+        <div class="text-center mb-6 z-10">
+            <h1 class="text-6xl font-black gradient-text mb-2">Q&A</h1>
+            <p class="text-2xl font-light text-blue-200">ご質問がありましたら、お気軽にお尋ねください</p>
+        </div>
+        
+        <!-- Example Questions -->
+        <div class="grid grid-cols-2 gap-6 mb-10 z-10">
+            <div class="question-box p-4 rounded-lg">
+                <div class="flex items-start">
+                    <div class="text-blue-400 text-2xl mr-3 mt-1">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium">初心者がまず取り組むべき実践テクニックは何ですか？</p>
+                        <p class="text-sm text-blue-200 mt-2">特に効果が実感しやすい、おすすめのプロンプト設計法を知りたいです</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question-box p-4 rounded-lg">
+                <div class="flex items-start">
+                    <div class="text-blue-400 text-2xl mr-3 mt-1">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium">複数のAIを使い分ける際の具体的な判断基準は？</p>
+                        <p class="text-sm text-blue-200 mt-2">タスクによって最適なAIパートナーを選ぶコツを教えてください</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question-box p-4 rounded-lg">
+                <div class="flex items-start">
+                    <div class="text-blue-400 text-2xl mr-3 mt-1">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium">「思考プロセスの誘導」を効果的に行うコツは？</p>
+                        <p class="text-sm text-blue-200 mt-2">6つの要素で最も難しい部分をマスターするためのアドバイスをください</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question-box p-4 rounded-lg">
+                <div class="flex items-start">
+                    <div class="text-blue-400 text-2xl mr-3 mt-1">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium">プロンプト設計のスキルを日々向上させるには？</p>
+                        <p class="text-sm text-blue-200 mt-2">継続的な学習と実践のためのおすすめのルーティンを教えてください</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Thank You Message -->
+        <div class="thanks-box p-6 text-center z-10">
+            <div class="flex flex-col items-center">
+                <i class="fas fa-comment-dots text-5xl text-blue-300 mb-3"></i>
+                <h2 class="text-3xl font-bold mb-2">ご清聴ありがとうございました</h2>
+                <p class="text-lg text-blue-200">AIとの対話設計術の実践で、あなたの思考を形にし、AI活用を次のレベルへ</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create background dots
+        document.addEventListener('DOMContentLoaded', function() {
+            const dotsBg = document.getElementById('dots-bg');
+            for (let i = 0; i < 80; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                
+                // Random position
+                dot.style.left = `${Math.random() * 100}%`;
+                dot.style.top = `${Math.random() * 100}%`;
+                
+                // Random size
+                const size = Math.random() * 5 + 2;
+                dot.style.width = `${size}px`;
+                dot.style.height = `${size}px`;
+                
+                // Random opacity
+                dot.style.opacity = Math.random() * 0.3;
+                
+                dotsBg.appendChild(dot);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<svg width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1280" height="720" fill="#f4f1ea"/>
+  
+  <!-- 上部ライン装飾 -->
+  <line x1="40" y1="40" x2="1240" y2="40" stroke="#2c2c2c" stroke-width="2"/>
+  <circle cx="40" cy="40" r="6" fill="#b3322b"/>
+  <circle cx="1240" cy="40" r="6" fill="#b3322b"/>
+  
+  <!-- 下部ライン装飾 -->
+  <line x1="40" y1="680" x2="1240" y2="680" stroke="#2c2c2c" stroke-width="2"/>
+  <circle cx="40" cy="680" r="6" fill="#b3322b"/>
+  <circle cx="1240" cy="680" r="6" fill="#b3322b"/>
+  
+  <!-- タイトル -->
+  <text x="640" y="180" font-family="'Noto Serif JP', serif" font-size="48" fill="#2c2c2c" text-anchor="middle" font-weight="bold" letter-spacing="0.1em">本気で日本の営業を改革する</text>
+  <text x="640" y="240" font-family="'Noto Serif JP', serif" font-size="36" fill="#2c2c2c" text-anchor="middle" letter-spacing="0.05em">― データドリブン営業への挑戦 ―</text>
+  
+  <!-- サブタイトル -->
+  <text x="640" y="320" font-family="'Noto Sans JP', sans-serif" font-size="24" fill="#653a5e" text-anchor="middle" letter-spacing="0.05em">中小企業・自治体営業のためのDX実践ガイド</text>
+  
+  <!-- 中央の装飾 -->
+  <rect x="440" y="350" width="400" height="2" fill="#2c2c2c"/>
+  <circle cx="640" cy="351" r="6" fill="#b3322b"/>
+  
+  <!-- 著者名 -->
+  <text x="640" y="420" font-family="'Noto Sans JP', sans-serif" font-size="24" fill="#1a5b66" text-anchor="middle" letter-spacing="0.05em">著者：営業改革研究会</text>
+  
+  <!-- 装飾的な角の四角 -->
+  <rect x="80" y="80" width="40" height="40" fill="none" stroke="#b3322b" stroke-width="2"/>
+  <rect x="1160" y="80" width="40" height="40" fill="none" stroke="#1a5b66" stroke-width="2"/>
+  <rect x="80" y="600" width="40" height="40" fill="none" stroke="#1a5b66" stroke-width="2"/>
+  <rect x="1160" y="600" width="40" height="40" fill="none" stroke="#653a5e" stroke-width="2"/>
+  
+  <!-- フッター -->
+  <text x="640" y="640" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">企画書 2025年版</text>
+</svg> 

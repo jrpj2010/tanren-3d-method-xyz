@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レベル別に見るAIエージェントの世界</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f5f7fa;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #0a2463 0%, #1e50a2 80%);
+            overflow: hidden;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding: 30px 50px 10px;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+            background: linear-gradient(45deg, #ffffff, #c0e0de);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        .content {
+            display: flex;
+            padding: 0 50px 40px;
+            flex: 1;
+        }
+        .levels {
+            width: 50%;
+            padding-right: 30px;
+        }
+        .chart-container {
+            width: 50%;
+            position: relative;
+        }
+        .level-item {
+            display: flex;
+            margin-bottom: 25px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .level-item:hover {
+            transform: translateX(10px);
+        }
+        .level-badge {
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 10px 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-right: 15px;
+            min-width: 115px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        .level-0-5 .level-badge {
+            background: linear-gradient(45deg, rgba(100,149,237,0.4), rgba(100,149,237,0.2));
+            border-left: 3px solid #6495ED;
+        }
+        .level-1 .level-badge {
+            background: linear-gradient(45deg, rgba(65,105,225,0.4), rgba(65,105,225,0.2));
+            border-left: 3px solid #4169E1;
+        }
+        .level-2 .level-badge {
+            background: linear-gradient(45deg, rgba(0,0,205,0.4), rgba(0,0,205,0.2));
+            border-left: 3px solid #0000CD;
+        }
+        .level-3 .level-badge {
+            background: linear-gradient(45deg, rgba(25,25,112,0.4), rgba(25,25,112,0.2));
+            border-left: 3px solid #191970;
+        }
+        .level-content {
+            flex: 1;
+        }
+        .level-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .level-desc {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+        .level-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.8rem;
+            opacity: 0.7;
+        }
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+                            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+        .canvas-container {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="grid-pattern"></div>
+        <div class="header">
+            <h1 class="title">レベル別に見るAIエージェントの世界</h1>
+            <p class="subtitle">TANREN 3Dメソッド Z軸（レベル感）を羅針盤として</p>
+        </div>
+        <div class="content">
+            <div class="levels">
+                <div class="level-item level-0-5">
+                    <div class="level-badge">レベル 0.5</div>
+                    <div class="level-content">
+                        <div class="level-name">入門（Beginner / Onboarding）</div>
+                        <div class="level-desc">カスタムAIによる「一撃回答」の世界<br>指示と知識ベースに基づく簡潔な応答</div>
+                    </div>
+                    <div class="level-icon"><i class="fas fa-robot"></i></div>
+                </div>
+                
+                <div class="level-item level-1">
+                    <div class="level-badge">レベル 1</div>
+                    <div class="level-content">
+                        <div class="level-name">初級（Novice / Foundation）</div>
+                        <div class="level-desc">Deep Research型エージェント<br>外部情報の能動的な収集・分析能力</div>
+                    </div>
+                    <div class="level-icon"><i class="fas fa-search"></i></div>
+                </div>
+                
+                <div class="level-item level-2">
+                    <div class="level-badge">レベル 2</div>
+                    <div class="level-content">
+                        <div class="level-name">中級（Intermediate / Practitioner）</div>
+                        <div class="level-desc">自律型・専門特化型エージェント<br>計画立案、問題解決、タスク完遂能力</div>
+                    </div>
+                    <div class="level-icon"><i class="fas fa-cogs"></i></div>
+                </div>
+                
+                <div class="level-item level-3">
+                    <div class="level-badge">レベル 3</div>
+                    <div class="level-content">
+                        <div class="level-name">上級（Advanced / Expert / Innovator）</div>
+                        <div class="level-desc">完全オーケストレートモデル<br>複数の専門AI機能を統合し創造的タスクを実行</div>
+                    </div>
+                    <div class="level-icon"><i class="fas fa-brain"></i></div>
+                </div>
+                
+                <div class="mt-6 text-sm italic opacity-70">
+                    「AIエージェントの自律性と進化レベルを理解することが、効果的な活用の第一歩」
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <div class="canvas-container">
+                    <canvas id="levelChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('levelChart').getContext('2d');
+            
+            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+            gradient.addColorStop(0, 'rgba(192, 224, 222, 0.8)');
+            gradient.addColorStop(1, 'rgba(192, 224, 222, 0.2)');
+            
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['自律性', '情報収集力', 'タスク実行力', '問題解決力', '創造性', '協調性'],
+                    datasets: [
+                        {
+                            label: 'レベル0.5',
+                            data: [10, 25, 15, 10, 5, 5],
+                            backgroundColor: 'rgba(100, 149, 237, 0.2)',
+                            borderColor: 'rgba(100, 149, 237, 0.8)',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#6495ED',
+                        },
+                        {
+                            label: 'レベル1',
+                            data: [25, 70, 30, 35, 20, 15],
+                            backgroundColor: 'rgba(65, 105, 225, 0.2)',
+                            borderColor: 'rgba(65, 105, 225, 0.8)',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#4169E1',
+                        },
+                        {
+                            label: 'レベル2',
+                            data: [65, 80, 75, 70, 50, 40],
+                            backgroundColor: 'rgba(0, 0, 205, 0.2)',
+                            borderColor: 'rgba(0, 0, 205, 0.8)',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#0000CD',
+                        },
+                        {
+                            label: 'レベル3',
+                            data: [95, 90, 95, 90, 85, 90],
+                            backgroundColor: 'rgba(25, 25, 112, 0.2)',
+                            borderColor: 'rgba(25, 25, 112, 0.8)',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#191970',
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: 'rgba(255, 255, 255, 0.2)'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.2)'
+                            },
+                            pointLabels: {
+                                color: 'rgba(255, 255, 255, 0.9)',
+                                font: {
+                                    size: 12,
+                                    family: "'Noto Sans JP', sans-serif"
+                                }
+                            },
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 0.6)',
+                                backdropColor: 'transparent',
+                                font: {
+                                    size: 10
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: 'rgba(255, 255, 255, 0.9)',
+                                font: {
+                                    size: 12,
+                                    family: "'Noto Sans JP', sans-serif"
+                                },
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'AIエージェント進化レベル比較',
+                            color: 'rgba(255, 255, 255, 0.9)',
+                            font: {
+                                size: 16,
+                                family: "'Noto Sans JP', sans-serif",
+                                weight: 'bold'
+                            },
+                            padding: {
+                                bottom: 20
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

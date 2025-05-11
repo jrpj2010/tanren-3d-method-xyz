@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI超独学法：プロローグ - 新時代の学びと成長戦略</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Preline UI - 最新のStableバージョンを使用 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.css" />
+    
+    <!-- Custom CSS -->
+    <link href="./css/style.css" rel="stylesheet">
+    
+    <!-- デバッグ用コンソールログ -->
+    <script>
+        console.log('HTML loading...');
+        window.addEventListener('load', () => {
+            console.log('Window fully loaded');
+        });
+    </script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-900">
+    <!-- Sticky Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-3">
+                <div>
+                    <h1 class="text-xl font-bold text-gradient">AI超独学法</h1>
+                    <p class="text-xs text-gray-600">プロローグ：新時代の学びと成長戦略</p>
+                </div>
+                <nav class="nav-scrollspy">
+                    <ul class="flex flex-wrap gap-2">
+                        <!-- Navigation items will be populated by JavaScript -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="intro" class="py-16 md:py-24 min-h-screen flex flex-col justify-center relative overflow-hidden" data-section>
+            <div class="absolute top-0 left-0 right-0 bottom-0 bg-pattern opacity-10"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-6xl font-black mb-6 text-gradient animate-fadeIn">
+                        AI超独学法
+                    </h2>
+                    <p class="text-xl md:text-2xl font-semibold text-gray-700 mb-8 animate-fadeIn animation-delay-300">
+                        なぜ今、あなたの学び方をアップデートする必要があるのか
+                    </p>
+                    <div class="inline-block bg-amber-400 text-gray-800 px-8 py-4 rounded-full shadow-lg font-bold animate-fadeIn animation-delay-600">
+                        情報爆発、AI格差時代の生存戦略
+                    </div>
+                    
+                    <div class="mt-16 relative animate-fadeIn animation-delay-900">
+                        <div class="flex justify-center">
+                            <div class="relative w-64 h-64 md:w-80 md:h-80">
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 rounded-full opacity-70 animate-pulse"></div>
+                                <div class="absolute inset-0 flex items-center justify-center text-white">
+                                    <svg class="w-24 h-24 md:w-32 md:h-32" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="absolute top-1/2 left-1/2 w-48 h-48 bg-gradient-to-tr from-purple-400 to-pink-500 rounded-full opacity-70 animate-pulse animation-delay-300"></div>
+                        </div>
+                        <p class="mt-8 text-gray-600 text-lg">AIと人間が共創し、学びを加速させる時代へ。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section id="challenges" class="py-16 md:py-24 bg-white" data-section>
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 animate-fadeIn">
+                    <span class="text-gradient">情報爆発の時代</span>における3つの課題
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-10 items-start">
+                    <!-- Challenges list -->
+                    <div class="space-y-6 animate-fadeIn animation-delay-300">
+                        <div class="challenge-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold mr-5">1</div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-blue-700 mb-2">情報の洪水と選択肢過多</h3>
+                                    <p class="text-gray-600">毎日膨大な情報が流れ込み、何が本当に価値があり、自分にとって重要なのかを見極めることがますます困難になっています。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center text-xl font-bold mr-5">2</div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-indigo-700 mb-2">情報消化能力の限界</h3>
+                                    <p class="text-gray-600">人間の認知処理能力には限界があります。押し寄せる情報量とその複雑さは、私たちの理解や記憶のキャパシティを容易に超えてしまいます。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="challenge-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center text-xl font-bold mr-5">3</div>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-purple-700 mb-2">AI格差の拡大</h3>
+                                    <p class="text-gray-600">AIを効果的に活用できる人とそうでない人の間で、情報収集、分析、創造の各面で新たな格差が生じ、拡大する懸念があります。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Data visualization -->
+                    <div class="relative min-h-[400px] flex flex-col items-center justify-center animate-fadeIn animation-delay-600">
+                        <div class="chart-container w-full h-80">
+                            <canvas id="challengesChart"></canvas>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <div class="inline-block bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transform transition-transform hover:scale-105">
+                                「学び方」そのものの進化が、今こそ必要だ。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Gap Section -->
+        <section id="ai-gap" class="py-16 md:py-24 bg-gray-50" data-section>
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-12 animate-fadeIn">
+                    <span class="text-gradient">AI格差</span>という新たな課題
+                </h2>
+                
+                <div class="grid lg:grid-cols-5 gap-10 items-start">
+                    <!-- Left side: Explanation and table -->
+                    <div class="lg:col-span-3 space-y-8 animate-fadeIn animation-delay-300">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-3">AI活用格差の実態</h3>
+                            <p class="text-lg text-gray-600">
+                                AIを戦略的に使いこなす人と、そうでない人の間では、学習効率や成果において<strong class="text-purple-600 font-semibold">指数関数的な差</strong>が生まれ、拡大しつつあります。
+                            </p>
+                        </div>
+
+                        <!-- Comparison table using Preline card -->
+                        <div class="hs-accordion-group">
+                            <div class="hs-accordion active bg-white border border-gray-200 rounded-xl overflow-hidden" id="ai-gap-comparison">
+                                <button class="hs-accordion-toggle w-full text-left font-semibold p-4 bg-gray-50 border-b border-gray-200 flex items-center gap-x-3">
+                                    <svg class="hs-accordion-active:hidden block w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                                    <svg class="hs-accordion-active:block hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+                                    AIを活用できる人 vs できない人：比較
+                                </button>
+                                <div id="ai-gap-content" class="hs-accordion-content w-full">
+                                    <div class="p-4">
+                                        <div class="overflow-x-auto">
+                                            <table class="min-w-full divide-y divide-gray-200">
+                                                <thead class="bg-gray-50">
+                                                    <tr>
+                                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">AI活用者</th>
+                                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">AI非活用者</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="bg-white divide-y divide-gray-200">
+                                                    <tr>
+                                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">AIを<strong class="text-green-600">思考拡張パートナー</strong>として活用</td>
+                                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">AIを<strong class="text-red-500">使うことに恐れ</strong>や抵抗感</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">情報を<strong class="text-green-600">選別・構造化</strong>する力</td>
+                                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">情報の<strong class="text-red-500">受け身の消費者</strong></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">学習速度が<strong class="text-green-600">加速度的に上昇</strong></td>
+                                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-700">従来の<strong class="text-red-500">遅い学習ペース</strong></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700 text-white rounded-xl shadow-xl animate-fadeIn animation-delay-600">
+                            <p class="text-lg md:text-xl font-semibold">この格差は、単なるスキル差ではありません。<br>それは、未来を切り拓く<strong class="text-yellow-300">「生存戦略」そのものの差</strong>と言えるでしょう。</p>
+                        </div>
+                    </div>
+
+                    <!-- Right side: Chart visualization -->
+                    <div class="lg:col-span-2 animate-fadeIn animation-delay-900">
+                        <div class="chart-container w-full h-96 p-4 bg-white rounded-xl shadow-md border border-gray-200">
+                            <canvas id="aiGapChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Partnership Section -->
+        <section id="ai-partner" class="py-16 md:py-24 bg-white" data-section>
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-6 animate-fadeIn">
+                    <span class="text-gradient">AI</span>は最強の学習パートナー
+                </h2>
+                <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto animate-fadeIn animation-delay-300">
+                    AIは脅威ではなく、あなたの可能性を<strong class="text-indigo-600 font-semibold">無限に広げる最強の学習パートナー</strong>へと進化しています。
+                </p>
+
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <!-- AI strengths list -->
+                    <div class="space-y-6 animate-fadeIn animation-delay-600">
+                        <!-- Strength 1 -->
+                        <div class="flex items-start p-5 bg-white rounded-xl shadow-md hover:shadow-lg transition-all">
+                            <div class="flex-shrink-0 w-14 h-14 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-blue-700 mb-1">情報アクセスの革命</h3>
+                                <p class="text-gray-600">膨大な知識を瞬時に検索・整理し、あなたの理解レベルに合わせて説明します。</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Strength 2 -->
+                        <div class="flex items-start p-5 bg-white rounded-xl shadow-md hover:shadow-lg transition-all">
+                            <div class="flex-shrink-0 w-14 h-14 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mr-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-indigo-700 mb-1">思考の壁打ちパートナー</h3>
+                                <p class="text-gray-600">アイデアへのフィードバック、多様な視点の提供、論理的思考の補助を行います。</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Strength 3 -->
+                        <div class="flex items-start p-5 bg-white rounded-xl shadow-md hover:shadow-lg transition-all">
+                            <div class="flex-shrink-0 w-14 h-14 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mr-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-purple-700 mb-1">学習の個別最適化</h3>
+                                <p class="text-gray-600">あなたの理解度、興味、学習スタイルに合わせた最適な学習体験を提供します。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Human-AI synergy visualization -->
+                    <div class="flex flex-col items-center justify-center animate-fadeIn animation-delay-900">
+                        <div class="flex justify-center items-center space-x-6 mb-8">
+                            <div class="text-center">
+                                <div class="w-24 h-24 bg-blue-500 text-white rounded-full flex items-center justify-center text-3xl shadow-lg mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    </svg>
+                                </div>
+                                <span class="font-semibold text-gray-700">人間</span>
+                            </div>
+                            
+                            <div class="text-4xl font-bold text-gray-400 animate-pulse">+</div>
+                            
+                            <div class="text-center">
+                                <div class="w-24 h-24 bg-indigo-500 text-white rounded-full flex items-center justify-center text-3xl shadow-lg mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                </div>
+                                <span class="font-semibold text-gray-700">AI</span>
+                            </div>
+                        </div>
+                        
+                        <div class="my-6">
+                            <svg class="w-10 h-10 text-gray-400 mx-auto transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                            </svg>
+                        </div>
+                        
+                        <div class="w-40 h-40 bg-gradient-to-br from-amber-400 to-orange-500 text-white rounded-full flex flex-col items-center justify-center text-xl font-bold shadow-xl">
+                            <span>共創による</span>
+                            <span>能力拡張</span>
+                        </div>
+                        
+                        <div class="mt-8 p-4 bg-black/80 text-yellow-300 rounded-lg shadow-md text-center max-w-md">
+                            <p class="text-lg font-semibold">AIは使い方次第であなたの翼にも、檻にもなる。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TANREN 3D Method Section (simplified for this example) -->
+        <section id="tanren-method" class="py-16 md:py-24 bg-gray-50" data-section>
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-6 animate-fadeIn">
+                    <span class="text-gradient">TANREN 3D</span>メソッド
+                </h2>
+                <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto animate-fadeIn animation-delay-300">
+                    AI時代を生き抜くために必要な<strong class="text-indigo-600">「思考OS」</strong>。日々の意識的な鍛錬によって磨かれる思考法です。
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-8 animate-fadeIn animation-delay-600">
+                    <!-- X Axis -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-red-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">X</div>
+                            <h3 class="text-xl font-semibold text-red-700">思考の「深度」と「構造」</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                            <li><strong>超抽象化:</strong> 本質を見抜く力</li>
+                            <li><strong>超具体化:</strong> 行動へ落とし込む力</li>
+                            <li><strong>超構造化:</strong> 論理を整理する力</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Y Axis -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">Y</div>
+                            <h3 class="text-xl font-semibold text-green-700">時間軸の「視座」</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                            <li><strong>過去:</strong> 歴史と経緯からの学び</li>
+                            <li><strong>現在:</strong> 現状把握と最適解の探索</li>
+                            <li><strong>未来:</strong> トレンド予測と戦略立案</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Z Axis -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mr-4">Z</div>
+                            <h3 class="text-xl font-semibold text-blue-700">習熟度とAI活用の「レベル」</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-600 list-disc list-inside">
+                            <li><strong>レベル1:</strong> 基本対話・情報収集</li>
+                            <li><strong>レベル2:</strong> 思考OSによる効率化</li>
+                            <li><strong>レベル3:</strong> AIとの共創・価値創造</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center animate-fadeIn animation-delay-900">
+                    <div class="inline-block bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700 text-white text-lg font-semibold px-8 py-4 rounded-lg shadow-lg">
+                        これら3軸が相互に連携し、立体的に機能することで<br class="hidden sm:block">AIという強力なツールを真に使いこなす力を生む
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Book Structure Section -->
+        <section id="roadmap" class="py-16 md:py-24 bg-white" data-section>
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-6 animate-fadeIn">
+                    <span class="text-gradient">本書の構成</span>：独学の旅へ
+                </h2>
+                <p class="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto animate-fadeIn animation-delay-300">
+                    AI超独学法のロードマップ：<strong class="text-indigo-600">TANREN 3Dメソッド</strong>を習得し、AIと共に未来を切り拓きましょう。
+                </p>
+
+                <!-- Preline Timeline -->
+                <div class="max-w-4xl mx-auto animate-fadeIn animation-delay-600">
+                    <!-- Timeline will be created with Preline's components -->
+                    <ol class="relative border-s border-gray-200 ms-3.5 mb-8 max-w-2xl mx-auto">
+                        <!-- Chapter 1 -->
+                        <li class="mb-10 ms-8">
+                            <span class="absolute flex items-center justify-center w-8 h-8 bg-blue-500 rounded-full -start-4 ring-4 ring-white">
+                                <span class="text-white font-bold">1</span>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-blue-700">マインドセット構築</h3>
+                            <p class="text-base font-normal text-gray-600">AI超独学に必要な思考の土台を整えます。学びの姿勢と心構えを確立。</p>
+                        </li>
+                        
+                        <!-- Chapter 2 -->
+                        <li class="mb-10 ms-8">
+                            <span class="absolute flex items-center justify-center w-8 h-8 bg-green-500 rounded-full -start-4 ring-4 ring-white">
+                                <span class="text-white font-bold">2</span>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-green-700">TANREN 3Dメソッド詳細</h3>
+                            <p class="text-base font-normal text-gray-600">思考OSの全貌と実装方法を学びます。X・Y・Zの3つの軸を徹底解説。</p>
+                        </li>
+                        
+                        <!-- Chapter 3 -->
+                        <li class="mb-10 ms-8">
+                            <span class="absolute flex items-center justify-center w-8 h-8 bg-purple-500 rounded-full -start-4 ring-4 ring-white">
+                                <span class="text-white font-bold">3</span>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-purple-700">プロンプト術</h3>
+                            <p class="text-base font-normal text-gray-600">AIと効果的に対話するための設計術を習得します。</p>
+                        </li>
+                        
+                        <!-- Chapter 4 -->
+                        <li class="mb-10 ms-8">
+                            <span class="absolute flex items-center justify-center w-8 h-8 bg-sky-500 rounded-full -start-4 ring-4 ring-white">
+                                <span class="text-white font-bold">4</span>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-sky-700">AIエージェント活用</h3>
+                            <p class="text-base font-normal text-gray-600">自律的にタスクをこなすAIエージェントの活用術を学びます。</p>
+                        </li>
+                        
+                        <!-- Chapter 5-6 -->
+                        <li class="mb-10 ms-8">
+                            <span class="absolute flex items-center justify-center w-8 h-8 bg-orange-500 rounded-full -start-4 ring-4 ring-white">
+                                <span class="text-white font-bold">5-6</span>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-orange-700">実践応用</h3>
+                            <p class="text-base font-normal text-gray-600">企画立案、文章作成、資料作成、職種別の実践的な応用方法を学びます。</p>
+                        </li>
+                        
+                        <!-- Chapter 7 -->
+                        <li class="mb-10 ms-8">
+                            <span class="absolute flex items-center justify-center w-8 h-8 bg-red-500 rounded-full -start-4 ring-4 ring-white">
+                                <span class="text-white font-bold">7</span>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-red-700">習慣化と継続</h3>
+                            <p class="text-base font-normal text-gray-600">学びを日常的な習慣とし、AIと共に継続的な成長を実現するための仕組みを構築します。</p>
+                        </li>
+                        
+                        <!-- Epilogue -->
+                        <li class="ms-8">
+                            <span class="absolute flex items-center justify-center w-8 h-8 bg-yellow-400 rounded-full -start-4 ring-4 ring-white">
+                                <span class="text-gray-800 font-bold">∞</span>
+                            </span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-yellow-600">エピローグ：共創の未来へ</h3>
+                            <p class="text-base font-normal text-gray-600">AIと共に未来を創造するための展望と可能性を探ります。</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="mt-12 text-center animate-fadeIn animation-delay-900">
+                    <div class="inline-block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white text-xl font-bold px-10 py-5 rounded-lg shadow-xl transform hover:scale-105 transition-transform duration-300">
+                        さあ、「TANREN 3Dメソッド」を手に、<br class="sm:hidden">AIと共に未来を切り拓く独学の旅へ！
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2025 AI超独学法プロジェクト. All rights reserved.</p>
+            <p class="text-sm">このサイトは学習目的で作成されました。</p>
+        </div>
+    </footer>
+
+    <!-- Preline UI - 最新のStableバージョンを使用 -->
+    <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
+    
+    <!-- Chart.js - 安定バージョンを使用 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="./js/script.js"></script>
+</body>
+</html> 

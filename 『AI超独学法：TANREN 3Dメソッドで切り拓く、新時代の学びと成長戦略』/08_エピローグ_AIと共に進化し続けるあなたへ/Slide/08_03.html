@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未来は「与えられるもの」ではなく「創り出すもの」</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(145deg, #1a202c 0%, #2d3748 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding: 20px 60px 5px;
+        }
+        .title {
+            font-size: 42px;
+            font-weight: 900;
+            background: linear-gradient(45deg, #f6ad55, #ed64a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+        .content {
+            display: flex;
+            padding: 0 60px 20px;
+            flex-grow: 1;
+            max-height: 660px;
+        }
+        .left-content {
+            width: 58%;
+            padding-right: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        .right-content {
+            width: 42%;
+            display: flex;
+            flex-direction: column;
+        }
+        .story-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            flex-grow: 0;
+        }
+        .story-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #f6ad55;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #f6ad55, #ed64a6);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -16px;
+            top: 5px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #f6ad55;
+        }
+        .timeline-item:last-child::before {
+            background: #ed64a6;
+        }
+        .timeline-label {
+            font-weight: 700;
+            color: #f6ad55;
+            margin-right: 8px;
+        }
+        .timeline-label.end {
+            color: #ed64a6;
+        }
+        .super-meaning {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        .super-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #4fd1c5;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .super-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        .super-item {
+            text-align: center;
+            flex: 1;
+        }
+        .super-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: #4fd1c5;
+        }
+        .super-text {
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .graph-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 0;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .graph-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #90cdf4;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tanren-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 15px;
+            flex-grow: 1;
+        }
+        .tanren-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #9f7aea;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tanren-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .tanren-chip {
+            background: linear-gradient(45deg, #9f7aea, #667eea);
+            padding: 6px 12px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 13px;
+            box-shadow: 0 4px 6px rgba(160, 174, 192, 0.1);
+        }
+        .highlight-box {
+            background: linear-gradient(45deg, rgba(246, 173, 85, 0.2), rgba(237, 100, 166, 0.2));
+            border-left: 4px solid #f6ad55;
+            padding: 10px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0 0 5px 0;
+        }
+        .milestone-labels {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .milestone {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .milestone-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .milestone-ai {
+            background: #f472b6;
+        }
+        .milestone-agi {
+            background: #10b981;
+        }
+        .milestone-asi {
+            background: #3b82f6;
+        }
+        .legend-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 15px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .legend-color {
+            width: 16px;
+            height: 4px;
+            border-radius: 2px;
+        }
+        .human-iq {
+            background: #63b3ed;
+        }
+        .llm-iq {
+            background: #f472b6;
+        }
+        .augmented-iq {
+            background: #10b981;
+        }
+        /* 静的なグラフの代替表現 - 調整版 */
+        .static-graph {
+            position: relative;
+            height: 280px;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+        }
+        .graph-line {
+            position: absolute;
+            height: 3px;
+        }
+        .human-line {
+            width: 100%;
+            top: 100px;
+            left: 0;
+            background: #63b3ed;
+        }
+        .llm-line {
+            width: 50%;
+            right: 0;
+            top: 200px;
+            transform-origin: right center;
+            transform: rotate(-55deg);
+            background: linear-gradient(90deg, transparent, #f472b6);
+        }
+        .augmented-line {
+            width: 70%;
+            top: 140px;
+            right: 0;
+            transform-origin: right top;
+            transform: rotate(-35deg);
+            background: linear-gradient(90deg, transparent, #10b981);
+        }
+        .graph-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .year-labels {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: absolute;
+            bottom: -20px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .year-label {
+            position: absolute;
+            bottom: -20px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.7);
+            transform: translateX(-50%);
+        }
+        .graph-label {
+            position: absolute;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.9);
+            white-space: nowrap;
+        }
+        .current-indicator {
+            position: absolute;
+            width: 1px;
+            height: 240px;
+            background: rgba(255, 255, 255, 0.5);
+            bottom: 0;
+            left: 60%;
+        }
+        .current-label {
+            position: absolute;
+            top: 5px;
+            left: 60%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.8);
+            white-space: nowrap;
+        }
+        .iq-point {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.9);
+            color: #1a202c;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            white-space: nowrap;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1 class="title">未来は「与えられるもの」ではなく「創り出すもの」</h1>
+        </div>
+        
+        <div class="content">
+            <div class="left-content">
+                <div class="story-container">
+                    <div class="story-title">
+                        <i class="fas fa-user-graduate"></i> 著者の変革ストーリー
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="timeline-label">BEFORE</span>
+                            偏差値45の高校卒／元・調理師
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-label">課題</span>
+                            学業コンプレックス／英語論文読解の壁
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-label">転機</span>
+                            AIという「拡張脳」との出会い
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-label end">AFTER</span>
+                            世界の情報を分析・発信するフロントランナーへ
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        「IQが低くても、学歴がなくても、AIと共に思考を「超」化させれば、世界と互角以上に渡り合える」
+                    </div>
+                </div>
+                
+                <div class="graph-container">
+                    <div class="graph-title">
+                        <i class="fas fa-chart-line"></i> これは「革命」だ！小手先の変化ではない
+                    </div>
+                    
+                    <!-- 最適化された静的グラフ -->
+                    <div class="static-graph">
+                        <!-- 現在の時点を示す線 -->
+                        <div class="current-indicator"></div>
+                        <div class="current-label">現在</div>
+                        
+                        <!-- 人間のIQ -->
+                        <div class="graph-line human-line"></div>
+                        <div class="graph-label" style="top: 83px; left: 15px;">IQ 100の限界</div>
+                        
+                        <!-- LLMのIQ -->
+                        <div class="graph-dot" style="background-color: #f472b6; left: 42%; top: 170px;"></div>
+                        <div class="graph-dot" style="background-color: #f472b6; right: 14%; top: 30px;"></div>
+                        <div class="graph-line llm-line"></div>
+                        
+                        <!-- AI武装した人間のIQ -->
+                        <div class="graph-dot" style="background-color: #10b981; left: 12%; top: 200px;"></div>
+                        <div class="graph-dot" style="background-color: #10b981; right: 20%; top: 70px;"></div>
+                        <div class="graph-line augmented-line"></div>
+                        
+                        <!-- 重要なポイント -->
+                        <div class="iq-point" style="top: 70px; right: 30%;">IQ 140超え</div>
+                        <div class="iq-point" style="top: 15px; right: 12%;">IQ 200</div>
+                        
+                        <!-- 年表示 -->
+                        <div class="year-label" style="left: 0%;">2010</div>
+                        <div class="year-label" style="left: 16.7%;">2015</div>
+                        <div class="year-label" style="left: 33.3%;">2020</div>
+                        <div class="year-label" style="left: 50%;">2023</div>
+                        <div class="year-label" style="left: 66.7%;">2025</div>
+                        <div class="year-label" style="left: 83.3%;">2030</div>
+                        <div class="year-label" style="left: 100%;">2035</div>
+                        
+                        <!-- AIタイプの表示 -->
+                        <div class="graph-dot" style="background-color: #f472b6; left: 33.3%; top: 220px;"></div>
+                        <div class="graph-label" style="left: 33.3%; transform: translateX(-50%); top: 235px; color: #f472b6;">AI (2020)</div>
+                        
+                        <div class="graph-dot" style="background-color: #10b981; left: 66.7%; top: 220px;"></div>
+                        <div class="graph-label" style="left: 66.7%; transform: translateX(-50%); top: 235px; color: #10b981;">AGI (2025)</div>
+                        
+                        <div class="graph-dot" style="background-color: #3b82f6; left: 100%; top: 220px;"></div>
+                        <div class="graph-label" style="left: 100%; transform: translateX(-100%); top: 235px; color: #3b82f6;">ASI (2035)</div>
+                    </div>
+                    
+                    <div class="legend-container">
+                        <div class="legend-item">
+                            <div class="legend-color human-iq"></div>
+                            <span>人間のIQ限界</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color llm-iq"></div>
+                            <span>LLMのIQ推移</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color augmented-iq"></div>
+                            <span>AI武装した人間</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-content">
+                <div class="super-meaning">
+                    <div class="super-title">
+                        <i class="fas fa-rocket"></i>「超」の意味
+                    </div>
+                    <p>AIの力を借りることで、私たち人間が自身の能力の限界を「超え」、「人智を超えた」レベルの思考とアウトプットが可能になる</p>
+                    
+                    <div class="super-container">
+                        <div class="super-item">
+                            <div class="super-icon"><i class="fas fa-mountain"></i></div>
+                            <div class="super-text">超抽象化</div>
+                        </div>
+                        <div class="super-item">
+                            <div class="super-icon"><i class="fas fa-puzzle-piece"></i></div>
+                            <div class="super-text">超具体化</div>
+                        </div>
+                        <div class="super-item">
+                            <div class="super-icon"><i class="fas fa-sitemap"></i></div>
+                            <div class="super-text">超構造化</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tanren-container">
+                    <div class="tanren-title">
+                        <i class="fas fa-dumbbell"></i> TANRENの重要性
+                    </div>
+                    <p>革命的な時代を突き抜けるには「鍛錬(TANREN)」が必要不可欠。楽な道ではなく、真の成長のための挑戦を。</p>
+                    
+                    <div class="tanren-chips">
+                        <div class="tanren-chip">思考OSの根本的アップデート</div>
+                        <div class="tanren-chip">AI時代の先駆者へ</div>
+                        <div class="tanren-chip">覚悟と情熱</div>
+                        <div class="tanren-chip">自分の限界を超える</div>
+                        <div class="tanren-chip">フロントランナーの視点</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

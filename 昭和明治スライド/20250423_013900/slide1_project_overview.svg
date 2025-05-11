@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1920" height="80" fill="#2c2c2c"/>
+  <text x="960" y="50" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea" text-anchor="middle" letter-spacing="2">Interview Support AI Tool - プロジェクト概要</text>
+  <circle cx="960" cy="90" r="5" fill="#b3322b"/>
+  <line x1="700" y1="90" x2="1220" y2="90" stroke="#2c2c2c" stroke-width="2"/>
+  
+  <!-- Footer -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c"/>
+  <text x="960" y="1055" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">面談評価の属人化を排除し、AIによる予測で採用成功率を向上 - 2025年4月</text>
+  
+  <!-- Column 1: Project Overview -->
+  <rect x="70" y="120" width="560" height="880" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="70" y="120" width="560" height="50" fill="#b3322b"/>
+  <text x="100" y="155" font-family="'Noto Serif JP', serif" font-size="22" fill="#f4f1ea" letter-spacing="1">プロジェクト概要</text>
+  
+  <!-- Project Summary -->
+  <text x="100" y="210" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">📋 プロジェクト要旨</text>
+  <rect x="100" y="220" width="500" height="2" fill="#b3322b"/>
+  <foreignObject x="100" y="230" width="500" height="160">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <p><b>名称:</b> Interview Support AI Tool</p>
+      <p><b>目的:</b> フリーランス人材の面談評価をAIで支援し、評価と成果データを蓄積・分析する</p>
+      <p><b>価値:</b> 評価の属人化を排除し、AIによる予測で採用成功率を向上</p>
+    </div>
+  </foreignObject>
+  
+  <!-- Stakeholders -->
+  <text x="100" y="420" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">👥 ステークホルダー</text>
+  <rect x="100" y="430" width="500" height="2" fill="#b3322b"/>
+  <rect x="100" y="450" width="500" height="90" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" stroke-dasharray="4"/>
+  
+  <!-- Stakeholder Table -->
+  <rect x="100" y="450" width="170" height="30" fill="#2c2c2c"/>
+  <rect x="270" y="450" width="330" height="30" fill="#2c2c2c"/>
+  <text x="185" y="470" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">役割</text>
+  <text x="435" y="470" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">説明</text>
+  
+  <rect x="100" y="480" width="170" height="30" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="0.5"/>
+  <rect x="270" y="480" width="330" height="30" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="0.5"/>
+  <text x="185" y="500" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">HR担当</text>
+  <text x="435" y="500" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">面談評価を入力・参照する主要ユーザー</text>
+  
+  <rect x="100" y="510" width="170" height="30" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="0.5"/>
+  <rect x="270" y="510" width="330" height="30" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="0.5"/>
+  <text x="185" y="530" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">経営層</text>
+  <text x="435" y="530" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">評価精度や採用傾向を分析・監視する</text>
+  
+  <!-- Constraints -->
+  <text x="100" y="610" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🔒 制約条件</text>
+  <rect x="100" y="620" width="500" height="2" fill="#b3322b"/>
+  
+  <!-- Constraints Visualization -->
+  <rect x="120" y="640" width="460" height="240" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5" ry="5"/>
+  <!-- Draw constraint icons and text -->
+  <circle cx="150" cy="680" r="20" fill="#b3322b"/>
+  <text x="150" y="685" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">FW</text>
+  <text x="190" y="685" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">Next.js フルスタック構成</text>
+  
+  <circle cx="150" cy="740" r="20" fill="#b3322b"/>
+  <text x="150" y="745" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">DB</text>
+  <text x="190" y="745" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">Supabase をDB兼認証基盤</text>
+  
+  <circle cx="150" cy="800" r="20" fill="#b3322b"/>
+  <text x="150" y="805" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">CI</text>
+  <text x="190" y="805" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">Docker コンテナ化</text>
+  
+  <circle cx="150" cy="860" r="20" fill="#b3322b"/>
+  <text x="150" y="865" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">CD</text>
+  <text x="190" y="865" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">Vercel へデプロイ</text>
+  
+  <!-- Column 2: Features -->
+  <rect x="680" y="120" width="560" height="880" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="680" y="120" width="560" height="50" fill="#1a5b66"/>
+  <text x="710" y="155" font-family="'Noto Serif JP', serif" font-size="22" fill="#f4f1ea" letter-spacing="1">機能要件</text>
+  
+  <!-- Feature 1 -->
+  <text x="710" y="210" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">📝 面談評価入力</text>
+  <rect x="710" y="220" width="500" height="2" fill="#1a5b66"/>
+  <foreignObject x="710" y="230" width="500" height="120">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <p><b>機能要件:</b></p>
+      <ul style="padding-left: 20px;">
+        <li>面談後にスコア・コメントを入力できるフォーム</li>
+        <li>入力内容をSupabaseに保存</li>
+      </ul>
+      <p><b>非機能要件:</b></p>
+      <ul style="padding-left: 20px;">
+        <li>入力操作は3ステップ以内に完了</li>
+      </ul>
+    </div>
+  </foreignObject>
+  
+  <!-- Feature 2 -->
+  <text x="710" y="380" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🧠 AI予測</text>
+  <rect x="710" y="390" width="500" height="2" fill="#1a5b66"/>
+  <foreignObject x="710" y="400" width="500" height="120">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <p><b>機能要件:</b></p>
+      <ul style="padding-left: 20px;">
+        <li>過去の評価＋成果データをもとに候補者の成功確率を算出</li>
+        <li>APIで予測結果を返却</li>
+      </ul>
+      <p><b>非機能要件:</b></p>
+      <ul style="padding-left: 20px;">
+        <li>予測レスポンスタイムは3秒以内</li>
+      </ul>
+    </div>
+  </foreignObject>
+  
+  <!-- Feature 3 -->
+  <text x="710" y="550" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">📊 分析レポート</text>
+  <rect x="710" y="560" width="500" height="2" fill="#1a5b66"/>
+  <foreignObject x="710" y="570" width="500" height="120">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <p><b>機能要件:</b></p>
+      <ul style="padding-left: 20px;">
+        <li>評価傾向・モデル精度の推移をグラフ表示</li>
+      </ul>
+      <p><b>非機能要件:</b></p>
+      <ul style="padding-left: 20px;">
+        <li>ユーザーが直感的に理解できるUI</li>
+      </ul>
+    </div>
+  </foreignObject>
+  
+  <!-- Chart Visualization -->
+  <rect x="730" y="690" width="460" height="270" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="10" ry="10"/>
+  
+  <!-- Mock chart for visualization -->
+  <rect x="760" y="720" width="400" height="210" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="0.5"/>
+  <line x1="760" y1="825" x2="1160" y2="825" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="760" y1="720" x2="760" y2="930" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- Chart data -->
+  <path d="M760,825 Q820,780 880,800 T1000,760 T1160,730" stroke="#b3322b" stroke-width="2" fill="none"/>
+  <path d="M760,825 Q820,850 880,830 T1000,850 T1160,810" stroke="#1a5b66" stroke-width="2" fill="none"/>
+  
+  <text x="960" y="960" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">評価精度と採用成功率の相関</text>
+  
+  <!-- Column 3: Non-Functional Requirements -->
+  <rect x="1290" y="120" width="560" height="880" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="1290" y="120" width="560" height="50" fill="#653a5e"/>
+  <text x="1320" y="155" font-family="'Noto Serif JP', serif" font-size="22" fill="#f4f1ea" letter-spacing="1">非機能要件</text>
+  
+  <!-- Scalability -->
+  <text x="1320" y="210" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🔄 スケーラビリティ</text>
+  <rect x="1320" y="220" width="500" height="2" fill="#653a5e"/>
+  <foreignObject x="1320" y="230" width="500" height="70">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <p>社内数百ユーザーを想定した設計</p>
+      <p>同時アクセス数: 最大100ユーザー</p>
+    </div>
+  </foreignObject>
+  
+  <!-- Security -->
+  <text x="1320" y="330" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🔒 セキュリティ</text>
+  <rect x="1320" y="340" width="500" height="2" fill="#653a5e"/>
+  <foreignObject x="1320" y="350" width="500" height="70">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <p>社内限定アクセス</p>
+      <p>HTTPS必須</p>
+      <p>Supabase Auth による認証</p>
+    </div>
+  </foreignObject>
+  
+  <!-- Reliability -->
+  <text x="1320" y="450" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🛡️ 信頼性</text>
+  <rect x="1320" y="460" width="500" height="2" fill="#653a5e"/>
+  <foreignObject x="1320" y="470" width="500" height="70">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <p>全エラーをハンドリングし、画面表示上で適切に通知</p>
+      <p>予期しない障害時もユーザーデータを保護</p>
+    </div>
+  </foreignObject>
+  
+  <!-- Implementation approach diagram -->
+  <rect x="1350" y="580" width="440" height="360" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="10" ry="10"/>
+  <text x="1570" y="610" font-family="'Noto Serif JP', serif" font-size="16" fill="#2c2c2c" text-anchor="middle">実装アプローチ</text>
+  
+  <!-- Error Handling Visualization -->
+  <rect x="1380" y="640" width="380" height="80" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5" ry="5"/>
+  <text x="1570" y="670" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">入力バリデーション（フロント／バック双方向）</text>
+  <text x="1570" y="700" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">不正データの検出と修正</text>
+  
+  <!-- Arrow down -->
+  <polyline points="1570,730 1570,750" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <rect x="1380" y="760" width="380" height="80" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5" ry="5"/>
+  <text x="1570" y="790" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">try/catch でDB・AI呼び出しの例外をキャッチ</text>
+  <text x="1570" y="820" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">エラーログの自動保存</text>
+  
+  <!-- Arrow down -->
+  <polyline points="1570,850 1570,870" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <rect x="1380" y="880" width="380" height="40" fill="#653a5e" rx="5" ry="5"/>
+  <text x="1570" y="905" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">ユーザー向けフレンドリーなエラーメッセージ表示</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c2c2c"/>
+    </marker>
+  </defs>
+</svg>

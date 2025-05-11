@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="1920" height="1080" fill="#F4F1EA"/>
+  <g clip-path="url(#clip0_0_1)">
+    <path d="M1920 0H0V1080H1920V0Z" fill="#F4F1EA"/>
+    <path d="M1920 0H0V120H1920V0Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="36" letter-spacing="0em"><tspan x="724.734" y="54.9">Day4: AIエージェントの実装</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="24" letter-spacing="0em"><tspan x="894.445" y="100.1">GPTs活用編</tspan></text>
+    <path d="M520 83C524.418 83 528 79.4183 528 75C528 70.5817 524.418 67 520 67C515.582 67 512 70.5817 512 75C512 79.4183 515.582 83 520 83Z" fill="#B3322B"/>
+    <path d="M540 75H740" stroke="#B3322B" stroke-width="3"/>
+    <path d="M1380 83C1384.42 83 1388 79.4183 1388 75C1388 70.5817 1384.42 67 1380 67C1375.58 67 1372 70.5817 1372 75C1372 79.4183 1375.58 83 1380 83Z" fill="#B3322B"/>
+    <path d="M1160 75H1360" stroke="#B3322B" stroke-width="3"/>
+    
+    <!-- 左カラム -->
+    <path d="M640 160H40V1020H640V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="200" y="210.2">知識ベースとは</tspan></text>
+    <path d="M140 220H540" stroke="#653A5E" stroke-width="3"/>
+    <path d="M140 226C143.314 226 146 223.314 146 220C146 216.686 143.314 214 140 214C136.686 214 134 216.686 134 220C134 223.314 136.686 226 140 226Z" fill="#653A5E"/>
+    <path d="M540 226C543.314 226 546 223.314 546 220C546 216.686 543.314 214 540 214C536.686 214 534 216.686 534 220C534 223.314 536.686 226 540 226Z" fill="#653A5E"/>
+    
+    <path d="M600 250H80V420H600V250Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="160" y="285">GPTsの知識ベースの役割</tspan></text>
+    <path d="M90 315C92.7614 315 95 312.761 95 310C95 307.239 92.7614 305 90 305C87.2386 305 85 307.239 85 310C85 312.761 87.2386 315 90 315Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="315.9">AIエージェントに専門知識を付与する</tspan></text>
+    
+    <path d="M90 355C92.7614 355 95 352.761 95 350C95 347.239 92.7614 345 90 345C87.2386 345 85 347.239 85 350C85 352.761 87.2386 355 90 355Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="355.9">特定分野での回答精度と信頼性を向上</tspan></text>
+    
+    <path d="M90 395C92.7614 395 95 392.761 95 390C95 387.239 92.7614 385 90 385C87.2386 385 85 387.239 85 390C85 392.761 87.2386 395 90 395Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="395.9">最新・独自情報に基づく応答を実現</tspan></text>
+    
+    <path d="M600 450H80V620H600V450Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="160" y="485">基本モデルの限界と拡張</tspan></text>
+    <path d="M90 515C92.7614 515 95 512.761 95 510C95 507.239 92.7614 505 90 505C87.2386 505 85 507.239 85 510C85 512.761 87.2386 515 90 515Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="515.9">基本モデルの知識カットオフ日の制約</tspan></text>
+    
+    <path d="M90 555C92.7614 555 95 552.761 95 550C95 547.239 92.7614 545 90 545C87.2386 545 85 547.239 85 550C85 552.761 87.2386 555 90 555Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="555.9">専門分野の詳細知識の不足</tspan></text>
+    
+    <path d="M90 595C92.7614 595 95 592.761 95 590C95 587.239 92.7614 585 90 585C87.2386 585 85 587.239 85 590C85 592.761 87.2386 595 90 595Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="595.9">組織固有の情報へのアクセス不可</tspan></text>
+    
+    <path d="M600 650H80V910H600V650Z" fill="#653A5E"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="160" y="685">知識ベースの効果</tspan></text>
+    
+    <path d="M90 715C92.7614 715 95 712.761 95 710C95 707.239 92.7614 705 90 705C87.2386 705 85 707.239 85 710C85 712.761 87.2386 715 90 715Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="715.9">専門知識に基づいた正確な応答</tspan></text>
+    
+    <path d="M90 755C92.7614 755 95 752.761 95 750C95 747.239 92.7614 745 90 745C87.2386 745 85 747.239 85 750C85 752.761 87.2386 755 90 755Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="755.9">業界・組織特有のコンテキスト理解</tspan></text>
+    
+    <path d="M90 795C92.7614 795 95 792.761 95 790C95 787.239 92.7614 785 90 785C87.2386 785 85 787.239 85 790C85 792.761 87.2386 795 90 795Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="795.9">独自・最新情報に基づく価値提供</tspan></text>
+    
+    <path d="M90 835C92.7614 835 95 832.761 95 830C95 827.239 92.7614 825 90 825C87.2386 825 85 827.239 85 830C85 832.761 87.2386 835 90 835Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="835.9">他者が持たない差別化された回答</tspan></text>
+    
+    <path d="M600 930H80V994H600V930Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="295" y="970.2">実践ポイント</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="170" y="975.9">専門分野を明確にして知識を集約する</tspan></text>
+    
+    <!-- 中央カラム -->
+    <path d="M1260 160H660V1020H1260V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="810" y="210.2">ファイル形式と準備方法</tspan></text>
+    <path d="M760 220H1160" stroke="#653A5E" stroke-width="3"/>
+    <path d="M760 226C763.314 226 766 223.314 766 220C766 216.686 763.314 214 760 214C756.686 214 754 216.686 754 220C754 223.314 756.686 226 760 226Z" fill="#653A5E"/>
+    <path d="M1160 226C1163.31 226 1166 223.314 1166 220C1166 216.686 1163.31 214 1160 214C1156.69 214 1154 216.686 1154 220C1154 223.314 1156.69 226 1160 226Z" fill="#653A5E"/>
+    
+    <path d="M1230 250H690V480H1230V250Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="770" y="285">対応ファイル形式</tspan></text>
+    
+    <path d="M750 315H1170" stroke="#2C2C2C" stroke-opacity="0.2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="710" y="315.9">テキスト文書（.txt, .md）</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="950" y="315.1">最も基本的な形式、シンプルな情報向け</tspan></text>
+    
+    <path d="M750 355H1170" stroke="#2C2C2C" stroke-opacity="0.2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="710" y="355.9">PDF文書（.pdf）</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="950" y="355.1">論文・専門文書など構造化されたコンテンツ</tspan></text>
+    
+    <path d="M750 395H1170" stroke="#2C2C2C" stroke-opacity="0.2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="710" y="395.9">ウェブサイト</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="950" y="395.1">オンラインの最新情報・記事などに効果的</tspan></text>
+    
+    <path d="M750 435H1170" stroke="#2C2C2C" stroke-opacity="0.2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="710" y="435.9">画像（.jpg, .png）</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="950" y="435.1">図表・グラフなどのビジュアルコンテンツ</tspan></text>
+    
+    <path d="M1230 510H690V710H1230V510Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="770" y="545">ファイル準備のポイント</tspan></text>
+    
+    <path d="M710 575C712.761 575 715 572.761 715 570C715 567.239 712.761 565 710 565C707.239 565 705 567.239 705 570C705 572.761 707.239 575 710 575Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="575.9">情報の正確性と信頼性を確保する</tspan></text>
+    
+    <path d="M710 615C712.761 615 715 612.761 715 610C715 607.239 712.761 605 710 605C707.239 605 705 607.239 705 610C705 612.761 707.239 615 710 615Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="615.9">コア情報に絞って余分な情報は削除</tspan></text>
+    
+    <path d="M710 655C712.761 655 715 652.761 715 650C715 647.239 712.761 645 710 645C707.239 645 705 647.239 705 650C705 652.761 707.239 655 710 655Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="655.9">複数の補完的な情報源を組み合わせる</tspan></text>
+    
+    <path d="M710 695C712.761 695 715 692.761 715 690C715 687.239 712.761 685 710 685C707.239 685 705 687.239 705 690C705 692.761 707.239 695 710 695Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="695.9">定期的に最新情報へ更新する</tspan></text>
+    
+    <path d="M1230 740H690V994H1230V740Z" fill="#653A5E"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="770" y="775">ファイルサイズの制限</tspan></text>
+    
+    <path d="M710 805C712.761 805 715 802.761 715 800C715 797.239 712.761 795 710 795C707.239 795 705 797.239 705 800C705 802.761 707.239 805 710 805Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="805.9">ファイルサイズ上限：2MB/ファイル</tspan></text>
+    
+    <path d="M710 845C712.761 845 715 842.761 715 840C715 837.239 712.761 835 710 835C707.239 835 705 837.239 705 840C705 842.761 707.239 845 710 845Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="845.9">複数ファイル：合計10MB程度まで</tspan></text>
+    
+    <path d="M710 885C712.761 885 715 882.761 715 880C715 877.239 712.761 875 710 875C707.239 875 705 877.239 705 880C705 882.761 707.239 885 710 885Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="885.9">大きすぎるファイルは分割して登録</tspan></text>
+    
+    <path d="M710 925C712.761 925 715 922.761 715 920C715 917.239 712.761 915 710 915C707.239 915 705 917.239 705 920C705 922.761 707.239 925 710 925Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="925.9">処理精度に影響するため適切にサイズ調整</tspan></text>
+    
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="895" y="970.2">実践ポイント</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="780" y="975.9">情報の質と構造を重視する</tspan></text>
+    
+    <!-- 右カラム -->
+    <path d="M1880 160H1280V1020H1880V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="1490" y="210.2">知識ベース活用術</tspan></text>
+    <path d="M1380 220H1780" stroke="#653A5E" stroke-width="3"/>
+    <path d="M1380 226C1383.31 226 1386 223.314 1386 220C1386 216.686 1383.31 214 1380 214C1376.69 214 1374 216.686 1374 220C1374 223.314 1376.69 226 1380 226Z" fill="#653A5E"/>
+    <path d="M1780 226C1783.31 226 1786 223.314 1786 220C1786 216.686 1783.31 214 1780 214C1776.69 214 1774 216.686 1774 220C1774 223.314 1776.69 226 1780 226Z" fill="#653A5E"/>
+    
+    <path d="M1850 250H1310V420H1850V250Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1490" y="285">効果的な活用シーン</tspan></text>
+    <path d="M1330 315C1332.76 315 1335 312.761 1335 310C1335 307.239 1332.76 305 1330 305C1327.24 305 1325 307.239 1325 310C1325 312.761 1327.24 315 1330 315Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="315.9">専門情報提供型のGPTs</tspan></text>
+    
+    <path d="M1330 355C1332.76 355 1335 352.761 1335 350C1335 347.239 1332.76 345 1330 345C1327.24 345 1325 347.239 1325 350C1325 352.761 1327.24 355 1330 355Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="355.9">社内ナレッジベース活用型アシスタント</tspan></text>
+    
+    <path d="M1330 395C1332.76 395 1335 392.761 1335 390C1335 387.239 1332.76 385 1330 385C1327.24 385 1325 387.239 1325 390C1325 392.761 1327.24 395 1330 395Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="395.9">特定業務・領域に特化したエキスパート</tspan></text>
+    
+    <path d="M1850 450H1310V620H1850V450Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1490" y="485">知識ベース連携のコツ</tspan></text>
+    <path d="M1330 515C1332.76 515 1335 512.761 1335 510C1335 507.239 1332.76 505 1330 505C1327.24 505 1325 507.239 1325 510C1325 512.761 1327.24 515 1330 515Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="515.9">システムプロンプトに知識参照を指示</tspan></text>
+    
+    <path d="M1330 555C1332.76 555 1335 552.761 1335 550C1335 547.239 1332.76 545 1330 545C1327.24 545 1325 547.239 1325 550C1325 552.761 1327.24 555 1330 555Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="555.9">ファイル内の特に重要な箇所を強調</tspan></text>
+    
+    <path d="M1330 595C1332.76 595 1335 592.761 1335 590C1335 587.239 1332.76 585 1330 585C1327.24 585 1325 587.239 1325 590C1325 592.761 1327.24 595 1330 595Z" fill="#653A5E"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="595.9">複数ファイルの用途・関係性を明確化</tspan></text>
+    
+    <path d="M1850 650H1310V994H1850V650Z" fill="#653A5E"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1490" y="685">今日の実践ワーク</tspan></text>
+    
+    <path d="M1330 715C1332.76 715 1335 712.761 1335 710C1335 707.239 1332.76 705 1330 705C1327.24 705 1325 707.239 1325 710C1325 712.761 1327.24 715 1330 715Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="715.9">専門分野・得意領域を決定</tspan></text>
+    
+    <path d="M1330 755C1332.76 755 1335 752.761 1335 750C1335 747.239 1332.76 745 1330 745C1327.24 745 1325 747.239 1325 750C1325 752.761 1327.24 755 1330 755Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="755.9">必要な専門知識素材を3つ以上収集</tspan></text>
+    
+    <path d="M1330 795C1332.76 795 1335 792.761 1335 790C1335 787.239 1332.76 785 1330 785C1327.24 785 1325 787.239 1325 790C1325 792.761 1327.24 795 1330 795Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="795.9">システムプロンプトと組み合わせて登録</tspan></text>
+    
+    <path d="M1330 835C1332.76 835 1335 832.761 1335 830C1335 827.239 1332.76 825 1330 825C1327.24 825 1325 827.239 1325 830C1325 832.761 1327.24 835 1330 835Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="835.9">知識に関連した質問で応答テスト</tspan></text>
+    
+    <path d="M1330 875C1332.76 875 1335 872.761 1335 870C1335 867.239 1332.76 865 1330 865C1327.24 865 1325 867.239 1325 870C1325 872.761 1327.24 875 1330 875Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="875.9">応答の正確性と有用性を評価</tspan></text>
+    
+    <path d="M1330 915C1332.76 915 1335 912.761 1335 910C1335 907.239 1332.76 905 1330 905C1327.24 905 1325 907.239 1325 910C1325 912.761 1327.24 915 1330 915Z" fill="#F4F1EA"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="915.9">継続的な改善点を記録</tspan></text>
+    
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1495" y="970.2">実践ポイント</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1390" y="975.9">検証と改善を繰り返し最適化する</tspan></text>
+    
+    <!-- フッター -->
+    <path d="M1920 1040H0V1080H1920V1040Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="694.32" y="1064.9">TANREN株式会社 / 株式会社MVP | AI人材育成プログラム | 2025年春季講座</tspan></text>
+  </g>
+  <defs>
+    <clipPath id="clip0_0_1">
+      <rect width="1920" height="1080" fill="white"/>
+    </clipPath>
+  </defs>
+</svg> 

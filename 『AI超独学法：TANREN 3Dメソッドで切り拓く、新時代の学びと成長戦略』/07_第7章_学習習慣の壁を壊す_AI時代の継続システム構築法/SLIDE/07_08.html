@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI時代の「インプット仕組み化」5つの原則</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #311b92 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background-color: #e1bee7;
+            border-radius: 2.5px;
+        }
+        .principle-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 14px;
+            display: flex;
+            border-left: 4px solid #e1bee7;
+            transform: translateX(-30px);
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .principle-number {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e1bee7;
+            color: #4a148c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .principle-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(225, 190, 231, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            color: #e1bee7;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .principle-content {
+            flex-grow: 1;
+        }
+        .principle-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #e1bee7;
+        }
+        .principle-desc {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        .principle-example {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 4px;
+            padding-left: 16px;
+            border-left: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        .principle-relation {
+            font-size: 0.85rem;
+            color: #ffd700;
+            margin-top: 4px;
+        }
+        .rag-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 1.5s;
+        }
+        .rag-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #e1bee7;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .section-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.3);
+        }
+        .highlight {
+            color: #ffd700;
+            font-weight: 500;
+        }
+        .rag-flow-container {
+            position: relative;
+            height: 400px;
+        }
+        .flow-node {
+            position: absolute;
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            width: 160px;
+        }
+        .flow-line {
+            position: absolute;
+            background: #e1bee7;
+            height: 2px;
+            transform-origin: left center;
+        }
+        .flow-arrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .animated-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 3s linear forwards;
+            animation-delay: 2s;
+        }
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Background pattern -->
+        <svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="position: absolute; opacity: 0.05;">
+            <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        
+        <div class="section-number">セクション 3</div>
+        
+        <div class="p-16 flex flex-col h-full">
+            <h1 class="title">AI時代の「インプット仕組み化」5つの原則</h1>
+            
+            <div class="flex flex-grow">
+                <!-- Left Column - 5 Principles -->
+                <div class="w-3/5 pr-8 overflow-y-auto" style="max-height: 580px;">
+                    <div class="principle-card" style="animation-delay: 0.1s;">
+                        <div class="principle-number">1</div>
+                        <div class="principle-icon">
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <div class="principle-content">
+                            <div class="principle-title">インプットの「多様性」と「容易性」を担保する</div>
+                            <div class="principle-desc">
+                                会議の議事録だけでなく、現場での会話、移動中のひらめき、顧客からの感謝の言葉など、
+                                <span class="highlight">あらゆる瞬間の学びを手間なくキャプチャ</span>できる環境を整える
+                            </div>
+                            <div class="principle-example">
+                                <i class="fas fa-lightbulb text-yellow-300 mr-1"></i>
+                                <span class="font-bold">実践例：</span> スマホアプリから音声メモ、会議録画のドラッグ＆ドロップ、手書きメモの写真登録
+                            </div>
+                            <div class="principle-relation">
+                                <i class="fas fa-link mr-1"></i>
+                                <span class="font-bold">挫折メカニズム対策：</span> 「日々の忙殺」による記録放棄を防止
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="principle-card" style="animation-delay: 0.3s;">
+                        <div class="principle-number">2</div>
+                        <div class="principle-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="principle-content">
+                            <div class="principle-title">AIによる「自動処理」で価値を高める</div>
+                            <div class="principle-desc">
+                                人間の手作業に頼らず、AIの力で
+                                <span class="highlight">文字起こし、内容解析、要点抽出、構造化</span>を自動で行い、
+                                価値の高い「知識データ」への変換を実現
+                            </div>
+                            <div class="principle-example">
+                                <i class="fas fa-lightbulb text-yellow-300 mr-1"></i>
+                                <span class="font-bold">実践例：</span> 会議動画からAI自動議事録作成、顧客通話からの感情分析・示唆抽出
+                            </div>
+                            <div class="principle-relation">
+                                <i class="fas fa-link mr-1"></i>
+                                <span class="font-bold">挫折メカニズム対策：</span> 「情報メタボ」による整理不能状態を回避
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="principle-card" style="animation-delay: 0.5s;">
+                        <div class="principle-number">3</div>
+                        <div class="principle-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="principle-content">
+                            <div class="principle-title">「組織ナレッジベース」として集約・一元化する</div>
+                            <div class="principle-desc">
+                                個々のメンバーのインプットを
+                                <span class="highlight">組織全体でアクセス可能なプラットフォーム</span>に集約し、
+                                個人の知恵を組織全体の共有財産として「集合知」を形成
+                            </div>
+                            <div class="principle-example">
+                                <i class="fas fa-lightbulb text-yellow-300 mr-1"></i>
+                                <span class="font-bold">実践例：</span> 部門ごとのナレッジベースと全社横断検索、適切なアクセス権限管理
+                            </div>
+                            <div class="principle-relation">
+                                <i class="fas fa-link mr-1"></i>
+                                <span class="font-bold">挫折メカニズム対策：</span> 「知識の死蔵」による価値の消失を防止
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="principle-card" style="animation-delay: 0.7s;">
+                        <div class="principle-number">4</div>
+                        <div class="principle-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="principle-content">
+                            <div class="principle-title">RAGによる「知識の活用」を前提とする</div>
+                            <div class="principle-desc">
+                                ナレッジベースを単なる「情報倉庫」ではなく、AIが
+                                <span class="highlight">検索・参照(Retrieval)し、状況に応じた情報や洞察を生成(Generation)</span>するための
+                                「生きた知識源」として設計
+                            </div>
+                            <div class="principle-example">
+                                <i class="fas fa-lightbulb text-yellow-300 mr-1"></i>
+                                <span class="font-bold">実践例：</span> 検索しやすいタグ付け、AIが参照しやすい構造化、「このナレッジベースから〇〇を教えて」機能
+                            </div>
+                            <div class="principle-relation">
+                                <i class="fas fa-link mr-1"></i>
+                                <span class="font-bold">挫折メカニズム対策：</span> 蓄積された知識が活用されず「学ぶ意味」を見失うことを防止
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="principle-card" style="animation-delay: 0.9s;">
+                        <div class="principle-number">5</div>
+                        <div class="principle-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="principle-content">
+                            <div class="principle-title">「継続」を支える文化と仕組み</div>
+                            <div class="principle-desc">
+                                仕組みだけでは不十分。日々のインプットを奨励し、共有されたナレッジを称賛し、
+                                <span class="highlight">学習と共有を尊ぶ組織文化とゲーミフィケーション</span>の導入
+                            </div>
+                            <div class="principle-example">
+                                <i class="fas fa-lightbulb text-yellow-300 mr-1"></i>
+                                <span class="font-bold">実践例：</span> 「今週のベストインプット」共有、ナレッジ活用提案表彰、インプットポイント制度
+                            </div>
+                            <div class="principle-relation">
+                                <i class="fas fa-link mr-1"></i>
+                                <span class="font-bold">挫折メカニズム対策：</span> インプット習慣が定着せず形骸化することを防止
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - RAG Visualization -->
+                <div class="w-2/5 pl-4">
+                    <div class="rag-container h-full flex flex-col">
+                        <div class="rag-title">
+                            <i class="fas fa-search-plus mr-2"></i>
+                            RAG (検索拡張生成) の仕組み
+                        </div>
+                        
+                        <div class="rag-flow-container flex-grow">
+                            <!-- RAG Flow Diagram -->
+                            <svg width="100%" height="100%" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="mx-auto">
+                                <!-- Knowledge Base -->
+                                <rect x="20" y="150" width="120" height="160" rx="10" fill="#4a148c" stroke="#e1bee7" stroke-width="2" />
+                                <text x="80" y="190" text-anchor="middle" fill="white" font-weight="bold">知識ベース</text>
+                                <line x1="35" y1="210" x2="125" y2="210" stroke="white" stroke-opacity="0.5" stroke-width="1" />
+                                <line x1="35" y1="230" x2="125" y2="230" stroke="white" stroke-opacity="0.5" stroke-width="1" />
+                                <line x1="35" y1="250" x2="125" y2="250" stroke="white" stroke-opacity="0.5" stroke-width="1" />
+                                <line x1="35" y1="270" x2="125" y2="270" stroke="white" stroke-opacity="0.5" stroke-width="1" />
+                                
+                                <!-- User Query -->
+                                <rect x="150" y="30" width="120" height="50" rx="10" fill="#7b1fa2" stroke="#e1bee7" stroke-width="2" />
+                                <text x="210" y="60" text-anchor="middle" fill="white" font-weight="bold">ユーザーの質問</text>
+                                
+                                <!-- Retrieval Engine -->
+                                <rect x="150" y="130" width="120" height="60" rx="10" fill="#6a1b9a" stroke="#e1bee7" stroke-width="2" />
+                                <text x="210" y="160" text-anchor="middle" fill="white" font-weight="bold">検索エンジン</text>
+                                <text x="210" y="180" text-anchor="middle" fill="white" font-size="12">(Retrieval)</text>
+                                
+                                <!-- Relevant Knowledge -->
+                                <rect x="150" y="240" width="120" height="60" rx="10" fill="#5e35b1" stroke="#e1bee7" stroke-width="2" />
+                                <text x="210" y="265" text-anchor="middle" fill="white" font-weight="bold">関連情報抽出</text>
+                                <text x="210" y="285" text-anchor="middle" fill="white" font-size="12">（自社データ）</text>
+                                
+                                <!-- AI LLM -->
+                                <rect x="330" y="130" width="120" height="60" rx="10" fill="#3949ab" stroke="#e1bee7" stroke-width="2" />
+                                <text x="390" y="160" text-anchor="middle" fill="white" font-weight="bold">AI言語モデル</text>
+                                <text x="390" y="180" text-anchor="middle" fill="white" font-size="12">(Generation)</text>
+                                
+                                <!-- Response -->
+                                <rect x="330" y="240" width="120" height="60" rx="10" fill="#1e88e5" stroke="#e1bee7" stroke-width="2" />
+                                <text x="390" y="265" text-anchor="middle" fill="white" font-weight="bold">最適な回答</text>
+                                <text x="390" y="285" text-anchor="middle" fill="white" font-size="12">（文脈理解）</text>
+                                
+                                <!-- User Interface -->
+                                <rect x="240" y="330" width="120" height="50" rx="10" fill="#039be5" stroke="#e1bee7" stroke-width="2" />
+                                <text x="300" y="360" text-anchor="middle" fill="white" font-weight="bold">ユーザーに表示</text>
+                                
+                                <!-- Connections -->
+                                <path d="M210 80 L210 130" stroke="#e1bee7" stroke-width="2" fill="none" class="animated-path" />
+                                <polygon points="205,125 210,135 215,125" fill="#e1bee7" />
+                                
+                                <path d="M140 230 L150 240" stroke="#e1bee7" stroke-width="2" fill="none" class="animated-path" />
+                                <polygon points="145,235 155,245 155,235" fill="#e1bee7" />
+                                
+                                <path d="M210 190 L210 240" stroke="#e1bee7" stroke-width="2" fill="none" class="animated-path" />
+                                <polygon points="205,235 210,245 215,235" fill="#e1bee7" />
+                                
+                                <path d="M270 160 L330 160" stroke="#e1bee7" stroke-width="2" fill="none" class="animated-path" />
+                                <polygon points="325,155 335,160 325,165" fill="#e1bee7" />
+                                
+                                <path d="M270 270 L330 270" stroke="#e1bee7" stroke-width="2" fill="none" class="animated-path" />
+                                <polygon points="325,265 335,270 325,275" fill="#e1bee7" />
+                                
+                                <path d="M390 190 L390 240" stroke="#e1bee7" stroke-width="2" fill="none" class="animated-path" />
+                                <polygon points="385,235 390,245 395,235" fill="#e1bee7" />
+                                
+                                <path d="M390 300 L350 330" stroke="#e1bee7" stroke-width="2" fill="none" class="animated-path" />
+                                <polygon points="352,322 346,334 358,330" fill="#e1bee7" />
+                                
+                                <!-- Data Flow Animation -->
+                                <circle cx="210" cy="110" r="5" fill="#ffd700" class="animate-pulse" />
+                                <circle cx="145" cy="235" r="5" fill="#ffd700" class="animate-pulse" style="animation-delay: 0.2s" />
+                                <circle cx="210" cy="220" r="5" fill="#ffd700" class="animate-pulse" style="animation-delay: 0.4s" />
+                                <circle cx="300" cy="160" r="5" fill="#ffd700" class="animate-pulse" style="animation-delay: 0.6s" />
+                                <circle cx="300" cy="270" r="5" fill="#ffd700" class="animate-pulse" style="animation-delay: 0.8s" />
+                                <circle cx="390" cy="220" r="5" fill="#ffd700" class="animate-pulse" style="animation-delay: 1.0s" />
+                                <circle cx="360" cy="320" r="5" fill="#ffd700" class="animate-pulse" style="animation-delay: 1.2s" />
+                            </svg>
+                        </div>
+                        
+                        <div class="rag-explanation text-center mt-4">
+                            <div class="text-lg font-bold text-yellow-300 mb-2">
+                                RAGの重要性
+                            </div>
+                            <p class="text-sm">
+                                検索拡張生成（RAG）は、AIに<span class="font-bold">自社固有の知識</span>を参照させることで<br>
+                                一般的なAIよりも<span class="highlight">より正確で関連性の高い回答</span>を生成できる技術
+                            </p>
+                            <p class="text-sm mt-2">
+                                インプットの質と構造が<span class="highlight">RAGの効果を左右</span>する<br>
+                                <span class="italic">→ だからこそインプットの仕組み化が重要</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

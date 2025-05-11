@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダーライン -->
+  <rect x="40" y="40" width="1840" height="8" fill="#2c2c2c"/>
+  <rect x="40" y="60" width="1840" height="3" fill="#2c2c2c"/>
+  
+  <!-- フッターライン -->
+  <rect x="40" y="1020" width="1840" height="3" fill="#2c2c2c"/>
+  <rect x="40" y="1035" width="1840" height="8" fill="#2c2c2c"/>
+  
+  <!-- タイトル -->
+  <text x="960" y="120" font-family="'Noto Serif JP', serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#2c2c2c" letter-spacing="0.05em">講演内容と次のステップ</text>
+  <rect x="700" y="140" width="520" height="3" fill="#653a5e"/>
+  
+  <!-- 3カラムグリッド区切り線 -->
+  <line x1="640" y1="180" x2="640" y2="1000" stroke="#2c2c2c" stroke-width="1" stroke-dasharray="2,4"/>
+  <line x1="1280" y1="180" x2="1280" y2="1000" stroke="#2c2c2c" stroke-width="1" stroke-dasharray="2,4"/>
+  
+  <!-- カラム1: 講演内容の方向性 -->
+  <rect x="100" y="180" width="480" height="60" fill="#b3322b"/>
+  <text x="340" y="222" font-family="'Noto Serif JP', serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#f4f1ea" letter-spacing="0.05em">講演内容の方向性</text>
+  
+  <!-- カラム1コンテンツ -->
+  <text x="120" y="280" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">参加者の期待と要望</text>
+  <rect x="120" y="290" width="200" height="2" fill="#b3322b"/>
+  
+  <!-- 期待の分析図 -->
+  <rect x="180" y="320" width="320" height="240" rx="10" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+  
+  <!-- 期待の図解 -->
+  <text x="340" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c2c2c">参加者の期待の分析</text>
+  
+  <!-- AIに関する期待と成長ストーリーへの期待の比較 -->
+  <rect x="220" y="370" width="60" height="150" fill="#b3322b" fill-opacity="0.2"/>
+  <rect x="300" y="370" width="60" height="150" fill="#b3322b" fill-opacity="0.8"/>
+  <rect x="380" y="370" width="60" height="150" fill="#b3322b" fill-opacity="0.4"/>
+  
+  <!-- 軸線 -->
+  <line x1="200" y1="520" x2="460" y2="520" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- ラベル -->
+  <text x="250" y="540" font-family="'Noto Sans JP', sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">最新AI動向</text>
+  <text x="330" y="540" font-family="'Noto Sans JP', sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">成長ストーリー</text>
+  <text x="410" y="540" font-family="'Noto Sans JP', sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">実践ノウハウ</text>
+  
+  <!-- 期待度合いラベル -->
+  <text x="170" y="390" font-family="'Noto Sans JP', sans-serif" font-size="14" text-anchor="end" fill="#2c2c2c">高</text>
+  <text x="170" y="520" font-family="'Noto Sans JP', sans-serif" font-size="14" text-anchor="end" fill="#2c2c2c">低</text>
+  
+  <!-- ハイライト -->
+  <rect x="295" y="375" width="70" height="25" fill="#b3322b" fill-opacity="0.1" stroke="#b3322b" stroke-width="1"/>
+  <text x="330" y="392" font-family="'Noto Sans JP', sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#b3322b">最も期待大</text>
+  
+  <!-- 具体的な期待内容 -->
+  <text x="120" y="600" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">具体的な期待内容</text>
+  <rect x="120" y="610" width="180" height="2" fill="#b3322b"/>
+  
+  <rect x="120" y="630" width="460" height="160" rx="5" fill="white" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="140" y="665" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+    <tspan x="140" dy="0">• TANRENの成長ストーリー重視</tspan>
+    <tspan x="140" dy="35">• 佐藤氏の経験に基づく実体験</tspan>
+    <tspan x="140" dy="35">• 中小IT企業の現実に即した内容</tspan>
+    <tspan x="140" dy="35">• リアルな話を求める声が強い</tspan>
+  </text>
+  
+  <!-- 講演方針 -->
+  <rect x="120" y="820" width="460" height="120" rx="5" fill="#f4f1ea" stroke="#b3322b" stroke-width="2"/>
+  <text x="140" y="850" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="bold" fill="#b3322b">講演方針のポイント</text>
+  <text x="140" y="890" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+    <tspan x="140" dy="0">• 理想と現実のギャップを率直に語る</tspan>
+    <tspan x="140" dy="30">• リアルなビジネス事例を中心に構成</tspan>
+  </text>
+  
+  <!-- カラム2: AIエージェントレベル論 -->
+  <rect x="720" y="180" width="480" height="60" fill="#1a5b66"/>
+  <text x="960" y="222" font-family="'Noto Serif JP', serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#f4f1ea" letter-spacing="0.05em">AIエージェントレベル論</text>
+  
+  <!-- カラム2コンテンツ -->
+  <text x="720" y="280" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">佐藤氏の独自理論</text>
+  <rect x="720" y="290" width="180" height="2" fill="#1a5b66"/>
+  
+  <!-- エージェントレベル図 -->
+  <rect x="740" y="320" width="440" height="240" rx="5" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- レベル図の構成 -->
+  <text x="960" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c2c2c">AIエージェントのレベル定義</text>
+  
+  <!-- レベル枠 - 階段状の図 -->
+  <rect x="760" y="490" width="100" height="50" fill="#1a5b66" fill-opacity="0.3" stroke="#1a5b66" stroke-width="1"/>
+  <rect x="860" y="440" width="100" height="100" fill="#1a5b66" fill-opacity="0.5" stroke="#1a5b66" stroke-width="1"/>
+  <rect x="960" y="390" width="100" height="150" fill="#1a5b66" fill-opacity="0.7" stroke="#1a5b66" stroke-width="1"/>
+  <rect x="1060" y="380" width="100" height="160" fill="#1a5b66" fill-opacity="0.9" stroke="#1a5b66" stroke-width="1"/>
+  
+  <!-- レベルラベル -->
+  <text x="810" y="520" font-family="'Noto Sans JP', sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c2c2c">Lv.0.5</text>
+  <text x="910" y="490" font-family="'Noto Sans JP', sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c2c2c">Lv.1</text>
+  <text x="1010" y="440" font-family="'Noto Sans JP', sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c2c2c">Lv.2</text>
+  <text x="1110" y="430" font-family="'Noto Sans JP', sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c2c2c">Lv.3</text>
+  
+  <!-- 自社の位置づけ -->
+  <path d="M 810,470 L 810,410 L 830,410 L 830,390 L 790,390 L 790,410 L 810,410 Z" fill="#b3322b"/>
+  <text x="810" y="380" font-family="'Noto Sans JP', sans-serif" font-size="14" text-anchor="middle" fill="#b3322b">TANREN</text>
+  
+  <!-- 世界の最先端 -->
+  <path d="M 1110,360 L 1110,310 L 1130,310 L 1130,290 L 1090,290 L 1090,310 L 1110,310 Z" fill="#653a5e"/>
+  <text x="1110" y="280" font-family="'Noto Sans JP', sans-serif" font-size="14" text-anchor="middle" fill="#653a5e">世界最先端</text>
+  
+  <!-- エージェントレベルの詳細 -->
+  <text x="720" y="600" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">各レベルの定義と実例</text>
+  <rect x="720" y="610" width="200" height="2" fill="#1a5b66"/>
+  
+  <rect x="720" y="630" width="460" height="160" rx="5" fill="white" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="740" y="665" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+    <tspan x="740" dy="0">• Lv.0.5: TANREN（基本AIを実用化）</tspan>
+    <tspan x="740" dy="35">• Lv.1: Dify/Make/Zapier/キントーン</tspan>
+    <tspan x="740" dy="35">• Lv.2: Devin（Slack内開発ツール）</tspan>
+    <tspan x="740" dy="35">• Lv.3: Manus/ジェンスパーク（高度AI）</tspan>
+  </text>
+  
+  <!-- 講演で伝えたいポイント -->
+  <rect x="720" y="820" width="460" height="120" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2"/>
+  <text x="740" y="850" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="bold" fill="#1a5b66">レベルと投資判断</text>
+  <text x="740" y="890" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+    <tspan x="740" dy="0">• 世界の潮流と中小企業の適切な投資判断</tspan>
+    <tspan x="740" dy="30">• レベル0.5で十分ビジネス効果を得られる現実</tspan>
+  </text>
+  
+  <!-- カラム3: 次のステップと確認事項 -->
+  <rect x="1360" y="180" width="480" height="60" fill="#653a5e"/>
+  <text x="1600" y="222" font-family="'Noto Serif JP', serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#f4f1ea" letter-spacing="0.05em">次のステップ</text>
+  
+  <!-- カラム3コンテンツ -->
+  <text x="1360" y="280" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">講演に向けた準備</text>
+  <rect x="1360" y="290" width="180" height="2" fill="#653a5e"/>
+  
+  <!-- 講演までのタイムライン図 -->
+  <rect x="1380" y="320" width="440" height="240" rx="5" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- タイムライン -->
+  <text x="1600" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c2c2c">講演までのプロセス</text>
+  
+  <!-- タイムラインライン -->
+  <line x1="1460" y1="380" x2="1460" y2="540" stroke="#653a5e" stroke-width="2"/>
+  
+  <!-- ポイント1 -->
+  <circle cx="1460" cy="400" r="10" fill="#653a5e"/>
+  <text x="1480" y="405" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">プロフィール・写真の提出</text>
+  
+  <!-- ポイント2 -->
+  <circle cx="1460" cy="440" r="10" fill="#653a5e"/>
+  <text x="1480" y="445" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">講演タイトルの決定</text>
+  
+  <!-- ポイント3 -->
+  <circle cx="1460" cy="480" r="10" fill="#653a5e"/>
+  <text x="1480" y="485" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">講演資料の準備</text>
+  
+  <!-- ポイント4 -->
+  <circle cx="1460" cy="520" r="10" fill="#653a5e"/>
+  <text x="1480" y="525" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">当日：5月16日 14:00までに会場入り</text>
+  
+  <!-- スケジュールの詳細 -->
+  <text x="1360" y="600" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">依頼内容の最終確認</text>
+  <rect x="1360" y="610" width="200" height="2" fill="#653a5e"/>
+  
+  <rect x="1360" y="630" width="460" height="160" rx="5" fill="white" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="1380" y="665" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+    <tspan x="1380" dy="0">• 日時：5月16日（金）14:50〜15:50</tspan>
+    <tspan x="1380" dy="35">• 場所：五反田（詳細は別途連絡）</tspan>
+    <tspan x="1380" dy="35">• 懇親会：18:00〜 参加</tspan>
+    <tspan x="1380" dy="35">• SNS連携：富山社長とFacebook連携希望</tspan>
+  </text>
+  
+  <!-- 最終確認事項 -->
+  <rect x="1360" y="820" width="460" height="120" rx="5" fill="#f4f1ea" stroke="#653a5e" stroke-width="2"/>
+  <text x="1380" y="850" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="bold" fill="#653a5e">最終確認ポイント</text>
+  <text x="1380" y="890" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+    <tspan x="1380" dy="0">• 斉藤氏・富山社長との連絡体制の確立</tspan>
+    <tspan x="1380" dy="30">• 佐藤氏が提案するタイトルの承認プロセス</tspan>
+  </text>
+  
+  <!-- フッター -->
+  <text x="120" y="1060" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">04</text>
+  <text x="1800" y="1060" font-family="'Noto Sans JP', sans-serif" font-size="16" text-anchor="end" fill="#2c2c2c">IT系イノベーションフォーラム</text>
+</svg> 

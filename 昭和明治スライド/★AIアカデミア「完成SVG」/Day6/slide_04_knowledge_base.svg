@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="1920" height="1080" fill="#F4F1EA"/>
+  <g clip-path="url(#clip0_0_1)">
+    <path d="M1920 0H0V1080H1920V0Z" fill="#F4F1EA"/>
+    <path d="M1920 0H0V120H1920V0Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="36" letter-spacing="0em"><tspan x="724.734" y="54.9">Day6: AIエージェントの展開</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="24" letter-spacing="0em"><tspan x="871.016" y="100.1">実用化への第一歩</tspan></text>
+    <path d="M520 83C524.418 83 528 79.4183 528 75C528 70.5817 524.418 67 520 67C515.582 67 512 70.5817 512 75C512 79.4183 515.582 83 520 83Z" fill="#B3322B"/>
+    <path d="M540 75H740" stroke="#B3322B" stroke-width="3"/>
+    <path d="M1380 83C1384.42 83 1388 79.4183 1388 75C1388 70.5817 1384.42 67 1380 67C1375.58 67 1372 70.5817 1372 75C1372 79.4183 1375.58 83 1380 83Z" fill="#B3322B"/>
+    <path d="M1160 75H1360" stroke="#B3322B" stroke-width="3"/>
+    
+    <!-- メインタイトル -->
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="42" font-weight="bold" letter-spacing="0em"><tspan x="750" y="180.9">共創とチャレンジ</tspan></text>
+    
+    <!-- 左カラム -->
+    <path d="M640 220H40V1020H640V220Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="170" y="270.2">人間とAIの共創</tspan></text>
+    <path d="M140 280H540" stroke="#B3322B" stroke-width="3"/>
+    <path d="M140 286C143.314 286 146 283.314 146 280C146 276.686 143.314 274 140 274C136.686 274 134 276.686 134 280C134 283.314 136.686 286 140 286Z" fill="#B3322B"/>
+    <path d="M540 286C543.314 286 546 283.314 546 280C546 276.686 543.314 274 540 274C536.686 274 534 276.686 534 280C534 283.314 536.686 286 540 286Z" fill="#B3322B"/>
+    
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="70" y="330">🤝 共創の本質</tspan></text>
+    <path d="M610 350H70V520H610V350Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="1"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="380.9">• 競合ではなく協働するパートナーシップ</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="410.9">• 人間の創造性とAIの処理能力の融合</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="440.9">• 相互補完による価値創造の最大化</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="470.9">• AIが人間の限界を拡張する関係性</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="500.9">• 信頼構築による協働の深化</tspan></text>
+    
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="70" y="560">🎨 共創モデルの事例</tspan></text>
+    <path d="M610 580H70V800H610V580Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="1"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="90" y="620.9">1. クリエイティブ領域</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="650.9">• 人間のアイデアをAIが多様に展開</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="680.9">• 創作プロセスの加速と選択肢の拡大</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="90" y="720.9">2. 知識集約型領域</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="750.9">• AIが情報整理、人間が最終判断</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="780.9">• 専門知識の拡張と意思決定支援</tspan></text>
+    
+    <path d="M610 820H70V990H610V820Z" fill="#B3322B" fill-opacity="0.1"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="90" y="860">💼 労働環境での共創</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="900.9">• 定型作業をAIが担当し、人間は</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="930.9">　創造的業務に集中できる環境</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="960.9">• 生産性と創造性の同時向上を実現</tspan></text>
+    
+    <!-- 中央カラム -->
+    <path d="M1260 220H660V1020H1260V220Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="790" y="270.2">これからの思考法</tspan></text>
+    <path d="M760 280H1160" stroke="#1A5B66" stroke-width="3"/>
+    <path d="M760 286C763.314 286 766 283.314 766 280C766 276.686 763.314 274 760 274C756.686 274 754 276.686 754 280C754 283.314 756.686 286 760 286Z" fill="#1A5B66"/>
+    <path d="M1160 286C1163.31 286 1166 283.314 1166 280C1166 276.686 1163.31 274 1160 274C1156.69 274 1154 276.686 1154 280C1154 283.314 1156.69 286 1160 286Z" fill="#1A5B66"/>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="330">🧠 時代の変化に適応する思考習慣</tspan></text>
+    <path d="M1230 350H690V550H1230V350Z" fill="#F4F1EA" stroke="#1A5B66" stroke-width="1"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="380.9">① 柔軟性と継続的学習の姿勢</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="410.9">• 固定的な知識からプロセス重視へ</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="440.9">• 常に学び続ける習慣の構築</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="480.9">② テクノロジーへの理解と活用力</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="510.9">• AIの基本原理の把握</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="540.9">• 適切なツール選定と活用能力</tspan></text>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="590">🔍 批判的思考とメタ認知能力</tspan></text>
+    <path d="M1230 610H690V840H1230V610Z" fill="#F4F1EA" stroke="#1A5B66" stroke-width="1"/>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="640.9">① 情報評価と検証のスキル</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="670.9">• AIの出力を鵜呑みにしない姿勢</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="700.9">• ファクトチェックと多角的検証</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="740.9">② 自己の思考プロセスへの意識</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="770.9">• 自分の思考バイアスの認識</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="800.9">• 問題解決アプローチの多様化</tspan></text>
+    
+    <path d="M1230 860H690V990H1230V860Z" fill="#1A5B66" fill-opacity="0.1"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="710" y="900">🔄 プロセス重視の思考</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="935.9">• 正解の暗記より問題解決プロセスの習得</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="965.9">• 考え方の枠組みを柔軟に更新する姿勢</tspan></text>
+    
+    <!-- 右カラム -->
+    <path d="M1880 220H1280V1020H1880V220Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="1420" y="270.2">課題終了後の継続学習</tspan></text>
+    <path d="M1380 280H1780" stroke="#653A5E" stroke-width="3"/>
+    <path d="M1380 286C1383.31 286 1386 283.314 1386 280C1386 276.686 1383.31 274 1380 274C1376.69 274 1374 276.686 1374 280C1374 283.314 1376.69 286 1380 286Z" fill="#653A5E"/>
+    <path d="M1780 286C1783.31 286 1786 283.314 1786 280C1786 276.686 1783.31 274 1780 274C1776.69 274 1774 276.686 1774 280C1774 283.314 1776.69 286 1780 286Z" fill="#653A5E"/>
+    
+    <path d="M1850 330H1310V480H1850V330Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="1"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1330" y="370">👥 コミュニティへの参加</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="405.9">• 同窓生ネットワークの活用</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="435.9">• オンラインコミュニティでの知見共有</tspan></text>
+    
+    <path d="M1850 500H1310V680H1850V500Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="1"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1330" y="540">🤖 AIエージェントの継続進化</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="575.9">• エージェントの定期的な改良</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="605.9">• 新しい機能と用途の開拓</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="635.9">• 実務での活用事例の蓄積</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="665.9">• フィードバックを基にした進化</tspan></text>
+    
+    <path d="M1850 700H1310V850H1850V700Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="1"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1330" y="740">📚 最新トレンドのキャッチアップ</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="775.9">• 定期的な技術動向調査</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="805.9">• オンラインでの学習リソース活用</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="835.9">• 業界カンファレンスへの参加</tspan></text>
+    
+    <path d="M1850 870H1310V990H1850V870Z" fill="#653A5E" fill-opacity="0.1"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1330" y="910">🚀 実践プロジェクト</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="945.9">• 小規模な実験的プロジェクトの実施</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="975.9">• 実務課題へのAI適用と成果の共有</tspan></text>
+    
+    <!-- フッター -->
+    <path d="M1920 1040H0V1080H1920V1040Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="694.32" y="1064.9">TANREN株式会社 / 株式会社MVP | AI人材育成プログラム | 2025年春季講座</tspan></text>
+  </g>
+  <defs>
+    <clipPath id="clip0_0_1">
+      <rect width="1920" height="1080" fill="white"/>
+    </clipPath>
+  </defs>
+</svg> 

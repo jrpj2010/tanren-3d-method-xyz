@@ -1,0 +1,92 @@
+<svg width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1280" height="720" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1280" height="80" fill="#2c2c2c"/>
+  <text x="640" y="50" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea" text-anchor="middle" letter-spacing="0.1em">本気で日本の営業を改革する</text>
+  <line x1="40" y1="80" x2="1240" y2="80" stroke="#b3322b" stroke-width="3"/>
+  
+  <!-- タイトル -->
+  <text x="640" y="130" font-family="'Noto Serif JP', serif" font-size="36" fill="#2c2c2c" text-anchor="middle" letter-spacing="0.05em">田中の物語：営業マンの自己変革</text>
+  <line x1="440" y1="145" x2="840" y2="145" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="440" cy="145" r="4" fill="#b3322b"/>
+  <circle cx="840" cy="145" r="4" fill="#b3322b"/>
+  
+  <!-- 3カラムレイアウト -->
+  <!-- 左カラム -->
+  <rect x="60" y="180" width="360" height="450" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="240" y="210" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#1a5b66" text-anchor="middle" font-weight="bold">田中のプロフィールと課題</text>
+  
+  <text x="80" y="240" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">田中のプロフィール</text>
+  <text x="80" y="265" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・35歳、日本企業で10年間営業職</text>
+  <text x="80" y="290" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・真面目で顧客との関係構築に長けている</text>
+  <text x="80" y="315" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・日本型営業スタイルに習熟</text>
+  <text x="80" y="340" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・自治体営業にも経験あり</text>
+  
+  <text x="80" y="370" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">直面していた課題</text>
+  <rect x="90" y="375" width="310" height="1" fill="#1a5b66" stroke-width="0"/>
+  <text x="80" y="395" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・長時間労働の常態化</text>
+  <text x="80" y="420" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・成約率の低迷</text>
+  <text x="80" y="445" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・非効率な営業活動への疑問</text>
+  <text x="80" y="470" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・データ活用の欠如</text>
+  <text x="80" y="495" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・キャリアの停滞感</text>
+  
+  <!-- イラスト表現 -->
+  <rect x="100" y="515" width="280" height="100" fill="none" stroke="#1a5b66" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="240" y="540" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#1a5b66" text-anchor="middle" font-style="italic">「このままでいいのだろうか…</text>
+  <text x="240" y="560" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#1a5b66" text-anchor="middle" font-style="italic">もっと効率的で成果の出る</text>
+  <text x="240" y="580" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#1a5b66" text-anchor="middle" font-style="italic">営業の方法があるはずだ」</text>
+  
+  <!-- 中央カラム -->
+  <rect x="460" y="180" width="360" height="450" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  <text x="640" y="210" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#b3322b" text-anchor="middle" font-weight="bold">グローバル企業への転職と変化</text>
+  
+  <text x="480" y="240" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">決断と転機</text>
+  <rect x="490" y="245" width="300" height="1" fill="#b3322b" stroke-width="0"/>
+  <text x="480" y="265" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・米系テック企業への転職</text>
+  <text x="480" y="290" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・文化ショックと適応の苦労</text>
+  <text x="480" y="315" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・データドリブン営業との出会い</text>
+  <text x="480" y="340" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・専門特化型営業体制の経験</text>
+  
+  <text x="480" y="370" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">新しい営業手法の習得</text>
+  <rect x="490" y="375" width="300" height="1" fill="#b3322b" stroke-width="0"/>
+  <text x="480" y="395" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・CRMシステムの徹底活用</text>
+  <text x="480" y="420" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・データ分析に基づく顧客優先順位付け</text>
+  <text x="480" y="445" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・インサイドセールスチームとの連携</text>
+  <text x="480" y="470" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・AIツールの活用</text>
+  <text x="480" y="495" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・成功パターンの科学的分析</text>
+  
+  <text x="480" y="525" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">実感した変化と成果</text>
+  <text x="480" y="550" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・成約率の向上（+30%）</text>
+  <text x="480" y="575" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・労働時間の削減（-20%）</text>
+  <text x="480" y="600" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・顧客満足度の大幅改善</text>
+  
+  <!-- 右カラム -->
+  <rect x="860" y="180" width="360" height="450" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+  <text x="1040" y="210" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#653a5e" text-anchor="middle" font-weight="bold">日本への帰国と改革推進</text>
+  
+  <text x="880" y="240" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">日本企業への再就職</text>
+  <rect x="890" y="245" width="300" height="1" fill="#653a5e" stroke-width="0"/>
+  <text x="880" y="265" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・中堅IT企業の営業改革リーダーに</text>
+  <text x="880" y="290" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・自治体向け営業チームを担当</text>
+  <text x="880" y="315" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・海外で学んだ手法の日本化に奮闘</text>
+  <text x="880" y="340" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・組織の抵抗との闘い</text>
+  
+  <text x="880" y="370" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">改革の推進と成果</text>
+  <rect x="890" y="375" width="300" height="1" fill="#653a5e" stroke-width="0"/>
+  <text x="880" y="395" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・Excel簡易CRMからの段階的導入</text>
+  <text x="880" y="420" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・インサイド/フィールド分業の試験導入</text>
+  <text x="880" y="445" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・小さな成功事例の積み重ね</text>
+  <text x="880" y="470" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・自治体特有プロセスのデータ化</text>
+  <text x="880" y="495" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・AI活用による業務効率化</text>
+  
+  <text x="880" y="525" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">田中の学びと展望</text>
+  <text x="880" y="550" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・日本的強みとグローバル手法の融合</text>
+  <text x="880" y="575" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・変革は文化と意識から始まる</text>
+  <text x="880" y="600" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">・自治体営業改革の社会的意義</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="670" width="1280" height="50" fill="#2c2c2c"/>
+  <text x="640" y="700" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">「田中の物語は、日本の営業改革の可能性と道のりを体現している」</text>
+</svg> 

@@ -1,0 +1,251 @@
+/* Custom CSS for AI超独学法 Chapter 3 - AIとの対話設計術 */
+
+/* Grid background */
+.grid-background {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(90deg, #00bcd4, #ffc107, #9c27b0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Active Navigation */
+.active-nav {
+  position: relative;
+}
+
+.active-nav::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #00bcd4, #ffc107, #9c27b0);
+  border-radius: 2px;
+}
+
+/* Prompt visual animation */
+.prompt-visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.human-bubble, .ai-bubble {
+  background: rgba(0, 188, 212, 0.2);
+  border: 2px solid rgba(0, 188, 212, 0.5);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  z-index: 2;
+}
+
+.human-bubble {
+  left: 10%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.ai-bubble {
+  right: 10%;
+  background: rgba(156, 39, 176, 0.2);
+  border: 2px solid rgba(156, 39, 176, 0.5);
+  animation: float 3s ease-in-out infinite 1.5s;
+}
+
+.prompt-flow {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  right: 30%;
+  height: 6px;
+  background: linear-gradient(90deg, rgba(0, 188, 212, 0.5), rgba(156, 39, 176, 0.5));
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.prompt-flow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    rgba(0, 188, 212, 0.8) 0%, 
+    rgba(255, 255, 255, 0.9) 50%, 
+    rgba(156, 39, 176, 0.8) 100%);
+  animation: flow 3s infinite linear;
+  border-radius: 3px;
+}
+
+/* Section transitions */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Feature cards */
+.feature-card {
+  background: rgba(38, 50, 56, 0.6);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 188, 212, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes flow {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-rotate {
+  animation: rotate 20s linear infinite;
+}
+
+/* Techniques section */
+.technique-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(38, 50, 56, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.technique-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.technique-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #00bcd4, #ffc107);
+}
+
+.technique-card:nth-child(odd)::before {
+  background: linear-gradient(90deg, #ffc107, #9c27b0);
+}
+
+.technique-card:nth-child(3n)::before {
+  background: linear-gradient(90deg, #9c27b0, #00bcd4);
+}
+
+/* Framework section */
+.framework-box {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(38, 50, 56, 0.4);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.framework-box:hover {
+  background: rgba(38, 50, 56, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Code blocks */
+.code-block {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border-left: 4px solid #00bcd4;
+  padding: 1rem;
+  font-family: monospace;
+  color: #e0e0e0;
+  overflow-x: auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #263238;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #546e7a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #78909c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 70px;
+  }
+  
+  .hide-mobile {
+    display: none;
+  }
+  
+  .human-bubble, .ai-bubble {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Scroll margin for section navigation */
+section {
+  scroll-margin-top: 80px;
+} 

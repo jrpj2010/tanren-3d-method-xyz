@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー装飾 -->
+  <rect x="0" y="0" width="1920" height="65" fill="#2c2c2c"/>
+  <text x="60" y="42" font-family="Noto Serif JP" font-size="24" font-weight="bold" fill="#f4f1ea">AI研修・セミナープログラムと料金体系</text>
+  <rect x="60" y="65" width="3" height="25" fill="#b3322b"/>
+  <rect x="70" y="65" width="3" height="25" fill="#1a5b66"/>
+  <rect x="80" y="65" width="3" height="25" fill="#653a5e"/>
+  
+  <!-- フッター装飾 -->
+  <rect x="0" y="1025" width="1920" height="55" fill="#2c2c2c"/>
+  <text x="1830" y="1060" font-family="Noto Sans JP" font-size="16" fill="#f4f1ea" text-anchor="end">AI活用コンサルティング・教育および書籍執筆支援に関する相談</text>
+  <text x="60" y="1060" font-family="Noto Sans JP" font-size="16" fill="#f4f1ea">2</text>
+  
+  <!-- 3カラムレイアウト -->
+  <!-- カラム1: AIセミナー（危機感醸成） -->
+  <rect x="60" y="110" width="580" height="885" fill="#ffffff" rx="5" ry="5" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="60" y="110" width="580" height="50" fill="#b3322b" rx="5" ry="5"/>
+  <text x="90" y="143" font-family="Noto Sans JP" font-size="20" font-weight="bold" fill="#ffffff">AIセミナー（危機感醸成） 🔥</text>
+  
+  <!-- カラム1コンテンツ -->
+  <text x="90" y="195" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">対象者（危機感の薄い社員）へのアプローチ</text>
+  <rect x="90" y="205" width="200" height="2" fill="#b3322b"/>
+  <text x="110" y="235" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 経営層と異なる現場社員の危機感の薄さ</text>
+  <text x="110" y="265" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" font-weight="bold">• AIに対する誤解の払拭</text>
+  <text x="130" y="295" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">- 「AIは嘘をつく（ハルシネーション）」</text>
+  <text x="130" y="325" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">- AIの真の能力の理解促進</text>
+  
+  <!-- データビジュアライゼーション1 -->
+  <rect x="110" y="355" width="480" height="180" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="130" y="380" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">AIに対する誤解と真実</text>
+  <line x1="130" y1="390" x2="330" y2="390" stroke="#b3322b" stroke-width="2"/>
+  
+  <!-- 表 -->
+  <rect x="140" y="405" width="200" height="30" fill="#b3322b"/>
+  <rect x="340" y="405" width="200" height="30" fill="#b3322b"/>
+  <text x="240" y="427" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">誤解</text>
+  <text x="440" y="427" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">真実</text>
+  
+  <rect x="140" y="435" width="200" height="40" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  <rect x="340" y="435" width="200" height="40" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  <text x="150" y="460" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c">AIは嘘をつく</text>
+  <text x="350" y="460" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c">適切なプロンプトで精度向上</text>
+  
+  <rect x="140" y="475" width="200" height="40" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  <rect x="340" y="475" width="200" height="40" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  <text x="150" y="500" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c">使いこなせない</text>
+  <text x="350" y="500" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c">プロンプト学習で習得可能</text>
+  
+  <text x="90" y="575" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">セミナーの目的</text>
+  <rect x="90" y="585" width="150" height="2" fill="#b3322b"/>
+  <text x="110" y="615" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" font-weight="bold">• 具体的な方法は教えず危機感を煽る</text>
+  <text x="110" y="645" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 世の中の変化への危機感を醸成</text>
+  <text x="110" y="675" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 学習意欲の向上</text>
+  
+  <!-- データビジュアライゼーション2 -->
+  <rect x="110" y="705" width="480" height="140" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="130" y="730" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">セミナーのポジション</text>
+  <line x1="130" y1="740" x2="310" y2="740" stroke="#b3322b" stroke-width="2"/>
+  
+  <!-- ポジション図 -->
+  <rect x="160" y="760" width="380" height="60" fill="#2c2c2c" opacity="0.05" rx="3" ry="3"/>
+  <text x="350" y="790" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">AI活用の段階的習得プロセス</text>
+  
+  <rect x="160" y="760" width="120" height="60" fill="#b3322b" opacity="0.7" rx="3" ry="3"/>
+  <text x="220" y="790" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">ステップ1</text>
+  <text x="220" y="810" font-family="Noto Sans JP" font-size="12" fill="#ffffff" text-anchor="middle">セミナー</text>
+  
+  <text x="90" y="890" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">実践ポイント</text>
+  <rect x="90" y="900" width="120" height="2" fill="#b3322b"/>
+  <rect x="110" y="920" width="480" height="60" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="130" y="950" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 圧倒的なAI活用レベルを見せることで危機感喚起</text>
+  <text x="130" y="975" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 具体的方法は教えず、次ステップへの動機づけ</text>
+  
+  <!-- カラム2: プロンプト研修 -->
+  <rect x="670" y="110" width="580" height="885" fill="#ffffff" rx="5" ry="5" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="670" y="110" width="580" height="50" fill="#1a5b66" rx="5" ry="5"/>
+  <text x="700" y="143" font-family="Noto Sans JP" font-size="20" font-weight="bold" fill="#ffffff">プロンプト研修 ⚙️</text>
+  
+  <!-- カラム2コンテンツ -->
+  <text x="700" y="195" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">研修の基本構成</text>
+  <rect x="700" y="205" width="200" height="2" fill="#1a5b66"/>
+  <text x="720" y="235" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" font-weight="bold">• 2時間：90分講義＋30分質疑</text>
+  <text x="720" y="265" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 参加人数制限なし</text>
+  <text x="720" y="295" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• アーカイブ利用可</text>
+  
+  <!-- データビジュアライゼーション3 -->
+  <rect x="720" y="325" width="480" height="120" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="740" y="350" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">時間配分</text>
+  <line x1="740" y1="360" x2="840" y2="360" stroke="#1a5b66" stroke-width="2"/>
+  
+  <!-- 円グラフ代わりのバー -->
+  <rect x="740" y="380" width="360" height="30" fill="#2c2c2c" opacity="0.1" rx="3" ry="3"/>
+  <rect x="740" y="380" width="270" height="30" fill="#1a5b66" opacity="0.7" rx="3" ry="3"/>
+  <rect x="1010" y="380" width="90" height="30" fill="#b3322b" opacity="0.7" rx="3" ry="3"/>
+  <text x="875" y="400" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">講義 90分</text>
+  <text x="1055" y="400" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">質疑 30分</text>
+  
+  <text x="700" y="495" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">プロンプト研修の重要性</text>
+  <rect x="700" y="505" width="200" height="2" fill="#1a5b66"/>
+  <text x="720" y="535" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" font-weight="bold">• AI活用の基本として不可欠</text>
+  <text x="720" y="565" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• カスタマイズ研修受講の前提条件</text>
+  <text x="720" y="595" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 1on1アドバイザリー前にも推奨</text>
+  
+  <!-- データビジュアライゼーション4 -->
+  <rect x="720" y="625" width="480" height="180" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="740" y="650" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">研修位置づけ</text>
+  <line x1="740" y1="660" x2="880" y2="660" stroke="#1a5b66" stroke-width="2"/>
+  
+  <!-- ステップ図 -->
+  <rect x="740" y="680" width="120" height="40" fill="#b3322b" opacity="0.7" rx="3" ry="3"/>
+  <text x="800" y="705" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">ステップ1</text>
+  <text x="800" y="730" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">セミナー</text>
+  
+  <line x1="860" y1="700" x2="890" y2="700" stroke="#2c2c2c" stroke-width="2" marker-end="url(#arrow2)"/>
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c2c2c"/>
+    </marker>
+  </defs>
+  
+  <rect x="890" y="680" width="120" height="40" fill="#1a5b66" opacity="0.7" rx="3" ry="3"/>
+  <text x="950" y="705" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">ステップ2</text>
+  <text x="950" y="730" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">プロンプト研修</text>
+  
+  <line x1="1010" y1="700" x2="1040" y2="700" stroke="#2c2c2c" stroke-width="2" marker-end="url(#arrow2)"/>
+  
+  <rect x="1040" y="680" width="120" height="40" fill="#653a5e" opacity="0.7" rx="3" ry="3"/>
+  <text x="1100" y="705" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">ステップ3</text>
+  <text x="1100" y="730" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">専門研修/1on1</text>
+  
+  <text x="800" y="770" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">危機感醸成</text>
+  <text x="950" y="770" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">基本スキル習得</text>
+  <text x="1100" y="770" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">専門知識習得</text>
+  
+  <text x="700" y="845" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">実践ポイント</text>
+  <rect x="700" y="855" width="120" height="2" fill="#1a5b66"/>
+  <rect x="720" y="875" width="480" height="60" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="740" y="905" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• ハイレベルなプロンプト技術を集中的に学習</text>
+  <text x="740" y="930" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 佐藤氏の実践デモンストレーションを体験</text>
+  
+  <!-- カラム3: 料金体系 -->
+  <rect x="1280" y="110" width="580" height="885" fill="#ffffff" rx="5" ry="5" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="1280" y="110" width="580" height="50" fill="#653a5e" rx="5" ry="5"/>
+  <text x="1310" y="143" font-family="Noto Sans JP" font-size="20" font-weight="bold" fill="#ffffff">研修・セミナー・製品の料金体系 💰</text>
+  
+  <!-- カラム3コンテンツ -->
+  <text x="1310" y="195" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">料金差異の理由</text>
+  <rect x="1310" y="205" width="200" height="2" fill="#653a5e"/>
+  <text x="1330" y="235" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" font-weight="bold">• TANREN社の本業</text>
+  <text x="1350" y="265" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">営業教育ソリューション「TANREN」提供</text>
+  <text x="1330" y="295" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 研修実施の背景</text>
+  <text x="1350" y="325" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">TANRENのAIによる進化を理解促進</text>
+  
+  <!-- データビジュアライゼーション5 -->
+  <rect x="1330" y="355" width="480" height="180" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="1350" y="380" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">料金体系</text>
+  <line x1="1350" y1="390" x2="1470" y2="390" stroke="#653a5e" stroke-width="2"/>
+  
+  <!-- 料金表 -->
+  <rect x="1350" y="410" width="220" height="40" fill="#653a5e"/>
+  <rect x="1570" y="410" width="140" height="40" fill="#653a5e"/>
+  <text x="1460" y="437" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">項目</text>
+  <text x="1640" y="437" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">料金（税別）</text>
+  
+  <rect x="1350" y="450" width="220" height="35" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+  <rect x="1570" y="450" width="140" height="35" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+  <text x="1360" y="473" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">セミナー単体</text>
+  <text x="1640" y="473" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" font-weight="bold" text-anchor="middle">30万円</text>
+  
+  <rect x="1350" y="485" width="220" height="35" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+  <rect x="1570" y="485" width="140" height="35" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+  <text x="1360" y="508" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">TANREN併用時のセミナー</text>
+  <text x="1640" y="508" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" font-weight="bold" text-anchor="middle">10万円</text>
+  
+  <text x="1310" y="575" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">TANREN製品（700円プラン）</text>
+  <rect x="1310" y="585" width="200" height="2" fill="#653a5e"/>
+  <text x="1330" y="615" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" font-weight="bold">• 1ID 700円/月</text>
+  <text x="1330" y="645" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 5ID刻みで契約</text>
+  <text x="1330" y="675" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 年間契約が条件</text>
+  
+  <!-- データビジュアライゼーション6 -->
+  <rect x="1330" y="705" width="480" height="140" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="1350" y="730" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">20IDの場合の初期費用例</text>
+  <line x1="1350" y1="740" x2="1550" y2="740" stroke="#653a5e" stroke-width="2"/>
+  
+  <!-- コスト計算 -->
+  <text x="1370" y="770" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">セミナー（TANREN併用割引）:</text>
+  <text x="1650" y="770" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" font-weight="bold" text-anchor="end">10万円</text>
+  
+  <text x="1370" y="800" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">TANREN 20ID×700円×12ヶ月:</text>
+  <text x="1650" y="800" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" font-weight="bold" text-anchor="end">16.8万円</text>
+  
+  <line x1="1370" y1="810" x2="1650" y2="810" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="1370" y="830" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" font-weight="bold">合計初期費用:</text>
+  <text x="1650" y="830" font-family="Noto Sans JP" font-size="16" fill="#b3322b" font-weight="bold" text-anchor="end">26.8万円</text>
+  
+  <text x="1310" y="890" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">実践ポイント</text>
+  <rect x="1310" y="900" width="120" height="2" fill="#653a5e"/>
+  <rect x="1330" y="920" width="480" height="60" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="1350" y="950" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• TANREN製品とセットで研修導入がコスト効率的</text>
+  <text x="1350" y="975" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 5ID（最小）から導入可能で段階的拡大可能</text>
+</svg> 

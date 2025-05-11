@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="80" fill="#2c2c2c"/>
+  <text x="50" y="50" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">コパイロット：AI のユーザーインターフェース革命</text>
+  <text x="1800" y="50" font-family="Noto Sans JP" font-size="16" fill="#f4f1ea" text-anchor="end">3/5</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="1030" width="1920" height="50" fill="#2c2c2c"/>
+  <text x="960" y="1060" font-family="Noto Sans JP" font-size="14" fill="#f4f1ea" text-anchor="middle">Microsoft Build Japan 2024</text>
+  
+  <!-- 3カラムレイアウト -->
+  
+  <!-- カラム1: コパイロットとは -->
+  <rect x="60" y="120" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="60" y="120" width="580" height="60" fill="#b3322b"/>
+  <text x="100" y="160" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">🤖 コパイロットの本質</text>
+  
+  <!-- メインコンテンツ カラム1 -->
+  <text x="100" y="220" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">AIのユーザーインターフェース</text>
+  <line x1="100" y1="230" x2="540" y2="230" stroke="#b3322b" stroke-width="2"/>
+  <circle cx="540" cy="230" r="4" fill="#b3322b"/>
+  
+  <text x="100" y="260" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" letter-spacing="0.5">あらゆるアプリケーションにAIを統合する新しいUI</text>
+  
+  <!-- コパイロットの概念図 -->
+  <rect x="120" y="290" width="460" height="220" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  
+  <!-- コパイロットの概念モデル -->
+  <text x="350" y="320" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" text-anchor="middle">コパイロットモデル</text>
+  
+  <!-- コパイロットの対話フロー図 -->
+  <rect x="170" y="340" width="120" height="60" rx="10" fill="#f8f5f0" stroke="#b3322b" stroke-width="1"/>
+  <text x="230" y="375" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">会話</text>
+  
+  <path d="M290 370 L350 370" stroke="#b3322b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b3322b"/>
+    </marker>
+  </defs>
+  
+  <rect x="350" y="340" width="120" height="60" rx="10" fill="#f8f5f0" stroke="#b3322b" stroke-width="2"/>
+  <text x="410" y="375" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">タスク委任</text>
+  
+  <path d="M410 400 L410 440" stroke="#b3322b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <rect x="350" y="440" width="120" height="60" rx="10" fill="#f8f5f0" stroke="#b3322b" stroke-width="2"/>
+  <text x="410" y="475" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">自律エージェント</text>
+  
+  <path d="M350 470 L290 470" stroke="#b3322b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <rect x="170" y="440" width="120" height="60" rx="10" fill="#f8f5f0" stroke="#b3322b" stroke-width="2"/>
+  <text x="230" y="465" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">指示と</text>
+  <text x="230" y="485" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">通知</text>
+  
+  <path d="M230 440 L230 400" stroke="#b3322b" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- 消費者とエンタープライズのコパイロット -->
+  <text x="100" y="550" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">コパイロットの2つの展開</text>
+  <line x1="100" y1="560" x2="540" y2="560" stroke="#b3322b" stroke-width="2"/>
+  <circle cx="540" cy="560" r="4" fill="#b3322b"/>
+  
+  <rect x="120" y="580" width="210" height="150" fill="#f8f5f0" stroke="#b3322b" stroke-width="1"/>
+  <text x="225" y="605" font-family="Noto Sans JP" font-size="16" fill="#b3322b" font-weight="bold" text-anchor="middle">Consumer Copilot</text>
+  <rect x="140" y="615" width="170" height="100" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" stroke-dasharray="2"/>
+  <text x="160" y="640" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c">• スマートフォン連携</text>
+  <text x="160" y="665" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c">• 日常タスクの自動化</text>
+  <text x="160" y="690" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c">• 情報アクセス向上</text>
+  
+  <rect x="350" y="580" width="210" height="150" fill="#f8f5f0" stroke="#b3322b" stroke-width="1"/>
+  <text x="455" y="605" font-family="Noto Sans JP" font-size="16" fill="#b3322b" font-weight="bold" text-anchor="middle">Enterprise Copilot</text>
+  <rect x="370" y="615" width="170" height="100" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" stroke-dasharray="2"/>
+  <text x="390" y="640" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c">• 組織内データ活用</text>
+  <text x="390" y="665" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c">• 業務プロセス効率化</text>
+  <text x="390" y="690" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c">• セキュリティ重視</text>
+  
+  <!-- マルチモーダル能力 -->
+  <text x="100" y="760" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">マルチモーダル能力</text>
+  <line x1="100" y1="770" x2="540" y2="770" stroke="#b3322b" stroke-width="2"/>
+  <circle cx="540" cy="770" r="4" fill="#b3322b"/>
+  
+  <rect x="120" y="790" width="460" height="180" fill="#b3322b" opacity="0.1" stroke="#b3322b" stroke-width="2"/>
+  <text x="200" y="820" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">💬 音声対話</text>
+  <text x="200" y="850" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">📝 テキスト入力と生成</text>
+  <text x="200" y="880" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">👁️ 画像認識と生成</text>
+  <text x="200" y="910" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">🎬 動画理解と処理</text>
+  
+  <text x="400" y="850" font-family="Noto Serif JP" font-size="16" fill="#b3322b" font-weight="bold" text-anchor="middle">世界を見て</text>
+  <text x="400" y="880" font-family="Noto Serif JP" font-size="16" fill="#b3322b" font-weight="bold" text-anchor="middle">解釈し</text>
+  <text x="400" y="910" font-family="Noto Serif JP" font-size="16" fill="#b3322b" font-weight="bold" text-anchor="middle">対話する</text>
+  
+  <!-- カラム2: M365コパイロットの機能 -->
+  <rect x="670" y="120" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="670" y="120" width="580" height="60" fill="#1a5b66"/>
+  <text x="710" y="160" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">📊 M365コパイロットの機能</text>
+  
+  <!-- メインコンテンツ カラム2 -->
+  <text x="710" y="220" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">Microsoft 365の変革</text>
+  <line x1="710" y1="230" x2="1150" y2="230" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="1150" cy="230" r="4" fill="#1a5b66"/>
+  
+  <text x="710" y="260" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" letter-spacing="0.5">既存アプリケーションにコパイロットを統合</text>
+  
+  <!-- アプリケーションへの統合 -->
+  <rect x="710" y="290" width="500" height="150" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+  <text x="960" y="320" font-family="Noto Serif JP" font-size="18" fill="#1a5b66" text-anchor="middle">M365アプリケーション連携</text>
+  
+  <rect x="730" y="340" width="90" height="80" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="775" y="385" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">Word</text>
+  
+  <rect x="830" y="340" width="90" height="80" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="875" y="385" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">Excel</text>
+  
+  <rect x="930" y="340" width="90" height="80" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="975" y="385" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">PowerPoint</text>
+  
+  <rect x="1030" y="340" width="90" height="80" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="1075" y="375" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">Teams &</text>
+  <text x="1075" y="395" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">Outlook</text>
+  
+  <!-- 新機能：リサーチャーとアナリスト -->
+  <text x="710" y="470" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">最新エージェント機能</text>
+  <line x1="710" y1="480" x2="1150" y2="480" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="1150" cy="480" r="4" fill="#1a5b66"/>
+  
+  <rect x="730" y="500" width="460" height="120" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="760" cy="530" r="20" fill="#1a5b66"/>
+  <text x="760" y="535" font-family="Noto Sans JP" font-size="16" fill="#f4f1ea" text-anchor="middle">R</text>
+  <text x="790" y="535" font-family="Noto Serif JP" font-size="18" fill="#1a5b66" font-weight="bold">リサーチャーエージェント</text>
+  <text x="750" y="565" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 高度な推論モデルを活用</text>
+  <text x="750" y="590" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 複雑な調査・市場分析を自動化</text>
+  <text x="750" y="615" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• ウェブと社内データの両方を活用</text>
+  
+  <rect x="730" y="640" width="460" height="120" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="760" cy="670" r="20" fill="#1a5b66"/>
+  <text x="760" y="675" font-family="Noto Sans JP" font-size="16" fill="#f4f1ea" text-anchor="middle">A</text>
+  <text x="790" y="675" font-family="Noto Serif JP" font-size="18" fill="#1a5b66" font-weight="bold">データアナリストエージェント</text>
+  <text x="750" y="705" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 複雑なデータセットを分析</text>
+  <text x="750" y="730" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• Python使用の自動コード生成</text>
+  <text x="750" y="755" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• データビジュアライゼーション自動作成</text>
+  
+  <!-- データグラウンディング -->
+  <text x="710" y="790" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">データグラウンディング</text>
+  <line x1="710" y1="800" x2="1150" y2="800" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="1150" cy="800" r="4" fill="#1a5b66"/>
+  
+  <rect x="730" y="820" width="460" height="150" fill="#1a5b66" opacity="0.1" stroke="#1a5b66" stroke-width="1"/>
+  <rect x="750" y="840" width="180" height="40" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="840" y="865" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">ウェブインデックス</text>
+  
+  <rect x="750" y="890" width="180" height="40" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="840" y="915" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">Microsoft 365データ</text>
+  
+  <rect x="940" y="840" width="180" height="40" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="1030" y="865" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">業務アプリケーション</text>
+  
+  <rect x="940" y="890" width="180" height="40" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="1030" y="915" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">データファブリック</text>
+  
+  <path d="M960 830 L830 830 L830 940 L1030 940 L1030 830 Z" fill="none" stroke="#1a5b66" stroke-width="2" stroke-dasharray="4"/>
+  <text x="930" y="960" font-family="Noto Sans JP" font-size="14" fill="#1a5b66" text-anchor="middle">エンタープライズデータ</text>
+  
+  <!-- カラム3: コパイロットの実際の効果 -->
+  <rect x="1280" y="120" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="1280" y="120" width="580" height="60" fill="#653a5e"/>
+  <text x="1320" y="160" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">📊 コパイロットの実際の効果</text>
+  
+  <!-- メインコンテンツ カラム3 -->
+  <text x="1320" y="220" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">組織の生産性向上</text>
+  <line x1="1320" y1="230" x2="1760" y2="230" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="1760" cy="230" r="4" fill="#653a5e"/>
+  
+  <text x="1320" y="260" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" letter-spacing="0.5">マイクロソフト内部での実績データ</text>
+  
+  <!-- 生産性向上データ棒グラフ -->
+  <rect x="1340" y="290" width="460" height="250" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+  <text x="1570" y="320" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" text-anchor="middle">生産性向上指標</text>
+  
+  <!-- グラフの背景と軸 -->
+  <rect x="1380" y="340" width="380" height="180" fill="#f8f5f0" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="1380" y1="520" x2="1760" y2="520" stroke="#2c2c2c" stroke-width="1"/>
+  <line x1="1380" y1="520" x2="1380" y2="340" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- 棒グラフデータ -->
+  <rect x="1410" y="420" width="50" height="100" fill="#653a5e" opacity="0.8"/>
+  <rect x="1410" y="420" width="50" height="100" fill="none" stroke="#653a5e" stroke-width="1"/>
+  <text x="1435" y="540" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">顧客サービス</text>
+  <text x="1435" y="410" font-family="Noto Sans JP" font-size="12" fill="#f4f1ea" text-anchor="middle">20%+</text>
+  
+  <rect x="1490" y="380" width="50" height="140" fill="#653a5e" opacity="0.8"/>
+  <rect x="1490" y="380" width="50" height="140" fill="none" stroke="#653a5e" stroke-width="1"/>
+  <text x="1515" y="540" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">マーケティング</text>
+  <text x="1515" y="370" font-family="Noto Sans JP" font-size="12" fill="#f4f1ea" text-anchor="middle">20%+</text>
+  
+  <rect x="1570" y="440" width="50" height="80" fill="#653a5e" opacity="0.8"/>
+  <rect x="1570" y="440" width="50" height="80" fill="none" stroke="#653a5e" stroke-width="1"/>
+  <text x="1595" y="540" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">営業効率</text>
+  <text x="1595" y="430" font-family="Noto Sans JP" font-size="12" fill="#f4f1ea" text-anchor="middle">10%</text>
+  
+  <rect x="1650" y="360" width="50" height="160" fill="#653a5e" opacity="0.8"/>
+  <rect x="1650" y="360" width="50" height="160" fill="none" stroke="#653a5e" stroke-width="1"/>
+  <text x="1675" y="540" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">HR自己解決</text>
+  <text x="1675" y="350" font-family="Noto Sans JP" font-size="12" fill="#f4f1ea" text-anchor="middle">20%+</text>
+  
+  <!-- 企業導入事例 -->
+  <text x="1320" y="570" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">日本企業での採用例</text>
+  <line x1="1320" y1="580" x2="1760" y2="580" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="1760" cy="580" r="4" fill="#653a5e"/>
+  
+  <rect x="1340" y="600" width="460" height="120" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+  <text x="1370" y="630" font-family="Noto Serif JP" font-size="16" fill="#653a5e" font-weight="bold">住友商事の事例</text>
+  <rect x="1340" y="640" width="460" height="2" fill="#653a5e"/>
+  <text x="1370" y="670" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• M365コパイロットの全社的導入</text>
+  <text x="1370" y="695" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• コパイロットチャンピオン制度の確立</text>
+  <text x="1370" y="720" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 従業員全体への活用促進運動</text>
+  
+  <!-- 新しいワークフロー -->
+  <text x="1320" y="750" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">新しいAIワークフロー</text>
+  <line x1="1320" y1="760" x2="1760" y2="760" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="1760" cy="760" r="4" fill="#653a5e"/>
+  
+  <rect x="1340" y="780" width="460" height="190" fill="#653a5e" opacity="0.1" stroke="#653a5e" stroke-width="2"/>
+  
+  <text x="1400" y="810" font-family="Noto Sans JP" font-size="16" fill="#653a5e" font-weight="bold">従来のワークフロー</text>
+  <text x="1400" y="835" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">文書作成 → スプレッドシート → 共有</text>
+  
+  <text x="1400" y="875" font-family="Noto Sans JP" font-size="16" fill="#653a5e" font-weight="bold">AIワークフロー</text>
+  <text x="1400" y="900" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">AIチャット → Pages作成 → リアルタイム協働</text>
+  <text x="1400" y="925" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">→ AIによる継続的な改善</text>
+  
+  <text x="1570" y="955" font-family="Noto Sans JP" font-size="16" fill="#653a5e" font-weight="bold" font-style="italic" text-anchor="middle">「生産性のフロンティアを変革」</text>
+</svg> 

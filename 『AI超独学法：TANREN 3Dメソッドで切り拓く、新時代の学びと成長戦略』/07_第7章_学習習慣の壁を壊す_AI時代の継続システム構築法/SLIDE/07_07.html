@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解決策②：「インプット」を仕組み化する</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #311b92 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: 900;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e1bee7;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            margin-top: 0.5rem;
+        }
+        .key-point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            transform: translateX(-20px);
+            opacity: 0;
+            animation: slideIn 0.6s forwards;
+        }
+        .key-point-icon {
+            min-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            margin-top: 0.2rem;
+            font-size: 1.2rem;
+            color: #e1bee7;
+        }
+        .key-point-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        .highlight {
+            color: #e1bee7;
+            font-weight: 700;
+        }
+        .section-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.3);
+        }
+        .knowledge-base {
+            position: relative;
+            height: 460px;
+            width: 100%;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 0.8s;
+        }
+        .db-container {
+            position: absolute;
+            width: 300px;
+            height: 380px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .db-cylinder {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            perspective: 800px;
+        }
+        .db-top, .db-bottom {
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            left: 0;
+            background: #9c27b0;
+            border-radius: 50%;
+        }
+        .db-top {
+            top: 0;
+            transform: rotateX(70deg);
+        }
+        .db-bottom {
+            bottom: 0;
+            transform: rotateX(-70deg);
+        }
+        .db-body {
+            width: 100%;
+            height: calc(100% - 80px);
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: linear-gradient(180deg, #ba68c8 0%, #7b1fa2 100%);
+            border-left: 2px solid rgba(255,255,255,0.5);
+            border-right: 2px solid rgba(0,0,0,0.3);
+        }
+        .knowledge-item {
+            position: absolute;
+            padding: 10px 15px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            opacity: 0;
+            animation: popIn 0.5s forwards;
+        }
+        .ai-node {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3949ab 0%, #5e35b1 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+        .connection-line {
+            position: absolute;
+            height: 2px;
+            background: #e1bee7;
+            transform-origin: 0 0;
+            opacity: 0;
+            animation: growLine 1s forwards;
+        }
+        .brain-icon {
+            position: absolute;
+            font-size: 28px;
+            color: rgba(255,255,255,0.8);
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            70% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes growLine {
+            from {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+            to {
+                opacity: 0.7;
+                transform: scaleX(1);
+            }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(3deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.6; transform: scale(0.95); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 0.6; transform: scale(0.95); }
+        }
+        .data-flow {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #e1bee7;
+            opacity: 0;
+        }
+        @keyframes dataFlow {
+            0% { opacity: 0.8; transform: scale(1) translate(0, 0); }
+            100% { opacity: 0; transform: scale(0.2) translate(var(--tx), var(--ty)); }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Background pattern -->
+        <svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="position: absolute; opacity: 0.05;">
+            <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        
+        <div class="section-number">セクション 3</div>
+        
+        <div class="content p-16">
+            <!-- Header Section -->
+            <div class="mb-8">
+                <h1 class="title">解決策②：「インプット」を仕組み化する</h1>
+                <h2 class="subtitle">AIナレッジベース構築の考え方</h2>
+            </div>
+            
+            <div class="flex">
+                <!-- Left Column - Explanation -->
+                <div class="w-1/2 pr-8">
+                    <div class="key-point" style="animation-delay: 0.2s;">
+                        <div class="key-point-icon">
+                            <i class="fas fa-question"></i>
+                        </div>
+                        <div class="key-point-text">
+                            <span class="highlight">なぜインプットを仕組み化すべきか？</span><br>
+                            点としての学びが埋もれず、線・面へと繋がることで
+                            「知識の死蔵」を防ぎ、価値を最大化する
+                        </div>
+                    </div>
+                    
+                    <div class="key-point" style="animation-delay: 0.4s;">
+                        <div class="key-point-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="key-point-text">
+                            <span class="highlight">AI時代の特有の課題</span><br>
+                            AIは組織や個人の中に眠る「暗黙知」や「固有の変数」を
+                            自ら掘り起こせない
+                        </div>
+                    </div>
+                    
+                    <div class="key-point" style="animation-delay: 0.6s;">
+                        <div class="key-point-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="key-point-text">
+                            <span class="highlight">暗黙知→形式知の変換プロセス</span><br>
+                            貴重な知恵の断片を継続的に記録・蓄積し、
+                            AIが学習・活用できる「ナレッジベース」へと昇華
+                        </div>
+                    </div>
+                    
+                    <div class="key-point" style="animation-delay: 0.8s;">
+                        <div class="key-point-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="key-point-text">
+                            <span class="highlight">超抽象化すると...</span><br>
+                            「組織の集合的記憶と知性をデジタル空間に構築し、
+                            AIと共に進化させていく試み」
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-white bg-opacity-10 p-4 rounded-lg transform scale-95 opacity-0" style="animation: fadeIn 0.8s forwards; animation-delay: 1s;">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-quote-left text-e1bee7 mr-2"></i>
+                            <span class="text-lg font-bold">AI時代のインプットの本質</span>
+                        </div>
+                        <p class="text-center text-lg italic">
+                            単なる「記録」ではなく<br>
+                            AIと共に未来の知識を創造する<br>
+                            <span class="highlight text-xl">戦略的な知識構築プロセス</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Visualization -->
+                <div class="w-1/2 relative">
+                    <div class="knowledge-base">
+                        <!-- Knowledge Database -->
+                        <div class="db-container">
+                            <div class="db-cylinder">
+                                <div class="db-top"></div>
+                                <div class="db-body"></div>
+                                <div class="db-bottom"></div>
+                                
+                                <!-- DB labels -->
+                                <div style="position: absolute; top: -30px; left: 50%; transform: translateX(-50%); font-weight: bold; color: #e1bee7; font-size: 18px;">
+                                    ナレッジベース
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Knowledge Items -->
+                        <div class="knowledge-item" style="top: 100px; left: 20px; animation-delay: 1.2s;">
+                            <i class="fas fa-file-alt text-purple-700 mr-1"></i> 会議議事録
+                        </div>
+                        <div class="knowledge-item" style="top: 160px; left: 40px; animation-delay: 1.3s;">
+                            <i class="fas fa-chart-bar text-blue-700 mr-1"></i> 成功事例データ
+                        </div>
+                        <div class="knowledge-item" style="top: 300px; left: 30px; animation-delay: 1.5s;">
+                            <i class="fas fa-comment-alt text-green-700 mr-1"></i> 顧客ヒアリング
+                        </div>
+                        
+                        <div class="knowledge-item" style="top: 80px; right: 30px; animation-delay: 1.4s;">
+                            <i class="fas fa-microphone text-red-700 mr-1"></i> 音声メモ
+                        </div>
+                        <div class="knowledge-item" style="top: 200px; right: 20px; animation-delay: 1.6s;">
+                            <i class="fas fa-video text-yellow-700 mr-1"></i> ロールプレイ動画
+                        </div>
+                        <div class="knowledge-item" style="top: 320px; right: 40px; animation-delay: 1.7s;">
+                            <i class="fas fa-lightbulb text-orange-700 mr-1"></i> ひらめきノート
+                        </div>
+                        
+                        <!-- AI Node -->
+                        <div class="ai-node" style="bottom: 60px; left: 50%; transform: translateX(-50%);">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        
+                        <!-- Connection Lines to AI -->
+                        <div class="connection-line" 
+                             style="width: 120px; bottom: 90px; left: 100px; transform: rotate(45deg); animation-delay: 2.0s;"></div>
+                        <div class="connection-line"
+                             style="width: 150px; bottom: 100px; left: 400px; transform: rotate(-45deg); animation-delay: 2.1s;"></div>
+                        <div class="connection-line"
+                             style="width: 80px; bottom: 140px; left: 250px; transform: rotate(90deg); animation-delay: 2.2s;"></div>
+                        
+                        <!-- Brain Icons (Implicit Knowledge) -->
+                        <div class="brain-icon floating" style="top: 60px; left: 120px;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="brain-icon floating" style="top: 180px; left: 500px; animation-delay: 0.5s;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="brain-icon floating" style="top: 280px; left: 200px; animation-delay: 1s;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        
+                        <!-- Pulsing Effect around Database -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 350px; height: 430px; border-radius: 175px / 215px; border: 2px solid rgba(225, 190, 231, 0.3); box-shadow: 0 0 20px rgba(225, 190, 231, 0.2);" class="pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Data Flow Animation -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const knowledgeItems = document.querySelectorAll('.knowledge-item');
+                const dbContainer = document.querySelector('.db-container');
+                const dbRect = dbContainer.getBoundingClientRect();
+                const dbCenterX = dbRect.left + dbRect.width/2;
+                const dbCenterY = dbRect.top + dbRect.height/2;
+                
+                // Create data flow animations
+                function createDataFlow() {
+                    knowledgeItems.forEach(item => {
+                        const itemRect = item.getBoundingClientRect();
+                        const itemCenterX = itemRect.left + itemRect.width/2;
+                        const itemCenterY = itemRect.top + itemRect.height/2;
+                        
+                        const dataPoint = document.createElement('div');
+                        dataPoint.className = 'data-flow';
+                        dataPoint.style.left = `${itemCenterX}px`;
+                        dataPoint.style.top = `${itemCenterY}px`;
+                        dataPoint.style.setProperty('--tx', `${dbCenterX - itemCenterX}px`);
+                        dataPoint.style.setProperty('--ty', `${dbCenterY - itemCenterY}px`);
+                        dataPoint.style.animation = `dataFlow 1.5s forwards ${Math.random()}s`;
+                        
+                        document.body.appendChild(dataPoint);
+                        
+                        // Remove the element after animation
+                        setTimeout(() => {
+                            dataPoint.remove();
+                        }, 2000);
+                    });
+                }
+                
+                // Start data flow animations periodically
+                setInterval(createDataFlow, 3000);
+            });
+        </script>
+    </div>
+</body>
+</html>

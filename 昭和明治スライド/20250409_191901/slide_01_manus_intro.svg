@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="60" y="60" width="1800" height="100" fill="#2c2c2c"/>
+  <text x="100" y="130" font-family="'Noto Serif JP', serif" font-size="48" fill="#f4f1ea" font-weight="bold">
+    Manusとは何か - AIエージェントの新時代
+  </text>
+  
+  <!-- カラム1 (左): Manusの由来と基本コンセプト -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="60" y="200" width="580" height="60" fill="#b3322b"/>
+    <text x="80" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      Manusの名前の由来
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="60" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="80" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      "手"の概念 🤲
+    </text>
+    <line x1="80" y1="310" x2="400" y2="310" stroke="#b3322b" stroke-width="3"/>
+    <circle cx="400" cy="310" r="4" fill="#b3322b"/>
+    
+    <!-- 本質説明 -->
+    <text x="80" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="80" y="350">「Manus」はラテン語で「手」を意味する</tspan>
+      <tspan x="80" y="380">AIに「思考力」だけでなく「実行力」を</tspan>
+      <tspan x="80" y="410">与えることの重要性を象徴している</tspan>
+    </text>
+    
+    <!-- ツール名と特徴 -->
+    <rect x="80" y="450" width="540" height="100" fill="#f4f1ea" stroke="#b3322b" stroke-width="2" rx="5"/>
+    <text x="100" y="485" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#b3322b" font-weight="bold">
+      Manus AIエージェント
+    </text>
+    <text x="100" y="520" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      思考と行動を融合し、真のインテリジェンスを実現
+    </text>
+    
+    <!-- 特徴タイトル -->
+    <text x="80" y="600" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      コーディング経験からの教訓
+    </text>
+    <line x1="80" y1="610" x2="420" y2="610" stroke="#b3322b" stroke-width="2"/>
+    
+    <!-- 実践見出し -->
+    <text x="80" y="650" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">
+      実践とフィードバックの循環 ♻️
+    </text>
+    
+    <!-- 実践ポイント -->
+    <rect x="80" y="670" width="540" height="120" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="3"/>
+    <text x="100" y="700" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="100" y="700">・複雑な問題解決には試行錯誤が不可欠</tspan>
+      <tspan x="100" y="730">・コードは作成・テスト・デバッグの繰り返しで</tspan>
+      <tspan x="100" y="760">　完成する</tspan>
+    </text>
+  </g>
+  
+  <!-- カラム2 (中央): Manusの性能と効率性 -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="670" y="200" width="580" height="60" fill="#1a5b66"/>
+    <text x="690" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      ベンチマーク性能
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="670" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="690" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      GAIAベンチマーク結果 📊
+    </text>
+    <line x1="690" y1="310" x2="1010" y2="310" stroke="#1a5b66" stroke-width="3"/>
+    <circle cx="1010" cy="310" r="4" fill="#1a5b66"/>
+    
+    <!-- 本質説明 -->
+    <text x="690" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="690" y="350">OpenAI Deep Researchを10%上回る</tspan>
+      <tspan x="690" y="380">優れた性能を示す</tspan>
+    </text>
+    
+    <!-- グラフ表現 -->
+    <rect x="690" y="420" width="250" height="30" fill="#1a5b66"/>
+    <rect x="690" y="460" width="220" height="30" fill="#b3322b"/>
+    <text x="950" y="440" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      Manus
+    </text>
+    <text x="950" y="480" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      OpenAI Deep Research
+    </text>
+    <text x="690" y="520" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-style="italic">
+      *AI業界では1-2%の差が一般的な中での10%の優位性
+    </text>
+    
+    <!-- コスト効率 -->
+    <text x="690" y="570" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      コスト効率比較 💰
+    </text>
+    <line x1="690" y1="580" x2="900" y2="580" stroke="#1a5b66" stroke-width="2"/>
+    
+    <!-- 円グラフ表現 -->
+    <circle cx="750" cy="650" r="80" fill="none" stroke="#2c2c2c" stroke-width="1"/>
+    <path d="M750,650 L750,570 A80,80 0 0,1 830,650 Z" fill="#1a5b66"/>
+    <text x="850" y="630" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="850" y="630">同等タスクで:</tspan>
+      <tspan x="850" y="660">・OpenAIより10倍安価</tspan>
+      <tspan x="850" y="690">・他SOTAより5倍安価</tspan>
+    </text>
+    
+    <!-- 実践ポイント -->
+    <rect x="690" y="750" width="540" height="100" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" rx="5"/>
+    <text x="710" y="785" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#1a5b66" font-weight="bold">
+      経済的優位性
+    </text>
+    <text x="710" y="820" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      技術的優位性と経済性を同時に達成
+    </text>
+  </g>
+  
+  <!-- カラム3 (右): Manusの汎用性 -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="1280" y="200" width="580" height="60" fill="#653a5e"/>
+    <text x="1300" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      汎用AIエージェント
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="1280" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="1300" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      広範なユースケースカバー 🌐
+    </text>
+    <line x1="1300" y1="310" x2="1620" y2="310" stroke="#653a5e" stroke-width="3"/>
+    <circle cx="1620" cy="310" r="4" fill="#653a5e"/>
+    
+    <!-- 本質説明 -->
+    <text x="1300" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="1300" y="350">21の専門特化型AIエージェントのタスク</tspan>
+      <tspan x="1300" y="380">の76%をカバー</tspan>
+    </text>
+    
+    <!-- カバレッジ図 -->
+    <rect x="1300" y="420" width="400" height="50" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+    <rect x="1300" y="420" width="304" height="50" fill="#653a5e" opacity="0.7"/>
+    <text x="1310" y="452" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#ffffff" font-weight="bold">
+      76%
+    </text>
+    <text x="1640" y="452" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      YC W25ベンチマーク
+    </text>
+    
+    <!-- 特化型AI比較 -->
+    <text x="1300" y="520" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      垂直型AIとの対比
+    </text>
+    <line x1="1300" y1="530" x2="1500" y2="530" stroke="#653a5e" stroke-width="2"/>
+    
+    <!-- 比較表 -->
+    <rect x="1300" y="550" width="540" height="40" fill="#653a5e" opacity="0.2"/>
+    <rect x="1300" y="590" width="540" height="40" fill="#f4f1ea"/>
+    <rect x="1300" y="630" width="540" height="40" fill="#653a5e" opacity="0.2"/>
+    <rect x="1300" y="670" width="540" height="40" fill="#f4f1ea"/>
+    
+    <text x="1320" y="575" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      特性
+    </text>
+    <text x="1560" y="575" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      Manus
+    </text>
+    <text x="1700" y="575" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      垂直型AI
+    </text>
+    
+    <text x="1320" y="615" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      汎用性
+    </text>
+    <text x="1560" y="615" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      高
+    </text>
+    <text x="1700" y="615" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      低
+    </text>
+    
+    <text x="1320" y="655" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      専門性
+    </text>
+    <text x="1560" y="655" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      幅広く対応
+    </text>
+    <text x="1700" y="655" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      単一分野
+    </text>
+    
+    <text x="1320" y="695" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      適応性
+    </text>
+    <text x="1560" y="695" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      高
+    </text>
+    <text x="1700" y="695" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      限定的
+    </text>
+    
+    <!-- 実践ポイント -->
+    <rect x="1300" y="750" width="540" height="100" fill="#f4f1ea" stroke="#653a5e" stroke-width="2" rx="5"/>
+    <text x="1320" y="785" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#653a5e" font-weight="bold">
+      真の一般的AIエージェント
+    </text>
+    <text x="1320" y="820" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      専門型AIよりも優れたパフォーマンスで
+      多様なタスクを解決する単一システム
+    </text>
+  </g>
+  
+  <!-- フッター -->
+  <rect x="60" y="1000" width="1800" height="40" fill="#2c2c2c"/>
+  <text x="1700" y="1025" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#f4f1ea" text-anchor="end">
+    © 2025 Manus AI · スライド 1/5
+  </text>
+</svg> 

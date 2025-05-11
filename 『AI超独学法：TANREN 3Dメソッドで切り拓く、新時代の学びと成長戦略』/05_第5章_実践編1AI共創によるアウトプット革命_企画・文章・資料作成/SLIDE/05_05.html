@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「あなたらしい」文章作成術</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #2c3e50 0%, #4a69bd 50%, #6c5ce7 100%);
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide-header {
+            margin-bottom: 30px;
+        }
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #ffffff, #e0e0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            line-height: 1.2;
+        }
+        .slide-subtitle {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+        .content-area {
+            display: flex;
+            gap: 30px;
+            flex: 1;
+        }
+        .left-column, .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .panel {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .panel-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+        .panel-icon {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            background: rgba(162, 155, 254, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .issues-list, .benefits-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .issues-list li, .benefits-list li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+        }
+        .issue-icon, .benefit-icon {
+            margin-right: 12px;
+            color: #a29bfe;
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+        }
+        .issue-text, .benefit-text {
+            font-size: 1.1rem;
+            flex: 1;
+        }
+        .benefit-description {
+            font-size: 0.9rem;
+            margin-top: 4px;
+            opacity: 0.7;
+        }
+        .comparison-container {
+            margin-top: 20px;
+            position: relative;
+            height: 180px;
+        }
+        .timeline {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #a29bfe, white);
+            z-index: 1;
+        }
+        .timeline-point {
+            position: absolute;
+            width: 220px;
+            text-align: center;
+            top: 0;
+            transform: translateY(-50%);
+        }
+        .timeline-marker {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: white;
+            margin: 0 auto 10px;
+        }
+        .timeline-label {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        .timeline-desc {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        .timeline-example {
+            position: absolute;
+            width: 220px;
+            padding: 12px;
+            border-radius: 8px;
+            top: 100px;
+            transform: translateX(-50%);
+        }
+        .ai-example {
+            background: rgba(108, 92, 231, 0.3);
+            left: 25%;
+        }
+        .human-example {
+            background: rgba(255, 255, 255, 0.3);
+            left: 75%;
+        }
+        .example-title {
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .example-text {
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+        .method-tag {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            background: rgba(162, 155, 254, 0.3);
+            border-radius: 4px;
+            padding: 5px 12px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+        .method-tag i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-header">
+            <h1 class="slide-title">02 「あなたらしい」文章作成術</h1>
+            <div class="slide-subtitle">AIパーソナル添削</div>
+        </div>
+        
+        <div class="content-area">
+            <!-- 左カラム：AIによる文章作成の課題 -->
+            <div class="left-column">
+                <div class="panel">
+                    <div class="panel-title">
+                        <div class="panel-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        AIによる文章作成の課題
+                    </div>
+                    
+                    <ul class="issues-list">
+                        <li>
+                            <div class="issue-icon"><i class="fas fa-robot"></i></div>
+                            <div class="issue-text">「AIが書いた感」が否めない無機質さ</div>
+                        </li>
+                        <li>
+                            <div class="issue-icon"><i class="fas fa-fingerprint"></i></div>
+                            <div class="issue-text">個性や人間味の欠如</div>
+                        </li>
+                        <li>
+                            <div class="issue-icon"><i class="fas fa-heart"></i></div>
+                            <div class="issue-text">熱意や思いが伝わりにくい</div>
+                        </li>
+                        <li>
+                            <div class="issue-icon"><i class="fas fa-code"></i></div>
+                            <div class="issue-text">型にはまった表現や構成</div>
+                        </li>
+                        <li>
+                            <div class="issue-icon"><i class="fas fa-users"></i></div>
+                            <div class="issue-text">相手との関係性が反映されない</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 右カラム：あなたらしさの重要性 -->
+            <div class="right-column">
+                <div class="panel">
+                    <div class="panel-title">
+                        <div class="panel-icon"><i class="fas fa-star"></i></div>
+                        「あなたらしさ」の重要性
+                    </div>
+                    
+                    <ul class="benefits-list">
+                        <li>
+                            <div class="benefit-icon"><i class="fas fa-handshake"></i></div>
+                            <div class="benefit-text">
+                                信頼の礎となる
+                                <div class="benefit-description">個性的な言葉遣いが相手に親近感と信頼を与える</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon"><i class="fas fa-comment-dots"></i></div>
+                            <div class="benefit-text">
+                                共感を呼び覚ます
+                                <div class="benefit-description">熱意や誠実さが相手の心を動かす</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon"><i class="fas fa-brain"></i></div>
+                            <div class="benefit-text">
+                                記憶に残りやすい
+                                <div class="benefit-description">特徴的な文章は印象に残り忘れられにくい</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="benefit-icon"><i class="fas fa-link"></i></div>
+                            <div class="benefit-text">
+                                関係性を深める
+                                <div class="benefit-description">一貫した個性は長期的な信頼関係の構築に貢献</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 下部：AIと人間の文体比較 -->
+        <div class="comparison-container">
+            <div class="timeline"></div>
+            
+            <!-- タイムライン左側（AIのみ） -->
+            <div class="timeline-point" style="left: 25%;">
+                <div class="timeline-marker"></div>
+                <div class="timeline-label">AIのみの文章</div>
+                <div class="timeline-desc">論理的だが無機質</div>
+            </div>
+            
+            <!-- タイムライン中央（混合） -->
+            <div class="timeline-point" style="left: 50%;">
+                <div class="timeline-marker"></div>
+                <div class="timeline-label">AI＋あなたらしさ</div>
+                <div class="timeline-desc">理想的な共創文章</div>
+            </div>
+            
+            <!-- タイムライン右側（人間のみ） -->
+            <div class="timeline-point" style="left: 75%;">
+                <div class="timeline-marker"></div>
+                <div class="timeline-label">人間のみの文章</div>
+                <div class="timeline-desc">個性的だが時間がかかる</div>
+            </div>
+            
+            <!-- 文例：AI -->
+            <div class="timeline-example ai-example">
+                <div class="example-title">AIの文章例：</div>
+                <div class="example-text">「当社製品は高品質かつコストパフォーマンスに優れており、多くのお客様にご満足いただいております。」</div>
+            </div>
+            
+            <!-- 文例：人間 -->
+            <div class="timeline-example human-example">
+                <div class="example-title">あなたらしい文章例：</div>
+                <div class="example-text">「私たちの想いを込めた製品が、あなたの日常に小さな喜びをお届けできたなら、これ以上の幸せはありません。」</div>
+            </div>
+            
+            <!-- メソッドタグ -->
+            <div class="method-tag">
+                <i class="fas fa-clock"></i> Y軸（時間軸）視点
+            </div>
+        </div>
+    </div>
+</body>
+</html>

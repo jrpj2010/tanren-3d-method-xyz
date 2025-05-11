@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7つの挫折メカニズム</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #311b92 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: 900;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background-color: #e1bee7;
+            border-radius: 2.5px;
+        }
+        .mechanism-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            transform: translateX(-50px);
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .mechanism-number {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #e1bee7;
+            margin-right: 12px;
+            min-width: 24px;
+        }
+        .mechanism-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(225, 190, 231, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #e1bee7;
+            font-size: 1.2rem;
+        }
+        .mechanism-text {
+            flex-grow: 1;
+        }
+        .mechanism-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #e1bee7;
+        }
+        .mechanism-desc {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .solution-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            height: 100%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .solution-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        .highlight {
+            color: #e1bee7;
+            font-weight: 700;
+        }
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes rotateGear {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .rotate-slow {
+            animation: rotateGear 20s linear infinite;
+            transform-origin: center;
+        }
+        .rotate-medium {
+            animation: rotateGear 15s linear infinite reverse;
+            transform-origin: center;
+        }
+        .rotate-fast {
+            animation: rotateGear 10s linear infinite;
+            transform-origin: center;
+        }
+        .section-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Background patterns -->
+        <svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="position: absolute; opacity: 0.05;">
+            <defs>
+                <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
+                </pattern>
+                <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                    <rect width="100" height="100" fill="url(#smallGrid)" />
+                    <path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        
+        <div class="section-number">セクション 1</div>
+        
+        <div class="p-16 flex h-full">
+            <!-- Left Side - 7 Mechanisms -->
+            <div class="w-3/5 pr-8">
+                <h1 class="title">7つの挫折メカニズム</h1>
+                
+                <div class="mechanism-item" style="animation-delay: 0.1s;">
+                    <div class="mechanism-number">1</div>
+                    <div class="mechanism-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="mechanism-text">
+                        <div class="mechanism-title">ゴールの霧</div>
+                        <div class="mechanism-desc">目的地も現在地も見えない航海</div>
+                    </div>
+                </div>
+                
+                <div class="mechanism-item" style="animation-delay: 0.2s;">
+                    <div class="mechanism-number">2</div>
+                    <div class="mechanism-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="mechanism-text">
+                        <div class="mechanism-title">完璧主義の罠</div>
+                        <div class="mechanism-desc">最初の一歩が重すぎる</div>
+                    </div>
+                </div>
+                
+                <div class="mechanism-item" style="animation-delay: 0.3s;">
+                    <div class="mechanism-number">3</div>
+                    <div class="mechanism-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="mechanism-text">
+                        <div class="mechanism-title">日々の忙殺</div>
+                        <div class="mechanism-desc">緊急ではないが重要なことの後回し</div>
+                    </div>
+                </div>
+                
+                <div class="mechanism-item" style="animation-delay: 0.4s;">
+                    <div class="mechanism-number">4</div>
+                    <div class="mechanism-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <div class="mechanism-text">
+                        <div class="mechanism-title">孤独な戦い</div>
+                        <div class="mechanism-desc">フィードバックなき暗中模索</div>
+                    </div>
+                </div>
+                
+                <div class="mechanism-item" style="animation-delay: 0.5s;">
+                    <div class="mechanism-number">5</div>
+                    <div class="mechanism-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="mechanism-text">
+                        <div class="mechanism-title">成長実感の欠如</div>
+                        <div class="mechanism-desc">努力が報われない感覚</div>
+                    </div>
+                </div>
+                
+                <div class="mechanism-item" style="animation-delay: 0.6s;">
+                    <div class="mechanism-number">6</div>
+                    <div class="mechanism-icon">
+                        <i class="fas fa-book-dead"></i>
+                    </div>
+                    <div class="mechanism-text">
+                        <div class="mechanism-title">知識の死蔵</div>
+                        <div class="mechanism-desc">学びが共有・活用されない</div>
+                    </div>
+                </div>
+                
+                <div class="mechanism-item" style="animation-delay: 0.7s;">
+                    <div class="mechanism-number">7</div>
+                    <div class="mechanism-icon">
+                        <i class="fas fa-random"></i>
+                    </div>
+                    <div class="mechanism-text">
+                        <div class="mechanism-title">環境の変化</div>
+                        <div class="mechanism-desc">継続システムが状況に対応できない</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - Solution Message -->
+            <div class="w-2/5 flex items-center">
+                <div class="solution-container">
+                    <div class="solution-title">
+                        挫折は <span class="highlight">個人の意志</span> の問題ではなく、<br>
+                        適切な <span class="highlight">仕組み</span> で解決できる
+                    </div>
+                    
+                    <div class="mx-auto my-6 relative">
+                        <!-- System/Mechanism Illustration with Gears -->
+                        <svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Large central gear -->
+                            <g class="rotate-medium">
+                                <path d="M140,70 L150,40 L170,45 L175,30 L160,15 L175,0 L195,10 L210,0 L220,20 L240,15 L245,35 L265,35 L265,55 L280,65 L265,85 L275,105 L255,115 L260,135 L240,140 L230,160 L210,155 L200,170 L180,160 L160,170 L145,155 L125,160 L110,140 L95,140 L90,120 L70,110 L75,90 L60,70 L75,55 L70,35 L90,25 L105,10 L125,15 L140,0 L155,15 L140,70" 
+                                fill="#9c27b0" opacity="0.6" stroke="white" stroke-width="2" transform="translate(-70, -30) scale(0.7)" />
+                                <circle cx="140" cy="140" r="30" fill="#1a237e" stroke="white" stroke-width="2" />
+                                <text x="140" y="145" text-anchor="middle" fill="white" font-size="16" font-family="Arial">AI</text>
+                            </g>
+                            
+                            <!-- Small gears -->
+                            <g class="rotate-fast" transform="translate(190, 70)">
+                                <path d="M40,10 L45,0 L55,3 L57.5,0 L55,0 L57.5,0 L60,5 L67.5,2.5 L70,10 L77.5,10 L77.5,17.5 L80,25 L72.5,27.5 L70,35 L62.5,35 L57.5,42.5 L50,40 L45,45 L37.5,40 L30,42.5 L25,35 L20,32.5 L17.5,25 L20,17.5 L17.5,10 L25,7.5 L30,2.5 L37.5,2.5 L40,10" 
+                                fill="#e1bee7" opacity="0.8" stroke="white" stroke-width="2" />
+                                <circle cx="50" cy="25" r="10" fill="#4a148c" stroke="white" />
+                            </g>
+                            
+                            <g class="rotate-slow" transform="translate(50, 180)">
+                                <path d="M40,10 L45,0 L55,3 L57.5,0 L55,0 L57.5,0 L60,5 L67.5,2.5 L70,10 L77.5,10 L77.5,17.5 L80,25 L72.5,27.5 L70,35 L62.5,35 L57.5,42.5 L50,40 L45,45 L37.5,40 L30,42.5 L25,35 L20,32.5 L17.5,25 L20,17.5 L17.5,10 L25,7.5 L30,2.5 L37.5,2.5 L40,10" 
+                                fill="#e1bee7" opacity="0.8" stroke="white" stroke-width="2" />
+                                <circle cx="50" cy="25" r="10" fill="#4a148c" stroke="white" />
+                            </g>
+                            
+                            <g class="rotate-medium" transform="translate(190, 190)">
+                                <path d="M40,10 L45,0 L55,3 L57.5,0 L55,0 L57.5,0 L60,5 L67.5,2.5 L70,10 L77.5,10 L77.5,17.5 L80,25 L72.5,27.5 L70,35 L62.5,35 L57.5,42.5 L50,40 L45,45 L37.5,40 L30,42.5 L25,35 L20,32.5 L17.5,25 L20,17.5 L17.5,10 L25,7.5 L30,2.5 L37.5,2.5 L40,10" 
+                                fill="#e1bee7" opacity="0.8" stroke="white" stroke-width="2" />
+                                <circle cx="50" cy="25" r="10" fill="#4a148c" stroke="white" />
+                            </g>
+                            
+                            <!-- Connecting lines -->
+                            <line x1="120" y1="120" x2="70" y2="190" stroke="white" stroke-width="3" stroke-dasharray="5,5" />
+                            <line x1="160" y1="120" x2="200" y2="90" stroke="white" stroke-width="3" stroke-dasharray="5,5" />
+                            <line x1="160" y1="160" x2="200" y2="200" stroke="white" stroke-width="3" stroke-dasharray="5,5" />
+                        </svg>
+                    </div>
+                    
+                    <p class="text-lg text-center">
+                        <span class="highlight text-xl">構造的な問題</span>には<br>
+                        <span class="highlight text-xl">構造的な解決策</span>が必要
+                    </p>
+                    
+                    <div class="mt-4 bg-white bg-opacity-10 px-5 py-3 rounded-lg">
+                        <p class="text-center text-lg">
+                            AI時代の継続システム構築が鍵
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

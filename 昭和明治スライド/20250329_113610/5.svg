@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="80" fill="#2c2c2c"/>
+  <text x="50" y="50" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">コパイロットデバイスと量子コンピューティングの未来</text>
+  <text x="1800" y="50" font-family="Noto Sans JP" font-size="16" fill="#f4f1ea" text-anchor="end">5/5</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="1030" width="1920" height="50" fill="#2c2c2c"/>
+  <text x="960" y="1060" font-family="Noto Sans JP" font-size="14" fill="#f4f1ea" text-anchor="middle">Microsoft Build Japan 2024</text>
+  
+  <!-- 3カラムレイアウト -->
+  
+  <!-- カラム1: コパイロットデバイス -->
+  <rect x="60" y="120" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="60" y="120" width="580" height="60" fill="#b3322b"/>
+  <text x="100" y="160" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">📱 コパイロットデバイス</text>
+  
+  <!-- メインコンテンツ カラム1 -->
+  <text x="100" y="220" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">エッジでのAI革命</text>
+  <line x1="100" y1="230" x2="540" y2="230" stroke="#b3322b" stroke-width="2"/>
+  <circle cx="540" cy="230" r="4" fill="#b3322b"/>
+  
+  <text x="100" y="260" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" letter-spacing="0.5">クラウドに加えてエッジでも進化するAI</text>
+  
+  <!-- エッジAI能力の図 -->
+  <rect x="120" y="290" width="460" height="180" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  <text x="350" y="320" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" text-anchor="middle">エッジAIの能力向上</text>
+  
+  <!-- NPUパフォーマンス -->
+  <rect x="150" y="350" width="400" height="80" fill="#f8f5f0" stroke="#b3322b" stroke-width="1"/>
+  <text x="190" y="385" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">NPUパフォーマンス</text>
+  <text x="480" y="385" font-family="Noto Sans JP" font-size="18" fill="#b3322b" font-weight="bold" text-anchor="end">40 TOPS</text>
+  <text x="480" y="405" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="end">（1秒あたり40兆演算）</text>
+  
+  <!-- 日本航空事例 -->
+  <rect x="120" y="490" width="460" height="120" fill="#f8f5f0" stroke="#b3322b" stroke-width="1"/>
+  <text x="150" y="520" font-family="Noto Sans JP" font-size="16" fill="#b3322b" font-weight="bold">日本航空の事例</text>
+  <rect x="150" y="530" width="400" height="1" fill="#b3322b"/>
+  <text x="150" y="555" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 小型言語モデルをデバイス上で実行</text>
+  <text x="150" y="580" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• オフラインでの高度なAI機能</text>
+  <text x="150" y="605" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 3万人が利用する社内アプリで活用</text>
+  
+  <!-- 新たなアプリケーション -->
+  <text x="100" y="640" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">新しいAIアプリケーション</text>
+  <line x1="100" y1="650" x2="540" y2="650" stroke="#b3322b" stroke-width="2"/>
+  <circle cx="540" cy="650" r="4" fill="#b3322b"/>
+  
+  <rect x="120" y="670" width="460" height="180" fill="#b3322b" opacity="0.1" stroke="#b3322b" stroke-width="2"/>
+  
+  <rect x="150" y="700" width="400" height="40" rx="5" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  <text x="170" y="725" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">生成的画像補完（Generative Fill）</text>
+  
+  <rect x="150" y="750" width="400" height="40" rx="5" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  <text x="170" y="775" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">Click-to-X 機能（クリック一つで自動処理）</text>
+  
+  <rect x="150" y="800" width="400" height="40" rx="5" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  <text x="170" y="825" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">超解像技術（Super Resolution）</text>
+  
+  <text x="350" y="870" font-family="Noto Sans JP" font-size="16" fill="#b3322b" font-style="italic" text-anchor="middle">「すべてのアプリに期待される標準機能に」</text>
+  
+  <!-- カラム2: 信頼性とセキュリティ -->
+  <rect x="670" y="120" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="670" y="120" width="580" height="60" fill="#1a5b66"/>
+  <text x="710" y="160" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">🔒 AI時代の信頼とセキュリティ</text>
+  
+  <!-- メインコンテンツ カラム2 -->
+  <text x="710" y="220" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">信頼の設計</text>
+  <line x1="710" y1="230" x2="1150" y2="230" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="1150" cy="230" r="4" fill="#1a5b66"/>
+  
+  <text x="710" y="260" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" letter-spacing="0.5">技術普及に不可欠な信頼性の確保</text>
+  
+  <!-- Secure Future Initiative -->
+  <rect x="710" y="290" width="500" height="180" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+  <text x="960" y="320" font-family="Noto Serif JP" font-size="18" fill="#1a5b66" text-anchor="middle">Secure Future Initiative</text>
+  
+  <text x="730" y="350" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">原則に基づくアプローチ</text>
+  <line x1="730" y1="360" x2="1190" y2="360" stroke="#1a5b66" stroke-width="1" stroke-dasharray="2"/>
+  
+  <rect x="730" y="380" width="140" height="70" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="800" y="415" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">プライバシー</text>
+  <text x="800" y="435" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">原則</text>
+  
+  <rect x="890" y="380" width="140" height="70" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="960" y="415" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">AI安全性</text>
+  <text x="960" y="435" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">原則</text>
+  
+  <rect x="1050" y="380" width="140" height="70" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="1120" y="415" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">エンジニアリング</text>
+  <text x="1120" y="435" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">実践</text>
+  
+  <!-- 信頼性向上機能 -->
+  <text x="710" y="500" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">信頼性向上テクノロジー</text>
+  <line x1="710" y1="510" x2="1150" y2="510" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="1150" cy="510" r="4" fill="#1a5b66"/>
+  
+  <rect x="730" y="530" width="460" height="160" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  
+  <text x="750" y="560" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" font-weight="bold">• Confidential Computing（機密計算）</text>
+  <text x="770" y="585" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c">暗号化された状態でのデータ処理</text>
+  
+  <text x="750" y="615" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" font-weight="bold">• Grounding API</text>
+  <text x="770" y="640" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c">幻覚を防止するグラウンディング機能</text>
+  
+  <text x="750" y="670" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" font-weight="bold">• AIによる幻覚チェック</text>
+  <text x="770" y="695" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c">AIで生成内容の精度を自動検証</text>
+  
+  <!-- サイバーセキュリティ -->
+  <text x="710" y="720" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">AIサイバーセキュリティ</text>
+  <line x1="710" y1="730" x2="1150" y2="730" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="1150" cy="730" r="4" fill="#1a5b66"/>
+  
+  <rect x="730" y="750" width="460" height="220" fill="#1a5b66" opacity="0.1" stroke="#1a5b66" stroke-width="2"/>
+  <text x="960" y="780" font-family="Noto Serif JP" font-size="16" fill="#1a5b66" text-anchor="middle" font-weight="bold">最新発表：AIセキュリティエージェント</text>
+  
+  <rect x="750" y="800" width="200" height="40" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="850" y="825" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">フィッシング分析</text>
+  
+  <rect x="750" y="850" width="200" height="40" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="850" y="875" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">脅威インテリジェンス</text>
+  
+  <rect x="750" y="900" width="200" height="40" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="850" y="925" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">アクセスポリシー管理</text>
+  
+  <rect x="970" y="800" width="200" height="140" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="1070" y="845" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">「セキュリティは</text>
+  <text x="1070" y="870" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">チームスポーツ」</text>
+  <text x="1070" y="895" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">パートナーエコシステム</text>
+  <text x="1070" y="920" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">との連携</text>
+  
+  <!-- カラム3: 量子コンピューティングの未来 -->
+  <rect x="1280" y="120" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="1280" y="120" width="580" height="60" fill="#653a5e"/>
+  <text x="1320" y="160" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">🔬 量子コンピューティングの未来</text>
+  
+  <!-- メインコンテンツ カラム3 -->
+  <text x="1320" y="220" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">AIの先にある次の革命</text>
+  <line x1="1320" y1="230" x2="1760" y2="230" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="1760" cy="230" r="4" fill="#653a5e"/>
+  
+  <text x="1320" y="260" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" letter-spacing="0.5">AIは自然のエミュレーター、量子は自然のシミュレーター</text>
+  
+  <!-- 量子コンピューティングの目標 -->
+  <rect x="1340" y="290" width="460" height="150" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+  <text x="1570" y="320" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" text-anchor="middle">実用的量子コンピュータへの20年の旅</text>
+  
+  <text x="1360" y="350" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">主要課題：</text>
+  <text x="1380" y="375" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 安定した量子ビットの実現</text>
+  <text x="1380" y="400" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• エラー訂正機能の実装</text>
+  <text x="1380" y="425" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 大規模量子システムの構築</text>
+  
+  <!-- Mayana量子コンピュータ -->
+  <text x="1320" y="470" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">Mayana量子コンピュータ</text>
+  <line x1="1320" y1="480" x2="1760" y2="480" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="1760" cy="480" r="4" fill="#653a5e"/>
+  
+  <rect x="1340" y="500" width="460" height="230" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+  
+  <text x="1360" y="530" font-family="Noto Sans JP" font-size="16" fill="#653a5e" font-weight="bold">Mayana 1</text>
+  <rect x="1360" y="540" width="420" height="1" fill="#653a5e"/>
+  
+  <text x="1380" y="565" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• Mayanaゼロモード物理学的発見に基づく</text>
+  <text x="1380" y="590" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 安定した量子ビットの実現</text>
+  <text x="1380" y="615" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 単一チップ上に数百万量子ビットの可能性</text>
+  <text x="1380" y="640" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 医薬品開発、新素材創造、環境問題解決に期待</text>
+  
+  <text x="1360" y="680" font-family="Noto Sans JP" font-size="16" fill="#653a5e" font-weight="bold">Azureでの量子開発</text>
+  <rect x="1360" y="690" width="420" height="1" fill="#653a5e"/>
+  
+  <text x="1380" y="715" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 量子コンピュータをAzureから利用可能に</text>
+  <text x="1380" y="740" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• Q#言語によるプログラミング</text>
+  <text x="1380" y="765" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 論理的エラー訂正機能</text>
+  
+  <!-- まとめと結論 -->
+  <rect x="1340" y="770" width="460" height="200" fill="#653a5e" opacity="0.1" stroke="#653a5e" stroke-width="2"/>
+  <text x="1570" y="810" font-family="Noto Serif JP" font-size="20" fill="#653a5e" text-anchor="middle" font-weight="bold">使命の再確認</text>
+  
+  <text x="1360" y="850" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" font-style="italic">"私たちの使命は地球上のすべての人とすべての</text>
+  <text x="1360" y="875" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" font-style="italic">組織がより多くのことを達成できるようにすること"</text>
+  
+  <text x="1360" y="915" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">日本と共に歩んできた47年の歴史</text>
+  <text x="1360" y="940" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">AI時代にも共に革新を創造する</text>
+</svg> 

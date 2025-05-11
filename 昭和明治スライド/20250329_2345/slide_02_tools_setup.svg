@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Background with subtle texture -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  <pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100">
+    <rect width="100" height="100" fill="#f4f1ea"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="40" y="30"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="20" y="50"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="70" y="70"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="10" y="90"/>
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#grain)"/>
+  
+  <!-- Header Section -->
+  <rect x="0" y="0" width="1920" height="120" fill="#2c2c2c" opacity="0.85"/>
+  <text x="60" y="75" font-family="Noto Serif JP, serif" font-size="36" font-weight="700" fill="#f4f1ea" letter-spacing="2">次世代SVGプレゼン講座：ツールと環境構築</text>
+  <text x="1860" y="75" font-family="Noto Sans JP, sans-serif" font-size="28" text-anchor="end" fill="#f4f1ea">02/05</text>
+  
+  <!-- Left Column -->
+  <g transform="translate(60, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" opacity="0.2"/>
+    
+    <!-- Column Title -->
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#1a5b66">Cursorの導入と設定</text>
+    <line x1="180" y1="70" x2="380" y2="70" stroke="#1a5b66" stroke-width="2"/>
+    <circle cx="280" cy="70" r="5" fill="#1a5b66"/>
+    
+    <!-- Content -->
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">AIエディターCursorとは？</text>
+    
+    <rect x="40" y="160" width="480" height="120" rx="4" fill="white" stroke="#1a5b66" stroke-width="1"/>
+    <text x="50" y="185" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• VibeCodingの概念と共に注目のAIエディタ</text>
+    <text x="50" y="215" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• ChatGPTライクな会話UIとエージェント機能</text>
+    <text x="50" y="245" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• コード生成や自動ドキュメント生成が得意</text>
+    <text x="50" y="275" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 有料版/無料版あり（高度なAI機能は有償）</text>
+    
+    <!-- Steps to Setup -->
+    <text x="20" y="320" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#1a5b66">Cursor導入ステップ</text>
+    
+    <g>
+      <rect x="40" y="350" width="480" height="40" rx="4" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+      <text x="60" y="375" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">① 公式サイトからアプリをダウンロード・インストール</text>
+    </g>
+    
+    <g>
+      <rect x="40" y="400" width="480" height="40" rx="4" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+      <text x="60" y="425" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">② 初回起動時にAPIキーをセットアップ（必要に応じて）</text>
+    </g>
+    
+    <g>
+      <rect x="40" y="450" width="480" height="40" rx="4" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+      <text x="60" y="475" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">③ Chat/Agent機能を確認</text>
+    </g>
+    
+    <!-- Image Placeholder -->
+    <rect x="40" y="520" width="480" height="240" rx="4" fill="white" stroke="#1a5b66" stroke-width="1"/>
+    <text x="280" y="640" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#1a5b66">Cursorの画面イメージ</text>
+    <text x="280" y="670" font-family="Noto Sans JP, sans-serif" font-size="16" text-anchor="middle" fill="#2c2c2c">（左側にChat/Agent、右側にエディタが表示）</text>
+  </g>
+  
+  <!-- Middle Column -->
+  <g transform="translate(680, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="2" opacity="0.2"/>
+    
+    <!-- Column Title -->
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#b3322b">プロジェクト構成と設定</text>
+    <line x1="180" y1="70" x2="380" y2="70" stroke="#b3322b" stroke-width="2"/>
+    <circle cx="280" cy="70" r="5" fill="#b3322b"/>
+    
+    <!-- Content -->
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">フォルダ作成の流れ</text>
+    
+    <g>
+      <rect x="40" y="160" width="480" height="60" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+      <text x="50" y="185" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">① ローカルPCの任意のディレクトリに新規フォルダ</text>
+      <text x="50" y="215" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">  （例：「昭和明治スライド」など）を作成</text>
+    </g>
+    
+    <text x="20" y="260" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#b3322b">Project Rules設定</text>
+    
+    <g>
+      <rect x="40" y="290" width="480" height="150" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+      <text x="50" y="320" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#2c2c2c">Project Rulesとは？</text>
+      <text x="50" y="350" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• プロジェクト単位のカスタム指示書</text>
+      <text x="50" y="380" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• System Promptのようなもの</text>
+      <text x="50" y="410" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• プロジェクト全体に適用される設定</text>
+      <text x="50" y="440" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• AIの挙動を定めるルールセット</text>
+    </g>
+    
+    <!-- Directory Tree Visualization -->
+    <text x="20" y="480" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#b3322b">フォルダ構造例</text>
+    
+    <g>
+      <rect x="40" y="510" width="480" height="220" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+      <text x="50" y="540" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">昭和明治スライド/</text>
+      <text x="70" y="570" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">├── rules/</text>
+      <text x="90" y="600" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">└── svg.rules  # SVG生成ルール</text>
+      <text x="70" y="630" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">├── 20250329_1234/  # 日付_時間</text>
+      <text x="90" y="660" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">├── slide_00_cover.svg</text>
+      <text x="90" y="690" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">├── slide_01_overview.svg</text>
+      <text x="90" y="720" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">└── slide_02_tools.svg</text>
+    </g>
+    
+    <!-- Key Point -->
+    <rect x="40" y="760" width="480" height="60" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+    <text x="50" y="790" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#b3322b">同じフォルダ内のすべての動きにルールが適用される</text>
+    <text x="50" y="815" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">ビジュアル一貫性を自動的に維持できる利点</text>
+  </g>
+  
+  <!-- Right Column -->
+  <g transform="translate(1300, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#653a5e" stroke-width="2" opacity="0.2"/>
+    
+    <!-- Column Title -->
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#653a5e">SVG生成ルールとAIエンジン</text>
+    <line x1="180" y1="70" x2="380" y2="70" stroke="#653a5e" stroke-width="2"/>
+    <circle cx="280" cy="70" r="5" fill="#653a5e"/>
+    
+    <!-- Content -->
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">SVG生成ルールの設定例</text>
+    
+    <rect x="40" y="160" width="480" height="280" rx="4" fill="white" stroke="#653a5e" stroke-width="1"/>
+    <text x="50" y="185" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">```markdown</text>
+    <text x="50" y="215" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c"># 明治・昭和モダンテイストSVGスライド</text>
+    <text x="50" y="245" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c"></text>
+    <text x="50" y="275" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">## レイアウト仕様</text>
+    <text x="50" y="305" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">- 3カラムのグリッドレイアウト</text>
+    <text x="50" y="335" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">- 16:9ディスプレイに最適化</text>
+    <text x="50" y="365" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">- ヘッダーとフッターをコンパクトに</text>
+    <text x="50" y="395" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c"></text>
+    <text x="50" y="425" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">## デザイン仕様</text>
+    <text x="50" y="455" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">- 黒(#2c2c2c)と生成色(#f4f1ea)</text>
+    <text x="50" y="485" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">- アクセント：朱色・藍色・紫色</text>
+    <text x="50" y="515" font-family="Noto Sans JP, monospace" font-size="14" fill="#2c2c2c">```</text>
+    
+    <!-- AI Engine Selection -->
+    <text x="20" y="480" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#653a5e">AIエンジンの選定</text>
+    
+    <g>
+      <rect x="40" y="510" width="480" height="230" rx="4" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+      <text x="60" y="540" font-family="Noto Sans JP, sans-serif" font-size="18" font-weight="700" fill="#2c2c2c">Cursorで選択可能なLLMモデル</text>
+      
+      <g>
+        <rect x="60" y="560" width="140" height="160" rx="4" fill="white" stroke="#653a5e" stroke-width="1"/>
+        <text x="130" y="590" font-family="Noto Sans JP, sans-serif" font-size="16" text-anchor="middle" fill="#653a5e">Gemini</text>
+        <text x="130" y="620" font-family="Noto Sans JP, sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">(Google系)</text>
+        <line x1="90" y1="640" x2="170" y2="640" stroke="#653a5e" stroke-width="1"/>
+        <text x="130" y="670" font-family="Noto Sans JP, sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">文章構造化が</text>
+        <text x="130" y="690" font-family="Noto Sans JP, sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">得意</text>
+      </g>
+      
+      <g>
+        <rect x="220" y="560" width="140" height="160" rx="4" fill="white" stroke="#653a5e" stroke-width="1"/>
+        <text x="290" y="590" font-family="Noto Sans JP, sans-serif" font-size="16" text-anchor="middle" fill="#653a5e">Claude</text>
+        <text x="290" y="620" font-family="Noto Sans JP, sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">(Anthropic系)</text>
+        <line x1="250" y1="640" x2="330" y2="640" stroke="#653a5e" stroke-width="1"/>
+        <text x="290" y="670" font-family="Noto Sans JP, sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">SVG生成が</text>
+        <text x="290" y="690" font-family="Noto Sans JP, sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">得意</text>
+      </g>
+      
+      <g>
+        <rect x="380" y="560" width="140" height="160" rx="4" fill="white" stroke="#653a5e" stroke-width="1"/>
+        <text x="450" y="590" font-family="Noto Sans JP, sans-serif" font-size="16" text-anchor="middle" fill="#653a5e">GPT</text>
+        <text x="450" y="620" font-family="Noto Sans JP, sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">(OpenAI系)</text>
+        <line x1="410" y1="640" x2="490" y2="640" stroke="#653a5e" stroke-width="1"/>
+        <text x="450" y="670" font-family="Noto Sans JP, sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">汎用的に</text>
+        <text x="450" y="690" font-family="Noto Sans JP, sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">活用可能</text>
+      </g>
+    </g>
+    
+    <!-- Recommendation -->
+    <rect x="40" y="760" width="480" height="60" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+    <text x="50" y="790" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#b3322b">本講座では Claude 3.7 Sonnet を推奨</text>
+    <text x="50" y="815" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">SVG生成・クリエイティブタスクに適した特性を持つ</text>
+  </g>
+  
+  <!-- Footer -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c" opacity="0.85"/>
+  <text x="60" y="1055" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#f4f1ea">TANREN株式会社 AI秘書・桜木美佳</text>
+  <text x="1860" y="1055" font-family="Noto Sans JP, sans-serif" font-size="16" text-anchor="end" fill="#f4f1ea">次世代SVGプレゼン講座</text>
+</svg> 

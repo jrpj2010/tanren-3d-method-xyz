@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>変数とは何か？AIには見つけられない、あなただけの宝</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
+            overflow: hidden;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            height: 100%;
+        }
+        .header-accent {
+            width: 80px;
+            height: 4px;
+            border-radius: 2px;
+            margin: 8px 0;
+        }
+        .vs-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4caf50 0%, #2196f3 100%);
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .item-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+        }
+        .item-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+        .constants li::before {
+            background-color: #bbdefb;
+            border: 1px solid #1976D2;
+        }
+        .variables li::before {
+            background-color: #c8e6c9;
+            border: 1px solid #388e3c;
+        }
+        .arrow-connector {
+            position: relative;
+            height: 4px;
+            background: linear-gradient(90deg, #2196f3, #4caf50);
+            margin: 40px 0;
+        }
+        .arrow-connector::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: -8px;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 15px solid #4caf50;
+        }
+        .treasure-icon {
+            font-size: 2rem;
+            color: #ffc107;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
+            transition: all 0.3s ease;
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 25px rgba(76, 175, 80, 0.6);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-8">
+        <!-- Header -->
+        <div class="mb-6">
+            <h1 class="text-3xl font-bold text-gray-800">変数とは何か？<span class="text-green-600">AIには見つけられない、あなただけの宝</span></h1>
+            <div class="header-accent bg-gradient-to-r from-blue-500 to-green-500"></div>
+        </div>
+        
+        <!-- Main Visual Comparison -->
+        <div class="flex justify-between h-[520px]">
+            <!-- Constants Column -->
+            <div class="w-5/12">
+                <div class="card p-6 h-full">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-equals text-2xl text-blue-600"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-blue-800">定数</h2>
+                    </div>
+                    <p class="text-gray-600 mb-4">誰もがアクセスできる、一般的な情報</p>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                        <p class="text-sm text-blue-800 font-medium mb-2">AIが簡単に収集・分析できる</p>
+                    </div>
+                    
+                    <ul class="item-list constants text-gray-700">
+                        <li class="flex items-start">
+                            <span class="ml-2">市場規模・成長率データ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="ml-2">競合企業の公開情報</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="ml-2">業界トレンドレポート</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="ml-2">一般的なマーケティングセオリー</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="ml-2">顧客レビューやSNSデータ</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-6 p-3 bg-blue-50 rounded-lg">
+                        <div class="flex items-center">
+                            <i class="fas fa-exclamation-triangle text-yellow-500 mr-3"></i>
+                            <p class="text-sm font-medium text-gray-700">競合も同じ情報を得られるため<br>差別化が難しい</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Middle Section with AI -->
+            <div class="w-2/12 flex flex-col items-center justify-center">
+                <div class="vs-circle mb-4">AI</div>
+                <div class="arrow-connector w-32"></div>
+                <div class="text-center px-2">
+                    <div class="bg-white rounded-xl p-3 shadow-md">
+                        <i class="fas fa-plus text-gray-500 text-xl mb-1"></i>
+                        <p class="text-sm font-medium">AIへの<br>変数注入</p>
+                    </div>
+                </div>
+                <div class="arrow-connector w-32 mt-4"></div>
+                <div class="bg-gradient-to-r from-blue-500 to-green-500 text-white rounded-xl p-3 text-center mt-4 glow-effect">
+                    <p class="font-bold">差別化戦略</p>
+                </div>
+            </div>
+            
+            <!-- Variables Column -->
+            <div class="w-5/12">
+                <div class="card p-6 h-full">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-fingerprint text-2xl text-green-600"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-green-800">変数</h2>
+                    </div>
+                    <p class="text-gray-600 mb-4">あなた（あなたの会社）だけが持つ独自要素</p>
+                    
+                    <div class="bg-green-50 p-4 rounded-lg mb-6 flex items-center">
+                        <i class="fas fa-gem treasure-icon mr-3"></i>
+                        <p class="text-sm text-green-800 font-medium">AIには簡単に見つけられない「宝」</p>
+                    </div>
+                    
+                    <ul class="item-list variables text-gray-700">
+                        <li class="flex items-start">
+                            <span class="ml-2"><strong>独自の技術やノウハウ</strong>：特許、秘伝のレシピ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="ml-2"><strong>強固なブランドや評判</strong>：顧客からの信頼</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="ml-2"><strong>特別な関係性</strong>：特定地域との深い絆</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="ml-2"><strong>ユニークな組織文化</strong>：挑戦を恐れない風土</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="ml-2"><strong>言語化されていない暗黙知</strong>：現場の知恵</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-6 p-3 bg-green-50 rounded-lg">
+                        <div class="flex items-center">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-3"></i>
+                            <p class="text-sm font-medium text-gray-700">競合が簡単に模倣できない<br><span class="text-green-700 font-bold">持続的競争優位の源泉</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-4 right-10">
+            <p class="text-gray-500">AI超独学法 | 第6章</p>
+        </div>
+    </div>
+</body>
+</html>

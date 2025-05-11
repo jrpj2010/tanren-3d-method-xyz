@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="1920" height="1080" fill="#F4F1EA"/>
+  <g clip-path="url(#clip0_0_1)">
+    <path d="M1920 0H0V1080H1920V0Z" fill="#F4F1EA"/>
+    <path d="M1920 0H0V120H1920V0Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="36" letter-spacing="0em"><tspan x="706.734" y="54.9">Day3: AIエージェント設計</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="24" letter-spacing="0em"><tspan x="867" y="100.1">ディープリサーチ活用</tspan></text>
+    
+    <path d="M520 83C524.418 83 528 79.4183 528 75C528 70.5817 524.418 67 520 67C515.582 67 512 70.5817 512 75C512 79.4183 515.582 83 520 83Z" fill="#B3322B"/>
+    <path d="M540 75H740" stroke="#B3322B" stroke-width="3"/>
+    <path d="M1380 83C1384.42 83 1388 79.4183 1388 75C1388 70.5817 1384.42 67 1380 67C1375.58 67 1372 70.5817 1372 75C1372 79.4183 1375.58 83 1380 83Z" fill="#B3322B"/>
+    <path d="M1160 75H1360" stroke="#B3322B" stroke-width="3"/>
+    
+    <!-- 左カラム -->
+    <path d="M640 160H40V1020H640V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="225" y="210.2">効果的な知識探索法</tspan></text>
+    <path d="M140 220H540" stroke="#B3322B" stroke-width="3"/>
+    <path d="M140 226C143.314 226 146 223.314 146 220C146 216.686 143.314 214 140 214C136.686 214 134 216.686 134 220C134 223.314 136.686 226 140 226Z" fill="#B3322B"/>
+    <path d="M540 226C543.314 226 546 223.314 546 220C546 216.686 543.314 214 540 214C536.686 214 534 216.686 534 220C534 223.314 536.686 226 540 226Z" fill="#B3322B"/>
+    
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="70" y="270">🔎 効果的な知識探索法</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="70" y="309.9">AIモデルの能力を最大限に引き出す検索手法</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="70" y="339.9">大量の質の高い情報を短時間で収集するコツ</tspan></text>
+    
+    <path d="M610 360H70V660H610V360Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="2"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="259" y="390.2">プロンプトの構成要素</tspan></text>
+    
+    <path d="M590 410H90V470H590V410Z" fill="#F4F1EA" stroke="#B3322B"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="445.9">① 目的の明示</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="320" y="445.1">何を知りたいのかを明確に伝える</tspan></text>
+    
+    <path d="M590 480H90V540H590V480Z" fill="#F4F1EA" stroke="#B3322B"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="515.9">② 背景情報の提供</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="320" y="515.1">文脈を与えて精度を高める</tspan></text>
+    
+    <path d="M590 550H90V610H590V550Z" fill="#F4F1EA" stroke="#B3322B"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="585.9">③ 具体的な指示</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="320" y="585.1">必要な詳細レベルや探索範囲を指定</tspan></text>
+    
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="70" y="700">📋 プロンプトの追加要素</tspan></text>
+    
+    <path d="M610 720H70V900H610V720Z" fill="#F4F1EA" stroke="#B3322B" stroke-dasharray="5 5"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="749.9">④ 出力形式の指定</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="110" y="775.1">• 箇条書きや表形式など、利用目的に合わせた</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="110" y="800.1">  形式を指定することで整理された情報を得る</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="839.9">⑤ 制約条件の設定</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="110" y="865.1">• 特定の時期や地域、理論に限定する</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="110" y="890.1">• 専門性レベルや文字数の指定を行う</tspan></text>
+    
+    <path d="M610 920H70V1000H610V920Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="1"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="949.9">💡 文章が長いほど、AIモデルは意図を理解しやすく</tspan></text>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="979.9">なります。詳細な指示ほど質の高い回答を得られます。</tspan></text>
+    
+    <!-- 中央カラム -->
+    <path d="M1260 160H660V1020H1260V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="830" y="210.2">ディープリサーチ戦略</tspan></text>
+    <path d="M760 220H1160" stroke="#1A5B66" stroke-width="3"/>
+    <path d="M760 226C763.314 226 766 223.314 766 220C766 216.686 763.314 214 760 214C756.686 214 754 216.686 754 220C754 223.314 756.686 226 760 226Z" fill="#1A5B66"/>
+    <path d="M1160 226C1163.31 226 1166 223.314 1166 220C1166 216.686 1163.31 214 1160 214C1156.69 214 1154 216.686 1154 220C1154 223.314 1156.69 226 1160 226Z" fill="#1A5B66"/>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="270">🔍 ディープリサーチ戦略</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="690" y="309.9">専門分野の体系的な情報を短時間で構築</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="690" y="339.9">AIの探索能力を活用した知識ベース構築</tspan></text>
+    
+    <path d="M1230 360H690V660H1230V360Z" fill="#F4F1EA" stroke="#1A5B66" stroke-width="2"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="880" y="390.2">効果的な探索フロー</tspan></text>
+    
+    <path d="M1210 410H710V480H1210V410Z" fill="#F4F1EA" stroke="#1A5B66"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="440.9">① 領域の概要把握</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="930" y="440.1">全体像と主要概念の理解</tspan></text>
+    
+    <path d="M710 440V470" stroke="#2C2C2C" stroke-dasharray="2 2"/>
+    <path d="M960 440V470" stroke="#2C2C2C" stroke-dasharray="2 2"/>
+    
+    <path d="M1210 480H710V550H1210V480Z" fill="#F4F1EA" stroke="#1A5B66"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="510.9">② サブトピック特定</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="930" y="510.1">重要な下位分野の洗い出し</tspan></text>
+    
+    <path d="M710 510V540" stroke="#2C2C2C" stroke-dasharray="2 2"/>
+    <path d="M960 510V540" stroke="#2C2C2C" stroke-dasharray="2 2"/>
+    
+    <path d="M1210 550H710V620H1210V550Z" fill="#F4F1EA" stroke="#1A5B66"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="580.9">③ 詳細情報収集</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="930" y="580.1">各サブトピックの深掘り</tspan></text>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="700">💫 実践のポイント</tspan></text>
+    
+    <path d="M1230 720H690V830H1230V720Z" fill="#F4F1EA" stroke="#1A5B66" stroke-width="2"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="749.9">情報の質を高めるテクニック</tspan></text>
+    
+    <path d="M710 767C712.209 767 714 765.209 714 763C714 760.791 712.209 759 710 759C707.791 759 706 760.791 706 763C706 765.209 707.791 767 710 767Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="730" y="768.1">複数のAIモデルに同じ質問をして比較検証</tspan></text>
+    
+    <path d="M710 797C712.209 797 714 795.209 714 793C714 790.791 712.209 789 710 789C707.791 789 706 790.791 706 793C706 795.209 707.791 797 710 797Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="730" y="798.1">同じトピックに異なる視点からアプローチ</tspan></text>
+    
+    <path d="M710 827C712.209 827 714 825.209 714 823C714 820.791 712.209 819 710 819C707.791 819 706 820.791 706 823C706 825.209 707.791 827 710 827Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="730" y="828.1">最新情報を得るための時間枠指定</tspan></text>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="870">⚡ 高度なリサーチテクニック</tspan></text>
+    
+    <path d="M1230 890H690V1000H1230V890Z" fill="#1A5B66"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="919.9">• チェーンオブソート法（連鎖的探索）</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="730" y="945.1">前の回答を活用して次の質問を構築する</tspan></text>
+    
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="975.9">• ロールプレイングプロンプト</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="730" y="995.1">AIに専門家の役割を与えて洞察を引き出す</tspan></text>
+    
+    <!-- 右カラム -->
+    <path d="M1880 160H1280V1020H1880V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="1475" y="210.2">批判的思考の組み込み</tspan></text>
+    <path d="M1380 220H1780" stroke="#653A5E" stroke-width="3"/>
+    <path d="M1380 226C1383.31 226 1386 223.314 1386 220C1386 216.686 1383.31 214 1380 214C1376.69 214 1374 216.686 1374 220C1374 223.314 1376.69 226 1380 226Z" fill="#653A5E"/>
+    <path d="M1780 226C1783.31 226 1786 223.314 1786 220C1786 216.686 1783.31 214 1780 214C1776.69 214 1774 216.686 1774 220C1774 223.314 1776.69 226 1780 226Z" fill="#653A5E"/>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1310" y="270">🤔 批判的思考の組み込み</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1310" y="309.9">収集した情報を鵜呑みにせず検証する視点</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1310" y="339.9">自分の専門知識と融合させる方法</tspan></text>
+    
+    <path d="M1850 360H1310V620H1850V360Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1515" y="390.2">情報評価の軸</tspan></text>
+    
+    <path d="M1330 425C1332.21 425 1334 422.761 1334 420C1334 417.239 1332.21 415 1330 415C1327.79 415 1326 417.239 1326 420C1326 422.761 1327.79 425 1330 425Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="425.9">信頼性: 情報源が信頼できるか</tspan></text>
+    
+    <path d="M1330 465C1332.21 465 1334 462.761 1334 460C1334 457.239 1332.21 455 1330 455C1327.79 455 1326 457.239 1326 460C1326 462.761 1327.79 465 1330 465Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="465.9">最新性: 情報が最新のものか</tspan></text>
+    
+    <path d="M1330 505C1332.21 505 1334 502.761 1334 500C1334 497.239 1332.21 495 1330 495C1327.79 495 1326 497.239 1326 500C1326 502.761 1327.79 505 1330 505Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="505.9">専門性: 十分な専門的深さがあるか</tspan></text>
+    
+    <path d="M1330 545C1332.21 545 1334 542.761 1334 540C1334 537.239 1332.21 535 1330 535C1327.79 535 1326 537.239 1326 540C1326 542.761 1327.79 545 1330 545Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="545.9">多様性: 異なる視点が含まれているか</tspan></text>
+    
+    <path d="M1330 585C1332.21 585 1334 582.761 1334 580C1334 577.239 1332.21 575 1330 575C1327.79 575 1326 577.239 1326 580C1326 582.761 1327.79 585 1330 585Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="585.9">独自性: 一般的でない視点や知見があるか</tspan></text>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1310" y="650">🔄 独自視点の追加</tspan></text>
+    
+    <path d="M1850 660H1310V820H1850V660Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1330" y="689.9">自分の視点を加える方法</tspan></text>
+    
+    <path d="M1330 4C1332.21 4 1334 2.20914 1334 0C1334 -2.20914 1352.21 -4 1350 -4C1347.79 -4 1346 -2.20914 1346 0C1346 2.20914 1347.79 4 1350 4Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1350" y="719.1">「私の経験では...」と独自の事例を追加</tspan></text>
+    
+    <path d="M1330 4C1332.21 4 1334 2.20914 1334 0C1334 -2.20914 1352.21 -4 1350 -4C1347.79 -4 1346 -2.20914 1346 0C1346 2.20914 1347.79 4 1350 4Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1350" y="749.1">「一般的には...だが、私は...と考える」形式</tspan></text>
+    
+    <path d="M1330 4C1332.21 4 1334 2.20914 1334 0C1334 -2.20914 1352.21 -4 1350 -4C1347.79 -4 1346 -2.20914 1346 0C1346 2.20914 1347.79 4 1350 4Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1350" y="779.1">実務上の独自ノウハウを組み込む</tspan></text>
+    
+    <path d="M1330 4C1332.21 4 1334 2.20914 1334 0C1334 -2.20914 1352.21 -4 1350 -4C1347.79 -4 1346 -2.20914 1346 0C1346 2.20914 1347.79 4 1350 4Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1350" y="809.1">特定の業界/分野での応用例を追加</tspan></text>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1310" y="860">📊 実践ケーススタディ</tspan></text>
+    
+    <path d="M1850 870H1310V1000H1850V870Z" fill="#653A5E"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1480" y="900.2">最終成果物イメージ</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1330" y="929.9">• 10万字の体系的な知識ベース</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1330" y="959.9">• 明確な構造と階層を持った専門情報</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1330" y="989.9">• 独自の視点と一般知識が融合した資料</tspan></text>
+    
+    <!-- フッター -->
+    <path d="M1920 1040H0V1080H1920V1040Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="694.32" y="1064.9">TANREN株式会社 / 株式会社MVP | AI人材育成プログラム | 2025年春季講座</tspan></text>
+  </g>
+  <defs>
+    <clipPath id="clip0_0_1">
+      <rect width="1920" height="1080" fill="white"/>
+    </clipPath>
+  </defs>
+</svg> 

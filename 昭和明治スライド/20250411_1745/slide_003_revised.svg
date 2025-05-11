@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c"/>
+  <text x="960" y="60" font-family="'Noto Serif JP', serif" font-size="36" fill="#f4f1ea" text-anchor="middle" letter-spacing="4">AI駆動開発セミナー計画</text>
+  <line x1="700" y1="80" x2="1220" y2="80" stroke="#f4f1ea" stroke-width="2"/>
+  <circle cx="960" cy="80" r="5" fill="#f4f1ea"/>
+  
+  <!-- フッター -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c"/>
+  <text x="960" y="1055" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#f4f1ea" text-anchor="middle">2025年4月作成 - エビラボ × 佐藤勝彦氏 対談より</text>
+  
+  <!-- 3カラムコンテナ -->
+  <g id="columns">
+    <!-- カラム1: セミナー合意事項 -->
+    <g id="column1">
+      <rect x="50" y="130" width="580" height="860" fill="#ffffff" stroke="#2c2c2c" stroke-width="2"/>
+      <rect x="50" y="130" width="580" height="60" fill="#b3322b"/>
+      <text x="340" y="170" font-family="'Noto Serif JP', serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">セミナー合意事項</text>
+      
+      <!-- サブヘッダー -->
+      <text x="70" y="220" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" letter-spacing="1">エビラボ×佐藤勝彦氏 共同セミナー基本合意</text>
+      
+      <!-- セクション1 -->
+      <rect x="70" y="240" width="540" height="2" fill="#b3322b"/>
+      <text x="70" y="270" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">🤝 合意内容の要点</text>
+      <text x="70" y="300" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" line-height="1.5">
+        <tspan x="70" y="300">最新AI駆動開発のノウハウ共有セミナー</tspan>
+        <tspan x="70" y="330">・両者の専門性を活かした共同企画</tspan>
+        <tspan x="70" y="360">・ハンズオン形式の実践的内容</tspan>
+        <tspan x="70" y="390">・参加者のスキルレベル別対応</tspan>
+      </text>
+      
+      <!-- 合意事項のビジュアル要素 -->
+      <rect x="90" y="420" width="500" height="200" fill="#f8f5f0" stroke="#b3322b" stroke-width="1"/>
+      
+      <!-- 円グラフ -->
+      <circle cx="210" cy="520" r="80" fill="transparent" stroke="#2c2c2c" stroke-width="1"/>
+      
+      <!-- 円グラフのセクション -->
+      <path d="M210,520 L210,440 A80,80 0 0,1 290,520 Z" fill="#b3322b" opacity="0.8"/>
+      <path d="M210,520 L290,520 A80,80 0 0,1 210,600 Z" fill="#b3322b" opacity="0.6"/>
+      <path d="M210,520 L210,600 A80,80 0 0,1 130,520 Z" fill="#b3322b" opacity="0.4"/>
+      <path d="M210,520 L130,520 A80,80 0 0,1 210,440 Z" fill="#b3322b" opacity="0.2"/>
+      
+      <!-- 凡例 -->
+      <rect x="340" y="460" width="15" height="15" fill="#b3322b" opacity="0.8"/>
+      <text x="365" y="473" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">実践演習 (40%)</text>
+      
+      <rect x="340" y="490" width="15" height="15" fill="#b3322b" opacity="0.6"/>
+      <text x="365" y="503" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">事例紹介 (25%)</text>
+      
+      <rect x="340" y="520" width="15" height="15" fill="#b3322b" opacity="0.4"/>
+      <text x="365" y="533" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">最新動向解説 (20%)</text>
+      
+      <rect x="340" y="550" width="15" height="15" fill="#b3322b" opacity="0.2"/>
+      <text x="365" y="563" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">質疑応答 (15%)</text>
+      
+      <text x="340" y="440" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">セミナー内容構成比</text>
+      
+      <!-- セクション2 -->
+      <text x="70" y="650" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">📅 実施形態と期間</text>
+      <text x="70" y="680" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" line-height="1.5">
+        <tspan x="70" y="680">・オンライン／対面ハイブリッド形式</tspan>
+        <tspan x="70" y="710">・全3回シリーズ（各回3時間）</tspan>
+        <tspan x="70" y="740">・録画コンテンツとして再利用</tspan>
+      </text>
+      
+      <!-- 参加対象 -->
+      <rect x="70" y="780" width="540" height="180" fill="#f8f5f0" stroke="#b3322b" stroke-width="1"/>
+      <text x="340" y="810" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" text-anchor="middle">参加対象者</text>
+      <text x="100" y="850" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+        <tspan x="100" y="850">■ 開発効率化を目指す企業のエンジニア</tspan>
+        <tspan x="100" y="880">■ AI活用に興味のある経営層・管理職</tspan>
+        <tspan x="100" y="910">■ プロンプトエンジニアリング習得希望者</tspan>
+        <tspan x="100" y="940">■ ノーコード/ローコード開発実践者</tspan>
+      </text>
+    </g>
+    
+    <!-- カラム2: セミナー計画詳細 -->
+    <g id="column2">
+      <rect x="670" y="130" width="580" height="860" fill="#ffffff" stroke="#2c2c2c" stroke-width="2"/>
+      <rect x="670" y="130" width="580" height="60" fill="#1a5b66"/>
+      <text x="960" y="170" font-family="'Noto Serif JP', serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">セミナー計画詳細</text>
+      
+      <!-- サブヘッダー -->
+      <text x="690" y="220" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" letter-spacing="1">内容構成とスケジュール計画</text>
+      
+      <!-- セクション1 -->
+      <rect x="690" y="240" width="540" height="2" fill="#1a5b66"/>
+      <text x="690" y="270" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">📘 カリキュラム構成</text>
+      
+      <!-- 第1回 -->
+      <rect x="690" y="290" width="540" height="150" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+      <rect x="690" y="290" width="540" height="30" fill="#1a5b66" opacity="0.2"/>
+      <text x="710" y="310" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">第1回: AI駆動開発の基礎と最新トレンド</text>
+      
+      <text x="710" y="345" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" line-height="1.4">
+        <tspan x="710" y="345">・LLMの進化と開発への影響</tspan>
+        <tspan x="710" y="370">・AIリーダブルな構造化指示の実践</tspan>
+        <tspan x="710" y="395">・初心者向けAI開発サービス体験</tspan>
+        <tspan x="710" y="420">・ハンズオン: Replitでのプロトタイプ作成</tspan>
+      </text>
+      
+      <!-- 第2回 -->
+      <rect x="690" y="460" width="540" height="150" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+      <rect x="690" y="460" width="540" height="30" fill="#1a5b66" opacity="0.2"/>
+      <text x="710" y="480" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">第2回: 音声入力とプロンプトエンジニアリング</text>
+      
+      <text x="710" y="515" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" line-height="1.4">
+        <tspan x="710" y="515">・音声入力によるAI対話効率化テクニック</tspan>
+        <tspan x="710" y="540">・効果的な要件定義の構造化手法</tspan>
+        <tspan x="710" y="565">・高度なAI開発エディタの選択と活用</tspan>
+        <tspan x="710" y="590">・ハンズオン: Cursorでのコード生成実践</tspan>
+      </text>
+      
+      <!-- 第3回 -->
+      <rect x="690" y="630" width="540" height="150" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+      <rect x="690" y="630" width="540" height="30" fill="#1a5b66" opacity="0.2"/>
+      <text x="710" y="650" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">第3回: 実践応用と将来展望</text>
+      
+      <text x="710" y="685" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" line-height="1.4">
+        <tspan x="710" y="685">・実際の業務への導入プロセス</tspan>
+        <tspan x="710" y="710">・成功事例とケーススタディ分析</tspan>
+        <tspan x="710" y="735">・産業変革と職種変化への対応</tspan>
+        <tspan x="710" y="760">・ハンズオン: チーム開発プロセスシミュレーション</tspan>
+      </text>
+      
+      <!-- 実施スケジュール -->
+      <rect x="690" y="800" width="540" height="160" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+      <text x="960" y="830" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" text-anchor="middle">実施スケジュール（予定）</text>
+      
+      <line x1="710" y1="850" x2="1210" y2="850" stroke="#2c2c2c" stroke-width="1"/>
+      <line x1="710" y1="890" x2="1210" y2="890" stroke="#2c2c2c" stroke-width="1"/>
+      <line x1="710" y1="930" x2="1210" y2="930" stroke="#2c2c2c" stroke-width="1"/>
+      
+      <text x="730" y="875" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">第1回</text>
+      <text x="930" y="875" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">2025年6月上旬</text>
+      
+      <text x="730" y="915" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">第2回</text>
+      <text x="930" y="915" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">2025年6月中旬</text>
+      
+      <text x="730" y="955" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">第3回</text>
+      <text x="930" y="955" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">2025年6月下旬</text>
+    </g>
+    
+    <!-- カラム3: 将来的な方向性 -->
+    <g id="column3">
+      <rect x="1290" y="130" width="580" height="860" fill="#ffffff" stroke="#2c2c2c" stroke-width="2"/>
+      <rect x="1290" y="130" width="580" height="60" fill="#653a5e"/>
+      <text x="1580" y="170" font-family="'Noto Serif JP', serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">将来的な方向性</text>
+      
+      <!-- サブヘッダー -->
+      <text x="1310" y="220" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" letter-spacing="1">セミナー後の展開と共同プロジェクト</text>
+      
+      <!-- セクション1 -->
+      <rect x="1310" y="240" width="540" height="2" fill="#653a5e"/>
+      <text x="1310" y="270" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">🚀 発展的な協業プラン</text>
+      
+      <!-- 将来展望 -->
+      <rect x="1330" y="290" width="500" height="250" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+      
+      <!-- 協業マップ -->
+      <rect x="1380" y="320" width="400" height="60" rx="10" ry="10" fill="#653a5e" opacity="0.7"/>
+      <text x="1580" y="355" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">共同コンサルティングサービス</text>
+      
+      <line x1="1500" y1="380" x2="1430" y2="410" stroke="#2c2c2c" stroke-width="1" marker-end="url(#arrow)"/>
+      <line x1="1660" y1="380" x2="1730" y2="410" stroke="#2c2c2c" stroke-width="1" marker-end="url(#arrow)"/>
+      
+      <rect x="1350" y="410" width="160" height="50" rx="10" ry="10" fill="#653a5e" opacity="0.5"/>
+      <text x="1430" y="440" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">企業向け変革支援</text>
+      
+      <rect x="1650" y="410" width="160" height="50" rx="10" ry="10" fill="#653a5e" opacity="0.5"/>
+      <text x="1730" y="440" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">教育プログラム開発</text>
+      
+      <line x1="1350" y1="460" x2="1320" y2="490" stroke="#2c2c2c" stroke-width="1" marker-end="url(#arrow)"/>
+      <line x1="1430" y1="460" x2="1430" y2="490" stroke="#2c2c2c" stroke-width="1" marker-end="url(#arrow)"/>
+      <line x1="1510" y1="460" x2="1540" y2="490" stroke="#2c2c2c" stroke-width="1" marker-end="url(#arrow)"/>
+      
+      <rect x="1290" y="490" width="120" height="40" rx="5" ry="5" fill="#653a5e" opacity="0.3"/>
+      <rect x="1380" y="490" width="120" height="40" rx="5" ry="5" fill="#653a5e" opacity="0.3"/>
+      <rect x="1470" y="490" width="120" height="40" rx="5" ry="5" fill="#653a5e" opacity="0.3"/>
+      
+      <text x="1350" y="515" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#2c2c2c" text-anchor="middle">組織診断</text>
+      <text x="1440" y="515" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#2c2c2c" text-anchor="middle">ツール導入</text>
+      <text x="1530" y="515" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#2c2c2c" text-anchor="middle">人材育成</text>
+      
+      <!-- セクション2 -->
+      <text x="1310" y="570" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">📚 知識共有プラットフォーム</text>
+      
+      <!-- プラットフォーム構想 -->
+      <rect x="1330" y="600" width="500" height="180" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+      
+      <text x="1350" y="630" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">オンライン学習プラットフォーム構想</text>
+      
+      <rect x="1350" y="650" width="460" height="110" rx="0" ry="0" fill="#ffffff" stroke="#653a5e" stroke-width="1" stroke-dasharray="5,5"/>
+      
+      <text x="1370" y="680" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" line-height="1.4">
+        <tspan x="1370" y="680">・セミナー録画コンテンツのアーカイブ</tspan>
+        <tspan x="1370" y="705">・ケーススタディデータベース</tspan>
+        <tspan x="1370" y="730">・プロンプトライブラリとテンプレート共有</tspan>
+        <tspan x="1370" y="755">・コミュニティフォーラム</tspan>
+      </text>
+      
+      <!-- 実践ポイント -->
+      <rect x="1310" y="800" width="540" height="160" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+      <text x="1580" y="830" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" text-anchor="middle">次のステップ</text>
+      <text x="1340" y="870" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+        <tspan x="1340" y="870">■ セミナー詳細企画書の作成（5月上旬）</tspan>
+        <tspan x="1340" y="900">■ 参加企業向け事前ヒアリング実施</tspan>
+        <tspan x="1340" y="930">■ 実践演習用教材の共同開発</tspan>
+        <tspan x="1340" y="960">■ フォローアップコンテンツの検討</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- マーカー定義 -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c2c2c"/>
+    </marker>
+  </defs>
+</svg>

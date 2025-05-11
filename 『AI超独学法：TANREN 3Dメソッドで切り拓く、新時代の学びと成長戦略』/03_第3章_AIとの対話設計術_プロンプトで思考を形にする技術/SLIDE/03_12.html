@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主要AIプラットフォームの特性と戦略的使い分け</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a192f 0%, #172a46 100%);
+            color: white;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            padding: 30px;
+        }
+        .section-number {
+            font-size: 1.5rem;
+            background: linear-gradient(90deg, #2196F3, #64B5F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        .heading-underline {
+            height: 3px;
+            width: 60px;
+            background: linear-gradient(90deg, #2196F3, rgba(33, 150, 243, 0.3));
+            border-radius: 2px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+        }
+        .ai-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+        }
+        .ai-table th {
+            background: rgba(33, 150, 243, 0.2);
+            font-weight: 600;
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .ai-table th:first-child {
+            border-top-left-radius: 8px;
+        }
+        .ai-table th:last-child {
+            border-top-right-radius: 8px;
+        }
+        .ai-row:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.03);
+        }
+        .ai-row:nth-child(even) {
+            background: rgba(255, 255, 255, 0.01);
+        }
+        .ai-row:hover {
+            background: rgba(33, 150, 243, 0.08);
+        }
+        .ai-table td {
+            padding: 10px 12px;
+            vertical-align: top;
+            font-size: 0.85rem;
+            border-bottom: 1px solid rgba(33, 150, 243, 0.1);
+        }
+        .ai-logo {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        .context-badge {
+            background: rgba(33, 150, 243, 0.15);
+            color: #90CAF9;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-top: 2px;
+        }
+        .highlight {
+            color: #64B5F6;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Header -->
+        <div class="mb-4">
+            <p class="section-number mb-1">05</p>
+            <h1 class="text-3xl font-bold mb-1">主要AIプラットフォームの特性と戦略的使い分け</h1>
+            <h2 class="text-xl font-light text-blue-300 mb-1">2025年版：最強のAIパートナーは誰だ？</h2>
+            <div class="heading-underline"></div>
+        </div>
+        
+        <!-- Brief Introduction -->
+        <p class="text-sm mb-4 text-blue-100">
+            <i class="fas fa-info-circle text-blue-300 mr-1"></i>
+            AIは「同じ顔のクローン」ではなく、それぞれに強烈な「個性」を持つ。目的やタスクに応じて最適なAIパートナーを選ぶ「目利き力」がAI超独学の鍵。
+        </p>
+        
+        <!-- AI Comparison Table -->
+        <div class="overflow-auto max-h-[540px]">
+            <table class="ai-table">
+                <thead>
+                    <tr>
+                        <th style="width: 18%;">AI プラットフォーム</th>
+                        <th style="width: 25%;">個性・特徴</th>
+                        <th style="width: 22%;">得意技</th>
+                        <th style="width: 15%;">コンテキスト/出力</th>
+                        <th style="width: 20%;">戦略的使い分け</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- OpenAI -->
+                    <tr class="ai-row">
+                        <td>
+                            <div class="flex items-center">
+                                <div class="ai-logo bg-green-800">
+                                    <i class="fas fa-comment-dots text-green-300"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">OpenAI</span><br>
+                                    <span class="text-xs text-blue-300">GPT-4.1, o3, o4-mini</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            AIブームを創り、常に先頭を走り続ける<span class="highlight">万能型リーダー</span>。対話能力、汎用性、開発者エコシステムの広さが圧倒的
+                        </td>
+                        <td>
+                            幅広い分野での文章生成、要約、翻訳、アイデア出し。o3は特に<span class="highlight">論理的思考や分析</span>に強い
+                        </td>
+                        <td>
+                            <div class="context-badge">入力: 1M</div>
+                            <div class="context-badge">出力: 32K~100K</div>
+                        </td>
+                        <td>
+                            複雑な思考の壁打ち、高品質な文章生成、多様なタスク対応。<span class="highlight">迷ったらまずGPT系</span>
+                        </td>
+                    </tr>
+                    
+                    <!-- Google -->
+                    <tr class="ai-row">
+                        <td>
+                            <div class="flex items-center">
+                                <div class="ai-logo bg-blue-800">
+                                    <i class="fab fa-google text-blue-300"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">Google Gemini</span><br>
+                                    <span class="text-xs text-blue-300">2.5 Pro, 2.5 Flash</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            Googleの持つ膨大な情報と技術力を背景に急速に成長。<span class="highlight">マルチモーダル</span>能力とGoogle<span class="highlight">サービス連携</span>が最大の武器
+                        </td>
+                        <td>
+                            最新情報を含む検索連動型回答、画像・動画の分析・生成、Gmail/スプレッドシートとの連携
+                        </td>
+                        <td>
+                            <div class="context-badge">入力: 1M</div>
+                            <div class="context-badge">出力: 64K</div>
+                        </td>
+                        <td>
+                            最新情報の調査、マルチモーダルタスク、Google Workspace連携、<span class="highlight">GASコーディング</span>支援
+                        </td>
+                    </tr>
+                    
+                    <!-- Claude -->
+                    <tr class="ai-row">
+                        <td>
+                            <div class="flex items-center">
+                                <div class="ai-logo bg-purple-800">
+                                    <i class="fas fa-paint-brush text-purple-300"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">Anthropic Claude</span><br>
+                                    <span class="text-xs text-blue-300">3.7 Sonnet, 3.5 Haiku</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            AIの<span class="highlight">安全性と倫理</span>を最優先する、思慮深く誠実な実力者。特に<span class="highlight">長文処理</span>能力とコーディング能力に定評
+                        </td>
+                        <td>
+                            膨大な文書の正確な読解・要約・分析、高品質なコード生成、デザイン性の高いアウトプット
+                        </td>
+                        <td>
+                            <div class="context-badge">入力: 200K</div>
+                            <div class="context-badge">出力: 最大128K</div>
+                        </td>
+                        <td>
+                            長文処理、高品質なコード生成、<span class="highlight">デザイン関連</span>（SVG生成など）、信頼性重視場面
+                        </td>
+                    </tr>
+                    
+                    <!-- Meta Llama -->
+                    <tr class="ai-row">
+                        <td>
+                            <div class="flex items-center">
+                                <div class="ai-logo bg-indigo-800">
+                                    <i class="fas fa-code-branch text-indigo-300"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">Meta Llama</span><br>
+                                    <span class="text-xs text-blue-300">Llama 3シリーズ</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            AI技術の<span class="highlight">民主化</span>を目指し、モデルを<span class="highlight">オープンソース</span>で公開。世界中の開発者コミュニティによる改良が進む
+                        </td>
+                        <td>
+                            モデルのカスタマイズ（ファインチューニング）が可能。特定のデータで学習させ自社専用AIを構築
+                        </td>
+                        <td>
+                            <div class="context-badge">モデルによる</div>
+                            <div class="context-badge">コスト効率◎</div>
+                        </td>
+                        <td>
+                            自社専用AI開発、コスト抑制大規模処理、<span class="highlight">AI研究・教育</span>用途
+                        </td>
+                    </tr>
+                    
+                    <!-- xAI Grok -->
+                    <tr class="ai-row">
+                        <td>
+                            <div class="flex items-center">
+                                <div class="ai-logo bg-red-800">
+                                    <i class="fab fa-twitter text-red-300"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">xAI Grok</span><br>
+                                    <span class="text-xs text-blue-300">Grok 3など</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            イーロン・マスク氏率いるxAIが開発。X（旧Twitter）の<span class="highlight">リアルタイム情報</span>活用。<span class="highlight">ユーモラスで挑発的</span>な応答も
+                        </td>
+                        <td>
+                            最新の話題やネット上のトレンドに関する応答。型にはまらない自由な発想
+                        </td>
+                        <td>
+                            <div class="context-badge">日本語能力</div>
+                            <div class="context-badge">発展途上</div>
+                        </td>
+                        <td>
+                            最新トレンド調査、<span class="highlight">エンタメ系コンテンツ</span>生成、発想の刺激（ビジネス利用は慎重に）
+                        </td>
+                    </tr>
+                    
+                    <!-- DeepSeek -->
+                    <tr class="ai-row">
+                        <td>
+                            <div class="flex items-center">
+                                <div class="ai-logo bg-yellow-800">
+                                    <i class="fas fa-dollar-sign text-yellow-300"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">DeepSeek</span><br>
+                                    <span class="text-xs text-blue-300">中国発</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            中国発。特に<span class="highlight">コーディング能力</span>に優れ、<span class="highlight">圧倒的な低コスト</span>で市場に参入し衝撃を与えた
+                        </td>
+                        <td>
+                            高いコストパフォーマンスでのコーディング支援。中国語処理
+                        </td>
+                        <td>
+                            <div class="context-badge">日本語対応</div>
+                            <div class="context-badge">限定的</div>
+                        </td>
+                        <td>
+                            <span class="highlight">コーディングコスト削減</span>（リスク理解した上で）、中国市場向けタスク
+                        </td>
+                    </tr>
+                    
+                    <!-- Apple Intelligence -->
+                    <tr class="ai-row">
+                        <td>
+                            <div class="flex items-center">
+                                <div class="ai-logo bg-gray-800">
+                                    <i class="fab fa-apple text-gray-300"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold">Apple Intelligence</span><br>
+                                    <span class="text-xs text-blue-300">生活密着型</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="highlight">ユーザープライバシー</span>と<span class="highlight">シームレスなユーザー体験</span>を最優先。デバイス上処理とクラウド処理を組合せ
+                        </td>
+                        <td>
+                            個人データ（メール、カレンダー、写真など）を理解し文脈に応じた支援。OSレベルの深い統合
+                        </td>
+                        <td>
+                            <div class="context-badge">Apple専用</div>
+                            <div class="context-badge">プライバシー◎</div>
+                        </td>
+                        <td>
+                            Appleユーザーの<span class="highlight">日常業務効率化</span>、プライバシーが最優先されるタスク
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Footer Note -->
+        <div class="mt-4 p-2 bg-blue-900 bg-opacity-30 rounded-lg text-center">
+            <p class="text-sm text-yellow-300">
+                <i class="fas fa-exclamation-triangle mr-2"></i>
+                AIの世界は超高速で進化中！ここでの情報は執筆時点（2025年5月想定）のスナップショットに過ぎません。
+                <span class="text-blue-100">常に最新情報をキャッチアップし、実際に触って試す「TANREN」が重要です。</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

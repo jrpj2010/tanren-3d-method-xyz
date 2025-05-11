@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1920" height="80" fill="#2c2c2c"/>
+  <text x="960" y="50" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea" text-anchor="middle" letter-spacing="2">Interview Support AI Tool - 技術アーキテクチャ</text>
+  <circle cx="960" cy="90" r="5" fill="#1a5b66"/>
+  <line x1="700" y1="90" x2="1220" y2="90" stroke="#2c2c2c" stroke-width="2"/>
+  
+  <!-- Footer -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c"/>
+  <text x="960" y="1055" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">Next.js + Supabase + Docker + Vercel によるWebアプリケーション - 2025年4月</text>
+  
+  <!-- Column 1: Architecture Overview -->
+  <rect x="70" y="120" width="560" height="880" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="70" y="120" width="560" height="50" fill="#b3322b"/>
+  <text x="100" y="155" font-family="'Noto Serif JP', serif" font-size="22" fill="#f4f1ea" letter-spacing="1">アーキテクチャ概要</text>
+  
+  <!-- Overview Diagram -->
+  <text x="100" y="210" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🏗️ システム構成</text>
+  <rect x="100" y="220" width="500" height="2" fill="#b3322b"/>
+  
+  <!-- Architecture diagram -->
+  <rect x="100" y="240" width="500" height="360" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- Client layer -->
+  <rect x="150" y="270" width="400" height="60" fill="#f4f1ea" stroke="#b3322b" stroke-width="2" rx="5" ry="5"/>
+  <text x="350" y="305" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">クライアント（ブラウザ）</text>
+  
+  <!-- Arrow down -->
+  <polyline points="350,330 350,350" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Next.js Layer -->
+  <rect x="150" y="360" width="180" height="60" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" rx="5" ry="5"/>
+  <text x="240" y="395" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">Next.js Frontend</text>
+  
+  <rect x="370" y="360" width="180" height="60" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" rx="5" ry="5"/>
+  <text x="460" y="395" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">API Routes</text>
+  
+  <!-- Arrow down -->
+  <polyline points="240,420 240,440" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <polyline points="460,420 460,440" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Database & AI layer -->
+  <rect x="150" y="450" width="180" height="60" fill="#f4f1ea" stroke="#653a5e" stroke-width="2" rx="5" ry="5"/>
+  <text x="240" y="485" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">Supabase DB</text>
+  
+  <rect x="370" y="450" width="180" height="60" fill="#f4f1ea" stroke="#653a5e" stroke-width="2" rx="5" ry="5"/>
+  <text x="460" y="485" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">AI予測モデル</text>
+  
+  <!-- Arrow down -->
+  <polyline points="350,510 350,530" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Deployment -->
+  <rect x="150" y="540" width="400" height="40" fill="#2c2c2c" rx="5" ry="5"/>
+  <text x="350" y="565" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#f4f1ea" text-anchor="middle">Docker + Vercel</text>
+  
+  <!-- Technology stack -->
+  <text x="100" y="650" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🛠️ 技術スタック</text>
+  <rect x="100" y="660" width="500" height="2" fill="#b3322b"/>
+  
+  <!-- Tech Stack List -->
+  <rect x="120" y="680" width="460" height="300" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5" ry="5"/>
+  
+  <!-- Stack items -->
+  <rect x="140" y="700" width="420" height="40" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" rx="2" ry="2"/>
+  <text x="350" y="725" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">Next.js, TypeScript</text>
+  
+  <rect x="140" y="750" width="420" height="40" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="2" ry="2"/>
+  <text x="350" y="775" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">Supabase (Auth, DB)</text>
+  
+  <rect x="140" y="800" width="420" height="40" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="2" ry="2"/>
+  <text x="350" y="825" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">Docker</text>
+  
+  <rect x="140" y="850" width="420" height="40" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" rx="2" ry="2"/>
+  <text x="350" y="875" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">Vercel</text>
+  
+  <rect x="140" y="900" width="420" height="40" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="2" ry="2"/>
+  <text x="350" y="925" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">Python (AI学習バッチ)</text>
+  
+  <!-- Column 2: Components -->
+  <rect x="680" y="120" width="560" height="880" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="680" y="120" width="560" height="50" fill="#1a5b66"/>
+  <text x="710" y="155" font-family="'Noto Serif JP', serif" font-size="22" fill="#f4f1ea" letter-spacing="1">システムコンポーネント</text>
+  
+  <!-- Frontend -->
+  <text x="710" y="210" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🖥️ フロントエンド</text>
+  <rect x="710" y="220" width="500" height="2" fill="#1a5b66"/>
+  <foreignObject x="710" y="230" width="500" height="160">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <p><b>フレームワーク:</b> Next.js (React)</p>
+      <p><b>責務:</b></p>
+      <ul style="padding-left: 20px;">
+        <li>面談評価フォームのレンダリング</li>
+        <li>結果表示・レポート画面のUI</li>
+      </ul>
+      <p><b>実装言語:</b> TypeScript</p>
+    </div>
+  </foreignObject>
+  
+  <!-- Backend -->
+  <text x="710" y="420" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">⚙️ バックエンド</text>
+  <rect x="710" y="430" width="500" height="2" fill="#1a5b66"/>
+  <foreignObject x="710" y="440" width="500" height="160">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <p><b>フレームワーク:</b> Next.js API Routes (Node.js)</p>
+      <p><b>責務:</b></p>
+      <ul style="padding-left: 20px;">
+        <li>評価データの受信・保存</li>
+        <li>AI予測エンドポイントの提供</li>
+        <li>レポート用データ集計API</li>
+      </ul>
+    </div>
+  </foreignObject>
+  
+  <!-- Database -->
+  <text x="710" y="630" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">💾 データベース</text>
+  <rect x="710" y="640" width="500" height="2" fill="#1a5b66"/>
+  <foreignObject x="710" y="650" width="500" height="140">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <p><b>種類:</b> Supabase (PostgreSQL)</p>
+      <p><b>責務:</b></p>
+      <ul style="padding-left: 20px;">
+        <li>評価データ, 成果データの永続化</li>
+        <li>ユーザー情報の管理</li>
+      </ul>
+    </div>
+  </foreignObject>
+  
+  <!-- AI Models -->
+  <text x="710" y="820" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🧠 AIモデル</text>
+  <rect x="710" y="830" width="500" height="2" fill="#1a5b66"/>
+  <foreignObject x="710" y="840" width="500" height="140">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <p><b>説明:</b> 候補者成功予測モデル</p>
+      <p><b>責務:</b></p>
+      <ul style="padding-left: 20px;">
+        <li>バッチまたはサーバレス関数で学習／推論</li>
+        <li>面談評価データに基づく成功確率予測</li>
+      </ul>
+    </div>
+  </foreignObject>
+  
+  <!-- Column 3: Implementation Details -->
+  <rect x="1290" y="120" width="560" height="880" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="1290" y="120" width="560" height="50" fill="#653a5e"/>
+  <text x="1320" y="155" font-family="'Noto Serif JP', serif" font-size="22" fill="#f4f1ea" letter-spacing="1">実装詳細</text>
+  
+  <!-- Error Handling -->
+  <text x="1320" y="210" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🛡️ エラーハンドリング</text>
+  <rect x="1320" y="220" width="500" height="2" fill="#653a5e"/>
+  <foreignObject x="1320" y="230" width="500" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <ul style="padding-left: 20px;">
+        <li>入力バリデーション（フロント／バック双方向）</li>
+        <li>try/catch でDB・AI呼び出しの例外をキャッチ</li>
+        <li>ユーザー向けにフレンドリーなエラーメッセージを表示</li>
+      </ul>
+    </div>
+  </foreignObject>
+  
+  <!-- Security -->
+  <text x="1320" y="410" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🔒 セキュリティ</text>
+  <rect x="1320" y="420" width="500" height="2" fill="#653a5e"/>
+  <foreignObject x="1320" y="430" width="500" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <ul style="padding-left: 20px;">
+        <li>Supabase Auth で認証</li>
+        <li>Role-based Access Control</li>
+        <li>HTTPS/TLS 全通信暗号化</li>
+      </ul>
+    </div>
+  </foreignObject>
+  
+  <!-- Performance -->
+  <text x="1320" y="610" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">⚡ パフォーマンス</text>
+  <rect x="1320" y="620" width="500" height="2" fill="#653a5e"/>
+  <foreignObject x="1320" y="630" width="500" height="150">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Noto Sans JP', sans-serif; font-size: 14px; color: #2c2c2c; line-height: 1.6;">
+      <ul style="padding-left: 20px;">
+        <li>AI推論キャッシュを導入</li>
+        <li>DBクエリはインデックス最適化</li>
+        <li>フロントエンドのレスポンシブネス重視</li>
+      </ul>
+    </div>
+  </foreignObject>
+  
+  <!-- Deployment Flow Diagram -->
+  <text x="1320" y="790" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" letter-spacing="0.5">🚀 デプロイメント</text>
+  <rect x="1320" y="800" width="500" height="2" fill="#653a5e"/>
+  
+  <!-- Deployment Diagram -->
+  <rect x="1340" y="820" width="460" height="160" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5" ry="5"/>
+  
+  <!-- Deployment steps -->
+  <rect x="1360" y="840" width="160" height="40" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="3" ry="3"/>
+  <text x="1440" y="865" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">開発コード</text>
+  
+  <!-- Arrow right -->
+  <polyline points="1520,860 1550,860" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <rect x="1560" y="840" width="160" height="40" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="3" ry="3"/>
+  <text x="1640" y="865" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">Dockerイメージ</text>
+  
+  <!-- Arrow down -->
+  <polyline points="1640,880 1640,900" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <rect x="1560" y="910" width="160" height="40" fill="#653a5e" rx="3" ry="3"/>
+  <text x="1640" y="935" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">Vercelデプロイ</text>
+  
+  <!-- Arrow left and up -->
+  <path d="M1560,930 H1440 V880" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- CI Indicator -->
+  <text x="1440" y="925" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">CI: Lint, Unit Test 自動実行</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c2c2c"/>
+    </marker>
+  </defs>
+</svg>

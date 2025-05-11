@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指数関数的成長を支える4つの加速エンジン</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #e6f7ff 0%, #cce7ff 50%, #b3d7ff 100%);
+        }
+        .title {
+            color: #004080;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .engine-card {
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+        }
+        .engine-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+        }
+        .icon-wrapper {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        .connection-line {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.6);
+            height: 3px;
+            transform-origin: left center;
+            z-index: 1;
+        }
+        .pulse {
+            animation: pulse-animation 2s infinite;
+        }
+        @keyframes pulse-animation {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            }
+        }
+        .center-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(230,247,255,1) 100%);
+            box-shadow: 0 0 30px rgba(0, 102, 204, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col p-10">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="title text-4xl">指数関数的成長を支える4つの加速エンジン</h1>
+            <div class="w-32 h-1 bg-blue-600 mx-auto mt-3 rounded-full"></div>
+        </div>
+        
+        <!-- Grid Layout for Engine Cards -->
+        <div class="flex justify-center items-center h-full relative">
+            <!-- Center Element -->
+            <div class="center-circle pulse absolute">
+                <span class="text-blue-800 font-bold text-lg">指数関数的<br>成長</span>
+            </div>
+            
+            <!-- Connection Lines -->
+            <div class="connection-line" style="width: 180px; top: 130px; left: 340px; transform: rotate(45deg);"></div>
+            <div class="connection-line" style="width: 180px; top: 130px; left: 760px; transform: rotate(135deg);"></div>
+            <div class="connection-line" style="width: 180px; top: 430px; left: 340px; transform: rotate(-45deg);"></div>
+            <div class="connection-line" style="width: 180px; top: 430px; left: 760px; transform: rotate(-135deg);"></div>
+            
+            <!-- Engine Cards Container -->
+            <div class="grid grid-cols-2 gap-16 w-full max-w-5xl">
+                <!-- Engine 1: Learning Speed -->
+                <div class="engine-card bg-blue-50 p-6 border-t-8 border-blue-500">
+                    <div class="icon-wrapper bg-blue-500 text-white">
+                        <i class="fas fa-rocket text-3xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-blue-700 text-center mb-3">学習速度の超加速エンジン</h2>
+                    <p class="text-blue-900 text-center">難解な情報を即座に理解可能な形に変換し、<br>インプット効率が桁違いに向上</p>
+                    <div class="bg-blue-100 rounded-lg p-2 mt-3">
+                        <p class="text-blue-600 font-semibold text-center text-sm">専門知識の習得時間を大幅短縮</p>
+                    </div>
+                </div>
+                
+                <!-- Engine 2: Thought Enhancement -->
+                <div class="engine-card bg-green-50 p-6 border-t-8 border-green-500">
+                    <div class="icon-wrapper bg-green-500 text-white">
+                        <i class="fas fa-brain text-3xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-green-700 text-center mb-3">思考深化の壁打ちエンジン</h2>
+                    <p class="text-green-900 text-center">AIとの対話を通じて多角的な視点を獲得し、<br>アイデアの質が飛躍的に向上</p>
+                    <div class="bg-green-100 rounded-lg p-2 mt-3">
+                        <p class="text-green-600 font-semibold text-center text-sm">一人の思考限界を突破</p>
+                    </div>
+                </div>
+                
+                <!-- Engine 3: Action Cycle -->
+                <div class="engine-card bg-yellow-50 p-6 border-t-8 border-yellow-500">
+                    <div class="icon-wrapper bg-yellow-500 text-white">
+                        <i class="fas fa-sync-alt text-3xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-yellow-700 text-center mb-3">行動サイクルの高速化エンジン</h2>
+                    <p class="text-yellow-900 text-center">試行錯誤のサイクル（PDCA）が超高速で回転し、<br>失敗からの学習が加速</p>
+                    <div class="bg-yellow-100 rounded-lg p-2 mt-3">
+                        <p class="text-yellow-600 font-semibold text-center text-sm">行動の量と質の同時向上</p>
+                    </div>
+                </div>
+                
+                <!-- Engine 4: Knowledge Network -->
+                <div class="engine-card bg-purple-50 p-6 border-t-8 border-purple-500">
+                    <div class="icon-wrapper bg-purple-500 text-white">
+                        <i class="fas fa-project-diagram text-3xl"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-purple-700 text-center mb-3">知のネットワーク拡張エンジン</h2>
+                    <p class="text-purple-900 text-center">世界中の知見やベストプラクティスに瞬時アクセス、<br>脳の拡張として機能</p>
+                    <div class="bg-purple-100 rounded-lg p-2 mt-3">
+                        <p class="text-purple-600 font-semibold text-center text-sm">個人の経験を超えた知識を獲得</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Note -->
+        <div class="text-center mt-4">
+            <p class="text-gray-600 font-bold">これら4つのエンジンが相互に作用し、相乗効果を生み出すことで、<br>成長は線形（足し算）から指数関数的（掛け算）へ</p>
+        </div>
+    </div>
+</body>
+</html>

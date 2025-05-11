@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap');
+      
+      :root {
+        --black: #2c2c2c;
+        --cream: #f4f1ea;
+        --red: #b3322b;
+        --blue: #1a5b66;
+        --purple: #653a5e;
+      }
+      
+      .slide-bg {
+        fill: var(--cream);
+      }
+      
+      .title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 42px;
+        fill: var(--black);
+        letter-spacing: 0.05em;
+      }
+      
+      .subtitle {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 32px;
+        fill: var(--black);
+      }
+      
+      .body-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 24px;
+        fill: var(--black);
+      }
+      
+      .intro-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 22px;
+        fill: var(--black);
+      }
+      
+      .vision-title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 24px;
+      }
+      
+      .vision-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 18px;
+        fill: var(--black);
+      }
+      
+      .summary-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 22px;
+        fill: var(--black);
+      }
+      
+      .company {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+        text-anchor: end;
+      }
+      
+      .page-number {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .bold {
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" class="slide-bg" />
+  
+  <!-- タイトル -->
+  <g transform="translate(120, 100)">
+    <text class="title">BAO構想がもたらす未来の経営：2030年の展望</text>
+    <line x1="0" y1="60" x2="1000" y2="60" stroke="var(--red)" stroke-width="3" />
+  </g>
+  
+  <!-- ドット装飾 -->
+  <g transform="translate(960, 150)">
+    <circle cx="-25" cy="0" r="6" fill="var(--red)" />
+    <circle cx="0" cy="0" r="6" fill="var(--blue)" />
+    <circle cx="25" cy="0" r="6" fill="var(--purple)" />
+  </g>
+  
+  <!-- イントロダクション -->
+  <g transform="translate(120, 200)">
+    <rect x="0" y="0" width="1680" height="100" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="1680" height="100" fill="none" stroke="var(--black)" stroke-width="1" />
+    
+    <text x="40" y="40" class="intro-text">BAO構想が全面的に展開された<tspan fill="var(--blue)" font-weight="700">2030年の企業経営</tspan>はどのように変貌しているでしょうか。</text>
+    <text x="40" y="75" class="intro-text">現在の技術トレンドを踏まえた<tspan fill="var(--red)" font-weight="700">未来予測</tspan>を示します。</text>
+  </g>
+  
+  <!-- 未来予測1: 経営意思決定の進化 -->
+  <g transform="translate(120, 350)">
+    <rect x="0" y="0" width="830" height="240" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="830" height="240" fill="none" stroke="var(--black)" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="240" stroke="var(--red)" stroke-width="4" />
+    
+    <text x="20" y="40" class="vision-title" fill="var(--red)">経営意思決定の進化</text>
+    
+    <g transform="translate(30, 70)">
+      <text class="vision-text">経営判断の<tspan font-weight="700">95%</tspan>が<tspan fill="var(--blue)" font-weight="700">AIによる自律的意思決定</tspan>で完結し、人間CEOは</text>
+      <text class="vision-text" y="30">最も創造的かつ戦略的な判断のみに集中する世界が実現しています。</text>
+      
+      <g transform="translate(0, 60)">
+        <text class="vision-text" font-weight="700" fill="var(--red)">現在（2023年）</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0" font-weight="700" fill="var(--purple)">2030年</text>
+      </g>
+      
+      <g transform="translate(20, 90)">
+        <text class="vision-text">データ分析支援</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">完全自律判断と執行</text>
+      </g>
+      
+      <g transform="translate(20, 120)">
+        <text class="vision-text">意思決定の数日～数週間</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">リアルタイム意思決定（秒単位）</text>
+      </g>
+      
+      <g transform="translate(20, 150)">
+        <text class="vision-text">限定的なシナリオ分析</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">数百万のシナリオ同時評価</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 未来予測2: 組織構造の変革 -->
+  <g transform="translate(970, 350)">
+    <rect x="0" y="0" width="830" height="240" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="830" height="240" fill="none" stroke="var(--black)" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="240" stroke="var(--blue)" stroke-width="4" />
+    
+    <text x="20" y="40" class="vision-title" fill="var(--blue)">組織構造の変革</text>
+    
+    <g transform="translate(30, 70)">
+      <text class="vision-text">従来の階層型組織構造は消滅し、<tspan fill="var(--purple)" font-weight="700">プロジェクトベースの流動的なチーム</tspan>が</text>
+      <text class="vision-text" y="30">AIオーケストレーションにより最適編成される組織形態へと進化しています。</text>
+      
+      <g transform="translate(0, 60)">
+        <text class="vision-text" font-weight="700" fill="var(--red)">現在（2023年）</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0" font-weight="700" fill="var(--purple)">2030年</text>
+      </g>
+      
+      <g transform="translate(20, 90)">
+        <text class="vision-text">固定的な部門構造</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">動的に再構成される機能単位</text>
+      </g>
+      
+      <g transform="translate(20, 120)">
+        <text class="vision-text">人間管理職中心の調整</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">AIによる最適リソース配分</text>
+      </g>
+      
+      <g transform="translate(20, 150)">
+        <text class="vision-text">平均5-7階層の組織</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">実質2階層（戦略と実行）</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 未来予測3: 市場適応能力 -->
+  <g transform="translate(120, 620)">
+    <rect x="0" y="0" width="830" height="240" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="830" height="240" fill="none" stroke="var(--black)" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="240" stroke="var(--purple)" stroke-width="4" />
+    
+    <text x="20" y="40" class="vision-title" fill="var(--purple)">市場適応能力</text>
+    
+    <g transform="translate(30, 70)">
+      <text class="vision-text">市場変化の<tspan font-weight="700">予測精度99%</tspan>を実現し、<tspan fill="var(--red)" font-weight="700">変化が起こる前に対応</tspan>を完了する</text>
+      <text class="vision-text" y="30">先行型ビジネスモデルが標準となっています。</text>
+      
+      <g transform="translate(0, 60)">
+        <text class="vision-text" font-weight="700" fill="var(--red)">現在（2023年）</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0" font-weight="700" fill="var(--purple)">2030年</text>
+      </g>
+      
+      <g transform="translate(20, 90)">
+        <text class="vision-text">市場変化への事後対応</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">予測に基づく先行対応</text>
+      </g>
+      
+      <g transform="translate(20, 120)">
+        <text class="vision-text">製品開発サイクル：月/年単位</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">製品開発サイクル：日/週単位</text>
+      </g>
+      
+      <g transform="translate(20, 150)">
+        <text class="vision-text">一部顧客セグメントへの対応</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">完全パーソナライズ（顧客=セグメント）</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 未来予測4: 人間CEOの役割 -->
+  <g transform="translate(970, 620)">
+    <rect x="0" y="0" width="830" height="240" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="830" height="240" fill="none" stroke="var(--black)" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="240" stroke="var(--red)" stroke-width="4" />
+    
+    <text x="20" y="40" class="vision-title" fill="var(--red)">人間CEOの役割</text>
+    
+    <g transform="translate(30, 70)">
+      <text class="vision-text">人間CEOは<tspan fill="var(--blue)" font-weight="700">「企業の哲学者」</tspan>へと進化し、価値観設定・倫理判断・</text>
+      <text class="vision-text" y="30">長期ビジョン構築に特化した役割を担っています。</text>
+      
+      <g transform="translate(0, 60)">
+        <text class="vision-text" font-weight="700" fill="var(--red)">現在（2023年）</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0" font-weight="700" fill="var(--purple)">2030年</text>
+      </g>
+      
+      <g transform="translate(20, 90)">
+        <text class="vision-text">オペレーション監督</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">企業文化・倫理のガイド役</text>
+      </g>
+      
+      <g transform="translate(20, 120)">
+        <text class="vision-text">数値目標の達成管理</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">社会的意義・存在価値の定義</text>
+      </g>
+      
+      <g transform="translate(20, 150)">
+        <text class="vision-text">人・組織・プロセスの管理</text>
+        <text class="vision-text" x="200" y="0">→</text>
+        <text class="vision-text" x="250" y="0">創造性・人間独自の価値の追求</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- まとめボックス -->
+  <g transform="translate(960, 910)">
+    <rect x="-700" y="-50" width="1400" height="160" fill="white" stroke="var(--black)" stroke-width="2" />
+    
+    <g transform="translate(-650, 30)">
+      <text font-size="54">🔮</text>
+    </g>
+    
+    <g transform="translate(-550, 10)">
+      <text class="summary-text bold" y="-20">2030年の経営：BAOがもたらす3つの価値</text>
+      
+      <g transform="translate(0, 20)">
+        <text class="summary-text">1. <tspan fill="var(--red)" font-weight="700">超高速経営</tspan>：市場変化への対応を秒単位で実行し、競争優位性を確立</text>
+      </g>
+      
+      <g transform="translate(0, 50)">
+        <text class="summary-text">2. <tspan fill="var(--blue)" font-weight="700">組織の枠を超えた知の統合</tspan>：企業の壁を越えた知識資産の最大活用</text>
+      </g>
+      
+      <g transform="translate(0, 80)">
+        <text class="summary-text">3. <tspan fill="var(--purple)" font-weight="700">人間の創造性の解放</tspan>：定型業務からの完全解放による創造的価値への集中</text>
+      </g>
+      
+      <text class="summary-text" y="120">BAO構想は単なる効率化ではなく、<tspan font-weight="700">企業と人間の可能性を最大化する新たな経営パラダイム</tspan>です。</text>
+    </g>
+  </g>
+  
+  <!-- 会社名と頁数 -->
+  <g transform="translate(1800, 1050)">
+    <text class="company">TANREN株式会社</text>
+  </g>
+  
+  <g transform="translate(120, 1050)">
+    <text class="page-number">11 / 12</text>
+  </g>
+</svg> 

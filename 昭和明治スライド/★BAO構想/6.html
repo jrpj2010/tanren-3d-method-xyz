@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAOがもたらす可能性 - ビジネス・エージェント・オーケストレーター構想</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --black: #2c2c2c;
+            --cream: #f4f1ea;
+            --red: #b3322b;
+            --blue: #1a5b66;
+            --purple: #653a5e;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--cream);
+            color: var(--black);
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .slide-title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            color: var(--black);
+            position: relative;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        .slide-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--red);
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .dot-red {
+            background-color: var(--red);
+        }
+        .dot-blue {
+            background-color: var(--blue);
+        }
+        .dot-purple {
+            background-color: var(--purple);
+        }
+        .benefit-box {
+            border: 2px solid var(--black);
+            background-color: white;
+            padding: 20px;
+            height: 100%;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .benefit-box::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--black);
+            z-index: -1;
+        }
+        .benefit-number {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1;
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .red-bg {
+            background-color: var(--red);
+        }
+        .blue-bg {
+            background-color: var(--blue);
+        }
+        .purple-bg {
+            background-color: var(--purple);
+        }
+        .red-text {
+            color: var(--red);
+        }
+        .blue-text {
+            color: var(--blue);
+        }
+        .purple-text {
+            color: var(--purple);
+        }
+        .benefit-title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid;
+            padding-bottom: 5px;
+            padding-left: 25px;
+        }
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .company {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            text-align: right;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+        .intro-box {
+            border-left: 4px solid var(--blue);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        .graph-container {
+            position: relative;
+            height: 160px;
+            margin-top: 20px;
+        }
+        .graph-bar {
+            position: absolute;
+            bottom: 0;
+            width: 60px;
+            background-color: var(--black);
+        }
+        .graph-bar-traditional {
+            height: 80px;
+            left: 100px;
+        }
+        .graph-bar-bao {
+            height: 150px;
+            left: 200px;
+            background-color: var(--red);
+        }
+        .graph-label {
+            position: absolute;
+            bottom: -25px;
+            text-align: center;
+            width: 100px;
+            font-size: 0.85rem;
+        }
+        .metric-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .metric-item {
+            text-align: center;
+            width: 30%;
+        }
+        .metric-value {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .metric-label {
+            font-size: 0.9rem;
+        }
+        .comparison-arrow {
+            margin: 0 10px;
+            font-size: 2rem;
+            color: var(--blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h1 class="slide-title text-4xl mb-6">なぜBAOは「未来の当たり前」になり得るのか？</h1>
+        
+        <div class="flex justify-center items-center mb-4">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-purple"></span>
+        </div>
+        
+        <div class="intro-box">
+            <p class="text-xl mb-2">BAO構想が実現すると、ビジネスの世界はどう変わるのでしょうか？</p>
+            <p>従来の企業経営の常識を覆す、<span class="blue-text font-bold">5つの革命的な可能性</span>があります。</p>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-6 mb-8">
+            <!-- Benefit 1 -->
+            <div class="benefit-box">
+                <div class="benefit-number red-bg">1</div>
+                <h3 class="benefit-title red-text">圧倒的なスピードと効率性</h3>
+                
+                <div class="metric-container">
+                    <div class="metric-item">
+                        <div class="metric-value">24h</div>
+                        <div class="metric-label">稼働時間</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">∞</div>
+                        <div class="metric-label">並行処理</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">秒単位</div>
+                        <div class="metric-label">意思決定</div>
+                    </div>
+                </div>
+                
+                <p class="mt-4 text-sm">AIは24時間365日、休むことなく働き続けます。人間では不可能な量のタスクを同時に処理し、意思決定のスピードも格段に向上。市場変化に即座に対応できる<span class="red-text font-bold">超アジャイルな組織</span>が実現します。</p>
+            </div>
+            
+            <!-- Benefit 2 -->
+            <div class="benefit-box">
+                <div class="benefit-number blue-bg">2</div>
+                <h3 class="benefit-title blue-text">驚異的なスケーラビリティ</h3>
+                
+                <div class="benefit-icon blue-text">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </div>
+                
+                <p class="text-sm">事業拡大時は新しいAIエージェントを導入するだけで、部門の処理能力を即座に増強可能。人材採用や教育にかかる<span class="blue-text font-bold">時間とコストを大幅に削減</span>できます。逆に、事業縮小も柔軟に対応できます。</p>
+                
+                <div class="flex justify-center items-center mt-3">
+                    <div class="text-center mx-2">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                        <p class="text-xs">採用6ヶ月</p>
+                    </div>
+                    <div class="comparison-arrow">→</div>
+                    <div class="text-center mx-2">
+                        <i class="fas fa-robot text-2xl blue-text"></i>
+                        <p class="text-xs">導入即日</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Benefit 3 -->
+            <div class="benefit-box">
+                <div class="benefit-number purple-bg">3</div>
+                <h3 class="benefit-title purple-text">完全なデータドリブン経営</h3>
+                
+                <div class="benefit-icon purple-text">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                
+                <p class="text-sm">すべての活動がデータとして記録・分析され、勘や経験だけでなく、<span class="purple-text font-bold">客観的な根拠に基づいた意思決定</span>が常に行われます。無駄な施策は減り、成功確率は高まります。</p>
+                
+                <div class="flex justify-center items-center mt-3">
+                    <div class="text-center mx-2">
+                        <i class="fas fa-question-circle text-2xl"></i>
+                        <p class="text-xs">勘と経験</p>
+                    </div>
+                    <div class="comparison-arrow">→</div>
+                    <div class="text-center mx-2">
+                        <i class="fas fa-database text-2xl purple-text"></i>
+                        <p class="text-xs">データと分析</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Benefit 4 -->
+            <div class="benefit-box">
+                <div class="benefit-number red-bg">4</div>
+                <h3 class="benefit-title red-text">サイロの完全撤廃</h3>
+                
+                <div class="benefit-icon red-text">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                
+                <p class="text-sm">AIエージェント間での情報共有は、プログラムに基づき<span class="red-text font-bold">シームレスに行われます</span>。部門間の連携不足による機会損失や非効率は、原理的に発生しにくくなります。</p>
+                
+                <div class="flex justify-center items-center mt-3">
+                    <div class="text-center mx-2">
+                        <i class="fas fa-home text-2xl"></i>
+                        <p class="text-xs">部門の壁</p>
+                    </div>
+                    <div class="comparison-arrow">→</div>
+                    <div class="text-center mx-2">
+                        <i class="fas fa-project-diagram text-2xl red-text"></i>
+                        <p class="text-xs">連携の網</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Benefit 5 -->
+            <div class="benefit-box">
+                <div class="benefit-number blue-bg">5</div>
+                <h3 class="benefit-title blue-text">コスト構造の変革</h3>
+                
+                <div class="graph-container">
+                    <div class="graph-bar graph-bar-traditional"></div>
+                    <div class="graph-label" style="left: 80px;">従来型経営</div>
+                    
+                    <div class="graph-bar graph-bar-bao"></div>
+                    <div class="graph-label" style="left: 180px;">BAO経営</div>
+                    
+                    <div class="absolute left-0 bottom-0 w-full h-2 bg-black"></div>
+                    
+                    <div class="absolute left-0 top-0 h-full flex flex-col justify-between items-start pr-2">
+                        <span class="text-sm">成果</span>
+                        <span class="text-sm">コスト</span>
+                    </div>
+                </div>
+                
+                <p class="mt-4 text-sm">人件費（特に管理職）が大幅に削減される可能性があります。AIシステムの導入・維持コストはかかりますが、<span class="blue-text font-bold">少ないコストで大きな成果</span>を上げられます。</p>
+            </div>
+            
+            <!-- Benefit 6 -->
+            <div class="benefit-box">
+                <div class="benefit-number purple-bg">6</div>
+                <h3 class="benefit-title purple-text">人間CEOの役割変化</h3>
+                
+                <div class="benefit-icon purple-text">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                
+                <p class="text-sm">社長は日々の細かな業務管理から解放され、より本質的で創造的な役割に集中できます：</p>
+                <ul class="text-sm list-disc pl-5 mt-2">
+                    <li><span class="purple-text font-bold">ビジョン</span>を描く</li>
+                    <li><span class="purple-text font-bold">戦略</span>を決定する</li>
+                    <li>倫理的な<span class="purple-text font-bold">判断</span>を行う</li>
+                    <li>人間ならではの<span class="purple-text font-bold">対外的コミュニケーション</span></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="bg-white p-5 border-2 border-black mx-auto max-w-4xl">
+            <div class="flex items-center">
+                <div class="mr-5">
+                    <i class="fas fa-rocket text-4xl red-text"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">ビジネスの成長とイノベーションの加速</p>
+                    <p>BAOは<span class="blue-text font-bold">経営の常識を根本から変える</span>可能性を秘めています。<br>
+                    人間の創造性とAIの処理能力・一貫性を掛け合わせることで、<span class="red-text font-bold">これまで想像できなかった次元</span>の<br>
+                    ビジネスパフォーマンスを実現します。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="company">
+            <p>TANREN株式会社</p>
+        </div>
+        
+        <div class="page-number">6 / 12</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z軸：習熟度とAI活用のレベル</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #4169E1 0%, #8A2BE2 100%);
+            color: white;
+            position: relative;
+        }
+        .slide-content {
+            padding: 50px;
+        }
+        .slide-title {
+            font-size: 52px;
+            font-weight: 900;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        .slide-title::before {
+            content: "Z";
+            position: absolute;
+            left: -30px;
+            top: 0;
+            font-size: 72px;
+            color: rgba(65, 105, 225, 0.4);
+            transform: translateY(-10px);
+        }
+        .content-container {
+            display: flex;
+            gap: 40px;
+        }
+        .text-content {
+            flex: 1;
+        }
+        .visual-content {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .level-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border-left: 6px solid;
+        }
+        .level-box:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .level-1 {
+            border-left-color: #4169E1;
+        }
+        .level-2 {
+            border-left-color: #9370DB;
+        }
+        .level-3 {
+            border-left-color: #FF8C00;
+        }
+        .level-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .level-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        .level-desc {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .highlight {
+            color: #FFD700;
+            font-weight: 700;
+        }
+        
+        /* キーワードリスト */
+        .keyword-list {
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .keyword {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 4px 12px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        /* 3D階段表現 */
+        .stairs-container {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            perspective: 1000px;
+        }
+        .stairs {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transform: rotateX(60deg) rotateZ(-30deg);
+        }
+        .stair {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        .stair:hover {
+            transform: translateZ(15px);
+        }
+        .stair-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            transform: rotateX(-60deg) rotateZ(30deg);
+            padding: 20px;
+        }
+        .stair-level {
+            font-size: 32px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        .stair-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .stair-desc {
+            font-size: 14px;
+            max-width: 85%;
+            margin: 0 auto;
+        }
+        .stair-capability {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            padding: 5px 12px;
+            font-size: 13px;
+            z-index: 5;
+            white-space: nowrap;
+        }
+        
+        /* AI-人間関係の視覚化 */
+        .relationship {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 30px;
+            padding: 8px 15px;
+            z-index: 10;
+        }
+        .entity {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .human {
+            background: rgba(65, 105, 225, 0.7);
+        }
+        .ai {
+            background: rgba(138, 43, 226, 0.7);
+        }
+        .relation-arrow {
+            height: 2px;
+            background: white;
+            flex-grow: 1;
+            margin: 0 5px;
+            position: relative;
+        }
+        .relation-arrow::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -3px;
+            width: 0;
+            height: 0;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-left: 6px solid white;
+        }
+        .two-way .relation-arrow::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: -3px;
+            width: 0;
+            height: 0;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-right: 6px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-content">
+            <h1 class="slide-title">習熟度とAI活用のレベル</h1>
+            
+            <div class="content-container">
+                <div class="text-content">
+                    <!-- レベル1の説明 -->
+                    <div class="level-box level-1">
+                        <div class="level-title">
+                            <div class="level-icon" style="background: rgba(65, 105, 225, 0.3);">1</div>
+                            <span>レベル0.5〜1：<span class="highlight">入門・初級</span></span>
+                        </div>
+                        <div class="level-desc">
+                            AIと出会い、基本的な対話と情報収集のスキルを習得する段階。AIの基本的な活用法を学ぶ。
+                        </div>
+                        <div class="keyword-list">
+                            <div class="keyword">基本対話</div>
+                            <div class="keyword">情報収集</div>
+                            <div class="keyword">AIへの質問</div>
+                            <div class="keyword">シンプルな作業依頼</div>
+                        </div>
+                    </div>
+                    
+                    <!-- レベル2の説明 -->
+                    <div class="level-box level-2">
+                        <div class="level-title">
+                            <div class="level-icon" style="background: rgba(147, 112, 219, 0.3);">2</div>
+                            <span>レベル2：<span class="highlight">中級</span></span>
+                        </div>
+                        <div class="level-desc">
+                            AIを日常的なパートナーとし、思考OSを駆使して業務や学習を効率化・高度化する段階。
+                        </div>
+                        <div class="keyword-list">
+                            <div class="keyword">戦略的プロンプト</div>
+                            <div class="keyword">壁打ち相手</div>
+                            <div class="keyword">作業効率化</div>
+                            <div class="keyword">思考の拡張</div>
+                            <div class="keyword">パーソナライズ</div>
+                        </div>
+                    </div>
+                    
+                    <!-- レベル3の説明 -->
+                    <div class="level-box level-3">
+                        <div class="level-title">
+                            <div class="level-icon" style="background: rgba(255, 140, 0, 0.3);">3</div>
+                            <span>レベル3：<span class="highlight">上級</span></span>
+                        </div>
+                        <div class="level-desc">
+                            AIと共創し、新たな価値を生み出し、自らもAIと共に進化し続ける段階。AIの限界を理解し、人間としての強みを活かす。
+                        </div>
+                        <div class="keyword-list">
+                            <div class="keyword">創造的共創</div>
+                            <div class="keyword">複雑問題解決</div>
+                            <div class="keyword">システム思考</div>
+                            <div class="keyword">AI活用の進化</div>
+                            <div class="keyword">価値の創出</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="visual-content">
+                    <div class="stairs-container">
+                        <div class="stairs">
+                            <!-- レベル1の階段 -->
+                            <div class="stair" style="width: 200px; height: 150px; background: linear-gradient(45deg, #1E90FF, #4169E1); bottom: 0; left: 150px;">
+                                <div class="stair-content">
+                                    <div class="stair-level">1</div>
+                                    <div class="stair-title">情報収集・基本対話</div>
+                                    <div class="stair-desc">AIに質問し、情報を得る</div>
+                                </div>
+                                
+                                <!-- できること例 -->
+                                <div class="stair-capability" style="bottom: -30px; right: 20px; transform: rotateX(-60deg) rotateZ(30deg);">
+                                    簡単なプロンプト
+                                </div>
+                            </div>
+                            
+                            <!-- AI-人間関係（レベル1） -->
+                            <div class="relationship" style="bottom: 60px; left: 250px; transform: rotateX(-60deg) rotateZ(30deg); width: 120px;">
+                                <div class="entity human">人</div>
+                                <div class="relation-arrow"></div>
+                                <div class="entity ai">AI</div>
+                            </div>
+                            
+                            <!-- レベル2の階段 -->
+                            <div class="stair" style="width: 250px; height: 180px; background: linear-gradient(45deg, #9370DB, #8A2BE2); bottom: 100px; left: 130px;">
+                                <div class="stair-content">
+                                    <div class="stair-level">2</div>
+                                    <div class="stair-title">思考拡張・効率化</div>
+                                    <div class="stair-desc">AIを思考の壁打ち相手に<br>業務の効率化</div>
+                                </div>
+                                
+                                <!-- できること例 -->
+                                <div class="stair-capability" style="bottom: -30px; right: 40px; transform: rotateX(-60deg) rotateZ(30deg);">
+                                    戦略的プロンプト
+                                </div>
+                                <div class="stair-capability" style="top: -20px; left: 50px; transform: rotateX(-60deg) rotateZ(30deg);">
+                                    複雑な要求
+                                </div>
+                            </div>
+                            
+                            <!-- AI-人間関係（レベル2） -->
+                            <div class="relationship two-way" style="bottom: 180px; left: 230px; transform: rotateX(-60deg) rotateZ(30deg); width: 140px;">
+                                <div class="entity human">人</div>
+                                <div class="relation-arrow"></div>
+                                <div class="entity ai">AI</div>
+                            </div>
+                            
+                            <!-- レベル3の階段 -->
+                            <div class="stair" style="width: 300px; height: 200px; background: linear-gradient(45deg, #FF8C00, #FF4500); bottom: 220px; left: 110px;">
+                                <div class="stair-content">
+                                    <div class="stair-level">3</div>
+                                    <div class="stair-title">共創・価値創造</div>
+                                    <div class="stair-desc">AIとの創造的な協働<br>新たな価値の創出</div>
+                                </div>
+                                
+                                <!-- できること例 -->
+                                <div class="stair-capability" style="bottom: -30px; right: 80px; transform: rotateX(-60deg) rotateZ(30deg);">
+                                    AIとの複雑な対話
+                                </div>
+                                <div class="stair-capability" style="top: -20px; left: 80px; transform: rotateX(-60deg) rotateZ(30deg);">
+                                    システム思考
+                                </div>
+                                <div class="stair-capability" style="top: 30px; right: 30px; transform: rotateX(-60deg) rotateZ(30deg);">
+                                    価値の共創
+                                </div>
+                            </div>
+                            
+                            <!-- AI-人間関係（レベル3） -->
+                            <div class="relationship two-way" style="bottom: 300px; left: 170px; transform: rotateX(-60deg) rotateZ(30deg); width: 180px; background: rgba(255, 215, 0, 0.3);">
+                                <div class="entity human">人</div>
+                                <div class="relation-arrow"></div>
+                                <div class="entity ai">AI</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

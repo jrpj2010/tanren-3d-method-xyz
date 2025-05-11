@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="60" y="60" width="1800" height="100" fill="#2c2c2c"/>
+  <text x="100" y="130" font-family="'Noto Serif JP', serif" font-size="48" fill="#f4f1ea" font-weight="bold">
+    Manusの基盤構築 - 知能から行動へ
+  </text>
+  
+  <!-- カラム1 (左): コンピュータの提供 -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="60" y="200" width="580" height="60" fill="#b3322b"/>
+    <text x="80" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      AI実行環境
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="60" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="80" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      AIに "手" を与える 💻
+    </text>
+    <line x1="80" y1="310" x2="400" y2="310" stroke="#b3322b" stroke-width="3"/>
+    <circle cx="400" cy="310" r="4" fill="#b3322b"/>
+    
+    <!-- 本質説明 -->
+    <text x="80" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="80" y="350">インテリジェンスだけでは問題解決不可能</tspan>
+      <tspan x="80" y="380">実行と検証のサイクルが必要</tspan>
+    </text>
+    
+    <!-- 比喩図 -->
+    <rect x="80" y="420" width="540" height="100" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" rx="5"/>
+    <text x="100" y="445" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      コンピュータなしの天才プログラマー:
+    </text>
+    <text x="100" y="475" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="100" y="475">PHDレベルの知性を持つインターンに</tspan>
+      <tspan x="100" y="500">ペンと紙だけで仕事をさせるようなもの</tspan>
+    </text>
+    
+    <!-- 技術詳細 -->
+    <text x="80" y="570" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      E2B仮想化技術
+    </text>
+    <line x1="80" y1="580" x2="350" y2="580" stroke="#b3322b" stroke-width="2"/>
+    
+    <!-- 仮想環境図解 -->
+    <rect x="100" y="600" width="500" height="280" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5"/>
+    
+    <rect x="125" y="620" width="450" height="240" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" stroke-dasharray="5,5" rx="5"/>
+    <text x="150" y="650" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#b3322b" font-weight="bold">
+      サンドボックス環境
+    </text>
+    
+    <rect x="150" y="670" width="120" height="60" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="3"/>
+    <text x="160" y="705" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      ファイルシステム
+    </text>
+    
+    <rect x="290" y="670" width="120" height="60" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="3"/>
+    <text x="315" y="705" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      ターミナル
+    </text>
+    
+    <rect x="430" y="670" width="120" height="60" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="3"/>
+    <text x="445" y="705" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      VSCode
+    </text>
+    
+    <rect x="220" y="750" width="260" height="80" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="3"/>
+    <text x="250" y="795" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      Chromeブラウザ
+    </text>
+    <text x="220" y="820" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" font-style="italic">
+      *ヘッドレスではない完全なブラウザ
+    </text>
+  </g>
+  
+  <!-- カラム2 (中央): データアクセスの提供 -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="670" y="200" width="580" height="60" fill="#1a5b66"/>
+    <text x="690" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      情報リソース
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="670" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="690" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      知識の壁を超える 🔑
+    </text>
+    <line x1="690" y1="310" x2="1010" y2="310" stroke="#1a5b66" stroke-width="3"/>
+    <circle cx="1010" cy="310" r="4" fill="#1a5b66"/>
+    
+    <!-- 本質説明 -->
+    <text x="690" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="690" y="350">公開情報だけでは高度な問題解決に不十分</tspan>
+      <tspan x="690" y="380">専門分野特有のデータ・知識が必要</tspan>
+    </text>
+    
+    <!-- データ種類の図解 -->
+    <rect x="690" y="420" width="540" height="250" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5"/>
+    <text x="710" y="450" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#1a5b66" font-weight="bold">
+      アクセス可能なデータソース
+    </text>
+    
+    <!-- データタイプ1 -->
+    <rect x="720" y="480" width="220" height="60" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5"/>
+    <text x="740" y="510" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      公開Web情報
+    </text>
+    <text x="740" y="530" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" font-style="italic">
+      (ブラウザでアクセス可能)
+    </text>
+    
+    <!-- データタイプ2 -->
+    <rect x="980" y="480" width="220" height="60" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5"/>
+    <text x="1000" y="510" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      専門データベース
+    </text>
+    <text x="1000" y="530" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" font-style="italic">
+      (API経由でアクセス)
+    </text>
+    
+    <!-- データタイプ3 -->
+    <rect x="720" y="560" width="220" height="60" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5"/>
+    <text x="740" y="590" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      法律・規制データ
+    </text>
+    <text x="740" y="610" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" font-style="italic">
+      (業界特化)
+    </text>
+    
+    <!-- データタイプ4 -->
+    <rect x="980" y="560" width="220" height="60" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5"/>
+    <text x="1000" y="590" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      金融市場データ
+    </text>
+    <text x="1000" y="610" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" font-style="italic">
+      (業界特化)
+    </text>
+    
+    <!-- 利便性説明 -->
+    <text x="690" y="700" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      統合化されたAPI
+    </text>
+    <line x1="690" y1="710" x2="900" y2="710" stroke="#1a5b66" stroke-width="2"/>
+    
+    <!-- 利便性ポイント -->
+    <rect x="690" y="730" width="540" height="150" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" rx="5"/>
+    <text x="710" y="760" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#1a5b66" font-weight="bold">
+      ユーザーメリット
+    </text>
+    <text x="710" y="795" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="710" y="795">・専門データへの即時アクセス</tspan>
+      <tspan x="710" y="825">・別途契約不要（コスト一元管理）</tspan>
+      <tspan x="710" y="855">・複数データソースの横断的活用</tspan>
+    </text>
+  </g>
+  
+  <!-- カラム3 (右): トレーニング機能 -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="1280" y="200" width="580" height="60" fill="#653a5e"/>
+    <text x="1300" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      適応型AIエージェント
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="1280" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="1300" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      インターンのような学習能力 🧠
+    </text>
+    <line x1="1300" y1="310" x2="1620" y2="310" stroke="#653a5e" stroke-width="3"/>
+    <circle cx="1620" cy="310" r="4" fill="#653a5e"/>
+    
+    <!-- 本質説明 -->
+    <text x="1300" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="1300" y="350">ユーザーの好みや作業習慣に適応する</tspan>
+      <tspan x="1300" y="380">能力がカギとなる</tspan>
+    </text>
+    
+    <!-- インターン比喩 -->
+    <rect x="1300" y="420" width="540" height="110" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    <text x="1320" y="450" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">
+      インターン社員との類似性:
+    </text>
+    <text x="1320" y="480" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="1320" y="480">・初期は能力は高くても経験不足</tspan>
+      <tspan x="1320" y="510">・フィードバックを通じて成長し適応する</tspan>
+    </text>
+    
+    <!-- ティーチング機能 -->
+    <text x="1300" y="570" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      ティーチング機能の実装
+    </text>
+    <line x1="1300" y1="580" x2="1580" y2="580" stroke="#653a5e" stroke-width="2"/>
+    
+    <!-- 機能説明図 -->
+    <rect x="1300" y="600" width="540" height="160" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+    
+    <!-- 3ステップ -->
+    <rect x="1320" y="620" width="150" height="120" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    <text x="1350" y="645" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">
+      1. 指示
+    </text>
+    <text x="1330" y="670" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+      ユーザーが好みを
+      エージェントに伝える
+    </text>
+    
+    <line x1="1470" y1="680" x2="1500" y2="680" stroke="#2c2c2c" stroke-width="1" marker-end="url(#arrow)"/>
+    
+    <rect x="1500" y="620" width="150" height="120" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    <text x="1530" y="645" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">
+      2. 提案
+    </text>
+    <text x="1510" y="670" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+      ロジックが提案され
+      ユーザーが承認
+    </text>
+    
+    <text x="1300" y="765" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">
+      3. 記憶と適用
+    </text>
+    <text x="1300" y="790" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+      個人ロジックデータベースに保存され、以降のタスクに適用
+    </text>
+    
+    <!-- 実例 -->
+    <rect x="1300" y="790" width="540" height="90" fill="#f4f1ea" stroke="#653a5e" stroke-width="2" rx="5"/>
+    <text x="1320" y="820" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#653a5e" font-weight="bold">
+      実例: リサーチスタイルのカスタマイズ
+    </text>
+    <text x="1320" y="850" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      タスク開始前に詳細確認を行うよう指示可能
+    </text>
+  </g>
+  
+  <!-- フッター -->
+  <rect x="60" y="1000" width="1800" height="40" fill="#2c2c2c"/>
+  <text x="1700" y="1025" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#f4f1ea" text-anchor="end">
+    © 2025 Manus AI · スライド 3/5
+  </text>
+  
+  <!-- マーカー定義 -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+      markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2c2c2c"/>
+    </marker>
+  </defs>
+</svg> 

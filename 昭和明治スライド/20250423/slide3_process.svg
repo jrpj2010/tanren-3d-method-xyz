@@ -1,0 +1,73 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="background:#f4f1ea">
+  <style>
+    .title { font-family: 'Noto Serif JP', serif; font-size: 36px; fill: #2c2c2c; letter-spacing: 0.12em; font-weight: bold;}
+    .subtitle { font-family: 'Noto Serif JP', serif; font-size: 18px; fill: #b3322b; letter-spacing: 0.1em;}
+    .coltitle { font-family: 'Noto Serif JP', serif; font-size: 20px; fill: #2c2c2c; font-weight: bold; }
+    .section { font-family: 'Noto Sans JP', sans-serif; font-size: 13px; fill: #2c2c2c; letter-spacing: 0.06em;}
+    .accent1 { fill: #b3322b; font-weight: bold;}
+    .accent2 { fill: #1a5b66; font-weight: bold;}
+    .accent3 { fill: #653a5e; font-weight: bold;}
+    .box1 { fill: #fff6f3; stroke: #b3322b; stroke-width:2;}
+    .box2 { fill: #f2f7fa; stroke: #1a5b66; stroke-width:2;}
+    .box3 { fill: #f7f4fa; stroke: #653a5e; stroke-width:2;}
+    .highlight { font-weight:bold; font-size:18px; fill:#653a5e;}
+    .foot { font-family: 'Noto Sans JP', sans-serif; font-size: 10px; fill: #888;}
+  </style>
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1280" height="60" fill="#2c2c2c"/>
+  <text x="50" y="42" class="title" fill="#f4f1ea">📅 開発工程・体制・進行管理</text>
+  <!-- 3カラムグリッド -->
+  <g>
+    <!-- カラム1 -->
+    <rect x="40" y="90" width="370" height="540" class="box1" rx="16"/>
+    <text x="60" y="125" class="coltitle accent1">1. 体制・役割</text>
+    <text x="60" y="155" class="section">PM / テックリード / 開発 / QA / DevOps</text>
+    <text x="60" y="185" class="coltitle accent1">開発手法</text>
+    <text x="60" y="210" class="section">V字モデル</text>
+    <text x="60" y="240" class="coltitle accent1">進捗管理</text>
+    <text x="60" y="265" class="section">Git+PRベース/CI自動化</text>
+    <text x="60" y="295" class="coltitle accent1">主要ドキュメント</text>
+    <text x="60" y="320" class="section">要件定義書・技術定義書・工程管理書</text>
+  </g>
+  <g>
+    <!-- カラム2 -->
+    <rect x="455" y="90" width="370" height="540" class="box2" rx="16"/>
+    <text x="475" y="125" class="coltitle accent2">2. 工程フロー</text>
+    <text x="475" y="155" class="section">1. 要件定義（M1）</text>
+    <text x="495" y="175" class="section">・要件定義書作成</text>
+    <text x="475" y="200" class="section">2. システム設計（M2）</text>
+    <text x="495" y="220" class="section">・技術定義書作成</text>
+    <text x="475" y="245" class="section">3. 実装（M3-4）</text>
+    <text x="495" y="265" class="section">・Next.js/Supabase開発</text>
+    <text x="475" y="290" class="section">4. 統合テスト（M5）</text>
+    <text x="495" y="310" class="section">・Docker+Vercel結合/AIテスト</text>
+    <text x="475" y="335" class="section">5. UAT/リリース（M6）</text>
+    <text x="495" y="355" class="section">・ユーザー承認/本番デプロイ</text>
+    <text x="475" y="380" class="section">6. 保守・改善（継続）</text>
+    <text x="495" y="400" class="section">・監視/バグ対応/AI再学習</text>
+    <!-- プロセスフロー図 -->
+    <polyline points="475,430 500,450 525,430 550,450 575,430" fill="none" stroke="#1a5b66" stroke-width="3"/>
+    <circle cx="475" cy="430" r="12" fill="#b3322b"/>
+    <circle cx="525" cy="430" r="12" fill="#1a5b66"/>
+    <circle cx="575" cy="430" r="12" fill="#653a5e"/>
+    <text x="470" y="460" class="section" fill="#888">要件→設計→実装→テスト→運用</text>
+  </g>
+  <g>
+    <!-- カラム3 -->
+    <rect x="870" y="90" width="370" height="540" class="box3" rx="16"/>
+    <text x="890" y="125" class="coltitle accent3">3. テスト・リリース・保守</text>
+    <text x="890" y="155" class="section">● 統合テスト：Docker+Vercel環境</text>
+    <text x="890" y="180" class="section">● UAT：ユーザー承認</text>
+    <text x="890" y="205" class="section">● 本番リリース：Vercel</text>
+    <text x="890" y="230" class="section">● 保守：ログ監視・AI再学習</text>
+    <rect x="890" y="270" width="320" height="60" fill="#fff" stroke="#653a5e" stroke-width="2" rx="8"/>
+    <text x="900" y="300" class="highlight">「安心のV字モデル運用」</text>
+    <!-- チェックアイコン -->
+    <circle cx="1100" cy="380" r="28" fill="#653a5e"/>
+    <polyline points="1090,390 1105,405 1120,370" fill="none" stroke="#fff" stroke-width="6"/>
+    <text x="890" y="430" class="section" fill="#888">品質担保・継続改善</text>
+  </g>
+  <!-- フッター -->
+  <rect x="0" y="670" width="1280" height="50" fill="#2c2c2c"/>
+  <text x="50" y="700" class="foot">© 2025 Interview Support AI Project | 工程・体制・進行管理</text>
+</svg>

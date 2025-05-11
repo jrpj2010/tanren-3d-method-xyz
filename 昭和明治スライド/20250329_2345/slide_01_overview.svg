@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- Header Section -->
+  <rect x="0" y="0" width="1920" height="120" fill="#2c2c2c" opacity="0.85"/>
+  <text x="60" y="75" font-family="Noto Serif JP, serif" font-size="36" font-weight="700" fill="#f4f1ea" letter-spacing="2">次世代SVGプレゼン講座：全体像と工程</text>
+  <text x="1860" y="75" font-family="Noto Sans JP, sans-serif" font-size="28" text-anchor="end" fill="#f4f1ea">01/05</text>
+  
+  <!-- Left Column -->
+  <g transform="translate(60, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" opacity="0.2"/>
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#1a5b66">本日のゴール</text>
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">自動生成SVGで高品質資料作成</text>
+    <text x="40" y="180" font-family="Noto Sans JP, sans-serif" font-size="18" fill="#2c2c2c">• テキスト情報をAIで構造化</text>
+    <text x="40" y="220" font-family="Noto Sans JP, sans-serif" font-size="18" fill="#2c2c2c">• SVG形式でスライド自動生成</text>
+    <text x="40" y="260" font-family="Noto Sans JP, sans-serif" font-size="18" fill="#2c2c2c">• Figmaで仕上げ編集</text>
+  </g>
+  
+  <!-- Middle Column -->
+  <g transform="translate(680, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="2" opacity="0.2"/>
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#b3322b">全工程のステップ</text>
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">13ステップの全体フロー</text>
+    <line x1="40" y1="220" x2="40" y2="750" stroke="#2c2c2c" stroke-width="2"/>
+    <text x="60" y="225" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">①本日のゴールイメージを把握</text>
+    <text x="60" y="285" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">②AIエディター「Cursor」の導入</text>
+    <text x="60" y="345" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">③プロジェクトフォルダの作成</text>
+    <text x="60" y="405" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">④SVG生成用ルールを設定</text>
+    <text x="60" y="465" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">⑤元情報をインプットする</text>
+    <text x="60" y="525" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">⑥複数スライドを自動生成</text>
+    <text x="60" y="585" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">⑦Figmaでの編集と調整</text>
+    <text x="60" y="645" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">⑧プレゼンテーションモードで確認</text>
+    <text x="60" y="705" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">⑨まとめと発展応用</text>
+  </g>
+  
+  <!-- Right Column -->
+  <g transform="translate(1300, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#653a5e" stroke-width="2" opacity="0.2"/>
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#653a5e">メリットと流れのポイント</text>
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">実施前の心構え</text>
+    <rect x="40" y="160" width="480" height="100" rx="4" fill="white" stroke="#653a5e" stroke-width="1"/>
+    <text x="50" y="190" font-family="Noto Sans JP, sans-serif" font-size="18" fill="#2c2c2c">「AIとコードが入り混じったスライド作成」</text>
+    <text x="50" y="220" font-family="Noto Sans JP, sans-serif" font-size="18" fill="#2c2c2c">と聞くと難しそうに感じるかもしれません</text>
+    <text x="50" y="250" font-family="Noto Sans JP, sans-serif" font-size="18" font-weight="700" fill="#b3322b">ですが、ご安心ください！</text>
+    <text x="40" y="310" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#653a5e">このアプローチの強み</text>
+    <text x="60" y="360" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">✓ 文字起こしをポンと放り込むだけでOK</text>
+    <text x="60" y="410" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">✓ コードを読めなくても編集可能</text>
+    <text x="60" y="460" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">✓ ベクターなので拡大しても綺麗</text>
+    <text x="60" y="510" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">✓ 一流コンサル風の高品質資料を短時間で</text>
+  </g>
+  
+  <!-- Footer -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c" opacity="0.85"/>
+  <text x="60" y="1055" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#f4f1ea">TANREN株式会社 AI秘書・桜木美佳</text>
+  <text x="1860" y="1055" font-family="Noto Sans JP, sans-serif" font-size="16" text-anchor="end" fill="#f4f1ea">次世代SVGプレゼン講座</text>
+</svg>

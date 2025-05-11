@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="60" y="60" width="1800" height="100" fill="#2c2c2c"/>
+  <text x="100" y="130" font-family="'Noto Serif JP', serif" font-size="48" fill="#f4f1ea" font-weight="bold">
+    Manusの今後 - AIエージェント時代の展望
+  </text>
+  
+  <!-- カラム1 (左): 驚異的なユーザー反応 -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="60" y="200" width="580" height="60" fill="#b3322b"/>
+    <text x="80" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      ローンチ後の反響
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="60" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="80" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      日本からの特別な支持 🇯🇵
+    </text>
+    <line x1="80" y1="310" x2="400" y2="310" stroke="#b3322b" stroke-width="3"/>
+    <circle cx="400" cy="310" r="4" fill="#b3322b"/>
+    
+    <!-- 本質説明 -->
+    <text x="80" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="80" y="350">Discordサーバーで最も活発なのは</tspan>
+      <tspan x="80" y="380">日本語チャンネル</tspan>
+    </text>
+    
+    <!-- 待機リストグラフ -->
+    <text x="80" y="430" font-family="'Noto Serif JP', serif" font-size="20" fill="#2c2c2c" font-weight="bold">
+      待機リスト推移
+    </text>
+    
+    <rect x="80" y="450" width="540" height="150" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+    <line x1="80" y1="580" x2="620" y2="580" stroke="#2c2c2c" stroke-width="1"/>
+    <line x1="80" y1="450" x2="80" y2="580" stroke="#2c2c2c" stroke-width="1"/>
+    
+    <!-- 待機リストグラフの線 -->
+    <path d="M 100 570 L 160 520 L 220 480 L 280 450 L 340 430 L 400 470 L 460 500 L 520 550 L 600 570" 
+          stroke="#b3322b" stroke-width="2" fill="none"/>
+    
+    <text x="100" y="600" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+      リリース
+    </text>
+    <text x="340" y="600" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+      ピーク時 300万人
+    </text>
+    <text x="600" y="600" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+      現在
+    </text>
+    
+    <!-- リテンション率図 -->
+    <text x="80" y="640" font-family="'Noto Serif JP', serif" font-size="20" fill="#2c2c2c" font-weight="bold">
+      異例のリテンション率
+    </text>
+    
+    <rect x="80" y="660" width="540" height="140" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" rx="5"/>
+    
+    <!-- 通常のリテンション率カーブ -->
+    <path d="M 100 670 L 150 700 L 200 730 L 250 750 L 300 760 L 350 770 L 550 780" 
+          stroke="#2c2c2c" stroke-width="1" stroke-dasharray="5,5" fill="none"/>
+    <text x="560" y="780" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+      通常
+    </text>
+    
+    <!-- Manusのリテンション率カーブ -->
+    <path d="M 100 670 L 150 700 L 200 700 L 250 700 L 300 700 L 350 700 L 550 700" 
+          stroke="#b3322b" stroke-width="3" fill="none"/>
+    <text x="560" y="700" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#b3322b">
+      Manus
+    </text>
+    
+    <text x="200" y="730" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      60%のフラットな継続率
+    </text>
+    <text x="200" y="750" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      1日1タスク制限下でも維持
+    </text>
+    
+    <!-- 実例強調 -->
+    <rect x="80" y="820" width="540" height="140" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5"/>
+    <text x="100" y="850" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#b3322b" font-weight="bold">
+      予想を上回る多様なユースケース
+    </text>
+    <text x="100" y="885" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="100" y="885">・がん・老化研究者の専門利用</tspan>
+      <tspan x="100" y="915">・ワーキングマザーの時間創出</tspan>
+      <tspan x="100" y="945">・ユーザー主導の新活用法の毎日共有</tspan>
+    </text>
+  </g>
+  
+  <!-- カラム2 (中央): エージェント時代の新指標 -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="670" y="200" width="580" height="60" fill="#1a5b66"/>
+    <text x="690" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      評価基準の変革
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="670" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="690" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      従来指標の限界 📊
+    </text>
+    <line x1="690" y1="310" x2="1010" y2="310" stroke="#1a5b66" stroke-width="3"/>
+    <circle cx="1010" cy="310" r="4" fill="#1a5b66"/>
+    
+    <!-- 本質説明 -->
+    <text x="690" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="690" y="350">モバイル時代のユーザー消費時間を</tspan>
+      <tspan x="690" y="380">超える新しい評価基準が必要</tspan>
+    </text>
+    
+    <!-- 従来指標 vs 新指標 -->
+    <rect x="690" y="420" width="540" height="180" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5"/>
+    <line x1="960" y1="420" x2="960" y2="600" stroke="#2c2c2c" stroke-width="1" stroke-dasharray="5,5"/>
+    
+    <text x="740" y="450" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold" text-anchor="middle">
+      従来の指標
+    </text>
+    <text x="1130" y="450" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#1a5b66" font-weight="bold" text-anchor="middle">
+      新しい指標
+    </text>
+    
+    <text x="710" y="490" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      ユーザー消費時間
+    </text>
+    <text x="980" y="490" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#1a5b66">
+      AHPU
+    </text>
+    <text x="980" y="510" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-style="italic">
+      (Agentic Hours Per User)
+    </text>
+    
+    <text x="710" y="540" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      <tspan x="710" y="540">ユーザーがアプリを</tspan>
+      <tspan x="710" y="560">使用する時間</tspan>
+    </text>
+    <text x="980" y="540" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      <tspan x="980" y="540">AIエージェントがユーザーの</tspan>
+      <tspan x="980" y="560">ために働く時間</tspan>
+    </text>
+    
+    <!-- 労働のスケーリング式 -->
+    <text x="690" y="630" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      労働のスケーリング
+    </text>
+    <line x1="690" y1="640" x2="900" y2="640" stroke="#1a5b66" stroke-width="2"/>
+    
+    <rect x="690" y="660" width="540" height="120" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5"/>
+    
+    <text x="960" y="700" font-family="'Noto Sans JP', sans-serif" font-size="24" fill="#1a5b66" font-weight="bold" text-anchor="middle">
+      生産性 ≈
+      <tspan x="960" y="735">
+        同時実行タスク数 / 平均タスク時間
+      </tspan>
+    </text>
+    
+    <!-- 実業務比較 -->
+    <rect x="690" y="800" width="540" height="160" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" rx="5"/>
+    <text x="710" y="830" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#1a5b66" font-weight="bold">
+      人間とAIエージェントの比較
+    </text>
+    
+    <line x1="960" y1="850" x2="960" y2="940" stroke="#2c2c2c" stroke-width="1"/>
+    
+    <text x="710" y="870" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      人間
+    </text>
+    <text x="710" y="900" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      <tspan x="710" y="900">同時1タスクの制約</tspan>
+      <tspan x="710" y="925">限定的な時間短縮</tspan>
+    </text>
+    
+    <text x="980" y="870" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      Manus
+    </text>
+    <text x="980" y="900" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      <tspan x="980" y="900">無制限の並列実行</tspan>
+      <tspan x="980" y="925">6ヶ月内に5-10倍の高速化計画</tspan>
+    </text>
+  </g>
+  
+  <!-- カラム3 (右): 未来展望と挑戦 -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="1280" y="200" width="580" height="60" fill="#653a5e"/>
+    <text x="1300" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      AIエージェント進化
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="1280" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="1300" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      膨大なリソース要求 🔥
+    </text>
+    <line x1="1300" y1="310" x2="1620" y2="310" stroke="#653a5e" stroke-width="3"/>
+    <circle cx="1620" cy="310" r="4" fill="#653a5e"/>
+    
+    <!-- 本質説明 -->
+    <text x="1300" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="1300" y="350">エージェント製品はChatbotの1000倍の</tspan>
+      <tspan x="1300" y="380">トークンを消費</tspan>
+    </text>
+    
+    <!-- トークン消費量比較図 -->
+    <rect x="1300" y="420" width="540" height="180" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    
+    <rect x="1330" y="470" width="30" height="100" fill="#2c2c2c"/>
+    <text x="1345" y="590" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">
+      Chatbot
+    </text>
+    
+    <rect x="1430" y="370" width="380" height="10" fill="#653a5e"/>
+    <rect x="1430" y="390" width="380" height="10" fill="#653a5e"/>
+    <rect x="1430" y="410" width="380" height="10" fill="#653a5e"/>
+    <rect x="1430" y="430" width="380" height="10" fill="#653a5e"/>
+    <rect x="1430" y="450" width="380" height="10" fill="#653a5e"/>
+    <rect x="1430" y="470" width="380" height="10" fill="#653a5e"/>
+    <rect x="1430" y="490" width="380" height="10" fill="#653a5e"/>
+    <rect x="1430" y="510" width="380" height="10" fill="#653a5e"/>
+    <rect x="1430" y="530" width="380" height="10" fill="#653a5e"/>
+    <rect x="1430" y="550" width="380" height="10" fill="#653a5e"/>
+    <text x="1620" y="590" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">
+      Manus (エージェント)
+    </text>
+    
+    <text x="1365" y="440" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#f4f1ea" font-weight="bold" text-anchor="middle">
+      1
+    </text>
+    <text x="1620" y="440" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold" text-anchor="middle">
+      1000
+    </text>
+    
+    <!-- ミッションと未来 -->
+    <text x="1300" y="630" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      人類の生産性向上というミッション
+    </text>
+    <line x1="1300" y1="640" x2="1650" y2="640" stroke="#653a5e" stroke-width="2"/>
+    
+    <rect x="1300" y="660" width="540" height="120" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    <text x="1320" y="690" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="1320" y="690">「自動車の発明が人類の移動範囲を拡張したように、</tspan>
+      <tspan x="1320" y="720">AIエージェントは人類全体の生産性の限界を</tspan>
+      <tspan x="1320" y="750">拡張する可能性を秘めている」</tspan>
+    </text>
+    
+    <!-- ボス論 -->
+    <rect x="1300" y="800" width="540" height="160" fill="#f4f1ea" stroke="#653a5e" stroke-width="2" rx="5"/>
+    <text x="1320" y="830" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#653a5e" font-weight="bold">
+      ボスになることを学ぶ時代
+    </text>
+    <text x="1320" y="865" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="1320" y="865">・誰もが自分自身の「デジタル従業員」を保有</tspan>
+      <tspan x="1320" y="895">・優秀な従業員であることと、適切なタスクを</tspan>
+      <tspan x="1330" y="925">割り当てることは異なるスキル</tspan>
+      <tspan x="1320" y="950">・新しい働き方へのシフト</tspan>
+    </text>
+  </g>
+  
+  <!-- フッター -->
+  <rect x="60" y="1000" width="1800" height="40" fill="#2c2c2c"/>
+  <text x="1700" y="1025" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#f4f1ea" text-anchor="end">
+    © 2025 Manus AI · スライド 5/5
+  </text>
+</svg> 

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レベル0.5：カスタムAIによる一撃回答の世界</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a2463 0%, #1e50a2 50%, #3a6ea5 100%);
+            color: #ffffff;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            padding: 25px 40px 10px;
+            background: rgba(10, 36, 99, 0.7);
+            border-bottom: 2px solid rgba(192, 224, 222, 0.3);
+        }
+        .content {
+            display: flex;
+            padding: 20px 40px;
+        }
+        .left-column {
+            flex: 1;
+            padding-right: 30px;
+        }
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #66c7f4, #41b6e6);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 10px rgba(65, 182, 230, 0.4);
+        }
+        .title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin: 0;
+            background: linear-gradient(45deg, #ffffff, #c0e0de);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #66c7f4;
+        }
+        .feature-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .feature-list i {
+            color: #66c7f4;
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+        .example-container {
+            display: flex;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        .example-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(102, 199, 244, 0.3);
+            transition: all 0.3s ease;
+        }
+        .example-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .example-card .icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: #66c7f4;
+        }
+        .example-card h4 {
+            font-size: 0.9rem;
+            margin: 5px 0;
+            text-align: center;
+        }
+        .example-card p {
+            font-size: 0.75rem;
+            margin: 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .diagram {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .action-card {
+            background: rgba(65, 182, 230, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+            border-left: 4px solid #66c7f4;
+        }
+        .action-card h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        .action-card h3 i {
+            margin-right: 10px;
+        }
+        .diagram-component {
+            position: relative;
+            text-align: center;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            width: 80%;
+        }
+        .instruction-box {
+            background: rgba(102, 199, 244, 0.2);
+            border: 2px solid #66c7f4;
+        }
+        .knowledge-box {
+            background: rgba(101, 146, 230, 0.2);
+            border: 2px solid #6592e6;
+        }
+        .response-box {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+        }
+        .arrow {
+            position: absolute;
+            height: 40px;
+            width: 2px;
+            background-color: rgba(255, 255, 255, 0.5);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .arrow:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -5px;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 10px solid rgba(255, 255, 255, 0.5);
+        }
+        .grid-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="grid-pattern"></div>
+        <header class="header">
+            <div class="level-badge">初級 / レベル0.5</div>
+            <h1 class="title">カスタムAIによる一撃回答の世界</h1>
+        </header>
+        <div class="content">
+            <div class="left-column">
+                <div class="feature-card">
+                    <h3><i class="fas fa-fingerprint"></i> 特徴と定義</h3>
+                    <ul class="feature-list list-none pl-0">
+                        <li><i class="fas fa-check-circle"></i> AIエージェント世界への最も身近な「入口」</li>
+                        <li><i class="fas fa-check-circle"></i> 特定目的に特化した指示と知識ベースを持つ</li>
+                        <li><i class="fas fa-check-circle"></i> 自律性は限定的（基本的に指示待ち）</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-lightbulb"></i> できること</h3>
+                    <ul class="feature-list list-none pl-0">
+                        <li><i class="fas fa-check-circle"></i> 簡単な指示で専門家級の回答を「一撃」で取得</li>
+                        <li><i class="fas fa-check-circle"></i> AIとのコミュニケーションコストを大幅削減</li>
+                        <li><i class="fas fa-check-circle"></i> 特定分野での質問応答・タスク実行</li>
+                    </ul>
+                </div>
+                
+                <div class="example-container">
+                    <div class="example-card">
+                        <div class="icon"><i class="fas fa-user-tie"></i></div>
+                        <h4>AI伊藤羊一</h4>
+                        <p>伊藤氏の思考様式と知識を再現</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="icon"><i class="fas fa-female"></i></div>
+                        <h4>AI秘書 桜木ミカ</h4>
+                        <p>カレンダー連携など外部システム活用</p>
+                    </div>
+                    <div class="example-card">
+                        <div class="icon"><i class="fas fa-book"></i></div>
+                        <h4>NotebookLM</h4>
+                        <p>特定知識ベースとの対話（RAG活用）</p>
+                    </div>
+                </div>
+                
+                <div class="action-card">
+                    <h3><i class="fas fa-rocket"></i> あなたへのアクション</h3>
+                    <p class="text-sm">GPTsで自分だけの専門ボットを作ってみよう！<br>
+                    NotebookLMに自分の資料を放り込んで対話してみよう！<br>
+                    自分で作り、試す経験が次のレベルへの鍵になる</p>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="diagram">
+                    <h3 class="text-center mb-4 text-lg font-bold">AIエージェントの基本原理</h3>
+                    
+                    <div class="diagram-component instruction-box">
+                        <strong>指示 (Instructions)</strong>
+                        <p class="text-xs mt-1">「あなたは専属ライティングコーチです」</p>
+                    </div>
+                    
+                    <div class="arrow"></div>
+                    
+                    <div class="diagram-component knowledge-box">
+                        <strong>知識 (Knowledge)</strong>
+                        <p class="text-xs mt-1">アップロードした社内マニュアル、参考資料など</p>
+                    </div>
+                    
+                    <div class="arrow"></div>
+                    
+                    <div class="diagram-component response-box">
+                        <strong>一撃回答</strong>
+                        <p class="text-xs mt-1">専門家のような的確な回答・成果物</p>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-balance-scale"></i> 価値と限界</h3>
+                    <div class="flex">
+                        <div class="w-1/2 pr-2">
+                            <p class="text-sm font-bold text-green-300">価値 <i class="fas fa-plus-circle"></i></p>
+                            <ul class="list-none pl-0 text-sm">
+                                <li class="mb-1">• AI対話の効率化</li>
+                                <li class="mb-1">• パーソナライズの第一歩</li>
+                                <li class="mb-1">• 基本原理の学習機会</li>
+                            </ul>
+                        </div>
+                        <div class="w-1/2 pl-2">
+                            <p class="text-sm font-bold text-yellow-300">限界 <i class="fas fa-minus-circle"></i></p>
+                            <ul class="list-none pl-0 text-sm">
+                                <li class="mb-1">• 自律性は限定的</li>
+                                <li class="mb-1">• 基本的に指示待ち</li>
+                                <li class="mb-1">• 外部連携は限られる</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIフィードバック実践：原案からの魂入れプロセス</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #f5f3ff 0%, #ffffff 100%);
+            overflow: hidden;
+        }
+        .feedback-box {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .feedback-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        .box-header {
+            padding: 8px 12px;
+            color: white;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+        .step-arrow {
+            width: 36px;
+            height: 36px;
+            background-color: #f3e8ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9333ea;
+            font-size: 1.1rem;
+        }
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        .step-number {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #9333ea;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        .highlight {
+            color: #9333ea;
+            font-weight: 600;
+        }
+        .tab-indicator {
+            width: 3px;
+            height: 16px;
+            background-color: #9333ea;
+            margin-right: 6px;
+        }
+        .personal-touch {
+            background-color: #faf5ff;
+            border-left: 3px solid #9333ea;
+            padding: 6px 8px;
+            margin: 6px 0;
+            font-size: 0.75rem;
+        }
+        .prompt-tag {
+            display: inline-block;
+            background-color: #1e293b;
+            color: #e2e8f0;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 0.7rem;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-4">
+        <!-- Header -->
+        <div class="mb-3">
+            <h1 class="text-2xl font-bold text-gray-800">AIフィードバック実践：原案からの魂入れプロセス</h1>
+            <div class="w-40 h-1.5 bg-purple-600 mt-1 rounded-full"></div>
+        </div>
+        
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-3 gap-4 h-[380px]">
+            <!-- Left Column: AI Draft -->
+            <div class="feedback-box">
+                <div class="box-header bg-blue-600">
+                    <div class="flex items-center">
+                        <i class="fas fa-robot mr-1"></i>
+                        <span>AIが生成する原案</span>
+                    </div>
+                </div>
+                <div class="p-3 h-full overflow-y-auto text-xs">
+                    <div class="flex items-center mb-2">
+                        <div class="tab-indicator"></div>
+                        <h3 class="font-bold text-gray-700">フィードバック：山田さん</h3>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <p class="font-bold mb-1 text-blue-800">承認点:</p>
+                        <p class="text-gray-700">先週のプロジェクトXにおいて、納期内に品質基準を満たす成果物を提出。特に急な仕様変更にも柔軟に対応した点が評価できます。</p>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <p class="font-bold mb-1 text-blue-800">改善点:</p>
+                        <p class="text-gray-700">チーム内での情報共有頻度が低く、他メンバーが進捗把握しづらい状況。</p>
+                    </div>
+                    
+                    <div class="mb-2">
+                        <p class="font-bold mb-1 text-blue-800">改善提案:</p>
+                        <p class="text-gray-700">1. 朝会での簡潔な進捗報告</p>
+                        <p class="text-gray-700">2. 課題発生時の即時共有</p>
+                        <p class="text-gray-700">3. 週次レポートの活用</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Middle Column: Soul Infusion Process -->
+            <div class="flex flex-col items-center h-full">
+                <div class="step-arrow mb-4">
+                    <i class="fas fa-exchange-alt"></i>
+                </div>
+                
+                <div class="bg-white p-3 rounded-lg shadow-md w-full mb-3">
+                    <h3 class="text-purple-800 font-bold text-center mb-2 text-sm">魂入れの4ステップ</h3>
+                    
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-xs">レビューと調整</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-xs">共感と熱意の注入</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-xs">個別エピソード挿入</p>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-xs">最終調整</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center justify-center mb-2">
+                    <i class="fas fa-robot text-blue-500 mr-2"></i>
+                    <i class="fas fa-plus text-gray-400 mx-1"></i>
+                    <i class="fas fa-heart text-pink-500 mr-2"></i>
+                    <span class="text-purple-800 font-bold">=</span>
+                    <i class="fas fa-comment-dots text-purple-600 ml-2"></i>
+                </div>
+                
+                <p class="text-xs text-center text-gray-600">
+                    客観性と構造化力 <span class="text-purple-800 font-bold">+</span> 温かさと共感力
+                </p>
+                
+                <div class="mt-4 flex flex-wrap justify-center">
+                    <span class="prompt-tag"><i class="fas fa-hashtag text-xs mr-1"></i>指導OS（型）</span>
+                    <span class="prompt-tag"><i class="fas fa-user text-xs mr-1"></i>ペルソナ情報</span>
+                    <span class="prompt-tag"><i class="fas fa-bullseye text-xs mr-1"></i>1on1シナリオ</span>
+                </div>
+            </div>
+            
+            <!-- Right Column: Soul-Infused Feedback -->
+            <div class="feedback-box">
+                <div class="box-header bg-purple-700">
+                    <div class="flex items-center">
+                        <i class="fas fa-user-heart mr-1"></i>
+                        <span>人間による魂入れ後</span>
+                    </div>
+                </div>
+                <div class="p-3 h-full overflow-y-auto text-xs">
+                    <div class="flex items-center mb-2">
+                        <div class="tab-indicator"></div>
+                        <h3 class="font-bold text-gray-700">フィードバック：山田さん</h3>
+                    </div>
+                    
+                    <div class="mb-2">
+                        <p class="font-bold mb-1 text-purple-800">承認点:</p>
+                        <p class="text-gray-700">山田さん、<span class="highlight">プロジェクトX、本当にお疲れ様でした！</span>納期内に高品質な成果物を提出してくれて助かりました。あの急な仕様変更の時も冷静に対応してくれましたね。</p>
+                    </div>
+                    
+                    <div class="personal-touch">
+                        <i class="fas fa-quote-left text-purple-400 mr-1"></i>
+                        <span>あのクライアント会議での山田さんの提案は的確でした。</span>
+                    </div>
+                    
+                    <div class="mb-2">
+                        <p class="font-bold mb-1 text-purple-800">改善点と提案:</p>
+                        <p class="text-gray-700"><span class="highlight">チームが山田さんの素晴らしい仕事を理解できるよう</span>、情報共有を増やしましょう：</p>
+                        <p class="text-gray-700">1. 朝会での簡単共有（<span class="highlight">私も一緒に頑張ります！</span>）</p>
+                        <p class="text-gray-700">2. 課題の即時共有</p>
+                        <p class="text-gray-700">3. 週次レポートの活用</p>
+                    </div>
+                    
+                    <p class="text-gray-700"><span class="highlight">山田さんの技術力は頼りになる</span>ので、情報共有が加われば最強です！何か不安なことがあれば、いつでも相談してくださいね。</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-3 right-6">
+            <p class="text-gray-500 text-xs">AI超独学法 | 第6章</p>
+        </div>
+    </div>
+</body>
+</html>

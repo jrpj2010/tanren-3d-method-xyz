@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レベル0.5：カスタムAIによる一撃回答の世界</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f5f7fa;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #0a2463 0%, #1e50a2 80%);
+            overflow: hidden;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 0 0;
+        }
+        .header {
+            padding: 0 50px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .title-container {
+            display: flex;
+            align-items: center;
+        }
+        .level-badge {
+            background: linear-gradient(45deg, rgba(100,149,237,0.4), rgba(100,149,237,0.2));
+            border-left: 3px solid #6495ED;
+            border-radius: 12px;
+            padding: 8px 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-right: 15px;
+            min-width: 110px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        .title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 0;
+            background: linear-gradient(45deg, #ffffff, #c0e0de);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .content {
+            display: flex;
+            flex: 1;
+            padding: 0 50px 30px;
+        }
+        .left-section {
+            width: 58%;
+            padding-right: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        .right-section {
+            width: 42%;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+        .section {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #6495ED;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title i {
+            margin-right: 8px;
+        }
+        .section-content {
+            font-size: 1rem;
+            line-height: 1.5;
+            opacity: 0.9;
+            padding-left: 28px;
+        }
+        .highlight {
+            background: rgba(100,149,237,0.15);
+            border-left: 3px solid #6495ED;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .action {
+            background: linear-gradient(45deg, rgba(100,149,237,0.4), rgba(100,149,237,0.2));
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: auto;
+        }
+        .action-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+        }
+        .action-title i {
+            margin-right: 8px;
+        }
+        .example-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #c0e0de;
+            text-align: center;
+        }
+        .examples {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .example-card {
+            width: 48%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        .example-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .example-card-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .example-card-title i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+        .example-card-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+                            linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: 0;
+            top: 0;
+            left: 0;
+        }
+        .key-concept {
+            display: inline-block;
+            background: rgba(192, 224, 222, 0.15);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+            margin: 0 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="grid-pattern"></div>
+        <div class="header">
+            <div class="title-container">
+                <div class="level-badge">レベル 0.5</div>
+                <h1 class="title">カスタムAIによる「一撃回答」の世界</h1>
+            </div>
+            <div style="font-size: 0.9rem; opacity: 0.7;">入門（Beginner / Onboarding）</div>
+        </div>
+        
+        <div class="content">
+            <div class="left-section">
+                <div class="section">
+                    <div class="section-title"><i class="fas fa-question-circle"></i>これが何か？</div>
+                    <div class="section-content">
+                        AIエージェントの世界への入口。<span class="key-concept">指示（システムプロンプト）</span>と<span class="key-concept">知識（データベース）</span>に基づいて応答する基本原理が凝縮されたレベル。代表格はOpenAIの<span class="key-concept">GPTs</span>やGoogleの<span class="key-concept">NotebookLM</span>など。
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title"><i class="fas fa-lightbulb"></i>何ができる？</div>
+                    <div class="section-content">
+                        <div class="highlight">
+                            特定の目的や知識をAIに「仕込んで」おくことで、簡単な指示だけで専門家レベルの回答や成果物を「一撃」で得られる。毎回の長い背景説明や役割設定の手間から解放され、AIとのコミュニケーションコストが劇的に削減。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <div class="section-title"><i class="fas fa-balance-scale"></i>価値と限界</div>
+                    <div class="section-content">
+                        <strong>価値：</strong> AI対話の<span class="key-concept">効率化</span>、<span class="key-concept">パーソナライズ</span>の第一歩、AIエージェントの基本原理を手軽に学習可能<br>
+                        <strong>限界：</strong> <span class="key-concept">自律性は限定的</span>で基本的にはユーザー指示待ち。複雑なタスク連続実行や高度な外部システム連携には限界がある
+                    </div>
+                </div>
+                
+                <div class="action">
+                    <div class="action-title"><i class="fas fa-rocket"></i>あなたへのアクション</div>
+                    <div>
+                        このレベルを徹底的に使い倒そう！<br>
+                        • GPTsで自分だけの「〇〇専門ボット」を作ってみる<br>
+                        • NotebookLMに自分の資料を放り込んで対話してみる<br>
+                        • <strong>自分で作り、試す</strong>経験こそが次のレベルへの扉を開く鍵
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <div class="example-title">
+                    <i class="fas fa-flask"></i> 講義での実践例
+                </div>
+                
+                <div class="examples">
+                    <div class="example-card">
+                        <div class="example-card-title">
+                            <i class="fas fa-user-tie"></i> AI伊藤羊一
+                        </div>
+                        <div class="example-card-desc">
+                            GPTsで作成した伊藤氏の分身。彼の著作や講演内容（知識）に基づき、思考様式や口調（指示）で応答するレベル0.5の典型例。裏側には「指示」と「知識」というシンプルな構成要素のみ。
+                        </div>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-card-title">
+                            <i class="fas fa-female"></i> AI秘書 桜木ミカ
+                        </div>
+                        <div class="example-card-desc">
+                            GPTsを応用し、GAS Interpreter連携などの設定を加えることで、Googleカレンダーの予定確認といった外部連携も実現。基本はGPTsの延長線上。
+                        </div>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-card-title">
+                            <i class="fas fa-book"></i> NotebookLM
+                        </div>
+                        <div class="example-card-desc">
+                            Youtube動画のURLや大量のテキストデータを読み込ませるだけで、その内容について対話可能。特定の知識ソースに基づいて応答するRAG（検索拡張生成）活用例。
+                        </div>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-card-title">
+                            <i class="fas fa-cogs"></i> 仕組みのシンプルさ
+                        </div>
+                        <div class="example-card-desc">
+                            レベル0.5の裏側にあるのは「指示（Instructions）」と「知識（Knowledge）」という単純な仕組みだけ。この基本原理の理解が、より高度なAIエージェントへの第一歩。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

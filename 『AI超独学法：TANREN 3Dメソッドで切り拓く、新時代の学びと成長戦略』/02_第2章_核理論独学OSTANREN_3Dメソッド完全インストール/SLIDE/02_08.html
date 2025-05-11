@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TANREN 3Dメソッド実践</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .title {
+            background: linear-gradient(90deg, #60a5fa 0%, #8b5cf6 50%, #34d399 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(255,255,255,0.1);
+        }
+        .subtitle {
+            color: #94a3b8;
+        }
+        .step-card {
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .step-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            opacity: 0.2;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+        }
+        .prompt-box {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 0.5rem;
+            font-family: monospace;
+            padding: 0.75rem;
+            font-size: 0.8rem;
+            color: #cbd5e1;
+            overflow: auto;
+            max-height: 200px;
+        }
+        .theme-card {
+            transition: all 0.3s ease;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+        }
+        .theme-card:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+        .work-theme { border-left: 3px solid #3b82f6; }
+        .learning-theme { border-left: 3px solid #22c55e; }
+        .private-theme { border-left: 3px solid #8b5cf6; }
+        
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+        .co-creation {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            background: linear-gradient(135deg, 
+                rgba(59, 130, 246, 0.1) 0%, 
+                rgba(34, 197, 94, 0.1) 50%, 
+                rgba(139, 92, 246, 0.1) 100%);
+        }
+        .key-point {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+        .key-point:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: #60a5fa;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-10 flex flex-col">
+        <!-- 背景グリッド -->
+        <div class="grid-bg"></div>
+        
+        <!-- ヘッダー -->
+        <div class="mb-6 z-10">
+            <h1 class="title text-4xl font-bold mb-2">TANREN 3Dメソッド実践：AIと共に思考OSを身体に刻む</h1>
+            <h2 class="subtitle text-xl font-semibold">OSを「知っている」から「使える」へ</h2>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="flex flex-row z-10 flex-1 space-x-6">
+            <!-- 左側：統合演習の4ステップ -->
+            <div class="w-1/2">
+                <h3 class="text-xl font-bold text-blue-400 mb-4">統合演習の4ステップ</h3>
+                
+                <div class="space-y-4">
+                    <!-- ステップ1 -->
+                    <div class="step-card p-4 relative flex">
+                        <span class="step-number text-blue-500">1</span>
+                        <div class="w-12 h-12 bg-blue-500 bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-pencil-alt text-blue-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-blue-300">初期思考の言語化＆構造化</h4>
+                            <p class="text-gray-400 text-sm">選んだテーマについて考えていることを自由に書き出し、簡単な構造（結論・根拠・事例など）に整理する</p>
+                        </div>
+                    </div>
+                    
+                    <!-- ステップ2 -->
+                    <div class="step-card p-4 relative flex">
+                        <span class="step-number text-green-500">2</span>
+                        <div class="w-12 h-12 bg-green-500 bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-cubes text-green-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-green-300">3Dメソッドによる自己分析</h4>
+                            <p class="text-gray-400 text-sm">X軸（抽象化・具体化）、Y軸（過去・現在・未来）、Z軸（レベル感）から問いかけを行い、思考を深める</p>
+                        </div>
+                    </div>
+                    
+                    <!-- ステップ3 -->
+                    <div class="step-card p-4 relative flex">
+                        <span class="step-number text-purple-500">3</span>
+                        <div class="w-12 h-12 bg-purple-500 bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-robot text-purple-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-purple-300">AIとの対話的深掘り＆フィードバック</h4>
+                            <p class="text-gray-400 text-sm">初期思考と自己分析をAIに提示し、対話を通じて思考をさらに深掘り、客観的なフィードバックを得る</p>
+                        </div>
+                    </div>
+                    
+                    <!-- ステップ4 -->
+                    <div class="step-card p-4 relative flex">
+                        <span class="step-number text-yellow-500">4</span>
+                        <div class="w-12 h-12 bg-yellow-500 bg-opacity-20 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-arrow-right text-yellow-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-yellow-300">改善とネクストステップ</h4>
+                            <p class="text-gray-400 text-sm">AIとの対話から得た気づきを基に初期思考を改善し、具体的な「次の行動」へと繋げる</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- フロー図 -->
+                <div class="mermaid mt-4 bg-opacity-10 bg-white rounded-lg p-2" style="background: transparent; height: 150px;">
+                    graph LR
+                    A[思考の言語化] -->|X軸| B[自己分析]
+                    B -->|AIと対話| C[深掘り]
+                    C -->|実践| D[行動]
+                    D -.->|フィードバック| A
+                    
+                    style A fill:#3b82f6,stroke:#2563eb,color:#fff
+                    style B fill:#22c55e,stroke:#16a34a,color:#fff
+                    style C fill:#8b5cf6,stroke:#7c3aed,color:#fff
+                    style D fill:#eab308,stroke:#ca8a04,color:#fff
+                </div>
+            </div>
+            
+            <!-- 右側：プロンプト例と演習テーマ例 -->
+            <div class="w-1/2">
+                <!-- プロンプト例 -->
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold text-purple-400 mb-2">実践のためのプロンプト例</h3>
+                    <div class="prompt-box">
+                        <span class="text-blue-400"># 役割設定</span><br>
+                        あなたは、TANREN 3Dメソッドをマスターした思考戦略コーチです。<br><br>
+                        <span class="text-green-400"># 私の初期思考（テーマ：会議の活性化）</span><br>
+                        * 現状：発言者が偏り、アイデアが出にくい<br>
+                        * 課題：心理的安全性？ ファシリテーション？<br>
+                        * 対策案：アイスブレイク導入？ ルール設定？<br><br>
+                        <span class="text-purple-400"># 3Dメソッドに基づく対話依頼</span><br>
+                        1. <span class="text-blue-400">X軸（超抽象化）:</span> この問題の本質は？<br>
+                        2. <span class="text-blue-400">X軸（超具体化）:</span> 具体的な実行ステップは？<br>
+                        3. <span class="text-green-400">Y軸（過去）:</span> 過去の取り組みは？<br>
+                        4. <span class="text-green-400">Y軸（未来）:</span> 理想の状態とは？<br>
+                        5. <span class="text-purple-400">Z軸（レベル感）:</span> どのレベルから着手？<br>
+                        6. <span class="text-yellow-400">統合:</span> 最優先で取り組むべきことは？
+                    </div>
+                </div>
+                
+                <!-- 演習テーマ例 -->
+                <div class="mb-4">
+                    <h3 class="text-xl font-bold text-yellow-400 mb-2">演習テーマ例</h3>
+                    <div class="grid grid-cols-3 gap-2">
+                        <!-- 仕事編 -->
+                        <div class="col-span-1">
+                            <h4 class="text-blue-400 font-bold mb-1 text-sm border-b border-blue-900 pb-1">
+                                <i class="fas fa-briefcase mr-1"></i> 仕事編
+                            </h4>
+                            <div class="theme-card work-theme">
+                                <p class="text-xs text-gray-300">プロジェクト課題と改善策</p>
+                            </div>
+                            <div class="theme-card work-theme">
+                                <p class="text-xs text-gray-300">プレゼンテーション構成案</p>
+                            </div>
+                            <div class="theme-card work-theme">
+                                <p class="text-xs text-gray-300">チームコミュニケーション活性化</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 学習編 -->
+                        <div class="col-span-1">
+                            <h4 class="text-green-400 font-bold mb-1 text-sm border-b border-green-900 pb-1">
+                                <i class="fas fa-book mr-1"></i> 学習編
+                            </h4>
+                            <div class="theme-card learning-theme">
+                                <p class="text-xs text-gray-300">ビジネス書の実務活用法</p>
+                            </div>
+                            <div class="theme-card learning-theme">
+                                <p class="text-xs text-gray-300">新スキル習得の学習計画</p>
+                            </div>
+                            <div class="theme-card learning-theme">
+                                <p class="text-xs text-gray-300">AI超独学法の応用</p>
+                            </div>
+                        </div>
+                        
+                        <!-- プライベート編 -->
+                        <div class="col-span-1">
+                            <h4 class="text-purple-400 font-bold mb-1 text-sm border-b border-purple-900 pb-1">
+                                <i class="fas fa-home mr-1"></i> プライベート編
+                            </h4>
+                            <div class="theme-card private-theme">
+                                <p class="text-xs text-gray-300">週末の充実化計画</p>
+                            </div>
+                            <div class="theme-card private-theme">
+                                <p class="text-xs text-gray-300">健康的な食生活習慣化</p>
+                            </div>
+                            <div class="theme-card private-theme">
+                                <p class="text-xs text-gray-300">引っ越しエリア選定比較</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 継続トレーニングの重要性 -->
+                <div class="co-creation p-4">
+                    <h3 class="text-lg font-bold text-gray-200 mb-2 flex items-center">
+                        <i class="fas fa-sync-alt mr-2 text-blue-400"></i>
+                        継続こそが、OSを血肉に変える道
+                    </h3>
+                    <div class="key-point text-sm text-gray-300">
+                        様々なテーマで繰り返し実践すること
+                    </div>
+                    <div class="key-point text-sm text-gray-300">
+                        日々の思考にXYZ軸を意識する習慣化
+                    </div>
+                    <div class="key-point text-sm text-gray-300">
+                        地道な「TANREN（鍛錬）」で無意識レベルに定着
+                    </div>
+                    <div class="flex items-center justify-center mt-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-600 bg-opacity-30 flex items-center justify-center mr-2">
+                            <i class="fas fa-brain text-blue-300"></i>
+                        </div>
+                        <div class="text-2xl font-bold text-gray-400">+</div>
+                        <div class="w-10 h-10 rounded-full bg-purple-600 bg-opacity-30 flex items-center justify-center mx-2">
+                            <i class="fas fa-robot text-purple-300"></i>
+                        </div>
+                        <div class="text-2xl font-bold text-gray-400">=</div>
+                        <div class="w-10 h-10 rounded-full bg-green-600 bg-opacity-30 flex items-center justify-center ml-2">
+                            <i class="fas fa-star text-yellow-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            flowchart: { 
+                curve: 'basis',
+                useMaxWidth: false
+            },
+            themeVariables: {
+                primaryColor: '#3b82f6',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#2563eb',
+                lineColor: '#94a3b8',
+                secondaryColor: '#22c55e',
+                tertiaryColor: '#0f172a'
+            }
+        });
+    </script>
+</body>
+</html>

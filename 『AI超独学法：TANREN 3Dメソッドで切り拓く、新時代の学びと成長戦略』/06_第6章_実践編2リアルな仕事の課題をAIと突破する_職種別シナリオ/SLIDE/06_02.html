@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第6章 実践編2 リアルな仕事の課題をAIと突破する：職種別シナリオ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e1f5fe 100%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .title-gradient {
+            background: linear-gradient(90deg, #1565C0 0%, #0277BD 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .blue-accent {
+            background-color: #1976D2;
+            height: 8px;
+            width: 100px;
+            margin: 16px 0;
+            border-radius: 4px;
+        }
+        .image-container {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent 0%, black 20%);
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%);
+        }
+        .footer {
+            position: absolute;
+            bottom: 24px;
+            left: 0;
+            width: 100%;
+            padding: 0 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex">
+        <div class="absolute top-0 left-0 h-full w-2 bg-blue-600"></div>
+        
+        <div class="z-10 p-16 w-7/12">
+            <div class="mb-4 text-blue-700 text-2xl font-bold">実践編2</div>
+            <h1 class="text-5xl font-black leading-tight title-gradient mb-6">
+                第6章<br>
+                リアルな仕事の課題を<br>
+                AIと突破する
+            </h1>
+            <div class="blue-accent"></div>
+            <h2 class="text-3xl font-bold text-gray-700 mt-6">職種別シナリオ</h2>
+            
+            <div class="mt-12 flex items-center">
+                <i class="fas fa-robot text-blue-600 text-2xl mr-3"></i>
+                <span class="text-xl text-gray-600">AIとの共創で仕事を進化させる</span>
+            </div>
+        </div>
+        
+        <div class="image-container">
+            <img src="https://blog.emb.global/wp-content/uploads/2024/01/The-Future-of-AI-Virtual-Assistant-in-Businesses-in-2024.webp" 
+                 alt="AIビジネスアシスタント" 
+                 class="object-cover h-full w-full opacity-90">
+        </div>
+        
+        <div class="footer flex justify-between items-center">
+            <div class="text-gray-600 font-medium">AI超独学法</div>
+            <div class="text-gray-500">2025年5月</div>
+        </div>
+    </div>
+</body>
+</html>

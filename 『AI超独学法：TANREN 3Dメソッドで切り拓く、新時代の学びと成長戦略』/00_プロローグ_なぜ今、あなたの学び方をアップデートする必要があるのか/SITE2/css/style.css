@@ -1,0 +1,214 @@
+/* Custom styles beyond Tailwind CSS */
+
+/* Base styling */
+body {
+    scroll-behavior: smooth;
+}
+
+/* Gradient text */
+.text-gradient {
+    background: linear-gradient(to right, #3b82f6, #8b5cf6); /* blue-500 to purple-500 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Background patterns */
+.bg-pattern {
+    background-image: 
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.1) 0%, transparent 30%);
+}
+
+/* Animation utilities - 初期状態を表示に変更 */
+.animate-fadeIn {
+    opacity: 1; /* 初期状態で表示 */
+    transform: translateY(0); /* 初期位置をリセット */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* JavaScriptでアニメーションを適用する場合のクラス */
+.animate-ready .animate-fadeIn {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.animate-ready .animate-fadeIn.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation delays */
+.animation-delay-300 {
+    transition-delay: 300ms;
+}
+
+.animation-delay-600 {
+    transition-delay: 600ms;
+}
+
+.animation-delay-900 {
+    transition-delay: 900ms;
+}
+
+/* Card styling for challenges and features */
+.challenge-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Chart container styling */
+.chart-container {
+    position: relative;
+    margin: auto;
+    transition: opacity 0.5s ease;
+}
+
+/* Scroll Spy Styles */
+.nav-scrollspy ul li a {
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.nav-scrollspy ul li a.active {
+    opacity: 1;
+    font-weight: 600;
+    color: #4f46e5; /* indigo-600 */
+    position: relative;
+}
+
+.nav-scrollspy ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    border-radius: 2px;
+}
+
+/* Hero section specific styling */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Slow spin animation */
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 15s linear infinite;
+}
+
+@keyframes pulse-soft {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .text-gradient {
+        background-size: 100% 100%;
+    }
+    
+    .challenge-card {
+        padding: 1.25rem;
+    }
+}
+
+/* Utility for vertical line in timelines */
+.vertical-line {
+    position: absolute;
+    top: 24px;
+    bottom: 0;
+    left: 15px;
+    width: 2px;
+    background: #e5e7eb; /* gray-200 */
+}
+
+/* Overlay scrim for better text readability on gradient backgrounds */
+.scrim-overlay {
+    position: relative;
+}
+
+.scrim-overlay::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    pointer-events: none;
+    border-radius: inherit;
+}
+
+/* Special styling for buttons */
+.btn-primary {
+    background-image: linear-gradient(to right, #4f46e5, #8b5cf6);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2), 0 2px 4px -1px rgba(79, 70, 229, 0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3), 0 4px 6px -2px rgba(79, 70, 229, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9; /* slate-100 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #94a3b8; /* slate-400 */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b; /* slate-500 */
+} 

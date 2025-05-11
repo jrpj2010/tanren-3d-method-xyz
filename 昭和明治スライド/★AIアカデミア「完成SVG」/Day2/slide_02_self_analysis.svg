@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="1920" height="1080" fill="#F4F1EA"/>
+  <g clip-path="url(#clip0_0_1)">
+    <path d="M1920 0H0V1080H1920V0Z" fill="#F4F1EA"/>
+    <path d="M1920 0H0V120H1920V0Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="36" letter-spacing="0em"><tspan x="706.734" y="54.9">Day2: 自己理解とタグラインの確立</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="24" letter-spacing="0em"><tspan x="768" y="100.1">自己分析と強みの発見プロセス</tspan></text>
+    <path d="M520 83C524.418 83 528 79.4183 528 75C528 70.5817 524.418 67 520 67C515.582 67 512 70.5817 512 75C512 79.4183 515.582 83 520 83Z" fill="#1A5B66"/>
+    <path d="M540 75H740" stroke="#1A5B66" stroke-width="3"/>
+    <path d="M1380 83C1384.42 83 1388 79.4183 1388 75C1388 70.5817 1384.42 67 1380 67C1375.58 67 1372 70.5817 1372 75C1372 79.4183 1375.58 83 1380 83Z" fill="#1A5B66"/>
+    <path d="M1160 75H1360" stroke="#1A5B66" stroke-width="3"/>
+    
+    <!-- 左カラム: 自己分析 -->
+    <path d="M640 160H40V1020H640V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="284" y="210.2">自己分析</tspan></text>
+    <path d="M140 220H540" stroke="#1A5B66" stroke-width="3"/>
+    <path d="M140 226C143.314 226 146 223.314 146 220C146 216.686 143.314 214 140 214C136.686 214 134 216.686 134 220C134 223.314 136.686 226 140 226Z" fill="#1A5B66"/>
+    <path d="M540 226C543.314 226 546 223.314 546 220C546 216.686 543.314 214 540 214C536.686 214 534 216.686 534 220C534 223.314 536.686 226 540 226Z" fill="#1A5B66"/>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="70" y="270">🔍 自分を知る</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="70" y="309.9">自分の強み・特徴を明確化する第一歩</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="70" y="339.9">過去の経験から見えてくる本質的な特性</tspan></text>
+    
+    <path d="M610 360H70V580H610V360Z" fill="#F4F1EA" stroke="#1A5B66" stroke-width="2"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="250.088" y="385.2">ライフラインチャート</tspan></text>
+    <path d="M120 530H560" stroke="#2C2C2C" stroke-width="2"/>
+    <path d="M120 530V400" stroke="#2C2C2C" stroke-width="2"/>
+    <path d="M120 484.758C150 471.293 176.667 469.61 200 479.708C223.333 489.807 250 481.391 280 454.462C310 427.533 336.667 440.997 360 494.856C383.333 548.715 410 536.933 440 459.511C470 382.089 496.667 387.139 520 474.659" stroke="#1A5B66" stroke-width="3"/>
+    <path d="M200 487C203.314 487 206 484.314 206 481C206 477.686 203.314 475 200 475C196.686 475 194 477.686 194 481C194 484.314 196.686 487 200 487Z" fill="#2C2C2C"/>
+    <path d="M280 460C283.314 460 286 457.314 286 454C286 450.686 283.314 448 280 448C276.686 448 274 450.686 274 454C274 457.314 276.686 460 280 460Z" fill="#2C2C2C"/>
+    <path d="M354 493C357.314 493 360 490.314 360 487C360 483.686 357.314 481 354 481C350.686 481 348 483.686 348 487C348 490.314 350.686 493 354 493Z" fill="#2C2C2C"/>
+    <path d="M440 465C443.314 465 446 462.314 446 459C446 455.686 443.314 453 440 453C436.686 453 434 455.686 434 459C434 462.314 436.686 465 440 465Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="12" letter-spacing="0em"><tspan x="173" y="469.8">学生時代</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="12" letter-spacing="0em"><tspan x="268" y="440.8">転機</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="12" letter-spacing="0em"><tspan x="296" y="490.8">成功体験</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="12" letter-spacing="0em"><tspan x="450" y="462.8">挫折</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="12" letter-spacing="0em"><tspan x="550" y="525.8">時間</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="12" letter-spacing="0em"><tspan x="78" y="411.8">満足度</tspan></text>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="70" y="611">📝 発見のプロセス</tspan></text>
+    <path d="M610 620H70V810H610V620Z" fill="#F4F1EA" stroke="#1A5B66" stroke-dasharray="5 5"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="649.9">① 転機となった出来事を振り返る</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="679.9">② 成功・挫折の共通パターンを見出す</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="709.9">③ モチベーションの源泉を特定する</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="739.9">④ 他者からのフィードバックで検証</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="769.9">⑤ 得られた洞察をまとめる</tspan></text>
+    
+    <path d="M610 830H70V1000H610V830Z" fill="#F4F1EA" stroke="#1A5B66" stroke-width="2"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="259" y="860.2">振り返りのポイント</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="900.9">• 具体的なエピソードで語る</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="930.9">• 感情の起伏や動機に注目する</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="90" y="960.9">• 複数の観点から分析する</tspan></text>
+    
+    <!-- 中央カラム: 強み・特性の発見 -->
+    <path d="M1260 160H660V1020H1260V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="780" y="210.2">譲れない想いの発見</tspan></text>
+    <path d="M760 220H1160" stroke="#B3322B" stroke-width="3"/>
+    <path d="M760 226C763.314 226 766 223.314 766 220C766 216.686 763.314 214 760 214C756.686 214 754 216.686 754 220C754 223.314 756.686 226 760 226Z" fill="#B3322B"/>
+    <path d="M1160 226C1163.31 226 1166 223.314 1166 220C1166 216.686 1163.31 214 1160 214C1156.69 214 1154 216.686 1154 220C1154 223.314 1156.69 226 1160 226Z" fill="#B3322B"/>
+    
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="270">💭 あなたを動かす原動力</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="690" y="309.9">困難な状況でも諦めなかった経験から</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="690" y="339.9">見出される、本質的な意欲の源泉</tspan></text>
+    
+    <path d="M1230 360H690V580H1230V360Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="2"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="840" y="390.2">重要な質問</tspan></text>
+    
+    <path d="M1210 410H710V450H1210V410Z" fill="#B3322B" fill-opacity="0.1"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="720" y="435">Q1: どんな状況で最もやりがいを感じましたか？</tspan></text>
+    
+    <path d="M1210 460H710V500H1210V460Z" fill="#B3322B" fill-opacity="0.1"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="720" y="485">Q2: 困難を乗り越えた原動力は何でしたか？</tspan></text>
+    
+    <path d="M1210 510H710V550H1210V510Z" fill="#B3322B" fill-opacity="0.1"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="720" y="535">Q3: どんな場面で時間を忘れて没頭しますか？</tspan></text>
+    
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="620">🔍 譲れない想いの例</tspan></text>
+    <path d="M1230 640H690V760H1230V640Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="1"/>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="710" y="670.9">「人々の可能性を引き出すことへの情熱」</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="730" y="700">・教育関連の活動に常に関わってきた</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="730" y="730">・他者の成長を支援する役割に喜びを感じる</tspan></text>
+    
+    <path d="M1230 780H690V940H1230V780Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="2"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="848" y="810.2">気づきのヒント</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="850.9">• 尊敬する人物の共通点は？</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="880.9">• 大切にしている価値観は？</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="710" y="910.9">• 無償でも熱中できることは？</tspan></text>
+    
+    <path d="M1230 960H690V1000H1230V960Z" fill="#B3322B" fill-opacity="0.1"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="820" y="985.9">内省と対話のプロセス</tspan></text>
+    
+    <!-- 右カラム: 実践演習 -->
+    <path d="M1880 160H1280V1020H1880V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="1500" y="210.2">実践ワーク</tspan></text>
+    <path d="M1380 220H1780" stroke="#653A5E" stroke-width="3"/>
+    <path d="M1380 226C1383.31 226 1386 223.314 1386 220C1386 216.686 1383.31 214 1380 214C1376.69 214 1374 276.686 1374 280C1374 283.314 1376.69 226 1380 226Z" fill="#653A5E"/>
+    <path d="M1780 226C1783.31 226 1786 223.314 1786 220C1786 216.686 1783.31 214 1780 214C1776.69 214 1774 216.686 1774 220C1774 223.314 1776.69 226 1780 226Z" fill="#653A5E"/>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1310" y="270">✏️ ライフラインチャート作成</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1310" y="309.9">自分の人生の満足度を時系列で可視化し</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1310" y="339.9">重要なイベントとその意味を振り返る</tspan></text>
+    
+    <path d="M1850 360H1310V500H1850V360Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1472.18" y="390.2">ワークの手順</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="1330" y="425">1. 横軸に時間、縦軸に満足度を設定</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="1330" y="455">2. これまでの人生の浮き沈みを線で表現</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="1330" y="485">3. 重要な出来事にマーク・コメントを付ける</tspan></text>
+    
+    <path d="M1850 520H1310V750H1850V520Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1490" y="550.2">アウトプット例</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1330" y="590.9">転機となった出来事:</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="1350" y="620">● 大学時代のボランティア活動</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="1350" y="650">● チーム立ち上げの経験</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1330" y="680.9">見えてきた強み:</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="1350" y="710">● チームをまとめる力</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="15" letter-spacing="0em"><tspan x="1350" y="740">● 困難な局面での粘り強さ</tspan></text>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1310" y="790">🎯 実習のゴール</tspan></text>
+    <path d="M1850 810H1310V940H1850V810Z" fill="#653A5E"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1480" y="840.2">最終成果物</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1330" y="880.9">• 完成したライフラインチャート</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1330" y="910.9">• 発見した3つの重要な転機と気づき</tspan></text>
+    
+    <path d="M1850 960H1310V1000H1850V960Z" fill="#653A5E" fill-opacity="0.1"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="1427" y="985.9">スキル開発と自己発見</tspan></text>
+    
+    <!-- フッター -->
+    <path d="M1920 1040H0V1080H1920V1040Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="694.32" y="1064.9">TANREN株式会社 / 株式会社MVP | AI人材育成プログラム | 2025年春季講座</tspan></text>
+  </g>
+  <defs>
+    <clipPath id="clip0_0_1">
+      <rect width="1920" height="1080" fill="white"/>
+    </clipPath>
+  </defs>
+</svg> 

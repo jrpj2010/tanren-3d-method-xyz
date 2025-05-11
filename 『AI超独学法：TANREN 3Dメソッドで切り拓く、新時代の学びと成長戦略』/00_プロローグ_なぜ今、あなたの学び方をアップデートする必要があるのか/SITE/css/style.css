@@ -1,0 +1,44 @@
+/* 基本的なスタイルリセットや、Tailwind/Prelineでカバーしきれない微調整用 */
+body {
+    scroll-behavior: smooth;
+}
+
+/* スライドセクションの基本的なスタイル */
+.slide-section {
+    /* TailwindやPrelineのコンポーネントを主に利用するため、ここでは最小限のスタイルに */
+    /* 必要に応じて、JavaScript側で動的にクラスを付与してスタイルを適用します */
+    padding-top: 2rem; /* 各スライドセクションの上部パディング */
+    padding-bottom: 2rem; /* 各スライドセクションの下部パディング */
+}
+
+/* Chart.jsのコンテナのレスポンシブ対応など */
+.chart-container {
+    position: relative;
+    margin: auto;
+    /* JavaScript側でサイズ調整することを想定 */
+}
+
+/* ナビゲーションボタンのスタイル */
+#slide-navigation button.active-nav-button {
+    /* Tailwindのクラスでスタイルを指定することを優先 */
+    /* 例: bg-indigo-600 text-white */
+}
+
+#slide-navigation button:not(.active-nav-button) {
+    /* Tailwindのクラスでスタイルを指定することを優先 */
+    /* 例: bg-indigo-100 text-indigo-800 hover:bg-indigo-200 */
+}
+
+/* 既存スライドのHTML要素に対する基本的なスタイル調整（必要に応じて） */
+/* 例：スライド内の特定のh1, pタグなど */
+.slide-imported-content h1 {
+    /* @apply text-3xl font-bold mb-4 text-gray-800; */ /* Tailwindのクラスを適用する場合 */
+}
+
+.slide-imported-content p {
+    /* @apply mb-3 leading-relaxed; */
+}
+
+.slide-imported-content ul {
+    /* @apply list-disc list-inside mb-3; */
+}

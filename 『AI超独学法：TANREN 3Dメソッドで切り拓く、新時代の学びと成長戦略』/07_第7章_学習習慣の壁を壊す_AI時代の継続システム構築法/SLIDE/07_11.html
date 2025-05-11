@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最強のスキル：「学び続ける力」を育むマインドセット</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #311b92 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: 900;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e1bee7;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            margin-top: 0.5rem;
+        }
+        .section-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.3);
+        }
+        .info-panel {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 24px;
+            border-left: 4px solid #e1bee7;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s forwards;
+            animation-delay: 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .info-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e1bee7;
+            margin-bottom: 16px;
+        }
+        .key-point {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .key-point-icon {
+            min-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            font-size: 1.2rem;
+            color: #e1bee7;
+        }
+        .key-point-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+        .bolt-node {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeIn 0.8s forwards;
+        }
+        .bolt-node:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        .bolt-icon {
+            font-size: 2.5rem;
+            margin-bottom: 8px;
+        }
+        .bolt-title {
+            font-weight: 700;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .bolt-desc {
+            position: absolute;
+            width: 200px;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            font-size: 0.85rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 20;
+            pointer-events: none;
+        }
+        .bolt-node:hover .bolt-desc {
+            opacity: 1;
+        }
+        .connection-line {
+            position: absolute;
+            height: 3px;
+            background: white;
+            opacity: 0.4;
+            transform-origin: left;
+            z-index: 1;
+        }
+        .connection-arrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            z-index: 2;
+        }
+        .axis-badge {
+            position: absolute;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #ffd700;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        .highlight {
+            color: #ffd700;
+            font-weight: 600;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .spin {
+            animation: spin 20s linear infinite;
+        }
+        .spiral-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 3s linear forwards;
+            animation-delay: 2s;
+        }
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Background pattern -->
+        <svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="position: absolute; opacity: 0.05;">
+            <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        
+        <div class="section-number">セクション 5</div>
+        
+        <div class="content p-16">
+            <!-- Header Section -->
+            <div class="mb-8">
+                <h1 class="title">最強のスキル：「学び続ける力」を育むマインドセット</h1>
+                <h2 class="subtitle">BOLT的思考で自己進化のサイクルを回す</h2>
+            </div>
+            
+            <div class="flex">
+                <!-- Left Column - Explanation -->
+                <div class="w-2/5 pr-8">
+                    <div class="info-panel mb-8">
+                        <div class="info-title">
+                            <i class="fas fa-trophy mr-2"></i>
+                            なぜ「学び続ける力」が最強のスキルなのか
+                        </div>
+                        
+                        <div class="key-point">
+                            <div class="key-point-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="key-point-text">
+                                AIの進化により<span class="highlight">既存スキルの賞味期限が短縮</span>
+                                —昨日の「正解」が今日は通用しない
+                            </div>
+                        </div>
+                        
+                        <div class="key-point">
+                            <div class="key-point-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="key-point-text">
+                                <span class="highlight">変化への適応力</span>こそが生存戦略
+                                —学びを「一度きりのイベント」ではなく「生涯プロセス」に
+                            </div>
+                        </div>
+                        
+                        <div class="key-point">
+                            <div class="key-point-icon">
+                                <i class="fas fa-fingerprint"></i>
+                            </div>
+                            <div class="key-point-text">
+                                AIが代替できない<span class="highlight">人間独自の成長プロセス</span>
+                                —「自分のOS」を継続的にアップデート
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-panel mt-4" style="animation-delay: 0.6s;">
+                        <div class="info-title">
+                            <i class="fas fa-bolt mr-2"></i>
+                            BOLTモデルとは
+                        </div>
+                        
+                        <div class="flex flex-wrap justify-between">
+                            <div class="w-1/2 pb-4 pr-2">
+                                <div class="font-bold text-purple-300">B: Build（構築）</div>
+                                <div class="text-sm">学習資産を「意図的に構築する」マインド</div>
+                            </div>
+                            <div class="w-1/2 pb-4 pl-2">
+                                <div class="font-bold text-blue-300">O: Observe（観察）</div>
+                                <div class="text-sm">現実を「客観的に観察する」マインド</div>
+                            </div>
+                            <div class="w-1/2 pt-4 pr-2">
+                                <div class="font-bold text-green-300">L: Leverage（活用）</div>
+                                <div class="text-sm">「実践・応用」で学びを力に変えるマインド</div>
+                            </div>
+                            <div class="w-1/2 pt-4 pl-2">
+                                <div class="font-bold text-yellow-300">T: Transform（変革）</div>
+                                <div class="text-sm">変化を恐れず「自己変革を楽しむ」マインド</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 mx-auto text-center">
+                            <div class="text-lg font-bold">
+                                <span class="text-yellow-300">サイクルを回し続けること</span>で<br>
+                                螺旋階段を昇るように成長する
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Visualization -->
+                <div class="w-3/5 relative flex justify-center items-center">
+                    <!-- BOLT Cycle Visualization -->
+                    <div style="width: 500px; height: 500px; position: relative;" class="mx-auto my-4">
+                        <!-- Connection Lines -->
+                        <div class="connection-line" style="width: 210px; top: 190px; left: 145px; transform: rotate(90deg); opacity: 0; animation: fadeIn 1s forwards; animation-delay: 1.5s;"></div>
+                        <div class="connection-line" style="width: 210px; top: 310px; left: 355px; transform: rotate(180deg); opacity: 0; animation: fadeIn 1s forwards; animation-delay: 1.8s;"></div>
+                        <div class="connection-line" style="width: 210px; top: 310px; left: 145px; transform: rotate(270deg); opacity: 0; animation: fadeIn 1s forwards; animation-delay: 2.1s;"></div>
+                        <div class="connection-line" style="width: 210px; top: 190px; left: 250px; opacity: 0; animation: fadeIn 1s forwards; animation-delay: 1.2s;"></div>
+                        
+                        <!-- Spiral Path Animation -->
+                        <svg width="500" height="500" viewBox="0 0 500 500" style="position: absolute; top: 0; left: 0; z-index: 5;">
+                            <path d="M 250,120 
+                                     C 300,120 350,170 350,220 
+                                     C 350,270 300,320 250,320 
+                                     C 200,320 150,270 150,220 
+                                     C 150,170 200,120 250,120 
+                                     L 250,80 
+                                     C 180,80 110,150 110,220 
+                                     C 110,290 180,360 250,360 
+                                     C 320,360 390,290 390,220 
+                                     C 390,150 320,80 250,80 
+                                     Z" 
+                                  fill="none" stroke="#ffd700" stroke-width="3" stroke-dasharray="5,5" class="spiral-path" />
+                        </svg>
+                        
+                        <!-- BOLT Nodes -->
+                        <div class="bolt-node" style="top: 70px; left: 190px; background: linear-gradient(135deg, #9c27b0, #7b1fa2); animation-delay: 0.8s;">
+                            <div class="bolt-icon">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <div class="bolt-title">Build<br>（構築）</div>
+                            <div class="bolt-desc" style="top: -20px; left: 130px;">
+                                学習資産を意図的に構築し、AIが参照できる知識ベースを育てる
+                            </div>
+                        </div>
+                        
+                        <div class="bolt-node" style="top: 190px; left: 350px; background: linear-gradient(135deg, #3949ab, #303f9f); animation-delay: 1.0s;">
+                            <div class="bolt-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="bolt-title">Observe<br>（観察）</div>
+                            <div class="bolt-desc" style="top: 30px; left: 130px;">
+                                バイアスから距離を置き、自分の行動と結果を冷静に分析する
+                            </div>
+                        </div>
+                        
+                        <div class="bolt-node" style="top: 310px; left: 190px; background: linear-gradient(135deg, #2e7d32, #1b5e20); animation-delay: 1.2s;">
+                            <div class="bolt-icon">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                            <div class="bolt-title">Leverage<br>（活用）</div>
+                            <div class="bolt-desc" style="top: 30px; left: -210px;">
+                                学びを実践に応用し、AIを練習相手に知識を実際のスキルへ転化する
+                            </div>
+                        </div>
+                        
+                        <div class="bolt-node" style="top: 190px; left: 30px; background: linear-gradient(135deg, #f57f17, #e65100); animation-delay: 1.4s;">
+                            <div class="bolt-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="bolt-title">Transform<br>（変革）</div>
+                            <div class="bolt-desc" style="top: 30px; left: -210px;">
+                                過去の成功体験にとらわれず、新しい自分へ大胆に進化する勇気
+                            </div>
+                        </div>
+                        
+                        <!-- Axis Badges -->
+                        <div class="axis-badge" style="top: 10px; left: 250px; animation-delay: 2.4s;">
+                            <i class="fas fa-cube mr-1"></i> X軸：構造化・具体化
+                        </div>
+                        
+                        <div class="axis-badge" style="top: 430px; right: 100px; animation-delay: 2.6s;">
+                            <i class="fas fa-history mr-1"></i> Y軸：未来志向
+                        </div>
+                        
+                        <div class="axis-badge" style="bottom: 20px; left: 170px; animation-delay: 2.8s;">
+                            <i class="fas fa-layer-group mr-1"></i> Z軸：レベルアップ
+                        </div>
+                        
+                        <!-- Central AI Element -->
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(225, 190, 231, 0.5); z-index: 10; opacity: 0; animation: fadeIn 1s forwards; animation-delay: 2.0s;">
+                            <i class="fas fa-robot text-4xl text-white"></i>
+                        </div>
+                        
+                        <!-- Upward Arrow -->
+                        <div style="position: absolute; top: 220px; left: 245px; transform: translateX(-50%); opacity: 0; animation: fadeIn 1s forwards; animation-delay: 3.0s;">
+                            <i class="fas fa-arrow-up text-4xl text-yellow-300"></i>
+                            <div class="mt-2 text-center text-yellow-300 font-bold">
+                                スパイラルアップ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

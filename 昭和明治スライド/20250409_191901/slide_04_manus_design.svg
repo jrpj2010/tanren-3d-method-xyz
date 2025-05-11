@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="60" y="60" width="1800" height="100" fill="#2c2c2c"/>
+  <text x="100" y="130" font-family="'Noto Serif JP', serif" font-size="48" fill="#f4f1ea" font-weight="bold">
+    Manusの革新的設計 - シンプルさの追求
+  </text>
+  
+  <!-- カラム1 (左): シンプルな設計思想 -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="60" y="200" width="580" height="60" fill="#b3322b"/>
+    <text x="80" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      シンプルな設計思想
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="60" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="80" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      Less Structured, More Intelligence 💫
+    </text>
+    <line x1="80" y1="310" x2="550" y2="310" stroke="#b3322b" stroke-width="3"/>
+    <circle cx="550" cy="310" r="4" fill="#b3322b"/>
+    
+    <!-- 本質説明 -->
+    <text x="80" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="80" y="350">AI業界の重要な原則：</tspan>
+      <tspan x="80" y="380">構造を減らし、知能を最大化する</tspan>
+    </text>
+    
+    <!-- コア概念図 -->
+    <rect x="80" y="420" width="540" height="160" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" rx="5"/>
+    <text x="100" y="450" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#b3322b" font-weight="bold">
+      過剰な構造化の問題
+    </text>
+    <text x="100" y="490" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="100" y="490">構造が多すぎると、AIの本来の能力を</tspan>
+      <tspan x="100" y="520">制限してしまう</tspan>
+    </text>
+    <text x="100" y="550" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-style="italic">
+      "シンプルなものを構築することは、往々にして最も困難"
+    </text>
+    
+    <!-- 構造とインテリジェンスの関係図 -->
+    <text x="80" y="620" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      構造と知能の関係
+    </text>
+    <line x1="80" y1="630" x2="350" y2="630" stroke="#b3322b" stroke-width="2"/>
+    
+    <!-- 関係グラフ -->
+    <line x1="150" y1="760" x2="550" y2="760" stroke="#2c2c2c" stroke-width="2"/>
+    <line x1="150" y1="760" x2="150" y2="660" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <text x="320" y="780" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      構造化のレベル
+    </text>
+    <text x="130" y="690" transform="rotate(-90,130,690)" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      知能の自由度
+    </text>
+    
+    <path d="M 150 680 Q 350 700 550 740" stroke="#b3322b" stroke-width="3" fill="none"/>
+    
+    <text x="160" y="675" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+      高い
+    </text>
+    <text x="530" y="735" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+      高い
+    </text>
+    
+    <circle cx="200" cy="685" r="6" fill="#b3322b"/>
+    <text x="180" y="670" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#653a5e">
+      Manus
+    </text>
+    
+    <circle cx="450" cy="730" r="6" fill="#1a5b66"/>
+    <text x="430" y="715" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#1a5b66">
+      従来のAI
+    </text>
+  </g>
+  
+  <!-- カラム2 (中央): 事前定義ワークフローの排除 -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="670" y="200" width="580" height="60" fill="#1a5b66"/>
+    <text x="690" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      ゼロ・ワークフロー設計
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="670" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="690" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      制約からの解放 🔓
+    </text>
+    <line x1="690" y1="310" x2="1010" y2="310" stroke="#1a5b66" stroke-width="3"/>
+    <circle cx="1010" cy="310" r="4" fill="#1a5b66"/>
+    
+    <!-- 本質説明 -->
+    <text x="690" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="690" y="350">既存エージェントフレームワークの</tspan>
+      <tspan x="690" y="380">制限を取り除く</tspan>
+    </text>
+    
+    <!-- 従来のワークフロー図解 -->
+    <text x="690" y="420" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      従来のエージェントフレームワーク:
+    </text>
+    
+    <rect x="690" y="440" width="250" height="50" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5"/>
+    <text x="710" y="470" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      事前定義ワークフロー
+    </text>
+    <line x1="940" y1="465" x2="970" y2="465" stroke="#2c2c2c" stroke-width="1" marker-end="url(#arrow)"/>
+    
+    <rect x="970" y="440" width="250" height="50" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5"/>
+    <text x="990" y="470" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      制限された可能性
+    </text>
+    
+    <!-- Manusのアプローチ図解 -->
+    <text x="690" y="520" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      Manusのアプローチ:
+    </text>
+    
+    <rect x="690" y="540" width="250" height="50" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" rx="5"/>
+    <text x="710" y="570" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      ゼロ・ワークフロー
+    </text>
+    <line x1="940" y1="565" x2="970" y2="565" stroke="#2c2c2c" stroke-width="1" marker-end="url(#arrow)"/>
+    
+    <rect x="970" y="540" width="250" height="50" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" rx="5"/>
+    <text x="990" y="570" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      無限の可能性
+    </text>
+    
+    <!-- 避けるべき構造例 -->
+    <text x="690" y="630" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      避けるべき構造例
+    </text>
+    <line x1="690" y1="640" x2="900" y2="640" stroke="#1a5b66" stroke-width="2"/>
+    
+    <rect x="690" y="660" width="540" height="150" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5"/>
+    
+    <!-- 構造例1 -->
+    <rect x="710" y="680" width="500" height="30" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="3"/>
+    <text x="720" y="700" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      事前定義ワークフロー
+    </text>
+    <text x="1050" y="700" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#b3322b" font-weight="bold">
+      ×
+    </text>
+    
+    <!-- 構造例2 -->
+    <rect x="710" y="720" width="500" height="30" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="3"/>
+    <text x="720" y="740" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      マルチロールエージェント (プログラマ役、検索役など)
+    </text>
+    <text x="1050" y="740" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#b3322b" font-weight="bold">
+      ×
+    </text>
+    
+    <!-- 構造例3 -->
+    <rect x="710" y="760" width="500" height="30" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="3"/>
+    <text x="720" y="780" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      固定化された出力フォーマット
+    </text>
+    <text x="1050" y="780" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#b3322b" font-weight="bold">
+      ×
+    </text>
+    
+    <!-- 強調ポイント -->
+    <rect x="690" y="830" width="540" height="110" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" rx="5"/>
+    <text x="710" y="860" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#1a5b66" font-weight="bold">
+      創発性を重視
+    </text>
+    <text x="710" y="890" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="710" y="890">Deep Research機能、Webサイト構築能力、</tspan>
+      <tspan x="710" y="920">Excel処理能力などは明示的に実装したのではなく</tspan>
+      <tspan x="710" y="950">AIモデル自身から創発的に現れたもの</tspan>
+    </text>
+  </g>
+  
+  <!-- カラム3 (右): シンプルな動作ループ -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="1280" y="200" width="580" height="60" fill="#653a5e"/>
+    <text x="1300" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      行動-観察サイクル
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="1280" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="1300" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      基本的な動作メカニズム ⚙️
+    </text>
+    <line x1="1300" y1="310" x2="1620" y2="310" stroke="#653a5e" stroke-width="3"/>
+    <circle cx="1620" cy="310" r="4" fill="#653a5e"/>
+    
+    <!-- 本質説明 -->
+    <text x="1300" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="1300" y="350">徹底してシンプルに設計されたループが</tspan>
+      <tspan x="1300" y="380">複雑な問題を解決</tspan>
+    </text>
+    
+    <!-- シンプルループ図 -->
+    <rect x="1300" y="420" width="540" height="300" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    
+    <!-- 循環図 -->
+    <circle cx="1570" cy="570" r="150" fill="none" stroke="#2c2c2c" stroke-width="1" stroke-dasharray="5,5"/>
+    
+    <!-- ノード1: 次アクション予測 -->
+    <circle cx="1570" cy="420" r="50" fill="#f4f1ea" stroke="#653a5e" stroke-width="2"/>
+    <text x="1570" y="415" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">
+      次アクション
+    </text>
+    <text x="1570" y="435" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">
+      予測
+    </text>
+    
+    <!-- ノード2: サンドボックス実行 -->
+    <circle cx="1720" cy="570" r="50" fill="#f4f1ea" stroke="#653a5e" stroke-width="2"/>
+    <text x="1720" y="565" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">
+      サンドボックス
+    </text>
+    <text x="1720" y="585" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">
+      実行
+    </text>
+    
+    <!-- ノード3: 観察結果取得 -->
+    <circle cx="1570" cy="720" r="50" fill="#f4f1ea" stroke="#653a5e" stroke-width="2"/>
+    <text x="1570" y="715" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">
+      観察結果
+    </text>
+    <text x="1570" y="735" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">
+      取得
+    </text>
+    
+    <!-- ノード4: コンテキスト更新 -->
+    <circle cx="1420" cy="570" r="50" fill="#f4f1ea" stroke="#653a5e" stroke-width="2"/>
+    <text x="1420" y="565" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">
+      コンテキスト
+    </text>
+    <text x="1420" y="585" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">
+      更新
+    </text>
+    
+    <!-- 接続矢印 -->
+    <path d="M 1610 440 A 130 130 0 0 1 1700 530" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <path d="M 1700 610 A 130 130 0 0 1 1610 700" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <path d="M 1530 700 A 130 130 0 0 1 1440 610" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    <path d="M 1440 530 A 130 130 0 0 1 1530 440" stroke="#2c2c2c" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+    
+    <!-- シンプルvs複雑 -->
+    <text x="1300" y="760" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      驚くべき効果
+    </text>
+    <line x1="1300" y1="770" x2="1480" y2="770" stroke="#653a5e" stroke-width="2"/>
+    
+    <!-- 効果ポイント -->
+    <rect x="1300" y="790" width="540" height="150" fill="#f4f1ea" stroke="#653a5e" stroke-width="2" rx="5"/>
+    <text x="1320" y="820" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#653a5e" font-weight="bold">
+      シンプルさの力
+    </text>
+    <text x="1320" y="850" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="1320" y="850">・複雑なエージェントフレームワークを上回る性能</tspan>
+      <tspan x="1320" y="880">・AIが自ら最適解を見つける自由度</tspan>
+      <tspan x="1320" y="910">・最小限の構造で最大限の効果</tspan>
+    </text>
+  </g>
+  
+  <!-- フッター -->
+  <rect x="60" y="1000" width="1800" height="40" fill="#2c2c2c"/>
+  <text x="1700" y="1025" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#f4f1ea" text-anchor="end">
+    © 2025 Manus AI · スライド 4/5
+  </text>
+  
+  <!-- マーカー定義 -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+      markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2c2c2c"/>
+    </marker>
+  </defs>
+</svg> 

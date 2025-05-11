@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIを使っているつもりが陥る、7つの独学の罠</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #e6f7ff 0%, #cce7ff 50%, #b3d7ff 100%);
+        }
+        .title {
+            color: #004080;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .trap-card {
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .trap-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .icon-wrapper {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+        .trap-number {
+            font-weight: 900;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+        }
+        .dual-nature-box {
+            background: linear-gradient(90deg, #ff6b6b 0%, #ff6b6b 50%, #4ecdc4 50%, #4ecdc4 100%);
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        .dual-box-left {
+            background: rgba(255,255,255,0.85);
+            border-radius: 8px 0 0 8px;
+        }
+        .dual-box-right {
+            background: rgba(255,255,255,0.85);
+            border-radius: 0 8px 8px 0;
+        }
+        .warning-tape {
+            background: repeating-linear-gradient(
+                45deg,
+                #ffdd00,
+                #ffdd00 10px,
+                #000000 10px,
+                #000000 20px
+            );
+            height: 8px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-8">
+        <!-- Header -->
+        <div class="text-center mb-6 relative">
+            <h1 class="title text-4xl">AIを使っているつもりが陥る、7つの独学の罠</h1>
+            <div class="w-44 h-1 bg-red-500 mx-auto mt-3 rounded-full"></div>
+            <div class="absolute right-0 top-0">
+                <div class="flex items-center">
+                    <i class="fas fa-exclamation-triangle text-red-500 text-2xl mr-2"></i>
+                    <span class="text-red-600 font-bold">DANGER</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Trap Cards Container -->
+        <div class="grid grid-cols-4 gap-4">
+            <!-- Trap 1 -->
+            <div class="trap-card bg-white relative">
+                <div class="bg-red-100 p-3 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="trap-number bg-red-500 mr-2">1</div>
+                        <h2 class="font-bold text-sm">目的曖昧トラップ</h2>
+                    </div>
+                    <div class="icon-wrapper bg-red-500 text-white">
+                        <i class="fas fa-question text-xl"></i>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <p class="text-gray-700 text-sm">「何を学びたいか、自分でも分からない」</p>
+                </div>
+                <div class="warning-tape"></div>
+            </div>
+            
+            <!-- Trap 2 -->
+            <div class="trap-card bg-white relative">
+                <div class="bg-orange-100 p-3 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="trap-number bg-orange-500 mr-2">2</div>
+                        <h2 class="font-bold text-sm">計画倒れトラップ</h2>
+                    </div>
+                    <div class="icon-wrapper bg-orange-500 text-white">
+                        <i class="fas fa-calendar-times text-xl"></i>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <p class="text-gray-700 text-sm">「やる気はあるけど、時間がない」</p>
+                </div>
+                <div class="warning-tape"></div>
+            </div>
+            
+            <!-- Trap 3 -->
+            <div class="trap-card bg-white relative">
+                <div class="bg-amber-100 p-3 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="trap-number bg-amber-500 mr-2">3</div>
+                        <h2 class="font-bold text-sm">情報メタボトラップ</h2>
+                    </div>
+                    <div class="icon-wrapper bg-amber-500 text-white">
+                        <i class="fas fa-database text-xl"></i>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <p class="text-gray-700 text-sm">「集めるだけで満足、消化不良」</p>
+                </div>
+                <div class="warning-tape"></div>
+            </div>
+            
+            <!-- Trap 4 -->
+            <div class="trap-card bg-white relative">
+                <div class="bg-yellow-100 p-3 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="trap-number bg-yellow-500 mr-2">4</div>
+                        <h2 class="font-bold text-sm">インプット偏重トラップ</h2>
+                    </div>
+                    <div class="icon-wrapper bg-yellow-500 text-white">
+                        <i class="fas fa-download text-xl"></i>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <p class="text-gray-700 text-sm">「知識はあるけど、使えない」</p>
+                </div>
+                <div class="warning-tape"></div>
+            </div>
+            
+            <!-- Trap 5 -->
+            <div class="trap-card bg-white relative">
+                <div class="bg-green-100 p-3 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="trap-number bg-green-500 mr-2">5</div>
+                        <h2 class="font-bold text-sm">孤独トラップ</h2>
+                    </div>
+                    <div class="icon-wrapper bg-green-500 text-white">
+                        <i class="fas fa-user-alt-slash text-xl"></i>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <p class="text-gray-700 text-sm">「一人で黙々、心が折れそう」</p>
+                </div>
+                <div class="warning-tape"></div>
+            </div>
+            
+            <!-- Trap 6 -->
+            <div class="trap-card bg-white relative">
+                <div class="bg-blue-100 p-3 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="trap-number bg-blue-500 mr-2">6</div>
+                        <h2 class="font-bold text-sm">学習ミスマッチトラップ</h2>
+                    </div>
+                    <div class="icon-wrapper bg-blue-500 text-white">
+                        <i class="fas fa-puzzle-piece text-xl"></i>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <p class="text-gray-700 text-sm">「自分に合う方法が分からない」</p>
+                </div>
+                <div class="warning-tape"></div>
+            </div>
+            
+            <!-- Trap 7 -->
+            <div class="trap-card bg-white relative">
+                <div class="bg-purple-100 p-3 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="trap-number bg-purple-500 mr-2">7</div>
+                        <h2 class="font-bold text-sm">フィードバック欠如トラップ</h2>
+                    </div>
+                    <div class="icon-wrapper bg-purple-500 text-white">
+                        <i class="fas fa-comment-slash text-xl"></i>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <p class="text-gray-700 text-sm">「これで合ってる？手応えがない」</p>
+                </div>
+                <div class="warning-tape"></div>
+            </div>
+            
+            <!-- Warning Box -->
+            <div class="trap-card bg-gray-100 flex flex-col justify-center items-center p-3">
+                <div class="bg-yellow-400 rounded-full p-3 mb-2">
+                    <i class="fas fa-lightbulb text-white text-2xl"></i>
+                </div>
+                <p class="text-gray-800 text-sm font-bold text-center">
+                    あなたは<br>どの罠に<br>はまっていますか？
+                </p>
+            </div>
+        </div>
+        
+        <!-- Dual Nature of AI Box -->
+        <div class="mt-8 dual-nature-box p-1 flex">
+            <div class="dual-box-left w-1/2 p-3">
+                <div class="flex items-center mb-2">
+                    <div class="bg-red-500 text-white rounded-full w-8 h-8 flex justify-center items-center mr-3">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <h3 class="text-red-600 font-bold">AIが罠を深める</h3>
+                </div>
+                <p class="text-sm text-gray-700">
+                    使い方を誤ると、AI依存が進み、批判的思考力の衰えや情報過多、アウトプット不足を加速させてしまう可能性がある
+                </p>
+            </div>
+            <div class="dual-box-right w-1/2 p-3">
+                <div class="flex items-center mb-2">
+                    <div class="bg-green-500 text-white rounded-full w-8 h-8 flex justify-center items-center mr-3">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3 class="text-green-600 font-bold">AIが突破口になる</h3>
+                </div>
+                <p class="text-sm text-gray-700">
+                    正しく活用すれば、目標の明確化、学習の個別最適化、情報の整理、効果的なアウトプット練習などを実現できる
+                </p>
+            </div>
+        </div>
+        
+        <!-- Bottom Note -->
+        <div class="text-center mt-4">
+            <p class="text-gray-600 font-bold">AIは諸刃の剣。その刃を自分に向けるか、道を切り拓く武器にするかは、あなた次第</p>
+        </div>
+    </div>
+</body>
+</html>

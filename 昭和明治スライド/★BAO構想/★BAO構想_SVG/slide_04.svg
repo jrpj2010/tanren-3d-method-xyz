@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap');
+      
+      :root {
+        --black: #2c2c2c;
+        --cream: #f4f1ea;
+        --red: #b3322b;
+        --blue: #1a5b66;
+        --purple: #653a5e;
+      }
+      
+      .slide-bg {
+        fill: var(--cream);
+      }
+      
+      .title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 42px;
+        fill: var(--black);
+        letter-spacing: 0.05em;
+      }
+      
+      .body-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 24px;
+        fill: var(--black);
+      }
+      
+      .phase-number {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 900;
+        font-size: 36px;
+      }
+      
+      .phase-title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 28px;
+        fill: var(--black);
+      }
+      
+      .phase-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .note-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 16px;
+        fill: var(--black);
+        font-style: italic;
+      }
+      
+      .workflow-title {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 26px;
+        font-weight: 700;
+        fill: var(--black);
+        text-anchor: middle;
+      }
+      
+      .workflow-label {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 18px;
+        fill: var(--black);
+        text-anchor: middle;
+      }
+      
+      .company {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+        text-anchor: end;
+      }
+      
+      .page-number {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .bold {
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" class="slide-bg" />
+  
+  <!-- タイトル -->
+  <g transform="translate(120, 100)">
+    <text class="title">BAOのワークフロー：リアルタイム連携する企業脳</text>
+    <line x1="0" y1="60" x2="1000" y2="60" stroke="var(--red)" stroke-width="3" />
+  </g>
+  
+  <!-- ドット装飾 -->
+  <g transform="translate(960, 150)">
+    <circle cx="-25" cy="0" r="6" fill="var(--red)" />
+    <circle cx="0" cy="0" r="6" fill="var(--blue)" />
+    <circle cx="25" cy="0" r="6" fill="var(--purple)" />
+  </g>
+  
+  <!-- 説明文 -->
+  <g transform="translate(120, 200)">
+    <text class="body-text">BAOシステムでは、AIエージェント同士がリアルタイムに連携して情報を共有し、</text>
+    <text class="body-text" y="40">企業の頭脳として迅速かつ高精度な意思決定をサポートします。</text>
+  </g>
+  
+  <!-- フェーズ1 -->
+  <g transform="translate(120, 290)">
+    <rect x="0" y="0" width="400" height="320" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="400" height="320" fill="none" stroke="var(--black)" stroke-width="1" />
+    
+    <text x="40" y="50" class="phase-number" fill="var(--red)">1</text>
+    <g transform="translate(90, 30)">
+      <text class="phase-title" y="10">情報収集</text>
+      <g transform="translate(0, 50)">
+        <text class="phase-text" y="0">各AI CXOが担当領域の</text>
+        <text class="phase-text" y="35">情報を自動収集</text>
+        <text class="phase-text" y="70">・市場データ</text>
+        <text class="phase-text" y="105">・顧客フィードバック</text>
+        <text class="phase-text" y="140">・競合情報</text>
+        <text class="phase-text" y="175">・社内データ</text>
+        <text class="phase-text" y="210">・業界トレンド</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- フェーズ間の矢印1→2 -->
+  <g transform="translate(520, 450)">
+    <line x1="0" y1="0" x2="80" y2="0" stroke="var(--black)" stroke-width="3" />
+    <polygon points="90,0 70,-10 70,10" fill="var(--black)" />
+  </g>
+  
+  <!-- フェーズ2 -->
+  <g transform="translate(610, 290)">
+    <rect x="0" y="0" width="400" height="320" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="400" height="320" fill="none" stroke="var(--black)" stroke-width="1" />
+    
+    <text x="40" y="50" class="phase-number" fill="var(--blue)">2</text>
+    <g transform="translate(90, 30)">
+      <text class="phase-title" y="10">分析と戦略提案</text>
+      <g transform="translate(0, 50)">
+        <text class="phase-text" y="0">収集した情報を分析し</text>
+        <text class="phase-text" y="35">最適な戦略を生成</text>
+        <text class="phase-text" y="70">・AI CMOによる市場分析</text>
+        <text class="phase-text" y="105">・AI CSOによる営業予測</text>
+        <text class="phase-text" y="140">・AI CFOによる財務分析</text>
+        <text class="phase-text" y="175">・複数の戦略オプション</text>
+        <text class="phase-text" y="210">・リスク・リターン評価</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- フェーズ間の矢印2→3 -->
+  <g transform="translate(1010, 450)">
+    <line x1="0" y1="0" x2="80" y2="0" stroke="var(--black)" stroke-width="3" />
+    <polygon points="90,0 70,-10 70,10" fill="var(--black)" />
+  </g>
+  
+  <!-- フェーズ3 -->
+  <g transform="translate(1100, 290)">
+    <rect x="0" y="0" width="400" height="320" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="400" height="320" fill="none" stroke="var(--black)" stroke-width="1" />
+    
+    <text x="40" y="50" class="phase-number" fill="var(--purple)">3</text>
+    <g transform="translate(90, 30)">
+      <text class="phase-title" y="10">意思決定と実行</text>
+      <g transform="translate(0, 50)">
+        <text class="phase-text" y="0">人間CEOによる最終判断</text>
+        <text class="phase-text" y="35">AIによる素早い実行</text>
+        <text class="phase-text" y="70">・戦略の承認/修正</text>
+        <text class="phase-text" y="105">・優先順位の決定</text>
+        <text class="phase-text" y="140">・リソース配分</text>
+        <text class="phase-text" y="175">・部下AIエージェントへの</text>
+        <text class="phase-text" y="210">　タスク割り当て</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- フェーズ間の矢印3→4 -->
+  <g transform="translate(1300, 610)">
+    <line x1="0" y1="50" x2="0" y2="120" stroke="var(--black)" stroke-width="3" />
+    <polygon points="0,130 -10,110 10,110" fill="var(--black)" />
+  </g>
+  
+  <!-- フェーズ4 -->
+  <g transform="translate(1100, 740)">
+    <rect x="0" y="0" width="400" height="220" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="400" height="220" fill="none" stroke="var(--black)" stroke-width="1" />
+    
+    <text x="40" y="50" class="phase-number" fill="var(--red)">4</text>
+    <g transform="translate(90, 30)">
+      <text class="phase-title" y="10">実行と結果測定</text>
+      <g transform="translate(0, 50)">
+        <text class="phase-text" y="0">AIエージェントによる</text>
+        <text class="phase-text" y="35">タスク実行と効果測定</text>
+        <text class="phase-text" y="70">・広告出稿、販促実施</text>
+        <text class="phase-text" y="105">・顧客対応、サポート</text>
+        <text class="phase-text" y="140">・リアルタイムKPI計測</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- フェーズ間の矢印4→5 -->
+  <g transform="translate(1010, 850)">
+    <line x1="90" y1="0" x2="10" y2="0" stroke="var(--black)" stroke-width="3" />
+    <polygon points="0,0 20,-10 20,10" fill="var(--black)" />
+  </g>
+  
+  <!-- フェーズ5 -->
+  <g transform="translate(610, 740)">
+    <rect x="0" y="0" width="400" height="220" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="400" height="220" fill="none" stroke="var(--black)" stroke-width="1" />
+    
+    <text x="40" y="50" class="phase-number" fill="var(--blue)">5</text>
+    <g transform="translate(90, 30)">
+      <text class="phase-title" y="10">学習と最適化</text>
+      <g transform="translate(0, 50)">
+        <text class="phase-text" y="0">結果をフィードバックし</text>
+        <text class="phase-text" y="35">戦略を継続的に改善</text>
+        <text class="phase-text" y="70">・成功/失敗要因の分析</text>
+        <text class="phase-text" y="105">・知見のナレッジハブ保存</text>
+        <text class="phase-text" y="140">・アルゴリズム自己改善</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- フェーズ間の矢印5→1 -->
+  <g transform="translate(520, 850)">
+    <line x1="90" y1="0" x2="10" y2="0" stroke="var(--black)" stroke-width="3" />
+    <polygon points="0,0 20,-10 20,10" fill="var(--black)" />
+  </g>
+  
+  <!-- フェーズ1への戻り矢印 -->
+  <g transform="translate(320, 740)">
+    <line x1="0" y1="0" x2="0" y2="-70" stroke="var(--black)" stroke-width="3" />
+    <polygon points="0,-80 -10,-60 10,-60" fill="var(--black)" />
+    <text x="85" y="-40" class="workflow-label">継続的なサイクル</text>
+  </g>
+  
+  <!-- 中央ハブ -->
+  <g transform="translate(810, 620)">
+    <circle cx="0" cy="0" r="80" fill="var(--purple)" stroke="var(--black)" stroke-width="2" />
+    <text x="0" y="-15" text-anchor="middle" class="workflow-title" fill="white">社内</text>
+    <text x="0" y="15" text-anchor="middle" class="workflow-title" fill="white">ナレッジハブ</text>
+    <text x="0" y="45" text-anchor="middle" class="note-text" fill="white">全データを一元管理</text>
+    
+    <!-- ハブからの放射線 -->
+    <line x1="-60" y1="-60" x2="-140" y2="-140" stroke="var(--black)" stroke-width="2" stroke-dasharray="5,5" />
+    <line x1="60" y1="-60" x2="140" y2="-140" stroke="var(--black)" stroke-width="2" stroke-dasharray="5,5" />
+    <line x1="-60" y1="60" x2="-140" y2="140" stroke="var(--black)" stroke-width="2" stroke-dasharray="5,5" />
+    <line x1="60" y1="60" x2="140" y2="140" stroke="var(--black)" stroke-width="2" stroke-dasharray="5,5" />
+  </g>
+  
+  <!-- まとめのテキスト -->
+  <g transform="translate(810, 1000)">
+    <text text-anchor="middle" class="body-text bold">BAOの特徴は「<tspan fill="var(--purple)">継続的な学習と自己改善</tspan>」</text>
+    <text text-anchor="middle" y="40" class="body-text">人間の経営判断を支援しながら、AIが自律的にビジネス活動を実行・最適化</text>
+  </g>
+  
+  <!-- 会社名と頁数 -->
+  <g transform="translate(1800, 1050)">
+    <text class="company">TANREN株式会社</text>
+  </g>
+  
+  <g transform="translate(120, 1050)">
+    <text class="page-number">4 / 12</text>
+  </g>
+</svg> 

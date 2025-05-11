@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レベル1：Deep Research型エージェント</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a2463 0%, #113879 50%, #1e52a2 100%);
+            color: #ffffff;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            padding: 25px 40px 10px;
+            background: rgba(10, 36, 99, 0.8);
+            border-bottom: 2px solid rgba(192, 224, 222, 0.3);
+        }
+        .content {
+            display: flex;
+            padding: 20px 40px;
+        }
+        .left-column {
+            flex: 1;
+            padding-right: 30px;
+        }
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .level-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #4d85bd, #5a7ab8);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 10px rgba(77, 133, 189, 0.4);
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 0;
+            background: linear-gradient(45deg, #ffffff, #c0e0de);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #5a7ab8;
+        }
+        .feature-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .feature-list i {
+            color: #5a7ab8;
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .example-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid rgba(90, 122, 184, 0.3);
+            transition: all 0.3s ease;
+        }
+        .example-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .example-item .icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: #5a7ab8;
+        }
+        .example-item h4 {
+            font-size: 0.85rem;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+        .action-card {
+            background: rgba(90, 122, 184, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+            border-left: 4px solid #5a7ab8;
+        }
+        .action-card h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        .action-card h3 i {
+            margin-right: 10px;
+        }
+        .grid-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+        }
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.15), rgba(255, 153, 0, 0.15));
+            border: 2px solid rgba(255, 204, 0, 0.5);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .warning-box h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            color: #ffcc00;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .warning-box h3 i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        .diagram-container {
+            height: 320px;
+            padding: 15px;
+        }
+        .mermaid-wrapper {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .info-source {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-top: 10px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .info-source:before {
+            content: '';
+            position: absolute;
+            width: 85%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .verification {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .verification-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        .verification-step:not(:last-child):after {
+            content: '→';
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .verification-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(90, 122, 184, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 5px;
+        }
+        .verification-icon i {
+            color: #ffffff;
+        }
+        .verification-text {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="grid-pattern"></div>
+        <header class="header">
+            <div class="level-badge">初級 / レベル1</div>
+            <h1 class="title">Deep Research型エージェントと情報洪水への向き合い方</h1>
+        </header>
+        <div class="content">
+            <div class="left-column">
+                <div class="feature-card">
+                    <h3><i class="fas fa-search-plus"></i> 特徴と能力</h3>
+                    <ul class="feature-list list-none pl-0">
+                        <li><i class="fas fa-check-circle"></i> 外部情報を<strong>能動的に収集・分析</strong>する能力</li>
+                        <li><i class="fas fa-check-circle"></i> インターネット検索や文献読解が可能</li>
+                        <li><i class="fas fa-check-circle"></i> レベル0.5より<strong>自律性が向上</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-lightbulb"></i> できること</h3>
+                    <ul class="feature-list list-none pl-0">
+                        <li><i class="fas fa-check-circle"></i> 複数の情報源からデータを収集・整理</li>
+                        <li><i class="fas fa-check-circle"></i> トピックに関する総合的な調査レポート作成</li>
+                        <li><i class="fas fa-check-circle"></i> 「<strong>知の探索の自動化</strong>」による時間短縮</li>
+                    </ul>
+                </div>
+                
+                <div class="examples-grid">
+                    <div class="example-item">
+                        <div class="icon"><i class="fab fa-searchengin"></i></div>
+                        <h4>ChatGPT<br>ブラウジング</h4>
+                    </div>
+                    <div class="example-item">
+                        <div class="icon"><i class="fab fa-google"></i></div>
+                        <h4>Gemini<br>検索連携</h4>
+                    </div>
+                    <div class="example-item">
+                        <div class="icon"><i class="fas fa-chart-network"></i></div>
+                        <h4>Perplexity AI</h4>
+                    </div>
+                    <div class="example-item">
+                        <div class="icon"><i class="fas fa-project-diagram"></i></div>
+                        <h4>Dify</h4>
+                    </div>
+                    <div class="example-item">
+                        <div class="icon"><i class="fas fa-cogs"></i></div>
+                        <h4>make</h4>
+                    </div>
+                    <div class="example-item">
+                        <div class="icon"><i class="fas fa-file-alt"></i></div>
+                        <h4>Claude<br>長文読解</h4>
+                    </div>
+                </div>
+                
+                <div class="action-card">
+                    <h3><i class="fas fa-rocket"></i> あなたへのアクション</h3>
+                    <p class="text-sm">Deep Research機能を活用しつつ、常に質問を続けよう：<br>
+                    「<strong>この情報のソースは？</strong>」「<strong>根拠は？</strong>」「<strong>他の意見は？</strong>」<br>
+                    情報リテラシーこそがこのレベルをマスターする鍵！</p>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="diagram-container">
+                    <div class="mermaid-wrapper">
+                        <div class="mermaid" style="background: transparent; width:100%; height:100%;">
+                            graph TD
+                                A[ユーザーからの問い合わせ] -->|指示| B[AIエージェント]
+                                B -->|検索| C[インターネット]
+                                C -->|情報収集| B
+                                B -->|分析・統合| D[レポート作成]
+                                D -->|結果提示| A
+                                style A fill:#5a7ab8,stroke:#ffffff,stroke-width:1px,color:#fff
+                                style B fill:#113879,stroke:#ffffff,stroke-width:1px,color:#fff
+                                style C fill:#0a2463,stroke:#ffffff,stroke-width:1px,color:#fff
+                                style D fill:#1e52a2,stroke:#ffffff,stroke-width:1px,color:#fff
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <h3><i class="fas fa-exclamation-triangle"></i> 重要な課題：情報の信頼性</h3>
+                    <p class="text-sm mb-2">AIが集める情報は<strong>玉石混淆</strong>。インターネット上の誤情報、古い情報、偏った意見を完璧に見抜くことはまだできない。</p>
+                    
+                    <div class="info-source">
+                        <span class="text-xs"><i class="fas fa-exclamation-circle text-yellow-300 mr-1"></i> AIの回答</span>
+                        <span class="text-xs text-yellow-300">情報の質は？</span>
+                    </div>
+                    
+                    <div class="verification">
+                        <div class="verification-step">
+                            <div class="verification-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="verification-text">情報源確認</div>
+                        </div>
+                        <div class="verification-step">
+                            <div class="verification-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="verification-text">複数ソースで裏付け</div>
+                        </div>
+                        <div class="verification-step">
+                            <div class="verification-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="verification-text">批判的吟味</div>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xs mt-3 text-center font-bold text-yellow-300">
+                        AIの情報収集能力「アクセル」× 人間のファクトチェック「ブレーキ」の両立が重要
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'dark',
+                themeVariables: {
+                    darkMode: true,
+                    background: 'transparent',
+                    primaryColor: '#5a7ab8',
+                    primaryTextColor: '#fff',
+                    primaryBorderColor: '#fff',
+                    lineColor: '#fff',
+                    secondaryColor: '#006100',
+                    tertiaryColor: '#fff'
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第1章の構成</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #e6f7ff 0%, #cce7ff 50%, #b3d7ff 100%);
+        }
+        .title {
+            color: #004080;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .section-card {
+            background-color: rgba(255, 255, 255, 0.85);
+            border-left: 6px solid;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .circle-bg {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col p-12">
+        <!-- Background Elements -->
+        <div class="circle-bg" style="width: 250px; height: 250px; top: -100px; right: 200px; opacity: 0.4;"></div>
+        <div class="circle-bg" style="width: 180px; height: 180px; bottom: 100px; left: -50px; opacity: 0.3;"></div>
+        
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <h1 class="title text-5xl">第1章の構成</h1>
+            <div class="w-32 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="flex flex-col space-y-8 mt-4 z-10">
+            <!-- Section 1 -->
+            <div class="section-card border-blue-500 flex items-center p-5 rounded-lg">
+                <div class="icon-wrapper bg-blue-500 text-white mr-6">
+                    <i class="fas fa-chart-line text-4xl"></i>
+                </div>
+                <div>
+                    <span class="text-blue-600 font-bold">01</span>
+                    <h2 class="text-2xl font-bold mb-1">AIと話せる人はなぜ指数関数的に成長するのか</h2>
+                    <p class="text-gray-600">「翻訳こんにゃく」の真実とその可能性</p>
+                </div>
+            </div>
+            
+            <!-- Section 2 -->
+            <div class="section-card border-red-500 flex items-center p-5 rounded-lg">
+                <div class="icon-wrapper bg-red-500 text-white mr-6">
+                    <i class="fas fa-exclamation-triangle text-4xl"></i>
+                </div>
+                <div>
+                    <span class="text-red-600 font-bold">02</span>
+                    <h2 class="text-2xl font-bold mb-1">AIを使っているつもりが陥る、7つの独学の罠</h2>
+                    <p class="text-gray-600">AIツール活用の落とし穴と対策</p>
+                </div>
+            </div>
+            
+            <!-- Section 3 -->
+            <div class="section-card border-green-500 flex items-center p-5 rounded-lg">
+                <div class="icon-wrapper bg-green-500 text-white mr-6">
+                    <i class="fas fa-sync-alt text-4xl"></i>
+                </div>
+                <div>
+                    <span class="text-green-600 font-bold">03</span>
+                    <h2 class="text-2xl font-bold mb-1">受動的なAI利用を超えて：プロフェッショナルの新定義</h2>
+                    <p class="text-gray-600">「使う側」から「共創する側」へのマインドセットシフト</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="absolute bottom-6 right-8 text-sm text-gray-500">
+            <p>AI超独学を起動するマインドセット</p>
+        </div>
+    </div>
+</body>
+</html>

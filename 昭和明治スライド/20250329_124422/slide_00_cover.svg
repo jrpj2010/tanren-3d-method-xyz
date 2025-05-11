@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea" />
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c" />
+  <text x="50" y="65" font-family="'Noto Serif JP'" font-size="36" fill="#f4f1ea" letter-spacing="2">Microsoft Build Japan 2025</text>
+  <text x="1700" y="65" font-family="'Noto Sans JP'" font-size="24" fill="#f4f1ea">2025.03.29</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="1030" width="1920" height="50" fill="#2c2c2c" />
+  <text x="50" y="1065" font-family="'Noto Sans JP'" font-size="18" fill="#f4f1ea">明治・昭和モダンテイスト - AI時代の革新</text>
+  <text x="1700" y="1065" font-family="'Noto Sans JP'" font-size="18" fill="#f4f1ea">00/05</text>
+  
+  <!-- 表紙メインコンテンツ -->
+  <rect x="240" y="190" width="1440" height="750" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="3" />
+  
+  <!-- タイトル -->
+  <text x="960" y="300" font-family="'Noto Serif JP'" font-size="60" fill="#2c2c2c" text-anchor="middle" letter-spacing="3">AI時代における</text>
+  <text x="960" y="380" font-family="'Noto Serif JP'" font-size="72" fill="#2c2c2c" text-anchor="middle" letter-spacing="5" font-weight="bold">Microsoftの戦略と展望</text>
+  
+  <!-- 装飾ライン -->
+  <line x1="580" y1="430" x2="1340" y2="430" stroke="#b3322b" stroke-width="4" />
+  <circle cx="960" cy="430" r="8" fill="#2c2c2c" />
+  
+  <!-- サブタイトル -->
+  <text x="960" y="490" font-family="'Noto Serif JP'" font-size="32" fill="#2c2c2c" text-anchor="middle">〜人と組織の可能性を拡げる三大プラットフォーム〜</text>
+  
+  <!-- 主要コンセプト (3カラムレイアウトの縮小版) -->
+  <!-- カラム区切り装飾 -->
+  <line x1="640" y1="550" x2="640" y2="750" stroke="#2c2c2c" stroke-width="1" stroke-dasharray="10,5" />
+  <line x1="1280" y1="550" x2="1280" y2="750" stroke="#2c2c2c" stroke-width="1" stroke-dasharray="10,5" />
+  
+  <!-- 左カラム -->
+  <rect x="340" y="580" width="240" height="60" rx="30" fill="#b3322b" />
+  <text x="460" y="622" font-family="'Noto Sans JP'" font-size="24" fill="#f4f1ea" text-anchor="middle">Copilot</text>
+  <text x="460" y="670" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c" text-anchor="middle">AIユーザーインターフェース</text>
+  <text x="460" y="700" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c" text-anchor="middle">革新</text>
+  
+  <!-- 中央カラム -->
+  <rect x="700" y="580" width="240" height="60" rx="30" fill="#1a5b66" />
+  <text x="820" y="622" font-family="'Noto Sans JP'" font-size="24" fill="#f4f1ea" text-anchor="middle">AIスタック</text>
+  <text x="820" y="670" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c" text-anchor="middle">クラウドインフラと</text>
+  <text x="820" y="700" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c" text-anchor="middle">開発環境</text>
+  
+  <!-- 右カラム -->
+  <rect x="1060" y="580" width="240" height="60" rx="30" fill="#653a5e" />
+  <text x="1180" y="622" font-family="'Noto Sans JP'" font-size="24" fill="#f4f1ea" text-anchor="middle">デバイス</text>
+  <text x="1180" y="670" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c" text-anchor="middle">エッジAIと</text>
+  <text x="1180" y="700" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c" text-anchor="middle">量子コンピューティング</text>
+  
+  <!-- ロゴ装飾 -->
+  <rect x="880" y="760" width="160" height="160" rx="80" fill="none" stroke="#2c2c2c" stroke-width="2" />
+  <text x="960" y="860" font-family="'Noto Serif JP'" font-size="100" fill="#2c2c2c" text-anchor="middle">M</text>
+  
+  <!-- 基本情報 -->
+  <text x="960" y="980" font-family="'Noto Sans JP'" font-size="24" fill="#2c2c2c" text-anchor="middle">サティア・ナデラ CEO</text>
+</svg> 

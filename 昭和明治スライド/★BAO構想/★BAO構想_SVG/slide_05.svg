@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap');
+      
+      :root {
+        --black: #2c2c2c;
+        --cream: #f4f1ea;
+        --red: #b3322b;
+        --blue: #1a5b66;
+        --purple: #653a5e;
+      }
+      
+      .slide-bg {
+        fill: var(--cream);
+      }
+      
+      .title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 42px;
+        fill: var(--black);
+        letter-spacing: 0.05em;
+      }
+      
+      .body-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 24px;
+        fill: var(--black);
+      }
+      
+      .card-title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 26px;
+        fill: var(--black);
+      }
+      
+      .card-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 18px;
+        fill: var(--black);
+      }
+      
+      .small-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 16px;
+        fill: var(--black);
+      }
+      
+      .cxo-name {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 24px;
+        fill: white;
+      }
+      
+      .cxo-desc {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 16px;
+        fill: white;
+      }
+      
+      .company {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+        text-anchor: end;
+      }
+      
+      .page-number {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .bold {
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" class="slide-bg" />
+  
+  <!-- タイトル -->
+  <g transform="translate(120, 100)">
+    <text class="title">AI CXOの役割と機能：各専門分野のエキスパート</text>
+    <line x1="0" y1="60" x2="1000" y2="60" stroke="var(--red)" stroke-width="3" />
+  </g>
+  
+  <!-- ドット装飾 -->
+  <g transform="translate(960, 150)">
+    <circle cx="-25" cy="0" r="6" fill="var(--red)" />
+    <circle cx="0" cy="0" r="6" fill="var(--blue)" />
+    <circle cx="25" cy="0" r="6" fill="var(--purple)" />
+  </g>
+  
+  <!-- 説明文 -->
+  <g transform="translate(120, 200)">
+    <text class="body-text">BAOの中核となるAI CXO（Chief X Officer）は、それぞれの専門分野において戦略立案から</text>
+    <text class="body-text" y="40">実行管理までを担います。各AIが連携し、全体最適なビジネス運営を実現します。</text>
+  </g>
+  
+  <!-- CXOカード 上段 -->
+  <g transform="translate(170, 290)">
+    <!-- AI CMO -->
+    <g>
+      <rect x="0" y="0" width="380" height="350" rx="10" fill="var(--red)" />
+      <rect x="10" y="10" width="360" height="330" rx="5" fill="none" stroke="white" stroke-width="1" />
+      
+      <!-- タイトル -->
+      <g transform="translate(190, 50)">
+        <text text-anchor="middle" class="cxo-name">AI CMO</text>
+        <text text-anchor="middle" y="30" class="cxo-desc">マーケティング責任者</text>
+      </g>
+      
+      <!-- 内容 -->
+      <g transform="translate(40, 110)">
+        <text font-size="36">📣</text>
+        <g transform="translate(60, 0)">
+          <text class="card-text" fill="white">市場調査・分析</text>
+          <text class="card-text" y="30" fill="white">競合分析</text>
+          <text class="card-text" y="60" fill="white">ブランド戦略策定</text>
+          <text class="card-text" y="90" fill="white">コンテンツマーケティング</text>
+          <text class="card-text" y="120" fill="white">広告キャンペーン管理</text>
+          <text class="card-text" y="150" fill="white">顧客セグメンテーション</text>
+          <text class="card-text" y="180" fill="white">ROI測定と最適化</text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- AI CSO -->
+    <g transform="translate(420, 0)">
+      <rect x="0" y="0" width="380" height="350" rx="10" fill="var(--blue)" />
+      <rect x="10" y="10" width="360" height="330" rx="5" fill="none" stroke="white" stroke-width="1" />
+      
+      <!-- タイトル -->
+      <g transform="translate(190, 50)">
+        <text text-anchor="middle" class="cxo-name">AI CSO</text>
+        <text text-anchor="middle" y="30" class="cxo-desc">営業責任者</text>
+      </g>
+      
+      <!-- 内容 -->
+      <g transform="translate(40, 110)">
+        <text font-size="36">🤝</text>
+        <g transform="translate(60, 0)">
+          <text class="card-text" fill="white">セールス戦略策定</text>
+          <text class="card-text" y="30" fill="white">リード管理・優先順位付け</text>
+          <text class="card-text" y="60" fill="white">商談・提案書作成</text>
+          <text class="card-text" y="90" fill="white">クロスセル・アップセル</text>
+          <text class="card-text" y="120" fill="white">価格最適化</text>
+          <text class="card-text" y="150" fill="white">営業トーク分析</text>
+          <text class="card-text" y="180" fill="white">クロージング率改善</text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- AI CPO -->
+    <g transform="translate(840, 0)">
+      <rect x="0" y="0" width="380" height="350" rx="10" fill="var(--purple)" />
+      <rect x="10" y="10" width="360" height="330" rx="5" fill="none" stroke="white" stroke-width="1" />
+      
+      <!-- タイトル -->
+      <g transform="translate(190, 50)">
+        <text text-anchor="middle" class="cxo-name">AI CPO</text>
+        <text text-anchor="middle" y="30" class="cxo-desc">製品責任者</text>
+      </g>
+      
+      <!-- 内容 -->
+      <g transform="translate(40, 110)">
+        <text font-size="36">📦</text>
+        <g transform="translate(60, 0)">
+          <text class="card-text" fill="white">製品戦略立案</text>
+          <text class="card-text" y="30" fill="white">市場ニーズ分析</text>
+          <text class="card-text" y="60" fill="white">製品ロードマップ作成</text>
+          <text class="card-text" y="90" fill="white">製品仕様策定</text>
+          <text class="card-text" y="120" fill="white">品質管理</text>
+          <text class="card-text" y="150" fill="white">開発工程最適化</text>
+          <text class="card-text" y="180" fill="white">製品パフォーマンス分析</text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- AI CHRO -->
+    <g transform="translate(1260, 0)">
+      <rect x="0" y="0" width="380" height="350" rx="10" fill="var(--red)" />
+      <rect x="10" y="10" width="360" height="330" rx="5" fill="none" stroke="white" stroke-width="1" />
+      
+      <!-- タイトル -->
+      <g transform="translate(190, 50)">
+        <text text-anchor="middle" class="cxo-name">AI CHRO</text>
+        <text text-anchor="middle" y="30" class="cxo-desc">人事責任者</text>
+      </g>
+      
+      <!-- 内容 -->
+      <g transform="translate(40, 110)">
+        <text font-size="36">👥</text>
+        <g transform="translate(60, 0)">
+          <text class="card-text" fill="white">人材獲得戦略</text>
+          <text class="card-text" y="30" fill="white">パフォーマンス評価</text>
+          <text class="card-text" y="60" fill="white">従業員エンゲージメント</text>
+          <text class="card-text" y="90" fill="white">人材育成プログラム</text>
+          <text class="card-text" y="120" fill="white">組織文化の形成</text>
+          <text class="card-text" y="150" fill="white">報酬・福利厚生最適化</text>
+          <text class="card-text" y="180" fill="white">労務管理・コンプライアンス</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- CXOカード 下段 -->
+  <g transform="translate(380, 670)">
+    <!-- AI CFO -->
+    <g>
+      <rect x="0" y="0" width="380" height="350" rx="10" fill="var(--blue)" />
+      <rect x="10" y="10" width="360" height="330" rx="5" fill="none" stroke="white" stroke-width="1" />
+      
+      <!-- タイトル -->
+      <g transform="translate(190, 50)">
+        <text text-anchor="middle" class="cxo-name">AI CFO</text>
+        <text text-anchor="middle" y="30" class="cxo-desc">財務責任者</text>
+      </g>
+      
+      <!-- 内容 -->
+      <g transform="translate(40, 110)">
+        <text font-size="36">📈</text>
+        <g transform="translate(60, 0)">
+          <text class="card-text" fill="white">財務戦略立案</text>
+          <text class="card-text" y="30" fill="white">予算策定・管理</text>
+          <text class="card-text" y="60" fill="white">キャッシュフロー最適化</text>
+          <text class="card-text" y="90" fill="white">投資判断・リスク分析</text>
+          <text class="card-text" y="120" fill="white">原価計算・収益性分析</text>
+          <text class="card-text" y="150" fill="white">資金調達戦略</text>
+          <text class="card-text" y="180" fill="white">財務報告自動化</text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- AI CTO -->
+    <g transform="translate(420, 0)">
+      <rect x="0" y="0" width="380" height="350" rx="10" fill="var(--purple)" />
+      <rect x="10" y="10" width="360" height="330" rx="5" fill="none" stroke="white" stroke-width="1" />
+      
+      <!-- タイトル -->
+      <g transform="translate(190, 50)">
+        <text text-anchor="middle" class="cxo-name">AI CTO</text>
+        <text text-anchor="middle" y="30" class="cxo-desc">技術責任者</text>
+      </g>
+      
+      <!-- 内容 -->
+      <g transform="translate(40, 110)">
+        <text font-size="36">💻</text>
+        <g transform="translate(60, 0)">
+          <text class="card-text" fill="white">技術ロードマップ策定</text>
+          <text class="card-text" y="30" fill="white">システムアーキテクチャ設計</text>
+          <text class="card-text" y="60" fill="white">新技術導入判断</text>
+          <text class="card-text" y="90" fill="white">技術的負債管理</text>
+          <text class="card-text" y="120" fill="white">セキュリティ戦略</text>
+          <text class="card-text" y="150" fill="white">開発プロセス最適化</text>
+          <text class="card-text" y="180" fill="white">技術トレンド分析</text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- AI CSupO -->
+    <g transform="translate(840, 0)">
+      <rect x="0" y="0" width="380" height="350" rx="10" fill="var(--red)" />
+      <rect x="10" y="10" width="360" height="330" rx="5" fill="none" stroke="white" stroke-width="1" />
+      
+      <!-- タイトル -->
+      <g transform="translate(190, 50)">
+        <text text-anchor="middle" class="cxo-name">AI CSupO</text>
+        <text text-anchor="middle" y="30" class="cxo-desc">サポート責任者</text>
+      </g>
+      
+      <!-- 内容 -->
+      <g transform="translate(40, 110)">
+        <text font-size="36">🎧</text>
+        <g transform="translate(60, 0)">
+          <text class="card-text" fill="white">カスタマーサポート戦略</text>
+          <text class="card-text" y="30" fill="white">顧客満足度最大化</text>
+          <text class="card-text" y="60" fill="white">問い合わせ自動応対</text>
+          <text class="card-text" y="90" fill="white">効率的なエスカレーション</text>
+          <text class="card-text" y="120" fill="white">知識ベース最適化</text>
+          <text class="card-text" y="150" fill="white">顧客フィードバック分析</text>
+          <text class="card-text" y="180" fill="white">顧客維持率向上施策</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- まとめボックス -->
+  <g transform="translate(960, 1030)">
+    <rect x="-840" y="-60" width="1680" height="80" fill="white" stroke="var(--black)" stroke-width="2" />
+    <text text-anchor="middle" y="-30" class="body-text">各AI CXOは<tspan fill="var(--purple)" font-weight="700">独自の判断能力</tspan>を持ちながらも、</text>
+    <text text-anchor="middle" y="10" class="body-text"><tspan fill="var(--blue)" font-weight="700">常に連携</tspan>して全体最適な意思決定を行います</text>
+  </g>
+  
+  <!-- 会社名と頁数 -->
+  <g transform="translate(1800, 1050)">
+    <text class="company">TANREN株式会社</text>
+  </g>
+  
+  <g transform="translate(120, 1050)">
+    <text class="page-number">5 / 12</text>
+  </g>
+</svg> 

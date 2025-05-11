@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>なぜ継続は難しいのか？挫折のメカニズム</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #311b92 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+        }
+        .title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #e1bee7;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            margin-top: 0.5rem;
+        }
+        .key-point {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in-out forwards;
+        }
+        .key-point-icon {
+            min-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            color: #e1bee7;
+        }
+        .key-point-text {
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        .mountain-path {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 500px;
+            height: 400px;
+        }
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.3);
+        }
+        .wall-illustration {
+            position: relative;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Background particles -->
+        <div class="particles">
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const particles = document.createElement('div');
+                    particles.className = 'absolute inset-0';
+                    
+                    for(let i = 0; i < 50; i++) {
+                        const particle = document.createElement('div');
+                        particle.className = 'particle';
+                        particle.style.left = `${Math.random() * 100}%`;
+                        particle.style.top = `${Math.random() * 100}%`;
+                        particle.style.opacity = `${Math.random() * 0.5 + 0.1}`;
+                        particle.style.width = `${Math.random() * 4 + 2}px`;
+                        particle.style.height = particle.style.width;
+                        particle.style.animation = `fadeIn ${Math.random() * 3 + 2}s ease-in-out ${Math.random() * 2}s infinite alternate`;
+                        particles.appendChild(particle);
+                    }
+                    
+                    document.querySelector('.slide').prepend(particles);
+                });
+            </script>
+        </div>
+        
+        <div class="section-number">セクション 1</div>
+        
+        <div class="content flex p-16">
+            <div class="w-1/2">
+                <h1 class="title">なぜ継続は<br>難しいのか？</h1>
+                <h2 class="subtitle">挫折のメカニズム</h2>
+                
+                <div class="mt-12 space-y-6">
+                    <div class="key-point" style="animation-delay: 0.2s;">
+                        <div class="key-point-icon">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="key-point-text">
+                            継続は力なり<span class="text-yellow-300">...だが最大の障壁</span>
+                        </div>
+                    </div>
+                    
+                    <div class="key-point" style="animation-delay: 0.4s;">
+                        <div class="key-point-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="key-point-text">
+                            AI時代こそ<span class="text-yellow-300">継続力が差別化の鍵</span>
+                        </div>
+                    </div>
+                    
+                    <div class="key-point" style="animation-delay: 0.6s;">
+                        <div class="key-point-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="key-point-text">
+                            挫折には<span class="text-yellow-300">構造的なメカニズム</span>がある
+                        </div>
+                    </div>
+                    
+                    <div class="key-point" style="animation-delay: 0.8s;">
+                        <div class="key-point-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="key-point-text">
+                            理解すれば<span class="text-yellow-300">解決可能</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-1/2 flex items-center justify-center">
+                <!-- Mountain path with person illustration -->
+                <div class="wall-illustration relative w-full h-96">
+                    <!-- Mountain/Wall Path SVG -->
+                    <svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Mountain/Wall -->
+                        <path d="M50,350 L200,150 L350,350" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="3" />
+                        <path d="M200,150 L200,350" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="3" stroke-dasharray="10,5" />
+                        
+                        <!-- Path -->
+                        <path d="M50,350 C100,330 150,340 200,350" fill="none" stroke="#e1bee7" stroke-width="5" />
+                        
+                        <!-- Particles for sparkle effect -->
+                        <g>
+                            <circle cx="70" cy="345" r="3" fill="white">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="120" cy="335" r="2" fill="white">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="180" cy="345" r="3" fill="white">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                        
+                        <!-- Obstacle Wall -->
+                        <rect x="190" y="150" width="20" height="200" fill="rgba(255,255,255,0.15)" rx="5" />
+                        
+                        <!-- Person figures -->
+                        <!-- Person 1 (successful) -->
+                        <g transform="translate(350, 150) scale(0.6)">
+                            <circle cx="0" cy="-15" r="15" fill="#9c64a6" />
+                            <path d="M0,0 L0,30 L-15,60 M0,30 L15,60 M-20,15 L0,5 L20,15" stroke="#9c64a6" stroke-width="6" fill="none" stroke-linecap="round" />
+                            <text x="15" y="-15" fill="white" font-size="20" font-weight="bold">🏆</text>
+                        </g>
+                        
+                        <!-- Person 2 (at the obstacle, giving up) -->
+                        <g transform="translate(170, 300) scale(0.6)">
+                            <circle cx="0" cy="-15" r="15" fill="#e1bee7" />
+                            <path d="M0,0 L0,30 L-15,60 M0,30 L15,60 M-20,5 L20,5" stroke="#e1bee7" stroke-width="6" fill="none" stroke-linecap="round" />
+                            <text x="15" y="-15" fill="white" font-size="20" font-weight="bold">❓</text>
+                        </g>
+                        
+                        <!-- Person 3 (just starting) -->
+                        <g transform="translate(70, 330) scale(0.6)">
+                            <circle cx="0" cy="-15" r="15" fill="#e1bee7" />
+                            <path d="M0,0 L0,30 L-15,60 M0,30 L15,60 M-20,15 L0,5 L20,15" stroke="#e1bee7" stroke-width="6" fill="none" stroke-linecap="round" />
+                            <text x="15" y="-15" fill="white" font-size="20" font-weight="bold">🚶</text>
+                        </g>
+                    </svg>
+                    
+                    <!-- Labels -->
+                    <div class="absolute text-xl font-bold" style="top: 160px; right: 50px; color: #e1bee7;">
+                        目標達成者
+                    </div>
+                    <div class="absolute text-xl font-bold" style="top: 280px; left: 180px; color: #e1bee7;">
+                        挫折者
+                    </div>
+                    <div class="absolute text-xl font-bold" style="bottom: 60px; left: 30px; color: #e1bee7;">
+                        初心者
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

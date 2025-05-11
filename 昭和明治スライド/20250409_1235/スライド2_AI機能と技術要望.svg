@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c"/>
+  <text x="960" y="65" font-family="'Noto Serif JP', serif" font-size="40" fill="#f4f1ea" text-anchor="middle">AI機能と技術的要望</text>
+  
+  <!-- 下線アクセント -->
+  <line x1="780" y1="110" x2="1140" y2="110" stroke="#1a5b66" stroke-width="3"/>
+  <circle cx="960" cy="110" r="6" fill="#1a5b66"/>
+  
+  <!-- フッター -->
+  <rect x="0" y="1030" width="1920" height="50" fill="#2c2c2c"/>
+  <text x="960" y="1065" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#f4f1ea" text-anchor="middle">LOOV × TANREN 連携検討 - 2/3</text>
+
+  <!-- ===== 左カラム ===== -->
+  <g transform="translate(50, 130)">
+    <!-- カラムタイトル -->
+    <rect x="0" y="0" width="580" height="40" fill="#b3322b"/>
+    <text x="20" y="28" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea">🤖 AI動画シナリオ自動生成</text>
+    
+    <!-- コンテンツ領域 -->
+    <rect x="0" y="45" width="580" height="825" fill="white" stroke="#2c2c2c" stroke-width="1"/>
+    
+    <!-- コンテンツ -->
+    <text x="20" y="80" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c">AIシナリオ生成の現状</text>
+    <line x1="20" y1="90" x2="240" y2="90" stroke="#b3322b" stroke-width="2"/>
+    
+    <!-- 現状の機能 -->
+    <text x="20" y="120" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">現行機能：<tspan font-weight="bold">AIによる自動生成</tspan></text>
+    <text x="40" y="150" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• 資料（PDF等）のアップロード</text>
+    <text x="40" y="175" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• 商材説明の簡単な入力</text>
+    <text x="40" y="200" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• AIによる分岐構造の自動生成</text>
+    
+    <!-- 分岐構造図 -->
+    <rect x="40" y="230" width="500" height="240" fill="#f9f7f4" stroke="#2c2c2c" stroke-width="1"/>
+    <text x="290" y="255" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">AI生成された分岐構造例</text>
+    
+    <!-- ノード図 -->
+    <circle cx="290" cy="300" r="40" fill="#f4f1ea" stroke="#b3322b" stroke-width="2"/>
+    <text x="290" y="305" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">メイン</text>
+    
+    <!-- 第一階層 -->
+    <circle cx="160" cy="380" r="35" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+    <text x="160" y="385" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">特徴A</text>
+    
+    <circle cx="290" cy="380" r="35" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+    <text x="290" y="385" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">特徴B</text>
+    
+    <circle cx="420" cy="380" r="35" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+    <text x="420" y="385" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">特徴C</text>
+    
+    <!-- 接続線 -->
+    <line x1="265" y1="330" x2="180" y2="355" stroke="#2c2c2c" stroke-width="1"/>
+    <line x1="290" y1="340" x2="290" y2="345" stroke="#2c2c2c" stroke-width="1"/>
+    <line x1="315" y1="330" x2="400" y2="355" stroke="#2c2c2c" stroke-width="1"/>
+    
+    <!-- 第二階層 A -->
+    <circle cx="120" cy="440" r="25" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+    <text x="120" y="445" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#2c2c2c" text-anchor="middle">A-1</text>
+    
+    <circle cx="200" cy="440" r="25" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+    <text x="200" y="445" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#2c2c2c" text-anchor="middle">A-2</text>
+    
+    <line x1="145" y1="405" x2="130" y2="415" stroke="#2c2c2c" stroke-width="1"/>
+    <line x1="175" y1="405" x2="190" y2="415" stroke="#2c2c2c" stroke-width="1"/>
+    
+    <!-- 課題と要望 -->
+    <text x="20" y="500" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c">課題と改善要望</text>
+    <line x1="20" y1="510" x2="200" y2="510" stroke="#b3322b" stroke-width="2"/>
+    
+    <text x="20" y="540" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">課題：<tspan font-weight="bold">複雑な分岐設計の難しさ</tspan></text>
+    <text x="40" y="565" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• 初心者には分岐の発想自体が難しい</text>
+    <text x="40" y="590" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• AIによる思考整理はできても実装が面倒</text>
+    <text x="40" y="615" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• 複雑な分岐（5分岐・10分岐）の作成に時間</text>
+    
+    <!-- プロンプト編集機能要望 -->
+    <rect x="40" y="645" width="500" height="180" fill="#f9f7f4" stroke="#2c2c2c" stroke-width="1"/>
+    <text x="290" y="670" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">提案：プロンプト編集機能</text>
+    
+    <!-- コードエディタ風UI -->
+    <rect x="60" y="685" width="460" height="120" fill="#2c2c2c" stroke="#2c2c2c" stroke-width="1" rx="5"/>
+    <text x="70" y="705" font-family="'Noto Sans JP', monospace" font-size="14" fill="#f4f1ea">/* Advancedモード：マークダウンによる分岐定義 */</text>
+    <text x="70" y="725" font-family="'Noto Sans JP', monospace" font-size="14" fill="#b3322b"># メインセクション</text>
+    <text x="70" y="745" font-family="'Noto Sans JP', monospace" font-size="14" fill="#f4f1ea">- 分岐1: 製品の特徴</text>
+    <text x="70" y="765" font-family="'Noto Sans JP', monospace" font-size="14" fill="#f4f1ea">  - 1-1: 高性能</text>
+    <text x="70" y="785" font-family="'Noto Sans JP', monospace" font-size="14" fill="#f4f1ea">  - 1-2: コスト効率</text>
+    
+    <!-- 実践ポイント -->
+    <rect x="20" y="850" width="540" height="100" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" rx="5"/>
+    <text x="40" y="880" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">📌 実践ポイント</text>
+    <text x="60" y="910" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• 構造化テキスト入力による一括生成が効率的</text>
+    <text x="60" y="935" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• 初心者向けUIと上級者向け機能の両立が重要</text>
+  </g>
+
+  <!-- ===== 中央カラム ===== -->
+  <g transform="translate(670, 130)">
+    <!-- カラムタイトル -->
+    <rect x="0" y="0" width="580" height="40" fill="#1a5b66"/>
+    <text x="20" y="28" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea">🎤 AIナレーション機能</text>
+    
+    <!-- コンテンツ領域 -->
+    <rect x="0" y="45" width="580" height="825" fill="white" stroke="#2c2c2c" stroke-width="1"/>
+    
+    <!-- コンテンツ -->
+    <text x="20" y="80" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c">現状の音声エンジン</text>
+    <line x1="20" y1="90" x2="220" y2="90" stroke="#1a5b66" stroke-width="2"/>
+    
+    <!-- 現在の機能 -->
+    <text x="20" y="120" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">• <tspan font-weight="bold">テキスト入力による読み上げ機能</tspan></text>
+    <text x="40" y="145" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">  ユーザー評価：機械的な印象が強い</text>
+    
+    <text x="20" y="175" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">• <tspan font-weight="bold">約1年前から実装済み</tspan></text>
+    <text x="40" y="200" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">  顧客認知度：低〜中程度</text>
+    
+    <!-- 音声品質比較 -->
+    <rect x="40" y="230" width="500" height="200" fill="#f9f7f4" stroke="#2c2c2c" stroke-width="1"/>
+    <text x="290" y="255" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">音声エンジン品質比較</text>
+    
+    <!-- 音声波形イメージ -->
+    <g transform="translate(70, 280)">
+      <text x="0" y="0" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">現行エンジン:</text>
+      <!-- 機械的な波形 -->
+      <path d="M 120 0 L 130 -15 L 140 15 L 150 -15 L 160 15 L 170 -15 L 180 15 L 190 -15 L 200 15 L 210 -15 L 220 15 L 230 -15 L 240 15 L 250 -15 L 260 15 L 270 -15 L 280 15 L 290 -15 L 300 15 L 310 -15 L 320 15 L 330 -15 L 340 15 L 350 -15 L 360 15 L 370 -15 L 380 0" fill="none" stroke="#2c2c2c" stroke-width="1.5" transform="translate(0, 10)"/>
+      
+      <!-- 特性ラベル -->
+      <rect x="400" y="-10" width="70" height="25" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="3"/>
+      <text x="435" y="5" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">機械的</text>
+    </g>
+    
+    <g transform="translate(70, 340)">
+      <text x="0" y="0" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">OpenAI音声:</text>
+      <!-- 自然な波形 -->
+      <path d="M 120 0 C 140 -5, 150 -20, 160 -10 C 170 0, 180 15, 190 5 C 200 -5, 210 -15, 220 -5 C 230 5, 240 15, 250 10 C 260 5, 270 -10, 280 -15 C 290 -20, 300 -5, 310 0 C 320 5, 330 15, 340 10 C 350 5, 360 0, 370 -5 C 380 -10, 390 -5, 400 0" fill="none" stroke="#1a5b66" stroke-width="2" transform="translate(0, 10)"/>
+      
+      <!-- 特性ラベル -->
+      <rect x="400" y="-10" width="70" height="25" fill="#1a5b66" stroke="#1a5b66" stroke-width="1" rx="3"/>
+      <text x="435" y="5" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#f4f1ea" text-anchor="middle">自然な抑揚</text>
+    </g>
+    
+    <!-- 改善提案 -->
+    <text x="20" y="470" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c">OpenAI音声APIの採用提案</text>
+    <line x1="20" y1="480" x2="330" y2="480" stroke="#1a5b66" stroke-width="2"/>
+    
+    <text x="20" y="510" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">メリット：</text>
+    <text x="40" y="540" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">① <tspan font-weight="bold">より流暢で自然な音声表現</tspan></text>
+    <text x="40" y="565" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">② <tspan font-weight="bold">豊かな感情表現</tspan>が可能</text>
+    <text x="40" y="590" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">③ <tspan font-weight="bold">最新技術</tspan>の採用によるブランド価値向上</text>
+    
+    <!-- 技術的な実装の容易さ -->
+    <text x="20" y="630" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">技術的な実装：</text>
+    <text x="40" y="660" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• <tspan font-weight="bold">API連携による実装の容易さ</tspan></text>
+    <text x="40" y="685" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• <tspan font-weight="bold">音声エンジン選択肢</tspan>としての提供</text>
+    
+    <!-- ユーザーインターフェース例 -->
+    <rect x="40" y="720" width="500" height="100" fill="#f9f7f4" stroke="#2c2c2c" stroke-width="1"/>
+    <text x="290" y="745" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">エンジン選択UI案</text>
+    
+    <rect x="80" y="760" width="140" height="40" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5"/>
+    <text x="150" y="785" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">標準エンジン</text>
+    
+    <rect x="240" y="760" width="140" height="40" fill="#1a5b66" stroke="#1a5b66" stroke-width="1" rx="5"/>
+    <text x="310" y="785" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">OpenAI音声</text>
+    
+    <rect x="400" y="760" width="100" height="40" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5"/>
+    <text x="450" y="785" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">その他</text>
+    
+    <!-- 実践ポイント -->
+    <rect x="20" y="850" width="540" height="100" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5"/>
+    <text x="40" y="880" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">📌 実践ポイント</text>
+    <text x="60" y="910" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• 最新GPT-4oなど先進技術の積極採用</text>
+    <text x="60" y="935" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• ユーザーの選択肢を増やす柔軟な設計</text>
+  </g>
+
+  <!-- ===== 右カラム ===== -->
+  <g transform="translate(1290, 130)">
+    <!-- カラムタイトル -->
+    <rect x="0" y="0" width="580" height="40" fill="#653a5e"/>
+    <text x="20" y="28" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea">🔌 MCP対応とAPI連携</text>
+    
+    <!-- コンテンツ領域 -->
+    <rect x="0" y="45" width="580" height="825" fill="white" stroke="#2c2c2c" stroke-width="1"/>
+    
+    <!-- コンテンツ -->
+    <text x="20" y="80" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c">MCPとは何か</text>
+    <line x1="20" y1="90" x2="180" y2="90" stroke="#653a5e" stroke-width="2"/>
+    
+    <!-- MCPの説明 -->
+    <text x="20" y="120" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">定義：<tspan font-weight="bold">「AI界のUSBCポート」</tspan></text>
+    <text x="40" y="145" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• 非技術者でもAIを活用しやすくする技術</text>
+    <text x="40" y="170" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• 手元端末のAI(Claude, OpenAI等)とサーバー</text>
+    <text x="50" y="195" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">  側APIを容易に連携</text>
+    
+    <!-- USBCとの比較図 -->
+    <rect x="40" y="225" width="500" height="150" fill="#f9f7f4" stroke="#2c2c2c" stroke-width="1"/>
+    <text x="290" y="250" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">MCPによる連携の簡素化</text>
+    
+    <!-- 従来のAPI連携 -->
+    <rect x="80" y="280" width="180" height="70" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5"/>
+    <text x="170" y="305" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">APIキー連携</text>
+    <text x="170" y="325" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">エンジニアリング必要</text>
+    
+    <!-- MCPによる連携 -->
+    <rect x="320" y="280" width="180" height="70" fill="#653a5e" stroke="#653a5e" stroke-width="1" rx="5"/>
+    <text x="410" y="305" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">MCP連携</text>
+    <text x="410" y="325" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#f4f1ea" text-anchor="middle">ノーコードで連携可能</text>
+    
+    <!-- 矢印 -->
+    <line x1="270" y1="315" x2="310" y2="315" stroke="#2c2c2c" stroke-width="2"/>
+    <polygon points="308,310 320,315 308,320" fill="#2c2c2c"/>
+    
+    <!-- MCPの具体的メリット -->
+    <text x="20" y="410" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c">MCP対応のメリット</text>
+    <line x1="20" y1="420" x2="250" y2="420" stroke="#653a5e" stroke-width="2"/>
+    
+    <!-- 3つのメリット -->
+    <rect x="40" y="440" width="500" height="220" fill="#f9f7f4" stroke="#2c2c2c" stroke-width="1"/>
+    
+    <!-- メリット1 -->
+    <rect x="70" y="465" width="440" height="50" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    <text x="90" y="495" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">① <tspan font-weight="bold">非エンジニアの利用促進</tspan></text>
+    <text x="100" y="515" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" transform="translate(320, 475)">API仕様統一による接続の簡素化</text>
+    
+    <!-- メリット2 -->
+    <rect x="70" y="525" width="440" height="50" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    <text x="90" y="555" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">② <tspan font-weight="bold">AIとの壁打ちによる改善プロセス効率化</tspan></text>
+    
+    <!-- メリット3 -->
+    <rect x="70" y="585" width="440" height="50" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    <text x="90" y="615" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">③ <tspan font-weight="bold">ユーザー側での分析ツール作成の自由度向上</tspan></text>
+    
+    <!-- 市場トレンド -->
+    <text x="20" y="695" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c">市場トレンド</text>
+    <line x1="20" y1="705" x2="150" y2="705" stroke="#653a5e" stroke-width="2"/>
+    
+    <text x="20" y="735" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">• <tspan font-weight="bold">最近1ヶ月での注目度急上昇</tspan></text>
+    <text x="40" y="760" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">  Chatwork、Slackなど主要ツールが対応開始</text>
+    
+    <text x="20" y="790" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">• <tspan font-weight="bold">早期対応企業への高い評価</tspan></text>
+    <text x="40" y="815" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">  技術先進性のアピールとなる</text>
+    
+    <!-- 実践ポイント -->
+    <rect x="20" y="850" width="540" height="100" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    <text x="40" y="880" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">📌 実践ポイント</text>
+    <text x="60" y="910" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• 早期対応による市場での差別化が可能</text>
+    <text x="60" y="935" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">• 営業デモでの訴求力向上にも効果的</text>
+  </g>
+</svg> 

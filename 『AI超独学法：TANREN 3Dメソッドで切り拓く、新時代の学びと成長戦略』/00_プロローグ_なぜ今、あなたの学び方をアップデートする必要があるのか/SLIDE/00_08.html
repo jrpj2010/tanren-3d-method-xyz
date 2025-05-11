@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y軸：時間軸の視座</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #4169E1 0%, #8A2BE2 100%);
+            color: white;
+            position: relative;
+        }
+        .slide-content {
+            padding: 50px;
+        }
+        .slide-title {
+            font-size: 52px;
+            font-weight: 900;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        .slide-title::before {
+            content: "Y";
+            position: absolute;
+            left: -30px;
+            top: 0;
+            font-size: 72px;
+            color: rgba(50, 205, 50, 0.4);
+            transform: translateY(-10px);
+        }
+        .content-container {
+            display: flex;
+            gap: 40px;
+        }
+        .text-content {
+            flex: 1;
+        }
+        .visual-content {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .time-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border-left: 6px solid;
+        }
+        .time-box:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .time-past {
+            border-left-color: #9370DB;
+        }
+        .time-present {
+            border-left-color: #32CD32;
+        }
+        .time-future {
+            border-left-color: #FF8C00;
+        }
+        .time-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .time-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        .time-desc {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .time-examples {
+            margin-top: 10px;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .highlight {
+            color: #FFD700;
+            font-weight: 700;
+        }
+        
+        /* キーワードリスト */
+        .keyword-list {
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .keyword {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 4px 12px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        /* 時間軸の円表現 */
+        .timeline-circle {
+            width: 500px;
+            height: 500px;
+            position: relative;
+        }
+        .timeline-center {
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        .center-text {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #FFD700;
+        }
+        .time-segment {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+        .time-segment:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        .segment-title {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .segment-desc {
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        .past-segment {
+            background: rgba(147, 112, 219, 0.7);
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .present-segment {
+            background: rgba(50, 205, 50, 0.7);
+            bottom: 0;
+            left: 20%;
+            transform: translateX(-50%);
+        }
+        .future-segment {
+            background: rgba(255, 140, 0, 0.7);
+            bottom: 0;
+            right: 20%;
+            transform: translateX(50%);
+        }
+        
+        /* 時間の流れを表す矢印 */
+        .time-flow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 450px;
+            height: 450px;
+            border: 4px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .time-arrow {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        /* 時間の流れを示す小さなポイント */
+        .flow-point {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            animation: flowAnimation 10s infinite linear;
+        }
+        
+        @keyframes flowAnimation {
+            0% { 
+                transform: rotate(0deg) translateX(225px) rotate(0deg); 
+            }
+            100% { 
+                transform: rotate(360deg) translateX(225px) rotate(-360deg); 
+            }
+        }
+        
+        /* 具体例のポップアップ */
+        .time-example {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-size: 14px;
+            max-width: 180px;
+            z-index: 5;
+        }
+        .example-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-content">
+            <h1 class="slide-title">時間軸の視座</h1>
+            
+            <div class="content-container">
+                <div class="text-content">
+                    <!-- 過去の説明 -->
+                    <div class="time-box time-past">
+                        <div class="time-title">
+                            <div class="time-icon" style="background: rgba(147, 112, 219, 0.3);">↩️</div>
+                            <span><span class="highlight">過去</span>を学ぶ</span>
+                        </div>
+                        <div class="time-desc">
+                            歴史や経緯から学び、<span class="highlight">現在</span>の成り立ちを理解する力。失敗と成功のパターンを認識する。
+                        </div>
+                        <div class="keyword-list">
+                            <div class="keyword">歴史の文脈</div>
+                            <div class="keyword">事例分析</div>
+                            <div class="keyword">原因追求</div>
+                            <div class="keyword">パターン認識</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 現在の説明 -->
+                    <div class="time-box time-present">
+                        <div class="time-title">
+                            <div class="time-icon" style="background: rgba(50, 205, 50, 0.3);">⚡</div>
+                            <span><span class="highlight">現在</span>を捉える</span>
+                        </div>
+                        <div class="time-desc">
+                            変化の激しい状況を客観的に把握し、<span class="highlight">今</span>取るべき最善手を見極める力。
+                        </div>
+                        <div class="keyword-list">
+                            <div class="keyword">状況分析</div>
+                            <div class="keyword">最適解探索</div>
+                            <div class="keyword">リアルタイム判断</div>
+                            <div class="keyword">客観視点</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 未来の説明 -->
+                    <div class="time-box time-future">
+                        <div class="time-title">
+                            <div class="time-icon" style="background: rgba(255, 140, 0, 0.3);">↪️</div>
+                            <span><span class="highlight">未来</span>を構想する</span>
+                        </div>
+                        <div class="time-desc">
+                            トレンドを読み解き、不確実性の中で<span class="highlight">進むべき方向</span>を構想し、戦略を描く力。
+                        </div>
+                        <div class="keyword-list">
+                            <div class="keyword">トレンド予測</div>
+                            <div class="keyword">シナリオプランニング</div>
+                            <div class="keyword">戦略立案</div>
+                            <div class="keyword">リスク想定</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="visual-content">
+                    <div class="timeline-circle">
+                        <!-- 時間の流れを表す円 -->
+                        <div class="time-flow"></div>
+                        
+                        <!-- 円の中央 -->
+                        <div class="timeline-center">
+                            <div class="center-text">多時間軸<br>思考</div>
+                        </div>
+                        
+                        <!-- 過去セグメント -->
+                        <div class="time-segment past-segment">
+                            <div class="segment-title">過去</div>
+                            <div class="segment-desc">歴史的文脈の理解<br>原因と結果の分析</div>
+                        </div>
+                        
+                        <!-- 現在セグメント -->
+                        <div class="time-segment present-segment">
+                            <div class="segment-title">現在</div>
+                            <div class="segment-desc">状況の客観的把握<br>最適解の探索</div>
+                        </div>
+                        
+                        <!-- 未来セグメント -->
+                        <div class="time-segment future-segment">
+                            <div class="segment-title">未来</div>
+                            <div class="segment-desc">変化の予測<br>複数シナリオの構想</div>
+                        </div>
+                        
+                        <!-- 時間の流れを示すポイント -->
+                        <div class="flow-point" style="animation-delay: 0s;"></div>
+                        <div class="flow-point" style="animation-delay: 2.5s;"></div>
+                        <div class="flow-point" style="animation-delay: 5s;"></div>
+                        <div class="flow-point" style="animation-delay: 7.5s;"></div>
+                        
+                        <!-- 具体例のポップアップ -->
+                        <div class="time-example" style="top: 70px; right: 80px;">
+                            <div class="example-title">過去の例</div>
+                            同じ失敗を繰り返さないための教訓抽出
+                        </div>
+                        
+                        <div class="time-example" style="bottom: 100px; left: 40px;">
+                            <div class="example-title">現在の例</div>
+                            情報を整理し最も効果的な選択肢を特定
+                        </div>
+                        
+                        <div class="time-example" style="bottom: 100px; right: 40px;">
+                            <div class="example-title">未来の例</div>
+                            複数の可能性を想定し戦略的に準備
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

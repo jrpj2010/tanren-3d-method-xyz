@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第1章 AI超独学を起動するマインドセット: 使う側から共創する側へ | AI超独学法</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+    
+    <!-- Preline UI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline@2.0.3/dist/preline.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.0.3/dist/preline.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["'Noto Sans JP'", 'sans-serif'],
+                        serif: ["'Noto Serif JP'", 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-pattern font-sans text-gray-800">
+    <!-- Header -->
+    <header class="sticky top-0 bg-white bg-opacity-95 shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-2xl font-serif font-bold text-indigo-600">AI<span class="text-purple-600">超独学法</span></span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#section-1" class="text-gray-700 hover:text-indigo-600 font-medium transition">AIと指数関数的成長</a>
+                <a href="#section-2" class="text-gray-700 hover:text-indigo-600 font-medium transition">7つの独学の罠</a>
+                <a href="#section-3" class="text-gray-700 hover:text-indigo-600 font-medium transition">共創するマインドセット</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button data-toggle="mobile-menu" class="md:hidden text-gray-700 hover:text-indigo-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div data-menu="mobile-menu" class="md:hidden hidden bg-white py-2 px-4 shadow-inner">
+            <nav class="flex flex-col space-y-3">
+                <a href="#section-1" class="text-gray-700 hover:text-indigo-600 font-medium transition py-1">AIと指数関数的成長</a>
+                <a href="#section-2" class="text-gray-700 hover:text-indigo-600 font-medium transition py-1">7つの独学の罠</a>
+                <a href="#section-3" class="text-gray-700 hover:text-indigo-600 font-medium transition py-1">共創するマインドセット</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-10 pb-20 md:pt-20 md:pb-28">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl font-serif font-bold leading-tight mb-6">
+                            <span class="text-gradient">AI超独学</span>を起動する<br>マインドセット
+                        </h1>
+                        <p class="text-xl md:text-2xl text-gray-600 mb-8">使う側から共創する側へ</p>
+                        <p class="text-lg text-gray-700 mb-8 max-w-2xl">
+                            AIとの協働により、あなたの学習と成長は指数関数的に加速します。
+                            しかし、それはただAIを使うだけではなく、AIと共に創造するマインドセットへの転換から始まります。
+                        </p>
+                        <a href="#section-1" class="btn-primary inline-flex items-center">
+                            詳しく学ぶ
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="md:w-1/2 relative">
+                        <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl p-4 shadow-xl transform rotate-3 animate-float">
+                            <img src="https://images.unsplash.com/photo-1593073862407-a3ce22748763?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="AI学習のイメージ" class="rounded-2xl shadow-lg">
+                        </div>
+                        <div class="absolute -bottom-10 -left-10 w-24 h-24 bg-yellow-400 rounded-full opacity-30 animate-pulse-soft"></div>
+                        <div class="absolute -top-5 -right-5 w-16 h-16 bg-blue-400 rounded-full opacity-20 animate-spin-slow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="container mx-auto px-4 pb-20">
+            <div class="flex flex-col lg:flex-row">
+                <!-- Main Content Column -->
+                <div class="lg:w-3/4 lg:pr-10">
+                    <!-- Section 1: AIと話せる人はなぜ指数関数的に成長するのか -->
+                    <section id="section-1" data-section class="mb-20 animate-fadeIn">
+                        <h2 class="text-3xl font-serif font-bold mb-6 text-gray-800">
+                            AIと話せる人はなぜ指数関数的に成長するのか
+                        </h2>
+                        <div class="bg-white rounded-xl shadow-lg p-6 mb-10">
+                            <p class="text-lg mb-6">
+                                AIの登場によって、私たちの学習方法は根本から変わりました。AIと効果的に対話できる人々は、従来の学習方法では到達できないレベルの知識獲得と技能成長を実現しています。
+                            </p>
+                            
+                            <h3 class="text-xl font-bold mb-4 text-indigo-700">翻訳こんにゃく効果：自分の言葉で理解する</h3>
+                            <p class="mb-6">
+                                従来の学習では、専門知識を理解するためにその分野の専門用語や概念を徐々に学ぶ必要がありました。しかし、AIは「翻訳こんにゃく」のように機能し、専門的な内容をあなたの理解レベルに合わせた言葉で説明してくれます。
+                            </p>
+                            
+                            <div class="chart-container h-64 md:h-80 mb-6">
+                                <canvas id="translationKonnyakuChart"></canvas>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                <div class="challenge-card">
+                                    <h4 class="text-lg font-bold mb-3 text-indigo-600">知識の民主化</h4>
+                                    <p>
+                                        AIによって、これまでアクセスが限られていた専門知識が広く利用可能になります。専門家でなくても、複雑な概念を自分の言葉で理解し、応用できるようになりました。
+                                    </p>
+                                </div>
+                                <div class="challenge-card">
+                                    <h4 class="text-lg font-bold mb-3 text-indigo-600">パーソナライズされた学習体験</h4>
+                                    <p>
+                                        AIはあなたの背景知識、学習スタイル、理解度に合わせた説明を提供します。これによって、従来の一方通行の学習よりも効果的な理解が可能になります。
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-4 text-indigo-700">指数関数的成長の仕組み</h3>
+                            <p class="mb-6">
+                                AIと効果的に対話できる人の学習能力が指数関数的に成長する理由は、単なる効率化ではなく、学習プロセス全体の変革にあります。
+                            </p>
+                            
+                            <div class="chart-container h-64 md:h-80 mb-6">
+                                <canvas id="aiGrowthChart"></canvas>
+                            </div>
+                            
+                            <ul class="space-y-4 mb-6">
+                                <li class="flex items-start">
+                                    <span class="flex-shrink-0 w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mr-3 mt-0.5">1</span>
+                                    <div>
+                                        <span class="font-bold">即時フィードバック循環：</span>
+                                        AIは質問に対して即座に応答し、その応答に基づいてさらに質問できるため、理解の深化サイクルが加速します。
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="flex-shrink-0 w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mr-3 mt-0.5">2</span>
+                                    <div>
+                                        <span class="font-bold">知識の組み合わせ：</span>
+                                        AIを通じて異なる分野の知識を組み合わせることで、創造的な問題解決能力が飛躍的に向上します。
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="flex-shrink-0 w-6 h-6 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mr-3 mt-0.5">3</span>
+                                    <div>
+                                        <span class="font-bold">メタ学習の加速：</span>
+                                        AIとの対話を通じて、学び方自体を学ぶメタ学習能力が強化され、新たな分野への適応力が高まります。
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+                    <!-- Section 2: AIを使っているつもりが陥る、7つの独学の罠 -->
+                    <section id="section-2" data-section class="mb-20 animate-fadeIn animation-delay-300">
+                        <h2 class="text-3xl font-serif font-bold mb-6 text-gray-800">
+                            AIを使っているつもりが陥る、7つの独学の罠
+                        </h2>
+                        <div class="bg-white rounded-xl shadow-lg p-6 mb-10">
+                            <p class="text-lg mb-8">
+                                AIを活用しているつもりでも、多くの人は無意識のうちに以下の罠に陥り、本来得られるはずの成長機会を逃しています。
+                            </p>
+                            
+                            <div class="space-y-6 mb-8">
+                                <div class="trap-card">
+                                    <h4 class="text-lg font-bold mb-2 text-red-600">罠1：翻訳代行症候群</h4>
+                                    <p>
+                                        AIをただの翻訳ツールとしてしか使わず、英語の記事や論文を日本語に変換するだけに留めている状態。情報の受け取りが受動的で、理解の深化や知識の応用には至りません。
+                                    </p>
+                                </div>
+                                
+                                <div class="trap-card">
+                                    <h4 class="text-lg font-bold mb-2 text-red-600">罠2：コピペ依存症</h4>
+                                    <p>
+                                        AIの出力をそのままコピーして使用し、自分の考えや言葉で咀嚼せず、理解も浅いまま。結果として知識が定着せず、応用力も育ちません。
+                                    </p>
+                                </div>
+                                
+                                <div class="trap-card">
+                                    <h4 class="text-lg font-bold mb-2 text-red-600">罠3：質問力不足</h4>
+                                    <p>
+                                        表面的な質問にとどまり、AIの能力を十分に引き出せていない状態。的確な質問ができないため、得られる回答も浅く、学びの深化につながりません。
+                                    </p>
+                                </div>
+                                
+                                <div class="trap-card">
+                                    <h4 class="text-lg font-bold mb-2 text-red-600">罠4：受動的消費者マインド</h4>
+                                    <p>
+                                        AIを「便利なツール」としか見ておらず、一方通行の情報提供者として扱っている状態。対話的に知識を構築するプロセスが欠けています。
+                                    </p>
+                                </div>
+                                
+                                <div class="trap-card">
+                                    <h4 class="text-lg font-bold mb-2 text-red-600">罠5：一発解決願望</h4>
+                                    <p>
+                                        複雑な問題を一度の質問で解決しようとし、反復的な対話プロセスを避ける傾向。結果として表面的な理解にとどまります。
+                                    </p>
+                                </div>
+                                
+                                <div class="trap-card">
+                                    <h4 class="text-lg font-bold mb-2 text-red-600">罠6：検証怠慢</h4>
+                                    <p>
+                                        AIの出力を無批判に信じ、事実確認や検証をしない傾向。批判的思考力が育たず、誤情報を取り入れるリスクが高まります。
+                                    </p>
+                                </div>
+                                
+                                <div class="trap-card">
+                                    <h4 class="text-lg font-bold mb-2 text-red-600">罠7：成長の錯覚</h4>
+                                    <p>
+                                        AIの力で課題を解決できたことを自分の能力向上と勘違いする状態。実際には自身の知識やスキルの定着・向上につながっていません。
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-indigo-50 rounded-lg p-6">
+                                <h4 class="text-xl font-bold mb-4 text-indigo-700">脱・受動的利用のチェックポイント</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                        AIからの回答を自分の言葉で再構築していますか？
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                        同じトピックについて、異なる角度から複数の質問をしていますか？
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                        AIの回答に対して「なぜそうなるのか」を掘り下げていますか？
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600 mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                        </svg>
+                                        得られた知識を実際に応用する機会を作っていますか？
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Section 3: 受動的なAI利用を超えて：「共創する側」へのマインドセットシフト -->
+                    <section id="section-3" data-section class="mb-20 animate-fadeIn animation-delay-600">
+                        <h2 class="text-3xl font-serif font-bold mb-6 text-gray-800">
+                            受動的なAI利用を超えて：「共創する側」へのマインドセットシフト
+                        </h2>
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <p class="text-lg mb-8">
+                                AIとの関係性を「使う側」から「共創する側」へとシフトさせることで、学習効果と創造性が飛躍的に高まります。このマインドセットシフトが、AI時代の学びの質を決定づけます。
+                            </p>
+                            
+                            <div class="chart-container h-64 md:h-80 mb-8">
+                                <canvas id="mindsetComparisonChart"></canvas>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-6 text-indigo-700">「使う側」と「共創する側」の比較</h3>
+                            
+                            <div class="overflow-x-auto mb-8">
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-left">観点</th>
+                                            <th class="highlight-use">使う側</th>
+                                            <th class="highlight-create">共創する側</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-medium">AIとの関係性</td>
+                                            <td class="highlight-use">サービス提供者と消費者</td>
+                                            <td class="highlight-create">協力的なパートナーシップ</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">質問の仕方</td>
+                                            <td class="highlight-use">単発的、表面的な質問</td>
+                                            <td class="highlight-create">対話的、探究型の質問</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">知識の処理</td>
+                                            <td class="highlight-use">受動的な情報受け取り</td>
+                                            <td class="highlight-create">能動的な知識構築</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">出力の扱い</td>
+                                            <td class="highlight-use">そのまま使用（コピペ）</td>
+                                            <td class="highlight-create">批判的分析と再構築</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">思考プロセス</td>
+                                            <td class="highlight-use">AIに依存</td>
+                                            <td class="highlight-create">AIと人間の思考の融合</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">学習の深さ</td>
+                                            <td class="highlight-use">表面的理解</td>
+                                            <td class="highlight-create">構造化された深い理解</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-medium">成長速度</td>
+                                            <td class="highlight-use">線形的</td>
+                                            <td class="highlight-create">指数関数的</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-4 text-indigo-700">共創マインドセットへの移行ステップ</h3>
+                            
+                            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-5 shadow-sm">
+                                    <div class="text-center mb-4">
+                                        <span class="inline-block w-12 h-12 bg-indigo-100 rounded-full text-indigo-600 flex items-center justify-center text-2xl font-bold">1</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold mb-3 text-center text-indigo-700">気づきの段階</h4>
+                                    <p>
+                                        従来のAI利用パターンと限界を認識し、「使う側」マインドから脱却する必要性を理解します。毎回の利用後に自己評価を行いましょう。
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-5 shadow-sm">
+                                    <div class="text-center mb-4">
+                                        <span class="inline-block w-12 h-12 bg-indigo-100 rounded-full text-indigo-600 flex items-center justify-center text-2xl font-bold">2</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold mb-3 text-center text-indigo-700">対話力の強化</h4>
+                                    <p>
+                                        単発的な質問から、連続的・探究的な対話へと移行します。「なぜ」「どうやって」を意識し、より深い理解を引き出しましょう。
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-5 shadow-sm">
+                                    <div class="text-center mb-4">
+                                        <span class="inline-block w-12 h-12 bg-indigo-100 rounded-full text-indigo-600 flex items-center justify-center text-2xl font-bold">3</span>
+                                    </div>
+                                    <h4 class="text-lg font-bold mb-3 text-center text-indigo-700">共創プロジェクト</h4>
+                                    <p>
+                                        AIと共に具体的な創造物（文章、企画、コード等）を作り上げることで、実践的にパートナーシップを構築します。
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 text-white">
+                                <h4 class="text-xl font-bold mb-4">共創マインドセットが拓く未来</h4>
+                                <p class="mb-4">
+                                    AIと共創する関係性を構築することで、単なる知識獲得を超えた創造的思考能力が飛躍的に向上します。これは、将来のAI進化に対しても適応力を保つための最も効果的な方法です。
+                                </p>
+                                <div class="flex justify-end">
+                                    <a href="#" class="bg-white text-indigo-600 px-4 py-2 rounded-md font-medium hover:bg-opacity-90 transition">第2章へ進む →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="lg:w-1/4 mt-10 lg:mt-0">
+                    <div class="sticky top-24">
+                        <div class="bg-white rounded-xl shadow-md p-5 mb-6">
+                            <h3 class="text-lg font-bold mb-4 text-gray-800">目次</h3>
+                            <nav class="nav-scrollspy">
+                                <ul class="space-y-2"></ul>
+                            </nav>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-5 shadow-md">
+                            <h3 class="text-lg font-bold mb-3 text-indigo-700">次のステップ</h3>
+                            <p class="text-gray-700 mb-4">
+                                マインドセットを理解したら、次は実際にAIとの対話を通じて「TANREN 3Dメソッド」を学びましょう。
+                            </p>
+                            <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition flex items-center">
+                                第2章へ進む
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto py-12 px-4">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4">AI<span class="text-indigo-400">超独学法</span></h3>
+                    <p class="text-gray-400">
+                        AIと共に学び、成長するための新しい学習メソッド。TANRENメソッドで、あなたの学びを加速しましょう。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">目次</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">プロローグ</a></li>
+                        <li><a href="#" class="text-indigo-400 hover:text-white transition">第1章: AIとのマインドセット</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">第2章: TANREN 3Dメソッド</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">第3章: AIとの対話設計術</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">お問い合わせ</h4>
+                    <p class="text-gray-400 mb-4">
+                        AIの学習方法について質問がありますか？お気軽にお問い合わせください。
+                    </p>
+                    <a href="#" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md transition">
+                        お問い合わせ
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500">
+                <p>© 2025 AI超独学法 TANREN 3Dメソッド. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html> 

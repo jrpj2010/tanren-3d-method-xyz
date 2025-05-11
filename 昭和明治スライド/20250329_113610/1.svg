@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="80" fill="#2c2c2c"/>
+  <text x="50" y="50" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">マイクロソフト50周年：日本と共に歩む AI の新時代</text>
+  <text x="1800" y="50" font-family="Noto Sans JP" font-size="16" fill="#f4f1ea" text-anchor="end">1/5</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="1030" width="1920" height="50" fill="#2c2c2c"/>
+  <text x="960" y="1060" font-family="Noto Sans JP" font-size="14" fill="#f4f1ea" text-anchor="middle">Microsoft Build Japan 2024</text>
+  
+  <!-- 3カラムレイアウト -->
+  
+  <!-- カラム1: マイクロソフトのミッション -->
+  <rect x="60" y="120" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="60" y="120" width="580" height="60" fill="#b3322b"/>
+  <text x="100" y="160" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">🌏 マイクロソフトの使命</text>
+  
+  <!-- メインコンテンツ カラム1 -->
+  <text x="100" y="220" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">私たちの使命</text>
+  <line x1="100" y1="230" x2="540" y2="230" stroke="#b3322b" stroke-width="2"/>
+  <circle cx="540" cy="230" r="4" fill="#b3322b"/>
+  
+  <text x="100" y="260" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" letter-spacing="0.5">地球上のすべての人とすべての組織が、より多くのことを達成できるようにすること</text>
+  
+  <!-- ビジュアル要素: ミッション図 -->
+  <rect x="120" y="290" width="460" height="180" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" stroke-dasharray="2"/>
+  <text x="350" y="330" font-family="Noto Sans JP" font-size="24" font-weight="bold" fill="#b3322b" text-anchor="middle">One → Many</text>
+  <text x="190" y="380" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 1人の従業員から</text>
+  <text x="190" y="410" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• チームからチームへ</text>
+  <text x="190" y="440" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• パートナーから顧客へ</text>
+  <circle cx="350" cy="390" r="50" fill="none" stroke="#b3322b" stroke-width="2"/>
+  <path d="M400 390 L450 390 L430 370 M450 390 L430 410" fill="none" stroke="#b3322b" stroke-width="2"/>
+  
+  <!-- 実践ポイント -->
+  <text x="100" y="500" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">ミッションの実現</text>
+  <line x1="100" y1="510" x2="540" y2="510" stroke="#b3322b" stroke-width="2"/>
+  <circle cx="540" cy="510" r="4" fill="#b3322b"/>
+  
+  <rect x="100" y="530" width="500" height="120" fill="#f8f5f0" stroke="#b3322b" stroke-width="1"/>
+  <text x="120" y="560" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• <tspan font-weight="bold">機会の拡大</tspan>：すべての人へのテクノロジーアクセス</text>
+  <text x="120" y="590" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• <tspan font-weight="bold">信頼の獲得</tspan>：基本的権利の保護</text>
+  <text x="120" y="620" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• <tspan font-weight="bold">持続可能性の推進</tspan>：社会・経済・世界のために</text>
+  
+  <!-- データビジュアライゼーション -->
+  <text x="100" y="680" font-family="Noto Serif JP" font-size="16" fill="#2c2c2c">マイクロソフトの影響力</text>
+  
+  <rect x="120" y="700" width="220" height="40" fill="#b3322b" opacity="0.8"/>
+  <rect x="120" y="700" width="480" height="40" fill="none" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="130" y="725" font-family="Noto Sans JP" font-size="14" fill="#f4f1ea">従業員数</text>
+  <text x="430" y="725" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="end" font-weight="bold">22万人</text>
+  
+  <rect x="120" y="750" width="450" height="40" fill="#b3322b" opacity="0.8"/>
+  <rect x="120" y="750" width="480" height="40" fill="none" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="130" y="775" font-family="Noto Sans JP" font-size="14" fill="#f4f1ea">ユーザー数</text>
+  <text x="430" y="775" font-family="Noto Sans JP" font-size="14" fill="#f4f1ea" text-anchor="end" font-weight="bold">80億人</text>
+  
+  <!-- カラム2: 日本での歴史 -->
+  <rect x="670" y="120" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="670" y="120" width="580" height="60" fill="#1a5b66"/>
+  <text x="710" y="160" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">🗾 日本での47年の歴史</text>
+  
+  <!-- メインコンテンツ カラム2 -->
+  <text x="710" y="220" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">マイクロソフトと日本</text>
+  <line x1="710" y1="230" x2="1150" y2="230" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="1150" cy="230" r="4" fill="#1a5b66"/>
+  
+  <text x="710" y="260" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" letter-spacing="0.5">米国外で最初の拠点として1977年に日本進出</text>
+  
+  <!-- タイムライン -->
+  <line x1="710" y1="320" x2="1210" y2="320" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="730" cy="320" r="10" fill="#1a5b66"/>
+  <text x="730" y="350" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">1977年</text>
+  <text x="730" y="370" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">日本進出</text>
+  
+  <circle cx="850" cy="320" r="10" fill="#1a5b66"/>
+  <text x="850" y="350" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">1980年代</text>
+  <text x="850" y="370" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">クライアントサーバー時代</text>
+  
+  <circle cx="970" cy="320" r="10" fill="#1a5b66"/>
+  <text x="970" y="350" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">1990年代</text>
+  <text x="970" y="370" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">ウェブ時代</text>
+  
+  <circle cx="1090" cy="320" r="10" fill="#1a5b66"/>
+  <text x="1090" y="350" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">2010年代</text>
+  <text x="1090" y="370" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">クラウド時代</text>
+  
+  <circle cx="1210" cy="320" r="10" fill="#1a5b66"/>
+  <text x="1210" y="350" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">2020年代</text>
+  <text x="1210" y="370" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">AI時代</text>
+  
+  <!-- マイクロソフトの50周年 -->
+  <text x="710" y="430" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">創立50周年</text>
+  <line x1="710" y1="440" x2="1150" y2="440" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="1150" cy="440" r="4" fill="#1a5b66"/>
+  
+  <rect x="710" y="460" width="500" height="100" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+  <text x="730" y="490" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">2024年4月4日：マイクロソフト創立50周年</text>
+  <text x="730" y="520" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">うち<tspan font-size="24" font-weight="bold" fill="#1a5b66">47年</tspan>を日本と共に歩む</text>
+  
+  <!-- 実践事例 -->
+  <text x="710" y="600" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">日本でのプラットフォーム展開</text>
+  <line x1="710" y1="610" x2="1150" y2="610" stroke="#1a5b66" stroke-width="2"/>
+  <circle cx="1150" cy="610" r="4" fill="#1a5b66"/>
+  
+  <rect x="730" y="630" width="120" height="120" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+  <text x="790" y="690" font-family="Noto Serif JP" font-size="14" fill="#2c2c2c" text-anchor="middle">クライアント</text>
+  <text x="790" y="710" font-family="Noto Serif JP" font-size="14" fill="#2c2c2c" text-anchor="middle">サーバー</text>
+  
+  <rect x="860" y="630" width="120" height="120" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+  <text x="920" y="690" font-family="Noto Serif JP" font-size="14" fill="#2c2c2c" text-anchor="middle">ウェブ</text>
+  <text x="920" y="710" font-family="Noto Serif JP" font-size="14" fill="#2c2c2c" text-anchor="middle">プラットフォーム</text>
+  
+  <rect x="990" y="630" width="120" height="120" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+  <text x="1050" y="690" font-family="Noto Serif JP" font-size="14" fill="#2c2c2c" text-anchor="middle">クラウド</text>
+  <text x="1050" y="710" font-family="Noto Serif JP" font-size="14" fill="#2c2c2c" text-anchor="middle">コンピューティング</text>
+  
+  <rect x="860" y="760" width="120" height="120" fill="#1a5b66" stroke="#1a5b66" stroke-width="1"/>
+  <text x="920" y="820" font-family="Noto Serif JP" font-size="16" fill="#f4f1ea" text-anchor="middle">AI</text>
+  <text x="920" y="840" font-family="Noto Serif JP" font-size="16" fill="#f4f1ea" text-anchor="middle">プラットフォーム</text>
+  
+  <!-- カラム3: AIの時代における新たな可能性 -->
+  <rect x="1280" y="120" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+  <rect x="1280" y="120" width="580" height="60" fill="#653a5e"/>
+  <text x="1320" y="160" font-family="Noto Serif JP" font-size="24" fill="#f4f1ea" letter-spacing="2">⚙️ AI時代の新たな可能性</text>
+  
+  <!-- メインコンテンツ カラム3 -->
+  <text x="1320" y="220" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">AIの時代の到来</text>
+  <line x1="1320" y1="230" x2="1760" y2="230" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="1760" cy="230" r="4" fill="#653a5e"/>
+  
+  <text x="1320" y="260" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" letter-spacing="0.5">新しいプラットフォーム革命の始まり</text>
+  
+  <!-- AIの進化の図 -->
+  <rect x="1340" y="290" width="460" height="180" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+  <text x="1570" y="320" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" text-anchor="middle">AIの急速な進化</text>
+  
+  <rect x="1380" y="340" width="380" height="50" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+  <text x="1400" y="370" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">モデルトレーニング</text>
+  <text x="1720" y="370" font-family="Noto Sans JP" font-size="14" fill="#653a5e" text-anchor="end" font-weight="bold">6ヶ月ごとに2倍の能力</text>
+  
+  <rect x="1380" y="400" width="380" height="50" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+  <text x="1400" y="430" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">計算時間スケーリング</text>
+  <text x="1720" y="430" font-family="Noto Sans JP" font-size="14" fill="#653a5e" text-anchor="end" font-weight="bold">3ヶ月ごとに2倍の能力</text>
+  
+  <!-- AIプラットフォーム -->
+  <text x="1320" y="500" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">マイクロソフトの3つのAIプラットフォーム</text>
+  <line x1="1320" y1="510" x2="1760" y2="510" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="1760" cy="510" r="4" fill="#653a5e"/>
+  
+  <rect x="1340" y="530" width="460" height="200" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+  
+  <circle cx="1370" cy="560" r="15" fill="#653a5e"/>
+  <text x="1370" cy="560" font-family="Noto Sans JP" font-size="14" fill="#f4f1ea" text-anchor="middle">1</text>
+  <text x="1400" y="565" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c"><tspan font-weight="bold">Co-Pilot</tspan>: AIのユーザーインターフェース</text>
+  
+  <circle cx="1370" cy="610" r="15" fill="#653a5e"/>
+  <text x="1370" cy="610" font-family="Noto Sans JP" font-size="14" fill="#f4f1ea" text-anchor="middle">2</text>
+  <text x="1400" y="615" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c"><tspan font-weight="bold">Azure AI Stack</tspan>: AIの開発基盤</text>
+  
+  <circle cx="1370" cy="660" r="15" fill="#653a5e"/>
+  <text x="1370" cy="660" font-family="Noto Sans JP" font-size="14" fill="#f4f1ea" text-anchor="middle">3</text>
+  <text x="1400" y="665" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c"><tspan font-weight="bold">Co-Pilot デバイス</tspan>: AIのエッジコンピューティング</text>
+  
+  <text x="1350" y="700" font-family="Noto Sans JP" font-size="14" fill="#653a5e" font-style="italic">「プラットフォームを作り、その上で他の人々が</text>
+  <text x="1350" y="720" font-family="Noto Sans JP" font-size="14" fill="#653a5e" font-style="italic">より多くのテクノロジーを創造できるようにする」</text>
+  
+  <!-- 実践ポイント -->
+  <text x="1320" y="770" font-family="Noto Serif JP" font-size="18" fill="#2c2c2c" letter-spacing="1">AIの効率式</text>
+  <line x1="1320" y1="780" x2="1760" y2="780" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="1760" cy="780" r="4" fill="#653a5e"/>
+  
+  <rect x="1340" y="800" width="460" height="130" fill="#653a5e" opacity="0.1" stroke="#653a5e" stroke-width="2"/>
+  <text x="1570" y="840" font-family="Noto Serif JP" font-size="20" fill="#653a5e" text-anchor="middle" font-weight="bold">トークン/ドル/ワット</text>
+  <text x="1570" y="880" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" text-anchor="middle">価格の半減：3ヶ月ごと</text>
+  <text x="1570" y="910" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" text-anchor="middle">需要の増加：ジェヴォンズのパラドックス</text>
+</svg> 

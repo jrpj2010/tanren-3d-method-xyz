@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TANREN 3Dメソッド：AI時代の立体思考</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding: 30px 50px 15px;
+            z-index: 10;
+        }
+        .title {
+            font-size: 44px;
+            font-weight: 900;
+            background: linear-gradient(45deg, #63b3ed, #4fd1c5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 22px;
+            font-weight: 500;
+            color: #e2e8f0;
+        }
+        .content {
+            flex-grow: 1;
+            display: flex;
+            position: relative;
+            z-index: 10;
+        }
+        .left-panel {
+            width: 28%;
+            padding: 0 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        .axis-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .axis-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .axis-title {
+            font-size: 22px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .x-axis .axis-title {
+            color: #63b3ed;
+        }
+        .y-axis .axis-title {
+            color: #4fd1c5;
+        }
+        .z-axis .axis-title {
+            color: #f687b3;
+        }
+        .axis-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .axis-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .axis-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        .axis-icon i {
+            font-size: 16px;
+        }
+        .x-axis .axis-icon {
+            background: rgba(99, 179, 237, 0.2);
+            color: #63b3ed;
+        }
+        .y-axis .axis-icon {
+            background: rgba(79, 209, 197, 0.2);
+            color: #4fd1c5;
+        }
+        .z-axis .axis-icon {
+            background: rgba(246, 135, 179, 0.2);
+            color: #f687b3;
+        }
+        .axis-label {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .axis-desc {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-left: 42px;
+        }
+        .right-panel {
+            width: 72%;
+            position: relative;
+        }
+        #canvas-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .center-text {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(26, 32, 44, 0.8);
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            z-index: 20;
+        }
+        .center-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .center-desc {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .highlight {
+            font-weight: 700;
+            color: #fbd38d;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="header">
+            <h1 class="title">TANREN 3Dメソッド：AI時代の立体思考</h1>
+            <p class="subtitle">3つの軸の統合によって構築される、多次元的な思考フレームワーク</p>
+        </div>
+        
+        <div class="content">
+            <div class="left-panel">
+                <div class="axis-card x-axis">
+                    <div class="axis-title">
+                        <i class="fas fa-arrows-alt-h"></i> X軸：思考の深度と構造
+                    </div>
+                    <div class="axis-content">
+                        <div class="axis-item">
+                            <div class="axis-icon"><i class="fas fa-search-minus"></i></div>
+                            <div class="axis-label">超抽象化</div>
+                        </div>
+                        <div class="axis-desc">本質を見抜く力</div>
+                        
+                        <div class="axis-item">
+                            <div class="axis-icon"><i class="fas fa-search-plus"></i></div>
+                            <div class="axis-label">超具体化</div>
+                        </div>
+                        <div class="axis-desc">実行に落とし込む力</div>
+                        
+                        <div class="axis-item">
+                            <div class="axis-icon"><i class="fas fa-sitemap"></i></div>
+                            <div class="axis-label">超構造化</div>
+                        </div>
+                        <div class="axis-desc">論理的に整理する力</div>
+                    </div>
+                </div>
+                
+                <div class="axis-card y-axis">
+                    <div class="axis-title">
+                        <i class="fas fa-history"></i> Y軸：時間軸の視座
+                    </div>
+                    <div class="axis-content">
+                        <div class="axis-item">
+                            <div class="axis-icon"><i class="fas fa-history"></i></div>
+                            <div class="axis-label">過去</div>
+                        </div>
+                        <div class="axis-desc">教訓と成り立ちの理解</div>
+                        
+                        <div class="axis-item">
+                            <div class="axis-icon"><i class="fas fa-bullseye"></i></div>
+                            <div class="axis-label">現在</div>
+                        </div>
+                        <div class="axis-desc">最善手の見極め</div>
+                        
+                        <div class="axis-item">
+                            <div class="axis-icon"><i class="fas fa-rocket"></i></div>
+                            <div class="axis-label">未来</div>
+                        </div>
+                        <div class="axis-desc">変化を機会に変える力</div>
+                    </div>
+                </div>
+                
+                <div class="axis-card z-axis">
+                    <div class="axis-title">
+                        <i class="fas fa-layer-group"></i> Z軸：習熟度とAI活用
+                    </div>
+                    <div class="axis-content">
+                        <div class="axis-item">
+                            <div class="axis-icon"><i class="fas fa-walking"></i></div>
+                            <div class="axis-label">入門レベル</div>
+                        </div>
+                        <div class="axis-desc">基本概念の習得</div>
+                        
+                        <div class="axis-item">
+                            <div class="axis-icon"><i class="fas fa-running"></i></div>
+                            <div class="axis-label">応用レベル</div>
+                        </div>
+                        <div class="axis-desc">実践的なAI活用</div>
+                        
+                        <div class="axis-item">
+                            <div class="axis-icon"><i class="fas fa-shuttle-van"></i></div>
+                            <div class="axis-label">熟達レベル</div>
+                        </div>
+                        <div class="axis-desc">AIと共に創造する段階</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div id="canvas-container"></div>
+                
+                <div class="center-text">
+                    <div class="center-title">
+                        <i class="fas fa-cube"></i> 立体思考の力
+                    </div>
+                    <div class="center-desc">
+                        <p>3つの軸を組み合わせることで、<span class="highlight">複雑な問題</span>も多角的に分析。</p>
+                        <p>どのような状況でも、<span class="highlight">AIと共に最適解</span>を導き出せる<span class="highlight">立体的思考力</span>が身につきます。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 3D visualization of TANREN 3D Method
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        renderer.setClearColor(0x000000, 0);
+        container.appendChild(renderer.domElement);
+
+        // Create the 3D cube grid
+        const gridSize = 3;
+        const spacing = 1.2;
+        const cubes = [];
+        
+        // X axis color - blue
+        const xAxisColor = 0x63b3ed;
+        // Y axis color - teal
+        const yAxisColor = 0x4fd1c5;
+        // Z axis color - pink
+        const zAxisColor = 0xf687b3;
+        
+        // Create the grid of cubes
+        for (let x = 0; x < gridSize; x++) {
+            for (let y = 0; y < gridSize; y++) {
+                for (let z = 0; z < gridSize; z++) {
+                    // More prominent cubes at key positions
+                    let isKeyPosition = (
+                        (x === 0 && y === 0 && z === 0) || 
+                        (x === gridSize-1 && y === 0 && z === 0) || 
+                        (x === 0 && y === gridSize-1 && z === 0) || 
+                        (x === 0 && y === 0 && z === gridSize-1) ||
+                        (x === gridSize-1 && y === gridSize-1 && z === gridSize-1)
+                    );
+                    
+                    const size = isKeyPosition ? 0.4 : 0.2;
+                    const opacity = isKeyPosition ? 0.9 : 0.5;
+                    
+                    // Calculate position
+                    const xPos = (x - (gridSize-1)/2) * spacing;
+                    const yPos = (y - (gridSize-1)/2) * spacing;
+                    const zPos = (z - (gridSize-1)/2) * spacing;
+                    
+                    // Create cube
+                    const geometry = new THREE.BoxGeometry(size, size, size);
+                    const material = new THREE.MeshPhongMaterial({
+                        color: 0xffffff,
+                        transparent: true,
+                        opacity: opacity,
+                        shininess: 100
+                    });
+                    
+                    const cube = new THREE.Mesh(geometry, material);
+                    cube.position.set(xPos, yPos, zPos);
+                    scene.add(cube);
+                    cubes.push(cube);
+                }
+            }
+        }
+        
+        // Create axis lines
+        const axisLength = (gridSize * spacing) * 0.8;
+        const axisRadius = 0.03;
+        
+        // X Axis (Blue)
+        const xAxisGeometry = new THREE.CylinderGeometry(axisRadius, axisRadius, axisLength, 32);
+        const xAxisMaterial = new THREE.MeshBasicMaterial({ color: xAxisColor });
+        const xAxis = new THREE.Mesh(xAxisGeometry, xAxisMaterial);
+        xAxis.rotation.z = Math.PI / 2;
+        scene.add(xAxis);
+        
+        // Y Axis (Teal)
+        const yAxisGeometry = new THREE.CylinderGeometry(axisRadius, axisRadius, axisLength, 32);
+        const yAxisMaterial = new THREE.MeshBasicMaterial({ color: yAxisColor });
+        const yAxis = new THREE.Mesh(yAxisGeometry, yAxisMaterial);
+        scene.add(yAxis);
+        
+        // Z Axis (Pink)
+        const zAxisGeometry = new THREE.CylinderGeometry(axisRadius, axisRadius, axisLength, 32);
+        const zAxisMaterial = new THREE.MeshBasicMaterial({ color: zAxisColor });
+        const zAxis = new THREE.Mesh(zAxisGeometry, zAxisMaterial);
+        zAxis.rotation.x = Math.PI / 2;
+        scene.add(zAxis);
+        
+        // Add axis labels
+        const createAxisLabel = (text, position, color) => {
+            const sphereGeometry = new THREE.SphereGeometry(0.15, 32, 32);
+            const sphereMaterial = new THREE.MeshBasicMaterial({ color: color });
+            const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+            sphere.position.copy(position);
+            scene.add(sphere);
+        };
+        
+        // Position the axis labels at the ends of the axes
+        const axisOffset = axisLength / 2 + 0.2;
+        createAxisLabel("X", new THREE.Vector3(axisOffset, 0, 0), xAxisColor);
+        createAxisLabel("Y", new THREE.Vector3(0, axisOffset, 0), yAxisColor);
+        createAxisLabel("Z", new THREE.Vector3(0, 0, axisOffset), zAxisColor);
+        
+        // Add lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+        
+        const pointLight1 = new THREE.PointLight(0xffffff, 1);
+        pointLight1.position.set(5, 3, 5);
+        scene.add(pointLight1);
+        
+        const pointLight2 = new THREE.PointLight(0xffffff, 0.8);
+        pointLight2.position.set(-5, -3, -5);
+        scene.add(pointLight2);
+        
+        // Position camera
+        camera.position.set(4, 4, 4);
+        camera.lookAt(0, 0, 0);
+        
+        // Animation
+        let frame = 0;
+        function animate() {
+            requestAnimationFrame(animate);
+            frame += 0.005;
+            
+            // Rotate all cubes slightly for dynamic effect
+            cubes.forEach((cube, i) => {
+                cube.rotation.x = Math.sin(frame + i * 0.1) * 0.2;
+                cube.rotation.y = Math.cos(frame + i * 0.1) * 0.2;
+            });
+            
+            // Slowly rotate the camera around the scene
+            const radius = 5;
+            camera.position.x = Math.cos(frame * 0.3) * radius;
+            camera.position.z = Math.sin(frame * 0.3) * radius;
+            camera.position.y = Math.sin(frame * 0.1) * 1.5 + 3;
+            camera.lookAt(0, 0, 0);
+            
+            renderer.render(scene, camera);
+        }
+        
+        animate();
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z軸：レベル感の把握</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .title {
+            background: linear-gradient(90deg, #c084fc 0%, #a855f7 50%, #7e22ce 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(168, 85, 247, 0.3);
+        }
+        .subtitle {
+            color: #d8b4fe;
+        }
+        .level-card {
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+        }
+        .level-card:hover {
+            transform: translateX(5px);
+        }
+        .level-05 {
+            border-color: #d8b4fe;
+        }
+        .level-1 {
+            border-color: #c084fc;
+        }
+        .level-2 {
+            border-color: #a855f7;
+        }
+        .level-3 {
+            border-color: #7e22ce;
+        }
+        .level-badge {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .point-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .point-icon {
+            margin-right: 12px;
+            color: #a855f7;
+        }
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+        .progress-container {
+            position: relative;
+            height: 8px;
+            background: rgba(168, 85, 247, 0.2);
+            border-radius: 4px;
+            width: 100%;
+            margin: 2px 0 10px 0;
+        }
+        .progress-bar {
+            position: absolute;
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #d8b4fe, #7e22ce);
+            width: 0;
+            transition: width 1s ease-in-out;
+        }
+        .level-point {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            border: 2px solid #1e293b;
+        }
+        .ai-dialog-example {
+            font-family: monospace;
+            font-size: 12px;
+            padding: 6px;
+            border-radius: 6px;
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-10 flex flex-col">
+        <!-- 背景グリッド -->
+        <div class="grid-bg"></div>
+        
+        <!-- ヘッダー -->
+        <div class="mb-4 z-10">
+            <h1 class="title text-4xl font-bold mb-1">Z軸：レベル感の把握</h1>
+            <h2 class="subtitle text-xl font-semibold">現在地から頂上へ</h2>
+        </div>
+        
+        <!-- レベル進行のビジュアル -->
+        <div class="relative z-10 mb-6">
+            <!-- プログレスバー -->
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 75%;"></div>
+                <!-- レベルポイント -->
+                <div class="level-point bg-purple-200" style="left: 15%;"></div>
+                <div class="level-point bg-purple-300" style="left: 35%;"></div>
+                <div class="level-point bg-purple-500" style="left: 60%;"></div>
+                <div class="level-point bg-purple-700" style="left: 85%;"></div>
+            </div>
+            
+            <!-- レベルラベル -->
+            <div class="flex justify-between text-xs text-purple-300 font-medium">
+                <div style="width: 15%; text-align: center; padding-left: 0;">レベル 0.5<br>入門</div>
+                <div style="width: 20%; text-align: center;">レベル 1<br>初級</div>
+                <div style="width: 25%; text-align: center;">レベル 2<br>中級</div>
+                <div style="width: 25%; text-align: center;">レベル 3<br>上級</div>
+            </div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="flex flex-row space-x-4 z-10 flex-1">
+            <!-- 左側：4つのレベル詳細 -->
+            <div class="w-7/12 space-y-2">
+                <!-- レベル 0.5：入門 -->
+                <div class="level-card level-05 pl-3 bg-purple-900 bg-opacity-20 rounded-r-lg p-2 flex items-start">
+                    <div class="level-badge bg-opacity-30 bg-purple-200 text-white">
+                        0.5
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-purple-200 flex items-center">
+                            <span class="mr-2">入門 (Beginner)</span>
+                            <i class="fas fa-baby text-xs"></i>
+                        </h3>
+                        <p class="text-gray-300 text-xs"><span class="font-bold">状態：</span>初めて触れる段階。基本を学び始めたばかり。</p>
+                        <p class="text-gray-300 text-xs"><span class="font-bold">思考：</span>「これは何？」「どうやって使うの？」</p>
+                    </div>
+                </div>
+                
+                <!-- レベル 1：初級 -->
+                <div class="level-card level-1 pl-3 bg-purple-900 bg-opacity-20 rounded-r-lg p-2 flex items-start">
+                    <div class="level-badge bg-opacity-30 bg-purple-300 text-white">
+                        1
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-purple-300 flex items-center">
+                            <span class="mr-2">初級 (Novice)</span>
+                            <i class="fas fa-child text-xs"></i>
+                        </h3>
+                        <p class="text-gray-300 text-xs"><span class="font-bold">状態：</span>基本は理解。簡単なタスクを遂行できる。</p>
+                        <p class="text-gray-300 text-xs"><span class="font-bold">思考：</span>「もっと効率的にできる？」「正確性」</p>
+                    </div>
+                </div>
+                
+                <!-- レベル 2：中級 -->
+                <div class="level-card level-2 pl-3 bg-purple-900 bg-opacity-20 rounded-r-lg p-2 flex items-start">
+                    <div class="level-badge bg-opacity-30 bg-purple-500 text-white">
+                        2
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-purple-500 flex items-center">
+                            <span class="mr-2">中級 (Intermediate)</span>
+                            <i class="fas fa-user text-xs"></i>
+                        </h3>
+                        <p class="text-gray-300 text-xs"><span class="font-bold">状態：</span>応用力あり。複雑な課題に取り組める。</p>
+                        <p class="text-gray-300 text-xs"><span class="font-bold">思考：</span>「課題の本質は？」「独自価値を出すには？」</p>
+                    </div>
+                </div>
+                
+                <!-- レベル 3：上級 -->
+                <div class="level-card level-3 pl-3 bg-purple-900 bg-opacity-20 rounded-r-lg p-2 flex items-start">
+                    <div class="level-badge bg-opacity-30 bg-purple-700 text-white">
+                        3
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold text-purple-700 flex items-center">
+                            <span class="mr-2">上級 (Advanced/Expert)</span>
+                            <i class="fas fa-crown text-xs"></i>
+                        </h3>
+                        <p class="text-gray-300 text-xs"><span class="font-bold">状態：</span>深い専門性と洞察力。新たな価値を創造。</p>
+                        <p class="text-gray-300 text-xs"><span class="font-bold">思考：</span>「未来はどうなる？」「新しい価値創造」</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右側：レベル感の意義とAI活用 -->
+            <div class="w-5/12">
+                <!-- レベル感の把握の意義 -->
+                <div class="bg-purple-900 bg-opacity-20 p-3 rounded-lg mb-3">
+                    <h3 class="text-lg font-bold text-purple-400 mb-2">
+                        <i class="fas fa-mountain mr-2"></i>レベル感把握の意義
+                    </h3>
+                    <ul class="point-list text-gray-300 text-xs">
+                        <li>
+                            <i class="fas fa-bullseye point-icon"></i>
+                            <span>現実的な目標設定と期待値調整</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-tachometer-alt point-icon"></i>
+                            <span>学習効率の最大化</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-comments point-icon"></i>
+                            <span>適切なコミュニケーション戦略</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-line point-icon"></i>
+                            <span>段階的な成長の可視化とモチベーション維持</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- AIとのレベルに応じた対話例 -->
+                <div class="bg-purple-900 bg-opacity-20 p-3 rounded-lg">
+                    <h3 class="text-lg font-bold text-purple-400 mb-2">
+                        <i class="fas fa-robot mr-2"></i>AIとのレベル別対話
+                    </h3>
+                    
+                    <!-- 初級向け対話例 -->
+                    <div class="ai-dialog-example text-purple-200">
+                        <strong>Lv1向け：</strong> 「私はPython初心者です。このエラーメッセージの意味を、専門用語を避けて説明してください。」
+                    </div>
+                    
+                    <!-- 上級向け対話例 -->
+                    <div class="ai-dialog-example text-purple-700">
+                        <strong>Lv3向け：</strong> 「最新の強化学習アルゴリズムについて、学術論文レベルでの深い考察を提供してください。」
+                    </div>
+                    
+                    <p class="text-xs text-gray-300 mt-2">
+                        <i class="fas fa-lightbulb text-yellow-400 mr-1"></i>
+                        AIに自分のレベルを伝え、相手のレベルを想定した指示を出すことで、より適切な応答を引き出せます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // ページ読み込み時にプログレスバーをアニメーション
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.querySelector('.progress-bar');
+            progressBar.style.width = "0%";
+            setTimeout(function() {
+                progressBar.style.width = "75%";
+            }, 300);
+        });
+    </script>
+</body>
+</html>

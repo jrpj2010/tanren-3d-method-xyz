@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ビジネス・エージェント・オーケストレーター構想とは - ビジネス・エージェント・オーケストレーター構想</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --black: #2c2c2c;
+            --cream: #f4f1ea;
+            --red: #b3322b;
+            --blue: #1a5b66;
+            --purple: #653a5e;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--cream);
+            color: var(--black);
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .slide-title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            color: var(--black);
+            position: relative;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        .slide-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--red);
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .dot-red {
+            background-color: var(--red);
+        }
+        .dot-blue {
+            background-color: var(--blue);
+        }
+        .dot-purple {
+            background-color: var(--purple);
+        }
+        .definition-box {
+            border: 2px solid var(--black);
+            background-color: white;
+            padding: 20px;
+            position: relative;
+        }
+        .definition-box::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--black);
+            z-index: -1;
+        }
+        .component-box {
+            border-left: 4px solid;
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+        .red-border {
+            border-color: var(--red);
+        }
+        .blue-border {
+            border-color: var(--blue);
+        }
+        .purple-border {
+            border-color: var(--purple);
+        }
+        .red-accent {
+            color: var(--red);
+        }
+        .blue-accent {
+            color: var(--blue);
+        }
+        .purple-accent {
+            color: var(--purple);
+        }
+        .orchestra-diagram {
+            position: relative;
+            margin: 30px auto;
+            width: 90%;
+        }
+        .company {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            text-align: right;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+        .conductor-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: var(--red);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: 'Noto Serif JP', serif;
+            position: relative;
+            z-index: 2;
+        }
+        .section-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: 'Noto Serif JP', serif;
+            position: absolute;
+            font-size: 14px;
+        }
+        .connection-line {
+            position: absolute;
+            background-color: var(--black);
+            height: 2px;
+            transform-origin: 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h1 class="slide-title text-4xl mb-6">未来の会社像：「ビジネス・エージェント・オーケストレーター」とは？</h1>
+        
+        <div class="flex justify-center items-center mb-4">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-purple"></span>
+        </div>
+        
+        <div class="definition-box mb-8">
+            <p class="text-xl font-bold mb-2">「ビジネス・エージェント・オーケストレーター（BAO）」構想の定義：</p>
+            <p class="text-lg">社長（<span class="red-accent font-bold">人間CEO</span>）が指揮者（オーケストレーター）となり、<br>
+            <span class="blue-accent font-bold">AIの専門家集団（エージェント）</span>という名の楽団を率いて会社を経営するシステム</p>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-6 mb-8">
+            <div class="component-box red-border">
+                <h3 class="font-bold text-xl mb-2"><i class="fas fa-user-tie mr-2"></i>人間CEO（指揮者）</h3>
+                <ul class="text-sm list-disc pl-5">
+                    <li>会社のビジョンを描く</li>
+                    <li>全体戦略を決定する</li>
+                    <li>最終的な意思決定を行う</li>
+                    <li>AIエージェントチームを統率する</li>
+                    <li>人間にしかできない大局観・倫理観・共感に基づく判断を担う</li>
+                </ul>
+            </div>
+            
+            <div class="component-box blue-border">
+                <h3 class="font-bold text-xl mb-2"><i class="fas fa-robot mr-2"></i>AI CXO（首席奏者たち）</h3>
+                <ul class="text-sm list-disc pl-5">
+                    <li>AI CMO（マーケティング責任者）</li>
+                    <li>AI CSO（営業責任者）</li>
+                    <li>AI CPO（製品責任者）</li>
+                    <li>AI CHRO（人事責任者）</li>
+                    <li>AI CFO（財務責任者）</li>
+                    <li>AI CSupO（サポート責任者）</li>
+                    <li>など、専門分野ごとの責任者</li>
+                </ul>
+            </div>
+            
+            <div class="component-box purple-border">
+                <h3 class="font-bold text-xl mb-2"><i class="fas fa-cogs mr-2"></i>部下AIエージェント（楽器の奏者たち）</h3>
+                <ul class="text-sm list-disc pl-5">
+                    <li>各AI CXOの指揮下で具体的タスクを実行</li>
+                    <li>SNS投稿作成AI</li>
+                    <li>広告クリエイティブ生成AI</li>
+                    <li>SEO分析AI</li>
+                    <li>顧客対応AI</li>
+                    <li>など、特定業務に特化したAI</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="orchestra-diagram">
+            <div class="flex justify-center mb-6">
+                <div class="conductor-circle">
+                    <i class="fas fa-user-tie text-2xl"></i>
+                    <div class="font-bold mt-1">人間CEO</div>
+                    <div class="text-xs">指揮者</div>
+                </div>
+            </div>
+            
+            <div class="relative h-48">
+                <!-- AI CMO -->
+                <div class="section-circle" style="top: 0; left: 10%; background-color: var(--red);">
+                    <i class="fas fa-bullhorn text-lg"></i>
+                    <div class="font-bold">AI CMO</div>
+                </div>
+                
+                <!-- AI CSO -->
+                <div class="section-circle" style="top: 0; left: 30%; background-color: var(--blue);">
+                    <i class="fas fa-handshake text-lg"></i>
+                    <div class="font-bold">AI CSO</div>
+                </div>
+                
+                <!-- AI CPO -->
+                <div class="section-circle" style="top: 0; left: 50%; background-color: var(--purple);">
+                    <i class="fas fa-box-open text-lg"></i>
+                    <div class="font-bold">AI CPO</div>
+                </div>
+                
+                <!-- AI CFO -->
+                <div class="section-circle" style="top: 0; left: 70%; background-color: var(--red);">
+                    <i class="fas fa-chart-line text-lg"></i>
+                    <div class="font-bold">AI CFO</div>
+                </div>
+                
+                <!-- AI CSupO -->
+                <div class="section-circle" style="top: 0; left: 90%; background-color: var(--blue);">
+                    <i class="fas fa-headset text-lg"></i>
+                    <div class="font-bold">AI CSupO</div>
+                </div>
+                
+                <!-- Connection lines to AI subordinates -->
+                <div class="flex justify-between absolute bottom-0 w-full px-10">
+                    <div class="text-center">
+                        <i class="fas fa-robot text-xl mb-1"></i><br>
+                        <span class="text-xs">SNS<br>投稿AI</span>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-robot text-xl mb-1"></i><br>
+                        <span class="text-xs">契約<br>管理AI</span>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-robot text-xl mb-1"></i><br>
+                        <span class="text-xs">製品<br>分析AI</span>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-robot text-xl mb-1"></i><br>
+                        <span class="text-xs">予算<br>管理AI</span>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-robot text-xl mb-1"></i><br>
+                        <span class="text-xs">問合せ<br>対応AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white p-4 border-2 border-black mx-auto max-w-4xl">
+            <p class="text-center font-bold text-lg mb-2">重要なのは「連携」と「学習」</p>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="mb-1"><span class="red-accent font-bold">社内ナレッジハブ</span>でデータ・分析結果・成功事例などをリアルタイム共有</p>
+                    <p class="text-sm">AIエージェント同士が常に情報交換し、互いの知見を活用</p>
+                </div>
+                <div>
+                    <p class="mb-1">会社全体が<span class="blue-accent font-bold">一つの生命体</span>のように進化</p>
+                    <p class="text-sm">すべての業務内容のトライデータが自動蓄積・自動学習される</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="company">
+            <p>TANREN株式会社</p>
+        </div>
+        
+        <div class="page-number">3 / 12</div>
+    </div>
+</body>
+</html>

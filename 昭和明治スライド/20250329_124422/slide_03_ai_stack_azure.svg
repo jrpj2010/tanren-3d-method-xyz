@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea" />
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c" />
+  <text x="50" y="65" font-family="'Noto Serif JP'" font-size="36" fill="#f4f1ea" letter-spacing="2">第二の戦略：AIスタックとAzure</text>
+  <text x="1700" y="65" font-family="'Noto Sans JP'" font-size="24" fill="#f4f1ea">2025.03.29</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="1030" width="1920" height="50" fill="#2c2c2c" />
+  <text x="50" y="1065" font-family="'Noto Sans JP'" font-size="18" fill="#f4f1ea">明治・昭和モダンテイスト - Microsoft Build Japan 2025</text>
+  <text x="1700" y="1065" font-family="'Noto Sans JP'" font-size="18" fill="#f4f1ea">03/05</text>
+  
+  <!-- メイン3カラムコンテンツ -->
+  <!-- カラム1: Azureインフラストラクチャ -->
+  <rect x="50" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="50" y="130" width="580" height="60" fill="#b3322b" />
+  <text x="70" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">🌐 世界のコンピューターとしてのAzure</text>
+  
+  <!-- カラム1コンテンツ -->
+  <text x="70" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">グローバル規模のクラウドインフラストラクチャ</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="70" y1="250" x2="580" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="330" cy="250" r="5" fill="#b3322b" />
+  
+  <!-- Azureの規模 -->
+  <text x="70" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ グローバルな展開</text>
+  <text x="70" y="330" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" line-height="1.6">世界60以上のリージョン、300以上のデータセンターからなるAzureは、最も包括的なクラウドインフラストラクチャを提供しています。</text>
+  
+  <!-- 日本のリージョン -->
+  <text x="70" y="390" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ 日本における展開強化</text>
+  <rect x="70" y="410" width="540" height="160" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" />
+  
+  <!-- 地図表現 -->
+  <rect x="90" y="430" width="500" height="120" fill="#f7f4ee" stroke="#b3322b" stroke-width="1" stroke-dasharray="2,2" />
+  
+  <!-- 簡易日本地図 -->
+  <path d="M 190 470 C 200 450, 220 430, 240 450 C 260 470, 270 490, 290 480 C 310 470, 320 450, 330 460 C 340 470, 360 480, 380 470 C 400 460, 420 450, 430 470" fill="none" stroke="#2c2c2c" stroke-width="2" />
+  
+  <!-- 東日本リージョン -->
+  <circle cx="390" cy="465" r="15" fill="#f4f1ea" stroke="#b3322b" stroke-width="2" />
+  <text x="390" y="470" font-family="'Noto Sans JP'" font-size="10" fill="#2c2c2c" text-anchor="middle">東日本</text>
+  
+  <!-- 西日本リージョン -->
+  <circle cx="190" cy="465" r="15" fill="#f4f1ea" stroke="#b3322b" stroke-width="2" />
+  <text x="190" y="470" font-family="'Noto Sans JP'" font-size="10" fill="#2c2c2c" text-anchor="middle">西日本</text>
+  
+  <!-- 拡張情報 -->
+  <text x="90" y="530" font-family="'Noto Sans JP'" font-weight="bold" font-size="14" fill="#b3322b">新発表: 東日本・西日本両リージョンの拡張</text>
+  <text x="90" y="560" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c">最新のHPC基盤とNVIDIA GPUでAI処理能力を強化</text>
+  
+  <!-- システムアプローチ -->
+  <text x="70" y="610" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ システムレベルの最適化アプローチ</text>
+  <rect x="70" y="630" width="540" height="170" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" />
+  
+  <!-- 階層イラスト -->
+  <rect x="90" y="650" width="500" height="40" fill="#f7f4ee" stroke="#b3322b" stroke-width="1" />
+  <text x="340" y="675" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" text-anchor="middle">データセンター設計</text>
+  
+  <rect x="90" y="695" width="500" height="40" fill="#f7f4ee" stroke="#b3322b" stroke-width="1" />
+  <text x="340" y="720" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" text-anchor="middle">シリコン・ハードウェア</text>
+  
+  <rect x="90" y="740" width="500" height="40" fill="#f7f4ee" stroke="#b3322b" stroke-width="1" />
+  <text x="340" y="765" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" text-anchor="middle">システムソフトウェア（計算・ストレージ・ネットワーク）</text>
+  
+  <!-- カラム2: データと基盤 -->
+  <rect x="670" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="670" y="130" width="580" height="60" fill="#1a5b66" />
+  <text x="690" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">📊 データとAI基盤</text>
+  
+  <!-- カラム2コンテンツ -->
+  <text x="690" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">インテリジェンスモデル連携のためのデータ最適化</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="690" y1="250" x2="1200" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="950" cy="250" r="5" fill="#1a5b66" />
+  
+  <!-- データの重要性 -->
+  <text x="690" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ データとAIの統合的アプローチ</text>
+  <text x="690" y="330" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" line-height="1.6">すべてのデータをインテリジェンスインフラと連携させることで、トレーニング、ファインチューニング、グラウンディングを最適化します。</text>
+  
+  <!-- データベース対応 -->
+  <rect x="690" y="380" width="540" height="240" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" />
+  <text x="710" y="410" font-family="'Noto Serif JP'" font-size="18" fill="#1a5b66">クラウドネイティブデータベースの最適化</text>
+  
+  <!-- データベース図 -->
+  <rect x="710" y="430" width="500" height="170" fill="none" stroke="#1a5b66" stroke-width="1" stroke-dasharray="5,5" />
+  
+  <!-- Microsoft DB -->
+  <rect x="730" y="450" width="160" height="40" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5" />
+  <text x="810" y="475" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">Cosmos DB</text>
+  
+  <rect x="730" y="500" width="160" height="40" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5" />
+  <text x="810" y="525" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">Azure SQL</text>
+  
+  <rect x="730" y="550" width="160" height="40" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5" />
+  <text x="810" y="575" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">Azure PostgreSQL</text>
+  
+  <!-- パートナー DB -->
+  <rect x="930" y="450" width="160" height="40" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5" />
+  <text x="1010" y="475" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">Databricks</text>
+  
+  <rect x="930" y="500" width="160" height="40" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5" />
+  <text x="1010" y="525" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">Oracle</text>
+  
+  <rect x="930" y="550" width="160" height="40" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5" />
+  <text x="1010" y="575" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">Snowflake</text>
+  
+  <!-- 中央のLLM連携 -->
+  <circle cx="860" cy="500" r="30" fill="#f7f4ee" stroke="#1a5b66" stroke-width="2" />
+  <text x="860" y="505" font-family="'Noto Sans JP'" font-size="12" fill="#2c2c2c" text-anchor="middle">LLM連携</text>
+  
+  <!-- 実践ポイント -->
+  <rect x="690" y="650" width="540" height="120" fill="#f7f4ee" stroke="#1a5b66" stroke-width="2" rx="5" />
+  <text x="710" y="680" font-family="'Noto Serif JP'" font-size="20" fill="#1a5b66">■ 実践：最適化の重要性</text>
+  <text x="710" y="720" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• ハードウェア: <tspan font-weight="bold">2倍</tspan> の性能向上</text>
+  <text x="710" y="750" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• ソフトウェア: <tspan font-weight="bold">10〜100倍</tspan> の最適化実現</text>
+  
+  <!-- カラム3: アプリケーション開発環境 -->
+  <rect x="1290" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="1290" y="130" width="580" height="60" fill="#653a5e" />
+  <text x="1310" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">💻 Foundryとツール開発環境</text>
+  
+  <!-- カラム3コンテンツ -->
+  <text x="1310" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">インフラとデータを活用するアプリケーション開発</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="1310" y1="250" x2="1820" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="1570" cy="250" r="5" fill="#653a5e" />
+  
+  <!-- Foundryの特徴 -->
+  <text x="1310" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ アプリケーションサーバーとしてのFoundry</text>
+  <text x="1310" y="330" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" line-height="1.6">ウェブアプリケーション開発のためのアプリサーバーのように、AIアプリケーション開発のために必要なサービス一式を提供します。</text>
+  
+  <!-- Foundryの提供機能 -->
+  <rect x="1310" y="370" width="540" height="220" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" />
+  <text x="1330" y="400" font-family="'Noto Serif JP'" font-size="18" fill="#653a5e">Foundryが提供する主要サービス</text>
+  
+  <!-- サービス一覧 -->
+  <rect x="1330" y="420" width="500" height="150" fill="none" stroke="#653a5e" stroke-width="1" stroke-dasharray="5,5" />
+  
+  <rect x="1345" y="435" width="220" height="35" fill="#f7f4ee" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1455" y="458" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">ファインチューニング</text>
+  
+  <rect x="1345" y="480" width="220" height="35" fill="#f7f4ee" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1455" y="503" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">評価（Evals）</text>
+  
+  <rect x="1345" y="525" width="220" height="35" fill="#f7f4ee" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1455" y="548" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">AI安全性</text>
+  
+  <rect x="1585" y="435" width="220" height="35" fill="#f7f4ee" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1695" y="458" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">可観測性</text>
+  
+  <rect x="1585" y="480" width="220" height="35" fill="#f7f4ee" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1695" y="503" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">グラウンディングAPI</text>
+  
+  <rect x="1585" y="525" width="220" height="35" fill="#f7f4ee" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1695" y="548" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">幅広いモデルアクセス</text>
+  
+  <!-- ツール環境 -->
+  <text x="1310" y="630" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ 世界最高レベルの開発ツール</text>
+  <rect x="1310" y="650" width="540" height="150" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" />
+  
+  <!-- VS Code と GitHub -->
+  <rect x="1330" y="670" width="230" height="110" fill="#f7f4ee" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1445" y="700" font-family="'Noto Serif JP'" font-size="16" fill="#2c2c2c" text-anchor="middle">VS Code</text>
+  <text x="1445" y="730" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">• 世界で最も使われるエディタ</text>
+  <text x="1445" y="760" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">• AIアシスタント統合</text>
+  
+  <rect x="1590" y="670" width="230" height="110" fill="#f7f4ee" stroke="#653a5e" stroke-width="1" rx="5" />
+  <text x="1705" y="700" font-family="'Noto Serif JP'" font-size="16" fill="#2c2c2c" text-anchor="middle">GitHub</text>
+  <text x="1705" y="730" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">• 日本: 350万開発者</text>
+  <text x="1705" y="760" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">• 年間成長率: 20%以上</text>
+  
+  <!-- GitHub Copilot -->
+  <rect x="1310" y="820" width="540" height="120" fill="#f7f4ee" stroke="#653a5e" stroke-width="2" rx="5" />
+  <text x="1330" y="850" font-family="'Noto Serif JP'" font-size="20" fill="#653a5e">■ 実践：GitHub Copilotの進化</text>
+  <text x="1330" y="885" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• コード補完・コードチャット・マルチファイル編集</text>
+  <text x="1330" y="920" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" font-weight="bold">➢ 最新機能: Project Pan - AIによるPR作成と実装</text>
+  
+  <!-- 矢印定義 -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c2c2c" />
+    </marker>
+  </defs>
+</svg> 

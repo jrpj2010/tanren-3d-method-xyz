@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI共創によるアウトプット革命</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #2c3e50 0%, #4a69bd 50%, #6c5ce7 100%);
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        .slide-header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .slide-title {
+            font-size: 2.6rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #ffffff, #e0e0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        .summary-points {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .point-card {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 210px;
+        }
+        .point-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .point-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(162, 155, 254, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        .point-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        .point-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #a29bfe;
+        }
+        .point-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+        .evolution-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .evolution-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: inline-block;
+            padding-bottom: 3px;
+            border-bottom: 2px solid #a29bfe;
+        }
+        .evolution-content {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .role-box {
+            width: 180px;
+        }
+        .role-icon {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            color: #a29bfe;
+        }
+        .role-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .role-list {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            line-height: 1.2;
+            text-align: left;
+            margin-left: 15px;
+            padding-left: 0;
+        }
+        .role-list li {
+            margin-bottom: 3px;
+            list-style-type: disc;
+        }
+        .connection {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.3), rgba(162, 155, 254, 0.8), rgba(255,255,255,0.3));
+        }
+        .closing-message {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 15px;
+            padding: 10px;
+            background: linear-gradient(90deg, rgba(162, 155, 254, 0.2), rgba(108, 92, 231, 0.2), rgba(162, 155, 254, 0.2));
+            border-radius: 8px;
+            line-height: 1.3;
+        }
+        .background-icons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        .floating-icon {
+            position: absolute;
+            font-size: 2.5rem;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- 背景アイコン（数を減らして簡素化） -->
+        <div class="background-icons">
+            <i class="fas fa-lightbulb floating-icon" style="top: 10%; left: 15%;"></i>
+            <i class="fas fa-edit floating-icon" style="top: 30%; left: 85%;"></i>
+            <i class="fas fa-code floating-icon" style="top: 25%; left: 50%;"></i>
+            <i class="fas fa-robot floating-icon" style="top: 70%; left: 75%;"></i>
+        </div>
+
+        <div class="slide-header">
+            <h1 class="slide-title">AI共創によるアウトプット革命</h1>
+        </div>
+        
+        <div class="content-area">
+            <div class="summary-points">
+                <!-- ポイント1: 企画立案 -->
+                <div class="point-card">
+                    <div class="point-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="point-title">企画立案</div>
+                    <div class="point-description">
+                        AIとの共創で思考を増幅し<br>企画書作成を「超」加速
+                        <span style="font-size: 0.8rem; opacity: 0.7; display: block; margin-top: 6px;">
+                            論理的骨格×人間の創造性で<br>説得力ある企画を実現
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- ポイント2: 文章作成 -->
+                <div class="point-card">
+                    <div class="point-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="point-title">文章作成</div>
+                    <div class="point-description">
+                        AIパーソナル添削で<br>「あなたらしさ」を維持
+                        <span style="font-size: 0.8rem; opacity: 0.7; display: block; margin-top: 6px;">
+                            RAG/ICLでAIに「あなた」を<br>教え込み、心を動かす文章へ
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- ポイント3: プレゼン資料 -->
+                <div class="point-card">
+                    <div class="point-icon">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <div class="point-title">プレゼン資料</div>
+                    <div class="point-description">
+                        AI×SVG/HTMLで<br>「編集」から「生成」へ
+                        <span style="font-size: 0.8rem; opacity: 0.7; display: block; margin-top: 6px;">
+                            設計指示から高品質資料を<br>自動生成し表現力を拡張
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="evolution-box">
+                <div class="evolution-title">人間の役割の進化</div>
+                
+                <div class="evolution-content">
+                    <div class="role-box">
+                        <div class="role-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="role-title">AI</div>
+                        <ul class="role-list">
+                            <li>データ分析・整理</li>
+                            <li>論理的構造化</li>
+                            <li>効率的な生成</li>
+                            <li>客観的視点提供</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="connection"></div>
+                    
+                    <div class="role-box">
+                        <div class="role-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="role-title">人間</div>
+                        <ul class="role-list">
+                            <li>本質的価値判断</li>
+                            <li>創造性と情熱</li>
+                            <li>人間関係の構築</li>
+                            <li>最終的な「魂入れ」</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="closing-message">
+                AI共創時代の新しいアウトプット革命はすでに始まっている。
+                <span style="font-size: 1.1rem; opacity: 0.8; font-weight: 500; display: block; margin-top: 6px;">
+                    あなたのクリエイティビティとAIの処理能力の最高のシナジーを実現しよう。
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

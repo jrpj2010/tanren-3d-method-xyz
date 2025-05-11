@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第3章まとめ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a192f 0%, #172a46 100%);
+            color: white;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+        }
+        .heading-underline {
+            height: 4px;
+            width: 100px;
+            background: linear-gradient(90deg, #2196F3, rgba(33, 150, 243, 0.3));
+            border-radius: 2px;
+            margin: 12px 0 30px;
+        }
+        .summary-item {
+            position: relative;
+            background: rgba(33, 150, 243, 0.1);
+            border-left: 4px solid #2196F3;
+            transition: all 0.3s ease;
+        }
+        .summary-item:hover {
+            transform: translateX(5px);
+            background: rgba(33, 150, 243, 0.15);
+            box-shadow: 0 5px 15px rgba(33, 150, 243, 0.2);
+        }
+        .summary-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(33, 150, 243, 0.2);
+            color: #90CAF9;
+            font-size: 18px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .summary-number {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #2196F3;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+        .next-chapter {
+            background: linear-gradient(90deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.05));
+            border-left: 4px solid #4CAF50;
+        }
+        .arrow-line {
+            position: absolute;
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, #2196F3, #4CAF50);
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .arrow-line:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -5px;
+            border-style: solid;
+            border-width: 6px 0 6px 10px;
+            border-color: transparent transparent transparent #4CAF50;
+        }
+        .blueprint-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Blueprint Background Pattern -->
+        <div class="blueprint-bg"></div>
+        
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold">第3章まとめ</h1>
+            <h2 class="text-2xl font-light text-blue-300">AIとの対話設計術：プロンプトで思考を形にする技術</h2>
+            <div class="heading-underline"></div>
+        </div>
+        
+        <!-- Main Content: Summary Grid -->
+        <div class="grid grid-cols-2 gap-x-8 gap-y-5">
+            <!-- Summary Item 1 -->
+            <div class="summary-item p-4 rounded-lg relative">
+                <div class="summary-number">1</div>
+                <div class="flex">
+                    <div class="summary-icon">
+                        <i class="fas fa-drafting-compass"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">プロンプトは「思考の設計図」</h3>
+                        <p class="text-sm text-blue-100">単なる命令文ではなく、AIに思考の道筋と枠組みを与え、意図した結果へと導くための設計図</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Summary Item 2 -->
+            <div class="summary-item p-4 rounded-lg relative">
+                <div class="summary-number">2</div>
+                <div class="flex">
+                    <div class="summary-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">「悪いプロンプト」の原因</h3>
+                        <p class="text-sm text-blue-100">思考の曖昧さ、構造の欠如、情報不足が主因。TANREN 3Dメソッドで思考を整理することが解決策</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Summary Item 3 -->
+            <div class="summary-item p-4 rounded-lg relative">
+                <div class="summary-number">3</div>
+                <div class="flex">
+                    <div class="summary-icon">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">「良いプロンプト」の6要素</h3>
+                        <p class="text-sm text-blue-100">役割、目的・背景、タスク・制約、構造化、出力形式・例、思考プロセスの6つの要素で構成</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Summary Item 4 -->
+            <div class="summary-item p-4 rounded-lg relative">
+                <div class="summary-number">4</div>
+                <div class="flex">
+                    <div class="summary-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">実践テクニック</h3>
+                        <p class="text-sm text-blue-100">質問深掘り、アイデア発想、要約・翻訳などのテクニックを駆使してAIの能力を最大限に引き出す</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Summary Item 5 -->
+            <div class="summary-item p-4 rounded-lg relative">
+                <div class="summary-number">5</div>
+                <div class="flex">
+                    <div class="summary-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">AIプラットフォームの戦略的使い分け</h3>
+                        <p class="text-sm text-blue-100">各AIの個性と強みを理解し、目的に応じて最適なAIを選択。「チーム」として活用する視点</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Summary Item 6 -->
+            <div class="summary-item p-4 rounded-lg relative">
+                <div class="summary-number">6</div>
+                <div class="flex">
+                    <div class="summary-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">プロンプトの進化</h3>
+                        <p class="text-sm text-blue-100">AIの進化に伴いプロンプトの「形」は変わるが、「思考を設計し対話する力」の本質は不変</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Next Chapter Teaser -->
+        <div class="relative mt-8">
+            <div class="next-chapter p-5 rounded-lg w-3/4">
+                <div class="flex items-center">
+                    <div class="summary-icon bg-green-900 bg-opacity-30 text-green-300 mr-4">
+                        <i class="fas fa-forward"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-1 text-green-200">次章へ：AIエージェントの世界</h3>
+                        <p class="text-sm text-blue-100">
+                            思考OSとプロンプト設計術を両輪に、AIがさらに自律性を持ち、能動的に動き出す「AIエージェント」の世界へ。
+                            あなたの「思考の設計」が現実世界に具体的なインパクトを与えていく...
+                        </p>
+                    </div>
+                </div>
+                <div class="arrow-line"></div>
+            </div>
+        </div>
+        
+        <!-- Bottom Message -->
+        <div class="absolute bottom-10 left-0 w-full text-center">
+            <p class="text-xl font-bold text-blue-300">
+                <i class="fas fa-lightbulb text-yellow-300 mr-2"></i>
+                思考を形にし、AIを動かす力を手に入れたあなたへ
+            </p>
+        </div>
+    </div>
+</body>
+</html>

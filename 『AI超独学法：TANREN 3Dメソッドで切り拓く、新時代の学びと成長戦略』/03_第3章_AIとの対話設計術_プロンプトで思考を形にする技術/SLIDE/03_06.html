@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI対話 6つの必須要素</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a192f 0%, #172a46 100%);
+            color: white;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+        }
+        .section-number {
+            font-size: 1.5rem;
+            background: linear-gradient(90deg, #2196F3, #64B5F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+        }
+        .heading-underline {
+            height: 4px;
+            width: 80px;
+            background: linear-gradient(90deg, #2196F3, rgba(33, 150, 243, 0.3));
+            border-radius: 2px;
+            margin-top: 12px;
+            margin-bottom: 20px;
+        }
+        .important-badge {
+            background: linear-gradient(90deg, #f44336, #ff9800);
+            color: white;
+            border-radius: 4px;
+            padding: 2px 12px;
+            font-weight: 700;
+            display: inline-block;
+            transform: rotate(-2deg);
+            box-shadow: 0 2px 10px rgba(244, 67, 54, 0.3);
+            margin-left: 8px;
+            font-size: 1.1rem;
+        }
+        .hexagon {
+            position: relative;
+            width: 60px;
+            height: 34.6px; /* width * 0.577 */
+            margin: 17.3px 0;
+            background-color: rgba(33, 150, 243, 0.2);
+            transition: all 0.3s ease;
+        }
+        .hexagon:before,
+        .hexagon:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+        }
+        .hexagon:before {
+            bottom: 100%;
+            border-bottom: 17.3px solid rgba(33, 150, 243, 0.2);
+        }
+        .hexagon:after {
+            top: 100%;
+            border-top: 17.3px solid rgba(33, 150, 243, 0.2);
+        }
+        .hex-container:hover .hexagon {
+            background-color: rgba(33, 150, 243, 0.4);
+        }
+        .hex-container:hover .hexagon:before {
+            border-bottom-color: rgba(33, 150, 243, 0.4);
+        }
+        .hex-container:hover .hexagon:after {
+            border-top-color: rgba(33, 150, 243, 0.4);
+        }
+        .hex-container:hover .hex-number {
+            transform: scale(1.1);
+        }
+        .hex-number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #90caf9;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        .hex-row {
+            display: flex;
+            justify-content: center;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.2) 0%, rgba(13, 71, 161, 0.2) 100%);
+            border-left: 3px solid #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col justify-between p-12">
+        <!-- Header -->
+        <div>
+            <div class="flex items-center mb-4">
+                <p class="section-number">03</p>
+                <div class="important-badge ml-3">最重要</div>
+            </div>
+            <h1 class="text-5xl font-bold mb-2">AI対話 6つの必須要素</h1>
+            <h2 class="text-xl font-light text-blue-300">結果が変わる！思考の設計図を描く鍵</h2>
+            <div class="heading-underline"></div>
+        </div>
+        
+        <!-- Hexagon Visualization -->
+        <div class="flex flex-col items-center">
+            <!-- Top Row -->
+            <div class="hex-row mb-4">
+                <div class="hex-container mx-2">
+                    <div class="hexagon">
+                        <div class="hex-number">1</div>
+                    </div>
+                    <div class="text-center mt-2 text-blue-300 font-medium">役割</div>
+                </div>
+                <div class="hex-container mx-2">
+                    <div class="hexagon">
+                        <div class="hex-number">2</div>
+                    </div>
+                    <div class="text-center mt-2 text-blue-300 font-medium">目的・背景</div>
+                </div>
+            </div>
+            
+            <!-- Middle Row -->
+            <div class="hex-row mb-4">
+                <div class="hex-container mx-2">
+                    <div class="hexagon">
+                        <div class="hex-number">3</div>
+                    </div>
+                    <div class="text-center mt-2 text-blue-300 font-medium">タスク・制約</div>
+                </div>
+                <div class="hex-container mx-2">
+                    <div class="hexagon">
+                        <div class="hex-number">4</div>
+                    </div>
+                    <div class="text-center mt-2 text-blue-300 font-medium">構造化</div>
+                </div>
+            </div>
+            
+            <!-- Bottom Row -->
+            <div class="hex-row">
+                <div class="hex-container mx-2">
+                    <div class="hexagon">
+                        <div class="hex-number">5</div>
+                    </div>
+                    <div class="text-center mt-2 text-blue-300 font-medium">出力形式・例</div>
+                </div>
+                <div class="hex-container mx-2">
+                    <div class="hexagon">
+                        <div class="hex-number">6</div>
+                    </div>
+                    <div class="text-center mt-2 text-blue-300 font-medium">思考プロセス</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Description -->
+        <div class="highlight-box p-6 rounded-lg mt-8">
+            <div class="flex items-center">
+                <i class="fas fa-cogs text-4xl text-blue-400 mr-6"></i>
+                <div>
+                    <p class="text-xl font-medium mb-2">TANREN 3Dメソッドのドライバー</p>
+                    <p class="text-blue-100">
+                        思考OS「TANREN 3Dメソッド」で整理した思考を、これら6つの要素を通じて<br>
+                        AIへ伝達する「インターフェース」として機能する
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Side Notes -->
+        <div class="absolute right-12 bottom-12 text-right">
+            <p class="text-xl font-bold text-yellow-300">6つの要素の組み合わせが</p>
+            <p class="text-lg text-yellow-200">AI対話の質を劇的に向上させる</p>
+        </div>
+        
+        <!-- Top Right Decoration -->
+        <div class="absolute top-10 right-10 opacity-30">
+            <svg width="120" height="120" viewBox="0 0 120 120">
+                <path d="M60,10 L110,60 L60,110 L10,60 Z" stroke="#2196F3" stroke-width="2" fill="none"/>
+                <path d="M60,20 L100,60 L60,100 L20,60 Z" stroke="#2196F3" stroke-width="2" fill="none"/>
+                <path d="M60,30 L90,60 L60,90 L30,60 Z" stroke="#2196F3" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

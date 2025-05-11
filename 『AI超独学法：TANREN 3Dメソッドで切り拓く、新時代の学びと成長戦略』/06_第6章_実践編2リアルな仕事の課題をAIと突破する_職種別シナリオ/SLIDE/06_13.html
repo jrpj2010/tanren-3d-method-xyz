@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIと共に未来を描く3ステップ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%);
+            overflow: hidden;
+        }
+        .step-card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        .step-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px auto;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+        }
+        .bullet-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .bullet-icon {
+            min-width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            margin-top: 2px;
+            font-size: 0.65rem;
+        }
+        .step-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .prompt-example {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 6px 8px;
+            font-family: monospace;
+            font-size: 0.7rem;
+            color: #374151;
+            margin-top: 8px;
+        }
+        .arrow-connector {
+            position: relative;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #fb923c, #ea580c);
+        }
+        .arrow-connector::after {
+            content: "";
+            position: absolute;
+            top: -3px;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-left: 6px solid #ea580c;
+        }
+        .header-accent {
+            height: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-6">
+        <!-- Header -->
+        <div class="mb-4">
+            <h1 class="text-2xl font-bold text-gray-800">AIと共に未来を描く3ステップ</h1>
+            <div class="w-40 h-1.5 bg-orange-500 mt-1 rounded-full"></div>
+        </div>
+        
+        <!-- Main Content - Steps -->
+        <div class="flex items-center justify-between h-[500px]">
+            <!-- Step 1 -->
+            <div class="step-card w-[30%] h-full relative">
+                <div class="header-accent bg-amber-500"></div>
+                <div class="step-number bg-amber-500">1</div>
+                <div class="p-4">
+                    <div class="step-icon bg-amber-100">
+                        <i class="fas fa-mirror text-3xl text-amber-600"></i>
+                    </div>
+                    
+                    <h2 class="text-lg font-bold text-amber-800 text-center mb-3">
+                        AIミラーで<br>「未知の自分」を発見
+                    </h2>
+                    
+                    <h3 class="text-center text-amber-600 font-medium mb-3 text-sm">精密スキル棚卸し術</h3>
+                    
+                    <div class="space-y-2 mb-3">
+                        <div class="bullet-item">
+                            <div class="bullet-icon bg-amber-100 text-amber-600">
+                                <i class="fas fa-file-export"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">AIへの自己開示</p>
+                                <p class="text-xs text-gray-600">経歴・実績・興味の入力</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bullet-item">
+                            <div class="bullet-icon bg-amber-100 text-amber-600">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">AIによる客観分析</p>
+                                <p class="text-xs text-gray-600">隠れた強み・弱み発掘</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bullet-item">
+                            <div class="bullet-icon bg-amber-100 text-amber-600">
+                                <i class="fas fa-chart-radar"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">スキルグラフ可視化</p>
+                                <p class="text-xs text-gray-600">習熟度レベルの客観図示</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="prompt-example">
+                        <span class="text-orange-600 text-xs">プロンプト例：</span>
+                        「私の経歴に基づき、強みを分析し、潜在能力を指摘して」
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Arrow 1 -->
+            <div class="flex flex-col items-center">
+                <div class="arrow-connector"></div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="step-card w-[30%] h-full relative">
+                <div class="header-accent bg-orange-600"></div>
+                <div class="step-number bg-orange-600">2</div>
+                <div class="p-4">
+                    <div class="step-icon bg-orange-100">
+                        <i class="fas fa-compass text-3xl text-orange-600"></i>
+                    </div>
+                    
+                    <h2 class="text-lg font-bold text-orange-800 text-center mb-3">
+                        AIコンパスで<br>「未来の航路」を探る
+                    </h2>
+                    
+                    <h3 class="text-center text-orange-600 font-medium mb-3 text-sm">キャリア戦略共創</h3>
+                    
+                    <div class="space-y-2 mb-3">
+                        <div class="bullet-item">
+                            <div class="bullet-icon bg-orange-100 text-orange-600">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">可能性の探求</p>
+                                <p class="text-xs text-gray-600">「好き」と「できる」の交差点</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bullet-item">
+                            <div class="bullet-icon bg-orange-100 text-orange-600">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">ロードマップ設計</p>
+                                <p class="text-xs text-gray-600">シン・ジェネラリストへの道筋</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bullet-item">
+                            <div class="bullet-icon bg-orange-100 text-orange-600">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">リスク・機会分析</p>
+                                <p class="text-xs text-gray-600">現実的な未来予測と対策</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="prompt-example">
+                        <span class="text-orange-600 text-xs">プロンプト例：</span>
+                        「3年後にXとYの分野で活躍する具体的な学習計画を提案して」
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Arrow 2 -->
+            <div class="flex flex-col items-center">
+                <div class="arrow-connector"></div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="step-card w-[30%] h-full relative">
+                <div class="header-accent bg-red-600"></div>
+                <div class="step-number bg-red-600">3</div>
+                <div class="p-4">
+                    <div class="step-icon bg-red-100">
+                        <i class="fas fa-rocket text-3xl text-red-600"></i>
+                    </div>
+                    
+                    <h2 class="text-lg font-bold text-red-800 text-center mb-3">
+                        AIブースターで<br>「実行」を加速
+                    </h2>
+                    
+                    <h3 class="text-center text-red-600 font-medium mb-3 text-sm">学びと行動の具体化</h3>
+                    
+                    <div class="space-y-2 mb-3">
+                        <div class="bullet-item">
+                            <div class="bullet-icon bg-red-100 text-red-600">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">個別学習プラン作成</p>
+                                <p class="text-xs text-gray-600">レベル別週次学習計画</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bullet-item">
+                            <div class="bullet-icon bg-red-100 text-red-600">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">ポートフォリオ構築</p>
+                                <p class="text-xs text-gray-600">スキルの効果的な見せ方</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bullet-item">
+                            <div class="bullet-icon bg-red-100 text-red-600">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800 text-sm">継続的メンタリング</p>
+                                <p class="text-xs text-gray-600">週次AIふり返り対話</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="prompt-example">
+                        <span class="text-orange-600 text-xs">プロンプト例：</span>
+                        「データ分析スキルを3ヶ月でLv1→2にする週次計画を作成して」
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Summary -->
+        <div class="mt-4 bg-gradient-to-r from-amber-50 to-orange-100 rounded-lg p-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center mr-3">
+                    <i class="fas fa-users-gear text-white text-sm"></i>
+                </div>
+                <p class="font-bold text-gray-800 text-sm">
+                    <span class="text-orange-700">AIはキャリアの道標とナビゲーター</span>、
+                    ハンドルを握るのは常にあなた自身
+                </p>
+            </div>
+            
+            <p class="text-gray-500 text-xs">AI超独学法 | 第6章</p>
+        </div>
+    </div>
+</body>
+</html>

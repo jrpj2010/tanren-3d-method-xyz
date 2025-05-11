@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAO導入への道筋 - ビジネス・エージェント・オーケストレーター構想</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --black: #2c2c2c;
+            --cream: #f4f1ea;
+            --red: #b3322b;
+            --blue: #1a5b66;
+            --purple: #653a5e;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--cream);
+            color: var(--black);
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .slide-title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            color: var(--black);
+            position: relative;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        .slide-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--red);
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .dot-red {
+            background-color: var(--red);
+        }
+        .dot-blue {
+            background-color: var(--blue);
+        }
+        .dot-purple {
+            background-color: var(--purple);
+        }
+        .roadmap-box {
+            border: 2px solid var(--black);
+            background-color: white;
+            padding: 20px;
+            position: relative;
+        }
+        .roadmap-box::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--black);
+            z-index: -1;
+        }
+        .red-text {
+            color: var(--red);
+        }
+        .blue-text {
+            color: var(--blue);
+        }
+        .purple-text {
+            color: var(--purple);
+        }
+        .stage-number {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .stage-box {
+            border-left: 4px solid;
+            padding: 0 0 0 15px;
+            margin-bottom: 20px;
+            height: 100%;
+        }
+        .stage-title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .company {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            text-align: right;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+        .red-border {
+            border-color: var(--red);
+        }
+        .blue-border {
+            border-color: var(--blue);
+        }
+        .purple-border {
+            border-color: var(--purple);
+        }
+        .timeline {
+            position: relative;
+            width: 100%;
+            height: 6px;
+            background-color: var(--black);
+            margin: 30px 0;
+        }
+        .timeline-point {
+            position: absolute;
+            top: -10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .timeline-label {
+            position: absolute;
+            top: 20px;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 120px;
+        }
+        .arrow-diagonal {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+        }
+        .arrow-diagonal::before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--black);
+            transform: rotate(-45deg);
+            transform-origin: 0 0;
+        }
+        .arrow-diagonal::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-right: 2px solid var(--black);
+            border-bottom: 2px solid var(--black);
+            right: 0;
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h1 class="slide-title text-4xl mb-6">BAO導入への道筋：段階的なアプローチ</h1>
+        
+        <div class="flex justify-center items-center mb-4">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-purple"></span>
+        </div>
+        
+        <div class="roadmap-box mb-6">
+            <p class="text-xl mb-2">BAO構想の全面的な導入は、一朝一夕では実現できません。</p>
+            <p>企業規模や業種に応じた<span class="blue-text font-bold">段階的な移行</span>が現実的です。以下の5段階で、徐々にBAOへの移行を進めていくことができます。</p>
+        </div>
+        
+        <!-- Timeline visualization -->
+        <div class="timeline relative mb-10">
+            <div class="timeline-point red-bg" style="left: 0%;">1</div>
+            <div class="timeline-label" style="left: 0%;">
+                <span class="text-sm font-bold red-text">試験導入</span>
+            </div>
+            
+            <div class="timeline-point blue-bg" style="left: 25%;">2</div>
+            <div class="timeline-label" style="left: 25%;">
+                <span class="text-sm font-bold blue-text">部分的導入</span>
+            </div>
+            
+            <div class="timeline-point purple-bg" style="left: 50%;">3</div>
+            <div class="timeline-label" style="left: 50%;">
+                <span class="text-sm font-bold purple-text">部門統合</span>
+            </div>
+            
+            <div class="timeline-point red-bg" style="left: 75%;">4</div>
+            <div class="timeline-label" style="left: 75%;">
+                <span class="text-sm font-bold red-text">全社展開</span>
+            </div>
+            
+            <div class="timeline-point blue-bg" style="left: 100%;">5</div>
+            <div class="timeline-label" style="left: 100%;">
+                <span class="text-sm font-bold blue-text">完全BAO</span>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-3 gap-6 mb-8">
+            <!-- Stage 1 -->
+            <div class="stage-box red-border">
+                <span class="stage-number red-text">1</span>
+                <h3 class="stage-title red-text">試験導入段階</h3>
+                <div class="text-sm mb-2">
+                    <span class="font-bold">期間：</span>3-6ヶ月
+                </div>
+                <ul class="text-sm list-disc pl-5">
+                    <li>特定の業務に特化したAIツールを導入</li>
+                    <li>マーケティング分析や文書作成など限定的な業務から開始</li>
+                    <li>既存システムとの接続性を検証</li>
+                    <li>社内の受容度・成功事例の蓄積</li>
+                </ul>
+                <div class="mt-3">
+                    <span class="text-xs bg-red-100 p-1 rounded">
+                        <i class="fas fa-lightbulb mr-1 red-text"></i>
+                        <span class="font-bold">成功指標：</span>導入部署の業務効率20%向上
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Stage 2 -->
+            <div class="stage-box blue-border">
+                <span class="stage-number blue-text">2</span>
+                <h3 class="stage-title blue-text">部分的導入段階</h3>
+                <div class="text-sm mb-2">
+                    <span class="font-bold">期間：</span>6-12ヶ月
+                </div>
+                <ul class="text-sm list-disc pl-5">
+                    <li>部門ごとにAI CXO候補を導入</li>
+                    <li>人間の管理職と並走させながらAIの学習を促進</li>
+                    <li>部門内での知識共有基盤の整備</li>
+                    <li>初期的なAI間連携の試験運用</li>
+                </ul>
+                <div class="mt-3">
+                    <span class="text-xs bg-blue-100 p-1 rounded">
+                        <i class="fas fa-lightbulb mr-1 blue-text"></i>
+                        <span class="font-bold">成功指標：</span>意思決定速度50%向上、コスト10%削減
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Stage 3 -->
+            <div class="stage-box purple-border">
+                <span class="stage-number purple-text">3</span>
+                <h3 class="stage-title purple-text">部門統合段階</h3>
+                <div class="text-sm mb-2">
+                    <span class="font-bold">期間：</span>12-18ヶ月
+                </div>
+                <ul class="text-sm list-disc pl-5">
+                    <li>全社的な「社内ナレッジハブ」の構築</li>
+                    <li>複数部門のAI CXO間の連携強化</li>
+                    <li>AI CXOに一部の意思決定権限を委譲</li>
+                    <li>人間管理職はAIの監督・例外対応に集中</li>
+                </ul>
+                <div class="mt-3">
+                    <span class="text-xs bg-purple-100 p-1 rounded">
+                        <i class="fas fa-lightbulb mr-1 purple-text"></i>
+                        <span class="font-bold">成功指標：</span>部門間連携の質的向上、新規施策の実行速度2倍
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Stage 4 -->
+            <div class="stage-box red-border">
+                <span class="stage-number red-text">4</span>
+                <h3 class="stage-title red-text">全社展開段階</h3>
+                <div class="text-sm mb-2">
+                    <span class="font-bold">期間：</span>18-24ヶ月
+                </div>
+                <ul class="text-sm list-disc pl-5">
+                    <li>全部門でAI CXOが主導権を持つ体制へ移行</li>
+                    <li>人間CEOとAI CXO間の最適な意思疎通方法の確立</li>
+                    <li>BAO運用の規則・ガイドライン整備</li>
+                    <li>緊急時・例外時の対応プロトコル整備</li>
+                </ul>
+                <div class="mt-3">
+                    <span class="text-xs bg-red-100 p-1 rounded">
+                        <i class="fas fa-lightbulb mr-1 red-text"></i>
+                        <span class="font-bold">成功指標：</span>管理コスト40%削減、市場変化への対応速度3倍
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Stage 5 -->
+            <div class="stage-box blue-border">
+                <span class="stage-number blue-text">5</span>
+                <h3 class="stage-title blue-text">完全BAO運用段階</h3>
+                <div class="text-sm mb-2">
+                    <span class="font-bold">期間：</span>24ヶ月～
+                </div>
+                <ul class="text-sm list-disc pl-5">
+                    <li>AI CXOチームが日常業務の大部分を自律運営</li>
+                    <li>人間CEOはビジョン設定と最終判断に集中</li>
+                    <li>自己学習・最適化が常時行われる状態</li>
+                    <li>新たなビジネスモデル・イノベーションの創出</li>
+                </ul>
+                <div class="mt-3">
+                    <span class="text-xs bg-blue-100 p-1 rounded">
+                        <i class="fas fa-lightbulb mr-1 blue-text"></i>
+                        <span class="font-bold">成功指標：</span>従来比2倍の成長率、新規事業創出の加速
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Human Role -->
+            <div class="roadmap-box">
+                <h3 class="stage-title purple-text">人間の役割の変化</h3>
+                <div class="text-sm mb-2">
+                    BAOへの移行に伴い、人間社員の役割は以下のように変化します：
+                </div>
+                <ul class="text-sm list-disc pl-5">
+                    <li>管理業務からの解放</li>
+                    <li>創造的・戦略的思考への集中</li>
+                    <li>対人コミュニケーション業務の担当</li>
+                    <li>AIシステムの監督・ガバナンス</li>
+                    <li>例外事項・倫理的判断の担当</li>
+                </ul>
+                <div class="mt-3 text-sm">
+                    <span class="font-bold">ポイント：</span>
+                    <span class="purple-text font-bold">BAOは人間の代替ではなく、人間の可能性を最大化するためのシステム</span>です。
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white p-5 border-2 border-black mx-auto max-w-4xl">
+            <div class="flex items-center">
+                <div class="mr-5">
+                    <i class="fas fa-map-signs text-4xl red-text"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-lg mb-1">BAO導入の要点</p>
+                    <p>AI技術の進化に合わせて<span class="blue-text font-bold">無理のないペース</span>で段階的に移行することが重要です。<br>
+                    各フェーズでの<span class="red-text font-bold">成功体験の蓄積</span>と<span class="purple-text font-bold">組織文化の適応</span>を促しながら、
+                    次のステップへと進むことで、<br>BAO構想の実現に向けた持続可能な変革が可能になります。</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="company">
+            <p>TANREN株式会社</p>
+        </div>
+        
+        <div class="page-number">8 / 12</div>
+    </div>
+</body>
+</html>

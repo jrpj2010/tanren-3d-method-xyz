@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="60" y="60" width="1800" height="100" fill="#2c2c2c"/>
+  <text x="100" y="130" font-family="'Noto Serif JP', serif" font-size="48" fill="#f4f1ea" font-weight="bold">
+    Manus開発の軌跡 - アイデアの進化
+  </text>
+  
+  <!-- カラム1 (左): Monicaの成功と限界 -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="60" y="200" width="580" height="60" fill="#b3322b"/>
+    <text x="80" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      Chrome拡張機能Monica
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="60" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="80" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      最初の成功製品 🚀
+    </text>
+    <line x1="80" y1="310" x2="400" y2="310" stroke="#b3322b" stroke-width="3"/>
+    <circle cx="400" cy="310" r="4" fill="#b3322b"/>
+    
+    <!-- 本質説明 -->
+    <text x="80" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="80" y="350">ChatGPT登場1週間前から構想開始</tspan>
+      <tspan x="80" y="380">ブラウザとAIを統合する</tspan>
+    </text>
+    
+    <!-- 問題点の図解 -->
+    <rect x="80" y="420" width="540" height="100" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" rx="5"/>
+    <text x="100" y="445" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      ChatGPT利用時の課題:
+    </text>
+    <text x="100" y="475" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="100" y="475">・ブラウザとChatGPT間の頻繁な</tspan>
+      <tspan x="100" y="500">　コピー＆ペーストの手間</tspan>
+    </text>
+    
+    <!-- ツール名と特徴 -->
+    <text x="80" y="570" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      Monica AIの特徴
+    </text>
+    <line x1="80" y1="580" x2="350" y2="580" stroke="#b3322b" stroke-width="2"/>
+    
+    <!-- 主要機能リスト -->
+    <text x="80" y="620" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="80" y="620">・長文記事の要約</tspan>
+      <tspan x="80" y="650">・Gmail内でのメール作成支援</tspan>
+      <tspan x="80" y="680">・YouTube動画の要約＆タイムスタンプ付き</tspan>
+      <tspan x="80" y="710">　トランスクリプト</tspan>
+    </text>
+    
+    <!-- 実績データ -->
+    <rect x="80" y="750" width="540" height="130" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1" rx="5"/>
+    <text x="100" y="780" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#b3322b" font-weight="bold">
+      市場での成功
+    </text>
+    <text x="100" y="820" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="100" y="820">・月間アクティブユーザー: </tspan>
+      <tspan x="350" y="820" font-size="24" font-weight="bold">2000万人</tspan>
+    </text>
+    <text x="100" y="850" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="100" y="850">・年間収益(ARR): </tspan>
+      <tspan x="350" y="850" font-size="24" font-weight="bold">1800万ドル</tspan>
+    </text>
+  </g>
+  
+  <!-- カラム2 (中央): AIブラウザプロジェクト -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="670" y="200" width="580" height="60" fill="#1a5b66"/>
+    <text x="690" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      AIブラウザプロジェクト
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="670" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="690" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      野心的な取り組み 🔍
+    </text>
+    <line x1="690" y1="310" x2="1010" y2="310" stroke="#1a5b66" stroke-width="3"/>
+    <circle cx="1010" cy="310" r="4" fill="#1a5b66"/>
+    
+    <!-- 本質説明 -->
+    <text x="690" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+      <tspan x="690" y="350">初期スタートアップの大規模投資</tspan>
+      <tspan x="690" y="380">総勢14名のうちエンジニア12名を配置</tspan>
+    </text>
+    
+    <!-- タイムライン図 -->
+    <line x1="690" y1="430" x2="1150" y2="430" stroke="#2c2c2c" stroke-width="2"/>
+    <circle cx="690" cy="430" r="10" fill="#1a5b66"/>
+    <text x="680" y="460" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      2023年3月
+    </text>
+    <text x="650" y="480" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      開発開始
+    </text>
+    
+    <circle cx="920" cy="430" r="10" fill="#1a5b66"/>
+    <text x="910" y="460" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      2023年7月
+    </text>
+    <text x="890" y="480" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      Cursor登場
+    </text>
+    
+    <circle cx="1150" cy="430" r="10" fill="#b3322b"/>
+    <text x="1140" y="460" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      2023年9月
+    </text>
+    <text x="1120" y="480" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      プロジェクト中止
+    </text>
+    
+    <!-- 開発機能 -->
+    <text x="690" y="530" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      先進的な技術開発
+    </text>
+    <line x1="690" y1="540" x2="900" y2="540" stroke="#1a5b66" stroke-width="2"/>
+    
+    <rect x="690" y="560" width="250" height="70" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5"/>
+    <text x="710" y="585" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      ローカルAIモデル
+    </text>
+    <text x="710" y="610" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      ブラウザ内で動作する小型LLM
+    </text>
+    
+    <rect x="970" y="560" width="250" height="70" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" rx="5"/>
+    <text x="990" y="585" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      AI制御機能
+    </text>
+    <text x="990" y="610" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      タブ管理、データ抽出
+    </text>
+    
+    <!-- 中止理由 -->
+    <rect x="690" y="660" width="540" height="160" fill="#f4f1ea" stroke="#b3322b" stroke-width="2" rx="5"/>
+    <text x="710" y="690" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#b3322b" font-weight="bold">
+      中止に至った根本的な問題
+    </text>
+    <text x="710" y="730" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="710" y="730">① AIがブラウザを制御する際のユーザー体験</tspan>
+      <tspan x="730" y="760">・キーボード/マウスから手を離す必要</tspan>
+      <tspan x="730" y="790">・処理完了を待つストレス</tspan>
+    </text>
+  </g>
+  
+  <!-- カラム3 (右): Cursorからのインスピレーション -->
+  <g>
+    <!-- カラムヘッダー -->
+    <rect x="1280" y="200" width="580" height="60" fill="#653a5e"/>
+    <text x="1300" y="242" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea">
+      重要な発見と次世代構想
+    </text>
+    
+    <!-- カラム内容 -->
+    <rect x="1280" y="260" width="580" height="720" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+    
+    <!-- 本質タイトル -->
+    <text x="1300" y="300" font-family="'Noto Serif JP', serif" font-size="24" fill="#2c2c2c" font-weight="bold">
+      AIブラウザからの教訓 💡
+    </text>
+    <line x1="1300" y1="310" x2="1620" y2="310" stroke="#653a5e" stroke-width="3"/>
+    <circle cx="1620" cy="310" r="4" fill="#653a5e"/>
+    
+    <!-- 本質説明 -->
+    <rect x="1300" y="340" width="540" height="100" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    <text x="1320" y="370" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">
+      学び1: AIの能力とリソース配置
+    </text>
+    <text x="1320" y="400" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="1320" y="400">AIはブラウザ操作に長けているが、</tspan>
+      <tspan x="1320" y="425">ユーザーのブラウザではなく専用ブラウザを</tspan>
+    </text>
+    
+    <rect x="1300" y="460" width="540" height="100" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" rx="5"/>
+    <text x="1320" y="490" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">
+      学び2: 非同期クラウド実行
+    </text>
+    <text x="1320" y="520" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="1320" y="520">タスクをクラウドで非同期実行し、</tspan>
+      <tspan x="1320" y="545">ユーザーは他の活動に集中できる環境</tspan>
+    </text>
+    
+    <!-- Cursorの影響 -->
+    <text x="1300" y="600" font-family="'Noto Serif JP', serif" font-size="22" fill="#2c2c2c" font-weight="bold">
+      Cursorからのインスピレーション
+    </text>
+    <line x1="1300" y1="610" x2="1600" y2="610" stroke="#653a5e" stroke-width="2"/>
+    
+    <!-- Cursorの観察図 -->
+    <rect x="1300" y="630" width="540" height="90" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+    <line x1="1570" y1="630" x2="1570" y2="720" stroke="#2c2c2c" stroke-width="1" stroke-dasharray="5,5"/>
+    <text x="1320" y="655" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      コードエディタ
+    </text>
+    <text x="1320" y="680" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      非コーダーは無視
+    </text>
+    <text x="1600" y="655" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">
+      実行結果
+    </text>
+    <text x="1600" y="680" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+      全ユーザーが重視
+    </text>
+    
+    <!-- Manusコンセプト誕生 -->
+    <rect x="1300" y="750" width="540" height="130" fill="#f4f1ea" stroke="#653a5e" stroke-width="2" rx="5"/>
+    <text x="1320" y="780" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#653a5e" font-weight="bold">
+      Manusコンセプトの誕生 (2023年10月)
+    </text>
+    <text x="1320" y="820" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+      <tspan x="1320" y="820">「Cursorの右パネル」+「クラウド実行」</tspan>
+      <tspan x="1320" y="850">= 誰もが使える汎用AIエージェント</tspan>
+    </text>
+  </g>
+  
+  <!-- フッター -->
+  <rect x="60" y="1000" width="1800" height="40" fill="#2c2c2c"/>
+  <text x="1700" y="1025" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#f4f1ea" text-anchor="end">
+    © 2025 Manus AI · スライド 2/5
+  </text>
+</svg> 

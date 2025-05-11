@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap');
+      
+      :root {
+        --black: #2c2c2c;
+        --cream: #f4f1ea;
+        --red: #b3322b;
+        --blue: #1a5b66;
+        --purple: #653a5e;
+      }
+      
+      .slide-bg {
+        fill: var(--cream);
+      }
+      
+      .title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 42px;
+        fill: var(--black);
+        letter-spacing: 0.05em;
+      }
+      
+      .body-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 24px;
+        fill: var(--black);
+      }
+      
+      .intro-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 22px;
+        fill: var(--black);
+      }
+      
+      .stage-number {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 900;
+        font-size: 36px;
+      }
+      
+      .stage-title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 24px;
+      }
+      
+      .stage-subtitle {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 16px;
+        fill: var(--black);
+        font-weight: 700;
+      }
+      
+      .stage-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 16px;
+        fill: var(--black);
+      }
+      
+      .timeline-label {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      
+      .summary-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 22px;
+        fill: var(--black);
+      }
+      
+      .company {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+        text-anchor: end;
+      }
+      
+      .page-number {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .bold {
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" class="slide-bg" />
+  
+  <!-- タイトル -->
+  <g transform="translate(120, 100)">
+    <text class="title">BAO導入への道筋：段階的なアプローチ</text>
+    <line x1="0" y1="60" x2="1000" y2="60" stroke="var(--red)" stroke-width="3" />
+  </g>
+  
+  <!-- ドット装飾 -->
+  <g transform="translate(960, 150)">
+    <circle cx="-25" cy="0" r="6" fill="var(--red)" />
+    <circle cx="0" cy="0" r="6" fill="var(--blue)" />
+    <circle cx="25" cy="0" r="6" fill="var(--purple)" />
+  </g>
+  
+  <!-- イントロダクション -->
+  <g transform="translate(120, 200)">
+    <rect x="0" y="0" width="1680" height="120" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="1680" height="120" fill="none" stroke="var(--black)" stroke-width="1" />
+    
+    <text x="40" y="40" class="intro-text">BAO構想の全面的な導入は、一朝一夕では実現できません。</text>
+    <text x="40" y="80" class="intro-text">企業規模や業種に応じた<tspan fill="var(--blue)" font-weight="700">段階的な移行</tspan>が現実的です。以下の5段階で、徐々にBAOへの移行を</text>
+    <text x="40" y="110" class="intro-text">進めていくことができます。</text>
+  </g>
+  
+  <!-- タイムライン表示 -->
+  <g transform="translate(960, 380)">
+    <!-- タイムラインの線 -->
+    <line x1="-700" y1="0" x2="700" y2="0" stroke="var(--black)" stroke-width="8" />
+    
+    <!-- ポイント1: 試験導入 -->
+    <g transform="translate(-700, 0)">
+      <circle cx="0" cy="0" r="18" fill="var(--red)" />
+      <text x="0" y="6" text-anchor="middle" fill="white" font-weight="bold" font-size="16">1</text>
+      <text x="0" y="35" text-anchor="middle" class="timeline-label" fill="var(--red)">試験導入</text>
+    </g>
+    
+    <!-- ポイント2: 部分的導入 -->
+    <g transform="translate(-350, 0)">
+      <circle cx="0" cy="0" r="18" fill="var(--blue)" />
+      <text x="0" y="6" text-anchor="middle" fill="white" font-weight="bold" font-size="16">2</text>
+      <text x="0" y="35" text-anchor="middle" class="timeline-label" fill="var(--blue)">部分的導入</text>
+    </g>
+    
+    <!-- ポイント3: 部門統合 -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="18" fill="var(--purple)" />
+      <text x="0" y="6" text-anchor="middle" fill="white" font-weight="bold" font-size="16">3</text>
+      <text x="0" y="35" text-anchor="middle" class="timeline-label" fill="var(--purple)">部門統合</text>
+    </g>
+    
+    <!-- ポイント4: 全社展開 -->
+    <g transform="translate(350, 0)">
+      <circle cx="0" cy="0" r="18" fill="var(--red)" />
+      <text x="0" y="6" text-anchor="middle" fill="white" font-weight="bold" font-size="16">4</text>
+      <text x="0" y="35" text-anchor="middle" class="timeline-label" fill="var(--red)">全社展開</text>
+    </g>
+    
+    <!-- ポイント5: 完全BAO -->
+    <g transform="translate(700, 0)">
+      <circle cx="0" cy="0" r="18" fill="var(--blue)" />
+      <text x="0" y="6" text-anchor="middle" fill="white" font-weight="bold" font-size="16">5</text>
+      <text x="0" y="35" text-anchor="middle" class="timeline-label" fill="var(--blue)">完全BAO</text>
+    </g>
+  </g>
+  
+  <!-- ステージカード -->
+  <g transform="translate(120, 450)">
+    <!-- ステージ1: 試験導入段階 -->
+    <g>
+      <rect x="0" y="0" width="330" height="320" fill="white" stroke="var(--black)" stroke-width="2" />
+      <rect x="7" y="7" width="330" height="320" fill="none" stroke="var(--black)" stroke-width="1" />
+      <line x1="0" y1="0" x2="0" y2="320" stroke="var(--red)" stroke-width="4" />
+      
+      <text x="20" y="40" class="stage-number" fill="var(--red)">1</text>
+      <text x="20" y="80" class="stage-title" fill="var(--red)">試験導入段階</text>
+      
+      <text x="20" y="110" class="stage-subtitle">期間： 3-6ヶ月</text>
+      
+      <g transform="translate(40, 140)">
+        <circle cx="-10" cy="0" r="3" fill="var(--black)" />
+        <text x="0" y="5" class="stage-text">特定の業務に特化したAIツールを導入</text>
+        
+        <circle cx="-10" cy="30" r="3" fill="var(--black)" />
+        <text x="0" y="35" class="stage-text">マーケティング分析や文書作成など限定的な</text>
+        <text x="0" y="55" class="stage-text">業務から開始</text>
+        
+        <circle cx="-10" cy="80" r="3" fill="var(--black)" />
+        <text x="0" y="85" class="stage-text">既存システムとの接続性を検証</text>
+        
+        <circle cx="-10" cy="110" r="3" fill="var(--black)" />
+        <text x="0" y="115" class="stage-text">社内の受容度・成功事例の蓄積</text>
+      </g>
+      
+      <g transform="translate(165, 280)">
+        <rect x="-80" y="-20" width="160" height="40" rx="5" fill="#ffece9" />
+        <text x="-65" y="0" class="stage-text" fill="var(--red)">💡</text>
+        <text x="-45" y="0" class="stage-text"><tspan font-weight="700">成功指標：</tspan>導入部署の</text>
+        <text x="0" y="20" text-anchor="middle" class="stage-text">業務効率20%向上</text>
+      </g>
+    </g>
+    
+    <!-- ステージ2: 部分的導入段階 -->
+    <g transform="translate(345, 0)">
+      <rect x="0" y="0" width="330" height="320" fill="white" stroke="var(--black)" stroke-width="2" />
+      <rect x="7" y="7" width="330" height="320" fill="none" stroke="var(--black)" stroke-width="1" />
+      <line x1="0" y1="0" x2="0" y2="320" stroke="var(--blue)" stroke-width="4" />
+      
+      <text x="20" y="40" class="stage-number" fill="var(--blue)">2</text>
+      <text x="20" y="80" class="stage-title" fill="var(--blue)">部分的導入段階</text>
+      
+      <text x="20" y="110" class="stage-subtitle">期間： 6-12ヶ月</text>
+      
+      <g transform="translate(40, 140)">
+        <circle cx="-10" cy="0" r="3" fill="var(--black)" />
+        <text x="0" y="5" class="stage-text">部門ごとにAI CXO候補を導入</text>
+        
+        <circle cx="-10" cy="30" r="3" fill="var(--black)" />
+        <text x="0" y="35" class="stage-text">人間の管理職と並走させながらAIの学習を促進</text>
+        
+        <circle cx="-10" cy="60" r="3" fill="var(--black)" />
+        <text x="0" y="65" class="stage-text">部門内での知識共有基盤の整備</text>
+        
+        <circle cx="-10" cy="90" r="3" fill="var(--black)" />
+        <text x="0" y="95" class="stage-text">初期的なAI間連携の試験運用</text>
+      </g>
+      
+      <g transform="translate(165, 280)">
+        <rect x="-130" y="-20" width="260" height="40" rx="5" fill="#e6f0f2" />
+        <text x="-115" y="0" class="stage-text" fill="var(--blue)">💡</text>
+        <text x="-95" y="0" class="stage-text"><tspan font-weight="700">成功指標：</tspan>意思決定速度50%向上、</text>
+        <text x="0" y="20" text-anchor="middle" class="stage-text">コスト10%削減</text>
+      </g>
+    </g>
+    
+    <!-- ステージ3: 部門統合段階 -->
+    <g transform="translate(690, 0)">
+      <rect x="0" y="0" width="330" height="320" fill="white" stroke="var(--black)" stroke-width="2" />
+      <rect x="7" y="7" width="330" height="320" fill="none" stroke="var(--black)" stroke-width="1" />
+      <line x1="0" y1="0" x2="0" y2="320" stroke="var(--purple)" stroke-width="4" />
+      
+      <text x="20" y="40" class="stage-number" fill="var(--purple)">3</text>
+      <text x="20" y="80" class="stage-title" fill="var(--purple)">部門統合段階</text>
+      
+      <text x="20" y="110" class="stage-subtitle">期間： 12-18ヶ月</text>
+      
+      <g transform="translate(40, 140)">
+        <circle cx="-10" cy="0" r="3" fill="var(--black)" />
+        <text x="0" y="5" class="stage-text">全社的な「社内ナレッジハブ」の構築</text>
+        
+        <circle cx="-10" cy="30" r="3" fill="var(--black)" />
+        <text x="0" y="35" class="stage-text">複数部門のAI CXO間の連携強化</text>
+        
+        <circle cx="-10" cy="60" r="3" fill="var(--black)" />
+        <text x="0" y="65" class="stage-text">AI CXOに一部の意思決定権限を委譲</text>
+        
+        <circle cx="-10" cy="90" r="3" fill="var(--black)" />
+        <text x="0" y="95" class="stage-text">人間管理職はAIの監督・例外対応に集中</text>
+      </g>
+      
+      <g transform="translate(165, 280)">
+        <rect x="-130" y="-20" width="260" height="40" rx="5" fill="#f0e8ef" />
+        <text x="-115" y="0" class="stage-text" fill="var(--purple)">💡</text>
+        <text x="-95" y="0" class="stage-text"><tspan font-weight="700">成功指標：</tspan>部門間連携の質的向上、</text>
+        <text x="0" y="20" text-anchor="middle" class="stage-text">新規施策の実行速度2倍</text>
+      </g>
+    </g>
+    
+    <!-- ステージ4: 全社展開段階 -->
+    <g transform="translate(1035, 0)">
+      <rect x="0" y="0" width="330" height="320" fill="white" stroke="var(--black)" stroke-width="2" />
+      <rect x="7" y="7" width="330" height="320" fill="none" stroke="var(--black)" stroke-width="1" />
+      <line x1="0" y1="0" x2="0" y2="320" stroke="var(--red)" stroke-width="4" />
+      
+      <text x="20" y="40" class="stage-number" fill="var(--red)">4</text>
+      <text x="20" y="80" class="stage-title" fill="var(--red)">全社展開段階</text>
+      
+      <text x="20" y="110" class="stage-subtitle">期間： 18-24ヶ月</text>
+      
+      <g transform="translate(40, 140)">
+        <circle cx="-10" cy="0" r="3" fill="var(--black)" />
+        <text x="0" y="5" class="stage-text">全部門でAI CXOが主導権を持つ体制へ移行</text>
+        
+        <circle cx="-10" cy="30" r="3" fill="var(--black)" />
+        <text x="0" y="35" class="stage-text">人間CEOとAI CXO間の最適な意思疎通方法の</text>
+        <text x="0" y="55" class="stage-text">確立</text>
+        
+        <circle cx="-10" cy="80" r="3" fill="var(--black)" />
+        <text x="0" y="85" class="stage-text">BAO運用の規則・ガイドライン整備</text>
+        
+        <circle cx="-10" cy="110" r="3" fill="var(--black)" />
+        <text x="0" y="115" class="stage-text">緊急時・例外時の対応プロトコル整備</text>
+      </g>
+      
+      <g transform="translate(165, 280)">
+        <rect x="-130" y="-20" width="260" height="40" rx="5" fill="#ffece9" />
+        <text x="-115" y="0" class="stage-text" fill="var(--red)">💡</text>
+        <text x="-95" y="0" class="stage-text"><tspan font-weight="700">成功指標：</tspan>管理コスト40%削減、</text>
+        <text x="0" y="20" text-anchor="middle" class="stage-text">市場変化への対応速度3倍</text>
+      </g>
+    </g>
+    
+    <!-- ステージ5: 完全BAO運用段階 -->
+    <g transform="translate(1380, 0)">
+      <rect x="0" y="0" width="330" height="320" fill="white" stroke="var(--black)" stroke-width="2" />
+      <rect x="7" y="7" width="330" height="320" fill="none" stroke="var(--black)" stroke-width="1" />
+      <line x1="0" y1="0" x2="0" y2="320" stroke="var(--blue)" stroke-width="4" />
+      
+      <text x="20" y="40" class="stage-number" fill="var(--blue)">5</text>
+      <text x="20" y="80" class="stage-title" fill="var(--blue)">完全BAO運用段階</text>
+      
+      <text x="20" y="110" class="stage-subtitle">期間： 24ヶ月～</text>
+      
+      <g transform="translate(40, 140)">
+        <circle cx="-10" cy="0" r="3" fill="var(--black)" />
+        <text x="0" y="5" class="stage-text">AI CXOチームが日常業務の大部分を自律運営</text>
+        
+        <circle cx="-10" cy="30" r="3" fill="var(--black)" />
+        <text x="0" y="35" class="stage-text">人間CEOはビジョン設定と最終判断に集中</text>
+        
+        <circle cx="-10" cy="60" r="3" fill="var(--black)" />
+        <text x="0" y="65" class="stage-text">自己学習・最適化が常時行われる状態</text>
+        
+        <circle cx="-10" cy="90" r="3" fill="var(--black)" />
+        <text x="0" y="95" class="stage-text">新たなビジネスモデル・イノベーションの創出</text>
+      </g>
+      
+      <g transform="translate(165, 280)">
+        <rect x="-130" y="-20" width="260" height="40" rx="5" fill="#e6f0f2" />
+        <text x="-115" y="0" class="stage-text" fill="var(--blue)">💡</text>
+        <text x="-95" y="0" class="stage-text"><tspan font-weight="700">成功指標：</tspan>従来比2倍の成長率、</text>
+        <text x="0" y="20" text-anchor="middle" class="stage-text">新規事業創出の加速</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 人間の役割変化 -->
+  <g transform="translate(960, 820)">
+    <rect x="-650" y="0" width="1300" height="150" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="-643" y="7" width="1300" height="150" fill="none" stroke="var(--black)" stroke-width="1" />
+    
+    <text x="-600" y="30" class="stage-title" fill="var(--purple)">人間の役割の変化</text>
+    <text x="-600" y="60" class="stage-text">BAOへの移行に伴い、人間社員の役割は以下のように変化します：</text>
+    
+    <g transform="translate(-580, 85)">
+      <g transform="translate(0, 0)">
+        <circle cx="-10" cy="0" r="3" fill="var(--black)" />
+        <text x="0" y="5" class="stage-text">管理業務からの解放</text>
+      </g>
+      
+      <g transform="translate(230, 0)">
+        <circle cx="-10" cy="0" r="3" fill="var(--black)" />
+        <text x="0" y="5" class="stage-text">創造的・戦略的思考への集中</text>
+      </g>
+      
+      <g transform="translate(520, 0)">
+        <circle cx="-10" cy="0" r="3" fill="var(--black)" />
+        <text x="0" y="5" class="stage-text">対人コミュニケーション業務の担当</text>
+      </g>
+      
+      <g transform="translate(870, 0)">
+        <circle cx="-10" cy="0" r="3" fill="var(--black)" />
+        <text x="0" y="5" class="stage-text">例外事項・倫理的判断の担当</text>
+      </g>
+      
+      <g transform="translate(430, 30)">
+        <circle cx="-10" cy="0" r="3" fill="var(--black)" />
+        <text x="0" y="5" class="stage-text">AIシステムの監督・ガバナンス</text>
+      </g>
+    </g>
+    
+    <text x="0" y="135" text-anchor="middle" class="stage-text">
+      <tspan font-weight="700">ポイント：</tspan>
+      <tspan fill="var(--purple)" font-weight="700">BAOは人間の代替ではなく、人間の可能性を最大化するためのシステム</tspan>です。
+    </text>
+  </g>
+  
+  <!-- まとめボックス -->
+  <g transform="translate(960, 1000)">
+    <rect x="-700" y="-50" width="1400" height="100" fill="white" stroke="var(--black)" stroke-width="2" />
+    
+    <g transform="translate(-650, 0)">
+      <text font-size="54">🗺️</text>
+    </g>
+    
+    <g transform="translate(-550, 0)">
+      <text class="summary-text bold" y="-20">BAO導入の要点</text>
+      <text class="summary-text" y="20">AI技術の進化に合わせて<tspan fill="var(--blue)" font-weight="700">無理のないペース</tspan>で段階的に移行し、各フェーズでの</text>
+      <text class="summary-text" y="50"><tspan fill="var(--red)" font-weight="700">成功体験の蓄積</tspan>と<tspan fill="var(--purple)" font-weight="700">組織文化の適応</tspan>を促しながら進めることが重要です。</text>
+    </g>
+  </g>
+  
+  <!-- 会社名と頁数 -->
+  <g transform="translate(1800, 1050)">
+    <text class="company">TANREN株式会社</text>
+  </g>
+  
+  <g transform="translate(120, 1050)">
+    <text class="page-number">8 / 12</text>
+  </g>
+</svg> 

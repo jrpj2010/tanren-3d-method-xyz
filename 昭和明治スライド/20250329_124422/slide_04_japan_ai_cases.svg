@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea" />
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c" />
+  <text x="50" y="65" font-family="'Noto Serif JP'" font-size="36" fill="#f4f1ea" letter-spacing="2">日本におけるAI革新事例</text>
+  <text x="1700" y="65" font-family="'Noto Sans JP'" font-size="24" fill="#f4f1ea">2025.03.29</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="1030" width="1920" height="50" fill="#2c2c2c" />
+  <text x="50" y="1065" font-family="'Noto Sans JP'" font-size="18" fill="#f4f1ea">明治・昭和モダンテイスト - Microsoft Build Japan 2025</text>
+  <text x="1700" y="1065" font-family="'Noto Sans JP'" font-size="18" fill="#f4f1ea">04/05</text>
+  
+  <!-- メイン3カラムコンテンツ -->
+  <!-- カラム1: 住友商事のM365 Copilot活用 -->
+  <rect x="50" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="50" y="130" width="580" height="60" fill="#b3322b" />
+  <text x="70" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">🏢 企業変革：住友商事</text>
+  
+  <!-- カラム1コンテンツ -->
+  <text x="70" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">M365 Copilotを活用した組織全体の生産性向上</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="70" y1="250" x2="580" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="330" cy="250" r="5" fill="#b3322b" />
+  
+  <!-- 住友商事の取り組み -->
+  <text x="70" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ ボトムアップによる全社展開</text>
+  <text x="70" y="330" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" line-height="1.6">企業内でのAI活用を効果的に広げるため、Copilotチャンピオンを育成し、草の根からの活用促進を行っています。</text>
+  
+  <!-- 推進体制 -->
+  <rect x="70" y="380" width="540" height="240" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" />
+  <text x="90" y="410" font-family="'Noto Serif JP'" font-size="18" fill="#b3322b">Copilot普及推進体制</text>
+  
+  <!-- 組織図 -->
+  <rect x="90" y="430" width="500" height="170" fill="#f7f4ee" stroke="#b3322b" stroke-width="1" stroke-dasharray="2,2" />
+  
+  <!-- ピラミッド構造図 -->
+  <path d="M 340 450 L 190 570 L 490 570 Z" fill="none" stroke="#b3322b" stroke-width="2" />
+  
+  <!-- レベル別テキスト -->
+  <text x="340" y="460" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">経営層: 全社戦略決定</text>
+  <line x1="270" y1="485" x2="410" y2="485" stroke="#b3322b" stroke-width="1" stroke-dasharray="3,3" />
+  
+  <text x="340" y="505" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">Copilotチャンピオン: 実践と普及</text>
+  <line x1="230" y1="525" x2="450" y2="525" stroke="#b3322b" stroke-width="1" stroke-dasharray="3,3" />
+  
+  <text x="340" y="550" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" text-anchor="middle">全従業員: 日常業務での活用</text>
+  
+  <!-- 導入効果 -->
+  <text x="90" y="620" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 業務プロセス改革と生産性向上を両立</text>
+  <text x="90" y="650" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 全社的なAI活用カルチャーの醸成</text>
+  <text x="90" y="680" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 部門間ベストプラクティス共有の活性化</text>
+  
+  <!-- 実践ポイント -->
+  <rect x="70" y="730" width="540" height="150" fill="#f7f4ee" stroke="#b3322b" stroke-width="2" rx="5" />
+  <text x="90" y="760" font-family="'Noto Serif JP'" font-size="20" fill="#b3322b">■ 実践：AI導入の成功要因</text>
+  <text x="90" y="800" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• トップダウンとボトムアップの両方からのアプローチ</text>
+  <text x="90" y="830" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 先駆者（チャンピオン）の育成と活用事例の共有</text>
+  <text x="90" y="860" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" font-weight="bold">➢ 技術導入だけでなく「使いこなす文化」の醸成が鍵</text>
+  
+  <!-- カラム2: I'mable（聴覚障害者支援） -->
+  <rect x="670" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="670" y="130" width="580" height="60" fill="#1a5b66" />
+  <text x="690" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">❤️ 社会貢献：I'mable</text>
+  
+  <!-- カラム2コンテンツ -->
+  <text x="690" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">聴覚障害者のためのAIコミュニケーション支援</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="690" y1="250" x2="1200" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="950" cy="250" r="5" fill="#1a5b66" />
+  
+  <!-- アプリの概要 -->
+  <text x="690" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ Azure AIサービスによる革新的アプリ</text>
+  <text x="690" y="330" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" line-height="1.6">聴覚障害者の日常生活をサポートするコミュニケーションアプリをAzure AIサービスを活用して構築し、100万以上のダウンロード数を達成。</text>
+  
+  <!-- アプリの機能 -->
+  <rect x="690" y="380" width="540" height="200" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" />
+  <text x="710" y="410" font-family="'Noto Serif JP'" font-size="18" fill="#1a5b66">主要機能</text>
+  
+  <!-- スマートフォン図 -->
+  <rect x="710" y="430" width="120" height="200" rx="10" fill="#f7f4ee" stroke="#1a5b66" stroke-width="2" />
+  <rect x="715" y="440" width="110" height="170" rx="5" fill="#ffffff" stroke="#1a5b66" stroke-width="1" />
+  <circle cx="770" cy="620" r="10" fill="#f7f4ee" stroke="#1a5b66" stroke-width="1" />
+  
+  <!-- 機能表示 -->
+  <line x1="830" y1="450" x2="880" y2="450" stroke="#1a5b66" stroke-width="1" />
+  <text x="900" y="455" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">リアルタイム音声認識</text>
+  
+  <line x1="830" y1="490" x2="880" y2="490" stroke="#1a5b66" stroke-width="1" />
+  <text x="900" y="495" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">複数言語対応</text>
+  
+  <line x1="830" y1="530" x2="880" y2="530" stroke="#1a5b66" stroke-width="1" />
+  <text x="900" y="535" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">音声アラート視覚化</text>
+  
+  <line x1="830" y1="570" x2="880" y2="570" stroke="#1a5b66" stroke-width="1" />
+  <text x="900" y="575" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">オフライン機能</text>
+  
+  <!-- 利用者の声 -->
+  <rect x="690" y="600" width="540" height="120" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" />
+  <text x="710" y="630" font-family="'Noto Serif JP'" font-size="18" fill="#1a5b66">利用者の声</text>
+  <rect x="710" y="650" width="500" height="60" fill="#f7f4ee" stroke="#1a5b66" stroke-width="1" rx="10" />
+  <text x="720" y="685" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c" font-style="italic">「このアプリは私の生活を劇的に変えました。日常会話が初めてスムーズにできるようになり、社会参加の機会が広がりました。」</text>
+  
+  <!-- 実践ポイント -->
+  <rect x="690" y="750" width="540" height="150" fill="#f7f4ee" stroke="#1a5b66" stroke-width="2" rx="5" />
+  <text x="710" y="780" font-family="'Noto Serif JP'" font-size="20" fill="#1a5b66">■ 実践：技術の社会的インパクト</text>
+  <text x="710" y="820" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 単なる機能追加ではなく、ユーザー体験全体を設計</text>
+  <text x="710" y="850" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• ユーザーフィードバックを基にした継続的な改善</text>
+  <text x="710" y="880" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" font-weight="bold">➢ AIの本質的価値は人々の生活に与える具体的変化</text>
+  
+  <!-- カラム3: テクノロジー教育と自律走行 -->
+  <rect x="1290" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="1290" y="130" width="580" height="60" fill="#653a5e" />
+  <text x="1310" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">🚀 次世代育成と最先端技術</text>
+  
+  <!-- カラム3コンテンツ -->
+  <text x="1310" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">教育からモビリティまで広がるAI活用</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="1310" y1="250" x2="1820" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="1570" cy="250" r="5" fill="#653a5e" />
+  
+  <!-- 東京都教育委員会ハッカソン -->
+  <text x="1310" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ 東京都教育委員会ハッカソン優勝校</text>
+  <rect x="1310" y="310" width="540" height="180" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" />
+  
+  <text x="1330" y="340" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 中学生によるPower Appsを活用したアプリ開発</text>
+  <text x="1330" y="370" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 教育現場の課題解決を目指した実践的アプローチ</text>
+  <text x="1330" y="400" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• AIツールとローコードで若年層でも高度開発が可能に</text>
+  
+  <!-- 賞状イメージ -->
+  <rect x="1430" y="430" width="300" height="40" fill="#f7f4ee" stroke="#653a5e" stroke-width="1" />
+  <text x="1580" y="457" font-family="'Noto Serif JP'" font-size="16" fill="#653a5e" text-anchor="middle">ハッカソン最優秀賞</text>
+  
+  <!-- 自動運転スタートアップ -->
+  <text x="1310" y="520" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ Tier IV: 完全自律走行への挑戦</text>
+  <rect x="1310" y="540" width="540" height="180" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" />
+  
+  <!-- 車と技術のイラスト -->
+  <rect x="1330" y="560" width="500" height="140" fill="none" stroke="#653a5e" stroke-width="1" stroke-dasharray="5,5" />
+  
+  <!-- 簡易車両イラスト -->
+  <rect x="1350" y="580" width="200" height="60" rx="20" fill="#f7f4ee" stroke="#653a5e" stroke-width="2" />
+  <circle cx="1380" cy="650" r="20" fill="#f7f4ee" stroke="#653a5e" stroke-width="2" />
+  <circle cx="1520" cy="650" r="20" fill="#f7f4ee" stroke="#653a5e" stroke-width="2" />
+  
+  <!-- AI/センサーイメージ -->
+  <circle cx="1650" cy="580" r="40" fill="none" stroke="#653a5e" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="1650" y="585" font-family="'Noto Sans JP'" font-size="12" fill="#2c2c2c" text-anchor="middle">AI</text>
+  
+  <rect x="1610" y="630" width="80" height="40" rx="5" fill="none" stroke="#653a5e" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="1650" y="655" font-family="'Noto Sans JP'" font-size="12" fill="#2c2c2c" text-anchor="middle">センサー</text>
+  
+  <line x1="1550" y1="600" x2="1610" y2="580" stroke="#653a5e" stroke-width="1" stroke-dasharray="3,3" />
+  <line x1="1550" y1="630" x2="1610" y2="650" stroke="#653a5e" stroke-width="1" stroke-dasharray="3,3" />
+  
+  <text x="1330" y="700" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c">• 日本の自動車メーカーと連携したレベル5自動運転開発</text>
+  <text x="1330" y="730" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c">• 2030年までに完全自律走行技術の実用化を目指す</text>
+  
+  <!-- 日本航空のAI活用 -->
+  <rect x="1310" y="750" width="540" height="150" fill="#f7f4ee" stroke="#653a5e" stroke-width="2" rx="5" />
+  <text x="1330" y="780" font-family="'Noto Serif JP'" font-size="20" fill="#653a5e">■ 実践：JALのスモールLLM活用</text>
+  <text x="1330" y="820" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 3万人の従業員向けAIアプリケーション開発</text>
+  <text x="1330" y="850" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 小型言語モデルでオフライン処理を実現</text>
+  <text x="1330" y="880" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" font-weight="bold">➢ クラウド接続なしでも高度なAI機能を提供</text>
+  
+  <!-- 矢印定義 -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c2c2c" />
+    </marker>
+  </defs>
+</svg> 

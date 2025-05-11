@@ -1,0 +1,93 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700&family=Noto+Sans+JP:wght@400&display=swap');
+    .title { font-family: 'Noto Serif JP', serif; font-size: 32px; fill: #2c2c2c; letter-spacing: 0.08em; }
+    .subtitle { font-family: 'Noto Sans JP', sans-serif; font-size: 18px; fill: #653a5e; letter-spacing: 0.06em; }
+    .column-title { font-family: 'Noto Serif JP', serif; font-size: 20px; fill: #2c2c2c; letter-spacing: 0.07em; }
+    .body { font-family: 'Noto Sans JP', sans-serif; font-size: 13px; fill: #2c2c2c; letter-spacing: 0.04em; }
+    .highlight { font-weight: bold; fill: #b3322b; font-size: 18px; }
+    .tag { font-family: 'Noto Sans JP', sans-serif; font-size: 11px; fill: #fff; background: #1a5b66; border-radius: 6px; padding: 2px 8px; }
+    .footer { font-family: 'Noto Sans JP', sans-serif; font-size: 10px; fill: #653a5e; letter-spacing: 0.03em; }
+    .accent1 { fill: #b3322b; }
+    .accent2 { fill: #1a5b66; }
+    .accent3 { fill: #653a5e; }
+    .box { rx: 14; }
+  </style>
+  <!-- 背景 -->
+  <rect x="0" y="0" width="1280" height="720" fill="#f4f1ea"/>
+  <!-- ヘッダー -->
+  <text x="640" y="60" text-anchor="middle" class="title">OpenAI GPT-4.1 モデルファミリー発表</text>
+  <!-- タイトル下 和風ライン＆丸 -->
+  <rect x="540" y="74" width="200" height="3" fill="#2c2c2c" rx="2"/>
+  <circle cx="640" cy="80" r="6" fill="#b3322b"/>
+  <!-- 3カラムグリッド -->
+  <g>
+    <!-- カラム1 -->
+    <rect x="60" y="120" width="360" height="480" fill="#fff" stroke="#b3322b" stroke-width="2" class="box"/>
+    <text x="240" y="150" text-anchor="middle" class="column-title accent1">🧠 モデルファミリー概要</text>
+    <text x="240" y="175" text-anchor="middle" class="subtitle">3モデルの特徴</text>
+    <text x="90" y="200" class="body">・<tspan class="highlight">GPT-4.1/mini/nano</tspan>の3モデル発表</text>
+    <text x="90" y="225" class="body">・全モデルが<tspan class="highlight">100万トークン</tspan>対応</text>
+    <text x="90" y="250" class="body">・nanoは最速・最安価</text>
+    <text x="90" y="275" class="body">・<tspan class="highlight">高精度・高速・低コスト</tspan></text>
+    <!-- 棒グラフ（モデル比較） -->
+    <rect x="110" y="310" width="60" height="60" fill="#b3322b"/>
+    <rect x="180" y="330" width="60" height="40" fill="#1a5b66"/>
+    <rect x="250" y="350" width="60" height="20" fill="#653a5e"/>
+    <text x="140" y="385" class="body" fill="#fff">4.1</text>
+    <text x="210" y="385" class="body" fill="#fff">mini</text>
+    <text x="280" y="385" class="body" fill="#fff">nano</text>
+    <!-- タグ -->
+    <rect x="90" y="410" width="60" height="22" fill="#1a5b66" rx="6"/>
+    <text x="120" y="426" text-anchor="middle" class="tag">#モデル</text>
+    <!-- 実践ポイント -->
+    <rect x="90" y="450" width="240" height="38" fill="#f8e4e0" rx="8"/>
+    <text x="210" y="470" text-anchor="middle" class="body">大規模データ分析 / 高速AIアプリ開発</text>
+  </g>
+  <g>
+    <!-- カラム2 -->
+    <rect x="460" y="120" width="360" height="480" fill="#fff" stroke="#1a5b66" stroke-width="2" class="box"/>
+    <text x="640" y="150" text-anchor="middle" class="column-title accent2">⚡ 性能・ベンチマーク</text>
+    <text x="640" y="175" text-anchor="middle" class="subtitle">コーディング・指示追従・ロングコンテキスト</text>
+    <text x="490" y="200" class="body">・SWE-bench精度 <tspan class="highlight">55%</tspan>（+22pt）</text>
+    <text x="490" y="225" class="body">・多言語/複雑指示・長文処理で高評価</text>
+    <text x="490" y="250" class="body">・ベンチマークで全方位進化</text>
+    <!-- 棒グラフ（性能比較） -->
+    <rect x="520" y="290" width="40" height="60" fill="#b3322b"/>
+    <rect x="570" y="310" width="40" height="40" fill="#1a5b66"/>
+    <rect x="620" y="330" width="40" height="20" fill="#653a5e"/>
+    <text x="540" y="370" class="body" fill="#fff">SWE</text>
+    <text x="590" y="370" class="body" fill="#fff">Poly</text>
+    <text x="640" y="370" class="body" fill="#fff">Scale</text>
+    <!-- タグ -->
+    <rect x="490" y="410" width="60" height="22" fill="#b3322b" rx="6"/>
+    <text x="520" y="426" text-anchor="middle" class="tag">#性能</text>
+    <!-- 実践ポイント -->
+    <rect x="490" y="450" width="240" height="38" fill="#e0eef8" rx="8"/>
+    <text x="610" y="470" text-anchor="middle" class="body">高精度コード生成 / 長文情報抽出</text>
+  </g>
+  <g>
+    <!-- カラム3 -->
+    <rect x="860" y="120" width="360" height="480" fill="#fff" stroke="#653a5e" stroke-width="2" class="box"/>
+    <text x="1040" y="150" text-anchor="middle" class="column-title accent3">💰 価格・コミュニティ</text>
+    <text x="1040" y="175" text-anchor="middle" class="subtitle">コスト・API・今後の展望</text>
+    <text x="890" y="200" class="body">・4.1は4oより<tspan class="highlight">26%安価</tspan></text>
+    <text x="890" y="225" class="body">・nanoは1Mトークン<tspan class="highlight">12¢</tspan></text>
+    <text x="890" y="250" class="body">・ロングコンテキスト追加料金なし</text>
+    <text x="890" y="275" class="body">・開発者フィードバックで改善</text>
+    <text x="890" y="300" class="body">・4.5は3ヶ月以内に廃止</text>
+    <!-- プロセスフロー図 -->
+    <polyline points="950,340 1000,360 1050,340" fill="none" stroke="#653a5e" stroke-width="3"/>
+    <text x="1000" y="335" text-anchor="middle" class="body">開発者→改善→AI</text>
+    <!-- タグ -->
+    <rect x="890" y="410" width="60" height="22" fill="#653a5e" rx="6"/>
+    <text x="920" y="426" text-anchor="middle" class="tag">#価格</text>
+    <!-- 実践ポイント -->
+    <rect x="890" y="450" width="240" height="38" fill="#ede0f8" rx="8"/>
+    <text x="1010" y="470" text-anchor="middle" class="body">FBで改善 / 低コスト活用</text>
+  </g>
+  <!-- フッター -->
+  <rect x="0" y="690" width="1280" height="30" fill="#2c2c2c"/>
+  <text x="640" y="710" text-anchor="middle" class="footer">© 2025 OpenAI GPT-4.1 Family | 明治・昭和モダンテイストスライド</text>
+</svg>

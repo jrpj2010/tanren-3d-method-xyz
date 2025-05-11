@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Background with subtle texture -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  <pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100">
+    <rect width="100" height="100" fill="#f4f1ea"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="40" y="30"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="20" y="50"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="70" y="70"/>
+    <rect width="1" height="1" fill="#2c2c2c" opacity="0.05" x="10" y="90"/>
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#grain)"/>
+  
+  <!-- Header Section -->
+  <rect x="0" y="0" width="1920" height="120" fill="#2c2c2c" opacity="0.85"/>
+  <text x="60" y="75" font-family="Noto Serif JP, serif" font-size="36" font-weight="700" fill="#f4f1ea" letter-spacing="2">次世代SVGプレゼン講座：実装プロセス</text>
+  <text x="1860" y="75" font-family="Noto Sans JP, sans-serif" font-size="28" text-anchor="end" fill="#f4f1ea">03/05</text>
+  
+  <!-- Left Column -->
+  <g transform="translate(60, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2" opacity="0.2"/>
+    
+    <!-- Column Title -->
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#1a5b66">文字起こし入力とAI処理</text>
+    <line x1="180" y1="70" x2="380" y2="70" stroke="#1a5b66" stroke-width="2"/>
+    <circle cx="280" cy="70" r="5" fill="#1a5b66"/>
+    
+    <!-- Content -->
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">下準備：文字起こしデータの準備</text>
+    
+    <rect x="40" y="160" width="480" height="120" rx="4" fill="white" stroke="#1a5b66" stroke-width="1"/>
+    <text x="50" y="185" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 社長の講演や会議などの文字起こしデータ</text>
+    <text x="50" y="215" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• YouTubeの講演動画のトランスクリプト</text>
+    <text x="50" y="245" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 資料化したい文章データ</text>
+    <text x="50" y="275" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">※大量データの場合は分割処理も検討</text>
+    
+    <!-- Data Input Flow -->
+    <text x="20" y="320" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#1a5b66">Cursorへのインプット手順</text>
+    
+    <g>
+      <rect x="40" y="350" width="480" height="180" rx="4" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+      
+      <rect x="60" y="370" width="440" height="40" rx="4" fill="white" stroke="#1a5b66" stroke-width="1"/>
+      <text x="80" y="395" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">① Cursorのチャット画面を開く</text>
+      
+      <rect x="60" y="420" width="440" height="40" rx="4" fill="white" stroke="#1a5b66" stroke-width="1"/>
+      <text x="80" y="445" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">② AIエンジンを選択（例：Claude 3.7 Sonnet）</text>
+      
+      <rect x="60" y="470" width="440" height="40" rx="4" fill="white" stroke="#1a5b66" stroke-width="1"/>
+      <text x="80" y="495" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">③ 「要点を5つのスライドにまとめてください」など指示</text>
+    </g>
+    
+    <!-- Tips -->
+    <rect x="40" y="560" width="480" height="200" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+    <text x="50" y="590" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#b3322b">実践のポイント</text>
+    
+    <text x="60" y="630" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 「了解したなら『YES』と答えて待機せよ」など</text>
+    <text x="70" y="660" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">エージェント用の待機指示を追加すると効率的</text>
+    
+    <text x="60" y="700" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• データ量が多い場合はトークン上限に注意</text>
+    <text x="70" y="730" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">（数十万～100万トークンは一度に処理不可）</text>
+  </g>
+  
+  <!-- Middle Column -->
+  <g transform="translate(680, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="2" opacity="0.2"/>
+    
+    <!-- Column Title -->
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#b3322b">エージェントによるSVG生成</text>
+    <line x1="180" y1="70" x2="380" y2="70" stroke="#b3322b" stroke-width="2"/>
+    <circle cx="280" cy="70" r="5" fill="#b3322b"/>
+    
+    <!-- Content -->
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">エージェントモードの活用</text>
+    
+    <rect x="40" y="160" width="480" height="150" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+    <text x="50" y="185" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#2c2c2c">エージェントモードとは？</text>
+    <text x="50" y="215" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• Cursorの「Agent」タブから起動</text>
+    <text x="50" y="245" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• 設定画面で「Auto-run」「Auto-fix errors」を有効化</text>
+    <text x="50" y="275" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• AIが対話的でなく自動的に作業を進めてくれる機能</text>
+    <text x="50" y="305" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• 確認のやり取りを自動化できる</text>
+    
+    <!-- SVG Generation Process -->
+    <text x="20" y="350" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#b3322b">スライド生成の流れ</text>
+    
+    <g>
+      <rect x="40" y="380" width="480" height="250" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+      
+      <rect x="60" y="400" width="440" height="60" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+      <text x="80" y="425" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">① Geminiに「文字起こしを5つのスライドに分割し</text>
+      <text x="85" y="450" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">構成を考えて」と依頼し、構成案を作成</text>
+      
+      <rect x="60" y="470" width="440" height="60" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+      <text x="80" y="495" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">② Claudeに切り替え「SVG形式のスライドを生成</text>
+      <text x="85" y="520" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">せよ」と指示（Project Rulesが自動適用）</text>
+      
+      <rect x="60" y="540" width="440" height="60" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+      <text x="80" y="565" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">③ 自動的にファイル（slide1.svg〜slide5.svg）が</text>
+      <text x="85" y="590" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">生成される</text>
+    </g>
+    
+    <!-- Key Point -->
+    <rect x="40" y="660" width="480" height="100" rx="4" fill="white" stroke="#b3322b" stroke-width="1"/>
+    <text x="260" y="700" font-family="Noto Sans JP, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#b3322b">エージェントモード + Auto-run =</text>
+    <text x="260" y="730" font-family="Noto Sans JP, sans-serif" font-size="18" font-weight="700" text-anchor="middle" fill="#b3322b">完全自動で処理が進行</text>
+    
+    <rect x="40" y="780" width="480" height="40" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+    <text x="60" y="805" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">眺めているだけでスライドが完成します</text>
+  </g>
+  
+  <!-- Right Column -->
+  <g transform="translate(1300, 150)">
+    <rect x="0" y="0" width="560" height="850" rx="4" fill="#f4f1ea" stroke="#653a5e" stroke-width="2" opacity="0.2"/>
+    
+    <!-- Column Title -->
+    <text x="280" y="50" font-family="Noto Serif JP, serif" font-size="28" font-weight="700" text-anchor="middle" fill="#653a5e">生成されたSVGの確認と特徴</text>
+    <line x1="180" y1="70" x2="380" y2="70" stroke="#653a5e" stroke-width="2"/>
+    <circle cx="280" cy="70" r="5" fill="#653a5e"/>
+    
+    <!-- Content -->
+    <text x="20" y="130" font-family="Noto Sans JP, sans-serif" font-size="22" font-weight="700" fill="#2c2c2c">SVGスライドのプレビュー</text>
+    
+    <rect x="40" y="160" width="480" height="120" rx="4" fill="white" stroke="#653a5e" stroke-width="1"/>
+    <text x="50" y="185" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• Cursorのファイルツリーにファイルが増加</text>
+    <text x="50" y="215" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 各SVGを選択し「Preview SVG」クリック</text>
+    <text x="50" y="245" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 見出し・本文・図表のレイアウトが完成</text>
+    <text x="50" y="275" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• クリエイティブなインフォグラフィックが実現</text>
+    
+    <!-- SVG Code Understanding -->
+    <text x="20" y="320" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#653a5e">SVGコードの特徴</text>
+    
+    <rect x="40" y="350" width="480" height="200" rx="4" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+    <text x="50" y="380" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="700" fill="#2c2c2c">SVGは「ただの画像」じゃない</text>
+    
+    <text x="60" y="420" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• Scalable Vector Graphics = ベクターデータ</text>
+    <text x="60" y="450" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• XMLやHTMLに近いタグ構造</text>
+    <text x="60" y="480" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• テキスト・図形の位置・色を指定</text>
+    <text x="60" y="510" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• 拡大・縮小しても画質が落ちない</text>
+    <text x="60" y="540" font-family="Noto Sans JP, sans-serif" font-size="14" fill="#2c2c2c">• テキストはコピペ可能（実テキスト）</text>
+    
+    <!-- Edit in Cursor -->
+    <text x="20" y="590" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="700" fill="#653a5e">Cursor上での編集も可能</text>
+    
+    <rect x="40" y="620" width="480" height="100" rx="4" fill="white" stroke="#653a5e" stroke-width="1"/>
+    <text x="50" y="650" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 直接SVGコードを編集可能</text>
+    <text x="50" y="680" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 色やフォントサイズ、テキスト内容を変更可能</text>
+    <text x="50" y="710" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">• 視覚的に編集したい場合はFigmaが便利</text>
+    
+    <!-- Next Step Preview -->
+    <rect x="40" y="750" width="480" height="80" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+    <text x="50" y="780" font-family="Noto Sans JP, sans-serif" font-size="18" font-weight="700" fill="#b3322b">次ステップ：Figmaへの取り込み</text>
+    <text x="50" y="810" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#2c2c2c">コードが苦手でも視覚的に編集できる環境へ</text>
+  </g>
+  
+  <!-- Footer -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c" opacity="0.85"/>
+  <text x="60" y="1055" font-family="Noto Sans JP, sans-serif" font-size="16" fill="#f4f1ea">TANREN株式会社 AI秘書・桜木美佳</text>
+  <text x="1860" y="1055" font-family="Noto Sans JP, sans-serif" font-size="16" text-anchor="end" fill="#f4f1ea">次世代SVGプレゼン講座</text>
+</svg> 

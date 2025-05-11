@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダーライン -->
+  <rect x="40" y="40" width="1840" height="8" fill="#2c2c2c"/>
+  <rect x="40" y="60" width="1840" height="3" fill="#2c2c2c"/>
+  
+  <!-- フッターライン -->
+  <rect x="40" y="1020" width="1840" height="3" fill="#2c2c2c"/>
+  <rect x="40" y="1035" width="1840" height="8" fill="#2c2c2c"/>
+  
+  <!-- タイトル -->
+  <text x="960" y="120" font-family="'Noto Serif JP', serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#2c2c2c" letter-spacing="0.05em">勉強会概要と講師依頼の背景</text>
+  <rect x="700" y="140" width="520" height="3" fill="#b3322b"/>
+  
+  <!-- 3カラムグリッド区切り線 -->
+  <line x1="640" y1="180" x2="640" y2="1000" stroke="#2c2c2c" stroke-width="1" stroke-dasharray="2,4"/>
+  <line x1="1280" y1="180" x2="1280" y2="1000" stroke="#2c2c2c" stroke-width="1" stroke-dasharray="2,4"/>
+  
+  <!-- カラム1: イベント概要 -->
+  <rect x="100" y="180" width="480" height="60" fill="#b3322b"/>
+  <text x="340" y="222" font-family="'Noto Serif JP', serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#f4f1ea" letter-spacing="0.05em">イベント概要</text>
+  
+  <!-- カラム1コンテンツ -->
+  <text x="120" y="280" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">イノベーションフォーラムの特徴</text>
+  <rect x="120" y="290" width="220" height="2" fill="#b3322b"/>
+  
+  <!-- イベント概要図 -->
+  <rect x="180" y="320" width="320" height="240" rx="10" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2"/>
+  <circle cx="230" cy="390" r="30" fill="#b3322b" fill-opacity="0.2"/>
+  <text x="230" y="395" font-family="'Noto Sans JP', sans-serif" font-size="18" text-anchor="middle" fill="#2c2c2c">完全招待制</text>
+  
+  <circle cx="340" cy="350" r="30" fill="#b3322b" fill-opacity="0.2"/>
+  <text x="340" y="355" font-family="'Noto Sans JP', sans-serif" font-size="18" text-anchor="middle" fill="#2c2c2c">IT企業向け</text>
+  
+  <circle cx="450" cy="390" r="30" fill="#b3322b" fill-opacity="0.2"/>
+  <text x="450" y="395" font-family="'Noto Sans JP', sans-serif" font-size="18" text-anchor="middle" fill="#2c2c2c">年4回開催</text>
+  
+  <circle cx="340" cy="430" r="30" fill="#b3322b" fill-opacity="0.2"/>
+  <text x="340" y="435" font-family="'Noto Sans JP', sans-serif" font-size="18" text-anchor="middle" fill="#2c2c2c">半日プログラム</text>
+  
+  <circle cx="340" cy="490" r="40" fill="#b3322b" fill-opacity="0.7"/>
+  <text x="340" y="495" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#f4f1ea">IT系イノベーション</text>
+  
+  <!-- カラム1 追加情報 -->
+  <text x="120" y="600" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">開催概要</text>
+  <rect x="120" y="610" width="140" height="2" fill="#b3322b"/>
+  
+  <rect x="120" y="630" width="460" height="160" rx="5" fill="white" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="140" y="665" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+    <tspan x="140" dy="0">• 開催日：2024年5月16日（金）</tspan>
+    <tspan x="140" dy="35">• 会場：五反田（リアル開催）</tspan>
+    <tspan x="140" dy="35">• 時間：14:00～18:00（講演枠50分）</tspan>
+    <tspan x="140" dy="35">• 懇親会：18:00～（近隣会場）</tspan>
+  </text>
+  
+  <!-- 実践ポイント -->
+  <rect x="120" y="820" width="460" height="120" rx="5" fill="#f4f1ea" stroke="#b3322b" stroke-width="2"/>
+  <text x="140" y="850" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="bold" fill="#b3322b">イベントのポイント</text>
+  <text x="140" y="890" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+    <tspan x="140" dy="0">• 企業間のネットワーキングに重点</tspan>
+    <tspan x="140" dy="30">• 参加者同士の成長を促す場づくり</tspan>
+  </text>
+  
+  <!-- カラム2: 参加者プロフィール -->
+  <rect x="720" y="180" width="480" height="60" fill="#1a5b66"/>
+  <text x="960" y="222" font-family="'Noto Serif JP', serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#f4f1ea" letter-spacing="0.05em">参加者プロフィール</text>
+  
+  <!-- カラム2コンテンツ -->
+  <text x="720" y="280" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">参加企業の特性</text>
+  <rect x="720" y="290" width="180" height="2" fill="#1a5b66"/>
+  
+  <!-- 企業規模グラフ -->
+  <rect x="740" y="320" width="440" height="240" rx="5" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- グラフタイトル -->
+  <text x="960" y="350" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c2c2c">参加企業の年商規模</text>
+  
+  <!-- 円グラフ -->
+  <circle cx="860" cy="450" r="80" fill="none" stroke="#1a5b66" stroke-width="30"/>
+  <path d="M 860,450 L 860,370 A 80,80 0 0,1 940,450 Z" fill="#1a5b66"/>
+  <text x="860" y="455" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c2c2c">～10億</text>
+  
+  <!-- 凡例 -->
+  <rect x="970" y="400" width="20" height="20" fill="#1a5b66"/>
+  <text x="1000" y="416" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">年商10億未満（約80%）</text>
+  
+  <rect x="970" y="440" width="20" height="20" fill="#1a5b66" fill-opacity="0.3"/>
+  <text x="1000" y="456" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">年商10億以上（約20%）</text>
+  
+  <!-- 参加社数 -->
+  <text x="720" y="600" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">参加規模</text>
+  <rect x="720" y="610" width="120" height="2" fill="#1a5b66"/>
+  
+  <rect x="720" y="630" width="460" height="160" rx="5" fill="white" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="740" y="665" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+    <tspan x="740" dy="0">• 第一回：約20社程度（経営者層）</tspan>
+    <tspan x="740" dy="35">• 最終目標：30名規模のコミュニティ</tspan>
+    <tspan x="740" dy="35">• 完全招待制：質の高い参加者のみ</tspan>
+    <tspan x="740" dy="35">• 業種：IT企業、特にDX推進企業</tspan>
+  </text>
+  
+  <!-- 実践ポイント -->
+  <rect x="720" y="820" width="460" height="120" rx="5" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2"/>
+  <text x="740" y="850" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="bold" fill="#1a5b66">参加者の関心ポイント</text>
+  <text x="740" y="890" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+    <tspan x="740" dy="0">• 最新AI動向のキャッチアップ</tspan>
+    <tspan x="740" dy="30">• IT企業としての成長戦略</tspan>
+  </text>
+  
+  <!-- カラム3: 講師依頼の経緯 -->
+  <rect x="1360" y="180" width="480" height="60" fill="#653a5e"/>
+  <text x="1600" y="222" font-family="'Noto Serif JP', serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#f4f1ea" letter-spacing="0.05em">講師依頼の経緯</text>
+  
+  <!-- カラム3コンテンツ -->
+  <text x="1360" y="280" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">依頼に至る背景</text>
+  <rect x="1360" y="290" width="180" height="2" fill="#653a5e"/>
+  
+  <!-- 依頼経緯フロー図 -->
+  <rect x="1380" y="320" width="440" height="240" rx="5" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  
+  <!-- フロー図 -->
+  <rect x="1420" y="360" width="200" height="50" rx="5" fill="white" stroke="#653a5e" stroke-width="2"/>
+  <text x="1520" y="392" font-family="'Noto Sans JP', sans-serif" font-size="16" text-anchor="middle" fill="#2c2c2c">斉藤氏が佐藤氏の研修視聴</text>
+  
+  <!-- 矢印 -->
+  <path d="M 1520,410 L 1520,430 L 1530,430 L 1510,450 L 1490,430 L 1500,430 L 1500,410 Z" fill="#653a5e"/>
+  
+  <rect x="1420" y="450" width="200" height="50" rx="5" fill="white" stroke="#653a5e" stroke-width="2"/>
+  <text x="1520" y="482" font-family="'Noto Sans JP', sans-serif" font-size="16" text-anchor="middle" fill="#2c2c2c">研修内容への高評価</text>
+  
+  <!-- 矢印 -->
+  <path d="M 1520,500 L 1520,520 L 1530,520 L 1510,540 L 1490,520 L 1500,520 L 1500,500 Z" fill="#653a5e"/>
+  
+  <rect x="1600" y="390" width="200" height="80" rx="5" fill="#653a5e" fill-opacity="0.2" stroke="#653a5e" stroke-width="2"/>
+  <text x="1700" y="415" font-family="'Noto Sans JP', sans-serif" font-size="16" text-anchor="middle" fill="#2c2c2c">特に評価された点</text>
+  <text x="1700" y="445" font-family="'Noto Sans JP', sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">会話型AIの実用例</text>
+  <text x="1700" y="465" font-family="'Noto Sans JP', sans-serif" font-size="14" text-anchor="middle" fill="#2c2c2c">バディ・ペルソナ設定</text>
+  
+  <rect x="1420" y="540" width="200" height="50" rx="5" fill="#653a5e" fill-opacity="0.7"/>
+  <text x="1520" y="572" font-family="'Noto Sans JP', sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">講師としての依頼</text>
+  
+  <!-- 講師への期待 -->
+  <text x="1360" y="600" font-family="'Noto Sans JP', sans-serif" font-size="20" font-weight="bold" fill="#2c2c2c">講師への期待</text>
+  <rect x="1360" y="610" width="160" height="2" fill="#653a5e"/>
+  
+  <rect x="1360" y="630" width="460" height="160" rx="5" fill="white" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="1380" y="665" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c">
+    <tspan x="1380" dy="0">• 佐藤氏の実務経験に基づく知見</tspan>
+    <tspan x="1380" dy="35">• TANRENの成長ストーリー</tspan>
+    <tspan x="1380" dy="35">• 生成AIの実践的活用方法</tspan>
+    <tspan x="1380" dy="35">• 中小IT企業の現実に即した内容</tspan>
+  </text>
+  
+  <!-- 実践ポイント -->
+  <rect x="1360" y="820" width="460" height="120" rx="5" fill="#f4f1ea" stroke="#653a5e" stroke-width="2"/>
+  <text x="1380" y="850" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="bold" fill="#653a5e">依頼のポイント</text>
+  <text x="1380" y="890" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">
+    <tspan x="1380" dy="0">• 佐藤氏と富山氏に八子氏を介した接点</tspan>
+    <tspan x="1380" dy="30">• 講演+PRタイム+ネットワーキングの総合的価値</tspan>
+  </text>
+  
+  <!-- フッター -->
+  <text x="120" y="1060" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">02</text>
+  <text x="1800" y="1060" font-family="'Noto Sans JP', sans-serif" font-size="16" text-anchor="end" fill="#2c2c2c">IT系イノベーションフォーラム</text>
+</svg> 

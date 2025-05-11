@@ -1,0 +1,90 @@
+<svg width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1280" height="720" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1280" height="80" fill="#2c2c2c"/>
+  <text x="640" y="50" font-family="'Noto Serif JP', serif" font-size="28" fill="#f4f1ea" text-anchor="middle" letter-spacing="0.1em">本気で日本の営業を改革する</text>
+  <line x1="40" y1="80" x2="1240" y2="80" stroke="#b3322b" stroke-width="3"/>
+  
+  <!-- タイトル -->
+  <text x="640" y="130" font-family="'Noto Serif JP', serif" font-size="36" fill="#2c2c2c" text-anchor="middle" letter-spacing="0.05em">全体概要</text>
+  <line x1="540" y1="145" x2="740" y2="145" stroke="#653a5e" stroke-width="2"/>
+  <circle cx="540" cy="145" r="4" fill="#b3322b"/>
+  <circle cx="740" cy="145" r="4" fill="#b3322b"/>
+  
+  <!-- 3カラムレイアウト -->
+  <!-- 左カラム -->
+  <rect x="60" y="180" width="360" height="450" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1"/>
+  <text x="240" y="210" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#1a5b66" text-anchor="middle" font-weight="bold">本書の構成と特徴</text>
+  
+  <text x="80" y="240" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">構成の全体像</text>
+  <text x="80" y="270" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・序章：日本の営業生産性の現状分析</text>
+  <text x="80" y="295" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・第1章：営業慣習の問題点と課題</text>
+  <text x="80" y="320" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・第2章：データドリブン営業への転換</text>
+  <text x="80" y="345" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・第3章：営業の分業化と効率化</text>
+  <text x="80" y="370" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・第4章：AI活用と営業革命</text>
+  <text x="80" y="395" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・終章：営業改革の実践ロードマップ</text>
+  
+  <text x="80" y="435" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">本書の特徴</text>
+  <text x="80" y="465" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・理論と実践の融合</text>
+  <text x="80" y="490" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・物語形式による具体的事例提示</text>
+  <text x="80" y="515" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・自治体向け営業への特化</text>
+  <text x="80" y="540" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・中小企業でも実践可能な手法提案</text>
+  <text x="80" y="565" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・段階的な改革アプローチの提示</text>
+  
+  <!-- 中央カラム -->
+  <rect x="460" y="180" width="360" height="450" fill="#f4f1ea" stroke="#b3322b" stroke-width="1"/>
+  <text x="640" y="210" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#b3322b" text-anchor="middle" font-weight="bold">三位一体の改革アプローチ</text>
+  
+  <!-- 図形によるダイアグラム表現 -->
+  <circle cx="640" cy="280" r="60" fill="#f4f1ea" stroke="#b3322b" stroke-width="2"/>
+  <text x="640" y="285" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#b3322b" text-anchor="middle" font-weight="bold">営業改革</text>
+  
+  <circle cx="550" cy="390" r="50" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2"/>
+  <text x="550" y="385" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#1a5b66" text-anchor="middle">データ</text>
+  <text x="550" y="405" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#1a5b66" text-anchor="middle">活用</text>
+  
+  <circle cx="640" cy="460" r="50" fill="#f4f1ea" stroke="#b3322b" stroke-width="2"/>
+  <text x="640" y="455" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#b3322b" text-anchor="middle">分業化</text>
+  <text x="640" y="475" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#b3322b" text-anchor="middle">推進</text>
+  
+  <circle cx="730" cy="390" r="50" fill="#f4f1ea" stroke="#653a5e" stroke-width="2"/>
+  <text x="730" y="385" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#653a5e" text-anchor="middle">AI</text>
+  <text x="730" y="405" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#653a5e" text-anchor="middle">活用</text>
+  
+  <!-- 線による接続 -->
+  <line x1="595" y1="280" x2="556" y2="344" stroke="#1a5b66" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="640" y1="340" x2="640" y2="410" stroke="#b3322b" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="685" y1="280" x2="724" y2="344" stroke="#653a5e" stroke-width="1.5" stroke-dasharray="5,3"/>
+  
+  <text x="480" y="550" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="start" font-weight="bold">相乗効果</text>
+  <text x="480" y="575" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="start">データ×分業×AIの統合的推進が</text>
+  <text x="480" y="595" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="start">新しい営業像を創造する</text>
+  
+  <!-- 右カラム -->
+  <rect x="860" y="180" width="360" height="450" fill="#f4f1ea" stroke="#653a5e" stroke-width="1"/>
+  <text x="1040" y="210" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#653a5e" text-anchor="middle" font-weight="bold">対象読者と実践ポイント</text>
+  
+  <text x="880" y="240" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">主な対象読者</text>
+  <text x="880" y="270" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・中小企業の営業責任者</text>
+  <text x="880" y="295" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・自治体向け営業担当者</text>
+  <text x="880" y="320" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・営業改革に悩む経営者</text>
+  <text x="880" y="345" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・DX推進担当者</text>
+  <text x="880" y="370" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・自治体の調達担当者</text>
+  
+  <text x="880" y="410" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">実践ポイント</text>
+  <text x="880" y="440" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・段階的改革アプローチ</text>
+  <rect x="880" y="445" width="300" height="1" fill="#653a5e" stroke-width="0"/>
+  <text x="900" y="465" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">第1段階：データ収集と可視化</text>
+  <text x="900" y="485" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">第2段階：分業化の試験的導入</text>
+  <text x="900" y="505" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">第3段階：AIツールの活用開始</text>
+  <text x="900" y="525" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">第4段階：統合的推進と文化定着</text>
+  
+  <text x="880" y="555" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・全ての組織で今日から始められる</text>
+  <text x="880" y="580" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">・具体的な実践ツールと手法を提示</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="670" width="1280" height="50" fill="#2c2c2c"/>
+  <text x="640" y="700" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#f4f1ea" text-anchor="middle">「変革は今日から始まる。あなたの組織を変える第一歩を。」</text>
+</svg> 

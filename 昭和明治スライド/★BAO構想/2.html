@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日の会社の「見えない壁」- ビジネス・エージェント・オーケストレーター構想</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        :root {
+            --black: #2c2c2c;
+            --cream: #f4f1ea;
+            --red: #b3322b;
+            --blue: #1a5b66;
+            --purple: #653a5e;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--cream);
+            color: var(--black);
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .slide-title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            color: var(--black);
+            position: relative;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        .slide-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--red);
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .dot-red {
+            background-color: var(--red);
+        }
+        .dot-blue {
+            background-color: var(--blue);
+        }
+        .dot-purple {
+            background-color: var(--purple);
+        }
+        .challenge-box {
+            border: 2px solid var(--black);
+            background-color: white;
+            padding: 20px;
+            height: 100%;
+            position: relative;
+        }
+        .challenge-box::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--black);
+            z-index: -1;
+        }
+        .challenge-number {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 36px;
+            font-weight: 900;
+            line-height: 1;
+            margin-right: 15px;
+        }
+        .red-accent {
+            color: var(--red);
+        }
+        .blue-accent {
+            color: var(--blue);
+        }
+        .purple-accent {
+            color: var(--purple);
+        }
+        .wall-diagram {
+            position: relative;
+            height: 200px;
+            margin: 30px 0;
+        }
+        .wall {
+            position: absolute;
+            height: 150px;
+            width: 30px;
+            bottom: 0;
+            background-color: var(--black);
+        }
+        .wall-label {
+            position: absolute;
+            white-space: nowrap;
+            text-align: center;
+            font-size: 12px;
+            width: 120px;
+            transform: translateX(-45px);
+        }
+        .company {
+            position: absolute;
+            bottom: 30px;
+            right: 40px;
+            text-align: right;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+        .page-number {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <h1 class="slide-title text-4xl mb-6">今日の会社の「見えない壁」</h1>
+        
+        <div class="flex justify-center items-center mb-4">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-blue"></span>
+            <span class="dot dot-purple"></span>
+        </div>
+        
+        <p class="text-xl mb-8">現代の企業経営が抱える課題は、会社の成長を妨げる「<span class="font-bold">見えない壁</span>」となっています。<br>なぜBAO構想が必要なのか — その背景にある４つの経営課題</p>
+        
+        <div class="grid grid-cols-2 gap-8 mb-6">
+            <div class="challenge-box">
+                <div class="flex items-start">
+                    <div class="challenge-number red-accent">1</div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">部門間の壁（サイロ化）</h3>
+                        <p class="mb-2">マーケティング、営業、開発、サポートなど各部門の情報共有が不十分</p>
+                        <p class="text-sm italic">「隣の部署が何をやっているか分からない」状態では会社全体の最適化が困難に</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="challenge-box">
+                <div class="flex items-start">
+                    <div class="challenge-number blue-accent">2</div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">人間の限界</h3>
+                        <p class="mb-2">処理できる情報量やタスク数に上限がある</p>
+                        <p class="text-sm italic">市場変化の加速に対して、人間の処理速度が追いつかなくなっている</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="challenge-box">
+                <div class="flex items-start">
+                    <div class="challenge-number purple-accent">3</div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">人材採用と育成の難しさ</h3>
+                        <p class="mb-2">優秀な人材の確保と教育には膨大なコストと時間が必要</p>
+                        <p class="text-sm italic">特にスタートアップや新規事業では大きな障壁となる</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="challenge-box">
+                <div class="flex items-start">
+                    <div class="challenge-number red-accent">4</div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-2">意思決定の遅れ</h3>
+                        <p class="mb-2">情報収集→分析→会議→決定のプロセスが長すぎる</p>
+                        <p class="text-sm italic">変化の速い市場では、この遅延がチャンスの喪失につながる</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="wall-diagram flex justify-center">
+            <div class="relative w-full flex justify-between items-end">
+                <div style="left: 15%;" class="wall"></div>
+                <div style="left: 15%;" class="wall-label mt-3">
+                    <span class="red-accent font-bold">サイロ化</span><br>
+                    情報の分断
+                </div>
+                
+                <div style="left: 38%;" class="wall"></div>
+                <div style="left: 38%;" class="wall-label mt-3">
+                    <span class="blue-accent font-bold">人間の限界</span><br>
+                    処理能力の制約
+                </div>
+                
+                <div style="left: 62%;" class="wall"></div>
+                <div style="left: 62%;" class="wall-label mt-3">
+                    <span class="purple-accent font-bold">人材問題</span><br>
+                    採用・育成の壁
+                </div>
+                
+                <div style="left: 85%;" class="wall"></div>
+                <div style="left: 85%;" class="wall-label mt-3">
+                    <span class="red-accent font-bold">意思決定</span><br>
+                    スピードの遅さ
+                </div>
+                
+                <div class="absolute bottom-0 w-full h-5 bg-black"></div>
+                
+                <div class="absolute left-0 bottom-10 text-right pr-10">
+                    <span class="font-bold">ビジネスの成長</span>
+                </div>
+                
+                <div class="absolute right-0 bottom-10 text-left pl-10">
+                    <span class="font-bold">未来のポテンシャル</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white p-5 border-2 border-black mt-4 mx-auto max-w-3xl">
+            <p class="text-center text-lg">
+                BAO構想は、これらの「見えない壁」を<span class="font-bold">AI技術によって解体し</span>、<br>
+                <span class="red-accent font-bold">企業の成長とイノベーションを加速させる</span>新しい経営システムです
+            </p>
+        </div>
+        
+        <div class="company">
+            <p>TANREN株式会社</p>
+        </div>
+        
+        <div class="page-number">2 / 12</div>
+    </div>
+    
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

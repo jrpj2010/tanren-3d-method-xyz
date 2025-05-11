@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIエージェントのレベル比較まとめ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a2463 0%, #1e50a2 50%, #0f2984 100%);
+            color: #ffffff;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            padding: 25px 40px 15px;
+            background: rgba(10, 36, 99, 0.6);
+            border-bottom: 2px solid rgba(192, 224, 222, 0.3);
+        }
+        .content {
+            padding: 30px 40px;
+        }
+        .title {
+            font-size: 2.3rem;
+            font-weight: 900;
+            margin: 0;
+            text-align: center;
+            background: linear-gradient(45deg, #ffffff, #c0e0de);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .grid-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+            margin: 0 auto;
+        }
+        .comparison-table th {
+            font-weight: bold;
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 1rem;
+        }
+        .comparison-table th:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+        .comparison-table th:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+        .level-row {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: scale(1);
+            transition: all 0.3s ease;
+        }
+        .level-row:hover {
+            transform: scale(1.01);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        .level-row td {
+            padding: 15px;
+            vertical-align: middle;
+            font-size: 0.9rem;
+        }
+        .level-row td:first-child {
+            border-radius: 10px 0 0 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            width: 15%;
+        }
+        .level-row td:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+        .level-0-5 td {
+            background: rgba(102, 199, 244, 0.15);
+            border-bottom: 2px solid rgba(102, 199, 244, 0.5);
+        }
+        .level-1 td {
+            background: rgba(90, 122, 184, 0.15);
+            border-bottom: 2px solid rgba(90, 122, 184, 0.5);
+        }
+        .level-2 td {
+            background: rgba(79, 117, 232, 0.15);
+            border-bottom: 2px solid rgba(79, 117, 232, 0.5);
+        }
+        .level-3 td {
+            background: rgba(58, 76, 215, 0.15);
+            border-bottom: 2px solid rgba(58, 76, 215, 0.5);
+        }
+        .level-badge {
+            display: inline-block;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+            font-weight: normal;
+        }
+        .badge-0-5 {
+            background: linear-gradient(135deg, #66c7f4, #41b6e6);
+        }
+        .badge-1 {
+            background: linear-gradient(135deg, #4d85bd, #5a7ab8);
+        }
+        .badge-2 {
+            background: linear-gradient(135deg, #3351a5, #2e4ba1);
+        }
+        .badge-3 {
+            background: linear-gradient(135deg, #2d3ec1, #3a4cd7);
+        }
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .feature-list i {
+            margin-right: 8px;
+            width: 16px;
+            text-align: center;
+        }
+        .examples {
+            font-size: 0.85rem;
+        }
+        .example-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3px 8px;
+            border-radius: 12px;
+            margin: 2px;
+            font-size: 0.8rem;
+        }
+        .action-text {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .message-box {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px auto 0;
+            max-width: 90%;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .next-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(58, 76, 215, 0.2);
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+        }
+        .next-section::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid rgba(58, 76, 215, 0.2);
+        }
+        .stair-icon {
+            display: inline-block;
+            font-size: 2.5rem;
+            margin: 0 10px;
+            vertical-align: middle;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .highlight-text {
+            font-weight: bold;
+            color: #8792ff;
+        }
+        .level-name {
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="grid-pattern"></div>
+        <header class="header">
+            <h1 class="title">まとめ：レベルを知り、AIと共に進化の階段を駆け上がれ！</h1>
+        </header>
+        <div class="content">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>レベル</th>
+                        <th>特徴</th>
+                        <th>代表例/機能</th>
+                        <th>あなたへのアクション</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- レベル0.5 -->
+                    <tr class="level-row level-0-5">
+                        <td class="text-center">
+                            <span class="level-badge badge-0-5">レベル 0.5</span>
+                            <div class="level-name">カスタムAI<br>一撃回答</div>
+                        </td>
+                        <td>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle text-blue-300"></i> 特定目的に特化した指示と知識ベース</li>
+                                <li><i class="fas fa-check-circle text-blue-300"></i> 自律性は限定的（指示待ち）</li>
+                                <li><i class="fas fa-check-circle text-blue-300"></i> AIエージェント世界の「入口」</li>
+                            </ul>
+                        </td>
+                        <td class="examples">
+                            <div class="flex flex-wrap">
+                                <span class="example-tag"><i class="fab fa-openai mr-1"></i> GPTs</span>
+                                <span class="example-tag"><i class="fab fa-google mr-1"></i> NotebookLM</span>
+                                <span class="example-tag"><i class="fas fa-user-tie mr-1"></i> AI伊藤羊一</span>
+                                <span class="example-tag"><i class="fas fa-female mr-1"></i> AI秘書</span>
+                            </div>
+                        </td>
+                        <td class="action-text">
+                            <i class="fas fa-angle-right text-blue-300 mr-1"></i> まず作ってみる！<br>
+                            <i class="fas fa-angle-right text-blue-300 mr-1"></i> 基本原理を学ぶ！
+                        </td>
+                    </tr>
+                    
+                    <!-- レベル1 -->
+                    <tr class="level-row level-1">
+                        <td class="text-center">
+                            <span class="level-badge badge-1">レベル 1</span>
+                            <div class="level-name">Deep Research<br>情報収集</div>
+                        </td>
+                        <td>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle text-blue-400"></i> 外部情報を能動的に収集・分析</li>
+                                <li><i class="fas fa-check-circle text-blue-400"></i> 「知の探索の自動化」</li>
+                                <li><i class="fas fa-exclamation-triangle text-yellow-300"></i> 情報の信頼性に注意</li>
+                            </ul>
+                        </td>
+                        <td class="examples">
+                            <div class="flex flex-wrap">
+                                <span class="example-tag"><i class="fab fa-searchengin mr-1"></i> ChatGPT Browse</span>
+                                <span class="example-tag"><i class="fab fa-google mr-1"></i> Gemini</span>
+                                <span class="example-tag"><i class="fas fa-search mr-1"></i> Perplexity AI</span>
+                                <span class="example-tag"><i class="fas fa-project-diagram mr-1"></i> Dify</span>
+                            </div>
+                        </td>
+                        <td class="action-text">
+                            <i class="fas fa-angle-right text-blue-400 mr-1"></i> ファクトチェック！<br>
+                            <i class="fas fa-angle-right text-blue-400 mr-1"></i> 情報リテラシーを鍛える！
+                        </td>
+                    </tr>
+                    
+                    <!-- レベル2 -->
+                    <tr class="level-row level-2">
+                        <td class="text-center">
+                            <span class="level-badge badge-2">レベル 2</span>
+                            <div class="level-name">自律型<br>専門特化</div>
+                        </td>
+                        <td>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle text-indigo-400"></i> 本格的な「自律性」を持つ</li>
+                                <li><i class="fas fa-check-circle text-indigo-400"></i> 計画から完了まで自律的に処理</li>
+                                <li><i class="fas fa-check-circle text-indigo-400"></i> 特定分野に専門特化（バーティカル）</li>
+                            </ul>
+                        </td>
+                        <td class="examples">
+                            <div class="flex flex-wrap">
+                                <span class="example-tag"><i class="fas fa-code mr-1"></i> Devin</span>
+                                <span class="example-tag"><i class="fas fa-bolt mr-1"></i> 神威/KAMUI</span>
+                                <span class="example-tag"><i class="fas fa-ad mr-1"></i> マーケティングAI</span>
+                                <span class="example-tag"><i class="fas fa-pen-fancy mr-1"></i> クリエイティブAI</span>
+                            </div>
+                        </td>
+                        <td class="action-text">
+                            <i class="fas fa-angle-right text-indigo-400 mr-1"></i> 自分の分野のエージェントを探す！<br>
+                            <i class="fas fa-angle-right text-indigo-400 mr-1"></i> 使いこなす準備を始める！
+                        </td>
+                    </tr>
+                    
+                    <!-- レベル3 -->
+                    <tr class="level-row level-3">
+                        <td class="text-center">
+                            <span class="level-badge badge-3">レベル 3</span>
+                            <div class="level-name">完全オーケストレート<br>共創</div>
+                        </td>
+                        <td>
+                            <ul class="feature-list">
+                                <li><i class="fas fa-check-circle text-indigo-500"></i> あらゆる知的活動領域に対応</li>
+                                <li><i class="fas fa-check-circle text-indigo-500"></i> 複数機能を指揮者のように統合</li>
+                                <li><i class="fas fa-check-circle text-indigo-500"></i> 「自分専用の知識フォルダ」と連携</li>
+                            </ul>
+                        </td>
+                        <td class="examples">
+                            <div class="flex flex-wrap">
+                                <span class="example-tag"><i class="fas fa-magic mr-1"></i> Manus AI</span>
+                                <span class="example-tag"><i class="fas fa-brain mr-1"></i> Genspark AI</span>
+                                <span class="example-tag"><i class="fas fa-clock mr-1"></i> 現状: Lv 2.5</span>
+                            </div>
+                        </td>
+                        <td class="action-text">
+                            <i class="fas fa-angle-right text-indigo-500 mr-1"></i> 思考OSを磨く！<br>
+                            <i class="fas fa-angle-right text-indigo-500 mr-1"></i> 知識フォルダを育てる！
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="message-box">
+                <p class="text-lg">
+                    <i class="fas fa-stairs text-white opacity-70 stair-icon"></i>
+                    <span class="highlight-text">AIと共に進化の階段を駆け上がるために重要なこと</span>
+                    <i class="fas fa-stairs text-white opacity-70 stair-icon fa-flip-horizontal"></i>
+                </p>
+                <p>各レベルの特性と限界を理解し、<span class="highlight-text">自分の目的やスキルレベル</span>に合わせて<br>
+                最適なAIエージェントを<span class="highlight-text">戦略的に活用</span>していくこと</p>
+                
+                <div class="next-section">
+                    <p class="mb-0">
+                        <i class="fas fa-arrow-circle-right mr-2"></i>
+                        <span class="text-lg font-bold">次の第5章、第6章では</span>
+                    </p>
+                    <p class="mb-0 text-sm">
+                        AIエージェント活用術を、企画・文章・資料作成、営業・マーケティングといった<br>
+                        <span class="highlight-text">具体的なビジネスシーン</span>での実践例を通じて探求します
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

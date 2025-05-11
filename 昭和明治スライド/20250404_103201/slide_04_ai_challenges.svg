@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c"/>
+  <text x="60" y="65" font-family="'Noto Serif JP', serif" font-size="40" fill="#f4f1ea" letter-spacing="2">企業AI導入の課題と対策</text>
+  <text x="1700" y="65" font-family="'Noto Sans JP', sans-serif" font-size="24" fill="#f4f1ea">2025.04.18</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c"/>
+  <text x="60" y="1060" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#f4f1ea">マーシュ・マーサージャパン社内セミナー</text>
+  <text x="1700" y="1060" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#f4f1ea">4/5</text>
+  
+  <!-- 装飾ライン -->
+  <line x1="60" y1="120" x2="1860" y2="120" stroke="#b3322b" stroke-width="2"/>
+  <circle cx="960" cy="120" r="4" fill="#b3322b"/>
+  
+  <!-- カラム1 -->
+  <rect x="60" y="150" width="580" height="850" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="60" y="150" width="580" height="60" fill="#b3322b"/>
+  <text x="80" y="190" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea" letter-spacing="1">セキュリティと情報管理</text>
+  
+  <!-- カラム1コンテンツ -->
+  <text x="80" y="240" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🔒 企業のセキュリティ懸念</text>
+  <text x="80" y="280" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="80" dy="0">• 社内データの外部AIへの送信リスク</tspan>
+    <tspan x="80" dy="30">• 顧客情報等の機密データ保護</tspan>
+    <tspan x="80" dy="30">• 大企業ほどアクセス制限が厳格に</tspan>
+  </text>
+  
+  <!-- 情報区分図 -->
+  <rect x="80" y="350" width="540" height="240" fill="#f9f7f2" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="100" y="375" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">情報区分によるAIツール利用基準</text>
+  
+  <!-- 区分表 -->
+  <rect x="100" y="390" width="150" height="40" fill="#b3322b" fill-opacity="0.1"/>
+  <rect x="250" y="390" width="170" height="40" fill="#b3322b" fill-opacity="0.1"/>
+  <rect x="420" y="390" width="180" height="40" fill="#b3322b" fill-opacity="0.1"/>
+  
+  <text x="130" y="415" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">情報区分</text>
+  <text x="310" y="415" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">特徴</text>
+  <text x="490" y="415" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">適切なツール</text>
+  
+  <!-- 区分1: パブリック情報 -->
+  <rect x="100" y="430" width="150" height="50" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="110" y="460" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">パブリック情報</text>
+  
+  <rect x="250" y="430" width="170" height="50" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="260" y="450" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="260" dy="0">Web上に公開済みの情報</tspan>
+    <tspan x="260" dy="20">企業概要、IR情報など</tspan>
+  </text>
+  
+  <rect x="420" y="430" width="180" height="50" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="430" y="450" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="430" dy="0">外部クラウドAI</tspan>
+    <tspan x="430" dy="20">Perplexity, GenSparkなど</tspan>
+  </text>
+  
+  <!-- 区分2: 社内一般情報 -->
+  <rect x="100" y="480" width="150" height="50" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="110" y="510" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">社内一般情報</text>
+  
+  <rect x="250" y="480" width="170" height="50" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="260" y="500" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="260" dy="0">業務マニュアル</tspan>
+    <tspan x="260" dy="20">社内会議議事録など</tspan>
+  </text>
+  
+  <rect x="420" y="480" width="180" height="50" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="430" y="500" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="430" dy="0">企業契約AIサービス</tspan>
+    <tspan x="430" dy="20">Microsoft 365 CoPilot</tspan>
+  </text>
+  
+  <!-- 区分3: 機密情報 -->
+  <rect x="100" y="530" width="150" height="50" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="110" y="560" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#2c2c2c">機密情報</text>
+  
+  <rect x="250" y="530" width="170" height="50" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="260" y="550" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="260" dy="0">顧客情報、個人情報</tspan>
+    <tspan x="260" dy="20">商品開発情報など</tspan>
+  </text>
+  
+  <rect x="420" y="530" width="180" height="50" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="430" y="550" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="430" dy="0">自社環境内AI</tspan>
+    <tspan x="430" dy="20">オンプレミスLLM</tspan>
+  </text>
+  
+  <text x="80" y="630" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🛡️ 柔軟かつ安全な対応策</text>
+  <text x="80" y="670" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="80" dy="0">• 情報区分ごとのAI利用ポリシー策定</tspan>
+    <tspan x="80" dy="30">• 検証用の分離環境（Bサーバー）構築</tspan>
+    <tspan x="80" dy="30">• パブリック情報と機密情報の分離処理</tspan>
+  </text>
+  
+  <!-- 実践ポイント -->
+  <rect x="80" y="770" width="540" height="150" fill="#f9f7f2" stroke="#b3322b" stroke-width="2"/>
+  <text x="100" y="800" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">情報セキュリティ対策のステップ</text>
+  <text x="100" y="840" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="100" dy="0">1. 情報区分の明確化と社内周知</tspan>
+    <tspan x="100" dy="30">2. AIツール利用ガイドラインの策定</tspan>
+    <tspan x="100" dy="30">3. 社長直轄のAI推進チーム編成</tspan>
+    <tspan x="100" dy="30">4. 専門アドバイザーによる定期レビュー</tspan>
+  </text>
+  
+  <!-- カラム2 -->
+  <rect x="670" y="150" width="580" height="850" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="670" y="150" width="580" height="60" fill="#1a5b66"/>
+  <text x="690" y="190" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea" letter-spacing="1">社内リテラシー格差と対応</text>
+  
+  <!-- カラム2コンテンツ -->
+  <text x="690" y="240" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🎭 二極化する社内AI活用</text>
+  <text x="690" y="280" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="690" dy="0">• 社内でAIリテラシーの格差が拡大中</tspan>
+    <tspan x="690" dy="30">• 学習意欲と基本ITスキルが成功要因</tspan>
+    <tspan x="690" dy="30">• 勉強会も参加者の関心に大きな差</tspan>
+  </text>
+  
+  <!-- ユーザー層の図 -->
+  <rect x="690" y="350" width="540" height="260" fill="#f9f7f2" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="710" y="375" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">AIユーザー層の3分類</text>
+  
+  <!-- 図: ピラミッド -->
+  <polygon points="960,390 820,550 1100,550" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1.5"/>
+  
+  <!-- C層（上位） -->
+  <polygon points="960,390 910,440 1010,440" fill="#653a5e" fill-opacity="0.6" stroke="none"/>
+  <text x="960" y="425" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">C層</text>
+  <line x1="1010" y1="440" x2="1070" y2="430" stroke="#2c2c2c" stroke-width="1.5"/>
+  <text x="1080" y="435" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">ヘビーユーザー (5%)</text>
+  
+  <!-- B層（中間） -->
+  <polygon points="910,440 870,490 1050,490 1010,440" fill="#1a5b66" fill-opacity="0.6" stroke="none"/>
+  <text x="960" y="470" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">B層</text>
+  <line x1="1050" y1="490" x2="1070" y2="490" stroke="#2c2c2c" stroke-width="1.5"/>
+  <text x="1080" y="495" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">中間層 (20%)</text>
+  
+  <!-- A層（初心者） -->
+  <polygon points="870,490 820,550 1100,550 1050,490" fill="#b3322b" fill-opacity="0.6" stroke="none"/>
+  <text x="960" y="530" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">A層</text>
+  <line x1="1100" y1="550" x2="1120" y2="550" stroke="#2c2c2c" stroke-width="1.5"/>
+  <text x="1130" y="555" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">初心者層 (75%)</text>
+  
+  <!-- ユーザー特性 -->
+  <rect x="710" y="570" width="150" height="30" fill="#653a5e" fill-opacity="0.6"/>
+  <text x="780" y="590" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">C層特性</text>
+  <text x="720" y="620" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="720" dy="0">• 月10万円超の投資</tspan>
+    <tspan x="720" dy="20">• 複数AIの使い分け</tspan>
+  </text>
+  
+  <rect x="870" y="570" width="150" height="30" fill="#1a5b66" fill-opacity="0.6"/>
+  <text x="940" y="590" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">B層特性</text>
+  <text x="880" y="620" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="880" dy="0">• 月数千円の投資</tspan>
+    <tspan x="880" dy="20">• 特定目的で活用</tspan>
+  </text>
+  
+  <rect x="1030" y="570" width="150" height="30" fill="#b3322b" fill-opacity="0.6"/>
+  <text x="1100" y="590" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">A層特性</text>
+  <text x="1040" y="620" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">
+    <tspan x="1040" dy="0">• 無料版のみ利用</tspan>
+    <tspan x="1040" dy="20">• 基本操作に不安</tspan>
+  </text>
+  
+  <text x="690" y="670" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🎯 効果的な社内普及策</text>
+  <text x="690" y="710" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="690" dy="0">• 層別のAI研修プログラム設計</tspan>
+    <tspan x="690" dy="30">• AI活用アンバサダー制度の導入</tspan>
+    <tspan x="690" dy="30">• 部門別のAI導入成功事例共有</tspan>
+  </text>
+  
+  <!-- 実践ポイント -->
+  <rect x="690" y="790" width="540" height="130" fill="#f9f7f2" stroke="#1a5b66" stroke-width="2"/>
+  <text x="710" y="820" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">普及促進の3つのアプローチ</text>
+  <text x="710" y="860" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="710" dy="0">1. 業務課題起点: 具体的な業務効率化から導入</tspan>
+    <tspan x="710" dy="30">2. 拠点起点: 特定部門での成功事例を横展開</tspan>
+    <tspan x="710" dy="30">3. 人材起点: ITリテラシー高い人材から波及</tspan>
+  </text>
+  
+  <!-- カラム3 -->
+  <rect x="1280" y="150" width="580" height="850" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="1280" y="150" width="580" height="60" fill="#653a5e"/>
+  <text x="1300" y="190" font-family="'Noto Serif JP', serif" font-size="24" fill="#f4f1ea" letter-spacing="1">最新技術へのキャッチアップ</text>
+  
+  <!-- カラム3コンテンツ -->
+  <text x="1300" y="240" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">⚡ 技術進化への対応課題</text>
+  <text x="1300" y="280" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="1300" dy="0">• AIの急速な進化に追いつけない危機感</tspan>
+    <tspan x="1300" dy="30">• 特定技術への固定化（ロックイン）リスク</tspan>
+    <tspan x="1300" dy="30">• 社内での最新情報キャッチアップの限界</tspan>
+  </text>
+  
+  <!-- キャッチアップ戦略図 -->
+  <rect x="1300" y="350" width="540" height="240" fill="#f9f7f2" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="1320" y="375" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" font-weight="bold">効果的なキャッチアップ戦略</text>
+  
+  <!-- 戦略マトリックス -->
+  <line x1="1350" y1="400" x2="1350" y2="550" stroke="#2c2c2c" stroke-width="2"/>
+  <line x1="1350" y1="475" x2="1790" y2="475" stroke="#2c2c2c" stroke-width="2"/>
+  
+  <!-- 象限ラベル -->
+  <text x="1400" y="430" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">フロー情報</text>
+  <text x="1400" y="520" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" font-weight="bold">ストック情報</text>
+  <text x="1320" y="440" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" transform="rotate(-90, 1320, 440)">社内リソース</text>
+  <text x="1320" y="520" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" transform="rotate(-90, 1320, 520)">外部リソース</text>
+  
+  <!-- 戦略要素 -->
+  <circle cx="1450" cy="435" r="20" fill="#653a5e" fill-opacity="0.7"/>
+  <text x="1450" y="440" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">研究会</text>
+  <text x="1480" y="435" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">月次社内AI研究会</text>
+  
+  <circle cx="1650" cy="425" r="25" fill="#b3322b" fill-opacity="0.7"/>
+  <text x="1650" y="430" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">セミナー</text>
+  <text x="1685" y="425" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">外部専門家セミナー</text>
+  
+  <circle cx="1450" cy="525" r="25" fill="#1a5b66" fill-opacity="0.7"/>
+  <text x="1450" y="530" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">アドバイザー</text>
+  <text x="1485" y="525" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">外部アドバイザー契約</text>
+  
+  <circle cx="1700" cy="515" r="20" fill="#653a5e" fill-opacity="0.7"/>
+  <text x="1700" y="520" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">コア選定</text>
+  <text x="1730" y="515" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">コア技術の厳選</text>
+  
+  <text x="1300" y="620" font-family="'Noto Sans JP', sans-serif" font-size="20" fill="#2c2c2c" font-weight="bold">🧠 戦略的AI技術選定</text>
+  <text x="1300" y="660" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="1300" dy="0">• 週次/月次での定期動向レビュー</tspan>
+    <tspan x="1300" dy="30">• 安定評価の高いコア技術の見極め</tspan>
+    <tspan x="1300" dy="30">• 横串のある技術選定アプローチ</tspan>
+  </text>
+  
+  <!-- 実践ポイント -->
+  <rect x="1300" y="760" width="540" height="160" fill="#f9f7f2" stroke="#653a5e" stroke-width="2"/>
+  <text x="1320" y="790" font-family="'Noto Sans JP', sans-serif" font-size="18" fill="#2c2c2c" font-weight="bold">主要AIモデルの選択ガイド</text>
+  <text x="1320" y="830" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" line-height="1.5">
+    <tspan x="1320" dy="0">• Claude: マニア層/玄人向け</tspan>
+    <tspan x="1320" dy="30">• Gemini: 最先端志向/スタートアップ向け</tspan>
+    <tspan x="1320" dy="30">• ChatGPT: 安心安全/初学者向け</tspan>
+    <tspan x="1320" dy="30">• 上級者: 用途に応じた使い分け</tspan>
+  </text>
+</svg> 

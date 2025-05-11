@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>次世代プレゼン作成：4ステップ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #2c3e50 0%, #4a69bd 50%, #6c5ce7 100%);
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide-header {
+            margin-bottom: 20px;
+        }
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #ffffff, #e0e0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .step-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            height: 280px;
+        }
+        .step-number {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 3rem;
+            font-weight: 900;
+            opacity: 0.2;
+            color: #a29bfe;
+        }
+        .step-icon-container {
+            width: 60px;
+            height: 60px;
+            background: rgba(162, 155, 254, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        .step-icon {
+            font-size: 1.8rem;
+            color: white;
+        }
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .step-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .step-details {
+            margin-left: 15px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+            line-height: 1.3;
+        }
+        .step-details li {
+            margin-bottom: 6px;
+            list-style-type: disc;
+        }
+        .key-point {
+            background: rgba(108, 92, 231, 0.3);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            margin-top: auto;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        .key-point i {
+            margin-right: 8px;
+            color: #a29bfe;
+        }
+        .axes-container {
+            display: flex;
+            margin-top: 20px;
+            gap: 30px;
+        }
+        .axis-box {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            position: relative;
+        }
+        .axis-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .axis-title i {
+            margin-right: 10px;
+            color: #a29bfe;
+        }
+        .axis-container {
+            height: 100px;
+            position: relative;
+            margin-bottom: 5px;
+        }
+        .axis-point {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100px;
+        }
+        .axis-circle {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: white;
+            margin-bottom: 5px;
+        }
+        .axis-label {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        .axis-desc {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            max-width: 100px;
+            line-height: 1.2;
+        }
+        .motto {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-top: 20px;
+            padding: 10px;
+            background: linear-gradient(90deg, rgba(162, 155, 254, 0.3), rgba(108, 92, 231, 0.3));
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-header">
+            <h1 class="slide-title">次世代プレゼン作成：4ステップ</h1>
+        </div>
+        
+        <div class="steps-container">
+            <!-- ステップ1 -->
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-icon-container">
+                    <i class="fas fa-pencil-ruler step-icon"></i>
+                </div>
+                <div class="step-title">AIへの「設計指示」</div>
+                <div class="step-description">
+                    目的・構成・デザインルールの明確化
+                </div>
+                <ul class="step-details">
+                    <li>目的・テーマの明確化</li>
+                    <li>スライド構成の指示</li>
+                    <li>デザインルール定義（配色・フォント）</li>
+                    <li>出力形式の指定</li>
+                </ul>
+                <div class="key-point">
+                    <i class="fas fa-lightbulb"></i>
+                    X軸（超構造化）が重要
+                </div>
+            </div>
+            
+            <!-- ステップ2 -->
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-icon-container">
+                    <i class="fas fa-code step-icon"></i>
+                </div>
+                <div class="step-title">AIによる「コード生成」</div>
+                <div class="step-description">
+                    設計図からSVG/HTMLコードを構築
+                </div>
+                <ul class="step-details">
+                    <li>AIがコンテンツを抽出・配置</li>
+                    <li>SVG/HTMLコードの自動生成</li>
+                    <li>デザイン要素の適用</li>
+                    <li>AIエディタでの効率化</li>
+                </ul>
+                <div class="key-point">
+                    <i class="fas fa-magic"></i>
+                    コード生成AIの活用
+                </div>
+            </div>
+            
+            <!-- ステップ3 -->
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-icon-container">
+                    <i class="fas fa-paint-brush step-icon"></i>
+                </div>
+                <div class="step-title">人間による「最終調整」</div>
+                <div class="step-description">
+                    AI生成物に魂を吹き込む
+                </div>
+                <ul class="step-details">
+                    <li>デザインツールでの微調整</li>
+                    <li>視覚要素の最適化</li>
+                    <li>AIとの協調編集</li>
+                    <li>人間の美的感覚の注入</li>
+                </ul>
+                <div class="key-point">
+                    <i class="fas fa-heart"></i>
+                    人間の創造性が差別化に
+                </div>
+            </div>
+            
+            <!-- ステップ4 -->
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-icon-container">
+                    <i class="fas fa-share-alt step-icon"></i>
+                </div>
+                <div class="step-title">「届ける」</div>
+                <div class="step-description">
+                    プラットフォームフリーな体験提供
+                </div>
+                <ul class="step-details">
+                    <li>ブラウザ対応の普遍性</li>
+                    <li>インタラクティブ要素の活用</li>
+                    <li>データ連動の動的コンテンツ</li>
+                    <li>共有・配布の容易さ</li>
+                </ul>
+                <div class="key-point">
+                    <i class="fas fa-rocket"></i>
+                    表現の自由度の拡大
+                </div>
+            </div>
+        </div>
+        
+        <div class="axes-container">
+            <!-- 時間軸（Y軸） -->
+            <div class="axis-box">
+                <div class="axis-title">
+                    <i class="fas fa-clock"></i>
+                    Y軸（時間軸）で見るプレゼンの進化
+                </div>
+                <div class="axis-container">
+                    <div class="mermaid">
+                        flowchart LR
+                        A[過去] --> B[現在] --> C[未来]
+                        style A fill:#4a69bd,color:#fff
+                        style B fill:#6c5ce7,color:#fff
+                        style C fill:#a29bfe,color:#fff
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; text-align: center; padding: 0 10px;">
+                    <div style="flex: 1;">
+                        <div style="font-weight: bold;">過去</div>
+                        <div style="font-size: 0.85rem; opacity: 0.8;">手書きフリップ</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: bold;">現在</div>
+                        <div style="font-size: 0.85rem; opacity: 0.8;">PowerPoint編集<br>→生成へ移行中</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: bold;">未来</div>
+                        <div style="font-size: 0.85rem; opacity: 0.8;">リアルタイム最適化<br>AR/VR空間プレゼン</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- レベル軸（Z軸） -->
+            <div class="axis-box">
+                <div class="axis-title">
+                    <i class="fas fa-layer-group"></i>
+                    Z軸（レベル）で見るAIとの共創
+                </div>
+                <div class="axis-container">
+                    <div class="mermaid">
+                        flowchart LR
+                        A[Lv1 初級] --> B[Lv2 中級] --> C[Lv3 上級]
+                        style A fill:#4a69bd,color:#fff
+                        style B fill:#6c5ce7,color:#fff
+                        style C fill:#a29bfe,color:#fff
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; text-align: center; padding: 0 10px;">
+                    <div style="flex: 1;">
+                        <div style="font-weight: bold;">Lv1</div>
+                        <div style="font-size: 0.85rem; opacity: 0.8;">AIにテキスト案・<br>構成案を依頼</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: bold;">Lv2</div>
+                        <div style="font-size: 0.85rem; opacity: 0.8;">SVG/HTMLコードを<br>生成・調整</div>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: bold;">Lv3</div>
+                        <div style="font-size: 0.85rem; opacity: 0.8;">インタラクティブな<br>次世代コンテンツ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="motto">
+            <i class="fas fa-quote-left" style="margin-right: 10px; opacity: 0.6;"></i>
+            編集からの解放、共創による革新
+            <i class="fas fa-quote-right" style="margin-left: 10px; opacity: 0.6;"></i>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'dark',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true,
+                    curve: 'linear'
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>企画立案を「超」加速</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #2c3e50 0%, #4a69bd 50%, #6c5ce7 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide-content {
+            padding: 25px 30px;
+            flex: 1;
+            display: flex;
+        }
+        .left-section {
+            width: 50%;
+            padding-right: 20px;
+        }
+        .right-section {
+            width: 50%;
+            padding-left: 20px;
+            border-left: 2px solid rgba(255,255,255,0.2);
+        }
+        .slide-number {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 5px;
+        }
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+            background: linear-gradient(90deg, #ffffff, #d9d3ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .slide-subtitle {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            opacity: 0.85;
+        }
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #a29bfe;
+            border-bottom: 2px solid #a29bfe;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        .challenges-list {
+            margin-bottom: 15px;
+        }
+        .challenge-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 8px 12px;
+        }
+        .challenge-icon {
+            margin-right: 12px;
+            font-size: 1.1rem;
+            color: #a29bfe;
+        }
+        .challenge-text {
+            font-size: 1rem;
+        }
+        .essence-card {
+            background: rgba(255,255,255,0.12);
+            border-radius: 12px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-left: 3px solid #a29bfe;
+        }
+        .essence-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+        }
+        .essence-icon {
+            background: #a29bfe;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+        .essence-desc {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .collaboration-visual {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        .human-icon, .ai-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .human-icon {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+        }
+        .ai-icon {
+            background: linear-gradient(135deg, #6c5ce7, #4834d4);
+        }
+        .icon-label {
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 6px;
+        }
+        .connection {
+            height: 5px;
+            width: 150px;
+            background: linear-gradient(90deg, #fd79a8, #6c5ce7);
+            margin: 0 -8px;
+            align-self: center;
+            position: relative;
+            border-radius: 3px;
+        }
+        .connection::before, .connection::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+            top: -3px;
+        }
+        .connection::before {
+            left: 5px;
+        }
+        .connection::after {
+            right: 5px;
+        }
+        .icon-inner {
+            font-size: 2rem;
+            color: white;
+        }
+        .highlight-text {
+            font-weight: 700;
+            color: #fff;
+            background: rgba(162, 155, 254, 0.3);
+            padding: 0 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-content">
+            <div class="left-section">
+                <div class="slide-number">01</div>
+                <h1 class="slide-title">企画立案を「超」加速</h1>
+                <h2 class="slide-subtitle">AIとの共創プロセス</h2>
+                
+                <h3 class="section-title">企画立案の課題</h3>
+                <div class="challenges-list">
+                    <div class="challenge-item">
+                        <div class="challenge-icon"><i class="fas fa-clock"></i></div>
+                        <div class="challenge-text">閃きを形にする時間がない</div>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="challenge-text">説得力のある企画書作成が難しい</div>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon"><i class="fas fa-search"></i></div>
+                        <div class="challenge-text">客観的な視点での検証が不足</div>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon"><i class="fas fa-file-alt"></i></div>
+                        <div class="challenge-text">情報収集・分析に膨大な工数</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <h3 class="section-title">AI×企画書共創の本質</h3>
+                
+                <div class="essence-card">
+                    <div class="essence-title">
+                        <div class="essence-icon"><i class="fas fa-brain"></i></div>
+                        思考の増幅
+                    </div>
+                    <div class="essence-desc">
+                        AIが提示する多角的な視点と分析が、人間の戦略的思考を<span class="highlight-text">増幅</span>。
+                        アイデアをより強固で実現可能な形へと磨き上げる。
+                    </div>
+                </div>
+                
+                <div class="essence-card">
+                    <div class="essence-title">
+                        <div class="essence-icon"><i class="fas fa-rocket"></i></div>
+                        価値創造の加速
+                    </div>
+                    <div class="essence-desc">
+                        AIによる情報処理・分析の<span class="highlight-text">高速化</span>と、人間の
+                        「想い(Why)」「顧客共感」「独自変数」の融合で、企画の価値を高める。
+                    </div>
+                </div>
+                
+                <div class="essence-card">
+                    <div class="essence-title">
+                        <div class="essence-icon"><i class="fas fa-handshake"></i></div>
+                        理想的な役割分担
+                    </div>
+                    <div class="essence-desc">
+                        AIは<span class="highlight-text">客観的・論理的分析</span>を担当し、
+                        人間は<span class="highlight-text">創造的判断・戦略決定</span>を主導。
+                        相互補完による共創で最大の成果を生む。
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="collaboration-visual">
+            <div class="human-group">
+                <div class="human-icon">
+                    <div class="icon-inner"><i class="fas fa-user"></i></div>
+                </div>
+                <div class="icon-label">人間</div>
+            </div>
+            
+            <div class="connection"></div>
+            
+            <div class="ai-group">
+                <div class="ai-icon">
+                    <div class="icon-inner"><i class="fas fa-robot"></i></div>
+                </div>
+                <div class="icon-label">AI</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

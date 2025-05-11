@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="1920" height="1080" fill="#F4F1EA"/>
+  <g clip-path="url(#clip0_0_1)">
+    <path d="M1920 0H0V1080H1920V0Z" fill="#F4F1EA"/>
+    <path d="M1920 0H0V120H1920V0Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="36" letter-spacing="0em"><tspan x="706.734" y="54.9">Day2: 自己理解とタグラインの確立</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="24" letter-spacing="0em"><tspan x="768" y="100.1">本日のカリキュラム：強みの発見と言語化</tspan></text>
+    <path d="M520 83C524.418 83 528 79.4183 528 75C528 70.5817 524.418 67 520 67C515.582 67 512 70.5817 512 75C512 79.4183 515.582 83 520 83Z" fill="#1A5B66"/>
+    <path d="M540 75H740" stroke="#1A5B66" stroke-width="3"/>
+    <path d="M1380 83C1384.42 83 1388 79.4183 1388 75C1388 70.5817 1384.42 67 1380 67C1375.58 67 1372 70.5817 1372 75C1372 79.4183 1375.58 83 1380 83Z" fill="#1A5B66"/>
+    <path d="M1160 75H1360" stroke="#1A5B66" stroke-width="3"/>
+    
+    <!-- タイトル -->
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="42" font-weight="bold" letter-spacing="0em"><tspan x="700" y="180.9">自己分析によるキャリア戦略の再構築</tspan></text>
+    
+    <!-- 左カラム: 第1セッション -->
+    <path d="M640 220H40V1020H640V220Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="180" y="270.2">第1セッション</tspan></text>
+    <path d="M140 280H540" stroke="#1A5B66" stroke-width="3"/>
+    <path d="M140 286C143.314 286 146 283.314 146 280C146 276.686 143.314 274 140 274C136.686 274 134 276.686 134 280C134 283.314 136.686 286 140 286Z" fill="#1A5B66"/>
+    <path d="M540 286C543.314 286 546 283.314 546 280C546 276.686 543.314 274 540 274C536.686 274 534 276.686 534 280C534 283.314 536.686 286 540 286Z" fill="#1A5B66"/>
+    
+    <!-- 30分表示 -->
+    <path d="M360 380H180C171.716 380 165 386.716 165 395V445C165 453.284 171.716 460 180 460H360C368.284 460 375 453.284 375 445V395C375 386.716 368.284 380 360 380Z" fill="#1A5B66"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="48" font-weight="bold" letter-spacing="0em"><tspan x="215" y="437.8">30分</tspan></text>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="70" y="520">自己分析と強みの発見</tspan></text>
+    
+    <path d="M610 550H70V750H610V550Z" fill="#F4F1EA" stroke="#1A5B66" stroke-width="1"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="90" y="590.2">① ライフラインチャートの作成</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="625.9">• 転機となった出来事の振り返り</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="655.9">• 成功/挫折体験からの学び</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="90" y="695.2">② 譲れない想いの発見</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="730.9">• 困難を乗り越えた原動力の特定</tspan></text>
+    
+    <path d="M610 780H70V1000H610V780Z" fill="#F4F1EA" stroke="#1A5B66" stroke-width="1"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="90" y="825">【習得スキル】</tspan></text>
+    <path d="M90 860C92.2091 860 94 858.209 94 856C94 853.791 92.2091 852 90 852C87.7909 852 86 853.791 86 856C86 858.209 87.7909 860 90 860Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="860.9">ライフラインチャート作成方法</tspan></text>
+    
+    <path d="M90 900C92.2091 900 94 898.209 94 896C94 893.791 92.2091 892 90 892C87.7909 892 86 893.791 86 896C86 898.209 87.7909 900 90 900Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="900.9">内省と自己発見のプロセス</tspan></text>
+    
+    <path d="M90 940C92.2091 940 94 938.209 94 936C94 933.791 92.2091 932 90 932C87.7909 932 86 933.791 86 936C86 938.209 87.7909 940 90 940Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="940.9">経験からの学びの構造化</tspan></text>
+    
+    <!-- 中央カラム: 第2セッション -->
+    <path d="M1260 220H660V1020H1260V220Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="800" y="270.2">第2セッション</tspan></text>
+    <path d="M760 280H1160" stroke="#B3322B" stroke-width="3"/>
+    <path d="M760 286C763.314 286 766 283.314 766 280C766 276.686 763.314 274 760 274C756.686 274 754 276.686 754 280C754 283.314 756.686 286 760 286Z" fill="#B3322B"/>
+    <path d="M1160 286C1163.31 286 1166 283.314 1166 280C1166 276.686 1163.31 274 1160 274C1156.69 274 1154 276.686 1154 280C1154 283.314 1156.69 286 1160 286Z" fill="#B3322B"/>
+    
+    <!-- 30分表示 -->
+    <path d="M980 380H800C791.716 380 785 386.716 785 395V445C785 453.284 791.716 460 800 460H980C988.284 460 995 453.284 995 445V395C995 386.716 988.284 380 980 380Z" fill="#B3322B"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="48" font-weight="bold" letter-spacing="0em"><tspan x="835" y="437.8">30分</tspan></text>
+    
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="690" y="520">強み・特性の言語化</tspan></text>
+    
+    <path d="M1230 550H690V750H1230V550Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="1"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="710" y="590.2">① 能力・スキルの具体的キーワード化</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="625.9">• スキルマッピングの実施</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="655.9">• 強みワードクラウドの作成</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="710" y="695.2">② 抽象表現から具体的表現への変換</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="730.9">• ケーススタディで実践</tspan></text>
+    
+    <path d="M1230 780H690V1000H1230V780Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="1"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="710" y="825">【習得スキル】</tspan></text>
+    <path d="M710 860C712.209 860 714 858.209 714 856C714 853.791 712.209 852 710 852C707.791 852 706 853.791 706 856C706 858.209 707.791 860 710 860Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="860.9">抽象的スキルの具体的表現力</tspan></text>
+    
+    <path d="M710 900C712.209 900 714 898.209 714 896C714 893.791 712.209 892 710 892C707.791 892 706 893.791 706 896C706 898.209 707.791 900 710 900Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="900.9">強みのキーワード化と構造化</tspan></text>
+    
+    <path d="M710 940C712.209 940 714 938.209 714 936C714 933.791 712.209 932 710 932C707.791 932 706 933.791 706 936C706 938.209 707.791 940 710 940Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="730" y="940.9">自己分析からの言語化プロセス</tspan></text>
+    
+    <!-- 右カラム: 第3セッション -->
+    <path d="M1880 220H1280V1020H1880V220Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="1420" y="270.2">第3セッション</tspan></text>
+    <path d="M1380 280H1780" stroke="#653A5E" stroke-width="3"/>
+    <path d="M1380 286C1383.31 286 1386 283.314 1386 280C1386 276.686 1383.31 274 1380 274C1376.69 274 1374 276.686 1374 280C1374 283.314 1376.69 286 1380 286Z" fill="#653A5E"/>
+    <path d="M1780 286C1783.31 286 1786 283.314 1786 280C1786 276.686 1783.31 274 1780 274C1776.69 274 1774 276.686 1774 280C1774 283.314 1776.69 286 1780 286Z" fill="#653A5E"/>
+    
+    <!-- 30分表示 -->
+    <path d="M1590 380H1410C1401.72 380 1395 386.716 1395 395V445C1395 453.284 1401.72 460 1410 460H1590C1598.28 460 1605 453.284 1605 445V395C1605 386.716 1598.28 380 1590 380Z" fill="#653A5E"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="48" font-weight="bold" letter-spacing="0em"><tspan x="1445" y="437.8">30分</tspan></text>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1310" y="520">他者視点と検証</tspan></text>
+    
+    <path d="M1850 550H1310V750H1850V550Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="1"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1330" y="590.2">① 相互フィードバックワーク</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="625.9">• グループでの強み発表と質問</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="655.9">• 他者視点からの気づき</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1330" y="695.2">② タグラインの検証と確立</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="730.9">• 3つのタグライン選定と確認</tspan></text>
+    
+    <path d="M1850 780H1310V1000H1850V780Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="1"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1330" y="825">【習得スキル】</tspan></text>
+    <path d="M1330 860C1332.21 860 1334 858.209 1334 856C1334 853.791 1332.21 852 1330 852C1327.79 852 1326 853.791 1326 856C1326 858.209 1327.79 860 1330 860Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="860.9">相互フィードバックの実践手法</tspan></text>
+    
+    <path d="M1330 900C1332.21 900 1334 898.209 1334 896C1334 893.791 1332.21 892 1330 892C1327.79 892 1326 893.791 1326 896C1326 898.209 1327.79 900 1330 900Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="900.9">強みの検証と確定プロセス</tspan></text>
+    
+    <path d="M1330 940C1332.21 940 1334 938.209 1334 936C1334 933.791 1332.21 932 1330 932C1327.79 932 1326 933.791 1326 936C1326 938.209 1327.79 940 1330 940Z" fill="#2C2C2C"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="940.9">タグライン作成と効果的な活用法</tspan></text>
+    
+    <!-- 全体最適化ポイント -->
+    <path d="M1680 140H240C231.716 140 225 146.716 225 155C225 163.284 231.716 170 240 170H1680C1688.28 170 1695 163.284 1695 155C1695 146.716 1688.28 140 1680 140Z" fill="#2C2C2C" fill-opacity="0.1"/>
+    
+    <!-- フッター -->
+    <path d="M1920 1040H0V1080H1920V1040Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="694.32" y="1064.9">TANREN株式会社 / 株式会社MVP | AI人材育成プログラム | 2025年春季講座</tspan></text>
+  </g>
+  <defs>
+    <clipPath id="clip0_0_1">
+      <rect width="1920" height="1080" fill="white"/>
+    </clipPath>
+  </defs>
+</svg> 

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ビジネス・エージェント・オーケストレーター構想</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #2c2c2c;
+            --cream: #f4f1ea;
+            --red: #b3322b;
+            --blue: #1a5b66;
+            --purple: #653a5e;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--cream);
+            color: var(--black);
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .title {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 900;
+            color: var(--black);
+            position: relative;
+            display: inline-block;
+        }
+        .title::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--red);
+        }
+        .subtitle {
+            font-family: 'Noto Serif JP', serif;
+            color: var(--black);
+            margin-top: 30px;
+            position: relative;
+        }
+        .dot {
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        .dot-red {
+            background-color: var(--red);
+        }
+        .dot-blue {
+            background-color: var(--blue);
+        }
+        .dot-purple {
+            background-color: var(--purple);
+        }
+        .geometric-box {
+            border: 2px solid var(--black);
+            padding: 25px;
+            margin-top: 40px;
+            position: relative;
+        }
+        .geometric-box::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100%;
+            height: 100%;
+            background-color: var(--cream);
+            z-index: -1;
+            border: 2px solid var(--black);
+        }
+        .rocket {
+            font-size: 72px;
+            margin-right: 20px;
+        }
+        .company {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            text-align: right;
+        }
+        .company-name {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--black);
+        }
+        .corner-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+        .top-left {
+            top: 20px;
+            left: 20px;
+            border-left: 3px solid var(--red);
+            border-top: 3px solid var(--red);
+        }
+        .bottom-right {
+            bottom: 20px;
+            right: 20px;
+            border-right: 3px solid var(--blue);
+            border-bottom: 3px solid var(--blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container flex flex-col justify-center items-center relative">
+        <div class="corner-decoration top-left"></div>
+        <div class="corner-decoration bottom-right"></div>
+        
+        <div class="text-center z-10 mt-10">
+            <h1 class="title text-5xl mb-12">ビジネス・エージェント・オーケストレーター構想</h1>
+            <div class="flex justify-center items-center my-4">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-blue"></span>
+                <span class="dot dot-purple"></span>
+                <span class="dot dot-red"></span>
+                <span class="dot dot-blue"></span>
+            </div>
+            <h2 class="subtitle text-3xl mt-4 mb-8">社長は一人、あとは全員AI！？<br>未来の会社経営の新しいカタチ</h2>
+        </div>
+        
+        <div class="geometric-box w-4/5 flex items-center justify-center">
+            <div class="rocket">🚀</div>
+            <div class="ml-4">
+                <p class="text-xl mb-2">人間CEOが指揮者となり、AIの専門家集団を率いる</p>
+                <p class="text-xl mb-2">新時代の経営モデル、その可能性と実現への道筋</p>
+                <p class="text-lg mt-4 text-right italic">― ビジネスの常識を変革する ―</p>
+            </div>
+        </div>
+        
+        <div class="flex justify-between items-center w-full mt-12">
+            <div class="flex items-center">
+                <div class="w-3 h-16 bg-red-700 mr-3"></div>
+                <p class="text-lg">AI同士の協調による<br><span class="font-bold text-xl">ビジネス遂行能力</span>の飛躍的な向上</p>
+            </div>
+            <div class="flex items-center">
+                <div class="w-3 h-16 bg-blue-800 mr-3"></div>
+                <p class="text-lg">経営課題を解決する<br><span class="font-bold text-xl">超アジャイルな組織</span>の実現</p>
+            </div>
+            <div class="flex items-center">
+                <div class="w-3 h-16 bg-purple-800 mr-3"></div>
+                <p class="text-lg">企業のあり方そのものを<br><span class="font-bold text-xl">進化させる触媒</span>としてのAI</p>
+            </div>
+        </div>
+        
+        <div class="company">
+            <p class="company-name">TANREN株式会社</p>
+            <p class="text-lg">代表 佐藤勝彦</p>
+        </div>
+    </div>
+</body>
+</html>

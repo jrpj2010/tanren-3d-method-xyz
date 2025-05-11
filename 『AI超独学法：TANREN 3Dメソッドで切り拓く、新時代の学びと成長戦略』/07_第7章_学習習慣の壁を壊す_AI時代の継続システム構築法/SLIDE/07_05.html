@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解決策①：マイクロラーニング</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #311b92 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+        }
+        .title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e1bee7;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .key-point {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .key-point-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            color: #e1bee7;
+        }
+        .key-point-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        .section-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.3);
+        }
+        .block {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .micro-block {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: scale(0);
+            animation: popIn 0.5s forwards;
+        }
+        @keyframes popIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .axis-label {
+            position: absolute;
+            font-weight: bold;
+            color: #e1bee7;
+        }
+        .stair-step {
+            height: 30px;
+            background: rgba(225, 190, 231, 0.3);
+            margin: 2px 0;
+            border-radius: 3px;
+            transform-origin: left;
+            transform: scaleX(0);
+            animation: growRight 0.5s forwards;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            font-weight: 500;
+        }
+        @keyframes growRight {
+            to {
+                transform: scaleX(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Background pattern -->
+        <svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="position: absolute; opacity: 0.05;">
+            <defs>
+                <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
+                </pattern>
+                <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                    <rect width="100" height="100" fill="url(#smallGrid)" />
+                    <path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        
+        <div class="section-number">セクション 2</div>
+        
+        <div class="content p-16">
+            <!-- Header Section -->
+            <div class="mb-8 block" style="animation-delay: 0.1s;">
+                <h1 class="title">解決策①：マイクロラーニングで<br>「無理なく」続ける技術</h1>
+                <h2 class="subtitle">小さく、速く、楽しく、そして3Dで</h2>
+            </div>
+            
+            <div class="flex">
+                <!-- Left Column - Explanation -->
+                <div class="w-1/2 pr-8">
+                    <!-- Concept Explanation -->
+                    <div class="mb-6 block" style="animation-delay: 0.2s;">
+                        <h3 class="text-xl font-bold mb-2 text-yellow-300">マイクロラーニングとは</h3>
+                        <p class="text-lg">大きな学習目標を<span class="text-yellow-300 font-bold">実行可能な最小単位</span>に分解し、<span class="text-yellow-300 font-bold">短時間（5〜10分）</span>で完結できるように設計された学習アプローチ</p>
+                    </div>
+                    
+                    <!-- 3D Method Connection -->
+                    <div class="mb-6 block" style="animation-delay: 0.3s;">
+                        <h3 class="text-xl font-bold mb-2 text-yellow-300">TANREN 3Dメソッドとの関連</h3>
+                        <div class="key-point">
+                            <div class="key-point-icon">
+                                <i class="fas fa-cube"></i>
+                            </div>
+                            <div class="key-point-text">
+                                <span class="text-yellow-300 font-bold">X軸：</span> 超具体化・超構造化 — 抽象的な目標を具体的なタスクへ
+                            </div>
+                        </div>
+                        <div class="key-point">
+                            <div class="key-point-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <div class="key-point-text">
+                                <span class="text-yellow-300 font-bold">Z軸：</span> レベル感 — 現在のレベルに合わせた難易度設定
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Why it works -->
+                    <div class="mb-6 block" style="animation-delay: 0.4s;">
+                        <h3 class="text-xl font-bold mb-2 text-yellow-300">継続に効く理由</h3>
+                        <div class="key-point">
+                            <div class="key-point-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="key-point-text">心理的ハードルの劇的低下</div>
+                        </div>
+                        <div class="key-point">
+                            <div class="key-point-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="key-point-text">「できた！」という成功体験の積み重ね</div>
+                        </div>
+                        <div class="key-point">
+                            <div class="key-point-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="key-point-text">スキマ時間の有効活用</div>
+                        </div>
+                        <div class="key-point">
+                            <div class="key-point-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="key-point-text">変化への柔軟な対応</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Visualization -->
+                <div class="w-1/2">
+                    <!-- 3D Visualization with Microlearning Blocks -->
+                    <div class="relative h-80 block" style="animation-delay: 0.5s;">
+                        <h3 class="text-xl font-bold mb-4 text-center">マイクロタスクの積み重ね</h3>
+                        
+                        <!-- 3D Axes -->
+                        <div class="relative h-60 w-full">
+                            <!-- X-axis -->
+                            <div style="position: absolute; bottom: 0; left: 0; width: 80%; height: 4px; background: white;"></div>
+                            <div class="axis-label" style="bottom: -25px; left: 40%;">X軸: 具体化・構造化</div>
+                            
+                            <!-- Z-axis -->
+                            <div style="position: absolute; bottom: 0; left: 0; height: 80%; width: 4px; background: white;"></div>
+                            <div class="axis-label" style="left: -40px; top: 40%; transform: rotate(-90deg);">Z軸: レベル感</div>
+                            
+                            <!-- Micro Blocks -->
+                            <div class="micro-block" style="position: absolute; bottom: 10px; left: 20px; background: #ba68c8; animation-delay: 0.6s;">
+                                Lv1.1
+                            </div>
+                            <div class="micro-block" style="position: absolute; bottom: 10px; left: 90px; background: #ab47bc; animation-delay: 0.7s;">
+                                Lv1.2
+                            </div>
+                            <div class="micro-block" style="position: absolute; bottom: 10px; left: 160px; background: #9c27b0; animation-delay: 0.8s;">
+                                Lv1.3
+                            </div>
+                            <div class="micro-block" style="position: absolute; bottom: 80px; left: 20px; background: #8e24aa; animation-delay: 0.9s;">
+                                Lv2.1
+                            </div>
+                            <div class="micro-block" style="position: absolute; bottom: 80px; left: 90px; background: #7b1fa2; animation-delay: 1.0s;">
+                                Lv2.2
+                            </div>
+                            <div class="micro-block" style="position: absolute; bottom: 80px; left: 160px; background: #6a1b9a; animation-delay: 1.1s;">
+                                Lv2.3
+                            </div>
+                            <div class="micro-block" style="position: absolute; bottom: 150px; left: 20px; background: #4a148c; animation-delay: 1.2s;">
+                                Lv3.1
+                            </div>
+                            <div class="micro-block" style="position: absolute; bottom: 150px; left: 90px; background: #4527a0; animation-delay: 1.3s;">
+                                Lv3.2
+                            </div>
+                            
+                            <!-- Goal Flag -->
+                            <div style="position: absolute; top: 10px; left: 200px; animation: fadeInUp 0.5s 1.5s forwards; opacity: 0;">
+                                <i class="fas fa-flag text-yellow-300 text-4xl"></i>
+                                <span class="ml-2 text-yellow-300 font-bold">目標達成！</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Stair Steps Visualization -->
+                    <div class="mt-8 block" style="animation-delay: 1.0s;">
+                        <h3 class="text-xl font-bold mb-2 text-center">小さなステップの積み重ね</h3>
+                        
+                        <div class="stair-container relative w-full">
+                            <div class="stair-step" style="width: 10%; animation-delay: 1.1s;">Day 1</div>
+                            <div class="stair-step" style="width: 20%; animation-delay: 1.2s;">Day 2</div>
+                            <div class="stair-step" style="width: 30%; animation-delay: 1.3s;">Day 3</div>
+                            <div class="stair-step" style="width: 40%; animation-delay: 1.4s;">Week 1</div>
+                            <div class="stair-step" style="width: 55%; animation-delay: 1.5s;">Week 2</div>
+                            <div class="stair-step" style="width: 70%; animation-delay: 1.6s;">Month 1</div>
+                            <div class="stair-step" style="width: 90%; animation-delay: 1.7s; background: rgba(255, 215, 0, 0.3);">
+                                <i class="fas fa-star text-yellow-300 mr-2"></i>達成！
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4 text-xl font-bold text-e1bee7" style="opacity: 0; animation: fadeInUp 0.5s 1.8s forwards;">
+                            <i class="fas fa-lightbulb text-yellow-300 mr-2"></i>
+                            AIが最適なマイクロタスクを提案・サポート
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

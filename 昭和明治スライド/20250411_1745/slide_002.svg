@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c"/>
+  <text x="960" y="60" font-family="'Noto Serif JP', serif" font-size="36" fill="#f4f1ea" text-anchor="middle" letter-spacing="4">AI駆動開発の実践と効率化戦略</text>
+  <line x1="700" y1="80" x2="1220" y2="80" stroke="#f4f1ea" stroke-width="2"/>
+  <circle cx="960" cy="80" r="5" fill="#f4f1ea"/>
+  
+  <!-- フッター -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c"/>
+  <text x="960" y="1055" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#f4f1ea" text-anchor="middle">2025年4月作成 - エビラボ × 佐藤勝彦氏 対談より</text>
+  
+  <!-- 3カラムコンテナ -->
+  <g id="columns">
+    <!-- カラム1: 音声入力と効率化 -->
+    <g id="column1">
+      <rect x="50" y="130" width="580" height="860" fill="#ffffff" stroke="#2c2c2c" stroke-width="2"/>
+      <rect x="50" y="130" width="580" height="60" fill="#b3322b"/>
+      <text x="340" y="170" font-family="'Noto Serif JP', serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">音声入力によるAI対話効率化</text>
+      
+      <!-- サブヘッダー -->
+      <text x="70" y="220" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" letter-spacing="1">キーボード入力からの解放と思考の加速</text>
+      
+      <!-- セクション1 -->
+      <rect x="70" y="240" width="540" height="2" fill="#b3322b"/>
+      <text x="70" y="270" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">🎤 音声入力の優位性</text>
+      <text x="70" y="300" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" line-height="1.5">
+        <tspan x="70" y="300">「音声入力が主体」の開発スタイル</tspan>
+        <tspan x="70" y="330">・思考速度に近い入力が可能</tspan>
+        <tspan x="70" y="360">・入力の物理的制約からの解放</tspan>
+        <tspan x="70" y="390">・対話的なAI利用に最適</tspan>
+      </text>
+      
+      <!-- グラフ/視覚要素 -->
+      <rect x="90" y="410" width="500" height="180" fill="#f8f5f0" stroke="#b3322b" stroke-width="1"/>
+      <text x="340" y="430" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">入力速度比較</text>
+      
+      <!-- 簡易棒グラフ -->
+      <rect x="120" y="450" width="150" height="30" fill="#b3322b" opacity="0.8"/>
+      <rect x="120" y="490" width="350" height="30" fill="#b3322b" opacity="0.8"/>
+      
+      <text x="110" y="470" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="end">キーボード</text>
+      <text x="110" y="510" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="end">音声入力</text>
+      
+      <text x="280" y="470" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">40WPM</text>
+      <text x="480" y="510" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">120WPM</text>
+      
+      <!-- セクション2 -->
+      <text x="70" y="620" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">📝 会話のプロトコル統一</text>
+      <text x="70" y="650" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" line-height="1.5">
+        <tspan x="70" y="650">チーム内での入力方法の標準化</tspan>
+        <tspan x="70" y="680">・同じツールセットの使用</tspan>
+        <tspan x="70" y="710">・共通のプロンプト構造</tspan>
+        <tspan x="70" y="740">・統一された用語定義</tspan>
+      </text>
+      
+      <!-- 実践ポイント -->
+      <rect x="70" y="780" width="540" height="180" fill="#f8f5f0" stroke="#b3322b" stroke-width="1"/>
+      <text x="340" y="810" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" text-anchor="middle">実践ポイント</text>
+      <text x="100" y="850" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+        <tspan x="100" y="850">■ 音声→テキスト変換ツールを活用する</tspan>
+        <tspan x="100" y="890">■ チーム内で入力方式を統一する</tspan>
+      </text>
+    </g>
+    
+    <!-- カラム2: プロンプトエンジニアリング -->
+    <g id="column2">
+      <rect x="670" y="130" width="580" height="860" fill="#ffffff" stroke="#2c2c2c" stroke-width="2"/>
+      <rect x="670" y="130" width="580" height="60" fill="#1a5b66"/>
+      <text x="960" y="170" font-family="'Noto Serif JP', serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">プロンプトエンジニアリング</text>
+      
+      <!-- サブヘッダー -->
+      <text x="690" y="220" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" letter-spacing="1">AIに最適な指示を与えるための構造化技法</text>
+      
+      <!-- セクション1 -->
+      <rect x="690" y="240" width="540" height="2" fill="#1a5b66"/>
+      <text x="690" y="270" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">🔍 ヒューマンリーダブルからAIリーダブルへ</text>
+      
+      <!-- 比較表 -->
+      <rect x="690" y="290" width="540" height="40" fill="#1a5b66" opacity="0.2"/>
+      <rect x="690" y="330" width="540" height="40" fill="#ffffff"/>
+      <rect x="690" y="370" width="540" height="40" fill="#1a5b66" opacity="0.2"/>
+      <rect x="690" y="410" width="540" height="40" fill="#ffffff"/>
+      
+      <line x1="960" y1="290" x2="960" y2="450" stroke="#2c2c2c" stroke-width="1"/>
+      
+      <text x="825" y="315" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c" text-anchor="middle">ヒューマンリーダブル</text>
+      <text x="1095" y="315" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c" text-anchor="middle">AIリーダブル</text>
+      
+      <text x="825" y="355" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">文章による説明</text>
+      <text x="1095" y="355" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">構造化された形式</text>
+      
+      <text x="825" y="395" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">文脈に依存する表現</text>
+      <text x="1095" y="395" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">明示的な参照と階層</text>
+      
+      <text x="825" y="435" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">曖昧さを含む</text>
+      <text x="1095" y="435" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">厳密な定義と区分け</text>
+      
+      <!-- セクション2 -->
+      <text x="690" y="490" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">⚙️ 効果的な要件定義の構造</text>
+      
+      <!-- プロセスフロー -->
+      <rect x="720" y="520" width="480" height="200" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+      
+      <!-- 階層構造の図 -->
+      <rect x="750" y="550" width="420" height="40" fill="#1a5b66" opacity="0.4" rx="5" ry="5"/>
+      <rect x="770" y="600" width="180" height="30" fill="#1a5b66" opacity="0.2" rx="5" ry="5"/>
+      <rect x="970" y="600" width="180" height="30" fill="#1a5b66" opacity="0.2" rx="5" ry="5"/>
+      <rect x="770" y="640" width="80" height="25" fill="#1a5b66" opacity="0.1" rx="5" ry="5"/>
+      <rect x="870" y="640" width="80" height="25" fill="#1a5b66" opacity="0.1" rx="5" ry="5"/>
+      <rect x="970" y="640" width="80" height="25" fill="#1a5b66" opacity="0.1" rx="5" ry="5"/>
+      <rect x="1070" y="640" width="80" height="25" fill="#1a5b66" opacity="0.1" rx="5" ry="5"/>
+      
+      <text x="960" y="575" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">メインコンセプト</text>
+      <text x="860" y="620" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">サブカテゴリー1</text>
+      <text x="1060" y="620" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">サブカテゴリー2</text>
+      <text x="810" y="655" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#2c2c2c" text-anchor="middle">詳細1</text>
+      <text x="910" y="655" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#2c2c2c" text-anchor="middle">詳細2</text>
+      <text x="1010" y="655" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#2c2c2c" text-anchor="middle">詳細3</text>
+      <text x="1110" y="655" font-family="'Noto Sans JP', sans-serif" font-size="10" fill="#2c2c2c" text-anchor="middle">詳細4</text>
+      
+      <line x1="860" y1="590" x2="860" y2="600" stroke="#2c2c2c" stroke-width="1"/>
+      <line x1="1060" y1="590" x2="1060" y2="600" stroke="#2c2c2c" stroke-width="1"/>
+      <line x1="810" y1="630" x2="810" y2="640" stroke="#2c2c2c" stroke-width="1"/>
+      <line x1="910" y1="630" x2="910" y2="640" stroke="#2c2c2c" stroke-width="1"/>
+      <line x1="1010" y1="630" x2="1010" y2="640" stroke="#2c2c2c" stroke-width="1"/>
+      <line x1="1110" y1="630" x2="1110" y2="640" stroke="#2c2c2c" stroke-width="1"/>
+      
+      <!-- 実践ポイント -->
+      <rect x="690" y="780" width="540" height="180" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+      <text x="960" y="810" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" text-anchor="middle">実践ポイント</text>
+      <text x="720" y="850" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+        <tspan x="720" y="850">■ 階層構造で要件を整理する</tspan>
+        <tspan x="720" y="890">■ キーワードに一貫性を持たせる</tspan>
+      </text>
+    </g>
+    
+    <!-- カラム3: AI開発エディタ比較 -->
+    <g id="column3">
+      <rect x="1290" y="130" width="580" height="860" fill="#ffffff" stroke="#2c2c2c" stroke-width="2"/>
+      <rect x="1290" y="130" width="580" height="60" fill="#653a5e"/>
+      <text x="1580" y="170" font-family="'Noto Serif JP', serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">AI開発エディタの選択</text>
+      
+      <!-- サブヘッダー -->
+      <text x="1310" y="220" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" letter-spacing="1">エンジニア向け高度AI開発環境の比較</text>
+      
+      <!-- セクション1 -->
+      <rect x="1310" y="240" width="540" height="2" fill="#653a5e"/>
+      <text x="1310" y="270" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">🖥️ 最新AI駆動エディターの特徴</text>
+      <text x="1310" y="300" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" line-height="1.5">
+        <tspan x="1310" y="300">「より高度なAI開発環境」</tspan>
+        <tspan x="1310" y="330">・VS Code（Microsoft）</tspan>
+        <tspan x="1310" y="360">・Cursor（エディター特化）</tspan>
+        <tspan x="1310" y="390">・Windsurf（最新トレンド）</tspan>
+      </text>
+      
+      <!-- エディタ比較表 -->
+      <rect x="1330" y="410" width="500" height="200" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+      
+      <line x1="1410" y1="440" x2="1410" y2="580" stroke="#2c2c2c" stroke-width="1"/>
+      <line x1="1580" y1="440" x2="1580" y2="580" stroke="#2c2c2c" stroke-width="1"/>
+      <line x1="1330" y1="470" x2="1830" y2="470" stroke="#2c2c2c" stroke-width="1"/>
+      <line x1="1330" y1="510" x2="1830" y2="510" stroke="#2c2c2c" stroke-width="1"/>
+      <line x1="1330" y1="550" x2="1830" y2="550" stroke="#2c2c2c" stroke-width="1"/>
+      
+      <text x="1370" y="455" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">ツール名</text>
+      <text x="1495" y="455" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">コード補完</text>
+      <text x="1705" y="455" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">プロジェクト理解</text>
+      
+      <text x="1370" y="495" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">VS Code</text>
+      <circle cx="1495" cy="495" r="7" fill="#653a5e" opacity="0.5"/>
+      <circle cx="1705" cy="495" r="7" fill="#653a5e" opacity="0.3"/>
+      
+      <text x="1370" y="535" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">Cursor</text>
+      <circle cx="1495" cy="535" r="7" fill="#653a5e" opacity="0.8"/>
+      <circle cx="1705" cy="535" r="7" fill="#653a5e" opacity="0.7"/>
+      
+      <text x="1370" y="575" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">Windsurf</text>
+      <circle cx="1495" cy="575" r="7" fill="#653a5e" opacity="0.7"/>
+      <circle cx="1705" cy="575" r="7" fill="#653a5e" opacity="0.9"/>
+      
+      <!-- セクション2 -->
+      <text x="1310" y="640" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">🔄 高度化するAIアシスタント</text>
+      <text x="1310" y="670" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" line-height="1.5">
+        <tspan x="1310" y="670">自動化される開発プロセス</tspan>
+        <tspan x="1310" y="700">・コードレビューの自動化</tspan>
+        <tspan x="1310" y="730">・バグ修正の提案</tspan>
+        <tspan x="1310" y="760">・プロジェクト全体の理解と提案</tspan>
+      </text>
+      
+      <!-- 実践ポイント -->
+      <rect x="1310" y="780" width="540" height="180" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+      <text x="1580" y="810" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" text-anchor="middle">実践ポイント</text>
+      <text x="1340" y="850" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+        <tspan x="1340" y="850">■ 複数のツールを試してフローを確立</tspan>
+        <tspan x="1340" y="890">■ 既存の開発環境との統合を検討</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- マーカー定義 -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c2c2c"/>
+    </marker>
+  </defs>
+</svg>

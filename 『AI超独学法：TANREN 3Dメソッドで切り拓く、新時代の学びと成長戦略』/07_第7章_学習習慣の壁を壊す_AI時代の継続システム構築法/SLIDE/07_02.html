@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本章の構成</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #311b92 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+        }
+        .title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background-color: #e1bee7;
+            border-radius: 2.5px;
+        }
+        .section-item {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 1.2rem 0;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        .section-item:hover {
+            transform: translateX(10px);
+        }
+        .section-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 1.5rem;
+            color: #e1bee7;
+        }
+        .spiral-stairs {
+            position: absolute;
+            right: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-element {
+            animation: float 5s ease-in-out infinite;
+        }
+        .float-element-2 {
+            animation: float 5s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+        .float-element-3 {
+            animation: float 5s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Background patterns -->
+        <svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="position: absolute; opacity: 0.1;">
+            <defs>
+                <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        
+        <div class="content flex p-16">
+            <!-- Left Side - Table of Contents -->
+            <div class="w-1/2">
+                <h1 class="title">本章の構成</h1>
+                
+                <div class="section-items mt-10">
+                    <div class="section-item">
+                        <div class="section-number">1</div>
+                        <div class="section-icon"><i class="fas fa-question-circle"></i></div>
+                        <div>なぜ継続は難しいのか？挫折のメカニズム</div>
+                    </div>
+                    
+                    <div class="section-item">
+                        <div class="section-number">2</div>
+                        <div class="section-icon"><i class="fas fa-puzzle-piece"></i></div>
+                        <div>解決策①：マイクロラーニングで「無理なく」続ける技術</div>
+                    </div>
+                    
+                    <div class="section-item">
+                        <div class="section-number">3</div>
+                        <div class="section-icon"><i class="fas fa-database"></i></div>
+                        <div>解決策②：「インプット」を仕組み化する</div>
+                    </div>
+                    
+                    <div class="section-item">
+                        <div class="section-number">4</div>
+                        <div class="section-icon"><i class="fas fa-chart-line"></i></div>
+                        <div>解決策③：「アウトプット」を習慣化する</div>
+                    </div>
+                    
+                    <div class="section-item">
+                        <div class="section-number">5</div>
+                        <div class="section-icon"><i class="fas fa-brain"></i></div>
+                        <div>最強のスキル：「学び続ける力」を育むマインドセット</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - Spiral Stairs Illustration -->
+            <div class="w-1/2 relative">
+                <svg class="spiral-stairs" width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Spiral -->
+                    <path d="M 200 450 
+                             Q 100 400, 200 350 
+                             Q 300 300, 200 250 
+                             Q 100 200, 200 150 
+                             Q 300 100, 200 50" 
+                          stroke="#e1bee7" stroke-width="4" fill="none" />
+                    
+                    <!-- Steps -->
+                    <line x1="150" y1="415" x2="250" y2="435" stroke="#fff" stroke-width="3" />
+                    <line x1="150" y1="350" x2="250" y2="350" stroke="#fff" stroke-width="3" />
+                    <line x1="150" y1="250" x2="250" y2="250" stroke="#fff" stroke-width="3" />
+                    <line x1="150" y1="150" x2="250" y2="150" stroke="#fff" stroke-width="3" />
+                    <line x1="150" y1="50" x2="250" y2="50" stroke="#fff" stroke-width="3" />
+                    
+                    <!-- Nodes / Achievement Points -->
+                    <circle cx="200" cy="440" r="15" fill="#7c4dff" class="float-element" />
+                    <circle cx="200" cy="350" r="15" fill="#7c4dff" class="float-element-2" />
+                    <circle cx="200" cy="250" r="15" fill="#7c4dff" class="float-element-3" />
+                    <circle cx="200" cy="150" r="15" fill="#7c4dff" class="float-element" />
+                    <circle cx="200" cy="50" r="20" fill="#e1bee7" class="float-element-2">
+                        <animate attributeName="r" values="20;25;20" dur="2s" repeatCount="indefinite" />
+                    </circle>
+                    
+                    <!-- Icons for each step -->
+                    <text x="195" y="445" fill="#fff" font-size="12" font-family="FontAwesome" text-anchor="middle">&#xf128;</text>
+                    <text x="195" y="355" fill="#fff" font-size="12" font-family="FontAwesome" text-anchor="middle">&#xf0eb;</text>
+                    <text x="195" y="255" fill="#fff" font-size="12" font-family="FontAwesome" text-anchor="middle">&#xf0c7;</text>
+                    <text x="195" y="155" fill="#fff" font-size="12" font-family="FontAwesome" text-anchor="middle">&#xf201;</text>
+                    <text x="195" y="55" fill="#fff" font-size="16" font-family="FontAwesome" text-anchor="middle">&#xf091;</text>
+                </svg>
+                
+                <!-- Progress Indicator -->
+                <div class="absolute bottom-10 right-10 text-xl">
+                    <div class="flex items-center">
+                        <span class="mr-3">成長のステップ</span>
+                        <div class="w-5 h-5 rounded-full bg-gradient-to-r from-purple-400 to-pink-300 pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

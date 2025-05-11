@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIとの企画書共創：6ステップ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #2c3e50 0%, #4a69bd 50%, #6c5ce7 100%);
+            color: white;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide-header {
+            margin-bottom: 15px;
+        }
+        .slide-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #ffffff, #e0e0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        .step-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .step-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 25px;
+            height: 25px;
+            background: #a29bfe;
+            color: white;
+            font-weight: 900;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        .step-icon {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .step-icon i {
+            font-size: 1.6rem;
+            color: white;
+        }
+        .step-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        .step-desc {
+            font-size: 0.8rem;
+            text-align: center;
+            line-height: 1.4;
+        }
+        .axis-highlight {
+            background: rgba(162, 155, 254, 0.2);
+            border-radius: 6px;
+            padding: 2px 5px;
+            color: white;
+            font-weight: bold;
+            margin-top: 8px;
+            display: inline-block;
+            font-size: 0.7rem;
+        }
+        .bottom-message {
+            background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(162, 155, 254, 0.3), rgba(255,255,255,0.1));
+            padding: 12px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 12px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .message-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        .emphasis {
+            color: #a29bfe;
+            font-weight: 900;
+        }
+        .sequential-dots {
+            position: absolute;
+            height: 3px;
+            background: rgba(255,255,255,0.5);
+            width: 30px;
+            top: 50%;
+            right: -20px;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sequential-dots::before,
+        .sequential-dots::after {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+        }
+        .card-connector {
+            display: none;
+        }
+        @media screen and (min-width: 768px) {
+            .step-card:not(:nth-child(3n)) .card-connector {
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: -16px;
+                transform: translateY(-50%);
+                z-index: 10;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-header">
+            <h1 class="slide-title">AIとの企画書共創：6ステップ</h1>
+        </div>
+        
+        <div class="steps-container">
+            <!-- ステップ1 -->
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3 class="step-title">AIへの"OSインストール"</h3>
+                <p class="step-desc">AIに「優れた企画書」の概念と「思考の型」を教え込む。役割設定と思考フレームワークの指示。</p>
+                <div class="axis-highlight">X軸：超構造化</div>
+                <div class="card-connector sequential-dots"></div>
+            </div>
+            
+            <!-- ステップ2 -->
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3 class="step-title">ゴール共有</h3>
+                <p class="step-desc">企画の「What」「Why」「Who」をAIと共有。目的、ターゲット、提供価値、期待成果を明確に伝える。</p>
+                <div class="axis-highlight">X軸：超具体化</div>
+                <div class="card-connector sequential-dots"></div>
+            </div>
+            
+            <!-- ステップ3 -->
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-icon">
+                    <i class="fas fa-drafting-compass"></i>
+                </div>
+                <h3 class="step-title">設計図の共創</h3>
+                <p class="step-desc">企画書全体の構成（目次）と各セクションの内容をAIと共に明確化。論理展開の設計。</p>
+                <div class="axis-highlight">X軸：超構造化＋具体化</div>
+                <div class="card-connector sequential-dots"></div>
+            </div>
+            
+            <!-- ステップ4 -->
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-icon">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <h3 class="step-title">骨子フォーマット活用</h3>
+                <p class="step-desc">テンプレートをAIに提示し作業を加速。「ペン（構造）」に「パイナップル（情報）」を流し込む。</p>
+                <div class="axis-highlight">X軸：超構造化</div>
+                <div class="card-connector sequential-dots"></div>
+            </div>
+            
+            <!-- ステップ5 -->
+            <div class="step-card">
+                <div class="step-number">5</div>
+                <div class="step-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="step-title">「一撃たたき台AI」育成</h3>
+                <p class="step-desc">システムプロンプトとしてAIに記憶させ、次回から高品質な企画書を一撃で生成。</p>
+                <div class="axis-highlight">Z軸：Lv 0.5エージェント化</div>
+                <div class="card-connector sequential-dots"></div>
+            </div>
+            
+            <!-- ステップ6 -->
+            <div class="step-card">
+                <div class="step-number">6</div>
+                <div class="step-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="step-title">人間による「魂入れ」</h3>
+                <p class="step-desc">AI生成物に人間の知性と感性で「魂」を吹き込み、心を動かす企画書へ昇華させる。</p>
+                <div class="axis-highlight">人間の価値創出</div>
+            </div>
+        </div>
+        
+        <div class="bottom-message">
+            <p class="message-text">
+                <span class="emphasis">人間の情熱と創造性</span> × <span class="emphasis">AIの論理性と処理能力</span><br>
+                この共創が、アイデアを「最速で、最高の形」へと進化させる
+            </p>
+        </div>
+    </div>
+</body>
+</html>

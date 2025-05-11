@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>共創する側へシフトするための3つの鍵</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e1f5fe 50%, #e0f7fa 100%);
+        }
+        .title {
+            color: #004080;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .key-card {
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        .key-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+        }
+        .icon-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            margin: 0 auto;
+            background: rgba(255,255,255,0.8);
+            position: relative;
+            z-index: 10;
+        }
+        .accent-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 6px;
+            width: 100%;
+        }
+        .floating-circles {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        .number-badge {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 20;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-10">
+        <!-- Background Elements -->
+        <div class="floating-circles" style="width: 200px; height: 200px; top: 100px; right: 200px; background-color: #0066cc;"></div>
+        <div class="floating-circles" style="width: 150px; height: 150px; bottom: 50px; left: 100px; background-color: #00cc99;"></div>
+        <div class="floating-circles" style="width: 100px; height: 100px; top: 200px; left: 250px; background-color: #ff9933;"></div>
+        
+        <!-- Header -->
+        <div class="text-center mb-8 relative z-10">
+            <h1 class="title text-4xl">共創する側へシフトするための3つの鍵</h1>
+            <div class="w-48 h-1 bg-blue-600 mx-auto mt-3 rounded-full"></div>
+        </div>
+        
+        <!-- Key Cards Container -->
+        <div class="flex justify-between items-stretch mt-4 px-10">
+            <!-- Key 1: Curiosity -->
+            <div class="key-card bg-white w-1/3 mx-4 float-animation" style="animation-delay: 0s;">
+                <div class="number-badge bg-blue-600">1</div>
+                <div class="p-6 pt-10 text-center">
+                    <div class="icon-circle bg-blue-50 mb-6">
+                        <i class="fas fa-rocket text-6xl text-blue-600"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-blue-600 mb-2">好奇心と実験精神</h2>
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">「まず、やってみる！」</h3>
+                    <p class="text-gray-600 mb-4">失敗を恐れず様々な使い方を試し、AIとの距離を縮める。遊び心を持ってAIに触れ、可能性を発見する姿勢が重要。</p>
+                    
+                    <div class="bg-blue-50 p-3 rounded-lg mt-4">
+                        <p class="text-blue-600 font-bold">
+                            <i class="fas fa-lightbulb mr-2"></i>失敗はデータ。そこから学べばいい。
+                        </p>
+                    </div>
+                </div>
+                <div class="accent-line bg-blue-600"></div>
+            </div>
+            
+            <!-- Key 2: Critical Thinking -->
+            <div class="key-card bg-white w-1/3 mx-4 float-animation" style="animation-delay: 0.5s;">
+                <div class="number-badge bg-yellow-500">2</div>
+                <div class="p-6 pt-10 text-center">
+                    <div class="icon-circle bg-yellow-50 mb-6">
+                        <i class="fas fa-brain text-6xl text-yellow-500"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-yellow-600 mb-2">主体性と批判的思考</h2>
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">「AIの答えは鵜呑みにしない」</h3>
+                    <p class="text-gray-600 mb-4">AIの回答は「出発点」であり、ゴールではない。「本当にそうか？」「根拠は？」と常に問いかけ、自らの頭で判断する姿勢を保つ。</p>
+                    
+                    <div class="bg-yellow-50 p-3 rounded-lg mt-4">
+                        <p class="text-yellow-600 font-bold">
+                            <i class="fas fa-balance-scale mr-2"></i>AIの意見も含め、全てを検証する目を持つ。
+                        </p>
+                    </div>
+                </div>
+                <div class="accent-line bg-yellow-500"></div>
+            </div>
+            
+            <!-- Key 3: Co-creation -->
+            <div class="key-card bg-white w-1/3 mx-4 float-animation" style="animation-delay: 1s;">
+                <div class="number-badge bg-green-600">3</div>
+                <div class="p-6 pt-10 text-center">
+                    <div class="icon-circle bg-green-50 mb-6">
+                        <i class="fas fa-hands-helping text-6xl text-green-600"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-green-600 mb-2">対話と共創の意識</h2>
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">「AIと共に創り上げる」</h3>
+                    <p class="text-gray-600 mb-4">AIを一方的に指示する対象ではなく、共に課題解決に取り組む「パートナー」として捉える。対話と試行錯誤を通じて共に価値を創造する。</p>
+                    
+                    <div class="bg-green-50 p-3 rounded-lg mt-4">
+                        <p class="text-green-600 font-bold">
+                            <i class="fas fa-sync-alt mr-2"></i>相互作用から新たな価値が生まれる。
+                        </p>
+                    </div>
+                </div>
+                <div class="accent-line bg-green-600"></div>
+            </div>
+        </div>
+        
+        <!-- Bottom Note -->
+        <div class="text-center mt-8 bg-white bg-opacity-80 p-3 rounded-lg shadow-lg max-w-3xl mx-auto relative z-10">
+            <p class="text-blue-700 font-bold">これらの鍵を実践することで、「AI超独学力」が飛躍的に向上し、<br>AIと共に進化し続けるプロフェッショナルへの道が開けます</p>
+        </div>
+    </div>
+</body>
+</html>

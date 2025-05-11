@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap');
+      
+      :root {
+        --black: #2c2c2c;
+        --cream: #f4f1ea;
+        --red: #b3322b;
+        --blue: #1a5b66;
+        --purple: #653a5e;
+        --light-red: rgba(179, 50, 43, 0.08);
+        --light-blue: rgba(26, 91, 102, 0.08);
+        --light-purple: rgba(101, 58, 94, 0.08);
+      }
+      
+      .slide-bg {
+        fill: var(--cream);
+      }
+      
+      .title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 48px;
+        fill: var(--black);
+        letter-spacing: 0.05em;
+      }
+      
+      .body-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 24px;
+        fill: var(--black);
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+      }
+      
+      .challenge-number {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 900;
+        font-size: 52px;
+      }
+      
+      .challenge-title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 28px;
+        fill: var(--black);
+        letter-spacing: 0.03em;
+      }
+      
+      .challenge-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 20px;
+        fill: var(--black);
+        line-height: 1.4;
+        letter-spacing: 0.01em;
+      }
+      
+      .challenge-note {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 16px;
+        fill: var(--black);
+        font-style: italic;
+        letter-spacing: 0.01em;
+      }
+      
+      .company {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+        text-anchor: end;
+      }
+      
+      .page-number {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .bold {
+        font-weight: 700;
+      }
+    </style>
+    
+    <!-- 壁の影のためのフィルター -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    
+    <!-- カード用の微妙な影 -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
+      <feOffset dx="1" dy="1" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.15" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" class="slide-bg" />
+  
+  <!-- タイトル -->
+  <g transform="translate(120, 100)">
+    <text class="title">今日の会社の「見えない壁」</text>
+    <line x1="0" y1="70" x2="840" y2="70" stroke="var(--red)" stroke-width="3" />
+  </g>
+  
+  <!-- ドット装飾 -->
+  <g transform="translate(960, 150)">
+    <circle cx="-30" cy="0" r="7" fill="var(--red)" />
+    <circle cx="0" cy="0" r="7" fill="var(--blue)" />
+    <circle cx="30" cy="0" r="7" fill="var(--purple)" />
+  </g>
+  
+  <!-- 説明文 -->
+  <g transform="translate(120, 200)">
+    <text class="body-text">現代の企業経営が抱える課題は、会社の成長を妨げる「<tspan class="bold" fill="var(--red)">見えない壁</tspan>」となっています。</text>
+    <text class="body-text" y="40">なぜBAO構想が必要なのか — その背景にある４つの経営課題</text>
+  </g>
+  
+  <!-- 課題ボックス -->
+  <g transform="translate(120, 290)">
+    <!-- 課題1 -->
+    <g filter="url(#cardShadow)">
+      <rect x="0" y="0" width="820" height="180" fill="white" stroke="var(--black)" stroke-width="2" rx="4" />
+      <rect x="7" y="7" width="820" height="180" fill="none" stroke="var(--black)" stroke-width="1" rx="4" opacity="0.5" />
+      <rect x="0" y="0" width="10" height="180" fill="var(--red)" rx="2" />
+      
+      <text x="40" y="60" class="challenge-number" fill="var(--red)">1</text>
+      <g transform="translate(110, 40)">
+        <text class="challenge-title" y="10">部門間の壁（サイロ化）</text>
+        <text class="challenge-text" y="50">マーケティング、営業、開発、サポートなど各部門の情報共有が不十分</text>
+        <text class="challenge-note" y="80">「隣の部署が何をやっているか分からない」状態では会社全体の最適化が困難に</text>
+      </g>
+    </g>
+    
+    <!-- 課題2 -->
+    <g transform="translate(860, 0)" filter="url(#cardShadow)">
+      <rect x="0" y="0" width="820" height="180" fill="white" stroke="var(--black)" stroke-width="2" rx="4" />
+      <rect x="7" y="7" width="820" height="180" fill="none" stroke="var(--black)" stroke-width="1" rx="4" opacity="0.5" />
+      <rect x="0" y="0" width="10" height="180" fill="var(--blue)" rx="2" />
+      
+      <text x="40" y="60" class="challenge-number" fill="var(--blue)">2</text>
+      <g transform="translate(110, 40)">
+        <text class="challenge-title" y="10">人間の限界</text>
+        <text class="challenge-text" y="50">処理できる情報量やタスク数に上限がある</text>
+        <text class="challenge-note" y="80">市場変化の加速に対して、人間の処理速度が追いつかなくなっている</text>
+      </g>
+    </g>
+    
+    <!-- 課題3 -->
+    <g transform="translate(0, 210)" filter="url(#cardShadow)">
+      <rect x="0" y="0" width="820" height="180" fill="white" stroke="var(--black)" stroke-width="2" rx="4" />
+      <rect x="7" y="7" width="820" height="180" fill="none" stroke="var(--black)" stroke-width="1" rx="4" opacity="0.5" />
+      <rect x="0" y="0" width="10" height="180" fill="var(--purple)" rx="2" />
+      
+      <text x="40" y="60" class="challenge-number" fill="var(--purple)">3</text>
+      <g transform="translate(110, 40)">
+        <text class="challenge-title" y="10">人材採用と育成の難しさ</text>
+        <text class="challenge-text" y="50">優秀な人材の確保と教育には膨大なコストと時間が必要</text>
+        <text class="challenge-note" y="80">特にスタートアップや新規事業では大きな障壁となる</text>
+      </g>
+    </g>
+    
+    <!-- 課題4 -->
+    <g transform="translate(860, 210)" filter="url(#cardShadow)">
+      <rect x="0" y="0" width="820" height="180" fill="white" stroke="var(--black)" stroke-width="2" rx="4" />
+      <rect x="7" y="7" width="820" height="180" fill="none" stroke="var(--black)" stroke-width="1" rx="4" opacity="0.5" />
+      <rect x="0" y="0" width="10" height="180" fill="var(--red)" rx="2" />
+      
+      <text x="40" y="60" class="challenge-number" fill="var(--red)">4</text>
+      <g transform="translate(110, 40)">
+        <text class="challenge-title" y="10">意思決定の遅れ</text>
+        <text class="challenge-text" y="50">情報収集→分析→会議→決定のプロセスが長すぎる</text>
+        <text class="challenge-note" y="80">変化の速い市場では、この遅延がチャンスの喪失につながる</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 壁の図解 -->
+  <g transform="translate(120, 750)">
+    <!-- ベースライン背景 -->
+    <rect x="-10" y="-5" width="1700" height="18" fill="var(--cream)" filter="url(#dropShadow)" />
+    
+    <!-- ベースライン -->
+    <rect x="0" y="0" width="1680" height="8" fill="var(--black)" rx="4" />
+    
+    <!-- 壁の影 - バリエーション追加 -->
+    <g opacity="0.15">
+      <rect x="220" y="-185" width="40" height="185" fill="var(--black)" />
+      <rect x="660" y="-185" width="40" height="185" fill="var(--black)" />
+      <rect x="1100" y="-185" width="40" height="185" fill="var(--black)" />
+      <rect x="1540" y="-185" width="40" height="185" fill="var(--black)" />
+    </g>
+    
+    <!-- 壁1 -->
+    <g transform="translate(240, -180)" filter="url(#dropShadow)">
+      <rect x="-25" y="0" width="50" height="180" fill="var(--black)" rx="2" />
+      <text x="0" y="-35" text-anchor="middle" class="challenge-note" fill="var(--red)" font-weight="700">サイロ化</text>
+      <text x="0" y="-15" text-anchor="middle" class="challenge-note">情報の分断</text>
+    </g>
+    
+    <!-- 壁2 -->
+    <g transform="translate(680, -180)" filter="url(#dropShadow)">
+      <rect x="-25" y="0" width="50" height="180" fill="var(--black)" rx="2" />
+      <text x="0" y="-35" text-anchor="middle" class="challenge-note" fill="var(--blue)" font-weight="700">人間の限界</text>
+      <text x="0" y="-15" text-anchor="middle" class="challenge-note">処理能力の制約</text>
+    </g>
+    
+    <!-- 壁3 -->
+    <g transform="translate(1120, -180)" filter="url(#dropShadow)">
+      <rect x="-25" y="0" width="50" height="180" fill="var(--black)" rx="2" />
+      <text x="0" y="-35" text-anchor="middle" class="challenge-note" fill="var(--purple)" font-weight="700">人材問題</text>
+      <text x="0" y="-15" text-anchor="middle" class="challenge-note">採用・育成の壁</text>
+    </g>
+    
+    <!-- 壁4 -->
+    <g transform="translate(1560, -180)" filter="url(#dropShadow)">
+      <rect x="-25" y="0" width="50" height="180" fill="var(--black)" rx="2" />
+      <text x="0" y="-35" text-anchor="middle" class="challenge-note" fill="var(--red)" font-weight="700">意思決定</text>
+      <text x="0" y="-15" text-anchor="middle" class="challenge-note">スピードの遅さ</text>
+    </g>
+    
+    <!-- 強調表現: 障壁部分 -->
+    <rect x="235" y="-30" width="10" height="30" fill="var(--red)" opacity="0.7" />
+    <rect x="675" y="-30" width="10" height="30" fill="var(--blue)" opacity="0.7" />
+    <rect x="1115" y="-30" width="10" height="30" fill="var(--purple)" opacity="0.7" />
+    <rect x="1555" y="-30" width="10" height="30" fill="var(--red)" opacity="0.7" />
+    
+    <!-- ラベル -->
+    <g transform="translate(80, -100)">
+      <text class="challenge-text bold">ビジネスの成長</text>
+      <line x1="0" y1="10" x2="100" y2="10" stroke="var(--black)" stroke-width="1" opacity="0.3" />
+    </g>
+    
+    <g transform="translate(1600, -100)">
+      <text text-anchor="end" class="challenge-text bold">未来のポテンシャル</text>
+      <line x1="-200" y1="10" x2="0" y2="10" stroke="var(--black)" stroke-width="1" opacity="0.3" />
+    </g>
+    
+    <!-- 矢印 -->
+    <g transform="translate(0, -50)">
+      <line x1="90" y1="0" x2="170" y2="0" stroke="var(--black)" stroke-width="3" stroke-linecap="round" />
+      <polygon points="180,0 165,-8 165,8" fill="var(--black)" />
+    </g>
+    
+    <g transform="translate(1490, -50)">
+      <line x1="10" y1="0" x2="90" y2="0" stroke="var(--black)" stroke-width="3" stroke-linecap="round" />
+      <polygon points="100,0 85,-8 85,8" fill="var(--black)" />
+    </g>
+  </g>
+  
+  <!-- まとめボックス -->
+  <g transform="translate(960, 970)" filter="url(#cardShadow)">
+    <rect x="-620" y="-50" width="1240" height="100" fill="white" stroke="var(--black)" stroke-width="2" rx="4" />
+    <rect x="-613" y="-43" width="1240" height="100" fill="none" stroke="var(--black)" stroke-width="1" rx="4" opacity="0.5" />
+    
+    <line x1="-620" y1="-40" x2="620" y2="-40" stroke="var(--red)" stroke-width="1" opacity="0.2" />
+    <line x1="-620" y1="40" x2="620" y2="40" stroke="var(--red)" stroke-width="1" opacity="0.2" />
+    
+    <text x="0" y="0" text-anchor="middle" class="body-text">
+      BAO構想は、これらの「見えない壁」を<tspan font-weight="700">AI技術によって解体し</tspan>、
+    </text>
+    <text x="0" y="40" text-anchor="middle" class="body-text">
+      <tspan fill="var(--red)" font-weight="700">企業の成長とイノベーションを加速させる</tspan>新しい経営システムです
+    </text>
+  </g>
+  
+  <!-- 会社名と頁数 -->
+  <g transform="translate(1800, 1040)">
+    <text class="company">TANREN株式会社</text>
+  </g>
+  
+  <g transform="translate(120, 1040)">
+    <text class="page-number">2 / 12</text>
+  </g>
+</svg> 

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レベル別に見るAIエージェントの世界</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0a2463 0%, #1e50a2 50%, #3a6ea5 100%);
+            color: #ffffff;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            padding: 25px 40px 15px;
+            background: rgba(10, 36, 99, 0.6);
+            border-bottom: 2px solid rgba(192, 224, 222, 0.3);
+        }
+        .title {
+            font-size: 2.3rem;
+            font-weight: 900;
+            margin: 0;
+            text-align: center;
+            background: linear-gradient(45deg, #ffffff, #c0e0de);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 5px;
+        }
+        .content {
+            padding: 30px 40px;
+            display: flex;
+        }
+        .left-column {
+            flex: 1;
+            padding-right: 30px;
+        }
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+        }
+        .level-card {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            border-left: 5px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .level-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .level-0-5 {
+            border-left-color: rgba(102, 199, 244, 0.8);
+        }
+        .level-1 {
+            border-left-color: rgba(90, 122, 184, 0.8);
+        }
+        .level-2 {
+            border-left-color: rgba(79, 117, 232, 0.8);
+        }
+        .level-3 {
+            border-left-color: rgba(58, 76, 215, 0.8);
+        }
+        .level-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .level-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-right: 12px;
+        }
+        .badge-0-5 {
+            background: linear-gradient(135deg, #66c7f4, #41b6e6);
+        }
+        .badge-1 {
+            background: linear-gradient(135deg, #4d85bd, #5a7ab8);
+        }
+        .badge-2 {
+            background: linear-gradient(135deg, #3351a5, #2e4ba1);
+        }
+        .badge-3 {
+            background: linear-gradient(135deg, #2d3ec1, #3a4cd7);
+        }
+        .level-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .level-name-en {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-left: 8px;
+        }
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .feature-list li i {
+            width: 20px;
+            text-align: center;
+            margin-right: 10px;
+            opacity: 0.9;
+        }
+        .chart-container {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            height: 450px;
+            position: relative;
+        }
+        .chart-title {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+        .level-0-5-color {
+            background: rgba(102, 199, 244, 0.7);
+        }
+        .level-1-color {
+            background: rgba(90, 122, 184, 0.7);
+        }
+        .level-2-color {
+            background: rgba(79, 117, 232, 0.7);
+        }
+        .level-3-color {
+            background: rgba(58, 76, 215, 0.7);
+        }
+        .tanren-note {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            text-align: center;
+            border: 1px solid rgba(192, 224, 222, 0.3);
+        }
+        .tanren-badge {
+            display: inline-block;
+            background: rgba(192, 224, 222, 0.2);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: 700;
+            margin: 0 3px;
+        }
+        .highlight {
+            color: #c0e0de;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="grid-pattern"></div>
+        <header class="header">
+            <h1 class="title">レベル別に見るAIエージェントの世界</h1>
+            <p class="subtitle">進化する自律性と能力の階層構造</p>
+        </header>
+        <div class="content">
+            <div class="left-column">
+                <!-- レベル0.5 -->
+                <div class="level-card level-0-5">
+                    <div class="level-header">
+                        <span class="level-badge badge-0-5">Lv 0.5</span>
+                        <div>
+                            <span class="level-name">入門</span>
+                            <span class="level-name-en">Beginner / Onboarding</span>
+                        </div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-bullseye text-blue-300"></i> カスタムAI／一撃回答の世界</li>
+                        <li><i class="fas fa-cog text-blue-300"></i> 特定目的に特化した指示と知識ベース</li>
+                        <li><i class="fas fa-comment text-blue-300"></i> GPTs、NotebookLM、AI秘書など</li>
+                    </ul>
+                </div>
+                
+                <!-- レベル1 -->
+                <div class="level-card level-1">
+                    <div class="level-header">
+                        <span class="level-badge badge-1">Lv 1</span>
+                        <div>
+                            <span class="level-name">初級</span>
+                            <span class="level-name-en">Novice / Foundation</span>
+                        </div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-search text-blue-400"></i> Deep Research型／情報収集能力</li>
+                        <li><i class="fas fa-globe text-blue-400"></i> インターネット検索・情報整理が可能</li>
+                        <li><i class="fas fa-exclamation-triangle text-yellow-300"></i> ファクトチェックの重要性</li>
+                    </ul>
+                </div>
+                
+                <!-- レベル2 -->
+                <div class="level-card level-2">
+                    <div class="level-header">
+                        <span class="level-badge badge-2">Lv 2</span>
+                        <div>
+                            <span class="level-name">中級</span>
+                            <span class="level-name-en">Intermediate / Practitioner</span>
+                        </div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-robot text-indigo-400"></i> 自律型／特定専門分野に特化</li>
+                        <li><i class="fas fa-tasks text-indigo-400"></i> 計画立案から完了まで自律的に処理</li>
+                        <li><i class="fas fa-industry text-indigo-400"></i> 特定領域では人間の専門家レベル</li>
+                    </ul>
+                </div>
+                
+                <!-- レベル3 -->
+                <div class="level-card level-3">
+                    <div class="level-header">
+                        <span class="level-badge badge-3">Lv 3</span>
+                        <div>
+                            <span class="level-name">上級</span>
+                            <span class="level-name-en">Advanced / Expert / Innovator</span>
+                        </div>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-orchestra-conductor text-indigo-500"></i> 完全オーケストレートモデル／共創</li>
+                        <li><i class="fas fa-brain text-indigo-500"></i> あらゆる知的活動領域に対応</li>
+                        <li><i class="fas fa-folder-open text-indigo-500"></i> 「自分専用の知識フォルダ」と連携</li>
+                    </ul>
+                </div>
+                
+                <div class="tanren-note">
+                    <p>
+                        思考OS「TANREN 3Dメソッド」の<span class="tanren-badge">Z軸（レベル感）</span>を羅針盤として<br>
+                        AIエージェントの進化レベルを理解し、適切に活用しよう！
+                    </p>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="chart-container">
+                    <div class="chart-title">AIエージェントの能力比較</div>
+                    <canvas id="levelRadarChart" width="400" height="350"></canvas>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="legend-color level-0-5-color"></div>
+                            <span>Lv 0.5</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color level-1-color"></div>
+                            <span>Lv 1</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color level-2-color"></div>
+                            <span>Lv 2</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color level-3-color"></div>
+                            <span>Lv 3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var ctx = document.getElementById('levelRadarChart').getContext('2d');
+            
+            var levelRadarChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['自律性', '情報収集力', 'タスク実行力', '問題解決力', '創造性', '専門知識'],
+                    datasets: [
+                        {
+                            label: 'レベル 0.5',
+                            data: [20, 30, 25, 20, 15, 40],
+                            backgroundColor: 'rgba(102, 199, 244, 0.2)',
+                            borderColor: 'rgba(102, 199, 244, 0.7)',
+                            pointBackgroundColor: 'rgba(102, 199, 244, 1)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgba(102, 199, 244, 1)'
+                        },
+                        {
+                            label: 'レベル 1',
+                            data: [30, 70, 40, 35, 25, 50],
+                            backgroundColor: 'rgba(90, 122, 184, 0.2)',
+                            borderColor: 'rgba(90, 122, 184, 0.7)',
+                            pointBackgroundColor: 'rgba(90, 122, 184, 1)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgba(90, 122, 184, 1)'
+                        },
+                        {
+                            label: 'レベル 2',
+                            data: [70, 60, 75, 65, 45, 85],
+                            backgroundColor: 'rgba(79, 117, 232, 0.2)',
+                            borderColor: 'rgba(79, 117, 232, 0.7)',
+                            pointBackgroundColor: 'rgba(79, 117, 232, 1)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgba(79, 117, 232, 1)'
+                        },
+                        {
+                            label: 'レベル 3',
+                            data: [90, 85, 90, 85, 80, 95],
+                            backgroundColor: 'rgba(58, 76, 215, 0.2)',
+                            borderColor: 'rgba(58, 76, 215, 0.7)',
+                            pointBackgroundColor: 'rgba(58, 76, 215, 1)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgba(58, 76, 215, 1)'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scale: {
+                        ticks: {
+                            beginAtZero: true,
+                            max: 100,
+                            stepSize: 20,
+                            color: 'rgba(255, 255, 255, 0.6)'
+                        },
+                        gridLines: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        angleLines: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        pointLabels: {
+                            fontSize: 14,
+                            fontColor: 'rgba(255, 255, 255, 0.9)'
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            },
+                            pointLabels: {
+                                color: 'rgba(255, 255, 255, 0.9)',
+                                font: {
+                                    size: 12
+                                }
+                            },
+                            ticks: {
+                                color: 'rgba(255, 255, 255, 0.6)',
+                                backdropColor: 'transparent'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

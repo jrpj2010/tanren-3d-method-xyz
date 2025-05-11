@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー装飾 -->
+  <rect x="0" y="0" width="1920" height="65" fill="#2c2c2c"/>
+  <text x="60" y="42" font-family="Noto Serif JP" font-size="24" font-weight="bold" fill="#f4f1ea">TANREN GPTの特徴とエージェント機能</text>
+  <rect x="60" y="65" width="3" height="25" fill="#b3322b"/>
+  <rect x="70" y="65" width="3" height="25" fill="#1a5b66"/>
+  <rect x="80" y="65" width="3" height="25" fill="#653a5e"/>
+  
+  <!-- フッター装飾 -->
+  <rect x="0" y="1025" width="1920" height="55" fill="#2c2c2c"/>
+  <text x="1830" y="1060" font-family="Noto Sans JP" font-size="16" fill="#f4f1ea" text-anchor="end">AI活用コンサルティング・教育および書籍執筆支援に関する相談</text>
+  <text x="60" y="1060" font-family="Noto Sans JP" font-size="16" fill="#f4f1ea">3</text>
+  
+  <!-- 3カラムレイアウト -->
+  <!-- カラム1: TANREN GPTのインターフェース -->
+  <rect x="60" y="110" width="580" height="885" fill="#ffffff" rx="5" ry="5" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="60" y="110" width="580" height="50" fill="#b3322b" rx="5" ry="5"/>
+  <text x="90" y="143" font-family="Noto Sans JP" font-size="20" font-weight="bold" fill="#ffffff">TANREN GPTのインターフェース 💻</text>
+  
+  <!-- カラム1コンテンツ -->
+  <text x="90" y="195" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">インターフェースの特徴</text>
+  <rect x="90" y="205" width="200" height="2" fill="#b3322b"/>
+  <text x="110" y="235" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• ChatGPTライクな使いやすい画面</text>
+  <text x="110" y="265" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 最新AI技術の採用</text>
+  <text x="130" y="295" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">- OpenAI, Azure OpenAI対応</text>
+  <text x="130" y="325" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">- GPT-4o(omni)など最新モデル利用</text>
+  
+  <!-- データビジュアライゼーション1 -->
+  <rect x="110" y="355" width="480" height="150" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="130" y="380" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">TANREN GPTの特徴</text>
+  <line x1="130" y1="390" x2="300" y2="390" stroke="#b3322b" stroke-width="2"/>
+  
+  <!-- インターフェース模式図 -->
+  <rect x="160" y="410" width="380" height="70" fill="#2c2c2c" rx="3" ry="3"/>
+  <text x="350" y="437" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">TANREN GPT</text>
+  <text x="350" y="460" font-family="Noto Sans JP" font-size="12" fill="#ffffff" text-anchor="middle">ChatGPTライクな使いやすいインターフェース</text>
+  
+  <rect x="160" y="440" width="70" height="40" fill="#b3322b" rx="3" ry="3"/>
+  <text x="195" y="465" font-family="Noto Sans JP" font-size="10" fill="#ffffff" text-anchor="middle">エージェント機能</text>
+  
+  <text x="90" y="545" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">企業GPTとしての安心・安全</text>
+  <rect x="90" y="555" width="200" height="2" fill="#b3322b"/>
+  <text x="110" y="585" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" font-weight="bold">• 企業が機密情報を含めても安全に利用可能</text>
+  <text x="110" y="615" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• セキュリティを考慮した設計</text>
+  
+  <!-- データビジュアライゼーション2 -->
+  <rect x="110" y="645" width="480" height="160" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="130" y="670" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">利用制限の特徴</text>
+  <line x1="130" y1="680" x2="300" y2="680" stroke="#b3322b" stroke-width="2"/>
+  
+  <!-- 利用制限表 -->
+  <rect x="150" y="700" width="180" height="40" fill="#2c2c2c"/>
+  <rect x="330" y="700" width="180" height="40" fill="#2c2c2c"/>
+  <text x="240" y="725" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">モデル</text>
+  <text x="420" y="725" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">制限</text>
+  
+  <rect x="150" y="740" width="180" height="35" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="330" y="740" width="180" height="35" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="240" y="765" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">GPT-4o(omni)</text>
+  <text x="420" y="765" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">月200回/ID</text>
+  
+  <rect x="150" y="775" width="180" height="35" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="330" y="775" width="180" height="35" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="1"/>
+  <text x="240" y="800" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">GPT-3.5-turbo (4mini)</text>
+  <text x="420" y="800" font-family="Noto Sans JP" font-size="13" fill="#2c2c2c" text-anchor="middle">実質無制限</text>
+  
+  <text x="90" y="855" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">実践ポイント</text>
+  <rect x="90" y="865" width="120" height="2" fill="#b3322b"/>
+  <rect x="110" y="885" width="480" height="60" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="130" y="915" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 機密情報を安全に活用できるセキュリティ</text>
+  <text x="130" y="940" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 一般ユーザーは月200回の制限を使い切らない</text>
+  
+  <!-- カラム2: TANRENライブラリ（エージェント機能） -->
+  <rect x="670" y="110" width="580" height="885" fill="#ffffff" rx="5" ry="5" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="670" y="110" width="580" height="50" fill="#1a5b66" rx="5" ry="5"/>
+  <text x="700" y="143" font-family="Noto Sans JP" font-size="20" font-weight="bold" fill="#ffffff">TANRENライブラリ（エージェント機能） 🤖</text>
+  
+  <!-- カラム2コンテンツ -->
+  <text x="700" y="195" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">カテゴリ別エージェント</text>
+  <rect x="700" y="205" width="200" height="2" fill="#1a5b66"/>
+  <text x="720" y="235" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• セールスイネーブルメント</text>
+  <text x="720" y="265" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 役職別</text>
+  <text x="720" y="295" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 業種別</text>
+  <text x="720" y="325" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 職種別</text>
+  <text x="720" y="355" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 課題別</text>
+  
+  <!-- データビジュアライゼーション3 -->
+  <rect x="720" y="385" width="480" height="165" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="740" y="410" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">エージェントの役割</text>
+  <line x1="740" y1="420" x2="900" y2="420" stroke="#1a5b66" stroke-width="2"/>
+  
+  <!-- 図解 -->
+  <rect x="760" y="440" width="400" height="70" fill="#1a5b66" opacity="0.1" rx="3" ry="3"/>
+  <text x="960" y="470" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">エージェント = 目的に応じた事前設定済みプロンプト群</text>
+  <text x="960" y="495" font-family="Noto Sans JP" font-size="12" fill="#2c2c2c" text-anchor="middle">簡単な指示で高度なタスクを実行可能</text>
+  
+  <line x1="820" y1="510" x2="820" y2="530" stroke="#2c2c2c" stroke-width="1" marker-end="url(#arrow3)"/>
+  <defs>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c2c2c"/>
+    </marker>
+  </defs>
+  
+  <line x1="960" y1="510" x2="960" y2="530" stroke="#2c2c2c" stroke-width="1" marker-end="url(#arrow3)"/>
+  <line x1="1100" y1="510" x2="1100" y2="530" stroke="#2c2c2c" stroke-width="1" marker-end="url(#arrow3)"/>
+  
+  <rect x="750" y="530" width="140" height="30" fill="#1a5b66" rx="3" ry="3"/>
+  <rect x="890" y="530" width="140" height="30" fill="#1a5b66" rx="3" ry="3"/>
+  <rect x="1030" y="530" width="140" height="30" fill="#1a5b66" rx="3" ry="3"/>
+  
+  <text x="820" y="550" font-family="Noto Sans JP" font-size="12" fill="#ffffff" text-anchor="middle">ニーズ分析</text>
+  <text x="960" y="550" font-family="Noto Sans JP" font-size="12" fill="#ffffff" text-anchor="middle">課題抽出</text>
+  <text x="1100" y="550" font-family="Noto Sans JP" font-size="12" fill="#ffffff" text-anchor="middle">解決策提案</text>
+  
+  <text x="700" y="590" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">デモンストレーション事例</text>
+  <rect x="700" y="600" width="200" height="2" fill="#1a5b66"/>
+  <text x="720" y="630" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" font-weight="bold">• セールスイネーブルメントエージェント</text>
+  <text x="740" y="660" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">- 顧客ニーズ分析（HPスクレイピング）</text>
+  <text x="740" y="690" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">- プロンプト入力とAIによる分析実行</text>
+  <text x="720" y="720" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 課題分析と解決策提案</text>
+  <text x="740" y="750" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">- 課題抽出・整理・解決策提案の自動化</text>
+  
+  <!-- データビジュアライゼーション4 -->
+  <rect x="720" y="780" width="480" height="120" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="740" y="805" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">プロンプトの重要性</text>
+  <line x1="740" y1="815" x2="900" y2="815" stroke="#1a5b66" stroke-width="2"/>
+  
+  <rect x="760" y="835" width="400" height="50" fill="#1a5b66" opacity="0.1" rx="3" ry="3"/>
+  <text x="960" y="865" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c" text-anchor="middle">誤字脱字があっても意図を正確に理解し処理</text>
+  
+  <text x="700" y="930" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">実践ポイント</text>
+  <rect x="700" y="940" width="120" height="2" fill="#1a5b66"/>
+  <rect x="720" y="960" width="480" height="35" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="740" y="983" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• 事前設定プロンプトで少ない指示から高精度な回答</text>
+  
+  <!-- カラム3: 全自動実行と応用例 -->
+  <rect x="1280" y="110" width="580" height="885" fill="#ffffff" rx="5" ry="5" stroke="#2c2c2c" stroke-width="1"/>
+  <rect x="1280" y="110" width="580" height="50" fill="#653a5e" rx="5" ry="5"/>
+  <text x="1310" y="143" font-family="Noto Sans JP" font-size="20" font-weight="bold" fill="#ffffff">エージェントの全自動実行と応用例 🚀</text>
+  
+  <!-- カラム3コンテンツ -->
+  <text x="1310" y="195" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">全自動実行のデモンストレーション</text>
+  <rect x="1310" y="205" width="200" height="2" fill="#653a5e"/>
+  <text x="1330" y="235" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 企業の課題分析自動化</text>
+  <text x="1350" y="265" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">- 課題抽出プロンプト入力</text>
+  <text x="1350" y="295" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">- 整理と解決策提案の自動連携</text>
+  
+  <!-- データビジュアライゼーション5 -->
+  <rect x="1330" y="325" width="480" height="180" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="1350" y="350" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">エージェントの処理フロー</text>
+  <line x1="1350" y1="360" x2="1550" y2="360" stroke="#653a5e" stroke-width="2"/>
+  
+  <!-- プロセスフロー図 -->
+  <rect x="1380" y="380" width="160" height="40" fill="#653a5e" rx="3" ry="3"/>
+  <text x="1460" y="405" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">プロンプト入力</text>
+  
+  <line x1="1460" y1="420" x2="1460" y2="440" stroke="#2c2c2c" stroke-width="2" marker-end="url(#arrow4)"/>
+  <defs>
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c2c2c"/>
+    </marker>
+  </defs>
+  
+  <rect x="1380" y="440" width="160" height="40" fill="#653a5e" rx="3" ry="3"/>
+  <text x="1460" y="465" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">課題抽出</text>
+  
+  <line x1="1540" y1="460" x2="1600" y2="460" stroke="#2c2c2c" stroke-width="2" marker-end="url(#arrow4)"/>
+  
+  <rect x="1600" y="440" width="160" height="40" fill="#653a5e" rx="3" ry="3"/>
+  <text x="1680" y="465" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">原因特定</text>
+  
+  <line x1="1680" y1="480" x2="1680" y2="500" stroke="#2c2c2c" stroke-width="2" marker-end="url(#arrow4)"/>
+  
+  <rect x="1600" y="500" width="160" height="40" fill="#653a5e" rx="3" ry="3"/>
+  <text x="1680" y="525" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">解決策生成</text>
+  
+  <line x1="1600" y1="520" x2="1540" y2="520" stroke="#2c2c2c" stroke-width="2" marker-end="url(#arrow4)"/>
+  
+  <rect x="1380" y="500" width="160" height="40" fill="#653a5e" rx="3" ry="3"/>
+  <text x="1460" y="525" font-family="Noto Sans JP" font-size="14" fill="#ffffff" text-anchor="middle">効果予測</text>
+  
+  <text x="1310" y="555" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">全自動化の応用例</text>
+  <rect x="1310" y="565" width="200" height="2" fill="#653a5e"/>
+  <text x="1330" y="595" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c" font-weight="bold">• ロープレの自動化</text>
+  <text x="1330" y="625" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 提案書の自動作成</text>
+  <text x="1330" y="655" font-family="Noto Sans JP" font-size="16" fill="#2c2c2c">• 議事録の自動生成と分析</text>
+  
+  <!-- データビジュアライゼーション6 -->
+  <rect x="1330" y="685" width="480" height="140" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="1350" y="710" font-family="Noto Sans JP" font-size="16" font-weight="bold" fill="#2c2c2c">活用シーン別の効果</text>
+  <line x1="1350" y1="720" x2="1510" y2="720" stroke="#653a5e" stroke-width="2"/>
+  
+  <!-- 効果表 -->
+  <rect x="1370" y="740" width="200" height="35" fill="#653a5e" opacity="0.1"/>
+  <rect x="1570" y="740" width="100" height="35" fill="#653a5e" opacity="0.1"/>
+  <text x="1380" y="763" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">ロープレ</text>
+  <text x="1600" y="763" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">実践力向上</text>
+  
+  <rect x="1370" y="775" width="200" height="35" fill="#f4f1ea"/>
+  <rect x="1570" y="775" width="100" height="35" fill="#f4f1ea"/>
+  <text x="1380" y="798" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">提案書作成</text>
+  <text x="1600" y="798" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">時間短縮</text>
+  
+  <text x="1310" y="865" font-family="Noto Sans JP" font-size="18" font-weight="bold" fill="#2c2c2c">実践ポイント</text>
+  <rect x="1310" y="875" width="120" height="2" fill="#653a5e"/>
+  <rect x="1330" y="895" width="480" height="60" fill="#f4f1ea" rx="3" ry="3"/>
+  <text x="1350" y="925" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• エージェント機能と連携で業務を大幅効率化</text>
+  <text x="1350" y="950" font-family="Noto Sans JP" font-size="14" fill="#2c2c2c">• わずかな指示で複雑なタスクを自動連続実行</text>
+</svg> 

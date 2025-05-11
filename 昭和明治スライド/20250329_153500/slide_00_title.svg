@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー装飾 -->
+  <rect x="0" y="0" width="1920" height="65" fill="#2c2c2c"/>
+  <rect x="60" y="65" width="3" height="25" fill="#b3322b"/>
+  <rect x="70" y="65" width="3" height="25" fill="#1a5b66"/>
+  <rect x="80" y="65" width="3" height="25" fill="#653a5e"/>
+  
+  <!-- フッター装飾 -->
+  <rect x="0" y="1025" width="1920" height="55" fill="#2c2c2c"/>
+  <text x="1830" y="1060" font-family="Noto Sans JP" font-size="18" fill="#f4f1ea" text-anchor="end">2025年3月29日</text>
+  
+  <!-- 中央にタイトル -->
+  <text x="960" y="380" font-family="Noto Serif JP" font-size="60" font-weight="bold" fill="#2c2c2c" text-anchor="middle" letter-spacing="2">AI活用コンサルティング</text>
+  <text x="960" y="480" font-family="Noto Serif JP" font-size="60" font-weight="bold" fill="#2c2c2c" text-anchor="middle" letter-spacing="2">教育および書籍執筆支援</text>
+  <text x="960" y="580" font-family="Noto Serif JP" font-size="60" font-weight="bold" fill="#2c2c2c" text-anchor="middle" letter-spacing="2">に関する相談</text>
+  
+  <!-- サブタイトルデコレーション -->
+  <line x1="760" y1="620" x2="1160" y2="620" stroke="#b3322b" stroke-width="4"/>
+  <circle cx="960" cy="620" r="8" fill="#b3322b"/>
+  
+  <!-- ロゴ的なデザイン -->
+  <rect x="820" y="680" width="280" height="100" fill="#2c2c2c" rx="5" ry="5"/>
+  <text x="960" y="745" font-family="Noto Sans JP" font-size="40" font-weight="bold" fill="#f4f1ea" text-anchor="middle" letter-spacing="1">TANREN</text>
+  
+  <!-- 右下に小さなデコレーション -->
+  <rect x="1800" y="950" width="40" height="40" fill="#1a5b66" rx="3" ry="3"/>
+  <rect x="1750" y="950" width="40" height="40" fill="#653a5e" rx="3" ry="3"/>
+  <rect x="1700" y="950" width="40" height="40" fill="#b3322b" rx="3" ry="3"/>
+</svg> 

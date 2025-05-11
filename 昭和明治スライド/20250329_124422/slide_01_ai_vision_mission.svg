@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea" />
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c" />
+  <text x="50" y="65" font-family="'Noto Serif JP'" font-size="36" fill="#f4f1ea" letter-spacing="2">Microsoftの使命とAI革命</text>
+  <text x="1700" y="65" font-family="'Noto Sans JP'" font-size="24" fill="#f4f1ea">2025.03.29</text>
+  
+  <!-- フッター -->
+  <rect x="0" y="1030" width="1920" height="50" fill="#2c2c2c" />
+  <text x="50" y="1065" font-family="'Noto Sans JP'" font-size="18" fill="#f4f1ea">明治・昭和モダンテイスト - Microsoft Build Japan 2025</text>
+  <text x="1700" y="1065" font-family="'Noto Sans JP'" font-size="18" fill="#f4f1ea">01/05</text>
+  
+  <!-- メイン3カラムコンテンツ -->
+  <!-- カラム1: AIの使命 -->
+  <rect x="50" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="50" y="130" width="580" height="60" fill="#b3322b" />
+  <text x="70" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">🌍 人と組織のエンパワーメント</text>
+  
+  <!-- カラム1コンテンツ -->
+  <text x="70" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">「地球上のすべての人とすべての組織が、より多くのことを達成できるようにする」</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="70" y1="250" x2="580" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="330" cy="250" r="5" fill="#b3322b" />
+  
+  <!-- 本質的な目標 -->
+  <text x="70" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ 本質的な目標</text>
+  <text x="70" y="330" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" line-height="1.6">技術自体ではなく、人々と彼らが構築する組織の手に技術の力を与え、より多くを達成できるようにすることが本質的な目標です。</text>
+  
+  <!-- Microsoftの歴史 -->
+  <text x="70" y="400" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ 日本における50年の軌跡</text>
+  <rect x="70" y="420" width="540" height="160" fill="#f4f1ea" stroke="#b3322b" stroke-width="1" />
+  <text x="90" y="450" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• Microsoft創立: 1975年4月4日（50周年）</text>
+  <text x="90" y="480" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 日本進出: 1978年（47年の歴史）</text>
+  <text x="90" y="510" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 日本は米国外で最初の拠点</text>
+  <text x="90" y="540" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• プラットフォーム企業としての一貫した使命</text>
+  
+  <!-- 実践ポイント -->
+  <rect x="70" y="620" width="540" height="180" fill="#f7f4ee" stroke="#b3322b" stroke-width="2" rx="5" />
+  <text x="90" y="650" font-family="'Noto Serif JP'" font-size="20" fill="#b3322b">■ 実践：AIによる変革の可能性</text>
+  <text x="90" y="690" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 消費者体験の再構築: 検索・情報取得・エンターテイメント・コマースが変革</text>
+  <text x="90" y="730" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 組織体験の進化: 従業員体験・顧客サービス・ビジネスプロセス・イノベーションサイクルの加速</text>
+  <text x="90" y="770" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" font-weight="bold">➢ すべての組織がAIを活用し、より速く、より広範囲にイノベーションを起こせる時代へ</text>
+  
+  <!-- カラム2: AIの技術革新 -->
+  <rect x="670" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="670" y="130" width="580" height="60" fill="#1a5b66" />
+  <text x="690" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">⚙️ AIテクノロジーの進化</text>
+  
+  <!-- カラム2コンテンツ -->
+  <text x="690" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">指数関数的に成長するAI能力とその基盤技術</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="690" y1="250" x2="1200" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="950" cy="250" r="5" fill="#1a5b66" />
+  
+  <!-- スケーリング法則 -->
+  <text x="690" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ 指数関数的成長の法則</text>
+  <text x="690" y="330" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" line-height="1.6">ムーアの法則が18ヶ月ごとに計算能力を2倍にしたように、AIのスケーリング法則は知能の能力を急速に向上させています。</text>
+  
+  <!-- グラフ表現 -->
+  <rect x="690" y="360" width="540" height="200" fill="#f4f1ea" stroke="#1a5b66" stroke-width="1" />
+  <text x="700" y="380" font-family="'Noto Sans JP'" font-size="14" fill="#2c2c2c">AIスケーリング法則の進化</text>
+  
+  <!-- 簡易グラフ -->
+  <line x1="710" y1="520" x2="1210" y2="520" stroke="#2c2c2c" stroke-width="1" /> <!-- X軸 -->
+  <line x1="710" y1="520" x2="710" y2="400" stroke="#2c2c2c" stroke-width="1" /> <!-- Y軸 -->
+  <text x="700" y="540" font-family="'Noto Sans JP'" font-size="12" fill="#2c2c2c">時間</text>
+  <text x="680" y="420" font-family="'Noto Sans JP'" font-size="12" fill="#2c2c2c" transform="rotate(-90 680,420)">能力</text>
+  
+  <!-- 曲線 -->
+  <path d="M 710 520 Q 800 510 900 480 T 1000 420 T 1100 320" fill="none" stroke="#1a5b66" stroke-width="2" />
+  <text x="780" y="490" font-family="'Noto Sans JP'" font-size="12" fill="#2c2c2c">ムーアの法則 (18ヶ月)</text>
+  <path d="M 710 520 Q 780 500 850 460 T 950 380 T 1050 260 T 1150 100" fill="none" stroke="#b3322b" stroke-width="2" />
+  <text x="950" y="360" font-family="'Noto Sans JP'" font-size="12" fill="#2c2c2c">事前学習スケーリング (6ヶ月)</text>
+  <path d="M 710 520 Q 760 480 810 420 T 900 300 T 1000 150 T 1100 50" fill="none" stroke="#653a5e" stroke-width="2" />
+  <text x="1050" y="180" font-family="'Noto Sans JP'" font-size="12" fill="#2c2c2c">テスト時スケーリング (3ヶ月)</text>
+  
+  <!-- 実践ポイント -->
+  <rect x="690" y="620" width="540" height="180" fill="#f7f4ee" stroke="#1a5b66" stroke-width="2" rx="5" />
+  <text x="710" y="650" font-family="'Noto Serif JP'" font-size="20" fill="#1a5b66">■ 実践：急速な革新サイクル</text>
+  <text x="710" y="690" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• AI能力が<tspan font-weight="bold">3ヶ月ごとに倍増</tspan>するペースで進化</text>
+  <text x="710" y="730" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• ハードウェアの2倍の進化に対し、ソフトウェアは10〜100倍の最適化を実現</text>
+  <text x="710" y="770" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" font-weight="bold">➢ 「トークン/ドル/ワット」の効率化が国や企業の競争力を左右</text>
+  
+  <!-- カラム3: AIの根本的変革 -->
+  <rect x="1290" y="130" width="580" height="870" fill="#f4f1ea" stroke="#2c2c2c" stroke-width="2" />
+  <rect x="1290" y="130" width="580" height="60" fill="#653a5e" />
+  <text x="1310" y="170" font-family="'Noto Serif JP'" font-size="24" fill="#f4f1ea" letter-spacing="1">🔄 コンピューティングの変革</text>
+  
+  <!-- カラム3コンテンツ -->
+  <text x="1310" y="230" font-family="'Noto Sans JP'" font-size="18" fill="#2c2c2c">AIがもたらす3つの根本的ブレークスルー</text>
+  
+  <!-- 分割線と丸 -->
+  <line x1="1310" y1="250" x2="1820" y2="250" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="1570" cy="250" r="5" fill="#653a5e" />
+  
+  <!-- 3つのブレークスルー -->
+  <text x="1310" y="290" font-family="'Noto Serif JP'" font-size="20" fill="#2c2c2c">◆ コンピューティングの輪郭を変える革新</text>
+  
+  <!-- ブレークスルー1: ユーザーインターフェース -->
+  <rect x="1310" y="320" width="540" height="140" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" />
+  <text x="1330" y="350" font-family="'Noto Serif JP'" font-size="18" fill="#653a5e">1. マルチモーダルインターフェース</text>
+  <text x="1330" y="380" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 自然な音声・視覚によるコミュニケーション</text>
+  <text x="1330" y="410" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• テキスト・画像・動画の入出力が統合</text>
+  <text x="1330" y="440" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• すべてのアプリ・OS・デバイスに変革をもたらす</text>
+  
+  <!-- ブレークスルー2: 計画と推論 -->
+  <rect x="1310" y="480" width="540" height="140" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" />
+  <text x="1330" y="510" font-family="'Noto Serif JP'" font-size="18" fill="#653a5e">2. 計画と推論の高度化</text>
+  <text x="1330" y="540" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 先を見据えた計画能力</text>
+  <text x="1330" y="570" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 複雑な推論プロセスの実行</text>
+  <text x="1330" y="600" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• より洗練された問題解決アプローチ</text>
+  
+  <!-- ブレークスルー3: 記憶とコンテキスト -->
+  <rect x="1310" y="640" width="540" height="140" fill="#f4f1ea" stroke="#653a5e" stroke-width="1" />
+  <text x="1330" y="670" font-family="'Noto Serif JP'" font-size="18" fill="#653a5e">3. 長期記憶とコンテキスト</text>
+  <text x="1330" y="700" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 特定のコンテキストに根ざした知能</text>
+  <text x="1330" y="730" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• 過去のインタラクションの記憶</text>
+  <text x="1330" y="760" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c">• エージェンティックWeb構築への道筋</text>
+  
+  <!-- 実践ポイント -->
+  <rect x="1310" y="800" width="540" height="120" fill="#f7f4ee" stroke="#653a5e" stroke-width="2" rx="5" />
+  <text x="1330" y="830" font-family="'Noto Serif JP'" font-size="20" fill="#653a5e">■ 実践：Rich Agentic Web構築</text>
+  <text x="1330" y="870" font-family="'Noto Sans JP'" font-size="16" fill="#2c2c2c" font-weight="bold">➢ 個人、組織、チーム、エンドツーエンドのビジネスプロセス、組織間のやり取りをサポートする新世代エージェント基盤の構築</text>
+</svg> 

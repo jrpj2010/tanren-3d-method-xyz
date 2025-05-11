@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4つの「学び続けるマインドセット」</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #311b92 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background-color: #e1bee7;
+            border-radius: 2.5px;
+        }
+        .mindset-tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .mindset-tab {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+            opacity: 0.7;
+        }
+        .mindset-tab.active {
+            opacity: 1;
+            transform: translateY(-5px);
+            z-index: 2;
+        }
+        .mindset-content {
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+        .mindset-content.active {
+            display: block;
+            animation: fadeIn 0.5s forwards;
+        }
+        .mindset-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .mindset-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 2rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .mindset-title {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .mindset-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .mindset-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        .mindset-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            height: 100%;
+        }
+        .box-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .box-icon {
+            margin-right: 10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+        .highlight {
+            color: #ffd700;
+            font-weight: 600;
+        }
+        .section-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.3);
+        }
+        .conclusion {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            padding: 15px 30px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeInUp 0.8s forwards;
+            animation-delay: 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Background pattern -->
+        <svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="position: absolute; opacity: 0.05;">
+            <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        
+        <div class="section-number">セクション 5</div>
+        
+        <div class="p-16">
+            <h1 class="title">4つの「学び続けるマインドセット」</h1>
+            
+            <!-- Tabs Navigation -->
+            <div class="mindset-tabs">
+                <div class="mindset-tab active" style="background: linear-gradient(135deg, #9c27b0, #7b1fa2);" onclick="switchTab(0)">
+                    <i class="fas fa-cubes mr-2"></i>Build（構築）
+                </div>
+                <div class="mindset-tab" style="background: linear-gradient(135deg, #3949ab, #303f9f);" onclick="switchTab(1)">
+                    <i class="fas fa-search mr-2"></i>Observe（観察）
+                </div>
+                <div class="mindset-tab" style="background: linear-gradient(135deg, #2e7d32, #1b5e20);" onclick="switchTab(2)">
+                    <i class="fas fa-hammer mr-2"></i>Leverage（活用）
+                </div>
+                <div class="mindset-tab" style="background: linear-gradient(135deg, #f57f17, #e65100);" onclick="switchTab(3)">
+                    <i class="fas fa-rocket mr-2"></i>Transform（変革）
+                </div>
+            </div>
+            
+            <!-- Tab Content -->
+            <div class="mindset-content active" style="background: linear-gradient(135deg, rgba(156, 39, 176, 0.3), rgba(123, 31, 162, 0.3));">
+                <div class="mindset-header">
+                    <div class="mindset-icon" style="background: linear-gradient(135deg, #9c27b0, #7b1fa2);">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div>
+                        <div class="mindset-title">Build（構築）</div>
+                        <div class="mindset-subtitle">学習資産を「意図的に構築する」マインド</div>
+                    </div>
+                </div>
+                
+                <div class="mindset-grid">
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-lightbulb"></i></div>
+                            エッセンス
+                        </div>
+                        <p>
+                            学びは偶然の産物ではない。<span class="highlight">未来の自分（Y軸）とレベル（Z軸）</span>を意識し、必要な知識やスキルを
+                            <span class="highlight">意図的に収集・整理・蓄積</span>する。インプット（第7章3節）は、このBuildフェーズの核となる活動。
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            挫折メカニズムとの関係
+                        </div>
+                        <p>
+                            「知識の死蔵」を防ぎ、学びに目的意識を持たせることで、「ゴールの霧」や「成長実感の欠如」による挫折を防ぐ。
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-robot"></i></div>
+                            AIとの共創
+                        </div>
+                        <p>
+                            <span class="highlight">・AIに必要な知識体系のマップ作成を相談</span><br>
+                            ・収集情報をAIが理解しやすいよう構造化（X軸）<br>
+                            ・自分だけの学習用カスタムAI（Lv0.5）を構築
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-quote-right"></i></div>
+                            マインドセット
+                        </div>
+                        <p class="text-center text-lg font-bold">
+                            「私の経験・学びは、<br>
+                            <span class="highlight">未来の自分とAIへの投資</span>だ！」
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mindset-content" style="background: linear-gradient(135deg, rgba(57, 73, 171, 0.3), rgba(48, 63, 159, 0.3));">
+                <div class="mindset-header">
+                    <div class="mindset-icon" style="background: linear-gradient(135deg, #3949ab, #303f9f);">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div>
+                        <div class="mindset-title">Observe（観察）</div>
+                        <div class="mindset-subtitle">現実を「客観的に観察する」マインド</div>
+                    </div>
+                </div>
+                
+                <div class="mindset-grid">
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-lightbulb"></i></div>
+                            エッセンス
+                        </div>
+                        <p>
+                            自分の感情や思い込み（バイアス）から距離を置き、<span class="highlight">学習プロセス、行動の結果、AIフィードバックを冷静に観察・分析</span>する習慣。AIとの「週次ふり返り対話」（第7章4節）が、この客観的自己観察を支援する。
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            挫折メカニズムとの関係
+                        </div>
+                        <p>
+                            「成長実感の欠如」「フィードバックなき暗中模索」を防ぎ、現在地（Y軸）を正確に把握することで、適切な軌道修正が可能になる。
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-robot"></i></div>
+                            AIとの共創
+                        </div>
+                        <p>
+                            <span class="highlight">・AIに学習記録や行動データを分析させる</span><br>
+                            ・客観的な進捗レポートや思考・行動パターンの傾向分析<br>
+                            ・AIのファクトチェック能力も活用
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-quote-right"></i></div>
+                            マインドセット
+                        </div>
+                        <p class="text-center text-lg font-bold">
+                            「データは嘘をつかない。<br>
+                            <span class="highlight">現実を直視し</span>、学びのヒントを見つけ出すぞ！」
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mindset-content" style="background: linear-gradient(135deg, rgba(46, 125, 50, 0.3), rgba(27, 94, 32, 0.3));">
+                <div class="mindset-header">
+                    <div class="mindset-icon" style="background: linear-gradient(135deg, #2e7d32, #1b5e20);">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <div>
+                        <div class="mindset-title">Leverage（活用）</div>
+                        <div class="mindset-subtitle">「実践・応用」で学びを力に変えるマインド</div>
+                    </div>
+                </div>
+                
+                <div class="mindset-grid">
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-lightbulb"></i></div>
+                            エッセンス
+                        </div>
+                        <p>
+                            知識は、使ってこそ価値を生む。インプットやAIとの対話で得た気づきを、<span class="highlight">具体的な実践（アウトプット）を通じて積極的に活用</span>する。ラーニングピラミッドが示すように、行動を通じた知識の適用と試行錯誤が真の「スキル」を育む。
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            挫折メカニズムとの関係
+                        </div>
+                        <p>
+                            「インプット偏重トラップ」を克服し、知識を形だけでなく実際に使えるスキルへと転化することで、「成長実感の欠如」も解消する。
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-robot"></i></div>
+                            AIとの共創
+                        </div>
+                        <p>
+                            <span class="highlight">・AIを相手にプレゼンの練習をする</span><br>
+                            ・学んだ知識を使ってAIと議論する<br>
+                            ・AIと共に新しい企画を立案・実行する<br>
+                            ・AIに実践結果の評価や改善アドバイスを求める
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-quote-right"></i></div>
+                            マインドセット
+                        </div>
+                        <p class="text-center text-lg font-bold">
+                            「習うより慣れろ！<br>
+                            <span class="highlight">失敗を恐れず、まずやってみる</span>。<br>
+                            学びは実践で完成する！」
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mindset-content" style="background: linear-gradient(135deg, rgba(245, 127, 23, 0.3), rgba(230, 81, 0, 0.3));">
+                <div class="mindset-header">
+                    <div class="mindset-icon" style="background: linear-gradient(135deg, #f57f17, #e65100);">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div>
+                        <div class="mindset-title">Transform（変革）</div>
+                        <div class="mindset-subtitle">変化を恐れず「自己変革を楽しむ」マインド</div>
+                    </div>
+                </div>
+                
+                <div class="mindset-grid">
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-lightbulb"></i></div>
+                            エッセンス
+                        </div>
+                        <p>
+                            前3ステップを通じて得た学びや気づきを元に、<span class="highlight">過去の成功体験や既存のやり方を大胆に捨て去り、自分自身を根本から「変革」</span>していく勇気。AIの進化を脅威ではなく、自分をアップデートする「機会」と捉える。
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            挫折メカニズムとの関係
+                        </div>
+                        <p>
+                            「環境の変化」に対応できず学習が停滞することを防ぎ、「完璧主義の罠」から抜け出して、常に「ベータ版」としての自分を受け入れられる。
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-robot"></i></div>
+                            AIとの共創
+                        </div>
+                        <p>
+                            <span class="highlight">・AIに最新トレンドや新分野の情報を収集させる</span><br>
+                            ・AIと共に未来のシナリオを描き、変化への適応戦略を練る<br>
+                            ・「これまでの自分のやり方の限界は何か」とAIに質問
+                        </p>
+                    </div>
+                    
+                    <div class="mindset-box">
+                        <div class="box-title">
+                            <div class="box-icon"><i class="fas fa-quote-right"></i></div>
+                            マインドセット
+                        </div>
+                        <p class="text-center text-lg font-bold">
+                            「変化こそ成長の証。<br>
+                            <span class="highlight">昨日の自分を超えることを楽しもう</span>！<br>
+                            AIと共に、常にベータ版であれ！」
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conclusion -->
+            <div class="conclusion">
+                <div class="flex items-center justify-center mb-2">
+                    <div class="text-purple-300 mx-1"><i class="fas fa-cubes"></i> Build</div>
+                    <i class="fas fa-arrow-right mx-2 text-yellow-300"></i>
+                    <div class="text-blue-300 mx-1"><i class="fas fa-search"></i> Observe</div>
+                    <i class="fas fa-arrow-right mx-2 text-yellow-300"></i>
+                    <div class="text-green-300 mx-1"><i class="fas fa-hammer"></i> Leverage</div>
+                    <i class="fas fa-arrow-right mx-2 text-yellow-300"></i>
+                    <div class="text-orange-300 mx-1"><i class="fas fa-rocket"></i> Transform</div>
+                    <i class="fas fa-arrow-right mx-2 text-yellow-300"></i>
+                    <div class="text-purple-300 mx-1"><i class="fas fa-cubes"></i> Build...</div>
+                </div>
+                <div>
+                    この<span class="highlight">ダイナミックな自己進化のサイクル</span>を回し続けることで、<br>
+                    あなたは螺旋階段を昇るように<span class="highlight">無限に成長し続ける</span>ことができる
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab Switching Script -->
+        <script>
+            function switchTab(index) {
+                // Hide all tabs content
+                const contents = document.querySelectorAll('.mindset-content');
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Deactivate all tabs
+                const tabs = document.querySelectorAll('.mindset-tab');
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                
+                // Activate the selected tab and content
+                tabs[index].classList.add('active');
+                contents[index].classList.add('active');
+            }
+        </script>
+    </div>
+</body>
+</html>

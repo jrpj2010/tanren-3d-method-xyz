@@ -1,0 +1,223 @@
+/* Custom CSS for AI超独学法 Chapter 2 - TANREN 3D Method */
+
+/* Grid background */
+.grid-background {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(90deg, #60a5fa, #34d399, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Axis badges */
+.axis-badge {
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.x-axis {
+  background-color: rgba(59, 130, 246, 0.2);
+  border: 2px solid rgba(59, 130, 246, 0.5);
+  color: #93c5fd;
+}
+
+.y-axis {
+  background-color: rgba(34, 197, 94, 0.2);
+  border: 2px solid rgba(34, 197, 94, 0.5);
+  color: #86efac;
+}
+
+.z-axis {
+  background-color: rgba(168, 85, 247, 0.2);
+  border: 2px solid rgba(168, 85, 247, 0.5);
+  color: #d8b4fe;
+}
+
+/* Step items */
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: rgba(15, 23, 42, 0.3);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.step-item:hover {
+  transform: translateX(0.5rem);
+}
+
+.step-number {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+/* Glow Border Effect */
+.glow-border {
+  position: relative;
+}
+
+.glow-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 0.75rem;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #22c55e, #3b82f6);
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  opacity: 0.5;
+  animation: glowing 20s linear infinite;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* Active Navigation */
+.active-nav {
+  position: relative;
+}
+
+.active-nav::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #60a5fa, #34d399, #a855f7);
+  border-radius: 2px;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-rotate {
+  animation: rotate 20s linear infinite;
+}
+
+/* Section transitions */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card and container effects */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll margin for section navigation */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 70px;
+  }
+  
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/* Axis visualization */
+.axis {
+  position: absolute;
+  height: 3px;
+  transform-origin: 0 0;
+  z-index: 1;
+}
+
+.axis-x {
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.axis-y {
+  background: linear-gradient(90deg, #10b981 0%, #047857 100%);
+}
+
+.axis-z {
+  background: linear-gradient(90deg, #8b5cf6 0%, #6d28d9 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+} 

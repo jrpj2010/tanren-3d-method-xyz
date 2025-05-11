@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIパーソナル添削：3ステップ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #2c3e50 0%, #4a69bd 50%, #6c5ce7 100%);
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+        .slide-header {
+            margin-bottom: 20px;
+        }
+        .slide-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #ffffff, #e0e0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .process-flow {
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .step-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+        }
+        .step-number {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 3.5rem;
+            font-weight: 900;
+            opacity: 0.2;
+            color: #a29bfe;
+        }
+        .step-icon-container {
+            width: 70px;
+            height: 70px;
+            background: rgba(162, 155, 254, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .step-icon {
+            font-size: 2rem;
+            color: white;
+        }
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        .step-description {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        .key-point {
+            background: rgba(108, 92, 231, 0.3);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            margin-top: auto;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        .key-point i {
+            margin-right: 8px;
+            color: #a29bfe;
+        }
+        .tech-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tech-item {
+            flex: 1;
+            padding: 0 15px;
+            position: relative;
+        }
+        .tech-item:first-child {
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .tech-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .tech-title i {
+            margin-right: 10px;
+            color: #a29bfe;
+        }
+        .tech-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .tag {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            background: rgba(162, 155, 254, 0.4);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-header">
+            <h1 class="slide-title">AIパーソナル添削：3ステップ</h1>
+        </div>
+        
+        <div class="process-flow">
+            <div class="mermaid">
+                flowchart LR
+                A[お手本準備] -->|DNA抽出| B[プロンプト設計]
+                B -->|魂入れ| C[対話的改善]
+                C -->|フィードバック| C
+                style A fill:#6c5ce7,color:#fff
+                style B fill:#6c5ce7,color:#fff
+                style C fill:#a29bfe,color:#fff
+            </div>
+        </div>
+        
+        <div class="steps-container">
+            <!-- ステップ1 -->
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-icon-container">
+                    <i class="fas fa-dna step-icon"></i>
+                </div>
+                <div class="step-title">最強のお手本を用意する</div>
+                <div class="step-description">
+                    あなたの「言葉のDNA」を抽出。「あなたらしい」と感じる質の高い文章サンプルを複数選定します。
+                </div>
+                <ul style="font-size: 0.9rem; opacity: 0.8; margin-left: 20px;">
+                    <li style="margin-bottom: 6px;">成功体験のメールや文書</li>
+                    <li style="margin-bottom: 6px;">異なる文体・状況のサンプル</li>
+                    <li style="margin-bottom: 6px;">丁寧さ・論理・情熱の表現例</li>
+                </ul>
+                <div class="key-point">
+                    <i class="fas fa-exclamation-circle"></i>
+                    機密情報・個人情報は必ずマスキング！
+                </div>
+            </div>
+            
+            <!-- ステップ2 -->
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-icon-container">
+                    <i class="fas fa-magic step-icon"></i>
+                </div>
+                <div class="step-title">「魂入れ」プロンプト設計</div>
+                <div class="step-description">
+                    AIに「あなたスタイル」を指示するプロンプトを構築します。
+                </div>
+                <ul style="font-size: 0.9rem; opacity: 0.8; margin-left: 20px;">
+                    <li style="margin-bottom: 6px;">役割設定：専属ライティングコーチ</li>
+                    <li style="margin-bottom: 6px;">お手本提示：スタイル学習用サンプル</li>
+                    <li style="margin-bottom: 6px;">具体的な添削指示：トーン、特徴的表現</li>
+                    <li style="margin-bottom: 6px;">出力形式：修正文＋説明</li>
+                </ul>
+                <div class="key-point">
+                    <i class="fas fa-lightbulb"></i>
+                    6要素プロンプト設計がここで活きる
+                </div>
+            </div>
+            
+            <!-- ステップ3 -->
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-icon-container">
+                    <i class="fas fa-sync-alt step-icon"></i>
+                </div>
+                <div class="step-title">AIとの対話的リファインメント</div>
+                <div class="step-description">
+                    対話的なフィードバックを繰り返し、「あなただけの」AIを育てます。
+                </div>
+                <ul style="font-size: 0.9rem; opacity: 0.8; margin-left: 20px;">
+                    <li style="margin-bottom: 6px;">具体的フィードバック：「この表現は私らしくない」</li>
+                    <li style="margin-bottom: 6px;">理由を質問：「なぜそう修正した？」</li>
+                    <li style="margin-bottom: 6px;">良い点の強化：「この部分は私らしい！」</li>
+                </ul>
+                <div class="key-point">
+                    <i class="fas fa-users"></i>
+                    AIを育てる楽しさも味わえる新体験
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-box">
+            <div class="tech-item">
+                <div class="tag">技術概念</div>
+                <div class="tech-title">
+                    <i class="fas fa-search"></i>
+                    RAG（検索拡張生成）
+                </div>
+                <div class="tech-description">
+                    AIがお手本データを参照しながら回答を生成する技術。AIにあなた専用の「カンニングペーパー」を与えるようなもの。
+                </div>
+            </div>
+            <div class="tech-item">
+                <div class="tag">実現方法</div>
+                <div class="tech-title">
+                    <i class="fas fa-book-open"></i>
+                    ICL（インコンテキストラーニング）
+                </div>
+                <div class="tech-description">
+                    プロンプト内に例文を含めることで、その場でAIにパターンを学習させる手法。特別な設定なしで実現可能。
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'dark',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+        });
+    </script>
+</body>
+</html>

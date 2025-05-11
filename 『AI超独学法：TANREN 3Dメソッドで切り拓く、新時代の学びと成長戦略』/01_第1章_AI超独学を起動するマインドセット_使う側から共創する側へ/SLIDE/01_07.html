@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使う側から共創する側へのマインドセットシフト</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(90deg, 
+                rgba(230, 240, 250, 0.95) 0%, 
+                rgba(230, 240, 250, 0.95) 50%, 
+                rgba(220, 245, 240, 0.95) 50%, 
+                rgba(220, 245, 240, 0.95) 100%
+            );
+        }
+        .title {
+            color: #004080;
+            font-weight: 900;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            background: linear-gradient(90deg, #004080 0%, #0066cc 50%, #009688 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .mindset-card {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .mindset-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        .mindset-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+        .mindset-item:hover {
+            transform: translateX(5px);
+        }
+        .arrow-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gradient-line {
+            position: absolute;
+            height: 3px;
+            background: linear-gradient(90deg, #aaaaaa 0%, #0066cc 100%);
+            width: 100%;
+            top: 50%;
+        }
+        @keyframes arrow-pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .pulse-arrow {
+            animation: arrow-pulse 2s infinite;
+        }
+        .user-icon {
+            background-color: #f0f0f0;
+            border: 2px solid #cccccc;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .creator-icon {
+            background: linear-gradient(135deg, #0066cc 0%, #00b8a9 100%);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-8">
+        <!-- Header -->
+        <div class="text-center mb-6">
+            <h1 class="title text-5xl">使う側から共創する側へのマインドセットシフト</h1>
+            <div class="w-32 h-1 bg-blue-600 mx-auto mt-2 rounded-full"></div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex justify-between items-center h-full">
+            <!-- Left Side: User Mindset -->
+            <div class="w-2/5">
+                <div class="mindset-card bg-gray-50 p-6">
+                    <div class="flex flex-col items-center mb-4">
+                        <div class="user-icon">
+                            <i class="fas fa-user text-gray-500 text-4xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-600 mb-1">「使う側」のマインドセット</h2>
+                        <p class="text-gray-500 text-sm">受動的・依存的な姿勢</p>
+                    </div>
+                    
+                    <div class="bg-gray-100 rounded-lg p-4 mb-6">
+                        <div class="mindset-item bg-white">
+                            <div class="bg-gray-300 rounded-full p-2 mr-3">
+                                <i class="fas fa-robot text-gray-600"></i>
+                            </div>
+                            <p class="text-gray-700">AIに指示して作業を<span class="font-bold">「やらせる」</span></p>
+                        </div>
+                        <div class="mindset-item bg-white">
+                            <div class="bg-gray-300 rounded-full p-2 mr-3">
+                                <i class="fas fa-copy text-gray-600"></i>
+                            </div>
+                            <p class="text-gray-700">AIの生成物を<span class="font-bold">「そのまま使う」</span></p>
+                        </div>
+                        <div class="mindset-item bg-white">
+                            <div class="bg-gray-300 rounded-full p-2 mr-3">
+                                <i class="fas fa-clock text-gray-600"></i>
+                            </div>
+                            <p class="text-gray-700">AIの進化を<span class="font-bold">「待っている」</span></p>
+                        </div>
+                        <div class="mindset-item bg-white">
+                            <div class="bg-gray-300 rounded-full p-2 mr-3">
+                                <i class="fas fa-hand-holding text-gray-600"></i>
+                            </div>
+                            <p class="text-gray-700">AIに<span class="font-bold">「依存」</span>してしまう</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-red-50 p-3 rounded-lg border-l-4 border-red-400">
+                        <p class="text-red-700 text-sm"><i class="fas fa-exclamation-circle mr-1"></i> <strong>結果:</strong> 思考力の退化、創造性の低下、AIの性能に依存した成長の頭打ち</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Middle Arrow -->
+            <div class="w-1/5 arrow-container flex flex-col items-center">
+                <div class="gradient-line"></div>
+                <div class="text-5xl text-blue-600 pulse-arrow z-10">
+                    <i class="fas fa-arrow-circle-right"></i>
+                </div>
+                <div class="text-center mt-3">
+                    <p class="font-bold text-blue-700">マインドセット<br>シフト</p>
+                </div>
+            </div>
+            
+            <!-- Right Side: Co-creator Mindset -->
+            <div class="w-2/5">
+                <div class="mindset-card bg-white p-6 border-t-8 border-blue-500">
+                    <div class="flex flex-col items-center mb-4">
+                        <div class="creator-icon">
+                            <i class="fas fa-users text-white text-4xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-blue-700 mb-1">「共創する側」のマインドセット</h2>
+                        <p class="text-blue-600 text-sm">能動的・創造的な姿勢</p>
+                    </div>
+                    
+                    <div class="bg-blue-50 rounded-lg p-4 mb-6">
+                        <div class="mindset-item bg-white">
+                            <div class="bg-blue-500 rounded-full p-2 mr-3">
+                                <i class="fas fa-comments text-white"></i>
+                            </div>
+                            <p class="text-blue-800">AIと<span class="font-bold">「対話」</span>し思考を深める</p>
+                        </div>
+                        <div class="mindset-item bg-white">
+                            <div class="bg-green-500 rounded-full p-2 mr-3">
+                                <i class="fas fa-tools text-white"></i>
+                            </div>
+                            <p class="text-blue-800">AIの生成物を<span class="font-bold">「たたき台」</span>に改良する</p>
+                        </div>
+                        <div class="mindset-item bg-white">
+                            <div class="bg-cyan-500 rounded-full p-2 mr-3">
+                                <i class="fas fa-sync-alt text-white"></i>
+                            </div>
+                            <p class="text-blue-800">AIと<span class="font-bold">「共に進化」</span>し続ける</p>
+                        </div>
+                        <div class="mindset-item bg-white">
+                            <div class="bg-indigo-500 rounded-full p-2 mr-3">
+                                <i class="fas fa-lightbulb text-white"></i>
+                            </div>
+                            <p class="text-blue-800">AIの能力を<span class="font-bold">「引き出す」</span>工夫をする</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 p-3 rounded-lg border-l-4 border-green-400">
+                        <p class="text-green-700 text-sm"><i class="fas fa-check-circle mr-1"></i> <strong>結果:</strong> 思考力の増強、創造性の拡張、人間ならではの価値の追求</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Note -->
+        <div class="bg-blue-600 text-white rounded-lg p-3 mt-6 text-center shadow-lg">
+            <p class="font-bold">AI時代のプロフェッショナルの新定義: 専門知識だけでなく、<br>「AIと効果的に対話・共創し、自ら学び進化し続ける力」が決定的な競争優位となる</p>
+        </div>
+    </div>
+</body>
+</html>

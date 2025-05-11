@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X軸：思考の深度と構造</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #0c2347 0%, #1e3a5f 100%);
+            overflow: hidden;
+            color: #e2e8f0;
+        }
+        .slide-title {
+            font-weight: 900;
+            background: linear-gradient(90deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(255,255,255,0.1);
+        }
+        .subtitle {
+            color: #bfdbfe;
+            font-weight: 500;
+        }
+        .grid {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: 50px 50px;
+            background-image:
+                linear-gradient(to right, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            z-index: 0;
+        }
+        .x-axis-card {
+            background: rgba(30, 58, 138, 0.3);
+            border-left: 4px solid;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .x-axis-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .arrow-up {
+            animation: float-up 3s ease-in-out infinite;
+        }
+        .arrow-down {
+            animation: float-down 3s ease-in-out infinite;
+        }
+        .arrow-cycle {
+            animation: rotate 15s linear infinite;
+        }
+        @keyframes float-up {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        @keyframes float-down {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(15px); }
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .highlight-box {
+            background: rgba(219, 234, 254, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(219, 234, 254, 0.2);
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.2);
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide flex flex-col p-12">
+        <!-- グリッド背景 -->
+        <div class="grid"></div>
+        
+        <!-- タイトル -->
+        <div class="z-10 mb-8">
+            <h2 class="slide-title text-4xl mb-2">X軸：思考の深度と構造</h2>
+            <p class="subtitle text-xl">表層から本質へ、カオスから構造へ</p>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="flex flex-row z-10 h-full">
+            <!-- 左側: X軸の3要素を視覚的に説明 -->
+            <div class="w-1/2 pr-6 flex flex-col justify-around">
+                <!-- 超抽象化 -->
+                <div class="x-axis-card p-6 mb-4" style="border-color: #60a5fa;">
+                    <div class="flex items-center">
+                        <div class="feature-icon mr-4 text-blue-300">
+                            <i class="fas fa-arrow-up arrow-up"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-300">超抽象化</h3>
+                            <p class="text-lg mt-1">
+                                <span class="bg-blue-900 px-2 py-1 rounded text-white">Why?</span>
+                                <span class="ml-2">本質を見抜く力</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-blue-100">具体的な事象から上昇し、本質や原理原則、全体像を掴む。表層のノイズから根本的価値を抽出する思考法。</p>
+                </div>
+                
+                <!-- 超具体化 -->
+                <div class="x-axis-card p-6 mb-4" style="border-color: #93c5fd;">
+                    <div class="flex items-center">
+                        <div class="feature-icon mr-4 text-blue-200">
+                            <i class="fas fa-arrow-down arrow-down"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-200">超具体化</h3>
+                            <p class="text-lg mt-1">
+                                <span class="bg-blue-800 px-2 py-1 rounded text-white">How?</span>
+                                <span class="ml-2">思考を行動に変える</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-blue-100">抽象的な概念から下降し、現実世界で実行可能な具体的なアクションへと落とし込む思考プロセス。</p>
+                </div>
+                
+                <!-- 超構造化 -->
+                <div class="x-axis-card p-6" style="border-color: #dbeafe;">
+                    <div class="flex items-center">
+                        <div class="feature-icon mr-4 text-blue-100">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-100">超構造化</h3>
+                            <p class="text-lg mt-1">
+                                <span class="bg-blue-700 px-2 py-1 rounded text-white">Form</span>
+                                <span class="ml-2">思考を伝達可能な形に</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-blue-100">カオス状態の思考に秩序を与え、論理的で明晰な構造を設計。思考を他者やAIと共有可能にする。</p>
+                </div>
+            </div>
+            
+            <!-- 右側: 往復運動と実践法 -->
+            <div class="w-1/2 pl-8">
+                <!-- 往復運動の図解 -->
+                <div class="highlight-box p-8 mb-8 flex flex-col items-center">
+                    <h3 class="text-2xl font-bold text-white mb-6">「往復運動」の重要性</h3>
+                    
+                    <div class="relative h-64 w-64 flex justify-center items-center">
+                        <!-- 抽象と具体の往復を表す循環図 -->
+                        <div class="absolute w-full h-full rounded-full border-4 border-blue-400 opacity-20"></div>
+                        
+                        <!-- 上部：抽象（本質） -->
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-300 rounded-full p-4 text-blue-900 font-bold">
+                            抽象（本質）
+                        </div>
+                        
+                        <!-- 下部：具体（行動） -->
+                        <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-blue-600 rounded-full p-4 text-white font-bold">
+                            具体（行動）
+                        </div>
+                        
+                        <!-- 左右の矢印 -->
+                        <div class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 text-4xl text-blue-400">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 text-4xl text-blue-400">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        
+                        <!-- 中央の循環矢印 -->
+                        <div class="text-5xl text-blue-500 arrow-cycle opacity-30">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <p class="text-center mt-6">
+                        抽象と具体を行き来する<span class="font-bold text-blue-300">「往復運動」</span>が<br>
+                        思考を深め、イノベーションを生む
+                    </p>
+                </div>
+                
+                <!-- X軸実践のポイント -->
+                <div class="highlight-box p-6">
+                    <h3 class="text-xl font-bold text-white mb-4">X軸実践のポイント</h3>
+                    
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-lightbulb text-yellow-300 mr-3 text-xl"></i>
+                            <span><span class="text-blue-300 font-bold">Why</span>を5回繰り返し<span class="text-blue-300">本質</span>に迫る</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-hammer text-orange-300 mr-3 text-xl"></i>
+                            <span><span class="text-blue-200 font-bold">How</span>で小さな<span class="text-blue-200">行動ステップ</span>に分解する</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-project-diagram text-green-300 mr-3 text-xl"></i>
+                            <span><span class="text-blue-100 font-bold">フレーム</span>を使って思考を<span class="text-blue-100">構造化</span>する</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-robot text-purple-300 mr-3 text-xl"></i>
+                            <span><span class="text-white font-bold">AI</span>と<span class="text-white">対話</span>して思考を深め、形にする</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

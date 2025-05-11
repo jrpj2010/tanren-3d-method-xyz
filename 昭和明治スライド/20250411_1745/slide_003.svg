@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1920" height="100" fill="#2c2c2c"/>
+  <text x="960" y="60" font-family="'Noto Serif JP', serif" font-size="36" fill="#f4f1ea" text-anchor="middle" letter-spacing="4">AI駆動開発の将来展望とケーススタディ</text>
+  <line x1="700" y1="80" x2="1220" y2="80" stroke="#f4f1ea" stroke-width="2"/>
+  <circle cx="960" cy="80" r="5" fill="#f4f1ea"/>
+  
+  <!-- フッター -->
+  <rect x="0" y="1020" width="1920" height="60" fill="#2c2c2c"/>
+  <text x="960" y="1055" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#f4f1ea" text-anchor="middle">2025年4月作成 - エビラボ × 佐藤勝彦氏 対談より</text>
+  
+  <!-- 3カラムコンテナ -->
+  <g id="columns">
+    <!-- カラム1: 産業変革と未来予測 -->
+    <g id="column1">
+      <rect x="50" y="130" width="580" height="860" fill="#ffffff" stroke="#2c2c2c" stroke-width="2"/>
+      <rect x="50" y="130" width="580" height="60" fill="#b3322b"/>
+      <text x="340" y="170" font-family="'Noto Serif JP', serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">産業変革と未来予測</text>
+      
+      <!-- サブヘッダー -->
+      <text x="70" y="220" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" letter-spacing="1">「サースデッド」時代の産業構造変化</text>
+      
+      <!-- セクション1 -->
+      <rect x="70" y="240" width="540" height="2" fill="#b3322b"/>
+      <text x="70" y="270" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">📈 AIによる産業構造変化</text>
+      <text x="70" y="300" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" line-height="1.5">
+        <tspan x="70" y="300">従来型の産業構造が根本から変化</tspan>
+        <tspan x="70" y="330">・開発リードタイムの劇的短縮</tspan>
+        <tspan x="70" y="360">・専門知識のAI移行</tspan>
+        <tspan x="70" y="390">・適応能力の価値上昇</tspan>
+      </text>
+      
+      <!-- タイムライン：変化の速度 -->
+      <rect x="90" y="410" width="500" height="200" fill="#f8f5f0" stroke="#b3322b" stroke-width="1"/>
+      <text x="340" y="430" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c" text-anchor="middle">開発リードタイムの短縮</text>
+      
+      <!-- タイムライン -->
+      <line x1="120" y1="480" x2="560" y2="480" stroke="#2c2c2c" stroke-width="2"/>
+      <circle cx="140" cy="480" r="8" fill="#b3322b"/>
+      <circle cx="250" cy="480" r="8" fill="#b3322b"/>
+      <circle cx="390" cy="480" r="8" fill="#b3322b"/>
+      <circle cx="540" cy="480" r="8" fill="#b3322b"/>
+      
+      <text x="140" y="460" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">2020年</text>
+      <text x="250" y="460" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">2022年</text>
+      <text x="390" y="460" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">2024年</text>
+      <text x="540" y="460" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">2026年予測</text>
+      
+      <text x="140" y="510" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#2c2c2c" text-anchor="middle">数ヶ月</text>
+      <text x="250" y="510" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#2c2c2c" text-anchor="middle">数週間</text>
+      <text x="390" y="510" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#2c2c2c" text-anchor="middle">数日</text>
+      <text x="540" y="510" font-family="'Noto Sans JP', sans-serif" font-size="11" fill="#2c2c2c" text-anchor="middle">数分</text>
+      
+      <line x1="140" y1="520" x2="140" y2="560" stroke="#b3322b" stroke-width="1" stroke-dasharray="4"/>
+      <line x1="540" y1="520" x2="540" y2="560" stroke="#b3322b" stroke-width="1" stroke-dasharray="4"/>
+      <rect x="140" y="560" width="400" height="30" fill="#b3322b" opacity="0.1"/>
+      <text x="340" y="580" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="middle">99.9%の時間短縮</text>
+      
+      <!-- セクション2 -->
+      <text x="70" y="640" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">🔮 将来の職業変化予測</text>
+      
+      <!-- 比較表 -->
+      <rect x="70" y="670" width="270" height="40" fill="#b3322b" opacity="0.2"/>
+      <rect x="340" y="670" width="270" height="40" fill="#b3322b" opacity="0.2"/>
+      
+      <rect x="70" y="710" width="270" height="80" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+      <rect x="340" y="710" width="270" height="80" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+      
+      <rect x="70" y="790" width="270" height="80" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+      <rect x="340" y="790" width="270" height="80" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+      
+      <rect x="70" y="870" width="270" height="80" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+      <rect x="340" y="870" width="270" height="80" fill="#ffffff" stroke="#2c2c2c" stroke-width="1"/>
+      
+      <text x="205" y="695" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c" text-anchor="middle">縮小する職種</text>
+      <text x="475" y="695" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c" text-anchor="middle">拡大する職種</text>
+      
+      <text x="205" y="730" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">コーディング専門家</text>
+      <text x="205" y="750" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">単純な反復作業者</text>
+      
+      <text x="475" y="730" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">プロンプトエンジニア</text>
+      <text x="475" y="750" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">AIインストラクター</text>
+      
+      <text x="205" y="810" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">データ入力スペシャリスト</text>
+      <text x="205" y="830" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">基本的な文書作成者</text>
+      
+      <text x="475" y="810" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">AIトレーナー/調整者</text>
+      <text x="475" y="830" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">AI倫理スペシャリスト</text>
+      
+      <text x="205" y="890" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">ルーチン的な分析者</text>
+      <text x="205" y="910" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">単純な技術サポート</text>
+      
+      <text x="475" y="890" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">AI-人間インターフェース設計者</text>
+      <text x="475" y="910" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c" text-anchor="middle">創造的問題解決者</text>
+    </g>
+    
+    <!-- カラム2: ケーススタディ -->
+    <g id="column2">
+      <rect x="670" y="130" width="580" height="860" fill="#ffffff" stroke="#2c2c2c" stroke-width="2"/>
+      <rect x="670" y="130" width="580" height="60" fill="#1a5b66"/>
+      <text x="960" y="170" font-family="'Noto Serif JP', serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">ケーススタディ：成功事例</text>
+      
+      <!-- サブヘッダー -->
+      <text x="690" y="220" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" letter-spacing="1">AI駆動開発による生産性向上の実例</text>
+      
+      <!-- セクション1 -->
+      <rect x="690" y="240" width="540" height="2" fill="#1a5b66"/>
+      <text x="690" y="270" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">📱 企業A：モバイルアプリ開発</text>
+      
+      <!-- ケーススタディ1 -->
+      <rect x="710" y="290" width="500" height="200" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+      
+      <text x="730" y="320" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">課題：</text>
+      <text x="730" y="345" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" line-height="1.4">
+        <tspan x="730" y="345">・新規金融アプリの開発リソース不足</tspan>
+        <tspan x="730" y="370">・短期間での市場投入要求</tspan>
+      </text>
+      
+      <text x="730" y="400" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">AI駆動アプローチ：</text>
+      <text x="730" y="425" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" line-height="1.4">
+        <tspan x="730" y="425">・要件からコード自動生成</tspan>
+        <tspan x="730" y="450">・UIデザインのAI生成と自動実装</tspan>
+      </text>
+      
+      <text x="730" y="480" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">結果：</text>
+      <rect x="750" y="500" width="320" height="40" fill="#1a5b66" opacity="0.1"/>
+      <text x="790" y="525" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">開発期間 75%短縮</text>
+      <text x="1120" y="525" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="end">(12週間→3週間)</text>
+      
+      <!-- セクション2 -->
+      <text x="690" y="520" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">🏭 企業B：製造業の業務改善</text>
+      
+      <!-- ケーススタディ2 -->
+      <rect x="710" y="540" width="500" height="200" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+      
+      <text x="730" y="570" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">課題：</text>
+      <text x="730" y="595" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" line-height="1.4">
+        <tspan x="730" y="595">・複雑な生産管理システムの更新</tspan>
+        <tspan x="730" y="620">・レガシーシステムとの統合</tspan>
+      </text>
+      
+      <text x="730" y="650" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">AI駆動アプローチ：</text>
+      <text x="730" y="675" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" line-height="1.4">
+        <tspan x="730" y="675">・AI分析によるレガシーコード解析</tspan>
+        <tspan x="730" y="700">・自動インターフェース設計と実装</tspan>
+      </text>
+      
+      <text x="730" y="730" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">結果：</text>
+      <rect x="750" y="750" width="320" height="40" fill="#1a5b66" opacity="0.1"/>
+      <text x="790" y="775" font-family="'Noto Sans JP', sans-serif" font-size="16" fill="#2c2c2c">開発コスト 68%削減</text>
+      <text x="1120" y="775" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" text-anchor="end">(従来比)</text>
+      
+      <!-- 実践ポイント -->
+      <rect x="690" y="780" width="540" height="180" fill="#f8f5f0" stroke="#1a5b66" stroke-width="1"/>
+      <text x="960" y="810" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" text-anchor="middle">成功要因</text>
+      <text x="720" y="850" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+        <tspan x="720" y="850">■ 明確な要件定義と適切なAIツール選択</tspan>
+        <tspan x="720" y="880">■ 人間とAIの役割分担の最適化</tspan>
+        <tspan x="720" y="910">■ 段階的な導入とフィードバックループ</tspan>
+      </text>
+    </g>
+    
+    <!-- カラム3: 実践アクションプラン -->
+    <g id="column3">
+      <rect x="1290" y="130" width="580" height="860" fill="#ffffff" stroke="#2c2c2c" stroke-width="2"/>
+      <rect x="1290" y="130" width="580" height="60" fill="#653a5e"/>
+      <text x="1580" y="170" font-family="'Noto Serif JP', serif" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">実践アクションプラン</text>
+      
+      <!-- サブヘッダー -->
+      <text x="1310" y="220" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c" letter-spacing="1">AI駆動開発を始めるためのステップ</text>
+      
+      <!-- セクション1 -->
+      <rect x="1310" y="240" width="540" height="2" fill="#653a5e"/>
+      <text x="1310" y="270" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">📋 段階的導入ロードマップ</text>
+      
+      <!-- ロードマップ図 -->
+      <rect x="1330" y="290" width="500" height="280" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+      
+      <rect x="1360" y="320" width="440" height="60" rx="10" ry="10" fill="#653a5e" opacity="0.2"/>
+      <text x="1380" y="345" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">STEP 1: 環境整備と基礎学習</text>
+      <text x="1380" y="365" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">開発環境の整備・基本的なAI対話スキル習得</text>
+      
+      <line x1="1580" y1="380" x2="1580" y2="400" stroke="#653a5e" stroke-width="2" marker-end="url(#arrow)"/>
+      
+      <rect x="1360" y="410" width="440" height="60" rx="10" ry="10" fill="#653a5e" opacity="0.3"/>
+      <text x="1380" y="435" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">STEP 2: 小規模プロジェクトでの実践</text>
+      <text x="1380" y="455" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">非重要な小規模プロジェクトでAI駆動開発を試行</text>
+      
+      <line x1="1580" y1="470" x2="1580" y2="490" stroke="#653a5e" stroke-width="2" marker-end="url(#arrow)"/>
+      
+      <rect x="1360" y="500" width="440" height="60" rx="10" ry="10" fill="#653a5e" opacity="0.4"/>
+      <text x="1380" y="525" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="bold" fill="#2c2c2c">STEP 3: チーム展開と標準化</text>
+      <text x="1380" y="545" font-family="'Noto Sans JP', sans-serif" font-size="12" fill="#2c2c2c">手法の共有・プロンプトライブラリの構築</text>
+      
+      <!-- セクション2 -->
+      <text x="1310" y="600" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c">⚠️ 注意点と課題</text>
+      
+      <!-- 注意点リスト -->
+      <rect x="1330" y="630" width="500" height="40" fill="#653a5e" opacity="0.1"/>
+      <rect x="1330" y="670" width="500" height="40" fill="#ffffff"/>
+      <rect x="1330" y="710" width="500" height="40" fill="#653a5e" opacity="0.1"/>
+      <rect x="1330" y="750" width="500" height="40" fill="#ffffff"/>
+      
+      <text x="1350" y="655" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">① 著作権とライセンスの問題</text>
+      <text x="1350" y="695" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">② データ保護とセキュリティ</text>
+      <text x="1350" y="735" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">③ AI生成コードの品質保証</text>
+      <text x="1350" y="775" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">④ チームスキルの格差</text>
+      
+      <!-- 実践ポイント -->
+      <rect x="1310" y="810" width="540" height="150" fill="#f8f5f0" stroke="#653a5e" stroke-width="1"/>
+      <text x="1580" y="840" font-family="'Noto Serif JP', serif" font-size="18" fill="#2c2c2c" text-anchor="middle">今日から始めるアクション</text>
+      <text x="1340" y="880" font-family="'Noto Sans JP', sans-serif" font-size="14" fill="#2c2c2c">
+        <tspan x="1340" y="880">■ 最新AI駆動開発ツールの無料枠を試用</tspan>
+        <tspan x="1340" y="910">■ 社内サンドボックスプロジェクトの立ち上げ</tspan>
+        <tspan x="1340" y="940">■ チーム内での知識共有セッション開催</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- マーカー定義 -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#653a5e"/>
+    </marker>
+  </defs>
+</svg>

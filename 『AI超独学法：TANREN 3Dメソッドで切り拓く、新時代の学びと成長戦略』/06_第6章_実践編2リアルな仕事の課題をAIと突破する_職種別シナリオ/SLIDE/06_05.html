@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提案書作成支援と組織力向上</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%);
+            overflow: hidden;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            height: 100%;
+        }
+        .header-accent {
+            height: 6px;
+            border-radius: 6px 6px 0 0;
+        }
+        .bullet-point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        .bullet-point i {
+            margin-right: 12px;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        .card-border {
+            border-left: 5px solid;
+            padding-left: 15px;
+            margin-bottom: 12px;
+        }
+        .footer {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            text-align: right;
+            padding-right: 30px;
+        }
+        .process-arrow {
+            position: relative;
+            height: 2px;
+            background-color: #90caf9;
+            margin: 15px 0;
+        }
+        .process-arrow:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 8px solid #90caf9;
+        }
+        .mermaid {
+            margin: 20px auto;
+            max-width: 100%;
+        }
+        .mermaid svg {
+            max-width: 100%;
+        }
+        .vertical-divider {
+            width: 2px;
+            background: linear-gradient(to bottom, rgba(25, 118, 210, 0.1), rgba(25, 118, 210, 0.5), rgba(25, 118, 210, 0.1));
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-8">
+        <!-- Header -->
+        <div class="mb-6">
+            <h1 class="text-3xl font-bold text-gray-800">提案書作成支援と組織力向上</h1>
+            <div class="w-32 h-1.5 bg-blue-600 mt-2 rounded-full"></div>
+        </div>
+        
+        <!-- Content Grid -->
+        <div class="flex h-[540px]">
+            <!-- Left Side: Proposal Creation -->
+            <div class="w-1/2 pr-4">
+                <div class="card p-5 h-full">
+                    <div class="header-accent bg-blue-600"></div>
+                    <div class="flex items-center mb-4 mt-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-file-signature text-2xl text-blue-600"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-blue-800">パーソナライズされた<br>提案書を秒速で生成</h2>
+                    </div>
+                    
+                    <!-- Flow Diagram -->
+                    <div class="my-6">
+                        <div class="mermaid">
+                            graph LR
+                                A[商談ログ] --> B[AI分析]
+                                B --> C[提案書たたき台]
+                                C --> D[人間による調整]
+                                style A fill:#e3f2fd,stroke:#1976d2
+                                style B fill:#bbdefb,stroke:#1976d2
+                                style C fill:#90caf9,stroke:#1976d2
+                                style D fill:#64b5f6,stroke:#1976d2
+                        </div>
+                    </div>
+                    
+                    <!-- Bullets -->
+                    <div class="mt-8">
+                        <div class="bullet-point">
+                            <i class="fas fa-check-circle text-blue-600 text-xl"></i>
+                            <div>
+                                <strong class="text-blue-800">商談ログの自動活用</strong>
+                                <p class="text-gray-600 text-sm">会話から抽出された顧客の課題やニーズを直接反映</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bullet-point">
+                            <i class="fas fa-check-circle text-blue-600 text-xl"></i>
+                            <div>
+                                <strong class="text-blue-800">過去の成功事例の組み込み</strong>
+                                <p class="text-gray-600 text-sm">類似案件の成功パターンを自動検索して適用</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bullet-point">
+                            <i class="fas fa-check-circle text-blue-600 text-xl"></i>
+                            <div>
+                                <strong class="text-blue-800">顧客別カスタマイズ</strong>
+                                <p class="text-gray-600 text-sm">業界特性や企業文化に合わせた提案内容の最適化</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bullet-point">
+                            <i class="fas fa-check-circle text-blue-600 text-xl"></i>
+                            <div>
+                                <strong class="text-blue-800">時間短縮と品質向上</strong>
+                                <p class="text-gray-600 text-sm">作業時間を90%削減、提案精度を向上</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="px-4 flex justify-center">
+                <div class="vertical-divider"></div>
+            </div>
+            
+            <!-- Right Side: Sales Enablement -->
+            <div class="w-1/2 pl-4">
+                <div class="card p-5 h-full">
+                    <div class="header-accent bg-green-600"></div>
+                    <div class="flex items-center mb-4 mt-3">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-users-cog text-2xl text-green-600"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-green-800">セールスイネーブルメント</h2>
+                    </div>
+                    
+                    <!-- Illustration -->
+                    <div class="my-6 p-3 bg-green-50 rounded-lg">
+                        <div class="flex justify-between items-center">
+                            <div class="text-center flex-1">
+                                <div class="bg-white p-2 rounded-full shadow-sm inline-block mb-2">
+                                    <i class="fas fa-user-tie text-2xl text-green-700"></i>
+                                </div>
+                                <p class="text-xs font-medium">トップセールス</p>
+                            </div>
+                            
+                            <div class="relative w-16 h-10">
+                                <div class="process-arrow w-full bg-green-300"></div>
+                                <div class="absolute top-0 left-0 w-full h-10 flex items-center justify-center">
+                                    <i class="fas fa-brain text-green-400"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center flex-1">
+                                <div class="bg-white p-2 rounded-full shadow-sm inline-block mb-2">
+                                    <i class="fas fa-robot text-2xl text-blue-600"></i>
+                                </div>
+                                <p class="text-xs font-medium">AI</p>
+                            </div>
+                            
+                            <div class="relative w-16 h-10">
+                                <div class="process-arrow w-full bg-green-300"></div>
+                                <div class="absolute top-0 left-0 w-full h-10 flex items-center justify-center">
+                                    <i class="fas fa-share-alt text-green-400"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center flex-1">
+                                <div class="bg-white p-2 rounded-full shadow-sm inline-block mb-2">
+                                    <i class="fas fa-users text-2xl text-green-700"></i>
+                                </div>
+                                <p class="text-xs font-medium">組織全体</p>
+                            </div>
+                        </div>
+                        <p class="text-center text-xs text-gray-600 mt-2">暗黙知の形式知化と共有による組織力向上</p>
+                    </div>
+                    
+                    <!-- Bullets -->
+                    <div class="mt-6">
+                        <div class="card-border border-green-500">
+                            <h4 class="text-lg font-bold text-green-700 mb-1">トップセールスの暗黙知を形式知化</h4>
+                            <p class="text-gray-600 text-sm">成功パターンをAIが学習し、再現可能なモデルとして展開</p>
+                        </div>
+                        
+                        <div class="card-border border-green-500">
+                            <h4 class="text-lg font-bold text-green-700 mb-1">新人のスキルアップ加速</h4>
+                            <p class="text-gray-600 text-sm">AIによるリアルタイム指導で学習曲線を短縮</p>
+                            <div class="flex items-center mt-2">
+                                <div class="h-2 flex-grow bg-gray-200 rounded-full">
+                                    <div class="h-2 bg-green-400 rounded-full" style="width: 30%"></div>
+                                </div>
+                                <span class="ml-2 text-xs">従来</span>
+                            </div>
+                            <div class="flex items-center mt-1">
+                                <div class="h-2 flex-grow bg-gray-200 rounded-full">
+                                    <div class="h-2 bg-green-600 rounded-full" style="width: 80%"></div>
+                                </div>
+                                <span class="ml-2 text-xs">AI支援</span>
+                            </div>
+                        </div>
+                        
+                        <div class="card-border border-green-500">
+                            <h4 class="text-lg font-bold text-green-700 mb-1">プロセスの効率化・高度化</h4>
+                            <p class="text-gray-600 text-sm">営業担当者がより戦略的な活動に集中できる環境構築</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p class="text-gray-500">AI超独学法 | 第6章</p>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'neutral',
+            flowchart: { 
+                curve: 'basis',
+                htmlLabels: true
+            }
+        });
+    </script>
+</body>
+</html>

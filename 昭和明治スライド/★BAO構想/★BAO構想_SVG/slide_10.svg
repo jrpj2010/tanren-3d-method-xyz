@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap');
+      
+      :root {
+        --black: #2c2c2c;
+        --cream: #f4f1ea;
+        --red: #b3322b;
+        --blue: #1a5b66;
+        --purple: #653a5e;
+      }
+      
+      .slide-bg {
+        fill: var(--cream);
+      }
+      
+      .title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 42px;
+        fill: var(--black);
+        letter-spacing: 0.05em;
+      }
+      
+      .subtitle {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 32px;
+        fill: var(--black);
+      }
+      
+      .body-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 24px;
+        fill: var(--black);
+      }
+      
+      .intro-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 22px;
+        fill: var(--black);
+      }
+      
+      .industry-title {
+        font-family: 'Noto Serif JP', serif;
+        font-weight: 700;
+        font-size: 22px;
+      }
+      
+      .industry-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 16px;
+        fill: var(--black);
+      }
+      
+      .summary-text {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 22px;
+        fill: var(--black);
+      }
+      
+      .company {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+        text-anchor: end;
+      }
+      
+      .page-number {
+        font-family: 'Noto Serif JP', serif;
+        font-size: 20px;
+        fill: var(--black);
+      }
+      
+      .bold {
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1920" height="1080" class="slide-bg" />
+  
+  <!-- タイトル -->
+  <g transform="translate(120, 100)">
+    <text class="title">BAO構想の業界別展開シナリオ</text>
+    <line x1="0" y1="60" x2="1000" y2="60" stroke="var(--red)" stroke-width="3" />
+  </g>
+  
+  <!-- ドット装飾 -->
+  <g transform="translate(960, 150)">
+    <circle cx="-25" cy="0" r="6" fill="var(--red)" />
+    <circle cx="0" cy="0" r="6" fill="var(--blue)" />
+    <circle cx="25" cy="0" r="6" fill="var(--purple)" />
+  </g>
+  
+  <!-- イントロダクション -->
+  <g transform="translate(120, 200)">
+    <rect x="0" y="0" width="1680" height="100" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="1680" height="100" fill="none" stroke="var(--black)" stroke-width="1" />
+    
+    <text x="40" y="40" class="intro-text">BAO構想の展開は、業界ごとの特性に応じて<tspan fill="var(--blue)" font-weight="700">カスタマイズ</tspan>する必要があります。</text>
+    <text x="40" y="75" class="intro-text">以下に、主要業界でのBAO導入シナリオと期待される<tspan fill="var(--red)" font-weight="700">変革のイメージ</tspan>を示します。</text>
+  </g>
+  
+  <!-- 業界別展開シナリオ：サービス業・小売 -->
+  <g transform="translate(120, 350)">
+    <rect x="0" y="0" width="540" height="280" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="540" height="280" fill="none" stroke="var(--black)" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="280" stroke="var(--red)" stroke-width="4" />
+    
+    <text x="20" y="40" class="industry-title" fill="var(--red)">サービス業・小売</text>
+    
+    <g transform="translate(20, 70)">
+      <text class="industry-text" font-weight="700">主要AI CXO:</text>
+      <text x="120" y="0" class="industry-text">AI CMO, AI CPO, AI CSupO</text>
+      
+      <text y="25" class="industry-text" font-weight="700">変革の重点:</text>
+      <text x="120" y="25" class="industry-text">顧客体験の超個別化、需要予測の精緻化</text>
+    </g>
+    
+    <g transform="translate(20, 110)">
+      <text class="industry-text" font-weight="700">期待される変革:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--black)" />
+        <text x="0" y="5" class="industry-text">リアルタイム個客分析に基づく完全自動化されたパーソナライズ</text>
+        
+        <circle cx="-5" cy="25" r="2" fill="var(--black)" />
+        <text x="0" y="30" class="industry-text">需要変動の予測精度が現状比3倍向上し、在庫最適化を実現</text>
+        
+        <circle cx="-5" cy="50" r="2" fill="var(--black)" />
+        <text x="0" y="55" class="industry-text">物流・店舗オペレーションの完全自動最適化</text>
+        
+        <circle cx="-5" cy="75" r="2" fill="var(--black)" />
+        <text x="0" y="80" class="industry-text">顧客一人ひとりの特性に合わせた商品開発サイクルの実現</text>
+      </g>
+    </g>
+    
+    <g transform="translate(20, 220)">
+      <text class="industry-text" font-weight="700">導入時の課題:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--red)" />
+        <text x="0" y="5" class="industry-text">膨大な顧客データの統合と品質確保</text>
+        
+        <circle cx="-5" cy="25" r="2" fill="var(--red)" />
+        <text x="0" y="30" class="industry-text">プライバシー規制への厳格な対応</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 業界別展開シナリオ：製造業 -->
+  <g transform="translate(690, 350)">
+    <rect x="0" y="0" width="540" height="280" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="540" height="280" fill="none" stroke="var(--black)" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="280" stroke="var(--blue)" stroke-width="4" />
+    
+    <text x="20" y="40" class="industry-title" fill="var(--blue)">製造業</text>
+    
+    <g transform="translate(20, 70)">
+      <text class="industry-text" font-weight="700">主要AI CXO:</text>
+      <text x="120" y="0" class="industry-text">AI COO, AI CTO, AI CSupO</text>
+      
+      <text y="25" class="industry-text" font-weight="700">変革の重点:</text>
+      <text x="120" y="25" class="industry-text">生産効率化、サプライチェーン最適化、製品イノベーション</text>
+    </g>
+    
+    <g transform="translate(20, 110)">
+      <text class="industry-text" font-weight="700">期待される変革:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--black)" />
+        <text x="0" y="5" class="industry-text">予知保全による設備停止時間の90%削減</text>
+        
+        <circle cx="-5" cy="25" r="2" fill="var(--black)" />
+        <text x="0" y="30" class="industry-text">原材料調達から出荷までの完全自動化されたサプライチェーン</text>
+        
+        <circle cx="-5" cy="50" r="2" fill="var(--black)" />
+        <text x="0" y="55" class="industry-text">市場変化を先読みした製品開発の加速（開発期間50%短縮）</text>
+        
+        <circle cx="-5" cy="75" r="2" fill="var(--black)" />
+        <text x="0" y="80" class="industry-text">工場間の生産調整を完全自動化し、生産性30%向上</text>
+      </g>
+    </g>
+    
+    <g transform="translate(20, 220)">
+      <text class="industry-text" font-weight="700">導入時の課題:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--blue)" />
+        <text x="0" y="5" class="industry-text">レガシーシステムとの統合</text>
+        
+        <circle cx="-5" cy="25" r="2" fill="var(--blue)" />
+        <text x="0" y="30" class="industry-text">作業現場でのAI受容度向上</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 業界別展開シナリオ：金融・保険 -->
+  <g transform="translate(1260, 350)">
+    <rect x="0" y="0" width="540" height="280" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="540" height="280" fill="none" stroke="var(--black)" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="280" stroke="var(--purple)" stroke-width="4" />
+    
+    <text x="20" y="40" class="industry-title" fill="var(--purple)">金融・保険</text>
+    
+    <g transform="translate(20, 70)">
+      <text class="industry-text" font-weight="700">主要AI CXO:</text>
+      <text x="120" y="0" class="industry-text">AI CFO, AI CRO, AI CCPO (Chief Customer Privacy Officer)</text>
+      
+      <text y="25" class="industry-text" font-weight="700">変革の重点:</text>
+      <text x="120" y="25" class="industry-text">リスク管理の高度化、顧客資産運用の最適化</text>
+    </g>
+    
+    <g transform="translate(20, 110)">
+      <text class="industry-text" font-weight="700">期待される変革:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--black)" />
+        <text x="0" y="5" class="industry-text">マクロ経済変動を即時反映した投資戦略の自動調整</text>
+        
+        <circle cx="-5" cy="25" r="2" fill="var(--black)" />
+        <text x="0" y="30" class="industry-text">不正取引検出の精度99.9%達成</text>
+        
+        <circle cx="-5" cy="50" r="2" fill="var(--black)" />
+        <text x="0" y="55" class="industry-text">顧客の長期目標と市場状況を統合した資産運用の自動最適化</text>
+        
+        <circle cx="-5" cy="75" r="2" fill="var(--black)" />
+        <text x="0" y="80" class="industry-text">規制変更への即時対応と遵守状況の継続的モニタリング</text>
+      </g>
+    </g>
+    
+    <g transform="translate(20, 220)">
+      <text class="industry-text" font-weight="700">導入時の課題:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--purple)" />
+        <text x="0" y="5" class="industry-text">高度なセキュリティ要件への対応</text>
+        
+        <circle cx="-5" cy="25" r="2" fill="var(--purple)" />
+        <text x="0" y="30" class="industry-text">複雑な規制環境での説明責任の確保</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 業界別展開シナリオ：医療・ヘルスケア -->
+  <g transform="translate(120, 660)">
+    <rect x="0" y="0" width="540" height="280" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="540" height="280" fill="none" stroke="var(--black)" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="280" stroke="var(--red)" stroke-width="4" />
+    
+    <text x="20" y="40" class="industry-title" fill="var(--red)">医療・ヘルスケア</text>
+    
+    <g transform="translate(20, 70)">
+      <text class="industry-text" font-weight="700">主要AI CXO:</text>
+      <text x="120" y="0" class="industry-text">AI CMO, AI CMIO (Chief Medical Information Officer)</text>
+      
+      <text y="25" class="industry-text" font-weight="700">変革の重点:</text>
+      <text x="120" y="25" class="industry-text">診断精度向上、治療計画最適化、研究開発加速</text>
+    </g>
+    
+    <g transform="translate(20, 110)">
+      <text class="industry-text" font-weight="700">期待される変革:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--black)" />
+        <text x="0" y="5" class="industry-text">患者の全医療データを統合分析した精密医療の実現</text>
+        
+        <circle cx="-5" cy="25" r="2" fill="var(--black)" />
+        <text x="0" y="30" class="industry-text">医療資源（医師・看護師・病床）の最適配分による医療効率化</text>
+        
+        <circle cx="-5" cy="50" r="2" fill="var(--black)" />
+        <text x="0" y="55" class="industry-text">新薬開発期間の50%短縮と成功率の向上</text>
+        
+        <circle cx="-5" cy="75" r="2" fill="var(--black)" />
+        <text x="0" y="80" class="industry-text">遠隔診療と自宅モニタリングの統合による予防医療の強化</text>
+      </g>
+    </g>
+    
+    <g transform="translate(20, 220)">
+      <text class="industry-text" font-weight="700">導入時の課題:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--red)" />
+        <text x="0" y="5" class="industry-text">厳格な患者データ保護要件</text>
+        
+        <circle cx="-5" cy="25" r="2" fill="var(--red)" />
+        <text x="0" y="30" class="industry-text">医療従事者のAI決定への信頼構築</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 業界別展開シナリオ：教育 -->
+  <g transform="translate(690, 660)">
+    <rect x="0" y="0" width="540" height="280" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="540" height="280" fill="none" stroke="var(--black)" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="280" stroke="var(--blue)" stroke-width="4" />
+    
+    <text x="20" y="40" class="industry-title" fill="var(--blue)">教育</text>
+    
+    <g transform="translate(20, 70)">
+      <text class="industry-text" font-weight="700">主要AI CXO:</text>
+      <text x="120" y="0" class="industry-text">AI CLO (Chief Learning Officer), AI CPO</text>
+      
+      <text y="25" class="industry-text" font-weight="700">変革の重点:</text>
+      <text x="120" y="25" class="industry-text">個別化学習、教育コンテンツ最適化、学習効果の最大化</text>
+    </g>
+    
+    <g transform="translate(20, 110)">
+      <text class="industry-text" font-weight="700">期待される変革:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--black)" />
+        <text x="0" y="5" class="industry-text">学習者の特性・進度・興味に完全対応したカリキュラム自動生成</text>
+        
+        <circle cx="-5" cy="25" r="2" fill="var(--black)" />
+        <text x="0" y="30" class="industry-text">教員の事務作業を90%削減し、指導時間を最大化</text>
+        
+        <circle cx="-5" cy="50" r="2" fill="var(--black)" />
+        <text x="0" y="55" class="industry-text">リアルタイムフィードバックによる学習効率の倍増</text>
+        
+        <circle cx="-5" cy="75" r="2" fill="var(--black)" />
+        <text x="0" y="80" class="industry-text">産業界のニーズと学習内容の継続的なすり合わせによる</text>
+        <text x="0" y="100" class="industry-text">キャリア準備の最適化</text>
+      </g>
+    </g>
+    
+    <g transform="translate(20, 220)">
+      <text class="industry-text" font-weight="700">導入時の課題:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--blue)" />
+        <text x="0" y="5" class="industry-text">教育機関の予算制約</text>
+        
+        <circle cx="-5" cy="25" r="2" fill="var(--blue)" />
+        <text x="0" y="30" class="industry-text">教育哲学とAI活用のバランス</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 業界別展開シナリオ：公共・行政 -->
+  <g transform="translate(1260, 660)">
+    <rect x="0" y="0" width="540" height="280" fill="white" stroke="var(--black)" stroke-width="2" />
+    <rect x="7" y="7" width="540" height="280" fill="none" stroke="var(--black)" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="280" stroke="var(--purple)" stroke-width="4" />
+    
+    <text x="20" y="40" class="industry-title" fill="var(--purple)">公共・行政</text>
+    
+    <g transform="translate(20, 70)">
+      <text class="industry-text" font-weight="700">主要AI CXO:</text>
+      <text x="120" y="0" class="industry-text">AI CIO, AI CPO (Chief Policy Officer)</text>
+      
+      <text y="25" class="industry-text" font-weight="700">変革の重点:</text>
+      <text x="120" y="25" class="industry-text">行政サービスの効率化、政策立案の高度化、市民対応の向上</text>
+    </g>
+    
+    <g transform="translate(20, 110)">
+      <text class="industry-text" font-weight="700">期待される変革:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--black)" />
+        <text x="0" y="5" class="industry-text">行政手続きの完全デジタル化と自動処理によるサービス時間の</text>
+        <text x="0" y="25" class="industry-text">95%短縮</text>
+        
+        <circle cx="-5" cy="40" r="2" fill="var(--black)" />
+        <text x="0" y="45" class="industry-text">データ駆動型の政策立案と効果予測による政策質の向上</text>
+        
+        <circle cx="-5" cy="65" r="2" fill="var(--black)" />
+        <text x="0" y="70" class="industry-text">24時間365日対応の市民サービスポータル</text>
+        
+        <circle cx="-5" cy="90" r="2" fill="var(--black)" />
+        <text x="0" y="95" class="industry-text">異常気象や災害時の即時対応システム</text>
+      </g>
+    </g>
+    
+    <g transform="translate(20, 220)">
+      <text class="industry-text" font-weight="700">導入時の課題:</text>
+      
+      <g transform="translate(20, 20)">
+        <circle cx="-5" cy="0" r="2" fill="var(--purple)" />
+        <text x="0" y="5" class="industry-text">透明性と公平性の確保</text>
+        
+        <circle cx="-5" cy="25" r="2" fill="var(--purple)" />
+        <text x="0" y="30" class="industry-text">レガシーシステムの刷新</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- まとめボックス -->
+  <g transform="translate(960, 990)">
+    <rect x="-700" y="-40" width="1400" height="110" fill="white" stroke="var(--black)" stroke-width="2" />
+    
+    <g transform="translate(-650, 15)">
+      <text font-size="54">🔍</text>
+    </g>
+    
+    <g transform="translate(-550, 15)">
+      <text class="summary-text bold" y="-20">業界別展開の要点</text>
+      <text class="summary-text" y="10">BAO構想は業界ごとの<tspan fill="var(--blue)" font-weight="700">固有の課題やニーズ</tspan>に合わせてカスタマイズすることで最大の効果を発揮します。</text>
+      <text class="summary-text" y="40">導入初期は成功しやすい領域から始め、段階的に拡大していくことが重要です。同時に、<tspan fill="var(--red)" font-weight="700">業界の壁を</tspan></text>
+      <text class="summary-text" y="70"><tspan fill="var(--red)" font-weight="700">越えた知見の共有</tspan>により、より高度なBAOモデルへと進化させることができます。</text>
+    </g>
+  </g>
+  
+  <!-- 会社名と頁数 -->
+  <g transform="translate(1800, 1050)">
+    <text class="company">TANREN株式会社</text>
+  </g>
+  
+  <g transform="translate(120, 1050)">
+    <text class="page-number">10 / 12</text>
+  </g>
+</svg> 

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect width="1920" height="1080" fill="#F4F1EA"/>
+  <g clip-path="url(#clip0_0_1)">
+    <path d="M1920 0H0V1080H1920V0Z" fill="#F4F1EA"/>
+    <path d="M1920 0H0V120H1920V0Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="36" letter-spacing="0em"><tspan x="724.734" y="54.9">Day4: AIエージェントの実装</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="24" letter-spacing="0em"><tspan x="894.445" y="100.1">GPTs活用編</tspan></text>
+    <path d="M520 83C524.418 83 528 79.4183 528 75C528 70.5817 524.418 67 520 67C515.582 67 512 70.5817 512 75C512 79.4183 515.582 83 520 83Z" fill="#B3322B"/>
+    <path d="M540 75H740" stroke="#B3322B" stroke-width="3"/>
+    <path d="M1380 83C1384.42 83 1388 79.4183 1388 75C1388 70.5817 1384.42 67 1380 67C1375.58 67 1372 70.5817 1372 75C1372 79.4183 1375.58 83 1380 83Z" fill="#B3322B"/>
+    <path d="M1160 75H1360" stroke="#B3322B" stroke-width="3"/>
+    
+    <!-- 左カラム: 効果的なシステムプロンプト構成 -->
+    <path d="M640 160H40V1020H640V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="224" y="210.2">効果的プロンプト設計</tspan></text>
+    <path d="M140 220H540" stroke="#1A5B66" stroke-width="3"/>
+    <path d="M140 226C143.314 226 146 223.314 146 220C146 216.686 143.314 214 140 214C136.686 214 134 216.686 134 220C134 223.314 136.686 226 140 226Z" fill="#1A5B66"/>
+    <path d="M540 226C543.314 226 546 223.314 546 220C546 216.686 543.314 214 540 214C536.686 214 534 216.686 534 220C534 223.314 536.686 226 540 226Z" fill="#1A5B66"/>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="70" y="270">🧩 構造化された指示設計</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="70" y="309.9">効果的なプロンプトは明確な構造を持ち</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="70" y="339.9">AIに期待する動作を具体的に指示する</tspan></text>
+    
+    <path d="M610 370H70V770H610V370Z" fill="#F4F1EA" stroke="#1A5B66" stroke-width="2"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="125" y="400.2">プロンプト構築の5つの基本ステップ</tspan></text>
+    
+    <path d="M570 420H110C104.477 420 100 424.477 100 430V470C100 475.523 104.477 480 110 480H570C575.523 480 580 475.523 580 470V430C580 424.477 575.523 420 570 420Z" fill="#1A5B66" fill-opacity="0.1"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="120" y="450.9">1. 役割と専門性の定義</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="120" y="470.8">「あなたは[専門分野]の専門家です」</tspan></text>
+    
+    <path d="M570 490H110C104.477 490 100 494.477 100 500V540C100 545.523 104.477 550 110 550H570C575.523 550 580 545.523 580 540V500C580 494.477 575.523 490 570 490Z" fill="#1A5B66" fill-opacity="0.1"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="120" y="520.9">2. 個性と特徴の付与</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="120" y="540.8">「[特徴・性格]を持っています」</tspan></text>
+    
+    <path d="M570 560H110C104.477 560 100 564.477 100 570V610C100 615.523 104.477 620 110 620H570C575.523 620 580 615.523 580 610V570C580 564.477 575.523 560 570 560Z" fill="#1A5B66" fill-opacity="0.1"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="120" y="590.9">3. 応答スタイルの指定</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="120" y="610.8">「[スタイル]で回答してください」</tspan></text>
+    
+    <path d="M570 630H110C104.477 630 100 634.477 100 640V680C100 685.523 104.477 690 110 690H570C575.523 690 580 685.523 580 680V640C580 634.477 575.523 630 570 630Z" fill="#1A5B66" fill-opacity="0.1"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="120" y="660.9">4. 得意分野と知識範囲</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="120" y="680.8">「[トピック]について詳しく説明できます」</tspan></text>
+    
+    <path d="M570 700H110C104.477 700 100 704.477 100 710V750C100 755.523 104.477 760 110 760H570C575.523 760 580 755.523 580 750V710C580 704.477 575.523 700 570 700Z" fill="#1A5B66" fill-opacity="0.1"/>
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="120" y="730.9">5. 制限事項と行動指針</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="120" y="750.8">「[制限/指針]に従って対応してください」</tspan></text>
+    
+    <text fill="#1A5B66" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="70" y="820">✅ プロンプト改善のポイント</tspan></text>
+    
+    <path d="M90 850C92.7614 850 95 847.761 95 845C95 842.239 92.7614 840 90 840C87.2386 840 85 842.239 85 845C85 847.761 87.2386 850 90 850Z" fill="#1A5B66"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="850.9">具体的な例を含める</tspan></text>
+    
+    <path d="M90 890C92.7614 890 95 887.761 95 885C95 882.239 92.7614 880 90 880C87.2386 880 85 882.239 85 885C85 887.761 87.2386 890 90 890Z" fill="#1A5B66"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="890.9">簡潔で明確な指示を心がける</tspan></text>
+    
+    <path d="M90 930C92.7614 930 95 927.761 95 925C95 922.239 92.7614 920 90 920C87.2386 920 85 922.239 85 925C85 927.761 87.2386 930 90 930Z" fill="#1A5B66"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="930.9">矛盾する指示を避ける</tspan></text>
+    
+    <path d="M90 970C92.7614 970 95 967.761 95 965C95 962.239 92.7614 960 90 960C87.2386 960 85 962.239 85 965C85 967.761 87.2386 970 90 970Z" fill="#1A5B66"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="110" y="970.9">繰り返しテストして最適化する</tspan></text>
+    
+    <!-- 中央カラム: プロンプトテンプレート -->
+    <path d="M1260 160H660V1020H1260V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="830" y="210.2">プロンプトテンプレート</tspan></text>
+    <path d="M760 220H1160" stroke="#653A5E" stroke-width="3"/>
+    <path d="M760 226C763.314 226 766 223.314 766 220C766 216.686 763.314 214 760 214C756.686 214 754 216.686 754 220C754 223.314 756.686 226 760 226Z" fill="#653A5E"/>
+    <path d="M1160 226C1163.31 226 1166 223.314 1166 220C1166 216.686 1163.31 214 1160 214C1156.69 214 1154 216.686 1154 220C1154 223.314 1156.69 226 1160 226Z" fill="#653A5E"/>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="270">📋 実用的なテンプレート集</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="690" y="309.9">即活用できる専門分野別テンプレート</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="690" y="339.9">目的に合わせてカスタマイズ可能</tspan></text>
+    
+    <path d="M1230 370H690V580H1230V370Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="870" y="400.2">基本テンプレート</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="710" y="430.9">汎用エキスパート型</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="455.8">あなたは[分野]の専門家として、ユーザーからの質問に</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="480.8">丁寧に答えてください。専門用語は分かりやすく説明し、</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="505.8">具体例を用いて解説してください。</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="710" y="545.9">教師型</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="570.8">あなたは[分野]を教える教師です。段階的に説明し、</tspan></text>
+    
+    <path d="M1230 600H690V770H1230V600Z" fill="#F4F1EA" stroke="#653A5E" stroke-width="2"/>
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="865" y="630.2">専門分野別テンプレート</tspan></text>
+    
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="710" y="660.9">ビジネスコンサルタント型</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="685.8">あなたは経験豊富なビジネスコンサルタントです。</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="710.8">最新のビジネス動向に基づき、戦略的で実用的な</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="735.8">アドバイスを提供してください。</tspan></text>
+    
+    <text fill="#653A5E" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="690" y="820">⚙️ 応用テンプレート例</tspan></text>
+    
+    <path d="M1230 840H690V1000H1230V840Z" fill="#653A5E"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="710" y="870.9">マーケティング専門家</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="895.8">あなたはデジタルマーケティングの専門家で、データ分析に</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="920.8">基づいた実践的なアドバイスを提供します。最新のトレンドを</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="945.8">踏まえ、ROIを最大化するための具体的な戦略を提案し、</tspan></text>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="710" y="970.8">成功事例と数値データを用いて説明してください。</tspan></text>
+    
+    <!-- 右カラム: 知識ベース連携 -->
+    <path d="M1880 160H1280V1020H1880V160Z" fill="#F4F1EA" stroke="#2C2C2C" stroke-width="2"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Serif JP" font-size="28" letter-spacing="0em"><tspan x="1450" y="210.2">知識ベース連携</tspan></text>
+    <path d="M1380 220H1780" stroke="#B3322B" stroke-width="3"/>
+    <path d="M1380 226C1383.31 226 1386 223.314 1386 220C1386 216.686 1383.31 214 1380 214C1376.69 214 1374 216.686 1374 220C1374 223.314 1376.69 226 1380 226Z" fill="#B3322B"/>
+    <path d="M1780 226C1783.31 226 1786 223.314 1786 220C1786 216.686 1783.31 214 1780 214C1776.69 214 1774 216.686 1774 220C1774 223.314 1776.69 226 1780 226Z" fill="#B3322B"/>
+    
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1310" y="270">🔗 知識ベースとRAG</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1310" y="309.9">プロンプトと知識データの融合</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1310" y="339.9">専門性を高める情報源の活用</tspan></text>
+    
+    <path d="M1850 370H1310V650H1850V370Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="2"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1480" y="400.2">適切なRAG実装のコツ</tspan></text>
+    
+    <path d="M1330 430C1332.76 430 1335 427.761 1335 425C1335 422.239 1332.76 420 1330 420C1327.24 420 1325 422.239 1325 425C1325 427.761 1327.24 430 1330 430Z" fill="#B3322B"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="430.9">質の高い情報源を選択する</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1370" y="455.8">信頼性の高いソースからの情報を優先</tspan></text>
+    
+    <path d="M1330 485C1332.76 485 1335 482.761 1335 480C1335 477.239 1332.76 475 1330 475C1327.24 475 1325 477.239 1325 480C1325 482.761 1327.24 485 1330 485Z" fill="#B3322B"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="485.9">構造化されたデータを準備</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1370" y="510.8">目次や見出しを含む整理された情報</tspan></text>
+    
+    <path d="M1330 540C1332.76 540 1335 537.761 1335 535C1335 532.239 1332.76 530 1330 530C1327.24 530 1325 532.239 1325 535C1325 537.761 1327.24 540 1330 540Z" fill="#B3322B"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="540.9">適切なファイル形式で提供</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1370" y="565.8">テキスト抽出しやすいPDFやテキスト形式</tspan></text>
+    
+    <path d="M1330 595C1332.76 595 1335 592.761 1335 590C1335 587.239 1332.76 585 1330 585C1327.24 585 1325 587.239 1325 590C1325 592.761 1327.24 595 1330 595Z" fill="#B3322B"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="595.9">プロンプト内で参照方法を指定</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1370" y="620.8">「提供されたデータに基づいて回答する」</tspan></text>
+    
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="20" letter-spacing="0em"><tspan x="1310" y="690">📊 知識ベース最適化</tspan></text>
+    
+    <path d="M1850 710H1310V1000H1850V710Z" fill="#F4F1EA" stroke="#B3322B" stroke-width="2"/>
+    <text fill="#B3322B" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="18" letter-spacing="0em"><tspan x="1490" y="740.2">最適化のポイント</tspan></text>
+    
+    <path d="M1830 760H1330V820H1830V760Z" fill="#F4F1EA" stroke="#B3322B"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="795.9">情報の鮮度を維持する</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1550" y="795.1">定期的なアップデート</tspan></text>
+    
+    <path d="M1830 830H1330V890H1830V830Z" fill="#F4F1EA" stroke="#B3322B"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="865.9">重複情報の整理</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1550" y="865.1">一貫性のある情報提供</tspan></text>
+    
+    <path d="M1830 900H1330V960H1830V900Z" fill="#F4F1EA" stroke="#B3322B"/>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="1350" y="935.9">フィードバックを反映</tspan></text>
+    <text fill="#2C2C2C" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="14" letter-spacing="0em"><tspan x="1550" y="935.1">継続的な改善プロセス</tspan></text>
+    
+    <!-- フッター -->
+    <path d="M1920 1040H0V1080H1920V1040Z" fill="#2C2C2C"/>
+    <text fill="#F4F1EA" xml:space="preserve" style="white-space: pre" font-family="Noto Sans JP" font-size="16" letter-spacing="0em"><tspan x="694.32" y="1064.9">TANREN株式会社 / 株式会社MVP | AI人材育成プログラム | 2025年春季講座</tspan></text>
+  </g>
+  <defs>
+    <clipPath id="clip0_0_1">
+      <rect width="1920" height="1080" fill="white"/>
+    </clipPath>
+  </defs>
+</svg> 

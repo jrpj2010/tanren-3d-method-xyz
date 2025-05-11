@@ -1,0 +1,51 @@
+<!-- SVG Cover Slide for "Next Generation SVG Presentation Course" -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Background with subtle texture -->
+  <rect width="1920" height="1080" fill="#f4f1ea"/>
+  <pattern id="grain" patternUnits="userSpaceOnUse" width="200" height="200">
+    <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAO3RFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjcuMiwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8pXeV/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAE+UlEQVR4nO3dwU0CURiF0TvOYgcuhQ5cWoIdQAluXNiBHVCCFVCCS7HEe4GEjAFnmOF8ZzX/LUjgkcA3m8lgtzudTqcTQOltOgBsmc0ymM1UeLQUBIJA1lIQCAJZS0EgCGQtBYEgkLUUBIJA1lIQCAJZS0EgCGQtBYEgkLUUBIJA1lIQCAJZS0EgCGQtBYEgkLUUBIJA1lIQCAJZS0EgCGQtBYEgkLUUBIJA1lIQCAJZS0EgCGQtBYEgkLUUBIJA1lIQCAJZS0EgCGStXTrAHOz3h+lwPKYjbNJ82KcjbNLXx1s6wupWC7I/HNMRoMgpFgSBrKUgEASyloJAEMhaCgJBIGspCASBrKUgEASyloJAEMhaCgJBIGspCASBrKUgEASyloJAEMhaCgJBIGspCASBrKUgEASyloJAEMhaCgJBIGspCASBrKUgEASyloJAEMhaCgJBIGspCASBrKUgEASyloJAEMhaCgJBIGspCASBrKUgEASy1i4dYA7mwz6dYLPmwz6dYJOGYZeOsLrVggy3w9WfORwP17/pjLzdPqUjbNLz88dq93KKBUEgaykIBIGspSAQBLKWgkAQyFoKAkEgaykIBIGspSAQBLKWgkAQyFoKAkEgaykIBIGspSAQBLKWgkAQyFoKAkEgaykIBIGspSAQBLKWgkAQyFoKAkEgaykIBIGspSAQBLKWgkAQyFoKAkEgaykIBIGspSAQBLKWgkAQyFoKAkEgaykIBIGspSAQBLKWgkAQyFoKAkEgaykIBIGspSAQBLKWgkAQyFoKAkEgaykIBIGspSAQBLKWgkAQyFoKAkEgaykIBIGspSAQBLKWgkAQyFq7dIA5mM/TdIJNms/TdIRNGobdaq+zWpDh9m61Z/5knKY0AedkuL1JR1idUywIAllLQSAIZC0FgSCQtRQEgkDWUhAIAllLQSAIZC0FgSCQtRQEgkDWUhAIAllLQSAIZC0FgSCQtRQEgkDWUhAIAllLQSAIZC0FgSCQtRQEgkDWUhAIAllLQSAIZC0FgSCQtRQEgkDWUhAIAllLQSAIZK3NdjqdTukQsE1OsSAIZC0Fgf/mG8Xhz7aCgc6lAAAAAElFTkSuQmCC" width="200" height="200" opacity="0.05"/>
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#grain)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="110" cy="110" r="60" fill="#b3322b" opacity="0.2"/>
+  <circle cx="1810" cy="970" r="60" fill="#1a5b66" opacity="0.2"/>
+  <rect x="0" y="200" width="100%" height="4" fill="#2c2c2c" opacity="0.1"/>
+  <rect x="0" y="860" width="100%" height="4" fill="#2c2c2c" opacity="0.1"/>
+  
+  <!-- Title Section -->
+  <text x="960" y="320" font-family="Noto Serif JP, serif" font-size="66" font-weight="700" text-anchor="middle" fill="#2c2c2c" letter-spacing="3">次世代SVGプレゼン講座</text>
+  <text x="960" y="400" font-family="Noto Sans JP, sans-serif" font-size="36" font-weight="400" text-anchor="middle" fill="#653a5e" letter-spacing="2">AI × SVG × Figma で実現する新時代の資料作成術</text>
+  
+  <!-- Decorative line below title -->
+  <line x1="720" y1="440" x2="1200" y2="440" stroke="#b3322b" stroke-width="3"/>
+  <circle cx="960" cy="440" r="8" fill="#b3322b"/>
+  
+  <!-- Three columns with icons -->
+  <g transform="translate(360, 550)">
+    <rect x="0" y="0" width="300" height="300" rx="4" fill="#f4f1ea" stroke="#1a5b66" stroke-width="2"/>
+    <text x="150" y="80" font-family="Noto Serif JP, serif" font-size="30" font-weight="600" text-anchor="middle" fill="#1a5b66">Cursor</text>
+    <text x="150" y="130" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#2c2c2c">AIエディター</text>
+    <text x="150" y="190" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#2c2c2c" letter-spacing="1">コーディングとAI生成を</text>
+    <text x="150" y="220" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#2c2c2c" letter-spacing="1">シームレスに連携</text>
+  </g>
+  
+  <g transform="translate(810, 550)">
+    <rect x="0" y="0" width="300" height="300" rx="4" fill="#f4f1ea" stroke="#b3322b" stroke-width="2"/>
+    <text x="150" y="80" font-family="Noto Serif JP, serif" font-size="30" font-weight="600" text-anchor="middle" fill="#b3322b">SVG</text>
+    <text x="150" y="130" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#2c2c2c">ベクターグラフィック</text>
+    <text x="150" y="190" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#2c2c2c" letter-spacing="1">高品質でスケーラブルな</text>
+    <text x="150" y="220" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#2c2c2c" letter-spacing="1">グラフィック形式</text>
+  </g>
+  
+  <g transform="translate(1260, 550)">
+    <rect x="0" y="0" width="300" height="300" rx="4" fill="#f4f1ea" stroke="#653a5e" stroke-width="2"/>
+    <text x="150" y="80" font-family="Noto Serif JP, serif" font-size="30" font-weight="600" text-anchor="middle" fill="#653a5e">Figma</text>
+    <text x="150" y="130" font-family="Noto Sans JP, sans-serif" font-size="20" font-weight="400" text-anchor="middle" fill="#2c2c2c">デザインツール</text>
+    <text x="150" y="190" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#2c2c2c" letter-spacing="1">クラウドベースの</text>
+    <text x="150" y="220" font-family="Noto Sans JP, sans-serif" font-size="16" font-weight="400" text-anchor="middle" fill="#2c2c2c" letter-spacing="1">共同編集ツール</text>
+  </g>
+  
+  <!-- Speaker info -->
+  <text x="960" y="950" font-family="Noto Sans JP, sans-serif" font-size="24" font-weight="500" text-anchor="middle" fill="#2c2c2c" letter-spacing="1">TANREN株式会社 AI秘書・桜木美佳</text>
+</svg> 

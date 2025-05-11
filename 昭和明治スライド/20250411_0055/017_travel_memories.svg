@@ -1,0 +1,180 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="background-color: #f4f1ea; font-family: 'Noto Sans JP', sans-serif;">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@700&display=swap');
+      .title { font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700; fill: #2c2c2c; letter-spacing: 0.1em; }
+      .subtitle { font-size: 14px; fill: #555; letter-spacing: 0.05em; }
+      .card-title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; letter-spacing: 0.08em; }
+      .card-text { font-size: 11px; fill: #2c2c2c; letter-spacing: 0.05em; line-height: 1.6; }
+      .highlight-red { fill: #b3322b; font-weight: bold; }
+      .highlight-blue { fill: #1a5b66; font-weight: bold; }
+      .highlight-purple { fill: #653a5e; font-weight: bold; }
+      .accent-line-red { stroke: #b3322b; stroke-width: 2; }
+      .accent-dot-red { fill: #b3322b; }
+      .accent-line-blue { stroke: #1a5b66; stroke-width: 2; }
+      .accent-dot-blue { fill: #1a5b66; }
+      .accent-line-purple { stroke: #653a5e; stroke-width: 2; }
+      .accent-dot-purple { fill: #653a5e; }
+      .table-header { font-weight: bold; fill: #f4f1ea; }
+      .table-row-even { fill: #e8e5dd; }
+      .table-row-odd { fill: #f4f1ea; }
+      .table-text { font-size: 10px; fill: #2c2c2c; }
+      .flow-arrow { fill: none; stroke: #2c2c2c; stroke-width: 1.5; marker-end: url(#arrowhead); }
+      .flow-text { font-size: 9px; fill: #555; }
+      .bar-chart-bar { fill: #b3322b; }
+      .bar-chart-axis { stroke: #555; stroke-width: 1; }
+      .bar-chart-label { font-size: 9px; fill: #555; }
+      .bar-chart-value { font-size: 10px; fill: #2c2c2c; font-weight: bold; }
+      .icon { font-size: 14px; margin-right: 5px; }
+      .emphasis-box { fill: #e8e5dd; stroke: #ccc; stroke-width: 1; rx: 3; ry: 3; }
+      .emphasis-text { font-size: 10px; fill: #2c2c2c; font-weight: bold; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c2c2c" />
+    </marker>
+  </defs>
+
+  <!-- Header -->
+  <text x="40" y="50" class="title">トラベルメモリーズ</text>
+  <text x="40" y="75" class="subtitle">旅の思い出を美しく記録・整理</text>
+  <line x1="40" y1="85" x2="350" y2="85" stroke="#2c2c2c" stroke-width="1" />
+  <circle cx="360" cy="85" r="3" fill="#2c2c2c" />
+
+  <!-- Footer -->
+  <text x="1200" y="700" text-anchor="end" font-size="12px" fill="#555">17 / 20</text>
+
+  <!-- Column 1: ユーザー要件と効果 -->
+  <rect x="40" y="110" width="380" height="570" fill="#f4f1ea" stroke="#ccc" stroke-width="0.5" rx="5" ry="5"/>
+  <text x="60" y="145" class="card-title" fill="#b3322b">🎯 ユーザー要件</text>
+  <line x1="60" y1="155" x2="220" y2="155" class="accent-line-red" />
+  <circle cx="225" cy="155" r="3" class="accent-dot-red" />
+  <text x="60" y="180" class="card-text"><tspan font-weight="bold">対象:</tspan> 旅行好き, 思い出大切にしたい人, 旅行ブロガー, 写真愛好家</text>
+  <text x="60" y="210" class="card-text"><tspan font-weight="bold">ニーズ:</tspan> 思い出整理・保存, 写真+体験記録, 地図軌跡, 簡単共有, 振り返り</text>
+  <text x="60" y="240" class="card-text"><tspan font-weight="bold">ゴール:</tspan> 永続保存, 詳細記録, 美しいアルバム作成, 思い出共有, 将来の参考</text>
+
+  <!-- Expected Benefits -->
+  <text x="60" y="290" class="card-text" font-weight="bold">期待効果:</text>
+  <rect x="60" y="310" width="340" height="150" fill="#e8e5dd" rx="3" ry="3"/>
+  <text x="70" y="330" class="card-text">
+    <tspan x="70" dy="1.4em">💾 思い出の整理・永続保存</tspan>
+    <tspan x="70" dy="1.4em">✍️ 写真と体験の文脈維持</tspan>
+    <tspan x="70" dy="1.4em">🖼️ 美しいアルバム簡単作成</tspan>
+    <tspan x="70" dy="1.4em">🤝 思い出共有による体験拡張</tspan>
+    <tspan x="70" dy="1.4em">😊 過去旅行を振り返る喜び</tspan>
+  </text>
+
+  <!-- Data Privacy -->
+  <text x="60" y="480" class="card-text" font-weight="bold">データプライバシー:</text>
+  <text x="70" y="500" class="card-text">
+    <tspan x="70" dy="1.4em">🔒 公開範囲設定でアクセス制御</tspan>
+    <tspan x="70" dy="1.4em">🛡️ 非公開データは暗号化保存</tspan>
+  </text>
+
+  <!-- Column 2: 機能と操作 -->
+  <rect x="450" y="110" width="380" height="570" fill="#f4f1ea" stroke="#ccc" stroke-width="0.5" rx="5" ry="5"/>
+  <text x="470" y="145" class="card-title" fill="#1a5b66">⚙️ 主要機能</text>
+  <line x1="470" y1="155" x2="610" y2="155" class="accent-line-blue" />
+  <circle cx="615" cy="155" r="3" class="accent-dot-blue" />
+  <text x="470" y="180" class="card-text" font-weight="bold">コア機能:</text>
+  <text x="480" y="200" class="card-text">
+    <tspan x="480" dy="1.4em"><tspan class="icon">📚</tspan>旅行アルバム作成 (複数管理)</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">📷</tspan>写真・動画アップロード (日付整理)</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">✍️</tspan>旅行記録入力 (メモ, 絵文字)</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">🗺️</tspan>位置情報マッピング (地図表示)</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">🔗</tspan>アルバム共有 (リンク/PDF, 公開範囲)</tspan>
+  </text>
+
+  <text x="470" y="320" class="card-text" font-weight="bold">データ管理:</text>
+  <rect x="470" y="340" width="340" height="75" fill="#1a5b66" rx="3" ry="3"/>
+  <text x="480" y="358" class="table-header">データ種別</text>
+  <text x="630" y="358" class="table-header">保存方法</text>
+  <rect x="470" y="365" width="340" height="15" class="table-row-even"/>
+  <text x="480" y="376" class="table-text">アルバムデータ, メディアデータ</text>
+  <text x="630" y="376" class="table-text">v0 Storage</text>
+  <rect x="470" y="380" width="340" height="15" class="table-row-odd"/>
+  <text x="480" y="391" class="table-text">メモデータ</text>
+  <text x="630" y="391" class="table-text">v0 Storage</text>
+  <rect x="470" y="395" width="340" height="15" class="table-row-even"/>
+  <text x="480" y="406" class="table-text">位置データ</text>
+  <text x="630" y="406" class="table-text">v0 Storage</text>
+
+  <text x="470" y="435" class="card-text" font-weight="bold">ユーザー操作フロー:</text>
+  <rect x="470" y="455" width="340" height="80" class="emphasis-box"/>
+  <text x="485" y="475" class="flow-text">アルバム作成</text>
+  <line x1="560" y1="473" x2="590" y2="473" class="flow-arrow"/>
+  <text x="600" y="475" class="flow-text">写真アップロード</text>
+  <line x1="695" y1="473" x2="725" y2="473" class="flow-arrow"/>
+  <text x="735" y="475" class="flow-text">メモ追加</text>
+  <line x1="600" y1="498" x2="630" y2="498" class="flow-arrow"/>
+  <text x="640" y="500" class="flow-text">地図表示</text>
+  <line x1="695" y1="498" x2="725" y2="498" class="flow-arrow"/>
+  <text x="735" y="500" class="flow-text">アルバム共有</text>
+  <line x1="695" y1="478" x2="695" y2="495" class="flow-arrow" style="marker-end: none;"/>
+  <line x1="695" y1="498" x2="635" y2="498" class="flow-arrow"/>
+
+  <text x="470" y="555" class="card-text" font-weight="bold">UI/UX デザイン:</text>
+   <text x="480" y="575" class="card-text">
+    <tspan x="480" dy="1.4em"><tspan class="icon">✈️</tspan>テーマ: 旅の高揚感・懐かしさ, 温かみ</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">🎨</tspan>配色: 白ベース, 青/緑/オレンジアクセント</tspan>
+    <tspan x="480" dy="1.4em"><tspan class="icon">📱</tspan>モバイルファースト, アクセシビリティ</tspan>
+  </text>
+
+  <!-- Column 3: 開発と将来性 -->
+  <rect x="860" y="110" width="380" height="570" fill="#f4f1ea" stroke="#ccc" stroke-width="0.5" rx="5" ry="5"/>
+  <text x="880" y="145" class="card-title" fill="#653a5e">🛠️ 開発と展望</text>
+  <line x1="880" y1="155" x2="1020" y2="155" class="accent-line-purple" />
+  <circle cx="1025" cy="155" r="3" class="accent-dot-purple" />
+  <text x="880" y="180" class="card-text"><tspan font-weight="bold">開発PF:</tspan> v0 (理由: ギャラリー表示, レイアウト容易)</text>
+
+  <text x="880" y="210" class="card-text" font-weight="bold">開発ステップ (見積):</text>
+  <rect x="880" y="230" width="340" height="160" fill="#653a5e" rx="3" ry="3"/>
+  <text x="890" y="248" class="table-header">ステップ</text>
+  <text x="1150" y="248" class="table-header" text-anchor="end">時間</text>
+  <rect x="880" y="255" width="340" height="15" class="table-row-even"/>
+  <text x="890" y="266" class="table-text">1. プロジェクト設定</text>
+  <text x="1210" y="266" class="table-text" text-anchor="end">3分</text>
+  <rect x="880" y="270" width="340" height="15" class="table-row-odd"/>
+  <text x="890" y="281" class="table-text">2. データモデル定義</text>
+  <text x="1210" y="281" class="table-text" text-anchor="end">4分</text>
+  <rect x="880" y="285" width="340" height="15" class="table-row-even"/>
+  <text x="890" y="296" class="table-text">3. UI設計</text>
+  <text x="1210" y="296" class="table-text" text-anchor="end">6分</text>
+  <rect x="880" y="300" width="340" height="15" class="table-row-odd"/>
+  <text x="890" y="311" class="table-text">4. アルバム管理機能実装</text>
+  <text x="1210" y="311" class="table-text" text-anchor="end">5分</text>
+  <rect x="880" y="315" width="340" height="15" class="table-row-even"/>
+  <text x="890" y="326" class="table-text">5. メディアアップロード機能実装</text>
+  <text x="1210" y="326" class="table-text" text-anchor="end">5分</text>
+  <rect x="880" y="330" width="340" height="15" class="table-row-odd"/>
+  <text x="890" y="341" class="table-text">6. メモ機能実装</text>
+  <text x="1210" y="341" class="table-text" text-anchor="end">3分</text>
+  <rect x="880" y="345" width="340" height="15" class="table-row-even"/>
+  <text x="890" y="356" class="table-text">7. 地図表示機能実装</text>
+  <text x="1210" y="356" class="table-text" text-anchor="end">4分</text>
+  <rect x="880" y="360" width="340" height="20" class="table-row-odd" style="fill: #e8e5dd;"/>
+  <text x="890" y="375" class="table-text" font-weight="bold">合計</text>
+  <text x="1210" y="375" class="table-text highlight-purple" text-anchor="end" style="font-size: 12px;">30分</text>
+
+  <text x="880" y="410" class="card-text" font-weight="bold">テスト計画:</text>
+   <text x="890" y="430" class="card-text">
+    <tspan x="890" dy="1.4em">🧪 シナリオ: アルバム作成, 写真アップロード, 地図表示</tspan>
+    <tspan x="890" dy="1.4em">👍 UAT基準: 一般ユーザーが5分で基本操作完了</tspan>
+  </text>
+
+  <text x="880" y="480" class="card-text" font-weight="bold">制約:</text>
+   <text x="890" y="500" class="card-text">
+    <tspan x="890" dy="1.4em">🔒 v0無料プラン制限</tspan>
+    <tspan x="890" dy="1.4em">⏱️ 開発時間30分 (複雑機能除外)</tspan>
+    <tspan x="890" dy="1.4em">🛠️ 非エンジニア実装可能範囲</tspan>
+  </text>
+
+  <text x="880" y="570" class="card-text" font-weight="bold">将来の拡張可能性:</text>
+   <text x="890" y="590" class="card-text">
+    <tspan x="890" dy="1.4em"><tspan class="icon">🤖</tspan>AI写真整理</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">🌐</tspan>ブログ形式公開</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">🎤</tspan>音声ナレーション</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">📅</tspan>旅行計画連携</tspan>
+    <tspan x="890" dy="1.4em"><tspan class="icon">🕶️</tspan>AR/VR体験再現</tspan>
+  </text>
+
+</svg>

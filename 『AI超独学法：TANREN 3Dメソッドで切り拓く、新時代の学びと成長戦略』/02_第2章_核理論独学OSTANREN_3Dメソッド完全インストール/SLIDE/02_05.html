@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y軸：時間軸の視座</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .title {
+            background: linear-gradient(90deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(34, 197, 94, 0.3);
+        }
+        .subtitle {
+            color: #86efac;
+        }
+        .time-element {
+            border-left: 4px solid;
+            transition: all 0.3s ease;
+        }
+        .time-element:hover {
+            transform: translateX(5px);
+        }
+        .past {
+            border-color: #86efac;
+        }
+        .present {
+            border-color: #4ade80;
+        }
+        .future {
+            border-color: #16a34a;
+        }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(34, 197, 94, 0.2);
+            border: 2px solid rgba(34, 197, 94, 0.5);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        .timeline-container {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            margin-bottom: 20px;
+        }
+        .point-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        .point-icon {
+            margin-right: 12px;
+            color: #22c55e;
+        }
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(34, 197, 94, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(34, 197, 94, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: 0;
+        }
+        .arrow {
+            position: absolute;
+            height: 4px;
+            background: linear-gradient(90deg, #4ade80, #16a34a);
+            top: 50%;
+            left: 5%;
+            width: 90%;
+            transform: translateY(-50%);
+        }
+        .arrow:after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: -8px;
+            width: 0;
+            height: 0;
+            border-left: 20px solid #16a34a;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+        }
+        .time-node {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+        .time-label {
+            position: absolute;
+            font-weight: bold;
+            font-size: 18px;
+            top: calc(50% + 40px);
+            transform: translateX(-50%);
+        }
+        .time-question {
+            position: absolute;
+            font-weight: normal;
+            font-size: 14px;
+            font-style: italic;
+            width: 200px;
+            text-align: center;
+            top: calc(50% - 70px);
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide p-12 flex flex-col">
+        <!-- 背景グリッド -->
+        <div class="grid-bg"></div>
+        
+        <!-- ヘッダー -->
+        <div class="mb-6 z-10">
+            <h1 class="title text-5xl font-bold mb-2">Y軸：時間軸の視座</h1>
+            <h2 class="subtitle text-2xl font-semibold">点から線、そして未来へ</h2>
+        </div>
+        
+        <!-- タイムライン図解 -->
+        <div class="timeline-container z-10 relative">
+            <!-- 時間の矢印 -->
+            <div class="arrow"></div>
+            
+            <!-- 過去ノード -->
+            <div class="time-node past-node bg-green-300" style="left: 15%;">
+                <i class="fas fa-history text-green-800 text-lg"></i>
+            </div>
+            <div class="time-label text-green-300" style="left: 15%;">過去</div>
+            <div class="time-question text-green-300" style="left: 15%;">「なぜそうなったのか？」<br>原因・背景・歴史</div>
+            
+            <!-- 現在ノード -->
+            <div class="time-node present-node bg-green-500" style="left: 50%;">
+                <i class="fas fa-crosshairs text-green-900 text-lg"></i>
+            </div>
+            <div class="time-label text-green-500" style="left: 50%;">現在</div>
+            <div class="time-question text-green-500" style="left: 50%;">「今何が起きているのか？」<br>現状分析・利用可能リソース</div>
+            
+            <!-- 未来ノード -->
+            <div class="time-node future-node bg-green-700" style="left: 85%;">
+                <i class="fas fa-rocket text-green-100 text-lg"></i>
+            </div>
+            <div class="time-label text-green-700" style="left: 85%;">未来</div>
+            <div class="time-question text-green-700" style="left: 85%;">「これからどうなるのか？」<br>予測・目標・戦略</div>
+        </div>
+        
+        <!-- メインコンテンツ -->
+        <div class="flex flex-row space-x-8 z-10 flex-1">
+            <!-- 左側：3つの視点の詳細 -->
+            <div class="w-1/2 space-y-4">
+                <!-- 過去 -->
+                <div class="time-element past pl-4 bg-green-900 bg-opacity-20 rounded-r-lg p-4 flex items-start">
+                    <div class="icon-circle">
+                        <i class="fas fa-history text-2xl text-green-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-green-300 mb-1">過去から学ぶ</h3>
+                        <p class="text-gray-300 text-sm">経緯・原因・教訓を理解し、同じ過ちを繰り返さない。成功パターンを識別する。</p>
+                    </div>
+                </div>
+                
+                <!-- 現在 -->
+                <div class="time-element present pl-4 bg-green-900 bg-opacity-20 rounded-r-lg p-4 flex items-start">
+                    <div class="icon-circle">
+                        <i class="fas fa-crosshairs text-2xl text-green-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-green-500 mb-1">現在を知る</h3>
+                        <p class="text-gray-300 text-sm">今の状況を客観的に分析。強み・弱み・機会・脅威。利用可能なリソースを把握する。</p>
+                    </div>
+                </div>
+                
+                <!-- 未来 -->
+                <div class="time-element future pl-4 bg-green-900 bg-opacity-20 rounded-r-lg p-4 flex items-start">
+                    <div class="icon-circle">
+                        <i class="fas fa-rocket text-2xl text-green-700"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-green-700 mb-1">未来を描く</h3>
+                        <p class="text-gray-300 text-sm">トレンド予測・目標設定・リスクシナリオ。理想の未来から逆算した戦略を立てる。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右側：AIの活用とY軸の重要性 -->
+            <div class="w-1/2">
+                <!-- AIとの時間軸思考の実践 -->
+                <div class="bg-green-900 bg-opacity-20 p-5 rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-green-400 mb-3">
+                        <i class="fas fa-robot mr-2"></i>AIと時間軸思考を実践
+                    </h3>
+                    <div class="mermaid" style="background: transparent;">
+                        graph LR
+                        A[AIに過去データ<br>分析を依頼] -->|"知見"| B[現状を<br>客観評価]
+                        B -->|"根拠ある"| C[複数の未来<br>シナリオ作成]
+                        
+                        classDef past fill:#86efac,stroke:#4ade80,color:#0f172a,font-weight:bold
+                        classDef present fill:#4ade80,stroke:#22c55e,color:#0f172a,font-weight:bold
+                        classDef future fill:#16a34a,stroke:#15803d,color:white,font-weight:bold
+                        
+                        class A past
+                        class B present
+                        class C future
+                    </div>
+                </div>
+                
+                <!-- Y軸の重要性 -->
+                <div class="bg-green-900 bg-opacity-20 p-5 rounded-lg">
+                    <h3 class="text-xl font-bold text-green-400 mb-3">Y軸がもたらす力</h3>
+                    <ul class="point-list text-gray-300">
+                        <li>
+                            <i class="fas fa-sitemap point-icon"></i>
+                            <span>文脈理解の深化 - 表面的分析からの脱却</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-line point-icon"></i>
+                            <span>変化への適応力向上 - トレンド認識と備え</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-chess point-icon"></i>
+                            <span>戦略的意思決定 - 過去・現在・未来を踏まえた判断</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-link point-icon"></i>
+                            <span>ストーリー思考 - 点から線へ、断片から物語へ</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#22c55e',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#16a34a',
+                lineColor: '#4ade80',
+                secondaryColor: '#16a34a',
+                tertiaryColor: '#0f172a'
+            }
+        });
+    </script>
+</body>
+</html>

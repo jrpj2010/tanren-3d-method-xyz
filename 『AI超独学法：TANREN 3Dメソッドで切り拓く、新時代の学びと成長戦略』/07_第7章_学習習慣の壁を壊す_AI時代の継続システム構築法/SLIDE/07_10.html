@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ラストワンマイルを強化するAI自動フィードバック</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            overflow: hidden;
+        }
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #1a237e 0%, #4a148c 50%, #311b92 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background-color: #e1bee7;
+            border-radius: 2.5px;
+        }
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 14px;
+            display: flex;
+            transform: translateX(-30px);
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .benefit-number {
+            min-width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e1bee7;
+            color: #4a148c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .benefit-icon {
+            min-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(225, 190, 231, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            color: #e1bee7;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+        .benefit-content {
+            flex-grow: 1;
+        }
+        .benefit-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #e1bee7;
+        }
+        .benefit-desc {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .highlight {
+            color: #ffd700;
+            font-weight: 700;
+        }
+        .section-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.3);
+        }
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .process-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            padding: 25px;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: 1s;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        .process-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #e1bee7;
+        }
+        .process-step {
+            position: relative;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            transform: translateX(20px);
+            animation: fadeInRight 0.8s forwards;
+        }
+        @keyframes fadeInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.95); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(0.95); }
+        }
+        .glow {
+            filter: drop-shadow(0 0 8px rgba(225, 190, 231, 0.8));
+        }
+        .last-mile-container {
+            position: relative;
+            height: 150px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .last-mile-arrow {
+            position: absolute;
+            height: 10px;
+            background: linear-gradient(90deg, #7b1fa2, #e1bee7);
+            top: 70px;
+            left: 50px;
+            right: 50px;
+            border-radius: 5px;
+        }
+        .last-mile-point {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e1bee7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #4a148c;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+        .last-mile-label {
+            position: absolute;
+            text-align: center;
+            width: 120px;
+            transform: translateX(-50%);
+        }
+        .mermaid {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <!-- Background pattern -->
+        <svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" style="position: absolute; opacity: 0.05;">
+            <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        
+        <div class="section-number">セクション 4</div>
+        
+        <div class="p-16 flex flex-col h-full">
+            <h1 class="title">ラストワンマイルを強化するAI自動フィードバック</h1>
+            
+            <div class="flex flex-grow">
+                <!-- Left Column - Benefits -->
+                <div class="w-1/2 pr-8">
+                    <!-- Last Mile Visualization -->
+                    <div class="last-mile-container">
+                        <div class="last-mile-arrow"></div>
+                        
+                        <div class="last-mile-point" style="left: 50px; top: 50px;">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="last-mile-label" style="left: 50px; top: 10px; font-weight: bold;">
+                            知識
+                        </div>
+                        
+                        <div class="last-mile-point" style="left: 40%; top: 50px;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="last-mile-label" style="left: 40%; top: 10px; font-weight: bold;">
+                            理解
+                        </div>
+                        
+                        <div class="last-mile-point" style="left: 60%; top: 50px; background: #ba68c8;">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="last-mile-label" style="left: 60%; top: 10px; font-weight: bold;">
+                            行動
+                        </div>
+                        
+                        <div class="last-mile-point pulse glow" style="right: 50px; top: 50px; background: #ffd700;">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="last-mile-label" style="left: calc(100% - 50px); top: 10px; font-weight: bold; color: #ffd700;">
+                            成果
+                        </div>
+                        
+                        <!-- Last Mile Label -->
+                        <div style="position: absolute; bottom: 0; left: 55%; transform: translateX(-50%); background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                            <span class="font-bold text-yellow-300">ラストワンマイル：</span> 知識から行動・成果への架け橋
+                        </div>
+                        
+                        <!-- AI Bridge -->
+                        <svg width="200" height="40" viewBox="0 0 200 40" style="position: absolute; right: 120px; top: 90px;">
+                            <path d="M0,20 Q100,-10 200,20" stroke="#e1bee7" stroke-width="3" fill="none" stroke-dasharray="8,4" />
+                            <text x="100" y="5" text-anchor="middle" fill="#e1bee7" font-weight="bold" font-size="12">AIフィードバックの支援</text>
+                        </svg>
+                    </div>
+                    
+                    <div class="benefit-card" style="animation-delay: 0.1s;">
+                        <div class="benefit-number">1</div>
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <div class="benefit-title">タイムリーなフィードバック提供</div>
+                            <div class="benefit-desc">
+                                アウトプットに対してリアルタイムに反応し、<span class="highlight">記憶が鮮明なうちに</span>改善点を指摘。
+                                人間コーチの時間的制約を超えた即時性を実現。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card" style="animation-delay: 0.3s;">
+                        <div class="benefit-number">2</div>
+                        <div class="benefit-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <div class="benefit-title">具体的な改善提案</div>
+                            <div class="benefit-desc">
+                                単なる評価にとどまらず、<span class="highlight">具体的な改善方法とネクストアクション</span>を提案。
+                                行動変容を促す具体性が強み。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card" style="animation-delay: 0.5s;">
+                        <div class="benefit-number">3</div>
+                        <div class="benefit-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <div class="benefit-title">客観的な視点からの評価</div>
+                            <div class="benefit-desc">
+                                人間特有のバイアスがなく、<span class="highlight">一貫した基準で客観的</span>にフィードバック。
+                                心理的安全性も確保され、素直に受け入れやすい。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card" style="animation-delay: 0.7s;">
+                        <div class="benefit-number">4</div>
+                        <div class="benefit-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <div class="benefit-title">パーソナライズされた分析</div>
+                            <div class="benefit-desc">
+                                個人の学習履歴や強み・弱みを学習し、<span class="highlight">その人に最適化</span>されたアドバイスを提供。
+                                成長の加速に直結する。
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-card" style="animation-delay: 0.9s;">
+                        <div class="benefit-number">5</div>
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <div class="benefit-title">継続的な進捗モニタリング</div>
+                            <div class="benefit-desc">
+                                長期的な成長傾向を分析し、<span class="highlight">微細な進歩も可視化</span>してモチベーションを維持。
+                                データに基づく成長実感の提供。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Process Visualization -->
+                <div class="w-1/2 pl-4">
+                    <div class="process-container h-full">
+                        <div class="process-title">
+                            <i class="fas fa-fire-alt mr-2"></i>
+                            AIフィードバックを血肉に変える「魂入れ」プロセス
+                        </div>
+                        
+                        <div style="height: 450px;">
+                            <!-- Using Mermaid for flow diagram -->
+                            <div class="mermaid" style="height: 100%;">
+                                flowchart TD
+                                    A[AIからのフィードバック] --> B{内省の深化}
+                                    B -->|自己対話| C[気づきを自分の言葉で言語化]
+                                    
+                                    C --> D{行動へのコミットメント}
+                                    D -->|主体的選択| E[具体的なアクションプラン策定]
+                                    
+                                    E --> F{次への接続}
+                                    F -->|サイクル化| G[次の目標設定・インプット計画]
+                                    
+                                    G --> A
+                                    
+                                    style A fill:#9c27b0,color:#fff,stroke:#e1bee7
+                                    style B fill:#ba68c8,color:#fff,stroke:#e1bee7
+                                    style C fill:#ce93d8,color:#4a148c,stroke:#e1bee7
+                                    style D fill:#ba68c8,color:#fff,stroke:#e1bee7
+                                    style E fill:#ce93d8,color:#4a148c,stroke:#e1bee7
+                                    style F fill:#ba68c8,color:#fff,stroke:#e1bee7
+                                    style G fill:#ce93d8,color:#4a148c,stroke:#e1bee7
+                            </div>
+                            
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    mermaid.initialize({
+                                        startOnLoad: true,
+                                        theme: 'dark',
+                                        themeVariables: {
+                                            primaryColor: '#4a148c',
+                                            primaryTextColor: '#fff',
+                                            primaryBorderColor: '#e1bee7',
+                                            lineColor: '#e1bee7',
+                                            secondaryColor: '#ba68c8',
+                                            tertiaryColor: '#311b92'
+                                        }
+                                    });
+                                });
+                            </script>
+                        </div>
+                        
+                        <div class="mt-6 space-y-4">
+                            <div class="process-step" style="animation-delay: 1.2s;">
+                                <div class="flex items-center">
+                                    <div class="text-2xl text-yellow-300 mr-3">
+                                        <i class="fas fa-quote-right"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold mb-1">内省の問い</div>
+                                        <div class="text-sm italic">
+                                            「このフィードバックを聞いて、最も印象に残った点は何だろう？」<br>
+                                            「私自身は、この点についてどう感じているだろうか？」
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="process-step" style="animation-delay: 1.4s;">
+                                <div class="flex items-center">
+                                    <div class="text-2xl text-yellow-300 mr-3">
+                                        <i class="fas fa-pen"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold mb-1">記録の力</div>
+                                        <div class="text-sm">
+                                            気づきを書き出し、<span class="highlight">自分の言葉で再構築</span>することで定着率が飛躍的に向上
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-6 bg-white bg-opacity-10 p-3 rounded-lg">
+                                <span class="text-lg font-bold text-yellow-300">AIは最高のコーチだが、</span>
+                                <span class="text-lg">最終的な変化を起こすのはあなた自身</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
