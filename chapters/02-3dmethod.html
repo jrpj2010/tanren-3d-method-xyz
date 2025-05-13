@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI超独学法：第2章 - 核理論独学OSTANREN 3Dメソッド完全インストール</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Noto Sans JP', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* チャプター固有のスタイル */
+        .chapter-hero {
+            background-image: 
+                radial-gradient(circle at top right, rgba(59, 130, 246, 0.1) 0%, transparent 30%),
+                radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.1) 0%, transparent 30%);
+        }
+        
+        .method-card {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .method-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 0.75rem;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #10b981, #3b82f6);
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .method-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .method-card:hover::before {
+            opacity: 0.7;
+            animation: animateGlow 10s linear infinite;
+        }
+        
+        .axis-example {
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin: 1rem 0 2rem;
+        }
+        
+        .x-axis-example {
+            background-color: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid rgba(59, 130, 246, 0.5);
+        }
+        
+        .y-axis-example {
+            background-color: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid rgba(16, 185, 129, 0.5);
+        }
+        
+        .z-axis-example {
+            background-color: rgba(139, 92, 246, 0.1);
+            border-left: 4px solid rgba(139, 92, 246, 0.5);
+        }
+        
+        .next-chapter-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .next-chapter-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        
+        .next-chapter-link:hover {
+            transform: translateX(5px);
+        }
+        
+        .next-chapter-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        .thinking-process {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .thinking-process::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary-blue), var(--primary-purple));
+        }
+        
+        .integration-diagram {
+            position: relative;
+            height: 400px;
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            border-radius: 1rem;
+            background-color: white;
+            margin: 3rem 0;
+            overflow: hidden;
+        }
+        
+        .integration-axis {
+            position: absolute;
+            width: 4px;
+            border-radius: 4px;
+        }
+        
+        .integration-x {
+            background: linear-gradient(90deg, var(--primary-blue), var(--primary-blue-dark));
+            height: 70%;
+            bottom: 20%;
+            left: 15%;
+            transform: rotate(90deg);
+            transform-origin: bottom;
+        }
+        
+        .integration-y {
+            background: linear-gradient(90deg, var(--primary-green), var(--primary-green-dark));
+            height: 70%; 
+            bottom: 20%;
+            left: 50%;
+        }
+        
+        .integration-z {
+            background: linear-gradient(90deg, var(--primary-purple), var(--primary-purple-dark));
+            height: 70%;
+            bottom: 20%;
+            right: 15%;
+            transform: rotate(-45deg);
+            transform-origin: bottom;
+        }
+        
+        .axis-label {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+        .label-x {
+            background-color: var(--primary-blue);
+            left: 15%;
+            top: 10%;
+        }
+        
+        .label-y {
+            background-color: var(--primary-green);
+            left: 50%;
+            top: 10%;
+            transform: translateX(-50%);
+        }
+        
+        .label-z {
+            background-color: var(--primary-purple);
+            right: 15%;
+            top: 35%;
+        }
+        
+        .prompt-example {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+        
+        .tanren-integration {
+            position: relative;
+            height: 300px;
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 antialiased">
+    <!-- ヘッダー -->
+    <header class="site-header bg-white/80 backdrop-blur-md border-b border-slate-200 px-4 py-3 sticky top-0 z-50">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="../index.html" class="site-logo text-2xl font-black gradient-text">AI超独学法</a>
+                <span class="hidden sm:inline-block ml-4 text-sm text-slate-500">第2章：3Dメソッド完全インストール</span>
+            </div>
+            
+            <nav class="flex items-center">
+                <button id="mobile-menu-toggle" class="md:hidden flex items-center justify-center w-10 h-10 text-slate-700" aria-label="メニューを開く" aria-expanded="false">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                
+                <ul class="main-nav hidden md:flex space-x-1 lg:space-x-2">
+                    <li><a href="../index.html" class="px-3 py-2 text-slate-700 hover:text-primary-blue rounded-md">ホーム</a></li>
+                    <li><a href="../index.html#about" class="px-3 py-2 text-slate-700 hover:text-primary-blue rounded-md">概要</a></li>
+                    <li><a href="../index.html#method" class="px-3 py-2 text-slate-700 hover:text-primary-blue rounded-md">3Dメソッド</a></li>
+                    <li><a href="../index.html#chapters" class="px-3 py-2 text-slate-700 hover:text-primary-blue rounded-md">各章の内容</a></li>
+                    <li><a href="../index.html#bonus" class="px-3 py-2 text-slate-700 hover:text-primary-blue rounded-md">特典</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- チャプターヒーロー -->
+    <section class="chapter-hero min-h-[50vh] flex items-center pt-24 pb-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center">
+                <span class="inline-block py-2 px-4 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">第2章</span>
+                <h1 class="text-4xl md:text-5xl font-black mb-6 gradient-text">核理論独学OSTANREN 3Dメソッド<br class="hidden sm:inline">完全インストール</h1>
+                <p class="text-lg md:text-xl text-slate-700 mb-8">
+                    思考OSTANREN 3Dメソッドの全貌と、X軸・Y軸・Z軸の使い方を解説します
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="../index.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left mr-2"></i> トップに戻る
+                    </a>
+                    <a href="01-mindset.html" class="btn btn-outline">
+                        <i class="fas fa-arrow-left mr-2"></i> 第1章へ
+                    </a>
+                    <a href="03-promptengineering.html" class="btn btn-primary">
+                        第3章に進む <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 目次 -->
+    <section class="bg-white py-6 sticky top-[70px] z-20 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-center flex-wrap gap-2">
+                <span class="text-sm font-bold text-slate-500 mr-2">このページの目次:</span>
+                <a href="#overview" class="text-sm px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors">メソッド概要</a>
+                <a href="#x-axis" class="text-sm px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors">X軸：思考の深掘り</a>
+                <a href="#y-axis" class="text-sm px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors">Y軸：時間軸の視座</a>
+                <a href="#z-axis" class="text-sm px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors">Z軸：レベル感の把握</a>
+                <a href="#integration" class="text-sm px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors">3軸の統合</a>
+                <a href="#ai-practice" class="text-sm px-3 py-1 rounded-full bg-slate-100 hover:bg-slate-200 transition-colors">AIとの実践</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- メインコンテンツ -->
+    <main class="container mx-auto px-4 py-12 max-w-4xl">
+        <!-- 概要セクション -->
+        <section id="overview" class="mb-20">
+            <h2 class="text-3xl font-bold mb-6 reveal-on-scroll">TANREN 3Dメソッドとは</h2>
+            
+            <div class="bg-white rounded-xl shadow-md p-8 mb-10 reveal-on-scroll">
+                <p class="text-lg mb-4">
+                    TANREN 3Dメソッドは、AI時代における思考のオペレーティングシステム（OS）です。
+                    従来の線形的な思考を超えて、立体的な視点から問題や課題にアプローチすることで、
+                    AIとの共創を最大化し、知的生産性を飛躍的に高めることを目指します。
+                </p>
+                
+                <div class="w-full h-80 mb-8" id="method-overview-cube"></div>
+                
+                <p class="text-lg mb-6">
+                    このメソッドは、3つの次元（軸）から構成されています：
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-blue-50 p-5 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-xl mb-4 x-axis-color">X軸</h4>
+                        <p class="text-slate-700">
+                            思考の深掘りと整理<br>
+                            <span class="text-sm text-slate-600">抽象と具体を往復しながら本質を探り、思考を構造化します</span>
+                        </p>
+                    </div>
+                    
+                    <div class="bg-green-50 p-5 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-xl mb-4 y-axis-color">Y軸</h4>
+                        <p class="text-slate-700">
+                            時間軸の視座<br>
+                            <span class="text-sm text-slate-600">過去・現在・未来を俯瞰し、時間的な文脈で考えます</span>
+                        </p>
+                    </div>
+                    
+                    <div class="bg-purple-50 p-5 rounded-lg shadow-sm">
+                        <h4 class="font-bold text-xl mb-4 z-axis-color">Z軸</h4>
+                        <p class="text-slate-700">
+                            レベル感の把握<br>
+                            <span class="text-sm text-slate-600">現在地と目標を可視化し、成長の道筋を明確にします</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-5 bg-amber-50 border-l-4 border-amber-500 rounded-r-lg">
+                    <h4 class="font-bold text-amber-800 mb-2">なぜ3Dで考える必要があるのか？</h4>
+                    <p class="text-amber-700">
+                        情報過多の時代において、単一の視点では複雑な問題を解決できません。
+                        3次元の思考フレームワークを持つことで、複雑性を整理し、
+                        AIとの対話をより効果的にし、深い洞察を得ることができます。
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- X軸セクション -->
+        <section id="x-axis" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 reveal-on-scroll">
+                <span class="x-axis-color">X軸</span>：思考の深掘りと整理
+            </h2>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-10 reveal-on-scroll">
+                <div class="bg-blue-50 p-6 border-b border-blue-100">
+                    <div class="flex flex-col md:flex-row md:items-center gap-6">
+                        <div class="md:w-1/4 flex justify-center">
+                            <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
+                                <span class="text-4xl font-bold text-blue-600">X</span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-bold mb-3 text-blue-800">思考を深め、整理するための軸</h3>
+                            <p class="text-blue-700">
+                                X軸は「抽象化（WHY?）」と「具体化（HOW?）」を往復しながら、
+                                思考を深掘りし、体系的に整理するための次元です。
+                                本質的な理解と実践的な応用の両方を可能にします。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <div class="w-full h-80 mb-8" id="x-axis-detail-chart"></div>
+                    
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">X軸の3つの要素</h4>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="method-card bg-white rounded-lg p-5 shadow border border-slate-200">
+                            <h5 class="font-bold text-blue-700 mb-3">超抽象化（WHY）</h5>
+                            <p class="text-slate-600 mb-4">
+                                「なぜ」を問い続け、本質・原理原則を探求します。目の前の事象の背景にある根本原因や目的を理解します。
+                            </p>
+                            <div class="text-sm bg-blue-50 p-3 rounded-lg">
+                                <strong>問いの例：</strong> なぜこれが重要なのか？なぜこの問題が起きているのか？
+                            </div>
+                        </div>
+                        
+                        <div class="method-card bg-white rounded-lg p-5 shadow border border-slate-200">
+                            <h5 class="font-bold text-blue-700 mb-3">超具体化（HOW）</h5>
+                            <p class="text-slate-600 mb-4">
+                                「どのように」実現するかを具体的に考え、抽象的な概念を実行可能な形に落とし込みます。
+                            </p>
+                            <div class="text-sm bg-blue-50 p-3 rounded-lg">
+                                <strong>問いの例：</strong> どうやって実現するか？具体的にどんなステップで進めるか？
+                            </div>
+                        </div>
+                        
+                        <div class="method-card bg-white rounded-lg p-5 shadow border border-slate-200">
+                            <h5 class="font-bold text-blue-700 mb-3">超構造化（WHAT）</h5>
+                            <p class="text-slate-600 mb-4">
+                                思考や情報を体系的に整理し、関連性や階層構造を明確にします。混沌とした情報に秩序をもたらします。
+                            </p>
+                            <div class="text-sm bg-blue-50 p-3 rounded-lg">
+                                <strong>問いの例：</strong> これらはどう関連しているか？どんな構造になっているか？
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- X軸プロセス例 -->
+                    <div class="axis-example x-axis-example">
+                        <h5 class="font-bold text-lg mb-4 text-blue-800">X軸思考プロセスの例</h5>
+                        
+                        <div class="thinking-process">
+                            <h6 class="font-bold text-blue-700 mb-2">テーマ：新しい習慣を形成する</h6>
+                            
+                            <ol class="space-y-4 mb-4">
+                                <li class="bg-white p-3 rounded-lg shadow-sm">
+                                    <span class="font-bold text-blue-600">WHY（抽象化）:</span>
+                                    <p class="text-slate-700">なぜ習慣形成が難しいのか？→脳の神経回路の形成と報酬系のメカニズムが関係している</p>
+                                </li>
+                                <li class="bg-white p-3 rounded-lg shadow-sm">
+                                    <span class="font-bold text-blue-600">HOW（具体化）:</span>
+                                    <p class="text-slate-700">どうやって習慣を作るか？→小さな行動から始め、トリガーを設定し、即時の報酬を用意する</p>
+                                </li>
+                                <li class="bg-white p-3 rounded-lg shadow-sm">
+                                    <span class="font-bold text-blue-600">WHAT（構造化）:</span>
+                                    <p class="text-slate-700">習慣形成の要素は？→きっかけ、ルーティン、報酬、繰り返しという構造を持つ</p>
+                                </li>
+                                <li class="bg-white p-3 rounded-lg shadow-sm">
+                                    <span class="font-bold text-blue-600">より深いWHY（再抽象化）:</span>
+                                    <p class="text-slate-700">なぜ習慣が重要か？→無意識の行動を最適化することで、エネルギーと意思決定の資源を節約できる</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Y軸セクション -->
+        <section id="y-axis" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 reveal-on-scroll">
+                <span class="y-axis-color">Y軸</span>：時間軸の視座
+            </h2>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-10 reveal-on-scroll">
+                <div class="bg-green-50 p-6 border-b border-green-100">
+                    <div class="flex flex-col md:flex-row md:items-center gap-6">
+                        <div class="md:w-1/4 flex justify-center">
+                            <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-4xl font-bold text-green-600">Y</span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-bold mb-3 text-green-800">時間の流れの中で考える軸</h3>
+                            <p class="text-green-700">
+                                Y軸は「過去」「現在」「未来」を俯瞰し、時間的な文脈で物事を捉える次元です。
+                                歴史に学び、現在を正確に観察し、未来を予測する能力を高めます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <div class="w-full h-80 mb-8" id="y-axis-detail-chart"></div>
+                    
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">Y軸の3つの視点</h4>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="method-card bg-white rounded-lg p-5 shadow border border-slate-200">
+                            <h5 class="font-bold text-green-700 mb-3">過去（履歴力）</h5>
+                            <p class="text-slate-600 mb-4">
+                                歴史や経験から学び、パターンや教訓を抽出します。過去の知見を現在と未来に活かします。
+                            </p>
+                            <div class="text-sm bg-green-50 p-3 rounded-lg">
+                                <strong>問いの例：</strong> 過去に何があったのか？どんな教訓が得られるか？
+                            </div>
+                        </div>
+                        
+                        <div class="method-card bg-white rounded-lg p-5 shadow border border-slate-200">
+                            <h5 class="font-bold text-green-700 mb-3">現在（観察力）</h5>
+                            <p class="text-slate-600 mb-4">
+                                現状を正確に把握し、事実と解釈を区別します。今この瞬間に起きていることを冷静に観察します。
+                            </p>
+                            <div class="text-sm bg-green-50 p-3 rounded-lg">
+                                <strong>問いの例：</strong> 今何が起きているのか？どんな事実があるのか？
+                            </div>
+                        </div>
+                        
+                        <div class="method-card bg-white rounded-lg p-5 shadow border border-slate-200">
+                            <h5 class="font-bold text-green-700 mb-3">未来（予測力・構想力）</h5>
+                            <p class="text-slate-600 mb-4">
+                                将来の可能性を予測し、ビジョンを描きます。トレンドを読み取り、先を見据えた行動を計画します。
+                            </p>
+                            <div class="text-sm bg-green-50 p-3 rounded-lg">
+                                <strong>問いの例：</strong> 将来どうなるか？どんなビジョンを描けるか？
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Y軸プロセス例 -->
+                    <div class="axis-example y-axis-example">
+                        <h5 class="font-bold text-lg mb-4 text-green-800">Y軸思考プロセスの例</h5>
+                        
+                        <div class="thinking-process">
+                            <h6 class="font-bold text-green-700 mb-2">テーマ：AIとの共創スキルの開発</h6>
+                            
+                            <ol class="space-y-4 mb-4">
+                                <li class="bg-white p-3 rounded-lg shadow-sm">
+                                    <span class="font-bold text-green-600">過去（履歴力）:</span>
+                                    <p class="text-slate-700">AIの発展の歴史と過去の技術革新からのパターンを学ぶ。過去の技術転換期に成功した人々の特徴を分析。</p>
+                                </li>
+                                <li class="bg-white p-3 rounded-lg shadow-sm">
+                                    <span class="font-bold text-green-600">現在（観察力）:</span>
+                                    <p class="text-slate-700">現在のAI技術の状況、自分のスキルレベル、業界の動向を正確に把握。何が可能で何がまだ限界かを理解。</p>
+                                </li>
+                                <li class="bg-white p-3 rounded-lg shadow-sm">
+                                    <span class="font-bold text-green-600">未来（予測力・構想力）:</span>
+                                    <p class="text-slate-700">AIの進化の方向性を予測し、将来必要となるスキルセットを構想。5年後の自分のポジショニングを明確にする。</p>
+                                </li>
+                                <li class="bg-white p-3 rounded-lg shadow-sm">
+                                    <span class="font-bold text-green-600">時間軸の統合:</span>
+                                    <p class="text-slate-700">過去のパターンと現在の観察から、将来に向けた具体的なスキル開発ロードマップを作成。段階的な成長計画を立てる。</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Z軸セクション -->
+        <section id="z-axis" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 reveal-on-scroll">
+                <span class="z-axis-color">Z軸</span>：レベル感の把握
+            </h2>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-10 reveal-on-scroll">
+                <div class="bg-purple-50 p-6 border-b border-purple-100">
+                    <div class="flex flex-col md:flex-row md:items-center gap-6">
+                        <div class="md:w-1/4 flex justify-center">
+                            <div class="w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center">
+                                <span class="text-4xl font-bold text-purple-600">Z</span>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-bold mb-3 text-purple-800">成長の階段を可視化する軸</h3>
+                            <p class="text-purple-700">
+                                Z軸は「現在地」と「目標地点」を明確にし、段階的な成長の道筋を設計する次元です。
+                                レベル感を把握することで、効果的な学習戦略を立て、継続的な成長を促します。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <div class="w-full h-80 mb-8" id="z-axis-detail-chart"></div>
+                    
+                    <h4 class="text-xl font-bold mb-4 text-slate-800">Z軸の3つのステップ</h4>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-8">
+                        <div class="method-card bg-white rounded-lg p-5 shadow border border-slate-200">
+                            <h5 class="font-bold text-purple-700 mb-3">現在地の把握</h5>
+                            <p class="text-slate-600 mb-4">
+                                自分の現在のスキルや知識のレベルを客観的に評価します。強みと弱みを正確に把握します。
+                            </p>
+                            <div class="text-sm bg-purple-50 p-3 rounded-lg">
+                                <strong>問いの例：</strong> 今の自分はどのレベル？何ができて何ができない？
+                            </div>
+                        </div>
+                        
+                        <div class="method-card bg-white rounded-lg p-5 shadow border border-slate-200">
+                            <h5 class="font-bold text-purple-700 mb-3">目標レベルの設定</h5>
+                            <p class="text-slate-600 mb-4">
+                                達成したい目標レベルを具体的に定義します。理想の状態や獲得したいスキルを明確にします。
+                            </p>
+                            <div class="text-sm bg-purple-50 p-3 rounded-lg">
+                                <strong>問いの例：</strong> どのレベルを目指すのか？達成したら何ができるようになるのか？
+                            </div>
+                        </div>
+                        
+                        <div class="method-card bg-white rounded-lg p-5 shadow border border-slate-200">
+                            <h5 class="font-bold text-purple-700 mb-3">ギャップ分析と計画</h5>
+                            <p class="text-slate-600 mb-4">
+                                現在地と目標の間のギャップを分析し、段階的な成長計画を立てます。優先順位をつけて効率的に学びます。
+                            </p>
+                            <div class="text-sm bg-purple-50 p-3 rounded-lg">
+                                <strong>問いの例：</strong> 何が足りないのか？どんなステップで目標に近づくか？
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Z軸プロセス例 -->
+                    <div class="axis-example z-axis-example">
+                        <h5 class="font-bold text-lg mb-4 text-purple-800">Z軸思考プロセスの例</h5>
+                        
+                        <div class="thinking-process">
+                            <h6 class="font-bold text-purple-700 mb-2">テーマ：データ分析スキルの向上</h6>
+                            
+                            <ol class="space-y-4 mb-4">
+                                <li class="bg-white p-3 rounded-lg shadow-sm">
+                                    <span class="font-bold text-purple-600">現在地の把握:</span>
+                                    <p class="text-slate-700">基本的な統計知識とExcelでの分析はできるが、高度な統計手法やPythonを使ったデータ処理は未経験。業界の平均的なアナリストよりはスキルが低い。</p>
+                                </li>
+                                <li class="bg-white p-3 rounded-lg shadow-sm">
+                                    <span class="font-bold text-purple-600">目標レベルの設定:</span>
+                                    <p class="text-slate-700">1年後までにPythonを使った機械学習モデルを独力で構築でき、ビジネス課題に適用できるレベルに達する。データから洞察を引き出し、意思決定を支援できるようになる。</p>
+                                </li>
+                                <li class="bg-white p-3 rounded-lg shadow-sm">
+                                    <span class="font-bold text-purple-600">ギャップ分析と計画:</span>
+                                    <p class="text-slate-700">
+                                        必要なスキル：Python基礎、データ操作（pandas）、統計学、機械学習基礎<br>
+                                        3ヶ月目標：Pythonの基本とpandasでのデータ操作をマスター<br>
+                                        6ヶ月目標：基本的な統計分析と可視化の実装<br>
+                                        9ヶ月目標：簡単な機械学習モデルの構築と評価<br>
+                                        12ヶ月目標：実際のビジネスデータで予測モデルを構築し成果を出す
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 統合セクション -->
+        <section id="integration" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 reveal-on-scroll">3軸の統合と思考OS構築</h2>
+            
+            <div class="bg-white rounded-xl shadow-md p-8 mb-10 reveal-on-scroll">
+                <p class="text-lg mb-6">
+                    TANREN 3Dメソッドの真価は、3つの軸を個別に使うだけでなく、それらを統合して立体的な思考を展開することにあります。
+                    3次元の思考空間を活用することで、より深く、より広く、より高い視点から問題や学習テーマにアプローチできます。
+                </p>
+                
+                <div class="integration-diagram mb-8">
+                    <div class="integration-axis integration-x"></div>
+                    <div class="integration-axis integration-y"></div>
+                    <div class="integration-axis integration-z"></div>
+                    
+                    <div class="axis-label label-x">X</div>
+                    <div class="axis-label label-y">Y</div>
+                    <div class="axis-label label-z">Z</div>
+                </div>
+                
+                <h4 class="text-xl font-bold mb-4 text-slate-800">統合された思考の例</h4>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-10">
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                        <h5 class="text-lg font-bold mb-3 text-slate-800">X×Y：深さと時間の統合</h5>
+                        <p class="text-slate-600 mb-4">
+                            「なぜ」と「いつ」を組み合わせることで、歴史的文脈における本質的な理解を深めます。
+                        </p>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <strong class="text-slate-800">例：AI技術の発展を理解する</strong>
+                            <ul class="mt-2 space-y-2 text-sm text-slate-600">
+                                <li><span class="font-semibold text-blue-600">X軸（WHY）:</span> なぜAIが急速に発展しているのか？</li>
+                                <li><span class="font-semibold text-green-600">Y軸（WHEN）:</span> 過去のAI冬の時代と現在のブレイクスルーの違いは？</li>
+                                <li><span class="font-semibold text-slate-700">統合視点:</span> 計算能力、データ量、アルゴリズムの歴史的発展が現在のAIブレイクスルーを可能にした本質的要因だと理解</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                        <h5 class="text-lg font-bold mb-3 text-slate-800">Y×Z：時間とレベルの統合</h5>
+                        <p class="text-slate-600 mb-4">
+                            「いつ」と「どのレベル」を組み合わせることで、時間軸に沿った成長計画を立てられます。
+                        </p>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <strong class="text-slate-800">例：キャリア計画を立てる</strong>
+                            <ul class="mt-2 space-y-2 text-sm text-slate-600">
+                                <li><span class="font-semibold text-green-600">Y軸（WHEN）:</span> 1年後、3年後、5年後の業界トレンドは？</li>
+                                <li><span class="font-semibold text-purple-600">Z軸（LEVEL）:</span> 各時点で目指すべきスキルレベルと役割は？</li>
+                                <li><span class="font-semibold text-slate-700">統合視点:</span> 業界の変化を見据えたうえで、段階的なスキル獲得と役割拡大の時系列ロードマップを作成</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                        <h5 class="text-lg font-bold mb-3 text-slate-800">Z×X：レベルと深さの統合</h5>
+                        <p class="text-slate-600 mb-4">
+                            「どのレベル」と「なぜ」を組み合わせることで、スキル習得の本質的な理解と効率化が可能になります。
+                        </p>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <strong class="text-slate-800">例：プログラミングスキルを向上させる</strong>
+                            <ul class="mt-2 space-y-2 text-sm text-slate-600">
+                                <li><span class="font-semibold text-purple-600">Z軸（LEVEL）:</span> 初級から中級へのスキルアップに必要な要素は？</li>
+                                <li><span class="font-semibold text-blue-600">X軸（WHY）:</span> なぜその技術やパターンが重要なのか？</li>
+                                <li><span class="font-semibold text-slate-700">統合視点:</span> 単なる文法習得ではなく、プログラミングの原則や設計パターンの本質を理解し、適切なレベルの課題に適用する学習計画を立てる</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                        <h5 class="text-lg font-bold mb-3 text-slate-800">X×Y×Z：完全統合された思考</h5>
+                        <p class="text-slate-600 mb-4">
+                            3つの軸をすべて組み合わせることで、最も包括的かつ立体的な思考が可能になります。
+                        </p>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <strong class="text-slate-800">例：新しいビジネスモデルを構想する</strong>
+                            <ul class="mt-2 space-y-2 text-sm text-slate-600">
+                                <li><span class="font-semibold text-blue-600">X軸（WHY/HOW）:</span> なぜこのビジネスモデルが価値を生むのか？どう実現するか？</li>
+                                <li><span class="font-semibold text-green-600">Y軸（WHEN）:</span> 過去の類似モデルの教訓と未来の市場予測は？</li>
+                                <li><span class="font-semibold text-purple-600">Z軸（LEVEL）:</span> 現在の自社能力と目標達成に必要なレベルは？</li>
+                                <li><span class="font-semibold text-slate-700">統合視点:</span> 本質的な価値提案を理解し、歴史からの学びと未来予測を踏まえ、段階的な実現計画を立てる</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-400">
+                    <h4 class="font-bold text-indigo-800 mb-3">思考OSとしてのインストール</h4>
+                    <p class="text-indigo-700 mb-4">
+                        TANREN 3Dメソッドを日常的な思考OSとして身につけるには、意識的な実践と反復が不可欠です。
+                        以下の3ステップで、あなたの思考の一部として定着させていきましょう。
+                    </p>
+                    <ol class="space-y-2 text-indigo-700">
+                        <li><strong>1. 意識的な実践:</strong> 日々の問題や課題に3つの軸を意識的に適用する</li>
+                        <li><strong>2. AIとの共創:</strong> AIとの対話でメソッドを実践し、フィードバックを得る</li>
+                        <li><strong>3. 振り返りと改善:</strong> 定期的に思考プロセスを振り返り、改善点を見つける</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        
+        <!-- AIとの実践セクション -->
+        <section id="ai-practice" class="mb-20">
+            <h2 class="text-3xl font-bold mb-8 reveal-on-scroll">AIと共にTANREN 3Dメソッドを実践する</h2>
+            
+            <div class="bg-white rounded-xl shadow-md p-8 mb-10 reveal-on-scroll">
+                <p class="text-lg mb-6">
+                    TANREN 3Dメソッドは、AIとの対話を通じてさらに効果を発揮します。
+                    AIは思考の拡張ツールとして、3次元思考をサポートし、より深い洞察を得るための
+                    パートナーとなります。
+                </p>
+                
+                <div class="tanren-integration mb-10 text-center">
+                    <img src="https://via.placeholder.com/800x400?text=TANREN+3D+Method+with+AI" alt="TANREN 3Dメソッドとの統合図" class="max-w-full h-auto mx-auto rounded-lg shadow-lg">
+                </div>
+                
+                <h4 class="text-xl font-bold mb-4 text-slate-800">各軸に対応するプロンプト例</h4>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h5 class="font-bold text-blue-800 mb-3">X軸プロンプト</h5>
+                        <div class="prompt-example text-sm">
+                            「[テーマ]の本質的な原理は何ですか？なぜそれが重要なのでしょうか？
+                            
+                            次に、それを実現するための具体的な方法を3つ挙げてください。
+                            
+                            最後に、これらの情報を構造化して、関連性や階層を示してください。」
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h5 class="font-bold text-green-800 mb-3">Y軸プロンプト</h5>
+                        <div class="prompt-example text-sm">
+                            「[テーマ]の歴史的発展と重要なマイルストーンを教えてください。
+                            
+                            現在の状況と最新のトレンドは何ですか？
+                            
+                            今後5年間でどのような変化や発展が予想されますか？その根拠も説明してください。」
+                        </div>
+                    </div>
+                    
+                    <div class="bg-purple-50 p-6 rounded-lg">
+                        <h5 class="font-bold text-purple-800 mb-3">Z軸プロンプト</h5>
+                        <div class="prompt-example text-sm">
+                            「[スキル/分野]における初級、中級、上級、エキスパートの特徴を詳しく説明してください。
+                            
+                            私は現在[現状の説明]です。次のレベルに到達するために必要なスキルと知識は何ですか？
+                            
+                            1年でエキスパートレベルに到達するための段階的な学習計画を立ててください。」
+                        </div>
+                    </div>
+                </div>
+                
+                <h4 class="text-xl font-bold mb-4 text-slate-800">統合プロンプトの例</h4>
+                
+                <div class="bg-slate-50 p-6 rounded-lg mb-8">
+                    <h5 class="font-bold text-slate-800 mb-3">3D統合プロンプト</h5>
+                    <div class="prompt-example">
+                        「TANREN 3Dメソッドを使って、[テーマ]について分析してください。
+                        
+                        X軸（思考の深掘り）: 
+                        - なぜこれが重要なのか？本質は何か？
+                        - どのように実現できるか？具体的な方法は？
+                        - 関連する概念や要素をどう構造化できるか？
+                        
+                        Y軸（時間軸の視座）:
+                        - 過去の関連する出来事や教訓は？
+                        - 現在の状況と課題は？
+                        - 将来の発展や可能性は？
+                        
+                        Z軸（レベル感の把握）:
+                        - 初心者、中級者、熟練者の違いは？
+                        - 私の現在の立ち位置は？
+                        - 次のレベルに進むために必要なステップは？
+                        
+                        最後に、これら3つの軸からの洞察を統合して、総合的な理解と行動計画を提示してください。」
+                    </div>
+                </div>
+                
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-6 rounded-r-lg">
+                    <h5 class="font-bold text-amber-800 mb-2">AIとの共創のポイント</h5>
+                    <ul class="space-y-2 text-amber-700">
+                        <li>・ AIは思考の拡張ツールであり、代替ではありません</li>
+                        <li>・ 対話を通じて自分の思考を整理し、発展させることが目的です</li>
+                        <li>・ AIからの回答を鵜呑みにせず、批判的に検討しましょう</li>
+                        <li>・ 徐々にプロンプトを洗練させ、より深い洞察を引き出していきましょう</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- まとめセクション -->
+        <section id="summary" class="mb-10">
+            <h2 class="text-3xl font-bold mb-8 reveal-on-scroll">まとめ：思考OSをインストールする</h2>
+            
+            <div class="bg-white rounded-xl shadow-md p-8 mb-10 reveal-on-scroll">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-1/3">
+                        <div class="w-60 h-60 mx-auto relative animate-float">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-400 to-green-400 rounded-full opacity-30 blur-xl"></div>
+                            <div class="relative z-10 w-full h-full bg-white rounded-full flex items-center justify-center border-4 border-indigo-100">
+                                <div class="text-center">
+                                    <div class="text-xl font-bold gradient-text mb-2">TANREN</div>
+                                    <div class="text-3xl font-black gradient-text">3D</div>
+                                    <div class="text-lg gradient-text">メソッド</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-2/3">
+                        <h3 class="text-xl font-bold mb-4">AI時代の思考OSとして</h3>
+                        <p class="mb-4">
+                            TANREN 3Dメソッドは、情報爆発の時代において、思考を整理し、
+                            AIとの共創を最大化するための強力なフレームワークです。
+                            3つの軸（X・Y・Z）を通じて、物事を立体的に捉えることで、
+                            より深い理解と効果的な行動につなげることができます。
+                        </p>
+                        <p class="mb-4">
+                            このメソッドを日常的に意識し、AIとの対話や学習、仕事の場面で積極的に
+                            活用していくことで、徐々にあなたの思考OSの一部として定着していきます。
+                        </p>
+                        <p>
+                            次章では、AIとの対話設計術について詳しく解説し、
+                            TANREN 3Dメソッドをより効果的に実践するためのプロンプト設計の方法を学びます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 次の章へのリンク -->
+            <div class="text-center mt-12 reveal-on-scroll">
+                <a href="03-promptengineering.html" class="next-chapter-link text-xl font-bold text-primary-blue hover:text-primary-blue-dark">
+                    第3章：AIとの対話設計術 へ進む
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- フッター -->
+    <footer class="footer py-16 px-4 bg-slate-900 text-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h2 class="footer-title text-2xl font-black mb-4">AI超独学法</h2>
+                    <p class="text-slate-400 mb-6">
+                        TANREN 3Dメソッドで切り拓く、<br>
+                        新時代の学びと成長戦略
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="footer-nav-title">コンテンツ</h3>
+                    <ul class="footer-nav">
+                        <li><a href="../index.html#about">概要</a></li>
+                        <li><a href="../index.html#method">3Dメソッド</a></li>
+                        <li><a href="../index.html#chapters">各章の内容</a></li>
+                        <li><a href="../index.html#bonus">特典</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-nav-title">各章</h3>
+                    <ul class="footer-nav">
+                        <li><a href="00-prologue.html">プロローグ</a></li>
+                        <li><a href="01-mindset.html">第1章: マインドセット</a></li>
+                        <li><a href="02-3dmethod.html">第2章: 3Dメソッド</a></li>
+                        <li><a href="03-promptengineering.html">第3章: プロンプト設計</a></li>
+                        <li><a href="04-aiagent.html">第4章: AIエージェント</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-nav-title">各章（続き）</h3>
+                    <ul class="footer-nav">
+                        <li><a href="05-aioutput.html">第5章: アウトプット革命</a></li>
+                        <li><a href="06-realjobs.html">第6章: 職種別活用法</a></li>
+                        <li><a href="07-continuity.html">第7章: 継続システム</a></li>
+                        <li><a href="08-epilogue.html">エピローグ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom pt-8 border-t border-slate-800">
+                <p class="text-center text-slate-500">
+                    &copy; 2025 鍛錬株式会社. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/3d-visualizations.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // スクロールアニメーションの初期化
+            initializeScrollAnimations();
+            initializeHeaderScroll();
+            
+            // Three.jsが読み込まれているか確認
+            if (typeof THREE !== 'undefined') {
+                // 3Dキューブの初期化
+                setTimeout(() => {
+                    initialize3DCube('method-overview-cube');
+                }, 500);
+            }
+            
+            // Chart.jsが読み込まれているか確認
+            if (typeof Chart !== 'undefined') {
+                // 各軸の詳細チャート
+                createXAxisDiagram('x-axis-detail-chart');
+                createYAxisTimelineChart('y-axis-detail-chart');
+                createZAxisLevelChart('z-axis-detail-chart');
+            }
+        });
+    </script>
+</body>
+</html>
