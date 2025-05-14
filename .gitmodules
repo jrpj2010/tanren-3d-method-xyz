@@ -1,0 +1,3 @@
+[submodule "app/import/01_prompt-generator_20250319"]
+	path = app/import/01_prompt-generator_20250319
+	url = ./app/import/01_prompt-generator_20250319
