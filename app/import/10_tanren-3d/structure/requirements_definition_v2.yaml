@@ -1,0 +1,136 @@
+```yaml
+# 要件定義.yaml (v2)
+
+# 1. プロジェクト概要
+project_name: 新規事業支援AIアプリケーション
+description: >
+  ユーザーが新規事業を立ち上げる際に、AIが多角的に支援するアプリケーション。
+  独自の「TANREN 3D思考メソッド」に基づき、アイデア創出からMVPモックアップ作成、実行計画策定までをサポートし、
+  ユーザーの思考整理、モチベーション向上、行動促進を目指す。
+
+# 2. ユーザー要件
+target_users: >
+  新規事業立ち上げを目指すすべての個人およびチーム。
+  特に、アイデアはあるが具体的な進め方に悩んでいる層、思考を深めたい層、強力なメンターを求める層。
+user_needs:
+  - 思考整理とアイデアの深化支援
+  - 事業化に向けた具体的なステップバイステップのガイダンス
+  - モチベーション維持と自己肯定感の向上
+  - 迅速なMVPモックアップ作成によるアイデアの可視化と検証
+  - 事業計画（要件、技術、タスク）の体系的な文書化
+  - ユーザーの経験レベルに応じたパーソナライズされたサポート
+
+# 3. 機能要件
+main_features:
+  - feature_id: FEAT_001
+    name: TANREN 3D思考メソッドエンジン
+    description: >
+      ユーザーの入力をX軸（超抽象化・超具体化）、時間軸（過去・現在・未来ストーリーテリング）、
+      META軸（オンボーディングレベル）で分析・構造化し、思考を支援するコアエンジン。
+    sub_features:
+      - sub_id: FEAT_001_01
+        name: X軸 - 超抽象化支援
+        description: AIによる本質抽出ブースト（概念階層提示、パターン認識、問いかけ、メタファー生成）。
+      - sub_id: FEAT_001_02
+        name: X軸 - 超具体化支援
+        description: AIによるディープリサーチと行動計画への落とし込み（情報収集、計画テンプレート生成、ソリューション提案、MVP仕様案作成）。
+      - sub_id: FEAT_001_03
+        name: 時間軸 - ストーリーテリング支援
+        description: 過去・現在・未来の物語を構築し、事業の意義、機会、ビジョンを明確化。自己肯定感とモチベーション向上を促進。
+      - sub_id: FEAT_001_04
+        name: META軸 - オンボーディングレベル適応支援
+        description: 初級・中級・上級レベルに応じた情報提供、ガイダンス、課題設定の最適化。
+
+  - feature_id: FEAT_002
+    name: ファシリテーション機能
+    description: 事業開始・推進のためのAIによるファシリテーション。
+    sub_features:
+      - sub_id: FEAT_002_01
+        name: 事業スタート日設定支援
+        description: ユーザーヒアリングに基づくスタート日設定。
+      - sub_id: FEAT_002_02
+        name: 逆算スケジューリング
+        description: スタート日から逆算したタスク、マイルストーン、期間の洗い出しとスケジュール作成。
+      - sub_id: FEAT_002_03
+        name: メンタリングとフォローアップ
+        description: 進捗確認、課題ヒアリング、モチベーション維持支援。
+
+  - feature_id: FEAT_003
+    name: MVPモックアップ自動生成機能
+    description: アイデアを迅速に可視化するMVPモックアップ生成。
+    sub_features:
+      - sub_id: FEAT_003_01
+        name: 多様なモックアップタイプ対応
+        description: Webサイト、スライド、システムUI/UXモックアップの生成。
+      - sub_id: FEAT_003_02
+        name: ダミーデータ自動挿入
+        description: 具体的なイメージを掴むためのダミーデータの組み込み。
+      - sub_id: FEAT_003_03
+        name: 機能説明マニュアルサイト自動生成
+        description: モックアップと同時に機能説明マニュアル（またはヘルプ機能）を生成・統合。
+      - sub_id: FEAT_003_04
+        name: デザインテンプレートの提供
+        description: 洗練されたデザインテンプレートに基づき、高品質なフロントエンドを迅速に提供。
+      - sub_id: FEAT_003_05
+        name: LLMによるオーケストレーション
+        description: 大規模言語モデルがモックアップ要素を統合的に設計し、生成プロセスを管理。
+
+  - feature_id: FEAT_004
+    name: 成果物生成機能
+    description: 思考整理と計画策定の結果をYAML形式でドキュメント化。
+    sub_features:
+      - sub_id: FEAT_004_01
+        name: 要件定義.yaml生成
+      - sub_id: FEAT_004_02
+        name: 技術定義.yaml生成
+      - sub_id: FEAT_004_03
+        name: Todo定義.yaml生成
+
+  - feature_id: FEAT_005
+    name: ユーザーインターフェース
+    description: 対話型AIを基本とし、視覚的なダッシュボードも備える。
+    sub_features:
+      - sub_id: FEAT_005_01
+        name: 対話型AI（チャットボット）
+      - sub_id: FEAT_005_02
+        name: 思考プロセス可視化ダッシュボード
+      - sub_id: FEAT_005_03
+        name: マルチモーダル表現（テキスト、図、画像、動画クリップなど）
+      - sub_id: FEAT_005_04
+        name: インタラクティブな共同創作インターフェース
+
+# 4. 非機能要件
+non_functional_requirements:
+  - requirement_id: NFR_001
+    category: パフォーマンス
+    description: ユーザーの入力に対するAIの応答はリアルタイム性を重視（数秒以内を目指す）。ディープリサーチやモックアップ生成には許容される時間を明示。
+  - requirement_id: NFR_002
+    category: ユーザビリティ
+    description: 直感的で分かりやすいインターフェース。専門知識がないユーザーでも容易に操作可能。オンボーディングレベルに応じたUI/UX調整。
+  - requirement_id: NFR_003
+    category: 信頼性
+    description: AIの提案や生成される情報は、可能な限り正確性と最新性を担保。情報源の提示も検討。
+  - requirement_id: NFR_004
+    category: 拡張性
+    description: 将来的な機能追加（外部サービス連携、チーム機能など）を考慮した設計。
+  - requirement_id: NFR_005
+    category: セキュリティ
+    description: ユーザーが入力する事業アイデアや個人情報は適切に保護。データの永続化とバックアップ。
+  - requirement_id: NFR_006
+    category: 倫理性
+    description: AIが生成するコンテンツは、倫理的配慮を欠かさず、偏見や差別を助長しないようにする。
+
+# 5. 制約条件
+constraints:
+  - constraint_id: CONS_001
+    description: 開発言語やフレームワークは、LLM連携の容易性、開発効率、スケーラビリティを考慮して選定。
+  - constraint_id: CONS_002
+    description: MVPモックアップはフロントエンド中心とし、バックエンド機能は初期リリースでは限定的とする。
+
+# 6. 将来の展望
+future_enhancements:
+  - 外部サービス連携（市場調査ツール、プロジェクト管理ツール、資金調達プラットフォーム）
+  - チームコラボレーション機能
+  - より高度なAI分析機能（競合分析、リスク予測、財務シミュレーション）
+  - 多言語対応
+```

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z軸：習熟度レベルと成長の座標（初心者・中級者・上級者）</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+</head>
+
+<body class="bg-black text-white">
+  <div class="slide"
+    style="width: 1920px; min-height: 1080px; position: relative; overflow: hidden; font-family: 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);">
+
+    <!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <!-- Grid background -->
+      <svg width="100%" height="100%" class="absolute opacity-10">
+        <defs>
+          <pattern id="diagonal-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M0,40 L40,0 M-10,10 L10,-10 M30,50 L50,30" fill="none" stroke="rgba(99, 102, 241, 0.3)"
+              stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#diagonal-grid)" />
+      </svg>
+      <!-- Spiral path for growth-->
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="none" class="absolute h-full w-full opacity-15">
+        <path id="growth-spiral" fill="none" stroke="url(#spiral-gradient)" stroke-width="6"
+          d="M1500,900 Q1400,750 1300,700 Q1100,600 900,650 Q700,700 600,800 Q500,900 600,1000" />
+        <defs>
+          <linearGradient id="spiral-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3" />
+            <stop offset="50%" stop-color="#818cf8" stop-opacity="0.7" />
+            <stop offset="100%" stop-color="#a5b4fc" stop-opacity="0.4" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- Page Title -->
+    <div class="absolute top-12 left-0 right-0 text-center z-10">
+      <h1
+        class="text-6xl font-bold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-indigo-500">
+        Z軸：習熟度レベルと成長の座標
+      </h1>
+      <h2 class="text-3xl font-medium text-indigo-200/90">初心者・中級者・上級者</h2>
+      <div class="w-32 h-1 bg-gradient-to-r from-indigo-400 to-indigo-600 mx-auto mt-3"></div>
+    </div>
+
+    <!-- Growth Staircase Visualization -->
+    <div id="growth-visualization" class="absolute right-12 top-28 z-10" style="width: 500px; height: 400px;"></div>
+
+    <!-- Main Content - Three Levels -->
+    <div class="absolute top-44 left-12 z-10" style="width: 1300px;">
+      <div class="flex space-x-6">
+        <!-- Novice Section -->
+        <div class="w-[400px] transform -translate-y-8">
+          <div
+            class="bg-gradient-to-b from-indigo-900/50 to-indigo-800/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-700/30 h-[580px] flex flex-col">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-indigo-800 to-indigo-600 mr-3">
+                <i class="fas fa-seedling text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-indigo-200">初心者 (Novice)</h2>
+            </div>
+
+            <div class="space-y-5 mb-auto">
+              <div>
+                <div class="font-bold text-xl text-indigo-300 mb-2">特性と思考パターン</div>
+                <ul class="list-disc pl-6 text-indigo-100/90 space-y-2">
+                  <li>基礎的知識・経験のみ</li>
+                  <li>表面的特徴への注目</li>
+                  <li>定型ルール・マニュアルに依存</li>
+                  <li>文脈よりも個々の事柄に注目</li>
+                  <li>試行錯誤的アプローチ</li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="font-bold text-xl text-indigo-300 mb-2">学習アプローチ</div>
+                <div class="flex items-center bg-indigo-800/30 p-3 rounded-lg mb-3">
+                  <i class="fas fa-book text-2xl text-indigo-400 mr-3"></i>
+                  <div class="text-sm">明確な指示と基本原理の習得</div>
+                </div>
+                <div class="flex items-center bg-indigo-800/30 p-3 rounded-lg">
+                  <i class="fas fa-redo text-2xl text-indigo-400 mr-3"></i>
+                  <div class="text-sm">反復練習による定型パターン獲得</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI Support Section -->
+            <div
+              class="bg-gradient-to-r from-indigo-900/60 to-blue-900/40 p-4 rounded-lg border border-indigo-500/30 mt-4">
+              <div class="flex items-center mb-2">
+                <i class="fas fa-robot text-xl text-indigo-400 mr-2"></i>
+                <div
+                  class="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-blue-300">
+                  AIによるサポート
+                </div>
+              </div>
+              <ul class="list-disc pl-6 text-sm text-indigo-100/80 space-y-1">
+                <li>基礎概念の分かりやすい説明</li>
+                <li>定型的作業の自動化支援</li>
+                <li>高品質成果物からの逆算学習</li>
+                <li>「俺ってすげえ」体験から探求心誘発</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intermediate Section -->
+        <div class="w-[400px]">
+          <div
+            class="bg-gradient-to-b from-indigo-800/50 to-indigo-700/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-600/30 h-[580px] flex flex-col">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-indigo-700 to-indigo-500 mr-3">
+                <i class="fas fa-user-graduate text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-indigo-200">中級者 (Intermediate)</h2>
+            </div>
+
+            <div class="space-y-5 mb-auto">
+              <div>
+                <div class="font-bold text-xl text-indigo-300 mb-2">特性と思考パターン</div>
+                <ul class="list-disc pl-6 text-indigo-100/90 space-y-2">
+                  <li>一定の知識・経験を蓄積</li>
+                  <li>分野特有のパターン認識</li>
+                  <li>状況に応じたルール適用</li>
+                  <li>類似状況への知見応用</li>
+                  <li>限定的な全体像把握能力</li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="font-bold text-xl text-indigo-300 mb-2">学習アプローチ</div>
+                <div class="flex items-center bg-indigo-700/30 p-3 rounded-lg mb-3">
+                  <i class="fas fa-puzzle-piece text-2xl text-indigo-400 mr-3"></i>
+                  <div class="text-sm">経験からの判断力向上</div>
+                </div>
+                <div class="flex items-center bg-indigo-700/30 p-3 rounded-lg">
+                  <i class="fas fa-project-diagram text-2xl text-indigo-400 mr-3"></i>
+                  <div class="text-sm">状況対応型の問題解決</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI Support Section -->
+            <div
+              class="bg-gradient-to-r from-indigo-800/60 to-blue-800/40 p-4 rounded-lg border border-indigo-500/30 mt-4">
+              <div class="flex items-center mb-2">
+                <i class="fas fa-robot text-xl text-indigo-400 mr-2"></i>
+                <div
+                  class="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-blue-300">
+                  AIによるサポート
+                </div>
+              </div>
+              <ul class="list-disc pl-6 text-sm text-indigo-100/80 space-y-1">
+                <li>複雑パターンの発見支援</li>
+                <li>多様な視点・選択肢の提示</li>
+                <li>試行錯誤サイクルの効率化</li>
+                <li>アイデアの迅速なプロトタイピング</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expert Section -->
+        <div class="w-[400px] transform translate-y-8">
+          <div
+            class="bg-gradient-to-b from-indigo-700/50 to-indigo-600/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-500/30 h-[580px] flex flex-col">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-indigo-600 to-indigo-400 mr-3">
+                <i class="fas fa-chess-king text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-indigo-200">上級者 (Expert)</h2>
+            </div>
+
+            <div class="space-y-5 mb-auto">
+              <div>
+                <div class="font-bold text-xl text-indigo-300 mb-2">特性と思考パターン</div>
+                <ul class="list-disc pl-6 text-indigo-100/90 space-y-2">
+                  <li>豊富な知識・経験の体系化</li>
+                  <li>深層構造と本質の直観的把握</li>
+                  <li>状況全体の俯瞰と最適解発見</li>
+                  <li>既存枠組みを超えた創造的飛躍</li>
+                  <li>暗黙知の活用と革新的発想</li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="font-bold text-xl text-indigo-300 mb-2">学習アプローチ</div>
+                <div class="flex items-center bg-indigo-600/30 p-3 rounded-lg mb-3">
+                  <i class="fas fa-lightbulb text-2xl text-indigo-400 mr-3"></i>
+                  <div class="text-sm">経験裏付けの直感的判断</div>
+                </div>
+                <div class="flex items-center bg-indigo-600/30 p-3 rounded-lg">
+                  <i class="fas fa-atom text-2xl text-indigo-400 mr-3"></i>
+                  <div class="text-sm">新たな知の創造と体系化</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- AI Support Section -->
+            <div
+              class="bg-gradient-to-r from-indigo-700/60 to-blue-700/40 p-4 rounded-lg border border-indigo-500/30 mt-4">
+              <div class="flex items-center mb-2">
+                <i class="fas fa-robot text-xl text-indigo-400 mr-2"></i>
+                <div
+                  class="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-blue-300">
+                  AIとの協調
+                </div>
+              </div>
+              <ul class="list-disc pl-6 text-sm text-indigo-100/80 space-y-1">
+                <li>高次思考・戦略判断への集中</li>
+                <li>AI出力の批判的吟味と統合</li>
+                <li>独自の専門性との掛け合わせ</li>
+                <li>デジタルツイン構築による自己分析</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Growth Spiral Description -->
+    <div class="absolute bottom-32 left-1/2 transform -translate-x-1/2 w-[900px] text-center z-10">
+      <div
+        class="bg-gradient-to-r from-indigo-900/40 to-indigo-800/20 backdrop-blur-sm p-6 rounded-xl border border-indigo-700/30">
+        <h3 class="text-2xl font-bold text-indigo-200 mb-3">成長の螺旋とAIによる個別最適化</h3>
+        <p class="text-indigo-100/80 mb-4">
+          AIは習熟度に応じたアダプティブラーニングを提供し、学習曲線を加速させる
+        </p>
+        <div class="flex justify-between items-center">
+          <div class="text-center p-3 flex flex-col items-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-800/50 to-indigo-600/50 flex items-center justify-center mb-2">
+              <i class="fas fa-fingerprint text-2xl text-indigo-300"></i>
+            </div>
+            <div class="font-semibold">パーソナライズ</div>
+            <div class="text-xs text-indigo-200/70">個人特性に合わせた学習体験</div>
+          </div>
+
+          <div class="text-center p-3 flex flex-col items-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-800/50 to-indigo-600/50 flex items-center justify-center mb-2">
+              <i class="fas fa-tachometer-alt text-2xl text-indigo-300"></i>
+            </div>
+            <div class="font-semibold">最適ペース</div>
+            <div class="text-xs text-indigo-200/70">理解度に応じた進度調整</div>
+          </div>
+
+          <div class="text-center p-3 flex flex-col items-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-800/50 to-indigo-600/50 flex items-center justify-center mb-2">
+              <i class="fas fa-chart-line text-2xl text-indigo-300"></i>
+            </div>
+            <div class="font-semibold">進捗追跡</div>
+            <div class="text-xs text-indigo-200/70">客観的な成長度合いの可視化</div>
+          </div>
+
+          <div class="text-center p-3 flex flex-col items-center">
+            <div
+              class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-800/50 to-indigo-600/50 flex items-center justify-center mb-2">
+              <i class="fas fa-brain text-2xl text-indigo-300"></i>
+            </div>
+            <div class="font-semibold">知の統合</div>
+            <div class="text-xs text-indigo-200/70">新旧知識の有機的結合促進</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Quote -->
+    <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-center max-w-3xl z-10">
+      <div class="text-lg font-medium text-indigo-200/90 italic">
+        「100人いたら100人十人十色のストーリーが描ける」
+      </div>
+      <div class="mt-1 text-sm text-indigo-300/70">― 佐藤勝彦</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="absolute bottom-6 right-10 text-sm text-indigo-300/50">
+      思考3Dメソッド[XYZ] | 6
+    </div>
+  </div>
+
+  <script>
+    // D3.js script for growth visualization
+    document.addEventListener('DOMContentLoaded', function () {
+      // Set up SVG container
+      const svg = d3.select("#growth-visualization")
+        .append("svg")
+        .attr("width", 500)
+        .attr("height", 400)
+        .append("g")
+        .attr("transform", "translate(20, 20)");
+
+      // Data for the growth staircase
+      const steps = [
+        { level: "初心者", x: 50, y: 300, width: 100, height: 40, color: "#818cf8" },
+        { level: "中級者", x: 200, y: 200, width: 100, height: 40, color: "#6366f1" },
+        { level: "上級者", x: 350, y: 100, width: 100, height: 40, color: "#4f46e5" }
+      ];
+
+      // Draw stairs
+      svg.selectAll(".step")
+        .data(steps)
+        .enter()
+        .append("rect")
+        .attr("class", "step")
+        .attr("x", d => d.x)
+        .attr("y", d => d.y)
+        .attr("width", d => d.width)
+        .attr("height", d => d.height)
+        .attr("fill", d => d.color)
+        .attr("opacity", 0.7)
+        .attr("rx", 5)
+        .attr("ry", 5);
+
+      // Add connecting platforms
+      svg.append("rect")
+        .attr("x", 50)
+        .attr("y", 340)
+        .attr("width", 400)
+        .attr("height", 20)
+        .attr("fill", "#4f46e5")
+        .attr("opacity", 0.3)
+        .attr("rx", 5)
+        .attr("ry", 5);
+
+      svg.append("rect")
+        .attr("x", 150)
+        .attr("y", 240)
+        .attr("width", 50)
+        .attr("height", 20)
+        .attr("fill", "#6366f1")
+        .attr("opacity", 0.4)
+        .attr("rx", 5)
+        .attr("ry", 5);
+
+      svg.append("rect")
+        .attr("x", 300)
+        .attr("y", 140)
+        .attr("width", 50)
+        .attr("height", 20)
+        .attr("fill", "#818cf8")
+        .attr("opacity", 0.5)
+        .attr("rx", 5)
+        .attr("ry", 5);
+
+      // Add step labels
+      svg.selectAll(".steplabel")
+        .data(steps)
+        .enter()
+        .append("text")
+        .attr("class", "steplabel")
+        .attr("x", d => d.x + d.width / 2)
+        .attr("y", d => d.y + d.height / 2 + 5)
+        .attr("text-anchor", "middle")
+        .attr("fill", "white")
+        .attr("font-weight", "bold")
+        .text(d => d.level);
+
+      // Add AI assistance circles and arrows
+      const aiAssist = [
+        { fromX: 50, fromY: 320, toX: 100, toY: 240, color: "#818cf8" },
+        { fromX: 200, fromY: 220, toX: 250, toY: 140, color: "#6366f1" },
+        { fromX: 400, fromY: 120, toX: 450, toY: 60, color: "#4f46e5" }
+      ];
+
+      // Draw AI arrows
+      aiAssist.forEach((d, i) => {
+        // AI circles
+        svg.append("circle")
+          .attr("cx", d.fromX)
+          .attr("cy", d.fromY)
+          .attr("r", 15)
+          .attr("fill", "url(#ai-gradient-" + i + ")")
+          .attr("stroke", "white")
+          .attr("stroke-width", 1.5)
+          .attr("stroke-opacity", 0.5);
+
+        // AI label
+        svg.append("text")
+          .attr("x", d.fromX)
+          .attr("y", d.fromY)
+          .attr("text-anchor", "middle")
+          .attr("dominant-baseline", "central")
+          .attr("fill", "white")
+          .attr("font-size", "10px")
+          .attr("font-weight", "bold")
+          .text("AI");
+
+        // Define gradient for AI circle
+        const gradient = svg.append("defs")
+          .append("radialGradient")
+          .attr("id", "ai-gradient-" + i)
+          .attr("cx", "50%")
+          .attr("cy", "50%")
+          .attr("r", "50%");
+
+        gradient.append("stop")
+          .attr("offset", "0%")
+          .attr("stop-color", d.color)
+          .attr("stop-opacity", 0.8);
+
+        gradient.append("stop")
+          .attr("offset", "100%")
+          .attr("stop-color", d.color)
+          .attr("stop-opacity", 0.2);
+
+        // Arrow paths
+        svg.append("path")
+          .attr("d", `M${d.fromX},${d.fromY - 15} C${d.fromX},${d.fromY - 60} ${d.toX},${d.toY - 40} ${d.toX},${d.toY}`)
+          .attr("fill", "none")
+          .attr("stroke", d.color)
+          .attr("stroke-width", 2)
+          .attr("stroke-opacity", 0.6)
+          .attr("marker-end", `url(#arrow-${i})`);
+      });
+
+      // Create arrow markers
+      svg.append("defs").selectAll("marker")
+        .data([0, 1, 2])
+        .enter().append("marker")
+        .attr("id", d => "arrow-" + d)
+        .attr("viewBox", "0 -5 10 10")
+        .attr("refX", 10)
+        .attr("refY", 0)
+        .attr("markerWidth", 6)
+        .attr("markerHeight", 6)
+        .attr("orient", "auto")
+        .append("path")
+        .attr("d", "M0,-5L10,0L0,5")
+        .attr("fill", d => aiAssist[d].color);
+
+      // Add title
+      svg.append("text")
+        .attr("x", 225)
+        .attr("y", 20)
+        .attr("text-anchor", "middle")
+        .attr("fill", "white")
+        .attr("font-size", "18px")
+        .attr("font-weight", "bold")
+        .text("習熟度の階段");
+
+      // Add sparkle/star effects
+      const sparklePositions = [
+        { x: 450, y: 60 },
+        { x: 420, y: 80 },
+        { x: 480, y: 70 }
+      ];
+
+      sparklePositions.forEach((pos, i) => {
+        const sparkle = svg.append("g")
+          .attr("transform", `translate(${pos.x}, ${pos.y})`);
+
+        sparkle.append("path")
+          .attr("d", "M0,-5 L1,-1 L5,0 L1,1 L0,5 L-1,1 L-5,0 L-1,-1 Z")
+          .attr("fill", "#a5b4fc")
+          .attr("opacity", 0.8);
+
+        // Add animation
+        function animateSparkle() {
+          sparkle.style("opacity", 0.8)
+            .transition()
+            .duration(1500)
+            .style("opacity", 0.2)
+            .transition()
+            .duration(1500)
+            .style("opacity", 0.8)
+            .on("end", animateSparkle);
+        }
+
+        animateSparkle();
+      });
+    });
+
+    // Animate growth spiral
+    function animateGrowthSpiral() {
+      const t = Date.now() * 0.0003;
+
+      // Generate dynamic spiral path
+      let path = "M1500,900 ";
+
+      for (let i = 0; i < 10; i++) {
+        const angle = t + i * 0.5;
+        const radius = 300 - i * 30;
+        const x = 1500 - Math.cos(angle) * radius;
+        const y = 900 - Math.sin(angle) * radius;
+
+        if (i === 0) {
+          path += `Q${x - 100},${y - 100} ${x},${y} `;
+        } else {
+          path += `Q${x + 50},${y + 50} ${x},${y} `;
+        }
+      }
+
+      d3.select("#growth-spiral").attr("d", path);
+
+      requestAnimationFrame(animateGrowthSpiral);
+    }
+
+    animateGrowthSpiral();
+  </script>
+</body>
+
+</html>

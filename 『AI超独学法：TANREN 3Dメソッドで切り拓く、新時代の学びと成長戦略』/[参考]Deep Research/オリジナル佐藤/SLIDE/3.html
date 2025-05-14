@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>思考3Dメソッド[XYZ]の基本構造</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+</head>
+
+<body class="bg-black text-white">
+  <div class="slide"
+    style="width: 1920px; min-height: 1080px; position: relative; overflow: hidden; font-family: 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);">
+
+    <!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-purple-900/10 to-transparent"></div>
+      <svg width="100%" height="100%" viewBox="0 0 1920 1080" class="absolute opacity-10">
+        <defs>
+          <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+            <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+    </div>
+
+    <!-- Page Title -->
+    <div class="absolute top-12 left-0 right-0 text-center z-10">
+      <h1
+        class="text-6xl font-bold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500">
+        思考3Dメソッド[XYZ]の基本構造
+      </h1>
+      <div class="w-32 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto"></div>
+    </div>
+
+    <!-- 3D Visualization Container -->
+    <div id="xyz-visualization" class="absolute"
+      style="width: 800px; height: 600px; left: 560px; top: 160px; z-index: 5;"></div>
+
+    <!-- X-Axis Description -->
+    <div class="absolute left-24 top-1/2 transform -translate-y-1/2 w-96 z-10">
+      <div class="bg-blue-900/30 backdrop-blur-sm p-6 rounded-xl border border-blue-500/30">
+        <div class="flex items-center mb-3">
+          <div class="text-5xl font-bold text-blue-400 mr-4">X</div>
+          <h2 class="text-2xl font-bold">思考のエンジン</h2>
+        </div>
+        <div class="space-y-4 pl-4">
+          <div class="flex items-center">
+            <i class="fas fa-lightbulb text-2xl text-blue-400 mr-3"></i>
+            <div>
+              <div class="font-bold text-xl">抽象化</div>
+              <div class="text-blue-200/80 text-sm">本質の洞察と普遍性発見</div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-sitemap text-2xl text-blue-400 mr-3"></i>
+            <div>
+              <div class="font-bold text-xl">構造化</div>
+              <div class="text-blue-200/80 text-sm">論理の骨格と関係性可視化</div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-cubes text-2xl text-blue-400 mr-3"></i>
+            <div>
+              <div class="font-bold text-xl">具体化</div>
+              <div class="text-blue-200/80 text-sm">アイデアの肉付けと実装</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Y-Axis Description -->
+    <div class="absolute right-24 top-1/3 transform -translate-y-1/2 w-96 z-10">
+      <div class="bg-purple-900/30 backdrop-blur-sm p-6 rounded-xl border border-purple-500/30">
+        <div class="flex items-center mb-3">
+          <div class="text-5xl font-bold text-purple-400 mr-4">Y</div>
+          <h2 class="text-2xl font-bold">時間軸の織り込み</h2>
+        </div>
+        <div class="space-y-4 pl-4">
+          <div class="flex items-center">
+            <i class="fas fa-history text-2xl text-purple-400 mr-3"></i>
+            <div>
+              <div class="font-bold text-xl">過去</div>
+              <div class="text-purple-200/80 text-sm">歴史からの学習と経験知</div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-chart-bar text-2xl text-purple-400 mr-3"></i>
+            <div>
+              <div class="font-bold text-xl">現代</div>
+              <div class="text-purple-200/80 text-sm">現状認識とリアルタイム分析</div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-rocket text-2xl text-purple-400 mr-3"></i>
+            <div>
+              <div class="font-bold text-xl">未来</div>
+              <div class="text-purple-200/80 text-sm">予測・洞察とシナリオ構築</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Z-Axis Description -->
+    <div class="absolute right-24 bottom-1/4 w-96 z-10">
+      <div class="bg-indigo-900/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-500/30">
+        <div class="flex items-center mb-3">
+          <div class="text-5xl font-bold text-indigo-400 mr-4">Z</div>
+          <h2 class="text-2xl font-bold">習熟度レベル</h2>
+        </div>
+        <div class="space-y-4 pl-4">
+          <div class="flex items-center">
+            <i class="fas fa-seedling text-2xl text-indigo-400 mr-3"></i>
+            <div>
+              <div class="font-bold text-xl">初心者</div>
+              <div class="text-indigo-200/80 text-sm">基礎習得と定型パターン活用</div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-user-graduate text-2xl text-indigo-400 mr-3"></i>
+            <div>
+              <div class="font-bold text-xl">中級者</div>
+              <div class="text-indigo-200/80 text-sm">パターン認識と応用的実践</div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-chess-king text-2xl text-indigo-400 mr-3"></i>
+            <div>
+              <div class="font-bold text-xl">上級者</div>
+              <div class="text-indigo-200/80 text-sm">本質洞察と創造的飛躍</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Enhancement Section -->
+    <div class="absolute left-24 bottom-48 w-96 z-10">
+      <div class="bg-gradient-to-br from-blue-900/40 to-purple-900/40 p-6 rounded-xl border border-blue-500/20">
+        <h2 class="text-2xl font-bold mb-3 flex items-center">
+          <i class="fas fa-robot text-3xl text-blue-400 mr-3"></i>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-purple-300">
+            AIによる「超」概念
+          </span>
+        </h2>
+        <ul class="space-y-3">
+          <li class="flex items-center">
+            <div class="text-lg font-bold text-blue-300 mr-2">超抽象化</div>
+            <div class="text-sm text-blue-200/70">人知を超えた本質パターン抽出</div>
+          </li>
+          <li class="flex items-center">
+            <div class="text-lg font-bold text-purple-300 mr-2">超構造化</div>
+            <div class="text-sm text-blue-200/70">複雑系の関係性精緻モデル化</div>
+          </li>
+          <li class="flex items-center">
+            <div class="text-lg font-bold text-indigo-300 mr-2">超具体化</div>
+            <div class="text-sm text-blue-200/70">高精度かつ高速な実装・生成</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Quote -->
+    <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-center max-w-4xl z-10">
+      <div class="text-lg italic text-blue-200/80">
+        「思考整理法は普遍的だが、AIの力を借りることで非現実的なレベルまで拡張・加速させる」
+      </div>
+      <div class="mt-2 text-sm text-purple-300">― 佐藤勝彦</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="absolute bottom-6 right-10 text-sm text-blue-300/50">
+      思考3Dメソッド[XYZ] | 3
+    </div>
+  </div>
+
+  <script>
+    // Initialize 3D visualization
+    function initVisualization() {
+      // Setup scene
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, 800 / 600, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer.setSize(800, 600);
+      document.getElementById('xyz-visualization').appendChild(renderer.domElement);
+
+      // Camera position
+      camera.position.set(250, 200, 250);
+      camera.lookAt(0, 0, 0);
+
+      // Axes
+      const axisLength = 200;
+      const axisThickness = 3;
+
+      // X-axis (blue)
+      const xAxisGeometry = new THREE.CylinderGeometry(axisThickness, axisThickness, axisLength, 16);
+      const xAxisMaterial = new THREE.MeshBasicMaterial({ color: 0x3B82F6 });
+      const xAxis = new THREE.Mesh(xAxisGeometry, xAxisMaterial);
+      xAxis.rotation.z = Math.PI / 2;
+      xAxis.position.x = axisLength / 2;
+      scene.add(xAxis);
+
+      // X-axis labels (抽象化, 構造化, 具体化)
+      const xLabels = ['抽象化', '構造化', '具体化'];
+      const xPositions = [-80, 0, 80];
+
+      for (let i = 0; i < xLabels.length; i++) {
+        const sphereGeometry = new THREE.SphereGeometry(6, 16, 16);
+        const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0x3B82F6 });
+        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        sphere.position.set(xPositions[i], 0, 0);
+        scene.add(sphere);
+      }
+
+      // Y-axis (purple)
+      const yAxisGeometry = new THREE.CylinderGeometry(axisThickness, axisThickness, axisLength, 16);
+      const yAxisMaterial = new THREE.MeshBasicMaterial({ color: 0xA855F7 });
+      const yAxis = new THREE.Mesh(yAxisGeometry, yAxisMaterial);
+      yAxis.position.y = axisLength / 2;
+      scene.add(yAxis);
+
+      // Y-axis labels (過去, 現代, 未来)
+      const yLabels = ['過去', '現代', '未来'];
+      const yPositions = [-80, 0, 80];
+
+      for (let i = 0; i < yLabels.length; i++) {
+        const sphereGeometry = new THREE.SphereGeometry(6, 16, 16);
+        const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xA855F7 });
+        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        sphere.position.set(0, yPositions[i], 0);
+        scene.add(sphere);
+      }
+
+      // Z-axis (indigo)
+      const zAxisGeometry = new THREE.CylinderGeometry(axisThickness, axisThickness, axisLength, 16);
+      const zAxisMaterial = new THREE.MeshBasicMaterial({ color: 0x6366F1 });
+      const zAxis = new THREE.Mesh(zAxisGeometry, zAxisMaterial);
+      zAxis.rotation.x = Math.PI / 2;
+      zAxis.position.z = axisLength / 2;
+      scene.add(zAxis);
+
+      // Z-axis labels (初心者, 中級者, 上級者)
+      const zLabels = ['初心者', '中級者', '上級者'];
+      const zPositions = [-80, 0, 80];
+
+      for (let i = 0; i < zLabels.length; i++) {
+        const sphereGeometry = new THREE.SphereGeometry(6, 16, 16);
+        const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0x6366F1 });
+        const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        sphere.position.set(0, 0, zPositions[i]);
+        scene.add(sphere);
+      }
+
+      // Origin sphere
+      const originGeometry = new THREE.SphereGeometry(8, 32, 32);
+      const originMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+      const origin = new THREE.Mesh(originGeometry, originMaterial);
+      scene.add(origin);
+
+      // Add some particles/nodes in the 3D space to represent concepts
+      const particlesCount = 27; // 3x3x3 cells
+      const particles = new THREE.Group();
+
+      for (let x = 0; x < 3; x++) {
+        for (let y = 0; y < 3; y++) {
+          for (let z = 0; z < 3; z++) {
+            const size = 4;
+            const geometry = new THREE.SphereGeometry(size, 8, 8);
+
+            // Mix colors based on position
+            const color = new THREE.Color(
+              0.3 + (x * 0.2),  // More blue for higher X
+              0.3 + (z * 0.2),  // More indigo for higher Z
+              0.3 + (y * 0.2)   // More purple for higher Y
+            );
+
+            const material = new THREE.MeshBasicMaterial({
+              color: color,
+              transparent: true,
+              opacity: 0.7
+            });
+
+            const particle = new THREE.Mesh(geometry, material);
+
+            // Position in the grid
+            particle.position.x = (x - 1) * 80;
+            particle.position.y = (y - 1) * 80;
+            particle.position.z = (z - 1) * 80;
+
+            particles.add(particle);
+          }
+        }
+      }
+
+      scene.add(particles);
+
+      // Add connecting lines between some nodes
+      const lineMaterial = new THREE.LineBasicMaterial({
+        color: 0xffffff,
+        transparent: true,
+        opacity: 0.15
+      });
+
+      for (let i = 0; i < particles.children.length; i++) {
+        for (let j = i + 1; j < particles.children.length; j++) {
+          // Only connect some nodes (not all to avoid visual clutter)
+          if (Math.random() > 0.85) {
+            const points = [];
+            points.push(particles.children[i].position);
+            points.push(particles.children[j].position);
+
+            const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
+            const line = new THREE.Line(lineGeometry, lineMaterial);
+            scene.add(line);
+          }
+        }
+      }
+
+      // Animation loop
+      function animate() {
+        requestAnimationFrame(animate);
+
+        // Rotate the entire visualization slightly
+        particles.rotation.y += 0.002;
+        particles.rotation.x += 0.001;
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+    }
+
+    // Initialize when the page loads
+    window.onload = function () {
+      initVisualization();
+    };
+  </script>
+</body>
+
+</html>

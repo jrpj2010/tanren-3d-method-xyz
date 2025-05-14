@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>未来展望：AGI・ASI時代の人間の役割と共進化</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+</head>
+
+<body class="bg-black text-white">
+  <div class="slide"
+    style="width: 1920px; min-height: 1080px; position: relative; overflow: hidden; font-family: 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #090320 0%, #1a1548 100%);">
+
+    <!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <!-- Neural Network / Particles Background -->
+      <div id="neural-network" class="absolute inset-0"></div>
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-black/30"></div>
+    </div>
+
+    <!-- Page Title -->
+    <div class="absolute top-12 left-0 right-0 text-center z-10">
+      <h1
+        class="text-6xl font-bold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-sky-300 to-indigo-400">
+        未来展望：AGI・ASI時代の人間の役割と共進化
+      </h1>
+      <div class="w-32 h-1 bg-gradient-to-r from-violet-400 to-indigo-500 mx-auto mt-3"></div>
+    </div>
+
+    <!-- Main Content Container with Central Evolution Visual -->
+    <div class="absolute inset-0 pt-40 z-10 flex">
+      <!-- Left Content -->
+      <div class="w-1/3 px-8">
+        <!-- Complex Social Issues Section -->
+        <div
+          class="bg-gradient-to-br from-indigo-900/40 to-indigo-800/20 backdrop-blur-sm p-6 rounded-xl border border-indigo-700/30 mb-8">
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-indigo-800 to-indigo-600">
+              <i class="fas fa-globe text-2xl text-indigo-200"></i>
+            </div>
+            <h2 class="text-2xl font-bold ml-3 text-indigo-200">複雑な社会課題へのアプローチ</h2>
+          </div>
+
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fas fa-hurricane text-indigo-400 mt-1 mr-3"></i>
+              <div>
+                <div class="font-semibold text-lg">「厄介な問題」への対応</div>
+                <div class="text-indigo-200/80 text-sm">気候変動・パンデミック・貧困と格差</div>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-microscope text-indigo-400 mt-1 mr-3"></i>
+              <div>
+                <div class="font-semibold text-lg">本質理解と全体像把握</div>
+                <div class="text-indigo-200/80 text-sm">多層的・多角的システム分析</div>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-users-cog text-indigo-400 mt-1 mr-3"></i>
+              <div>
+                <div class="font-semibold text-lg">多様なステークホルダー参画</div>
+                <div class="text-indigo-200/80 text-sm">実践的ソリューションの共創</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- AI-Human Co-evolution -->
+        <div
+          class="bg-gradient-to-br from-violet-900/40 to-violet-800/20 backdrop-blur-sm p-6 rounded-xl border border-violet-700/30">
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-violet-800 to-violet-600">
+              <i class="fas fa-dna text-2xl text-violet-200"></i>
+            </div>
+            <h2 class="text-2xl font-bold ml-3 text-violet-200">人間とAIの共進化</h2>
+          </div>
+
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fas fa-brain text-violet-400 mt-1 mr-3"></i>
+              <div>
+                <div class="font-semibold text-lg">AIを「外部脳」として活用</div>
+                <div class="text-violet-200/80 text-sm">認知能力の飛躍的拡張</div>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-handshake text-violet-400 mt-1 mr-3"></i>
+              <div>
+                <div class="font-semibold text-lg">互いの強みを活かす協調関係</div>
+                <div class="text-violet-200/80 text-sm">弱みを補完し合う共生システム</div>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-star text-violet-400 mt-1 mr-3"></i>
+              <div>
+                <div class="font-semibold text-lg">高次思考への集中</div>
+                <div class="text-violet-200/80 text-sm">不可能と思われた領域への挑戦</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Center Visual -->
+      <div class="w-1/3 flex flex-col items-center justify-center px-4">
+        <div id="evolution-visual" class="h-[500px] w-full"></div>
+
+        <!-- AGI/ASI Timeline -->
+        <div
+          class="w-full mt-6 bg-gradient-to-r from-indigo-900/30 via-violet-900/30 to-purple-900/30 p-4 rounded-xl border border-indigo-700/30 text-center">
+          <h3 class="text-xl font-bold mb-3 text-indigo-200">AGI・ASI発展タイムライン</h3>
+          <div class="flex justify-between items-center">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-white">現在</div>
+              <div class="text-sm text-indigo-200/80">特化型AI</div>
+            </div>
+            <div class="w-1/3 h-1 bg-gradient-to-r from-indigo-500 to-violet-500 relative">
+              <div class="absolute -top-2 left-1/3 w-4 h-4 rounded-full bg-violet-500"></div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-violet-300">AGI</div>
+              <div class="text-sm text-indigo-200/80">汎用人工知能</div>
+            </div>
+            <div class="w-1/3 h-1 bg-gradient-to-r from-violet-500 to-fuchsia-500 relative">
+              <div class="absolute -top-2 right-1/3 w-4 h-4 rounded-full bg-fuchsia-500"></div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-fuchsia-300">ASI</div>
+              <div class="text-sm text-indigo-200/80">人工超知能</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="w-1/3 px-8">
+        <!-- Human's Roles in AGI/ASI Era -->
+        <div
+          class="bg-gradient-to-br from-blue-900/40 to-blue-800/20 backdrop-blur-sm p-6 rounded-xl border border-blue-700/30">
+          <div class="flex items-center mb-4">
+            <div
+              class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-blue-800 to-blue-600">
+              <i class="fas fa-user-astronaut text-2xl text-blue-200"></i>
+            </div>
+            <h2 class="text-2xl font-bold ml-3 text-blue-200">AGI・ASI時代における人間の役割</h2>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center bg-blue-900/60 text-blue-300 mr-3">
+                <i class="fas fa-question-circle text-xl"></i>
+              </div>
+              <div>
+                <div class="font-bold">問いを立てる力</div>
+                <div class="text-sm text-blue-200/80">超抽象化の起点となる本質的課題設定</div>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center bg-blue-900/60 text-blue-300 mr-3">
+                <i class="fas fa-balance-scale text-xl"></i>
+              </div>
+              <div>
+                <div class="font-bold">価値判断と倫理的思考</div>
+                <div class="text-sm text-blue-200/80">人間社会にとっての意味と倫理的含意の判断</div>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center bg-blue-900/60 text-blue-300 mr-3">
+                <i class="fas fa-comments text-xl"></i>
+              </div>
+              <div>
+                <div class="font-bold">共感とコミュニケーション</div>
+                <div class="text-sm text-blue-200/80">多様な人々との協調と合意形成</div>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center bg-blue-900/60 text-blue-300 mr-3">
+                <i class="fas fa-palette text-xl"></i>
+              </div>
+              <div>
+                <div class="font-bold">創造性と審美眼</div>
+                <div class="text-sm text-blue-200/80">論理を超えた独創性と価値の発見</div>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center bg-blue-900/60 text-blue-300 mr-3">
+                <i class="fas fa-sync-alt text-xl"></i>
+              </div>
+              <div>
+                <div class="font-bold">メタ認知と自己変革</div>
+                <div class="text-sm text-blue-200/80">自らの思考を客観視し進化させる能力</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Quote -->
+    <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 text-center w-full max-w-4xl z-10">
+      <div class="text-2xl font-medium text-indigo-200/90">
+        思考3Dメソッド[XYZ]は、AGI・ASI時代においても人間の思考力と創造性を支える
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-violet-300 to-indigo-400 font-bold">普遍的な認知OS</span>
+        として機能し続ける
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="absolute bottom-6 right-10 text-sm text-indigo-300/50">
+      思考3Dメソッド[XYZ] | 9
+    </div>
+  </div>
+
+  <script>
+    // Initialize Neural Network Background
+    document.addEventListener('DOMContentLoaded', function () {
+      // Neural network visualization
+      const container = document.getElementById('neural-network');
+
+      // Create scene
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      container.appendChild(renderer.domElement);
+
+      // Position camera
+      camera.position.z = 30;
+
+      // Create particles
+      const particlesCount = 200;
+      const particles = new THREE.Group();
+      const positions = [];
+      const connections = [];
+
+      // Create particles
+      for (let i = 0; i < particlesCount; i++) {
+        const particle = new THREE.Mesh(
+          new THREE.SphereGeometry(Math.random() * 0.2 + 0.1, 8, 8),
+          new THREE.MeshBasicMaterial({
+            color: new THREE.Color(
+              0.5 + Math.random() * 0.5,
+              0.5 + Math.random() * 0.2,
+              0.8 + Math.random() * 0.2
+            ),
+            transparent: true,
+            opacity: 0.7
+          })
+        );
+
+        // Random position
+        particle.position.x = (Math.random() - 0.5) * 60;
+        particle.position.y = (Math.random() - 0.5) * 40;
+        particle.position.z = (Math.random() - 0.5) * 30;
+
+        // Store position
+        positions.push({
+          x: particle.position.x,
+          y: particle.position.y,
+          z: particle.position.z,
+          velocity: {
+            x: (Math.random() - 0.5) * 0.02,
+            y: (Math.random() - 0.5) * 0.02,
+            z: (Math.random() - 0.5) * 0.02
+          }
+        });
+
+        particles.add(particle);
+      }
+
+      scene.add(particles);
+
+      // Create connections between nearby particles
+      const lineMaterial = new THREE.LineBasicMaterial({
+        color: 0x8b5cf6,
+        transparent: true,
+        opacity: 0.2
+      });
+
+      for (let i = 0; i < positions.length; i++) {
+        for (let j = i + 1; j < positions.length; j++) {
+          const distance = Math.sqrt(
+            Math.pow(positions[i].x - positions[j].x, 2) +
+            Math.pow(positions[i].y - positions[j].y, 2) +
+            Math.pow(positions[i].z - positions[j].z, 2)
+          );
+
+          if (distance < 15 && Math.random() > 0.85) {
+            const points = [];
+            points.push(new THREE.Vector3(positions[i].x, positions[i].y, positions[i].z));
+            points.push(new THREE.Vector3(positions[j].x, positions[j].y, positions[j].z));
+
+            const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
+            const line = new THREE.Line(lineGeometry, lineMaterial);
+            scene.add(line);
+
+            connections.push({
+              line: line,
+              p1: i,
+              p2: j
+            });
+          }
+        }
+      }
+
+      // Animation
+      function animate() {
+        requestAnimationFrame(animate);
+
+        // Move particles
+        for (let i = 0; i < particlesCount; i++) {
+          const pos = positions[i];
+          const particle = particles.children[i];
+
+          // Update position based on velocity
+          pos.x += pos.velocity.x;
+          pos.y += pos.velocity.y;
+          pos.z += pos.velocity.z;
+
+          // Boundary check and bounce
+          if (Math.abs(pos.x) > 30) pos.velocity.x *= -1;
+          if (Math.abs(pos.y) > 20) pos.velocity.y *= -1;
+          if (Math.abs(pos.z) > 15) pos.velocity.z *= -1;
+
+          // Apply position to particle
+          particle.position.set(pos.x, pos.y, pos.z);
+        }
+
+        // Update connections
+        connections.forEach(conn => {
+          const p1 = positions[conn.p1];
+          const p2 = positions[conn.p2];
+
+          const points = [];
+          points.push(new THREE.Vector3(p1.x, p1.y, p1.z));
+          points.push(new THREE.Vector3(p2.x, p2.y, p2.z));
+
+          conn.line.geometry.dispose();
+          conn.line.geometry = new THREE.BufferGeometry().setFromPoints(points);
+        });
+
+        // Gentle rotation of the entire scene
+        scene.rotation.y += 0.001;
+        scene.rotation.x += 0.0003;
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+    });
+
+    // Central Evolution Visual
+    document.addEventListener('DOMContentLoaded', function () {
+      const width = 500;
+      const height = 500;
+
+      // Create SVG
+      const svg = d3.select("#evolution-visual")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .attr("preserveAspectRatio", "xMidYMid meet");
+
+      // Add defs for gradients
+      const defs = svg.append("defs");
+
+      // Create human-ai gradient
+      const humanAiGradient = defs.append("linearGradient")
+        .attr("id", "human-ai-gradient")
+        .attr("x1", "0%")
+        .attr("y1", "0%")
+        .attr("x2", "100%")
+        .attr("y2", "100%");
+
+      humanAiGradient.append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", "#3b82f6")
+        .attr("stop-opacity", 0.8);
+
+      humanAiGradient.append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", "#8b5cf6")
+        .attr("stop-opacity", 0.8);
+
+      // Create radial gradient for center
+      const centerGradient = defs.append("radialGradient")
+        .attr("id", "center-gradient")
+        .attr("cx", "50%")
+        .attr("cy", "50%")
+        .attr("r", "50%");
+
+      centerGradient.append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", "#a78bfa")
+        .attr("stop-opacity", 0.8);
+
+      centerGradient.append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", "#7c3aed")
+        .attr("stop-opacity", 0.4);
+
+      // Create container group
+      const g = svg.append("g")
+        .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+      // Create outer circle
+      g.append("circle")
+        .attr("r", 180)
+        .attr("fill", "none")
+        .attr("stroke", "url(#human-ai-gradient)")
+        .attr("stroke-width", 3)
+        .attr("stroke-opacity", 0.6);
+
+      // Create inner guidance circles
+      g.append("circle")
+        .attr("r", 120)
+        .attr("fill", "none")
+        .attr("stroke", "#a78bfa")
+        .attr("stroke-width", 1)
+        .attr("stroke-opacity", 0.2)
+        .attr("stroke-dasharray", "5,5");
+
+      // Create central sphere
+      g.append("circle")
+        .attr("r", 50)
+        .attr("fill", "url(#center-gradient)");
+
+      // Add text to center
+      g.append("text")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "central")
+        .attr("font-size", "16px")
+        .attr("font-weight", "bold")
+        .attr("fill", "white")
+        .text("共進化");
+
+      // Create human node
+      const humanNode = g.append("g")
+        .attr("transform", "translate(-140, 0)");
+
+      humanNode.append("circle")
+        .attr("r", 40)
+        .attr("fill", "#3b82f6")
+        .attr("opacity", 0.7);
+
+      humanNode.append("text")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "central")
+        .attr("font-size", "14px")
+        .attr("font-weight", "bold")
+        .attr("fill", "white")
+        .text("人間");
+
+      // Create AI node
+      const aiNode = g.append("g")
+        .attr("transform", "translate(140, 0)");
+
+      aiNode.append("circle")
+        .attr("r", 40)
+        .attr("fill", "#8b5cf6")
+        .attr("opacity", 0.7);
+
+      aiNode.append("text")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "central")
+        .attr("font-size", "14px")
+        .attr("font-weight", "bold")
+        .attr("fill", "white")
+        .text("AI");
+
+      // Create flowing particles along the circle
+      const particleCount = 24;
+      const particles = [];
+
+      for (let i = 0; i < particleCount; i++) {
+        const angle = (i / particleCount) * Math.PI * 2;
+        const particle = g.append("circle")
+          .attr("r", 3)
+          .attr("cx", Math.cos(angle) * 180)
+          .attr("cy", Math.sin(angle) * 180)
+          .attr("fill", i < particleCount / 2 ? "#3b82f6" : "#8b5cf6")
+          .attr("opacity", 0.8);
+
+        particles.push({
+          element: particle,
+          angle: angle,
+          speed: 0.01 + Math.random() * 0.01,
+          radius: 180
+        });
+      }
+
+      // Create connection lines from center
+      const centerToHuman = g.append("line")
+        .attr("x1", 0)
+        .attr("y1", 0)
+        .attr("x2", -140)
+        .attr("y2", 0)
+        .attr("stroke", "#3b82f6")
+        .attr("stroke-width", 3)
+        .attr("stroke-opacity", 0.5);
+
+      const centerToAi = g.append("line")
+        .attr("x1", 0)
+        .attr("y1", 0)
+        .attr("x2", 140)
+        .attr("y2", 0)
+        .attr("stroke", "#8b5cf6")
+        .attr("stroke-width", 3)
+        .attr("stroke-opacity", 0.5);
+
+      // Create icons and labels for human abilities
+      const humanLabels = [
+        { text: "創造性", icon: "\uf53f", angle: -Math.PI / 4 }, // lightbulb
+        { text: "価値判断", icon: "\uf24e", angle: -Math.PI / 8 }, // balance-scale
+        { text: "共感", icon: "\uf4fb", angle: Math.PI / 8 }, // hands-helping
+        { text: "メタ認知", icon: "\uf074", angle: Math.PI / 4 }, // random
+      ];
+
+      humanLabels.forEach(label => {
+        const x = Math.cos(label.angle) * 90 - 140;
+        const y = Math.sin(label.angle) * 90;
+
+        // Add line
+        g.append("line")
+          .attr("x1", -140)
+          .attr("y1", 0)
+          .attr("x2", x)
+          .attr("y2", y)
+          .attr("stroke", "#3b82f6")
+          .attr("stroke-width", 1)
+          .attr("stroke-opacity", 0.7);
+
+        // Add icon background
+        g.append("circle")
+          .attr("cx", x)
+          .attr("cy", y)
+          .attr("r", 15)
+          .attr("fill", "#3b82f6")
+          .attr("opacity", 0.2);
+
+        // Add icon
+        g.append("text")
+          .attr("x", x)
+          .attr("y", y)
+          .attr("font-family", "FontAwesome")
+          .attr("text-anchor", "middle")
+          .attr("dominant-baseline", "central")
+          .attr("font-size", "10px")
+          .attr("fill", "#3b82f6")
+          .text(label.icon);
+
+        // Add label text
+        g.append("text")
+          .attr("x", x)
+          .attr("y", y + 20)
+          .attr("text-anchor", "middle")
+          .attr("font-size", "10px")
+          .attr("fill", "white")
+          .attr("opacity", 0.8)
+          .text(label.text);
+      });
+
+      // Create icons and labels for AI abilities
+      const aiLabels = [
+        { text: "大規模計算", icon: "\uf1ec", angle: -Math.PI / 4 }, // calculator
+        { text: "パターン認識", icon: "\uf0c8", angle: -Math.PI / 8 }, // layer-group
+        { text: "高速処理", icon: "\uf0e7", angle: Math.PI / 8 }, // bolt
+        { text: "膨大記憶", icon: "\uf0c2", angle: Math.PI / 4 }, // cloud
+      ];
+
+      aiLabels.forEach(label => {
+        const x = Math.cos(label.angle) * 90 + 140;
+        const y = Math.sin(label.angle) * 90;
+
+        // Add line
+        g.append("line")
+          .attr("x1", 140)
+          .attr("y1", 0)
+          .attr("x2", x)
+          .attr("y2", y)
+          .attr("stroke", "#8b5cf6")
+          .attr("stroke-width", 1)
+          .attr("stroke-opacity", 0.7);
+
+        // Add icon background
+        g.append("circle")
+          .attr("cx", x)
+          .attr("cy", y)
+          .attr("r", 15)
+          .attr("fill", "#8b5cf6")
+          .attr("opacity", 0.2);
+
+        // Add icon
+        g.append("text")
+  

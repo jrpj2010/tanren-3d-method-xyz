@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- APIキーはサーバーサイドでここに注入される: <script>window.GEMINI_API_KEY = "YOUR_KEY";</script> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI超自分ダイアリー - 30日トーク日記</title>
+
+  <!-- Tailwind CSS と Preline UI の導入 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline@2.0.3/dist/preline.min.css" />
+
+  <!-- Chart.js の導入 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    /* カスタムCSS */
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background-color: #f4f7f6;
+      color: #333;
+      position: relative;
+    }
+
+    .calendar-container {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .calendar-day {
+      background-color: #e9ecef;
+      padding: 10px;
+      text-align: center;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      min-height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #d1d8dd;
+    }
+
+    .calendar-day:hover {
+      background-color: #ced4da;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .calendar-day.completed {
+      background-color: #28a745;
+      color: white;
+      border-color: #1e7e34;
+    }
+
+    .calendar-day.analyzed {
+      background-color: #17a2b8;
+      color: white;
+      border-color: #117a8b;
+    }
+
+    .calendar-day.today {
+      background-color: #007bff;
+      color: white;
+      border-color: #0056b3;
+    }
+
+    .calendar-day.selected {
+      background-color: #ffc107;
+      color: #333;
+      border-color: #e0a800;
+      box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+    }
+
+    .calendar-day span {
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    /* Debug Console Styles */
+    #debugConsole {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-height: 150px;
+      background-color: #1e1e1e;
+      color: #f1c40f;
+      border-top: 1px solid #f1c40f;
+      padding: 10px;
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 13px;
+      overflow-y: auto;
+      opacity: 0.95;
+      z-index: 1000;
+      box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+      display: none;
+      /* デフォルトでは非表示 */
+      transition: all 0.3s ease;
+    }
+
+    #debugConsole p {
+      margin: 0 0 5px 0;
+      padding: 0;
+      line-height: 1.3;
+    }
+
+    .debug-toggle {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 1001;
+      display: flex;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      font-size: 12px;
+    }
+
+    .debug-toggle input {
+      margin-right: 5px;
+    }
+
+    /* 分析結果のセクション */
+    .analysis-section {
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      padding: 1.25rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      background-color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .analysis-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .analysis-section h4 {
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom-width: 2px;
+    }
+
+    /* XYZ軸のアクセントカラー - Tailwindのクラスでオーバーライド */
+    .analysis-section.x-axis h4 {
+      @apply text-red-700 border-red-700;
+    }
+
+    .analysis-section.y-axis h4 {
+      @apply text-teal-700 border-teal-700;
+    }
+
+    .analysis-section.z-axis h4 {
+      @apply text-purple-700 border-purple-700;
+    }
+
+    /* アニメーション効果 */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.5s ease forwards;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+  <!-- デバッグトグルスイッチ -->
+  <div class="debug-toggle">
+    <input type="checkbox" id="debugToggle">
+    <label for="debugToggle">デバッグモード</label>
+  </div>
+
+  <div id="debugConsole">
+    <p>デバッグコンソール初期化中...</p>
+  </div>
+
+  <!-- ナビゲーションバー -->
+  <header
+    class="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-3 sm:py-0">
+    <nav class="relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
+      aria-label="Global">
+      <div class="flex items-center justify-between">
+        <a class="flex-none text-xl font-semibold text-indigo-600" href="#" aria-label="AI超自分ダイアリー">AI超自分ダイアリー</a>
+        <div class="sm:hidden">
+          <button type="button"
+            class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none transition-all text-sm"
+            data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation"
+            aria-label="Toggle navigation">
+            <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+            <svg class="hs-collapse-open:block hidden w-4 h-4" width="16" height="16" fill="currentColor"
+              viewBox="0 0 16 16">
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="navbar-collapse-with-animation"
+        class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+        <div
+          class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7">
+          <a class="font-medium text-blue-600 sm:py-6" href="#calendar" aria-current="page">カレンダー</a>
+          <a class="font-medium text-gray-500 hover:text-gray-400 sm:py-6" href="#diary">日記入力</a>
+          <a class="font-medium text-gray-500 hover:text-gray-400 sm:py-6" href="#analysis">分析結果</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <div class="max-w-7xl mx-auto p-4 sm:px-6 lg:px-8 py-10">
+    <!-- ヒーローセクション -->
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl shadow-lg mb-8 overflow-hidden">
+      <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+        <div class="text-center">
+          <h1 class="text-4xl sm:text-5xl font-bold text-white mb-3">AI超自分ダイアリー</h1>
+          <p class="text-xl text-white/80">思考3Dメソッドで「私AI」を育てる30日間</p>
+          <p class="mt-5 text-white/70 mx-auto max-w-2xl">
+            毎日の15分トーク（テキスト入力）で、AIがあなたの内面を多角的に分析。自己発見と成長の旅を始めましょう。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- カレンダーセクション -->
+    <section id="calendar" class="bg-white rounded-xl shadow-sm p-6 mb-8">
+      <h2 class="text-2xl font-bold text-gray-800 mb-6">30日チャレンジカレンダー</h2>
+      <p class="text-gray-600 mb-6">まずは今日の日付をクリックしてエントリーを開始してください。</p>
+
+      <div class="calendar-container" id="calendarGrid">
+        <!-- Calendar days will be generated by JavaScript -->
+      </div>
+
+      <div class="mt-8 border-t border-gray-200 pt-6">
+        <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4 overflow-hidden">
+          <div class="bg-blue-600 h-2.5 rounded-full transition-all duration-500" id="habitProgressBar"
+            style="width: 0%"></div>
+        </div>
+        <p id="progressText" class="text-center text-gray-600 italic">「AIと共に、新しい自分を発見しよう。」</p>
+      </div>
+      <div id="saveIndicator" class="text-right text-sm text-gray-500 h-5 mt-2"></div>
+    </section>
+
+    <!-- 日記入力セクション -->
+    <section id="dailyEntryArea" class="bg-white rounded-xl shadow-sm p-6 mb-8" style="display: none;">
+      <h2 id="entryDateTitle" class="text-2xl font-bold text-gray-800 mb-4">X月X日の日記</h2>
+      <input type="hidden" id="currentEntryDay">
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded">
+        <p class="text-blue-800">15分間、今日の出来事をだらだらと音声入力し、それを文字起こししたテキストを以下に貼り付けてください。</p>
+      </div>
+
+      <div class="mb-6 text-sm text-gray-600">
+        <p>音声入力のソリューションは、各自のおすすめアプリから試してみてください。<br>（例: <a href="#dummy-voice-app1"
+            class="text-blue-600 hover:underline">ボイスメモアプリ</a>, <a href="#dummy-voice-app2"
+            class="text-blue-600 hover:underline">リアルタイム文字起こしツール</a>など）<br>※現在、アプリ内音声入力機能は計画中です。</p>
+      </div>
+
+      <div class="mb-6">
+        <label for="diaryText" class="block text-sm font-medium text-gray-700 mb-2">今日の音声日記テキスト
+          (15分程度のボリュームを想定):</label>
+        <textarea id="diaryText"
+          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 min-h-[200px]"
+          placeholder="ここに、文字起こしした本日の音声日記のテキストを貼り付けてください..."></textarea>
+      </div>
+
+      <button
+        class="inline-flex justify-center items-center gap-2 rounded-md border border-transparent bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+        onclick="analyzeAndSaveEntry()">
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+        </svg>
+        今日の出来事を分析する
+      </button>
+
+      <!-- 分析結果セクション -->
+      <div id="analysisResultsArea" class="border-t border-gray-200 mt-8 pt-8" style="display: none;">
+        <h3 class="text-2xl font-bold text-center text-gray-800 mb-4">思考3Dメソッド[XYZ]による分析結果</h3>
+        <p id="analysisIntroText" class="text-center mb-8 text-gray-600">
+          今日の1日の動き、ありがとうございました。以下に思考3Dメソッド[XYZ]で分析した結果を示します。</p>
+
+        <!-- X軸：思考の深度・整理力 -->
+        <div class="mb-8">
+          <h4 class="text-xl font-bold text-red-700 mb-4 pb-2 border-b-2 border-red-700">X軸：思考の深度・整理力</h4>
+
+          <div class="grid gap-4 md:grid-cols-3">
+            <div
+              class="analysis-section x-axis p-5 bg-white border border-gray-200 rounded-xl shadow-sm animate-fade-in-up"
+              id="analysis-x1">
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-100 text-red-800 font-bold text-sm">1</span>
+                <h4 class="text-lg font-semibold text-red-700">超抽象化（本質論の抽出）</h4>
+              </div>
+              <p class="text-gray-600">ここに分析結果が表示されます...</p>
+            </div>
+
+            <div
+              class="analysis-section x-axis p-5 bg-white border border-gray-200 rounded-xl shadow-sm animate-fade-in-up"
+              style="animation-delay: 100ms;" id="analysis-x2">
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-100 text-red-800 font-bold text-sm">2</span>
+                <h4 class="text-lg font-semibold text-red-700">超具体化（重要な具体的事例の記録）</h4>
+              </div>
+              <p class="text-gray-600">ここに分析結果が表示されます...</p>
+            </div>
+
+            <div
+              class="analysis-section x-axis p-5 bg-white border border-gray-200 rounded-xl shadow-sm animate-fade-in-up"
+              style="animation-delay: 200ms;" id="analysis-x3">
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-100 text-red-800 font-bold text-sm">3</span>
+                <h4 class="text-lg font-semibold text-red-700">超構造化（1分で話せフォーマットでの要約）</h4>
+              </div>
+              <p class="text-gray-600">ここに分析結果が表示されます...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Y軸：時間軸の視点 -->
+        <div class="mb-8">
+          <h4 class="text-xl font-bold text-teal-700 mb-4 pb-2 border-b-2 border-teal-700">Y軸：時間軸の視点</h4>
+
+          <div class="grid gap-4 md:grid-cols-3">
+            <div
+              class="analysis-section y-axis p-5 bg-white border border-gray-200 rounded-xl shadow-sm animate-fade-in-up"
+              style="animation-delay: 300ms;" id="analysis-y1">
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-100 text-teal-800 font-bold text-sm">4</span>
+                <h4 class="text-lg font-semibold text-teal-700">過去との対比レビュー</h4>
+              </div>
+              <p class="text-gray-600">ここに分析結果が表示されます...</p>
+            </div>
+
+            <div
+              class="analysis-section y-axis p-5 bg-white border border-gray-200 rounded-xl shadow-sm animate-fade-in-up"
+              style="animation-delay: 400ms;" id="analysis-y2">
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-100 text-teal-800 font-bold text-sm">5</span>
+                <h4 class="text-lg font-semibold text-teal-700">現代トレンドとの接続（Web検索エージェント風）</h4>
+              </div>
+              <p class="text-gray-600">ここに分析結果が表示されます...</p>
+            </div>
+
+            <div
+              class="analysis-section y-axis p-5 bg-white border border-gray-200 rounded-xl shadow-sm animate-fade-in-up"
+              style="animation-delay: 500ms;" id="analysis-y3">
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-100 text-teal-800 font-bold text-sm">6</span>
+                <h4 class="text-lg font-semibold text-teal-700">未来への展開予測</h4>
+              </div>
+              <p class="text-gray-600">ここに分析結果が表示されます...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Z軸：レベル感・再現性視点 -->
+        <div class="mb-8">
+          <h4 class="text-xl font-bold text-purple-700 mb-4 pb-2 border-b-2 border-purple-700">Z軸：レベル感・再現性視点</h4>
+
+          <div class="grid gap-4 md:grid-cols-3">
+            <div
+              class="analysis-section z-axis p-5 bg-white border border-gray-200 rounded-xl shadow-sm animate-fade-in-up"
+              style="animation-delay: 600ms;" id="analysis-z1">
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 text-purple-800 font-bold text-sm">7</span>
+                <h4 class="text-lg font-semibold text-purple-700">初級レベルでの再現性（構造化文章）</h4>
+              </div>
+              <p class="text-gray-600">ここに分析結果が表示されます...</p>
+            </div>
+
+            <div
+              class="analysis-section z-axis p-5 bg-white border border-gray-200 rounded-xl shadow-sm animate-fade-in-up"
+              style="animation-delay: 700ms;" id="analysis-z2">
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 text-purple-800 font-bold text-sm">8</span>
+                <h4 class="text-lg font-semibold text-purple-700">中級レベルでの解釈・行動</h4>
+              </div>
+              <p class="text-gray-600">ここに分析結果が表示されます...</p>
+            </div>
+
+            <div
+              class="analysis-section z-axis p-5 bg-white border border-gray-200 rounded-xl shadow-sm animate-fade-in-up"
+              style="animation-delay: 800ms;" id="analysis-z3">
+              <div class="flex items-center gap-2 mb-2">
+                <span
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-purple-100 text-purple-800 font-bold text-sm">9</span>
+                <h4 class="text-lg font-semibold text-purple-700">上級レベルでのロジック・最上位概念</h4>
+              </div>
+              <p class="text-gray-600">ここに分析結果が表示されます...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Prelineスクリプト -->
+  <script src="https://cdn.jsdelivr.net/npm/preline@2.0.3/dist/preline.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      console.log('DEBUG: dailyEntryArea:', document.getElementById('dailyEntryArea'));
+      const calendarGrid = document.getElementById('calendarGrid');
+      const dailyEntryArea = document.getElementById('dailyEntryArea');
+      const entryDateTitle = document.getElementById('entryDateTitle');
+      const currentEntryDayInput = document.getElementById('currentEntryDay');
+      const diaryTextInput = document.getElementById('diaryText');
+      const analysisResultsArea = document.getElementById('analysisResultsArea');
+      const habitProgressBar = document.getElementById('habitProgressBar');
+      const progressText = document.getElementById('progressText');
+      const saveIndicator = document.getElementById('saveIndicator');
+      const debugConsole = document.getElementById('debugConsole');
+
+      const TOTAL_DAYS = 30;
+      const STORAGE_KEY_PREFIX = 'aiSelfDiaryDay_';
+      const START_DATE_KEY = 'aiSelfDiaryStartDate';
+
+      let challengeStartDate = null;
+      let GEMINI_API_URL = ''; // グローバルスコープで宣言と初期化
+
+      function getStartDate() {
+        let startDate = localStorage.getItem(START_DATE_KEY);
+        if (!startDate) {
+          startDate = new Date().toISOString(); // 初回アクセス時に今日を開始日として設定
+          localStorage.setItem(START_DATE_KEY, startDate);
+        }
+        return new Date(startDate);
+      }
+
+      function initializeCalendar() {
+        calendarGrid.innerHTML = ''; // Clear existing calendar
+        challengeStartDate = getStartDate();
+        const today = new Date();
+
+        for (let i = 1; i <= TOTAL_DAYS; i++) {
+          const dayElement = document.createElement('div');
+          dayElement.classList.add('calendar-day');
+          dayElement.dataset.day = i;
+
+          const dayDate = new Date(challengeStartDate);
+          dayDate.setDate(challengeStartDate.getDate() + i - 1);
+
+          const dayNumber = dayDate.getDate();
+          const monthName = dayDate.toLocaleDateString('ja-JP', { month: 'short' });
+
+          dayElement.innerHTML = `${i}<span>${monthName}${dayNumber}日</span>`;
+
+          const savedData = loadDailyData(i);
+          if (isSameDay(dayDate, today) && !savedData) { // 今日かつ未入力
+            dayElement.classList.add('today');
+          }
+
+          if (savedData && savedData.analysis) { // 分析済みかどうかで判定
+            dayElement.classList.add('analyzed');
+          } else if (savedData && savedData.originalText) { // テキスト入力済みだが未分析
+            dayElement.classList.add('completed'); // 'completed' は入力済みだが未分析の意味合いに変更
+          }
+
+          dayElement.onclick = () => openDailyEntry(i, dayDate);
+          calendarGrid.appendChild(dayElement);
+        }
+        updateProgress();
+      }
+
+      function isSameDay(date1, date2) {
+        return date1.getFullYear() === date2.getFullYear() &&
+          date1.getMonth() === date2.getMonth() &&
+          date1.getDate() === date2.getDate();
+      }
+
+      function openDailyEntry(dayNumber, dateObject) {
+        // Remove 'selected' from previously selected day
+        const currentlySelected = document.querySelector('.calendar-day.selected');
+        if (currentlySelected) {
+          currentlySelected.classList.remove('selected');
+        }
+        // Add 'selected' to current day
+        const dayElement = document.querySelector(`.calendar-day[data-day='${dayNumber}']`);
+        if (dayElement) {
+          dayElement.classList.add('selected');
+        }
+
+        // Ensure analysisResultsArea element is present
+        if (!analysisResultsArea) {
+          console.warn('analysisResultsArea element not found');
+          return;
+        }
+
+        currentEntryDayInput.value = dayNumber;
+        entryDateTitle.textContent = `${dateObject.toLocaleDateString('ja-JP', { month: 'long', day: 'numeric' })} (${dayNumber}日目) の日記`;
+
+        const savedData = loadDailyData(dayNumber);
+        diaryTextInput.value = savedData ? savedData.originalText : '';
+
+        if (savedData && savedData.analysis) {
+          displayAnalysisResults(savedData.analysis);
+          analysisResultsArea.style.display = 'block';
+        } else {
+          analysisResultsArea.style.display = 'none';
+          clearAnalysisPlaceholders();
+        }
+
+        dailyEntryArea.style.display = 'block';
+        diaryTextInput.focus();
+      }
+
+      function clearAnalysisPlaceholders() {
+        document.getElementById('analysis-x1').querySelector('p').textContent = 'ここに分析結果が表示されます...';
+        document.getElementById('analysis-x2').querySelector('p').textContent = 'ここに分析結果が表示されます...';
+        document.getElementById('analysis-x3').querySelector('p').textContent = 'ここに分析結果が表示されます...';
+        document.getElementById('analysis-y1').querySelector('p').textContent = 'ここに分析結果が表示されます...';
+        document.getElementById('analysis-y2').querySelector('p').textContent = 'ここに分析結果が表示されます...';
+        document.getElementById('analysis-y3').querySelector('p').textContent = 'ここに分析結果が表示されます...';
+        document.getElementById('analysis-z1').querySelector('p').textContent = 'ここに分析結果が表示されます...';
+        document.getElementById('analysis-z2').querySelector('p').textContent = 'ここに分析結果が表示されます...';
+        document.getElementById('analysis-z3').querySelector('p').textContent = 'ここに分析結果が表示されます...';
+      }
+
+      function displayAnalysisResults(analysisData) {
+        document.getElementById('analysis-x1').querySelector('p').textContent = analysisData.x1 || '分析データがありません。';
+        document.getElementById('analysis-x2').querySelector('p').textContent = analysisData.x2 || '分析データがありません。';
+        document.getElementById('analysis-x3').querySelector('p').textContent = analysisData.x3 || '分析データがありません。';
+        document.getElementById('analysis-y1').querySelector('p').textContent = analysisData.y1 || '分析データがありません。';
+        document.getElementById('analysis-y2').querySelector('p').textContent = analysisData.y2 || '分析データがありません。';
+        document.getElementById('analysis-y3').querySelector('p').textContent = analysisData.y3 || '分析データがありません。';
+        document.getElementById('analysis-z1').querySelector('p').textContent = analysisData.z1 || '分析データがありません。';
+        document.getElementById('analysis-z2').querySelector('p').textContent = analysisData.z2 || '分析データがありません。';
+        document.getElementById('analysis-z3').querySelector('p').textContent = analysisData.z3 || '分析データがありません。';
+        analysisResultsArea.style.display = 'block';
+      }
+
+      // Initialize Calendar after DOM is ready
+      document.addEventListener('DOMContentLoaded', initializeCalendar);
+
+      // Then, set up API URL and initialize Debug Console
+      if (window.GEMINI_API_KEY && window.GEMINI_API_KEY !== '' && window.GEMINI_API_KEY !== 'undefined') {
+        GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent?key=${window.GEMINI_API_KEY}`;
+        initializeDebugConsole(true); // Pass a flag indicating API key is okay
+      } else {
+        initializeDebugConsole(false); // Pass a flag indicating API key is NOT okay
+      }
+
+      // デバッグコンソールの表示/非表示を切り替える機能
+      document.getElementById('debugToggle').addEventListener('change', function () {
+        debugConsole.style.display = this.checked ? 'block' : 'none';
+      });
+
+      function initializeDebugConsole(apiKeyAvailable) {
+        logDebug("デバッグモード：アプリケーション初期化完了。APIキー読込試行中...");
+        if (apiKeyAvailable) {
+          logDebug("デバッグモード：APIキー読込OK。分析待機中。");
+          logDebug(`デバッグモード：使用モデル: gemini-2.5-flash-preview-04-17`);
+          logDebug("デバッグモード：無事バックエンドが繋がって、AI分析可能です！"); // 要望通りメッセージ追加
+        } else {
+          logDebug("デバッグモード：警告 - APIキーが設定されていません。サーバーからの注入を確認してください。");
+          showSaveIndicator('エラー: APIキー未設定', true);
+        }
+      }
+
+      function logDebug(message) {
+        if (debugConsole) {
+          const timestamp = new Date().toLocaleTimeString();
+          const p = document.createElement('p');
+          p.textContent = `[${timestamp}] ${message}`;
+          debugConsole.appendChild(p);
+          debugConsole.scrollTop = debugConsole.scrollHeight; // Auto-scroll to bottom
+        } else {
+          console.log(`DEBUG: ${message}`); // Fallback to console.log if div not found
+        }
+      }
+
+      async function callGeminiApi(text) {
+        const nineAnalysisPrompts = `以下のテキストは、ある人が行った15分間の音声日記を文字起こししたものです。
+この内容を分析し、「思考3Dメソッド（XYZ軸）」に基づいて、以下の9つの視点からそれぞれ具体的なテキストを生成してください。
+各視点の結果は、それぞれ独立した段落として記述し、視点の番号とタイトルを明確に示してください。
+
+入力テキスト:
+"""
+${text}
+"""
+
+分析の視点:
+
+【X軸：思考の深度・整理力】
+
+1.  **超抽象化（本質論の抽出）:**
+    今日の出来事の中から、最も本質的と考えられる要素やテーマを抽出する。
+    例：「今日の出来事の本質は、〇〇という新しい視点への気づきでした。」
+
+2.  **超具体化（重要な具体的事例の記録）:**
+    今日の出来事の中で、最も重要または象徴的な具体的なエピソードや情報を特定し、記録する。
+    例：「特に、△△さんと会話した際の『□□』という言葉が具体的で重要でした。」
+
+3.  **超構造化（1分で話せフォーマットでの要約）:**
+    今日の出来事を「結論ファースト＋根拠3つ＋事例」の形式で要約する。
+    例：「結論：今日は〇〇を達成できた。根拠1：△△。根拠2：□□。根拠3：◇◇。具体例：～。」
+
+【Y軸：時間軸の視点】
+
+4.  **過去との対比レビュー:**
+    今日の出来事を、過去の類似体験や以前の状況と比較し、変化や学びを指摘する。
+    例：「以前の××の経験と比べると、今回は〇〇という点で成長が見られました。」
+
+5.  **現代トレンドとの接続（Web検索エージェント風）:**
+    今日の出来事に関連する現在のトレンド（ソーシャルメディアやWeb上の話題）を（仮想的に）検索し、関連性を示す。
+    例：「今日の〇〇という出来事は、現在Webで話題の△△というトレンドと関連している可能性があります。」
+
+6.  **未来への展開予測:**
+    今日の出来事が、近い将来どのような影響や変化をもたらす可能性があるかを予測・考察する。
+    例：「この経験を活かせば、将来的には□□という新しい展開が期待できます。」
+
+【Z軸：レベル感・再現性視点 (概念統合)】
+
+7.  **初級レベルでの再現性（構造化文章）:**
+    今日の出来事を、初心者が再現できるように、ステップバイステップや簡単な言葉で構造化して説明する。
+    例：「もし初心者が今日と同じ状況を経験するなら、まず１．〇〇し、次に２．△△し、最後に３．□□すると良いでしょう。」
+
+8.  **中級レベルでの解釈・行動:**
+    今日の出来事に対して、中級レベルのスキルや経験を持つ人がどのように考え、行動するかを考察する。
+    例：「中級者であれば、今日の〇〇という状況で、さらに△△という視点も加えて行動するでしょう。」
+
+9.  **上級レベルでのロジック・最上位概念:**
+    今日の出来事の背後にある高度なロジックや、上級者がそこから導き出すであろう最上位の概念・戦略を提示する。
+    例：「この出来事から上級者が学ぶべきは、〇〇という普遍的な原理原則です。」
+
+期待する出力形式（各項目が明確に区切られていること）:
+1. 超抽象化（本質論の抽出）:
+[ここに分析結果]
+
+2. 超具体化（重要な具体的事例の記録）:
+[ここに分析結果]
+
+...
+
+9. 上級レベルでのロジック・最上位概念:
+[ここに分析結果]
+`;
+
+        const requestBody = {
+          contents: [{
+            parts: [{
+              text: nineAnalysisPrompts
+            }]
+          }],
+          generationConfig: {
+            temperature: 0.7,
+            maxOutputTokens: 2048
+          }
+        };
+
+        try {
+          logDebug("デバッグモード：Gemini APIエンドポイントにリクエスト送信中...");
+          const response = await fetch(GEMINI_API_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(requestBody)
+          });
+
+          if (!response.ok) {
+            const errorBody = await response.json();
+            console.error('Gemini API Error:', errorBody);
+            logDebug(`デバッグモード：Gemini APIエラー。Status: ${response.status}. Message: ${errorBody.error ? errorBody.error.message : 'Unknown'}`);
+            throw new Error(`API request failed with status ${response.status}: ${errorBody.error ? errorBody.error.message : 'Unknown error'}`);
+          }
+
+          const data = await response.json();
+          logDebug("デバッグモード：Gemini APIから応答を受信しました。");
+
+          if (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts[0]) {
+            const rawAnalysisText = data.candidates[0].content.parts[0].text;
+            logDebug("デバッグモード：AI分析の生テキストを解析します...");
+            return parseAnalysisResults(rawAnalysisText);
+          } else {
+            console.error("Unexpected API response structure:", data);
+            throw new Error('AIからの分析結果の形式が正しくありません。');
+          }
+
+        } catch (error) {
+          console.error("callGeminiApi error:", error);
+          logDebug(`デバッグモード：callGeminiApi関数内でエラー: ${error.message}`);
+          throw error; // エラーを再スローして呼び出し元で処理
+        }
+      }
+
+      function parseAnalysisResults(rawText) {
+        const results = {};
+        const lines = rawText.split('\n');
+        let currentKey = null;
+        let currentContent = [];
+
+        logDebug("デバッグモード：受信したテキストの解析処理を開始します (parseAnalysisResults)。");
+
+        const keyMap = {
+          "1": "x1", "１": "x1", // 超抽象化
+          "2": "x2", "２": "x2", // 超具体化
+          "3": "x3", "３": "x3", // 超構造化
+          "4": "y1", "４": "y1", // 過去との対比
+          "5": "y2", "５": "y2", // 現代トレンド
+          "6": "y3", "６": "y3", // 未来への展開
+          "7": "z1", "７": "z1", // 初級レベル
+          "8": "z2", "８": "z2", // 中級レベル
+          "9": "z3", "９": "z3"  // 上級レベル
+        };
+
+        for (const line of lines) {
+          const match = line.match(/^([1-9１-９])[:.．]?\s*\*\*(.+?)\*\*[:：]?/); // 「1. **タイトル** :」のような形式を期待
+          if (match) {
+            if (currentKey && currentContent.length > 0) {
+              results[currentKey] = currentContent.join('\n').trim();
+            }
+            currentKey = keyMap[match[1]];
+            currentContent = [];
+            const contentAfterTitle = line.substring(match[0].length).trim();
+            if (contentAfterTitle) {
+              currentContent.push(contentAfterTitle);
+            }
+          } else if (currentKey) {
+            currentContent.push(line);
+          }
+        }
+        if (currentKey && currentContent.length > 0) { // 最後のセクションを保存
+          results[currentKey] = currentContent.join('\n').trim();
+        }
+
+        // 万が一キーが不足している場合のフォールバック
+        const allKeys = ["x1", "x2", "x3", "y1", "y2", "y3", "z1", "z2", "z3"];
+        for (const k of allKeys) {
+          if (!results[k]) {
+            console.warn(`Parse warning: Key ${k} not found in API response. Attempting broader search.`);
+            logDebug(`デバッグモード：解析警告 - キー '${k}' がAPI応答に見つかりません。代替検索を試みます。`);
+            // タイトルのみで検索してみる (例: 「超抽象化（本質論の抽出）」)
+            const titles = [
+              "超抽象化（本質論の抽出）", "超具体化（重要な具体的事例の記録）", "超構造化（1分で話せフォーマットでの要約）",
+              "過去との対比レビュー", "現代トレンドとの接続（Web検索エージェント風）", "未来への展開予測",
+              "初級レベルでの再現性（構造化文章）", "中級レベルでの解釈・行動", "上級レベルでのロジック・最上位概念"
+            ];
+            const targetTitle = titles[allKeys.indexOf(k)];
+            let foundContent = [];
+            let capturing = false;
+            for (const l of lines) {
+              if (l.includes(targetTitle)) {
+                capturing = true;
+                const contentAfterTitle = l.substring(l.indexOf(targetTitle) + targetTitle.length).replace(/^[:：\s]*/, '').trim();
+                if (contentAfterTitle) foundContent.push(contentAfterTitle);
+                continue;
+              }
+              if (capturing) {
+                const nextTitleMatch = l.match(/^([1-9１-９]|【)/); // 次のセクションの始まり
+                if (nextTitleMatch || l.trim() === '') { // 次のタイトルか空行で停止（改善の余地あり）
+                  if (l.trim() !== '' && !nextTitleMatch) foundContent.push(l); // 空行でなければ追加
+                  break;
+                }
+                foundContent.push(l);
+              }
+            }
+            if (foundContent.length > 0) {
+              results[k] = foundContent.join('\n').trim();
+              logDebug(`デバッグモード：代替検索によりキー '${k}' の内容を抽出しました。`);
+            } else {
+              results[k] = "この視点の分析結果が見つかりませんでした。AIの応答形式を確認してください。" + ` (Raw Text Search for: ${targetTitle})`;
+              logDebug(`デバッグモード：代替検索でもキー '${k}' の内容が見つかりませんでした。`);
+            }
+          }
+        }
+        logDebug("デバッグモード：テキスト解析処理が完了しました。");
+        return results;
+      }
+
+      async function analyzeAndSaveEntry() {
+        const dayNumber = currentEntryDayInput.value;
+        if (!dayNumber) {
+          logDebug("デバッグモード：エラー - 日付が選択されていません。");
+          return;
+        }
+
+        const originalText = diaryTextInput.value.trim();
+        if (!originalText) {
+          showSaveIndicator('日記のテキストを入力してください。');
+          diaryTextInput.focus();
+          logDebug("デバッグモード：警告 - 日記テキストが空です。");
+          return;
+        }
+
+        if (!GEMINI_API_URL || !window.GEMINI_API_KEY) {
+          logDebug("デバッグモード：エラー - APIキーまたはAPI URLが未設定です。処理を中止します。");
+          showSaveIndicator('エラー: API設定不備', true);
+          return;
+        }
+
+        logDebug(`デバッグモード：${dayNumber}日目の日記分析を開始。テキストを取得しました。`);
+        showSaveIndicator('AIが分析中です...');
+        const analyzeButton = document.querySelector('.action-button');
+        analyzeButton.disabled = true;
+        analyzeButton.innerHTML = '<svg class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>分析中...';
+
+        let analysisResults = {};
+        try {
+          analysisResults = await callGeminiApi(originalText);
+          displayAnalysisResults(analysisResults);
+          analysisResultsArea.style.display = 'block';
+          showSaveIndicator('分析が完了しました！');
+          logDebug("デバッグモード：AI分析が正常に完了し、結果を表示しました。");
+
+        } catch (error) {
+          console.error("AI分析エラー:", error);
+          showSaveIndicator('AI分析に失敗しました。後ほど再試行してください。', true);
+          analysisResultsArea.style.display = 'none';
+          logDebug(`デバッグモード：AI分析プロセスでエラーが発生しました: ${error.message}`);
+          analyzeButton.disabled = false;
+          analyzeButton.innerHTML = '<svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>今日の出来事を分析する';
+          return;
+        }
+
+        const dataToSave = {
+          originalText: originalText,
+          analysis: analysisResults,
+          timestamp: new Date().toISOString()
+        };
+
+        try {
+          localStorage.setItem(STORAGE_KEY_PREFIX + dayNumber, JSON.stringify(dataToSave));
+          const dayElement = document.querySelector(`.calendar-day[data-day='${dayNumber}']`);
+          if (dayElement) {
+            dayElement.classList.remove('completed');
+            dayElement.classList.add('analyzed');
+            dayElement.classList.remove('today');
+          }
+          updateProgress();
+          logDebug("デバッグモード：分析結果をローカルストレージに保存しました。");
+        } catch (e) {
+          console.error("ローカルストレージへの保存に失敗:", e);
+          showSaveIndicator('保存に失敗しました。', true);
+          logDebug(`デバッグモード：ローカルストレージへの保存失敗: ${e.message}`);
+        } finally {
+          analyzeButton.disabled = false;
+          analyzeButton.innerHTML = '<svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>今日の出来事を分析する';
+        }
+      }
+
+      function loadDailyData(dayNumber) {
+        try {
+          const savedData = localStorage.getItem(STORAGE_KEY_PREFIX + dayNumber);
+          return savedData ? JSON.parse(savedData) : null;
+        } catch (e) {
+          console.error("データ読み込み失敗 (day " + dayNumber + "):", e);
+          logDebug(`デバッグモード：ローカルストレージからのデータ読み込み失敗 (day ${dayNumber}): ${e.message}`);
+          return null;
+        }
+      }
+
+      function updateProgress() {
+        let analyzedCount = 0;
+        for (let i = 1; i <= TOTAL_DAYS; i++) {
+          const data = loadDailyData(i);
+          if (data && data.analysis) {
+            analyzedCount++;
+          }
+        }
+        const percentage = Math.round((analyzedCount / TOTAL_DAYS) * 100);
+        habitProgressBar.style.width = percentage + '%';
+        habitProgressBar.textContent = percentage + '%';
+
+        if (percentage === 100) {
+          habitProgressBar.classList.add('full');
+        } else {
+          habitProgressBar.classList.remove('full');
+        }
+
+        if (analyzedCount === 0) {
+          progressText.textContent = "「AIと共に、新しい自分を発見しよう。」";
+        } else if (analyzedCount < TOTAL_DAYS) {
+          progressText.textContent = `素晴らしい！ ${analyzedCount} / ${TOTAL_DAYS} 日分析完了！ (残り ${TOTAL_DAYS - analyzedCount} 日)`;
+        } else {
+          progressText.textContent = "30日間分析コンプリート！AI自分ダイアリー達成おめでとうございます！";
+        }
+      }
+
+      function showSaveIndicator(message, isError = false) {
+        saveIndicator.textContent = message;
+        saveIndicator.style.color = isError ? 'red' : '#888'; // エラー時は赤字
+        setTimeout(() => {
+          saveIndicator.textContent = '';
+          saveIndicator.style.color = '#888';
+        }, isError ? 4000 : 2000); // エラー時は少し長く表示
+      }
+
+      diaryTextInput.addEventListener('input', () => {
+        showSaveIndicator('テキスト入力中...');
+      });
+    });
+  </script>
+</body>
+
+</html>

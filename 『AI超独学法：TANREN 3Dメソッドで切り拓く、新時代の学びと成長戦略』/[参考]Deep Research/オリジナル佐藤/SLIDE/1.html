@@ -1,0 +1,152 @@
+思考3Dメソッド[XYZ]：AI共振時代の認知OSと超独学・共創戦略
+セーブポイント-10
+表示とエクスポート
+プレビュー
+コード
+考え中
+ファクトチェックコンテンツ
+編集を選択
+Copy
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>思考3Dメソッド[XYZ]</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+</head>
+
+<body class="bg-black text-white overflow-hidden">
+  <div class="slide"
+    style="width: 1920px; min-height: 1080px; position: relative; overflow: hidden; font-family: 'Noto Sans JP', sans-serif;">
+    <!-- 3D Background Canvas -->
+    <div id="bg-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-blue-800/20 to-black/50 z-10"></div>
+
+    <!-- Content Container -->
+    <div class="absolute inset-0 flex flex-col justify-center items-center z-20 px-24">
+      <!-- Title Area -->
+      <div class="text-center mb-12">
+        <h1
+          class="text-8xl font-black tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-400">
+          思考3Dメソッド<span class="text-white">[</span><span class="text-blue-300">X</span><span
+            class="text-purple-300">Y</span><span class="text-indigo-300">Z</span><span class="text-white">]</span>
+        </h1>
+        <h2 class="text-4xl font-light tracking-wider text-blue-100/90 mb-4">AI共振時代の認知OSと超独学・共創戦略</h2>
+      </div>
+
+      <!-- Visual Element: Human + AI Connection -->
+      <div class="mt-16 relative">
+        <div
+          class="w-64 h-64 bg-gradient-to-r from-purple-500/30 to-blue-500/30 rounded-full flex items-center justify-center">
+          <div class="absolute left-5 top-10 text-7xl text-blue-300 opacity-70">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="absolute right-5 bottom-10 text-7xl text-purple-300 opacity-70">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="w-32 h-32 border-4 border-indigo-400/50 border-dashed rounded-full animate-pulse"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="absolute bottom-10 w-full flex justify-between items-center px-16 z-20">
+      <div class="text-xl text-blue-200/70">2025年5月12日</div>
+      <div class="text-lg text-gray-400">佐藤勝彦 理論</div>
+    </div>
+  </div>
+
+  <script>
+    // Initialize Three.js scene
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('bg-canvas').appendChild(renderer.domElement);
+
+    // Create XYZ axes
+    const axisLength = 400;
+    const axisThickness = 2;
+
+    // X-axis (red)
+    const xAxisGeometry = new THREE.BoxGeometry(axisLength, axisThickness, axisThickness);
+    const xAxisMaterial = new THREE.MeshBasicMaterial({ color: 0x3B82F6 });
+    const xAxis = new THREE.Mesh(xAxisGeometry, xAxisMaterial);
+    scene.add(xAxis);
+
+    // Y-axis (green)
+    const yAxisGeometry = new THREE.BoxGeometry(axisThickness, axisLength, axisThickness);
+    const yAxisMaterial = new THREE.MeshBasicMaterial({ color: 0xA855F7 });
+    const yAxis = new THREE.Mesh(yAxisGeometry, yAxisMaterial);
+    scene.add(yAxis);
+
+    // Z-axis (blue)
+    const zAxisGeometry = new THREE.BoxGeometry(axisThickness, axisThickness, axisLength);
+    const zAxisMaterial = new THREE.MeshBasicMaterial({ color: 0x6366F1 });
+    const zAxis = new THREE.Mesh(zAxisGeometry, zAxisMaterial);
+    scene.add(zAxis);
+
+    // Add particles to represent data points
+    const particlesCount = 200;
+    const particles = new THREE.Group();
+
+    for (let i = 0; i < particlesCount; i++) {
+      const size = Math.random() * 3 + 1;
+      const geometry = new THREE.SphereGeometry(size, 8, 8);
+
+      let material;
+      const colorChoice = Math.random();
+
+      if (colorChoice < 0.33) {
+        material = new THREE.MeshBasicMaterial({ color: 0x3B82F6, transparent: true, opacity: 0.7 });
+      } else if (colorChoice < 0.66) {
+        material = new THREE.MeshBasicMaterial({ color: 0xA855F7, transparent: true, opacity: 0.7 });
+      } else {
+        material = new THREE.MeshBasicMaterial({ color: 0x6366F1, transparent: true, opacity: 0.7 });
+      }
+
+      const particle = new THREE.Mesh(geometry, material);
+
+      particle.position.x = (Math.random() - 0.5) * axisLength;
+      particle.position.y = (Math.random() - 0.5) * axisLength;
+      particle.position.z = (Math.random() - 0.5) * axisLength;
+
+      particles.add(particle);
+    }
+
+    scene.add(particles);
+
+    // Position camera
+    camera.position.z = 400;
+    camera.position.x = 100;
+    camera.position.y = 100;
+    camera.lookAt(0, 0, 0);
+
+    // Animation
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Rotate the entire particle system
+      particles.rotation.y += 0.002;
+      particles.rotation.x += 0.001;
+
+      // Rotate the axes slightly
+      xAxis.rotation.x += 0.001;
+      yAxis.rotation.y += 0.001;
+      zAxis.rotation.z += 0.001;
+
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  </script>
+</body>
+
+</html>

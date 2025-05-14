@@ -1,0 +1,539 @@
+body {
+  font-family: 'Meiryo', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  margin: 0;
+  overflow: hidden;
+  background-color: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #333;
+}
+
+#mainContent {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+#header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  z-index: 100;
+}
+
+#qinChatContainer,
+#coalitionChatContainer {
+  width: 450px;
+  /* 固定幅 */
+  flex-shrink: 0;
+  /* コンテナが縮まないようにする */
+  background-color: rgba(223, 230, 233, 0.95);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  transition: width 0.3s ease;
+}
+
+#qinChatContainer {
+  border-right: 2px solid #b2bec3;
+}
+
+#coalitionChatContainer {
+  border-left: 2px solid #b2bec3;
+}
+
+#container {
+  /* 3D表示エリア */
+  flex-grow: 1;
+  /* 残りのスペースを全て使用 */
+  position: relative;
+  overflow: hidden;
+  /* 追加: レンダラーがはみ出ないように */
+}
+
+.chat-header {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 18px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+#qinChatHeader {
+  background-color: rgba(220, 20, 60, 0.2);
+  color: #dc143c;
+}
+
+#qinChatHeader::before {
+  content: "🛡️";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+#coalitionChatHeader {
+  background-color: rgba(65, 105, 225, 0.2);
+  color: #4169e1;
+}
+
+#coalitionChatHeader::before {
+  content: "⚔️";
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.chatLog {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.phase-indicator {
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 12px;
+  margin: 10px 0;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  animation: fadeIn 0.3s ease-out;
+  max-width: 90%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-bubble {
+  max-width: 100%;
+  padding: 12px 15px;
+  border-radius: 15px;
+  font-size: 15px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  font-weight: 700;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.chat-bubble-emoji {
+  font-size: 24px;
+  position: absolute;
+  bottom: -10px;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+#qinChatLog .chat-bubble {
+  background-color: #dc143c;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+  margin-left: 20px;
+}
+
+#qinChatLog .chat-bubble-emoji {
+  right: -5px;
+}
+
+#coalitionChatLog .chat-bubble {
+  background-color: #4169e1;
+  color: white;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  margin-right: 20px;
+}
+
+#coalitionChatLog .chat-bubble-emoji {
+  left: -5px;
+}
+
+.chat-speaker {
+  font-size: 14px;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.speaker-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  margin-left: 6px;
+  font-size: 12px;
+  color: white;
+}
+
+#qinChatLog .chat-speaker {
+  align-self: flex-end;
+}
+
+#qinChatLog .speaker-icon {
+  background-color: #dc143c;
+  margin-left: 6px;
+  margin-right: 0;
+  order: 2;
+}
+
+#coalitionChatLog .chat-speaker {
+  align-self: flex-start;
+}
+
+#coalitionChatLog .speaker-icon {
+  background-color: #4169e1;
+}
+
+.chat-timestamp {
+  font-size: 10px;
+  color: #95a5a6;
+  margin-top: 2px;
+  align-self: center;
+}
+
+#scenePopup {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(44, 62, 80, 0.95);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  font-size: 22px;
+  font-weight: 700;
+  z-index: 10;
+  max-width: 80%;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+  letter-spacing: 1px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#scenePopup.active {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+#focusPopup {
+  position: absolute;
+  padding: 12px 20px;
+  background-color: rgba(255, 193, 7, 0.95);
+  color: #000;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  pointer-events: none;
+  z-index: 20;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.4s ease;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  max-width: 300px;
+  text-align: center;
+  transform: scale(0.9);
+}
+
+#focusPopup.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#focusPopup::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid rgba(255, 193, 7, 0.95);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#infoPanel {
+  position: fixed;
+  bottom: 50px;
+  left: 470px;
+  /* 450px (チャット幅) + 20px (マージン) */
+  right: 470px;
+  /* 450px (チャット幅) + 20px (マージン) */
+  background-color: rgba(44, 62, 80, 0.95);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  max-height: 120px;
+  overflow-y: auto;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  line-height: 1.7;
+  z-index: 5;
+  transition: all 0.4s ease;
+  transform-origin: bottom center;
+}
+
+#infoPanel.highlight {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(44, 62, 80, 0.98);
+}
+
+#infoPanel ruby rt {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #34495e;
+  position: fixed;
+  bottom: 0;
+  left: 450px;
+  right: 450px;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+#phaseIndicator {
+  color: white;
+  font-size: 0.9em;
+  margin-right: 15px;
+  font-weight: 700;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.unit-label {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.emphasis-emoji {
+  font-size: 36px;
+  color: #ff3030;
+  text-shadow: 0 0 10px white, 0 0 15px yellow, 0 0 20px orange;
+  animation: pulseEmoji 1s infinite alternate;
+  pointer-events: none;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+  z-index: 30;
+}
+
+@keyframes pulseEmoji {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.4);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+.highlight-circle {
+  position: absolute;
+  border: 4px solid #ffeb3b;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ffeb3b, inset 0 0 10px rgba(255, 235, 59, 0.5);
+  pointer-events: none;
+  animation: highlightPulse 1.5s infinite ease-in-out;
+  z-index: 25;
+}
+
+@keyframes highlightPulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#lowerThird {
+  position: fixed;
+  top: 80px;
+  /* ヘッダーの下あたり */
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  /* 左側は角丸なし */
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#lowerThird.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.placeholder-message {
+  opacity: 0.7;
+  align-self: flex-start;
+  /* 基本は左寄せ */
+}
+
+.placeholder-message .chat-bubble {
+  background-color: #e0e0e0;
+  /* やや薄いグレー */
+  color: #555;
+  font-style: italic;
+  padding: 8px 12px;
+  border: 1px dashed #ccc;
+  box-shadow: none;
+}
+
+/* 秦軍チャット側のプレースホルダーは右寄せにする */
+#qinChatLog .placeholder-message {
+  align-self: flex-end;
+}
+
+#qinChatLog .placeholder-message .chat-bubble {
+  margin-left: 0;
+  margin-right: 20px;
+  /* 通常メッセージとのバランス */
+}
+
+#coalitionChatLog .placeholder-message .chat-bubble {
+  margin-right: 0;
+  margin-left: 20px;
+  /* 通常メッセージとのバランス */
+}
+
+.phase-indicator-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.phase-main-theme {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.phase-sub-theme {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.phase-topic {
+  font-size: 12px;
+  color: #777;
+  font-style: italic;
+}
+
+.message-wrapper {
+  /* このラッパーで高さを制御 */
+  width: 100%;
+  /* 親の幅に合わせる */
+}
+
+.placeholder-wrapper {
+  /* プレースホルダーのラッパーは透明にするなど、目立たないように */
+  /* 必要であれば、デバッグ用に枠線などを一時的につける */
+}

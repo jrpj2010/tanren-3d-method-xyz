@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第6章 実践編2：リアルな仕事の課題をAIと突破する | AI超独学法</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Preline UI -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- カスタムCSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- ナビゲーションバー -->
+  <header class="navbar bg-white/95 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <a href="#" class="flex items-center">
+          <i class="fas fa-brain text-primary text-2xl mr-3"></i>
+          <span class="text-xl font-bold text-primary">AI超独学法</span>
+        </a>
+        <span class="hidden md:block text-sm text-gray-500">TANREN 3Dメソッド</span>
+      </div>
+
+      <nav class="hidden md:flex space-x-8">
+        <a href="#intro" class="nav-link">イントロダクション</a>
+        <a href="#sales" class="nav-link">営業</a>
+        <a href="#marketing" class="nav-link">マーケティング</a>
+        <a href="#hr" class="nav-link">人材育成</a>
+        <a href="#career" class="nav-link">キャリア開発</a>
+      </nav>
+
+      <button type="button" class="md:hidden text-gray-500 hover:text-primary" data-hs-overlay="#mobile-menu"
+        aria-controls="mobile-menu" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルメニュー（Preline UI） -->
+  <div id="mobile-menu"
+    class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-y-auto bg-white py-10 px-4">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="text-xl font-bold">AI超独学法</h3>
+      <button type="button" class="text-gray-500 hover:text-primary" data-hs-overlay="#mobile-menu">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+    <nav class="space-y-4">
+      <a href="#intro" class="block py-2 text-lg" data-hs-overlay="#mobile-menu">イントロダクション</a>
+      <a href="#sales" class="block py-2 text-lg" data-hs-overlay="#mobile-menu">営業</a>
+      <a href="#marketing" class="block py-2 text-lg" data-hs-overlay="#mobile-menu">マーケティング</a>
+      <a href="#hr" class="block py-2 text-lg" data-hs-overlay="#mobile-menu">人材育成</a>
+      <a href="#career" class="block py-2 text-lg" data-hs-overlay="#mobile-menu">キャリア開発</a>
+    </nav>
+  </div>
+
+  <!-- ヒーローセクション -->
+  <section id="intro" class="hero">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-7/12 mb-8 md:mb-0 fade-in">
+        <div class="mb-4 text-blue-700 text-xl font-bold">実践編2</div>
+        <h1 class="hero-title mb-6">
+          第6章<br>
+          リアルな仕事の課題を<br>
+          AIと突破する
+        </h1>
+        <div class="blue-accent"></div>
+        <h2 class="hero-subtitle mt-4">職種別シナリオ</h2>
+
+        <div class="mt-8 flex items-center">
+          <i class="fas fa-robot text-blue-600 text-2xl mr-3"></i>
+          <span class="text-xl text-gray-600">AIとの共創で仕事を進化させる</span>
+        </div>
+
+        <div class="mt-8">
+          <a href="#sales"
+            class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-full shadow-md hover:bg-primary-dark transition-all">
+            <span>詳しく見る</span>
+            <i class="fas fa-arrow-down ml-2"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="md:w-5/12 slide-in-right">
+        <div class="relative rounded-xl overflow-hidden shadow-xl">
+          <img
+            src="https://blog.emb.global/wp-content/uploads/2024/01/The-Future-of-AI-Virtual-Assistant-in-Businesses-in-2024.webp"
+            alt="AIビジネスアシスタント" class="w-full h-auto">
+          <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <i class="fas fa-chevron-down text-2xl text-primary"></i>
+    </div>
+  </section>
+
+  <!-- 章の概要セクション -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center fade-in">
+        <h2 class="text-3xl font-bold mb-6">AIと共にリアルな仕事の課題を解決する</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          この章では、TANREN 3Dメソッドとこれまで学んだAI対話スキルを実際のビジネスシーンに適用し、
+          様々な職種・分野で直面する課題をAIと共にどのように突破していくかを具体的なシナリオを通じて探求します。
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-handshake text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">営業</h3>
+            <p class="text-gray-600">AIが最強の右腕として営業活動を変革</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-bullseye text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">マーケティング</h3>
+            <p class="text-gray-600">差別化の鍵「変数」を極める戦略</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-users text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">人材育成</h3>
+            <p class="text-gray-600">AIと紡ぐ個別最適化フィードバック</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-route text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">キャリア開発</h3>
+            <p class="text-gray-600">シン・ジェネラリストへの道</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 営業セクション -->
+  <section id="sales" class="section-container py-20">
+    <div class="flex flex-col lg:flex-row gap-12">
+      <div class="lg:w-1/2 fade-in">
+        <div class="relative">
+          <span class="absolute -top-6 -left-6 text-8xl font-black text-blue-100">01</span>
+          <h2 class="section-title relative z-10">
+            営業：<span class="text-blue-600">AIが最強の右腕に</span>
+          </h2>
+        </div>
+        <h3 class="text-2xl text-gray-700 mb-8">商談アシストから提案書作成まで</h3>
+
+        <div class="flex flex-wrap mb-8">
+          <div class="badge">
+            <i class="fas fa-search-plus"></i>
+            <span>超具体化</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-clock"></i>
+            <span>Y軸(現代)</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-layer-group"></i>
+            <span>Z軸Lv1-2</span>
+          </div>
+        </div>
+
+        <p class="mb-6 text-gray-700">
+          営業は、顧客の心を掴み、信頼を勝ち取り、結果を出すビジネスの最前線です。しかし、多くの営業パーソンが日々さまざまな壁に直面しています：
+        </p>
+
+        <div class="bg-blue-50 p-6 rounded-lg mb-8">
+          <h4 class="font-bold text-lg mb-3 text-blue-800">営業現場の課題</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-circle-exclamation text-blue-600 mt-1 mr-3"></i>
+              <span><span class="font-semibold">ヒアリングの壁：</span> 「顧客の本当のニーズを引き出せているだろうか？」「重要な質問を聞き忘れてしまった…」</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-circle-exclamation text-blue-600 mt-1 mr-3"></i>
+              <span><span class="font-semibold">提案書作成の壁：</span>
+                「商談内容は理解したけど、何から書けばいいんだ？」「顧客一人ひとりに合わせた提案書を作る時間がない…」</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="mb-8 text-gray-700">
+          しかし、もし決して疲れを知らず、常に冷静沈着で、しかも会社の製品知識やトップセールスのノウハウを熟知した<span
+            class="highlight highlight-primary">超優秀な「営業アシスタント」</span>が常に寄り添ってくれるとしたら？それこそが、<span
+            class="highlight highlight-primary">AIエージェント</span>がもたらす営業現場の革命です。
+        </p>
+
+        <div class="mt-10">
+          <div
+            class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition-all cursor-pointer"
+            data-hs-overlay="#sales-detail-modal">
+            <span>AI営業革命の詳細を見る</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 slide-in-right">
+        <div class="relative rounded-xl overflow-hidden shadow-xl h-full">
+          <img
+            src="https://agency.siteimage.com.ua/wp-content/uploads/2024/06/DALL%C2%B7E-2024-06-19-00.08.48-An-AI-sales-assistant-in-a-modern-office-setting-seamlessly-integrating-into-business-processes.-The-AI-appears-as-a-friendly-intelligent-holographi.webp"
+            alt="AIセールスアシスタント" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent to-blue-900/30"></div>
+
+          <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+            <h3 class="text-2xl font-bold mb-2">AIで営業プロセスを革新</h3>
+            <p class="text-white/90">顧客との対話に集中し、AIがすべてのデータを収集・分析</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- セールス詳細モーダル -->
+    <div id="sales-detail-modal"
+      class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+        <div
+          class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+          <div class="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700">
+            <h3 class="font-bold text-gray-800 dark:text-white">
+              AI営業革命の詳細
+            </h3>
+            <button type="button"
+              class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-sm dark:text-gray-500 dark:hover:text-gray-400 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800"
+              data-hs-overlay="#sales-detail-modal">
+              <span class="sr-only">Close</span>
+              <svg class="w-3.5 h-3.5" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.258206 1.00652C0.351976 0.912791 0.479126 0.860131 0.611706 0.860131C0.744296 0.860131 0.871447 0.912791 0.965207 1.00652L3.61171 3.65302L6.25822 1.00652C6.30432 0.960389 6.36042 0.924514 6.42192 0.900991C6.48342 0.877468 6.54922 0.86647 6.61522 0.86847C6.68122 0.87047 6.74622 0.884698 6.80522 0.911052C6.86422 0.937406 6.91682 0.975499 6.95982 1.02252C7.00282 1.06954 7.03582 1.12372 7.05682 1.18304C7.07782 1.24236 7.08682 1.30538 7.08142 1.36742C7.07602 1.42946 7.05642 1.48944 7.02142 1.54372C6.98642 1.598 6.93742 1.64489 6.87952 1.68152L4.23301 4.32803L6.87952 6.97454C6.91672 7.01117 6.94812 7.05602 6.97142 7.1063C6.99472 7.15658 7.00932 7.21053 7.01452 7.26652C7.01972 7.32251 7.01552 7.37925 6.99972 7.43297C6.98312 7.48669 6.95822 7.53701 6.92522 7.58016C6.89222 7.62331 6.85122 7.65858 6.80522 7.68384C6.75922 7.70911 6.70892 7.7234 6.65682 7.72612C6.60472 7.73065 6.55262 7.7227 6.50352 7.70284C6.45442 7.68298 6.40892 7.65154 6.37052 7.61016L3.61171 4.95254L0.965207 7.61016C0.920139 7.65441 0.864777 7.68712 0.803807 7.70635C0.742166 7.72408 0.678255 7.7282 0.615462 7.71827C0.552591 7.70835 0.492387 7.68449 0.438387 7.64814C0.3843 7.61103 0.338069 7.5616 0.302819 7.50311C0.26693 7.44277 0.24323 7.37452 0.234153 7.30344C0.225076 7.23237 0.230779 7.15979 0.250789 7.09145C0.270798 7.02311 0.304453 6.9613 0.349349 6.9113L2.99586 4.32803L0.349349 1.68152C0.303122 1.63364 0.267443 1.57595 0.245535 1.51133C0.223627 1.44671 0.216058 1.37749 0.222604 1.30939C0.22915 1.24129 0.249648 1.17639 0.282452 1.12113C0.315255 1.06587 0.35961 1.02172 0.411944 0.992957L0.258206 1.00652Z"
+                  fill="currentColor" />
+              </svg>
+            </button>
+          </div>
+          <div class="p-6 overflow-y-auto">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-xl font-bold text-blue-700 mb-4">【商談中の革命①】 AIが君の「超記憶」になる！</h3>
+                <p class="mb-4">AIアシスタントは、商談中の会話を完璧に文字起こしするだけでなく、以下の情報をリアルタイムで構造化します：</p>
+                <ul class="space-y-2 pl-6 list-disc text-gray-700">
+                  <li>誰が、いつ、何を話したか（話者分離）</li>
+                  <li>重要なキーワードと顧客が抱える課題</li>
+                  <li>表明されたニーズと決定事項</li>
+                  <li>宿題（Next Action）の抽出</li>
+                </ul>
+                <p class="mt-4">これにより、あなたは顧客との対話に完全に集中できます。メモを取る必要も、記憶に頼る必要もありません。</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-blue-700 mb-4">【商談中の革命②】 AIが君の「質問力」を覚醒させる！</h3>
+                <p class="mb-4">AIアシスタントは、あなたの質問力を次のレベルへと引き上げます：</p>
+                <div class="bg-gray-50 p-4 rounded-lg mb-4 text-gray-700">
+                  <p class="italic">「〇〇様が先ほど『コスト削減が最優先課題』とおっしゃいましたが、具体的な目標数値について<span
+                      class="font-semibold">深掘り</span>されてはいかがでしょうか？」</p>
+                  <p class="italic mt-2">「必須確認項目のうち、『導入後のサポート体制』に関するご質問がまだのようです。」</p>
+                </div>
+                <p>経験の浅い新人でも、重要なポイントを逃さず、自信を持ってヒアリングを進められます。</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-blue-700 mb-4">【商談後の革命】 AIが「秒速」で提案書を生成！</h3>
+                <p class="mb-4">商談後、AIアシスタントはヒアリングログを基に、顧客一人ひとりにパーソナライズされた提案書の「たたき台」を秒速で生成します。</p>
+                <p>あなたはゼロから構成を考え、文章をひねり出す必要はなく、提案内容のブラッシュアップと、人間ならではの熱意と誠意を込める作業に集中できます。</p>
+              </div>
+
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">AI時代の営業に求められる「人間力」</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                  <div class="flex items-start">
+                    <i class="fas fa-handshake text-blue-600 mt-1 mr-3"></i>
+                    <div>
+                      <h4 class="font-bold">深い関係構築力</h4>
+                      <p class="text-sm">顧客との間に、取引相手を超えた信頼関係を築く力</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-puzzle-piece text-blue-600 mt-1 mr-3"></i>
+                    <div>
+                      <h4 class="font-bold">複雑な課題解決能力</h4>
+                      <p class="text-sm">多角的な視点から創造的な解決策を生み出す力</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-chess text-blue-600 mt-1 mr-3"></i>
+                    <div>
+                      <h4 class="font-bold">戦略的思考力</h4>
+                      <p class="text-sm">データに基づき、大局的な視点から最適な戦略を立案する力</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-heart text-blue-600 mt-1 mr-3"></i>
+                    <div>
+                      <h4 class="font-bold">倫理観と誠実さ</h4>
+                      <p class="text-sm">常に顧客と社会に対して誠実であるという姿勢</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">AI×営業の効果</h3>
+                <div class="chart-container">
+                  <canvas id="salesPerformanceChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-gray-700">
+            <button type="button"
+              class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+              data-hs-overlay="#sales-detail-modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- マーケティングセクション -->
+  <section id="marketing" class="py-20 bg-gray-50">
+    <div class="section-container">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-1/2 fade-in">
+          <div class="relative">
+            <span class="absolute -top-6 -left-6 text-8xl font-black text-blue-100">02</span>
+            <h2 class="section-title relative z-10">
+              マーケティング：<span class="text-blue-600">AI分析を超える戦略</span>
+            </h2>
+          </div>
+          <h3 class="text-2xl text-gray-700 mb-8">差別化の鍵「変数」を極める</h3>
+
+          <div class="flex flex-wrap mb-8">
+            <div class="badge">
+              <i class="fas fa-sitemap"></i>
+              <span>超抽象化</span>
+            </div>
+            <div class="badge">
+              <i class="fas fa-cubes"></i>
+              <span>X軸(構造)</span>
+            </div>
+            <div class="badge">
+              <i class="fas fa-layer-group"></i>
+              <span>Z軸Lv2</span>
+            </div>
+          </div>
+
+          <p class="mb-6 text-gray-700">
+            現代のマーケターは、かつてないほどのデータとツールに囲まれています。AIはこれらの膨大な情報を瞬時に処理し、精緻な分析レポートや施策の提案までしてくれます。
+          </p>
+
+          <div class="bg-blue-50 p-6 rounded-lg mb-8">
+            <h4 class="font-bold text-lg mb-3 text-blue-800">AI時代のマーケティングの課題</h4>
+            <div class="speech-bubble mb-6">
+              <p class="italic text-gray-700">もし、あなたも、そしてあなたの競合も、同じように高性能なAIを使い、同じような市場データを分析したら、一体どうなるだろうか？</p>
+            </div>
+            <p class="text-gray-700">AIによる効率化が、結果として<span class="highlight highlight-accent">没個性化</span>と<span
+                class="highlight highlight-accent">同質化競争</span>を招き、真の意味での「<span
+                class="highlight highlight-primary">差別化</span>」を困難にしてしまう恐れがあります。</p>
+          </div>
+
+          <blockquote class="border-l-4 border-blue-600 pl-4 italic mb-8 text-gray-700">
+            AI時代のマーケティングにおいて、単にAIに分析を「任せる」だけでは、もはや競争優位を築くことはできません。AIが導き出す「正解らしい答え（定数）」を超える、あなただけの「勝利の方程式」を描き出す必要があります。
+          </blockquote>
+
+          <p class="mb-8 text-gray-700">
+            その方程式の鍵を握るのが、<span class="highlight highlight-primary">「変数」</span>という概念です。
+          </p>
+
+          <div class="mt-10">
+            <div
+              class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition-all cursor-pointer"
+              data-hs-overlay="#marketing-detail-modal">
+              <span>「変数」の詳細と活用法を見る</span>
+              <i class="fas fa-arrow-right ml-2"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 slide-in-right">
+          <div class="chart-container bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-bold text-center text-gray-800 mb-6">「変数」を活かした差別化戦略の効果</h3>
+            <canvas id="marketingStrategyChart"></canvas>
+            <div class="grid grid-cols-2 gap-4 mt-6">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-gray-700 mb-2">AIのみの分析</h4>
+                <p class="text-sm text-gray-600">一般的な市場データに基づく分析で、競合と同質化しやすい</p>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-blue-700 mb-2">AI+独自変数の共創</h4>
+                <p class="text-sm text-gray-600">あなた固有の価値観・強みを反映した独自の戦略</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- マーケティング詳細モーダル -->
+    <div id="marketing-detail-modal"
+      class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+        <div class="flex flex-col bg-white border shadow-sm rounded-xl">
+          <div class="flex justify-between items-center py-3 px-4 border-b">
+            <h3 class="font-bold text-gray-800">
+              「変数」という概念と差別化戦略
+            </h3>
+            <button type="button"
+              class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-sm"
+              data-hs-overlay="#marketing-detail-modal">
+              <span class="sr-only">Close</span>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="p-6 overflow-y-auto">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-xl font-bold text-blue-700 mb-4">「変数」とは何か？</h3>
+                <p class="mb-4">マーケティング戦略における「変数」とは、<span
+                    class="font-semibold">あなた（あるいはあなたの会社）だけが持つ、他社には容易に模倣できない、独自の資源、能力、価値観、歴史、文化、そして現場に眠る暗黙知の集合体</span>です。
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3">
+                      <i class="fas fa-lightbulb text-blue-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">独自の技術やノウハウ</h4>
+                    <p class="text-sm text-gray-600">特許、秘伝のレシピ、長年培った職人技</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3">
+                      <i class="fas fa-star text-blue-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">強固なブランドや評判</h4>
+                    <p class="text-sm text-gray-600">顧客からの揺るぎない信頼、熱狂的なファンコミュニティ</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3">
+                      <i class="fas fa-handshake text-blue-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">特別な関係性</h4>
+                    <p class="text-sm text-gray-600">特定地域との深い絆、強力なパートナーシップ</p>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <p class="text-gray-700">
+                    これらの「変数」は、AIがインターネットをクロールしたり、一般的な市場データを分析したりするだけでは、決して見つけ出すことができない、あなたの中に深く眠る「宝」なのです。</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-blue-700 mb-4">AIと共に「変数を極める」実践4ステップ</h3>
+
+                <div class="relative pl-8 pb-6 border-l-2 border-blue-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">1</div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-2">AIによる「市場の地図」作成</h4>
+                  <p class="text-gray-700">AIに基本的な市場調査と競合分析を依頼し、客観的な「事実（定数）」を収集・整理させる。</p>
+                </div>
+
+                <div class="relative pl-8 pb-6 border-l-2 border-blue-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">2</div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-2">「変数」の発掘作業</h4>
+                  <p class="text-gray-700">「我々だけが持つ技術は？」「顧客が熱狂する理由は？」など、自社の中に眠る「変数」を徹底的に洗い出す。</p>
+                </div>
+
+                <div class="relative pl-8 pb-6 border-l-2 border-blue-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">3</div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-2">AIへの「変数注入」と戦略オプション生成</h4>
+                  <p class="text-gray-700">AIに「変数」情報を明確にインプットし、それを踏まえた上で、差別化戦略の具体的なオプションを生成させる。</p>
+                  <div class="bg-gray-50 p-4 rounded-lg mt-2 text-sm">
+                    <h5 class="font-bold text-gray-700 mb-1">プロンプト設計例：</h5>
+                    <p class="text-gray-600 italic">「これらの定数分析と独自変数を踏まえ、競合と明確に差別化するための新しいポジショニング案を3つ提案してください」</p>
+                  </div>
+                </div>
+
+                <div class="relative pl-8">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">4</div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-2">人間の戦略的意思決定と実行計画への落とし込み</h4>
+                  <p class="text-gray-700">AIが生成した戦略オプションを、自社のビジョン、リソース、リスク許容度と照らし合わせ、総合的に評価し意思決定する。</p>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">AI時代のマーケターを輝かせる「変数」</h3>
+                <p class="text-gray-700 mb-4">
+                  AI時代のマーケティングは、もはやデータ分析ツールを使いこなすだけの仕事ではありません。AIの力を借りて市場の「定数」を正確に把握しつつ、自社の中に眠る唯一無二の「変数」を発掘し、磨き上げ、そして戦略的に掛け合わせることで、顧客にとってかけがえのない「オンリーワンの価値」を創造していく、高度な知性と感性のゲームなのです。
+                </p>
+
+                <blockquote class="border-l-4 border-blue-600 pl-4 italic">
+                  思考OS「TANREN
+                  3Dメソッド」で思考を鍛え、AIを最強の分析パートナーとし、そしてあなただけの「変数」を極める。その先に、競争の激しい市場で燦然と輝く、あなたの、そしてあなたの会社の未来があります。
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+            <button type="button"
+              class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+              data-hs-overlay="#marketing-detail-modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 人材育成セクション -->
+  <section id="hr" class="section-container py-20">
+    <div class="flex flex-col lg:flex-row gap-12">
+      <div class="lg:w-1/2 fade-in">
+        <div class="relative">
+          <span class="absolute -top-6 -left-6 text-8xl font-black text-blue-100">03</span>
+          <h2 class="section-title relative z-10">
+            人材育成：<span class="text-blue-600">心に響くフィードバック</span>
+          </h2>
+        </div>
+        <h3 class="text-2xl text-gray-700 mb-8">AIと紡ぐ個別最適化</h3>
+
+        <div class="flex flex-wrap mb-8">
+          <div class="badge">
+            <i class="fas fa-cubes"></i>
+            <span>X軸(構造)</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-user-circle"></i>
+            <span>ペルソナ/シナリオ</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-layer-group"></i>
+            <span>Z軸Lv1-2</span>
+          </div>
+        </div>
+
+        <p class="mb-6 text-gray-700">
+          リーダーやマネージャーにとって、「<span
+            class="highlight highlight-primary">人材育成</span>」は最も重要で、最も心を砕くべきテーマの一つです。中でも、部下一人ひとりと向き合い、その成長を支援する「<span
+            class="highlight highlight-primary">1on1ミーティング</span>」と「<span
+            class="highlight highlight-primary">フィードバック</span>」は、育成の成否を左右する核心的なコミュニケーションです。
+        </p>
+
+        <div class="bg-blue-50 p-6 rounded-lg mb-8">
+          <h4 class="font-bold text-lg mb-3 text-blue-800">フィードバックの難しさ</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-circle-exclamation text-blue-600 mt-1 mr-3"></i>
+              <span>「良かれと思って言ったのに、逆効果だった…」</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-circle-exclamation text-blue-600 mt-1 mr-3"></i>
+              <span>「何を伝えれば、部下のやる気に火をつけられるんだろう？」</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-circle-exclamation text-blue-600 mt-1 mr-3"></i>
+              <span>「忙しくて、一人ひとりに合わせた丁寧なフィードバックを考える時間がない…」</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="mb-8 text-gray-700">
+          この繊細で難しいフィードバックのプロセスを、AIが強力にサポートします。あなたの指導方針を理解し、部下一人ひとりの状況に合わせて、客観的で、具体的で、そして個別最適化された「<span
+            class="highlight highlight-primary">フィードバックの原案</span>」をAIが瞬時に作成。あなたはその「原案」に「魂」を吹き込むことで、最高のフィードバックが生まれます。
+        </p>
+
+        <div class="mt-10">
+          <div
+            class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition-all cursor-pointer"
+            data-hs-overlay="#hr-detail-modal">
+            <span>AIフィードバック支援の詳細を見る</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 space-y-8 slide-in-right">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold mb-4 text-gray-800">AIフィードバック支援の価値</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3">
+                <i class="fas fa-balance-scale text-blue-600"></i>
+              </div>
+              <h4 class="font-bold text-gray-800 mb-2">客観性とデータに基づいた視点</h4>
+              <p class="text-sm text-gray-600">無意識のバイアスや感情に左右されない、公平で事実に基づいたフィードバックの土台</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3">
+                <i class="fas fa-user-cog text-blue-600"></i>
+              </div>
+              <h4 class="font-bold text-gray-800 mb-2">個別最適化のスケーラビリティ</h4>
+              <p class="text-sm text-gray-600">多忙なマネージャーでも、全ての部下に高度にパーソナライズされたフィードバックを提供</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-container bg-white p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold text-center text-gray-800 mb-6">フィードバック効果の比較</h3>
+          <div style="height: 300px;">
+            <canvas id="feedbackEffectivenessChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 人材育成詳細モーダル -->
+    <div id="hr-detail-modal"
+      class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+        <div class="flex flex-col bg-white border shadow-sm rounded-xl">
+          <div class="flex justify-between items-center py-3 px-4 border-b">
+            <h3 class="font-bold text-gray-800">
+              心に響くフィードバックをAIと共創する方法
+            </h3>
+            <button type="button"
+              class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700"
+              data-hs-overlay="#hr-detail-modal">
+              <span class="sr-only">Close</span>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="p-6 overflow-y-auto">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-xl font-bold text-blue-700 mb-4">「型・ペルソナ・シナリオ」設計術</h3>
+                <p class="mb-6">AIに効果的なフィードバック原案を作成させるための鍵を握るのが、「型」「ペルソナ」「シナリオ」という三位一体のインプット設計です。</p>
+
+                <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                  <ul class="flex flex-col">
+                    <li class="inline-block">
+                      <button
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-6 w-full text-left border-b border-gray-200 hover:text-black active"
+                        id="type-tab" data-hs-tab="#type-content" aria-controls="type-content" role="tab">
+                        <span class="font-bold text-lg flex items-center">
+                          <i class="fas fa-sitemap text-blue-600 mr-2"></i>
+                          フィードバックの「型」
+                        </span>
+                      </button>
+                    </li>
+                    <li class="inline-block">
+                      <button
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-6 w-full text-left border-b border-gray-200 hover:text-black"
+                        id="persona-tab" data-hs-tab="#persona-content" aria-controls="persona-content" role="tab">
+                        <span class="font-bold text-lg flex items-center">
+                          <i class="fas fa-user-circle text-blue-600 mr-2"></i>
+                          部下の「ペルソナ」
+                        </span>
+                      </button>
+                    </li>
+                    <li class="inline-block">
+                      <button
+                        class="hs-tab-active:font-semibold hs-tab-active:border-blue-600 hs-tab-active:text-blue-600 py-4 px-6 w-full text-left border-b border-gray-200 hover:text-black"
+                        id="scenario-tab" data-hs-tab="#scenario-content" aria-controls="scenario-content" role="tab">
+                        <span class="font-bold text-lg flex items-center">
+                          <i class="fas fa-comments text-blue-600 mr-2"></i>
+                          1on1の「シナリオ」
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+
+                  <div class="p-6">
+                    <div id="type-content" role="tabpanel" aria-labelledby="type-tab">
+                      <h4 class="text-lg font-bold mb-3">あなたの指導OSをAIにインストール</h4>
+                      <p class="mb-3 text-gray-700">フィードバックに一貫性を持たせ、組織としての育成方針を明確にするため。AIにとっても、応答の基本原則となる「OS」が必要です。</p>
+                      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                        <h5 class="font-bold mb-2">定義すべき内容：</h5>
+                        <ul class="list-disc pl-6 text-gray-700 space-y-1">
+                          <li>あなたの指導哲学（強みを伸ばす、課題克服を支援するなど）</li>
+                          <li>組織のバリューや行動指針</li>
+                          <li>重視するフィードバックフレームワーク（SBIモデル、GROWモデルなど）</li>
+                          <li>フィードバックの基本トーン（肯定的、建設的、具体的）</li>
+                        </ul>
+                      </div>
+                      <p class="text-gray-700">これらの「型」を、AIのシステムプロンプトやカスタムインストラクションに明確なルールとして記述します。</p>
+                    </div>
+                    <div id="persona-content" class="hidden" role="tabpanel" aria-labelledby="persona-tab">
+                      <h4 class="text-lg font-bold mb-3">AIに「その人」を深く理解させる</h4>
+                      <p class="mb-3 text-gray-700">フィードバックを個別最適化し、相手の心に響く「自分ごと」のメッセージにするために、部下の「個」に関する情報をAIに提供します。</p>
+                      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                        <h5 class="font-bold mb-2">定義すべき内容：</h5>
+                        <ul class="list-disc pl-6 text-gray-700 space-y-1">
+                          <li>基本情報、スキル、経験</li>
+                          <li>性格、価値観、コミュニケーション特性</li>
+                          <li>現在の状況、キャリア志向</li>
+                          <li>過去のフィードバックへの反応パターン</li>
+                        </ul>
+                      </div>
+                      <p class="text-gray-700">プロンプト内で、対象となる部下のペルソナ情報を、構造化されたテキスト（箇条書きなど）で明確に提示します。</p>
+                      <div class="mt-4 p-3 bg-amber-50 border-l-4 border-amber-400 text-amber-800">
+                        <p class="font-bold">【最重要注意喚起】</p>
+                        <p>個人情報保護とプライバシーには最大限配慮し、本人の同意と安全な管理体制のもとで行うこと。</p>
+                      </div>
+                    </div>
+                    <div id="scenario-content" class="hidden" role="tabpanel" aria-labelledby="scenario-tab">
+                      <h4 class="text-lg font-bold mb-3">AIに「今、ここ」の文脈を読み込ませる</h4>
+                      <p class="mb-3 text-gray-700">その1on1が置かれた具体的な状況や目的に合わせて、フィードバックの内容、重点、トーンを最適化するための情報です。</p>
+                      <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                        <h5 class="font-bold mb-2">定義すべき内容：</h5>
+                        <ul class="list-disc pl-6 text-gray-700 space-y-1">
+                          <li>1on1の<strong>目的</strong>（目標設定、進捗確認、課題相談など）</li>
+                          <li>主要<strong>テーマ</strong></li>
+                          <li>部下の<strong>状況（推定）</strong></li>
+                          <li>伝えたい<strong>核心メッセージ</strong></li>
+                          <li>期待する<strong>成果</strong>（1on1後の部下の状態）</li>
+                          <li><strong>時間</strong>的制約</li>
+                        </ul>
+                      </div>
+                      <p class="text-gray-700">フィードバック文案生成を依頼するプロンプトに、これらのシナリオ情報を具体的に記述します。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-blue-700 mb-4">プロンプトテンプレート例</h3>
+                <div class="bg-gray-50 p-6 rounded-lg overflow-auto text-sm">
+                  <pre class="text-gray-700">
+# 指導OS（型）
+あなたは、部下の主体的な成長を支援するコーチング型のマネージャーです。フィードバックは常にSBIモデル（状況・行動・影響）に基づき、具体的かつ未来志向で行います。承認と期待を最初に伝え、共感的な言葉遣いを心がけてください。
+
+# 対象者のペルソナ情報
+（ここに、部下Xさんの具体的なペルソナ情報を記述。例：入社3年目、技術スキルは高いが、チームへの情報共有が課題。内向的で、直接的な批判より具体的な改善提案が響きやすい。最近、大規模プロジェクトでプレッシャーを感じている様子…など。※プライバシーに最大限配慮）
+
+# 今回の1on1シナリオ
+*   目的：プロジェクト進捗遅延の要因分析と、今後の円滑な情報共有促進。Xさんの心理的負担軽減。
+*   主要テーマ：プロジェクトXにおける、他部署との連携状況と、報告・連絡・相談の頻度・質について。
+*   伝えたい核心：Xさんの技術力は高く評価している。情報共有はスキルであり、練習で改善できる。具体的な改善策を一緒に考え、サポートする用意があること。
+*   期待成果：Xさんが課題を認識し、具体的な改善アクションに合意する。安心してプロジェクトに取り組めるようになる。
+*   時間：30分
+
+# 実行指示
+上記の「型」「ペルソナ」「シナリオ」に基づき、部下Xさんへの1on1ミーティング冒頭での声かけ（アイスブレイク含む）と、主要テーマに関するフィードバック（承認点、課題点、具体的な改善提案）のスクリプト原案を作成してください。Xさんが安心して話せるような、共感的で具体的な言葉遣いを重視してください。
+                  </pre>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-blue-700 mb-4">AIとの共創プロセス：原案を「生きた言葉」へ昇華させる</h3>
+                <div class="relative pl-8 pb-6 border-l-2 border-blue-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">1</div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-2">レビューと調整</h4>
+                  <p class="text-gray-700">AI原案を吟味し、意図とのズレ、表現の硬さ、ニュアンスの違いなどをチェック。</p>
+                </div>
+
+                <div class="relative pl-8 pb-6 border-l-2 border-blue-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">2</div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-2">共感と熱意の注入</h4>
+                  <p class="text-gray-700">「〇〇、よく頑張っているね」「君の成長を本当に期待しているんだ」といった、あなた自身の言葉で、温かさや熱意を加える。</p>
+                </div>
+
+                <div class="relative pl-8 pb-6 border-l-2 border-blue-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">3</div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-2">個別エピソードの挿入</h4>
+                  <p class="text-gray-700">「あの時の△△、本当に助かったよ」といった、二人の関係性に基づく具体的なエピソードを盛り込む。</p>
+                </div>
+
+                <div class="relative pl-8">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">4</div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-2">最終調整</h4>
+                  <p class="text-gray-700">あなた自身の話し方、部下との関係性を踏まえ、最終的な言葉遣いを洗練させる。</p>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">AIと共に、人の可能性を最大限に引き出す</h3>
+                <p class="text-gray-700 mb-4">
+                  AIは、人材育成という、最も人間的な領域においても、私たちの能力を拡張してくれる強力なパートナーになり得ます。「型」で一貫性を持たせ、「ペルソナ」で個を理解し、「シナリオ」で文脈を読む。この戦略的なインプット設計と、AIとの共創プロセスを通じて、あなたのフィードバックは、部下の心に深く届き、その成長を力強く後押しする「魔法の言葉」へと変わるでしょう。
+                </p>
+
+                <blockquote class="border-l-4 border-blue-600 pl-4 italic">
+                  AIはあくまで支援者であり、主役は常に「人」です。部下への深い愛情、成長への真摯な願い、そして人間同士の温かい繋がり。それらがあって初めて、AIというツールは真に価値を発揮するのです。
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+            <button type="button"
+              class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+              data-hs-overlay="#hr-detail-modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- キャリア開発セクション -->
+  <section id="career" class="py-20 bg-gray-50">
+    <div class="section-container">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-1/2 fade-in">
+          <div class="relative">
+            <span class="absolute -top-6 -left-6 text-8xl font-black text-blue-100">04</span>
+            <h2 class="section-title relative z-10">
+              キャリア開発：<span class="text-blue-600">AIと描く「未来設計図」</span>
+            </h2>
+          </div>
+          <h3 class="text-2xl text-gray-700 mb-8">「シン・ジェネラリスト」への道</h3>
+
+          <div class="flex flex-wrap mb-8">
+            <div class="badge">
+              <i class="fas fa-boxes-stacked"></i>
+              <span>X軸(棚卸)</span>
+            </div>
+            <div class="badge">
+              <i class="fas fa-rocket"></i>
+              <span>Y軸(未来)</span>
+            </div>
+            <div class="badge">
+              <i class="fas fa-layer-group"></i>
+              <span>Z軸Lv1-3</span>
+            </div>
+          </div>
+
+          <p class="mb-6 text-gray-700">
+            変化の激しい現代、多くの人が「キャリアへの不安」や「未来への迷い」を抱えています：
+          </p>
+
+          <div class="bg-blue-50 p-6 rounded-lg mb-8">
+            <h4 class="font-bold text-lg mb-3 text-blue-800">キャリアの不安と迷い</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-circle-exclamation text-blue-600 mt-1 mr-3"></i>
+                <span>「今のスキルだけで、この先も通用するのだろうか？」</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-circle-exclamation text-blue-600 mt-1 mr-3"></i>
+                <span>「AIに仕事を奪われるのではないか、という漠然とした不安がある…」</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-circle-exclamation text-blue-600 mt-1 mr-3"></i>
+                <span>「副業や新しい挑戦に興味はあるけれど、何から始めればいいのか…」</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="mb-6 text-gray-700">
+            この不確実でAIが遍在する未来において、私たちはどのような存在を目指し、どのように自らの価値を高め、キャリアをデザインしていけば良いのでしょうか？
+          </p>
+
+          <p class="mb-8 text-gray-700">
+            その答えの鍵を握るのが、AI時代の新しいプロフェッショナル像「<span
+              class="highlight highlight-primary">シン・ジェネラリスト</span>」であり、そして、その未来像へとあなたを導く最強のナビゲーターこそが、<span
+              class="highlight highlight-primary">AI</span>なのです。
+          </p>
+
+          <div class="mt-10">
+            <div
+              class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition-all cursor-pointer"
+              data-hs-overlay="#career-detail-modal">
+              <span>AIと描く未来設計図の詳細を見る</span>
+              <i class="fas fa-arrow-right ml-2"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 slide-in-right">
+          <div class="chart-container bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-bold text-center text-gray-800 mb-6">シン・ジェネラリストとしての成長予測</h3>
+            <canvas id="careerGrowthChart"></canvas>
+            <div class="grid grid-cols-2 gap-4 mt-6">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-gray-700 mb-2">従来の専門特化キャリア</h4>
+                <p class="text-sm text-gray-600">単一分野での専門性を追求するキャリアパス</p>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-blue-700 mb-2">シン・ジェネラリスト</h4>
+                <p class="text-sm text-gray-600">複数の専門を組み合わせ、AIを触媒に価値を創造</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- キャリア開発詳細モーダル -->
+    <div id="career-detail-modal"
+      class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+        <div class="flex flex-col bg-white border shadow-sm rounded-xl">
+          <div class="flex justify-between items-center py-3 px-4 border-b">
+            <h3 class="font-bold text-gray-800">
+              AIと描く「未来設計図」：「シン・ジェネラリスト」への道
+            </h3>
+            <button type="button"
+              class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700"
+              data-hs-overlay="#career-detail-modal">
+              <span class="sr-only">Close</span>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="p-6 overflow-y-auto">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-xl font-bold text-blue-700 mb-4">AI時代の灯台：「シン・ジェネラリスト」という輝き方</h3>
+                <div class="bg-blue-50 p-6 rounded-lg mb-6">
+                  <p class="italic font-semibold text-blue-900 text-lg mb-3">「シン・ジェネラリスト」とは何か？</p>
+                  <p class="text-gray-700">
+                    <span
+                      class="highlight highlight-primary">複数の専門領域における深い実践力（縦の深さ）を持ちつつ、それらを柔軟に組み合わせ（横の広がり）、AIという触媒を使って新たな価値を創造できる、変化適応力と共創力に長けた人材</span>です。
+                  </p>
+                </div>
+
+                <p class="mb-4 text-gray-700">
+                  AIが特定の専門知識や定型業務を代替していく中で、「一つの専門分野」だけに閉じこもるリスクは高まっています。代わりに、以下の能力が市場価値の源泉となります：
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3">
+                      <i class="fas fa-arrows-left-right-to-line text-blue-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">越境思考</h4>
+                    <p class="text-sm text-gray-600">異なる分野の知見を繋ぎ合わせる能力</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3">
+                      <i class="fas fa-brain text-blue-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">学習能力</h4>
+                    <p class="text-sm text-gray-600">新しいことを学び続けるAI超独学力</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-3">
+                      <i class="fas fa-robot text-blue-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">AI活用力</h4>
+                    <p class="text-sm text-gray-600">AIを戦略的に使いこなす能力</p>
+                  </div>
+                </div>
+
+                <p class="mt-6 text-gray-700">
+                  副業やパラレルキャリアは、この「シン・ジェネラリスト」へと成長するための、絶好の「実践道場」です。多様な経験を通じてスキルの幅を広げ、AI活用の場数を踏むことで、あなたの市場価値は確実に高まっていきます。
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-blue-700 mb-4">AIと共創するキャリア設計の3ステップ</h3>
+
+                <div class="relative pl-8 pb-8 border-l-2 border-blue-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">1</div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-2">AIミラーで「未知の自分」を発見する – 精密スキル棚卸し術</h4>
+                  <p class="text-gray-700 mb-3">AIという客観的な「鏡（ミラー）」を使って、あなた自身も気づいていないかもしれない強み、弱み、そして隠れた可能性を精密に「棚卸し」します。
+                  </p>
+
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <h5 class="font-bold mb-2">プロンプト例：</h5>
+                    <p class="text-sm text-gray-600 italic">
+                      「私の経験（営業×マーケティング）と学習中のスキル（データ分析）を組み合わせると、どのようなユニークな市場価値が生まれる可能性がありますか？」</p>
+                  </div>
+                </div>
+
+                <div class="relative pl-8 pb-8 border-l-2 border-blue-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">2</div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-2">AIコンパスで「未来の航路」を探る – キャリア戦略共創</h4>
+                  <p class="text-gray-700 mb-3">AIという「羅針盤（コンパス）」を使って、未来への航路を探る戦略的なブレインストーミングを行います。</p>
+
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <h5 class="font-bold mb-2">プロンプト例：</h5>
+                    <p class="text-sm text-gray-600 italic">
+                      「3年後に〇〇と△△の分野で活躍するシン・ジェネラリストになるための、具体的な学習・行動計画を月単位で提案してください。AIをどう活用すれば学習を加速できますか？」</p>
+                  </div>
+                </div>
+
+                <div class="relative pl-8">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">3</div>
+                  </div>
+                  <h4 class="text-lg font-bold mb-2">AIブースターで「実行」を加速 – 学びと行動の具体化</h4>
+                  <p class="text-gray-700 mb-3">AIは、具体的な一歩を踏み出し、継続していくための強力な「ブースター」となります。</p>
+
+                  <ul class="space-y-2 pl-6 list-disc text-gray-700">
+                    <li><span class="font-semibold">個別学習プラン作成:</span> 「Pythonのデータ分析スキルを3ヶ月で習得するための週次学習計画を作成して」</li>
+                    <li><span class="font-semibold">ポートフォリオ構築支援:</span> 「私の経験を活かし、〇〇分野での専門性をアピールするポートフォリオサイトの構成案を提案して」
+                    </li>
+                    <li><span class="font-semibold">継続的なメンタリング:</span> 週に一度の「AIふり返り対話」で進捗を報告し、計画の見直しやモチベーション維持</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-blue-800 mb-4">未来設計図は、あなたとAIの「共作」だ</h3>
+                <p class="text-gray-700 mb-4">
+                  AI時代のキャリア形成は、もはや一人で悩み、孤独に道を切り拓くものではありません。AIという、客観的で、博識で、そして常にあなたに寄り添ってくれる「キャリア戦略パートナー」と共に、あなた自身の未来を、主体的に、そして創造的にデザインしていく時代なのです。
+                </p>
+
+                <blockquote class="border-l-4 border-blue-600 pl-4 italic">
+                  AIが示す未来図は、あくまで可能性の一つ。どの道を選び、どのように歩むかを最終的に決定し、その結果に責任を持つのは、あなた自身です。AIはその旅路における最高のナビゲーターであり、ブースターですが、ハンドルを握っているのは、常にあなたなのです。
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+            <button type="button"
+              class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm"
+              data-hs-overlay="#career-detail-modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 次の章へのリンクセクション -->
+  <section class="py-16 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">次の章へ進みましょう</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        次の第7章では、AI超独学という旅を、一過性のブームで終わらせず、あなたの人生における持続的な成長エンジンとするための「習慣化」の秘訣を探求します。
+      </p>
+      <a href="../07_第7章_学習習慣の壁を壊す_AI時代の継続システム構築法/SITE/index.html"
+        class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-800 rounded-full shadow-md hover:bg-gray-100 transition-all">
+        <span class="mr-2">第7章へ</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pt-8 pb-4">
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">AI超独学法</h3>
+          <p class="text-gray-400">
+            TANREN 3Dメソッドで切り拓く、<br>
+            新時代の学びと成長戦略
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">目次</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="../../00_プロローグ_なぜ今、あなたの学び方をアップデートする必要があるのか/SITE/index.html" class="hover:text-white">プロローグ</a>
+            </li>
+            <li><a href="../../01_第1章_AI超独学を起動するマインドセット_使う側から共創する側へ/SITE/index.html" class="hover:text-white">第1章:
+                マインドセット</a></li>
+            <li><a href="../../02_第2章_核理論独学OSTANREN_3Dメソッド完全インストール/SITE/index.html" class="hover:text-white">第2章: TANREN
+                3Dメソッド</a></li>
+            <li><a href="../../03_第3章_AIとの対話設計術_プロンプトで思考を形にする技術/SITE/index.html" class="hover:text-white">第3章: 対話設計術</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">続きの章</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="../../04_第4章_AIエージェント活用術_自動化と共創で生産性を飛躍させる/SITE/index.html" class="hover:text-white">第4章:
+                エージェント活用術</a></li>
+            <li><a href="../../05_第5章_実践編1AI共創によるアウトプット革命_企画・文章・資料作成/SITE/index.html" class="hover:text-white">第5章:
+                アウトプット革命</a></li>
+            <li><a href="#" class="text-white font-bold">第6章: 職種別シナリオ</a></li>
+            <li><a href="../../07_第7章_学習習慣の壁を壊す_AI時代の継続システム構築法/SITE/index.html" class="hover:text-white">第7章:
+                継続システム構築法</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">連絡先</h3>
+          <p class="text-gray-400 mb-4">
+            この章に関するご質問やフィードバックをお待ちしています。
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 pb-4 text-center text-gray-500">
+        <p>&copy; 2025 AI超独学法. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Preline UI JS -->
+  <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+
+  <!-- カスタムJS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

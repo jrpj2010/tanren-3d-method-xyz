@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XYZ軸の統合と立体思考</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+</head>
+
+<body class="bg-black text-white">
+  <div class="slide"
+    style="width: 1920px; min-height: 1080px; position: relative; overflow: hidden; font-family: 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #111827 0%, #1f2937 100%);">
+
+    <!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-purple-900/10 to-indigo-900/10"></div>
+      <!-- Grid lines -->
+      <svg width="100%" height="100%" class="absolute opacity-10">
+        <defs>
+          <pattern id="grid-3d" width="80" height="80" patternUnits="userSpaceOnUse">
+            <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid-3d)" />
+      </svg>
+    </div>
+
+    <!-- Page Title -->
+    <div class="absolute top-12 left-0 right-0 text-center z-10">
+      <h1
+        class="text-6xl font-bold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400">
+        XYZ軸の統合と立体思考
+      </h1>
+      <h2 class="text-3xl font-medium text-gray-200/90">思考3Dメソッドの真価</h2>
+      <div class="w-32 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 mx-auto mt-3"></div>
+    </div>
+
+    <!-- 3D Cube Visualization -->
+    <div id="cube-visualization" class="absolute left-1/2 transform -translate-x-1/2"
+      style="width: 500px; height: 500px; top: 150px; z-index: 5;"></div>
+
+    <!-- Left Section: 3D Thinking Space Formation -->
+    <div class="absolute left-32 top-44 w-[500px] z-10">
+      <div
+        class="bg-gradient-to-b from-gray-900/70 to-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50">
+        <div class="flex items-center mb-4">
+          <div
+            class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600/80 via-purple-600/80 to-indigo-600/80 flex items-center justify-center mr-4">
+            <i class="fas fa-cube text-2xl"></i>
+          </div>
+          <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-indigo-200">
+            立体思考空間の形成</h2>
+        </div>
+
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <i class="fas fa-cube text-blue-400 mt-1 mr-3"></i>
+            <div>
+              <div class="font-semibold text-lg text-gray-100">27の思考セル</div>
+              <div class="text-gray-300/90 text-sm">3×3×3マトリックスによる多角的視点</div>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-sync text-purple-400 mt-1 mr-3"></i>
+            <div>
+              <div class="font-semibold text-lg text-gray-100">ダイナミックな思考サイクル</div>
+              <div class="text-gray-300/90 text-sm">軸を横断する思考の循環と深化</div>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-project-diagram text-indigo-400 mt-1 mr-3"></i>
+            <div>
+              <div class="font-semibold text-lg text-gray-100">複雑問題への立体的アプローチ</div>
+              <div class="text-gray-300/90 text-sm">単一視点では見えない解決策の発見</div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-5 p-4 bg-gradient-to-r from-gray-800/70 to-gray-700/50 rounded-lg">
+          <div class="text-center text-sm italic text-gray-300/90">
+            「常に会話は3Dなんだ。フレミングの法則のように、会話もXYZの3軸で考える」
+          </div>
+          <div class="text-right text-xs text-gray-400 mt-1">― 佐藤勝彦</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section: AI Boosting 3D Thinking -->
+    <div class="absolute right-32 top-44 w-[500px] z-10">
+      <div
+        class="bg-gradient-to-b from-gray-900/70 to-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50">
+        <div class="flex items-center mb-4">
+          <div
+            class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600/80 via-purple-600/80 to-indigo-600/80 flex items-center justify-center mr-4">
+            <i class="fas fa-robot text-2xl"></i>
+          </div>
+          <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-indigo-200">
+            AIによる立体思考のブースト</h2>
+        </div>
+
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <i class="fas fa-arrow-circle-up text-blue-400 mt-1 mr-3"></i>
+            <div>
+              <div class="font-semibold text-lg text-gray-100">「超」レベルへの引き上げ</div>
+              <div class="text-gray-300/90 text-sm">超抽象化・超構造化・超具体化の統合</div>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-bolt text-purple-400 mt-1 mr-3"></i>
+            <div>
+              <div class="font-semibold text-lg text-gray-100">思考サイクルの高速化</div>
+              <div class="text-gray-300/90 text-sm">思考プロセスの爆発的な加速と拡張</div>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-brain text-indigo-400 mt-1 mr-3"></i>
+            <div>
+              <div class="font-semibold text-lg text-gray-100">思考の代替ではなく増幅</div>
+              <div class="text-gray-300/90 text-sm">「ブースト」「バフをかける」存在として活用</div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-5 p-4 bg-gradient-to-r from-blue-900/30 via-purple-900/30 to-indigo-900/30 rounded-lg">
+          <div class="text-lg font-semibold text-center mb-2">AIによる思考回路の進化</div>
+          <div class="flex justify-between">
+            <div class="text-center px-3">
+              <i class="fas fa-lightbulb text-blue-400 text-xl mb-1"></i>
+              <div class="text-sm font-medium">超抽象化</div>
+            </div>
+            <div class="text-center px-3">
+              <i class="fas fa-sitemap text-purple-400 text-xl mb-1"></i>
+              <div class="text-sm font-medium">超構造化</div>
+            </div>
+            <div class="text-center px-3">
+              <i class="fas fa-cubes text-indigo-400 text-xl mb-1"></i>
+              <div class="text-sm font-medium">超具体化</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section: Example Thinking Cells -->
+    <div class="absolute bottom-32 left-1/2 transform -translate-x-1/2 w-[1200px] z-10">
+      <div
+        class="bg-gradient-to-b from-gray-900/70 to-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50">
+        <h2
+          class="text-2xl font-bold text-center mb-5 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-purple-200 to-indigo-200">
+          代表的な思考セルの例（XYZ軸の組み合わせ）
+        </h2>
+
+        <div class="grid grid-cols-3 gap-6">
+          <!-- Cell Example 1 -->
+          <div class="bg-gradient-to-r from-blue-900/30 to-blue-800/10 p-5 rounded-lg border border-blue-700/30">
+            <div class="flex items-center mb-3">
+              <div class="px-3 py-1 rounded-full bg-blue-800/50 text-sm font-bold mr-2">X</div>
+              <div class="px-3 py-1 rounded-full bg-purple-800/50 text-sm font-bold mr-2">Y</div>
+              <div class="px-3 py-1 rounded-full bg-indigo-800/50 text-sm font-bold">Z</div>
+            </div>
+            <div class="text-xl font-semibold mb-2">
+              抽象化 × 過去 × 上級者
+            </div>
+            <div class="text-sm text-gray-300/90 mb-2">
+              過去事例から本質的法則・パターンを抽出し、時を超えた普遍的知見を形成する
+            </div>
+            <div class="flex items-center mt-3">
+              <i class="fas fa-lightbulb text-blue-400 mr-2"></i>
+              <div class="text-sm font-medium">成功・失敗の真因究明</div>
+            </div>
+          </div>
+
+          <!-- Cell Example 2 -->
+          <div class="bg-gradient-to-r from-purple-900/30 to-purple-800/10 p-5 rounded-lg border border-purple-700/30">
+            <div class="flex items-center mb-3">
+              <div class="px-3 py-1 rounded-full bg-blue-800/50 text-sm font-bold mr-2">X</div>
+              <div class="px-3 py-1 rounded-full bg-purple-800/50 text-sm font-bold mr-2">Y</div>
+              <div class="px-3 py-1 rounded-full bg-indigo-800/50 text-sm font-bold">Z</div>
+            </div>
+            <div class="text-xl font-semibold mb-2">
+              構造化 × 現代 × 中級者
+            </div>
+            <div class="text-sm text-gray-300/90 mb-2">
+              現状のデータや情報を論理的に分析・整理し、意味のある関係性を可視化する
+            </div>
+            <div class="flex items-center mt-3">
+              <i class="fas fa-sitemap text-purple-400 mr-2"></i>
+              <div class="text-sm font-medium">市場分析・競合調査</div>
+            </div>
+          </div>
+
+          <!-- Cell Example 3 -->
+          <div class="bg-gradient-to-r from-indigo-900/30 to-indigo-800/10 p-5 rounded-lg border border-indigo-700/30">
+            <div class="flex items-center mb-3">
+              <div class="px-3 py-1 rounded-full bg-blue-800/50 text-sm font-bold mr-2">X</div>
+              <div class="px-3 py-1 rounded-full bg-purple-800/50 text-sm font-bold mr-2">Y</div>
+              <div class="px-3 py-1 rounded-full bg-indigo-800/50 text-sm font-bold">Z</div>
+            </div>
+            <div class="text-xl font-semibold mb-2">
+              具体化 × 未来 × 初心者
+            </div>
+            <div class="text-sm text-gray-300/90 mb-2">
+              将来のビジョンや未来予測を形にして、直感的なプロトタイプを創出する
+            </div>
+            <div class="flex items-center mt-3">
+              <i class="fas fa-cubes text-indigo-400 mr-2"></i>
+              <div class="text-sm font-medium">アイデアのポン出し実装</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Quote -->
+    <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-center max-w-3xl z-10">
+      <div class="text-lg font-medium text-gray-300/90">
+        XYZ軸の統合による立体思考が、複雑な問題解決と創造的飛躍を可能にする
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="absolute bottom-6 right-10 text-sm text-gray-400/50">
+      思考3Dメソッド[XYZ] | 7
+    </div>
+  </div>
+
+  <script>
+    // Three.js 3D Cube Visualization
+    document.addEventListener('DOMContentLoaded', function () {
+      // Setup the scene
+      const scene = new THREE.Scene();
+      const container = document.getElementById('cube-visualization');
+      const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      renderer.setClearColor(0x000000, 0);
+      container.appendChild(renderer.domElement);
+
+      // Position camera
+      camera.position.set(300, 300, 300);
+      camera.lookAt(0, 0, 0);
+
+      // Define the dimensions of our 3x3x3 grid
+      const gridSize = 3;
+      const spacing = 50;
+      const cellSize = 40;
+
+      // Create grid for positioning
+      const gridOffset = ((gridSize - 1) * spacing) / 2;
+
+      // Create axes
+      const axisLength = gridOffset + spacing;
+
+      // X-axis (Blue)
+      const xAxisGeometry = new THREE.CylinderGeometry(2, 2, axisLength * 2 + 20, 16);
+      const xAxisMaterial = new THREE.MeshBasicMaterial({ color: 0x3b82f6 });
+      const xAxis = new THREE.Mesh(xAxisGeometry, xAxisMaterial);
+      xAxis.rotation.z = Math.PI / 2;
+      xAxis.position.x = 10;
+      scene.add(xAxis);
+
+      // Y-axis (Purple)
+      const yAxisGeometry = new THREE.CylinderGeometry(2, 2, axisLength * 2 + 20, 16);
+      const yAxisMaterial = new THREE.MeshBasicMaterial({ color: 0xa855f7 });
+      const yAxis = new THREE.Mesh(yAxisGeometry, yAxisMaterial);
+      yAxis.position.y = 10;
+      scene.add(yAxis);
+
+      // Z-axis (Indigo)
+      const zAxisGeometry = new THREE.CylinderGeometry(2, 2, axisLength * 2 + 20, 16);
+      const zAxisMaterial = new THREE.MeshBasicMaterial({ color: 0x6366f1 });
+      const zAxis = new THREE.Mesh(zAxisGeometry, zAxisMaterial);
+      zAxis.rotation.x = Math.PI / 2;
+      zAxis.position.z = 10;
+      scene.add(zAxis);
+
+      // Add labels at the ends of axes
+      // X-axis labels
+      const xLabels = ['抽象化', '構造化', '具体化'];
+      for (let i = 0; i < gridSize; i++) {
+        const x = -gridOffset + i * spacing;
+        const textSprite = createTextSprite(xLabels[i], 0x3b82f6);
+        textSprite.position.set(x, -gridOffset - 30, -gridOffset - 30);
+        scene.add(textSprite);
+      }
+
+      // Y-axis labels
+      const yLabels = ['過去', '現代', '未来'];
+      for (let i = 0; i < gridSize; i++) {
+        const y = -gridOffset + i * spacing;
+        const textSprite = createTextSprite(yLabels[i], 0xa855f7);
+        textSprite.position.set(-gridOffset - 30, y, -gridOffset - 30);
+        scene.add(textSprite);
+      }
+
+      // Z-axis labels
+      const zLabels = ['初心者', '中級者', '上級者'];
+      for (let i = 0; i < gridSize; i++) {
+        const z = -gridOffset + i * spacing;
+        const textSprite = createTextSprite(zLabels[i], 0x6366f1);
+        textSprite.position.set(-gridOffset - 30, -gridOffset - 30, z);
+        scene.add(textSprite);
+      }
+
+      // Create cells
+      const cells = [];
+
+      for (let x = 0; x < gridSize; x++) {
+        for (let y = 0; y < gridSize; y++) {
+          for (let z = 0; z < gridSize; z++) {
+            // Calculate position in 3D space
+            const xPos = -gridOffset + x * spacing;
+            const yPos = -gridOffset + y * spacing;
+            const zPos = -gridOffset + z * spacing;
+
+            // Create cell geometry
+            const geometry = new THREE.BoxGeometry(cellSize, cellSize, cellSize);
+
+            // Calculate color based on position
+            const color = new THREE.Color(
+              0.3 + (x * 0.2), // More blue for higher X
+              0.1 + (y * 0.15), // More purple for higher Y
+              0.4 + (z * 0.15)  // More indigo for higher Z
+            );
+
+            // Create material
+            const material = new THREE.MeshBasicMaterial({
+              color: color,
+              transparent: true,
+              opacity: 0.7
+            });
+
+            // Create mesh
+            const cell = new THREE.Mesh(geometry, material);
+            cell.position.set(xPos, yPos, zPos);
+
+            // Store reference
+            cells.push({
+              mesh: cell,
+              coords: { x, y, z }
+            });
+
+            // Add to scene
+            scene.add(cell);
+          }
+        }
+      }
+
+      // Highlight specific cells mentioned in examples
+      highlightCell(0, 0, 2, 0xff5555); // 抽象化 × 過去 × 上級者
+      highlightCell(1, 1, 1, 0xff55ff); // 構造化 × 現代 × 中級者
+      highlightCell(2, 2, 0, 0x55ffff); // 具体化 × 未来 × 初心者
+
+      // Helper function to highlight a specific cell
+      function highlightCell(x, y, z, color) {
+        for (const cell of cells) {
+          if (cell.coords.x === x && cell.coords.y === y && cell.coords.z === z) {
+            cell.mesh.material.color.set(color);
+            cell.mesh.material.opacity = 0.9;
+
+            // Create pulsing animation for this cell
+            const originalScale = cell.mesh.scale.x;
+            animatePulse(cell.mesh, originalScale);
+
+            // Add connecting line to highlight cell
+            const origin = new THREE.Vector3(0, 0, 0);
+            const cellPos = cell.mesh.position.clone();
+
+            const points = [];
+            points.push(origin);
+            points.push(cellPos);
+
+            const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
+            const lineMaterial = new THREE.LineBasicMaterial({
+              color: color,
+              transparent: true,
+              opacity: 0.8
+            });
+            const line = new THREE.Line(lineGeometry, lineMaterial);
+            scene.add(line);
+
+            break;
+          }
+        }
+      }
+
+      // Create text sprite function
+      function createTextSprite(text, color) {
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = 200;
+        canvas.height = 100;
+
+        // Background
+        context.fillStyle = 'rgba(0,0,0,0)';
+        context.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Text
+        context.font = '24px Noto Sans JP, sans-serif';
+        context.fillStyle = new THREE.Color(color).getStyle();
+        context.textAlign = 'center';
+        context.fillText(text, canvas.width / 2, canvas.height / 2);
+
+        // Create texture
+        const texture = new THREE.Texture(canvas);
+        texture.needsUpdate = true;
+
+        const material = new THREE.SpriteMaterial({
+          map: texture,
+          transparent: true
+        });
+
+        const sprite = new THREE.Sprite(material);
+        sprite.scale.set(50, 25, 1);
+
+        return sprite;
+      }
+
+      // Pulse animation for highlighted cells
+      function animatePulse(object, originalScale) {
+        let scale = originalScale;
+        let growing = true;
+
+        function animate() {
+          if (growing) {
+            scale += 0.003;
+            if (scale >= originalScale * 1.2) growing = false;
+          } else {
+            scale -= 0.003;
+            if (scale <= originalScale) growing = true;
+          }
+
+          object.scale.set(scale, scale, scale);
+          requestAnimationFrame(animate);
+        }
+
+        animate();
+      }
+
+      // Animation - rotate the cube
+      function animate() {
+        requestAnimationFrame(animate);
+
+        // Slow rotation of the whole scene
+        scene.rotation.y += 0.005;
+        scene.rotation.x += 0.001;
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+
+      // Resize handler
+      window.addEventListener('resize', function () {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+      });
+    });
+  </script>
+</body>
+
+</html>

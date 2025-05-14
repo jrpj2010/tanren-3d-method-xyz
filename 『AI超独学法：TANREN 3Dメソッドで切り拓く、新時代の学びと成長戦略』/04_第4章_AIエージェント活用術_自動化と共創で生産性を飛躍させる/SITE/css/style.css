@@ -1,0 +1,237 @@
+/* Custom Styles for AI Super Learning Website */
+
+:root {
+  --primary: #1a5b66;
+  --secondary: #b3322b;
+  --accent: #653a5e;
+  --light: #f4f1ea;
+  --dark: #2c2c2c;
+  --transition: all 0.3s ease;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* General Custom Styles */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Noto Serif JP', serif;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.8s ease forwards;
+  opacity: 0;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.8s ease forwards;
+  opacity: 0;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Animation Delays */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Custom Component Styles */
+.level-card {
+  border-left: 4px solid;
+  transition: var(--transition);
+}
+
+.level-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.level-0-5 {
+  border-color: #e9b949;
+}
+
+.level-1 {
+  border-color: #3498db;
+}
+
+.level-2 {
+  border-color: #2ecc71;
+}
+
+.level-3 {
+  border-color: var(--accent);
+}
+
+.risk-card {
+  border-left: 4px solid var(--secondary);
+}
+
+.ethics-card {
+  border-left: 4px solid var(--primary);
+}
+
+/* Navigation Animation */
+.nav-link.active {
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+  animation: scaleUp 0.3s ease forwards;
+}
+
+/* Custom chart styling */
+.chart-container {
+  position: relative;
+  margin: 20px auto;
+  height: 300px;
+  max-width: 100%;
+}
+
+/* Decorative elements */
+.jp-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.decorative-line {
+  height: 3px;
+  width: 50px;
+  margin: 8px 0;
+}
+
+/* Custom Card Hover Effects */
+.hover-card {
+  transition: var(--transition);
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline customization */
+.custom-timeline-bar {
+  width: 3px;
+  background-color: var(--primary);
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark mode overrides */
+.dark-mode {
+  --light: #2c2c2c;
+  --dark: #f4f1ea;
+}
+
+/* Print styles */
+@media print {
+
+  .animate-fade-in,
+  .animate-slide-right,
+  .animate-slide-left,
+  .animate-scale-up {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

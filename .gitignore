@@ -75,3 +75,5 @@ vibecoding-site/
 中小企業向け営業改革書籍作成プロジェクト/
 # SpecStory explanation file
 .specstory/.what-is-this.md
+
+**/.claude/settings.local.json

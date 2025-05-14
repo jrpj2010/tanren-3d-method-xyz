@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第7章 学習習慣の壁を壊す | AI超独学法</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Preline UI -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- カスタムCSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- ナビゲーションバー -->
+  <header class="navbar bg-white/95 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <a href="#" class="flex items-center">
+          <i class="fas fa-brain text-primary text-2xl mr-3"></i>
+          <span class="text-xl font-bold text-primary">AI超独学法</span>
+        </a>
+        <span class="hidden md:block text-sm text-gray-500">TANREN 3Dメソッド</span>
+      </div>
+
+      <nav class="hidden md:flex space-x-8">
+        <a href="#intro" class="nav-link">イントロダクション</a>
+        <a href="#failure-mechanism" class="nav-link">挫折のメカニズム</a>
+        <a href="#micro-learning" class="nav-link">マイクロラーニング</a>
+        <a href="#input-system" class="nav-link">インプット仕組み化</a>
+        <a href="#output-habit" class="nav-link">アウトプット習慣化</a>
+        <a href="#mindset" class="nav-link">継続マインドセット</a>
+      </nav>
+
+      <button type="button" class="md:hidden text-gray-500 hover:text-primary" data-hs-overlay="#mobile-menu"
+        aria-controls="mobile-menu" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- モバイルメニュー（Preline UI） -->
+  <div id="mobile-menu"
+    class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-y-auto bg-white py-10 px-4">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="text-xl font-bold">AI超独学法</h3>
+      <button type="button" class="text-gray-500 hover:text-primary" data-hs-overlay="#mobile-menu">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+    <nav class="space-y-4">
+      <a href="#intro" class="block py-2 text-lg" data-hs-overlay="#mobile-menu">イントロダクション</a>
+      <a href="#failure-mechanism" class="block py-2 text-lg" data-hs-overlay="#mobile-menu">挫折のメカニズム</a>
+      <a href="#micro-learning" class="block py-2 text-lg" data-hs-overlay="#mobile-menu">マイクロラーニング</a>
+      <a href="#input-system" class="block py-2 text-lg" data-hs-overlay="#mobile-menu">インプット仕組み化</a>
+      <a href="#output-habit" class="block py-2 text-lg" data-hs-overlay="#mobile-menu">アウトプット習慣化</a>
+      <a href="#mindset" class="block py-2 text-lg" data-hs-overlay="#mobile-menu">継続マインドセット</a>
+    </nav>
+  </div>
+
+  <!-- ヒーローセクション -->
+  <section id="intro" class="hero">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-7/12 mb-8 md:mb-0 fade-in">
+        <div class="mb-4 text-purple-700 text-xl font-bold">第7章</div>
+        <h1 class="hero-title mb-6">
+          学習習慣の壁を壊す<br>
+          AI時代の継続システム<br>
+          構築法
+        </h1>
+        <div class="purple-accent"></div>
+        <h2 class="hero-subtitle mt-4">モチベーションに頼らない仕組みづくりで学びを定着させる</h2>
+
+        <div class="mt-8 flex items-center">
+          <i class="fas fa-sync-alt text-purple-600 text-2xl mr-3"></i>
+          <span class="text-xl text-gray-600">AIと共に継続的な成長サイクルを作る</span>
+        </div>
+
+        <div class="mt-8">
+          <a href="#failure-mechanism"
+            class="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-full shadow-md hover:bg-primary-dark transition-all">
+            <span>詳しく見る</span>
+            <i class="fas fa-arrow-down ml-2"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="md:w-5/12 slide-in-right">
+        <div class="relative rounded-xl overflow-hidden shadow-xl">
+          <img
+            src="https://images.unsplash.com/photo-1517847624229-7c0a79df1cec?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            alt="継続的な学習習慣" class="w-full h-auto">
+          <div class="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <i class="fas fa-chevron-down text-2xl text-primary"></i>
+    </div>
+  </section>
+
+  <!-- 章の概要セクション -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center fade-in">
+        <h2 class="text-3xl font-bold mb-6">なぜ学習継続は難しく、どう解決するのか</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          AI超独学という旅を一過性のブームで終わらせず、あなたの人生における持続的な成長エンジンとするための「習慣化」の秘訣を探求します。
+          どれほど優れた学習法を知っていても、それを<span class="highlight highlight-primary">継続できなければ意味がありません</span>。
+          本章では、モチベーションに頼らずとも自然と学び続けられる<span class="highlight highlight-primary">仕組みづくり</span>に焦点を当てます。
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-question-circle text-purple-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">挫折のメカニズム</h3>
+            <p class="text-gray-600">なぜ継続は難しいのかを科学的に理解する</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-puzzle-piece text-purple-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">マイクロラーニング</h3>
+            <p class="text-gray-600">短時間で「無理なく」続ける技術</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-database text-purple-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">インプット仕組み化</h3>
+            <p class="text-gray-600">学びのインプットを自動化する方法</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">アウトプット習慣化</h3>
+            <p class="text-gray-600">AIリフレクションで学びを定着させる</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-brain text-purple-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">継続マインドセット</h3>
+            <p class="text-gray-600">学び続ける力を育む思考法</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 挫折のメカニズムセクション -->
+  <section id="failure-mechanism" class="section-container py-20">
+    <div class="flex flex-col lg:flex-row gap-12">
+      <div class="lg:w-1/2 fade-in">
+        <div class="relative">
+          <span class="absolute -top-6 -left-6 text-8xl font-black text-purple-100">01</span>
+          <h2 class="section-title relative z-10">
+            なぜ継続は難しいのか：<span class="text-purple-600">挫折のメカニズム</span>
+          </h2>
+        </div>
+        <h3 class="text-2xl text-gray-700 mb-8">継続を阻む心理的・構造的要因を解明する</h3>
+
+        <div class="flex flex-wrap mb-8">
+          <div class="badge">
+            <i class="fas fa-search-plus"></i>
+            <span>原因分析</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-brain"></i>
+            <span>心理学</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-layer-group"></i>
+            <span>Z軸Lv2-3</span>
+          </div>
+        </div>
+
+        <p class="mb-6 text-gray-700">
+          「継続は力なり」という格言は、どんな学びにおいても真理です。しかし同時に、継続こそが最も困難な課題でもあります。学習を始める際、多くの人が高いモチベーションを持ちますが、その<span
+            class="highlight highlight-primary">モチベーションは時間の経過とともに必ず低下します</span>。
+        </p>
+
+        <div class="bg-purple-50 p-6 rounded-lg mb-8">
+          <h4 class="font-bold text-lg mb-3 text-purple-800">継続失敗の主な理由</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-circle-exclamation text-purple-600 mt-1 mr-3"></i>
+              <span><span class="font-semibold">モチベーション依存：</span> 気分や意欲に頼る学習は、疲れやストレスで簡単に崩壊する</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-circle-exclamation text-purple-600 mt-1 mr-3"></i>
+              <span><span class="font-semibold">習慣形成の失敗：</span> 学習が自動化された習慣になる前に挫折してしまう</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-circle-exclamation text-purple-600 mt-1 mr-3"></i>
+              <span><span class="font-semibold">環境最適化の欠如：</span> 学びを促進する環境が整っておらず、摩擦が多い</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="mb-8 text-gray-700">
+          しかし、この<span class="highlight highlight-primary">継続の問題</span>は、意志力や精神論で解決するものではありません。習慣科学に基づいた<span
+            class="highlight highlight-primary">システム設計</span>で解決すべき課題なのです。
+          継続を阻む根本原因を理解し、それに対応した仕組みを構築することで、モチベーションに頼らない持続可能な学習習慣が実現します。
+        </p>
+
+        <div class="mt-10">
+          <div
+            class="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition-all cursor-pointer"
+            data-hs-overlay="#failure-detail-modal">
+            <span>挫折メカニズムの詳細を見る</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 slide-in-right">
+        <div class="chart-container bg-white p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold text-center text-gray-800 mb-6">学習挫折の主な要因</h3>
+          <canvas id="failureMechanismChart"></canvas>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div class="bg-purple-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-purple-700 mb-2">習慣化の科学</h4>
+              <p class="text-sm text-gray-600">新しい習慣が定着するには、平均66日間の一貫した行動が必要と研究で示されている</p>
+            </div>
+            <div class="bg-purple-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-purple-700 mb-2">ハビットループ</h4>
+              <p class="text-sm text-gray-600">きっかけ→行動→報酬のループを設計し、習慣の自動化を促進する</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 挫折メカニズムの詳細モーダル -->
+    <div id="failure-detail-modal"
+      class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+        <div
+          class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+          <div class="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700">
+            <h3 class="font-bold text-gray-800 dark:text-white">
+              挫折のメカニズムと対策
+            </h3>
+            <button type="button"
+              class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-sm dark:text-gray-500 dark:hover:text-gray-400 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800"
+              data-hs-overlay="#failure-detail-modal">
+              <span class="sr-only">Close</span>
+              <svg class="w-3.5 h-3.5" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.258206 1.00652C0.351976 0.912791 0.479126 0.860131 0.611706 0.860131C0.744296 0.860131 0.871447 0.912791 0.965207 1.00652L3.61171 3.65302L6.25822 1.00652C6.30432 0.960389 6.36042 0.924514 6.42192 0.900991C6.48342 0.877468 6.54922 0.86647 6.61522 0.86847C6.68122 0.87047 6.74622 0.884698 6.80522 0.911052C6.86422 0.937406 6.91682 0.975499 6.95982 1.02252C7.00282 1.06954 7.03582 1.12372 7.05682 1.18304C7.07782 1.24236 7.08682 1.30538 7.08142 1.36742C7.07602 1.42946 7.05642 1.48944 7.02142 1.54372C6.98642 1.598 6.93742 1.64489 6.87952 1.68152L4.23301 4.32803L6.87952 6.97454C6.91672 7.01117 6.94812 7.05602 6.97142 7.1063C6.99472 7.15658 7.00932 7.21053 7.01452 7.26652C7.01972 7.32251 7.01552 7.37925 6.99972 7.43297C6.98312 7.48669 6.95822 7.53701 6.92522 7.58016C6.89222 7.62331 6.85122 7.65858 6.80522 7.68384C6.75922 7.70911 6.70892 7.7234 6.65682 7.72612C6.60472 7.73065 6.55262 7.7227 6.50352 7.70284C6.45442 7.68298 6.40892 7.65154 6.37052 7.61016L3.61171 4.95254L0.965207 7.61016C0.920139 7.65441 0.864777 7.68712 0.803807 7.70635C0.742166 7.72408 0.678255 7.7282 0.615462 7.71827C0.552591 7.70835 0.492387 7.68449 0.438387 7.64814C0.3843 7.61103 0.338069 7.5616 0.302819 7.50311C0.26693 7.44277 0.24323 7.37452 0.234153 7.30344C0.225076 7.23237 0.230779 7.15979 0.250789 7.09145C0.270798 7.02311 0.304453 6.9613 0.349349 6.9113L2.99586 4.32803L0.349349 1.68152C0.303122 1.63364 0.267443 1.57595 0.245535 1.51133C0.223627 1.44671 0.216058 1.37749 0.222604 1.30939C0.22915 1.24129 0.249648 1.17639 0.282452 1.12113C0.315255 1.06587 0.35961 1.02172 0.411944 0.992957L0.258206 1.00652Z"
+                  fill="currentColor" />
+              </svg>
+            </button>
+          </div>
+          <div class="p-6 overflow-y-auto">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">モチベーションの幻想</h3>
+                <p class="mb-4">多くの人が「意志力」や「やる気」に頼った学習を始めますが、心理学研究によれば、モチベーションには明確な限界があります：</p>
+                <ul class="space-y-2 pl-6 list-disc text-gray-700">
+                  <li>意志力は有限の資源であり、日々のストレスや疲労で消耗する</li>
+                  <li>モチベーションは自然に波があり、長期的に安定しない</li>
+                  <li>新規性効果：新しいことへの興味は時間とともに必然的に低下する</li>
+                </ul>
+                <div class="bg-gray-50 p-4 rounded-lg mt-4">
+                  <p class="italic text-gray-700">「モチベーションに頼るのは、気分が乗ったときだけジムに行くようなもの」</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">習慣形成の科学</h3>
+                <p class="mb-4">習慣科学の観点から見ると、継続の難しさには具体的な構造があります：</p>
+                <div class="mb-6">
+                  <h4 class="font-bold mb-2">習慣形成の4段階</h4>
+                  <div class="relative pl-8 pb-6 border-l-2 border-purple-200">
+                    <div class="absolute left-[-16px] top-0 bg-white p-1">
+                      <div class="sequence-number">1</div>
+                    </div>
+                    <div>
+                      <h5 class="font-bold">きっかけ（Cue）</h5>
+                      <p class="text-gray-700">習慣の引き金となる環境や状況。多くの学習者は効果的なきっかけを設定していない</p>
+                    </div>
+                  </div>
+
+                  <div class="relative pl-8 pb-6 border-l-2 border-purple-200">
+                    <div class="absolute left-[-16px] top-0 bg-white p-1">
+                      <div class="sequence-number">2</div>
+                    </div>
+                    <div>
+                      <h5 class="font-bold">欲求（Craving）</h5>
+                      <p class="text-gray-700">行動への動機付け。学習が「苦しい」と認識されると欲求が生まれない</p>
+                    </div>
+                  </div>
+
+                  <div class="relative pl-8 pb-6 border-l-2 border-purple-200">
+                    <div class="absolute left-[-16px] top-0 bg-white p-1">
+                      <div class="sequence-number">3</div>
+                    </div>
+                    <div>
+                      <h5 class="font-bold">反応（Response）</h5>
+                      <p class="text-gray-700">実際の行動。多くの場合、学習のハードルが高すぎて行動に移せない</p>
+                    </div>
+                  </div>
+
+                  <div class="relative pl-8">
+                    <div class="absolute left-[-16px] top-0 bg-white p-1">
+                      <div class="sequence-number">4</div>
+                    </div>
+                    <div>
+                      <h5 class="font-bold">報酬（Reward）</h5>
+                      <p class="text-gray-700">行動の結果得られる満足感。学習の報酬が遅延しすぎると習慣化しない</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">AIを活用した継続障壁の突破</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="bg-purple-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-lg mb-3">環境デザイン</h4>
+                    <p class="text-gray-700 mb-4">AIを使って最適な学習環境を設計：</p>
+                    <ul class="space-y-2 pl-6 list-disc text-gray-700">
+                      <li>AIによる学習スケジュール最適化</li>
+                      <li>学習へのきっかけ（トリガー）の自動設定</li>
+                      <li>学習環境の摩擦を減らす自動化</li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-purple-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-lg mb-3">心理的サポート</h4>
+                    <p class="text-gray-700 mb-4">AIが感情的・心理的な継続支援を提供：</p>
+                    <ul class="space-y-2 pl-6 list-disc text-gray-700">
+                      <li>個別最適化されたモチベーション戦略</li>
+                      <li>瞬時のフィードバックと達成感の提供</li>
+                      <li>挫折しそうな瞬間の予測と介入</li>
+                      <li>自己効力感向上のためのマイクロ成功体験</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">継続のための行動設計原則</h3>
+                <ol class="space-y-4 pl-6 list-decimal text-gray-700">
+                  <li><span class="font-bold">明確さの原則：</span>何を、いつ、どこで学習するかを具体的に定義する</li>
+                  <li><span class="font-bold">魅力の原則：</span>学習を魅力的に感じるための仕組みを作る</li>
+                  <li><span class="font-bold">容易さの原則：</span>学習のハードルを可能な限り下げる</li>
+                  <li><span class="font-bold">満足感の原則：</span>即時的な達成感と報酬を得られるようにする</li>
+                </ol>
+                <p class="mt-4 text-gray-700">これらの原則に基づき、次のセクションからは具体的な仕組みづくりを解説します。</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t dark:border-gray-700">
+            <button type="button"
+              class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-purple-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800"
+              data-hs-overlay="#failure-detail-modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- マイクロラーニングセクション -->
+  <section id="micro-learning" class="py-20 bg-gray-50">
+    <div class="section-container">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-1/2 fade-in">
+          <div class="relative">
+            <span class="absolute -top-6 -left-6 text-8xl font-black text-purple-100">02</span>
+            <h2 class="section-title relative z-10">
+              解決策①：<span class="text-purple-600">マイクロラーニングで「無理なく」続ける</span>
+            </h2>
+          </div>
+          <h3 class="text-2xl text-gray-700 mb-8">小さな継続が大きな成果を生む</h3>
+
+          <div class="flex flex-wrap mb-8">
+            <div class="badge">
+              <i class="fas fa-hourglass-half"></i>
+              <span>時間最適化</span>
+            </div>
+            <div class="badge">
+              <i class="fas fa-brain"></i>
+              <span>認知科学</span>
+            </div>
+            <div class="badge">
+              <i class="fas fa-layer-group"></i>
+              <span>Z軸Lv1-2</span>
+            </div>
+          </div>
+
+          <p class="mb-6 text-gray-700">
+            前セクションで挫折のメカニズムを理解したところで、最初の解決策として「マイクロラーニング」を紹介します。マイクロラーニングとは、<span
+              class="highlight highlight-primary">短時間の学習セッションを定期的に行う</span>手法です。
+          </p>
+
+          <div class="bg-purple-50 p-6 rounded-lg mb-8">
+            <h4 class="font-bold text-lg mb-3 text-purple-800">マイクロラーニングの科学的根拠</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                <span><span class="font-semibold">記憶の間隔効果：</span> 学習を時間的に分散させると記憶の定着率が向上する</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                <span><span class="font-semibold">認知負荷の軽減：</span> 短時間学習は脳の疲労が少なく、集中力を維持できる</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                <span><span class="font-semibold">障壁の低減：</span> 「たった5分」なら始めやすく、習慣化のハードルが下がる</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="mb-8 text-gray-700">
+            AI超独学においては、AIを活用して<span
+              class="highlight highlight-primary">個人最適化されたマイクロラーニング習慣</span>を構築できます。AI学習アシスタントがあなたのスケジュール、学習リズム、集中力の波を分析し、理想的な「マイクロ学習モーメント」を特定。その瞬間に最適な学習コンテンツを提供することで、無理なく効率的に学びを継続できるようになります。
+          </p>
+
+          <div class="mt-10">
+            <div
+              class="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition-all cursor-pointer"
+              data-hs-overlay="#micro-learning-detail-modal">
+              <span>マイクロラーニング実践法の詳細</span>
+              <i class="fas fa-arrow-right ml-2"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 slide-in-right">
+          <div class="chart-container bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-bold text-center text-gray-800 mb-6">学習継続率の比較</h3>
+            <canvas id="microLearningChart"></canvas>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-gray-700 mb-2">従来の学習法</h4>
+                <p class="text-sm text-gray-600">週に1-2回、長時間の学習セッション。初期効果は高いが継続率が急落</p>
+              </div>
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-purple-700 mb-2">マイクロラーニング</h4>
+                <p class="text-sm text-gray-600">毎日5-15分の短時間学習。始めやすく、長期的な継続率が高い</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- マイクロラーニング詳細モーダル -->
+    <div id="micro-learning-detail-modal"
+      class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+        <div class="flex flex-col bg-white border shadow-sm rounded-xl">
+          <div class="flex justify-between items-center py-3 px-4 border-b">
+            <h3 class="font-bold text-gray-800">
+              マイクロラーニング実践ガイド
+            </h3>
+            <button type="button"
+              class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700"
+              data-hs-overlay="#micro-learning-detail-modal">
+              <span class="sr-only">Close</span>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="p-6 overflow-y-auto">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">マイクロラーニングの5原則</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full mb-3">
+                      <i class="fas fa-clock text-purple-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">短時間集中</h4>
+                    <p class="text-sm text-gray-600">5〜15分の集中セッションを基本単位とする。これは最適な集中スパンに合致</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full mb-3">
+                      <i class="fas fa-calendar-check text-purple-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">毎日実施</h4>
+                    <p class="text-sm text-gray-600">長い時間より頻度を優先。毎日少しずつが最も習慣化しやすい</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full mb-3">
+                      <i class="fas fa-bullseye text-purple-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">単一焦点</h4>
+                    <p class="text-sm text-gray-600">一度に一つのトピックのみ。マルチタスキングは避ける</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full mb-3">
+                      <i class="fas fa-link text-purple-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">既存ルーティンに紐付け</h4>
+                    <p class="text-sm text-gray-600">朝のコーヒーなど、既存の習慣に学習を紐付けて実行の摩擦を減らす</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full mb-3">
+                      <i class="fas fa-smile text-purple-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">即時フィードバック</h4>
+                    <p class="text-sm text-gray-600">学習直後にテストや振り返りを行い、達成感を得る</p>
+                  </div>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full mb-3">
+                      <i class="fas fa-puzzle-piece text-purple-600"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">積み重ね型設計</h4>
+                    <p class="text-sm text-gray-600">マイクロコンテンツ同士が連結し、大きな学習目標へと繋がる設計</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">AIを活用したマイクロラーニング設計</h3>
+                <div class="mb-6">
+                  <div class="bg-purple-50 p-6 rounded-lg mb-6">
+                    <h4 class="font-bold mb-3">マイクロコンテンツの自動生成</h4>
+                    <p class="text-gray-700 mb-4">AIに大きな学習テーマを小さな「マイクロモジュール」に分解してもらいます：</p>
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「私が学びたい『機械学習の基礎』というテーマを、1回5分で学べる15個のマイクロコンテンツに分解してください。各回のタイトルと簡単な学習目標を示し、全体として系統的に理解できる順序で提案してください。」
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="bg-purple-50 p-6 rounded-lg mb-6">
+                    <h4 class="font-bold mb-3">マイクロラーニング実行支援</h4>
+                    <p class="text-gray-700 mb-4">AIがあなたのスケジュールと学習スタイルに合わせた実行計画を提案します：</p>
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「私は朝型で、通勤時は電車で30分、昼休みは12時から1時の間、夜は子どもを寝かしつけた後の10時以降に時間があります。このスケジュールを踏まえて、マイクロラーニングを習慣化するための最適なプランを提案してください。特に継続しやすいきっかけ（トリガー）と、モチベーションが下がりそうな時の対策も含めてください。」
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">実践例：5分間マイクロラーニングの流れ</h3>
+                <div class="relative pl-8 pb-6 border-l-2 border-purple-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">1</div>
+                  </div>
+                  <div>
+                    <h5 class="font-bold">準備（30秒）</h5>
+                    <p class="text-gray-700">アプリを開き、今日のマイクロモジュールを確認</p>
+                  </div>
+                </div>
+
+                <div class="relative pl-8 pb-6 border-l-2 border-purple-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">2</div>
+                  </div>
+                  <div>
+                    <h5 class="font-bold">学習（3分）</h5>
+                    <p class="text-gray-700">コンテンツを読む、視聴する、聴く（一つの概念に集中）</p>
+                  </div>
+                </div>
+
+                <div class="relative pl-8 pb-6 border-l-2 border-purple-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">3</div>
+                  </div>
+                  <div>
+                    <h5 class="font-bold">アウトプット（1分）</h5>
+                    <p class="text-gray-700">ミニテストを解く、または学んだ内容を一言でまとめる</p>
+                  </div>
+                </div>
+
+                <div class="relative pl-8">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">4</div>
+                  </div>
+                  <div>
+                    <h5 class="font-bold">記録（30秒）</h5>
+                    <p class="text-gray-700">完了をマーク、達成感を得る、次回予約</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">マイクロラーニングの落とし穴と対策</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 class="font-bold mb-2">落とし穴①：断片的な理解</h4>
+                    <p class="text-gray-700 mb-2">小さな単位の学習だけでは、全体像が見えづらくなる可能性があります。</p>
+                    <p class="text-gray-700 font-bold">対策：</p>
+                    <p class="text-gray-700">週に1回「統合セッション」を設け、AIに今週学んだ内容を統合して説明してもらう。</p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-bold mb-2">落とし穴②：進捗感の欠如</h4>
+                    <p class="text-gray-700 mb-2">小さな学習が積み重なっていることを実感しづらい場合があります。</p>
+                    <p class="text-gray-700 font-bold">対策：</p>
+                    <p class="text-gray-700">視覚的な進捗トラッカーを使い、小さな一歩が大きな旅の一部だと認識できるようにする。</p>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <p class="text-gray-700">
+                    マイクロラーニングのメリットは、実行の心理的ハードルが低く、始めるまでの抵抗感を克服しやすい点です。「たった5分だけ」という約束で始めれば、多くの場合、一度始めた学習は予定より長く続きます（これを心理学では「ゼイガルニク効果」と呼びます）。
+                  </p>
+                  <p class="text-gray-700 mt-2">
+                    次のセクションでは、マイクロラーニングをさらに強化する「インプットの仕組み化」について解説します。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+            <button type="button"
+              class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-purple-600 transition-all text-sm"
+              data-hs-overlay="#micro-learning-detail-modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- インプット仕組み化セクション -->
+  <section id="input-system" class="section-container py-20">
+    <div class="flex flex-col lg:flex-row gap-12">
+      <div class="lg:w-1/2 fade-in">
+        <div class="relative">
+          <span class="absolute -top-6 -left-6 text-8xl font-black text-purple-100">03</span>
+          <h2 class="section-title relative z-10">
+            解決策②：<span class="text-purple-600">「インプット」を仕組み化する</span>
+          </h2>
+        </div>
+        <h3 class="text-2xl text-gray-700 mb-8">学びの流れを自動化して継続を確保する</h3>
+
+        <div class="flex flex-wrap mb-8">
+          <div class="badge">
+            <i class="fas fa-cogs"></i>
+            <span>自動化</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-database"></i>
+            <span>情報設計</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-layer-group"></i>
+            <span>Z軸Lv1-2</span>
+          </div>
+        </div>
+
+        <p class="mb-6 text-gray-700">
+          マイクロラーニングの考え方を身につけたところで、次は「<span class="highlight highlight-primary">インプットの仕組み化</span>」について考えていきます。
+          継続の最大の敵は「<span class="highlight highlight-accent">摩擦（フリクション）</span>」です。学習を始めるまでの手間が多すぎると、それだけで挫折してしまいます。
+        </p>
+
+        <div class="bg-purple-50 p-6 rounded-lg mb-8">
+          <h4 class="font-bold text-lg mb-3 text-purple-800">インプットの摩擦を減らす重要性</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+              <span><span class="font-semibold">意思決定疲れ：</span> 「何を学ぶか」を毎回選ぶ必要がないように</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+              <span><span class="font-semibold">行動開始の障壁：</span> 始めるまでのステップ数を最小化</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+              <span><span class="font-semibold">コンテンツ準備の負担：</span> 学習材料が常に用意された状態を維持</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="mb-8 text-gray-700">
+          AIを活用することで、これらの摩擦を大幅に減らし、<span
+            class="highlight highlight-primary">シームレスな学習体験</span>を実現することができます。具体的には、AIがコンテンツキュレーション、情報整理、学習コンテキストの即時提供などを担当し、あなたは「学ぶ」だけに集中できる環境を構築します。
+        </p>
+
+        <div class="mt-10">
+          <div
+            class="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition-all cursor-pointer"
+            data-hs-overlay="#input-system-detail-modal">
+            <span>インプット自動化の実践手法</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 slide-in-right">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold text-center text-gray-800 mb-6">AI支援型インプットシステム</h3>
+
+          <!-- インプット自動化の図解 -->
+          <div class="relative h-96 mb-6">
+            <!-- System Flow Diagram -->
+            <svg width="100%" height="100%" viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
+              <!-- Background Grid -->
+              <defs>
+                <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(0, 0, 0, 0.05)" stroke-width="0.5" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#smallGrid)" />
+
+              <!-- Flow Lines -->
+              <path d="M 100 80 C 140 80, 160 140, 250 140" stroke="#673AB7" stroke-width="3" fill="none"
+                stroke-dasharray="5,5" />
+              <path d="M 250 170 C 160 170, 140 230, 100 230" stroke="#673AB7" stroke-width="3" fill="none"
+                stroke-dasharray="5,5" />
+              <path d="M 400 80 C 360 80, 340 140, 250 140" stroke="#673AB7" stroke-width="3" fill="none"
+                stroke-dasharray="5,5" />
+              <path d="M 250 170 C 340 170, 360 230, 400 230" stroke="#673AB7" stroke-width="3" fill="none"
+                stroke-dasharray="5,5" />
+              <path d="M 250 200 L 250 300" stroke="#673AB7" stroke-width="3" fill="none" />
+
+              <!-- System Components -->
+              <g>
+                <!-- AI Component -->
+                <rect x="200" y="110" width="100" height="80" rx="15" fill="#f3e5f5" stroke="#673AB7"
+                  stroke-width="2" />
+                <text x="250" y="140" font-size="16" fill="#673AB7" text-anchor="middle" font-weight="bold">AI</text>
+                <text x="250" y="160" font-size="12" fill="#673AB7" text-anchor="middle">処理エンジン</text>
+
+                <!-- Input Sources -->
+                <g>
+                  <circle cx="100" cy="80" r="30" fill="#e1bee7" stroke="#673AB7" stroke-width="2" />
+                  <text x="100" y="85" font-size="14" fill="#673AB7" text-anchor="middle">RSS</text>
+                  <circle cx="100" cy="230" r="30" fill="#e1bee7" stroke="#673AB7" stroke-width="2" />
+                  <text x="100" y="235" font-size="14" fill="#673AB7" text-anchor="middle">メール</text>
+                </g>
+
+                <!-- Output Formats -->
+                <g>
+                  <circle cx="400" cy="80" r="30" fill="#e1bee7" stroke="#673AB7" stroke-width="2" />
+                  <text x="400" y="85" font-size="14" fill="#673AB7" text-anchor="middle">Podcast</text>
+                  <circle cx="400" cy="230" r="30" fill="#e1bee7" stroke="#673AB7" stroke-width="2" />
+                  <text x="400" y="235" font-size="14" fill="#673AB7" text-anchor="middle">要約</text>
+                </g>
+
+                <!-- User -->
+                <circle cx="250" cy="330" r="40" fill="#673AB7" stroke="#4527A0" stroke-width="2" />
+                <text x="250" y="335" font-size="16" fill="white" text-anchor="middle">学習者</text>
+              </g>
+
+              <!-- Labels -->
+              <text x="100" y="40" font-size="14" fill="#673AB7" text-anchor="middle" font-weight="bold">情報源</text>
+              <text x="400" y="40" font-size="14" fill="#673AB7" text-anchor="middle" font-weight="bold">出力形式</text>
+              <text x="250" y="95" font-size="14" fill="#673AB7" text-anchor="middle" font-weight="bold">自動処理</text>
+            </svg>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div class="bg-purple-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-purple-700 mb-2">自動キュレーション</h4>
+              <p class="text-sm text-gray-600">AIが学習目標に合わせてインプットを自動的に収集・整理し、いつでも学習開始できる状態を維持</p>
+            </div>
+            <div class="bg-purple-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-purple-700 mb-2">形式変換</h4>
+              <p class="text-sm text-gray-600">テキスト→音声、長文→要約など、状況に最適な形式に変換し学習の摩擦を減らす</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- インプット仕組み化詳細モーダル -->
+    <div id="input-system-detail-modal"
+      class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+        <div class="flex flex-col bg-white border shadow-sm rounded-xl">
+          <div class="flex justify-between items-center py-3 px-4 border-b">
+            <h3 class="font-bold text-gray-800">
+              インプット仕組み化の実践ガイド
+            </h3>
+            <button type="button"
+              class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700"
+              data-hs-overlay="#input-system-detail-modal">
+              <span class="sr-only">Close</span>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="p-6 overflow-y-auto">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">AIと構築する3つの自動インプットパイプライン</h3>
+                <div class="mb-6">
+                  <div class="habit-box">
+                    <div class="habit-box-title">インプットパイプライン①：自動コンテンツ収集</div>
+                    <h4 class="font-bold mb-3">AIに学習素材を自動的に集めさせる</h4>
+                    <p class="text-gray-700 mb-3">
+                      学習のための情報源を自動的に監視し、関連性の高いコンテンツを自動収集するシステムを構築します。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg mb-4">
+                      <h5 class="font-bold mb-2">実践ステップ</h5>
+                      <ol class="list-decimal pl-5 space-y-2">
+                        <li>AIに自分の学習ゴールと関心領域を詳細に説明する</li>
+                        <li>RSS、ニュースレター、Podcast、YouTubeチャンネルなど、信頼できる情報源をリストアップ</li>
+                        <li>ZapierやIFTTTなどの自動化ツールを設定し、新しいコンテンツをNotionやEvernoteなどに自動的に保存</li>
+                        <li>AIに週に一度、収集したコンテンツを重要度でフィルタリングさせる</li>
+                      </ol>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「私はAI開発の最新トレンドについて学んでいます。特に大規模言語モデル、生成AIの倫理問題、ビジネスへの応用に興味があります。私が毎週追いかけるべき5つの情報源（ブログ、ニュースレター、ポッドキャスト）を具体的に推薦してください。また、これらの情報を効率的に収集・整理するための自動化システム設計も提案してください。」
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="habit-box">
+                    <div class="habit-box-title">インプットパイプライン②：学習形式最適化</div>
+                    <h4 class="font-bold mb-3">状況に合わせたフォーマット変換</h4>
+                    <p class="text-gray-700 mb-3">
+                      同じ内容でも、状況によって最適な学習形式は異なります。AIを活用して、コンテンツを最適な形式に自動変換します。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg mb-4">
+                      <h5 class="font-bold mb-2">変換例</h5>
+                      <ul class="list-disc pl-5 space-y-2">
+                        <li><span class="font-semibold">テキスト→音声：</span>通勤中や運動中に聴けるようにする</li>
+                        <li><span class="font-semibold">長文→要約：</span>時間がない時でも核心をつかめるようにする</li>
+                        <li><span class="font-semibold">専門文書→簡易説明：</span>難解な概念をわかりやすく噛み砕く</li>
+                        <li><span class="font-semibold">単調情報→視覚化：</span>グラフやチャートで傾向を把握しやすくする</li>
+                      </ul>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「この機械学習に関する論文（URL）の重要なポイントを3分で読める要約にしてください。さらに、通勤中に聴けるように、要約をより会話的な表現に変換し、音声として聴くのに適した形式にしてください。」
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="habit-box">
+                    <div class="habit-box-title">インプットパイプライン③：学習文脈の即時提供</div>
+                    <h4 class="font-bold mb-3">中断した学習を即座に再開できる環境</h4>
+                    <p class="text-gray-700 mb-3">
+                      学習の継続性を保つために最も重要なのは、前回の学習内容をすぐに思い出せる環境です。AIがこれを強力にサポートします。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg mb-4">
+                      <h5 class="font-bold mb-2">実装方法</h5>
+                      <ul class="list-disc pl-5 space-y-2">
+                        <li>前回の学習内容と次回の学習予定を自動記録するシステムを構築</li>
+                        <li>学習を再開する際、AIに前回の要点を復習してもらう（1分以内）</li>
+                        <li>再開に最適なマイクロモジュールの提案</li>
+                        <li>学習した内容の関連性マップの自動更新</li>
+                      </ul>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「前回の『量子コンピューティング』の学習セッション（5日前）で私が最後に理解していた概念と、その時に課題に感じていたポイントを思い出させてください。そして今日の5分間のマイクロラーニングセッションで最適なフォーカスポイントを提案してください。」
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">インプット仕組み化のための技術スタック</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h4 class="font-bold text-purple-700 mb-2">自動化ツール</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                      <li>Zapier / IFTTT：様々なサービス間の自動連携</li>
+                      <li>Make（旧Integromat）：高度な条件分岐を持つワークフロー</li>
+                      <li>Apple Shortcuts / Tasker：モバイルでの自動化</li>
+                    </ul>
+                  </div>
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h4 class="font-bold text-purple-700 mb-2">情報処理・変換</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                      <li>Claude / GPT：テキスト要約、フォーマット変換</li>
+                      <li>ElevenLabs / OpenAI TTS：テキスト音声化</li>
+                      <li>Azure Cognitive Services：多言語対応・翻訳</li>
+                    </ul>
+                  </div>
+                  <div class="bg-purple-50 p-4 rounded-lg">
+                    <h4 class="font-bold text-purple-700 mb-2">知識管理</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                      <li>Notion / Obsidian：ナレッジベース構築</li>
+                      <li>Readwise / Instapaper：ハイライト管理</li>
+                      <li>Anki / RemNote：復習システム</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">インプット仕組み化の効果を最大化するポイント</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 class="font-bold mb-2">自分の「最高の学習モード」を知る</h4>
+                    <p class="text-gray-700">
+                      AIに自分の学習パターンを分析してもらい、いつ、どのような状態で最も効率的に学べるかを把握しましょう。その上で、その状態に最適化されたインプットパイプラインを構築します。
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-bold mb-2">「学習の摩擦ポイント」を特定し排除する</h4>
+                    <p class="text-gray-700">
+                      自分の学習プロセスで最も「面倒」に感じるポイントを特定し、そこに焦点を当てて自動化します。ちょっとした摩擦でも、積み重なれば継続の大きな障壁になります。
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <p class="text-gray-700">
+                    インプットの仕組み化によって「学ぶ準備をする」という負担から解放されると、「学ぶ」という本質的な活動に集中できるようになります。このシステムが軌道に乗れば、学習開始の障壁はほぼゼロになり、継続が格段に容易になるでしょう。
+                  </p>
+                  <p class="text-gray-700 mt-2">
+                    次のセクションでは、インプットだけでなく「アウトプット」も習慣化するための方法を解説します。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+            <button type="button"
+              class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-purple-600 transition-all text-sm"
+              data-hs-overlay="#input-system-detail-modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- アウトプット習慣化セクション -->
+  <section id="output-habit" class="py-20 bg-gray-50">
+    <div class="section-container">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-1/2 fade-in">
+          <div class="relative">
+            <span class="absolute -top-6 -left-6 text-8xl font-black text-purple-100">04</span>
+            <h2 class="section-title relative z-10">
+              解決策③：<span class="text-purple-600">「アウトプット」を習慣化する</span>
+            </h2>
+          </div>
+          <h3 class="text-2xl text-gray-700 mb-8">AIリフレクション対話で学びを定着させる</h3>
+
+          <div class="flex flex-wrap mb-8">
+            <div class="badge">
+              <i class="fas fa-pen"></i>
+              <span>表現</span>
+            </div>
+            <div class="badge">
+              <i class="fas fa-comments"></i>
+              <span>対話</span>
+            </div>
+            <div class="badge">
+              <i class="fas fa-layer-group"></i>
+              <span>Z軸Lv2-3</span>
+            </div>
+          </div>
+
+          <p class="mb-6 text-gray-700">
+            「知識」が「能力」に変わるのは、<span
+              class="highlight highlight-primary">アウトプット</span>の瞬間です。インプットだけで終わる学習は、いわば「読んだ気」「わかった気」になるだけで、真の定着にはつながりません。
+          </p>
+
+          <div class="bg-purple-50 p-6 rounded-lg mb-8">
+            <h4 class="font-bold text-lg mb-3 text-purple-800">アウトプットの本質的な価値</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                <span><span class="font-semibold">理解の深化：</span> 「教える」ことで自分の理解が明確になる</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                <span><span class="font-semibold">記憶の定着：</span> 能動的なアウトプットは長期記憶への定着を促進</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+                <span><span class="font-semibold">思考の整理：</span> 言語化することで考えが整理され、新たな気づきが生まれる</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="mb-8 text-gray-700">
+            しかし、多くの人がアウトプットを避ける理由は、<span class="highlight highlight-accent">「誰に対して」「どのように」アウトプットすれば良いかわからない</span>ことです。
+            ここで<span
+              class="highlight highlight-primary">AIリフレクション対話</span>という手法が非常に効果的です。AIは、あなたのアウトプットに対して即座にフィードバックを返し、より深い理解へと導いてくれます。
+          </p>
+
+          <div class="mt-10">
+            <div
+              class="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition-all cursor-pointer"
+              data-hs-overlay="#output-habit-detail-modal">
+              <span>AI対話アウトプットの実践法</span>
+              <i class="fas fa-arrow-right ml-2"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 space-y-8 slide-in-right">
+          <div class="chart-container bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-bold text-center text-gray-800 mb-6">インプット・アウトプットバランスの効果</h3>
+            <canvas id="inputOutputChart"></canvas>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-gray-700 mb-2">インプットのみの学習</h4>
+                <p class="text-sm text-gray-600">多くの情報を取り入れる一方、定着率が低く、実践への応用が難しい</p>
+              </div>
+              <div class="bg-purple-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-purple-700 mb-2">インプット + アウトプット</h4>
+                <p class="text-sm text-gray-600">効率的に記憶を定着させ、応用力と創造性を大幅に向上させる</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-container bg-white p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-bold text-center text-gray-800 mb-6">AIリフレクション対話の効果</h3>
+            <div style="height: 250px;">
+              <canvas id="reflectionEffectChart"></canvas>
+            </div>
+            <div class="text-center mt-6">
+              <p class="text-gray-600">AIリフレクション対話は、学んだ内容の定着率を<span class="text-purple-700 font-bold">約2倍</span>に高める</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- アウトプット習慣化詳細モーダル -->
+    <div id="output-habit-detail-modal"
+      class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+        <div class="flex flex-col bg-white border shadow-sm rounded-xl">
+          <div class="flex justify-between items-center py-3 px-4 border-b">
+            <h3 class="font-bold text-gray-800">
+              AIリフレクション対話でアウトプットを習慣化する
+            </h3>
+            <button type="button"
+              class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700"
+              data-hs-overlay="#output-habit-detail-modal">
+              <span class="sr-only">Close</span>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="p-6 overflow-y-auto">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">AIリフレクション対話の5つの形式</h3>
+                <div class="mb-6">
+                  <div class="habit-box">
+                    <div class="habit-box-title">形式①：教える対話</div>
+                    <h4 class="font-bold mb-3">AIに学んだ内容を教える</h4>
+                    <p class="text-gray-700 mb-3">
+                      あなたが学んだ内容をAIに「教える」という形でアウトプットします。説明することで理解が深まり、AIからのフィードバックで誤解や不足点に気づけます。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「私は初心者としてあなたに『DNNにおけるバックプロパゲーション』について説明します。私の説明に対して、誤解や不足があれば指摘してください。また、説明が正確でもより良い説明方法があれば教えてください。」
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="habit-box">
+                    <div class="habit-box-title">形式②：質問対応対話</div>
+                    <h4 class="font-bold mb-3">AIからの質問に答える</h4>
+                    <p class="text-gray-700 mb-3">
+                      AIに特定のトピックについて、「高校生に説明するように」あなたに質問をしてもらい、それに答えるという形式です。教える側に立つことで理解が深まります。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「私は『量子コンピューティングの基礎』について学んでいます。あなたは好奇心旺盛な高校生になりきって、このトピックについて5つの質問をしてください。私はそれに答え、あなたはさらに掘り下げる質問や、私の説明の改善点をフィードバックしてください。」
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="habit-box">
+                    <div class="habit-box-title">形式③：応用思考対話</div>
+                    <h4 class="font-bold mb-3">学んだ内容を別の文脈に応用する</h4>
+                    <p class="text-gray-700 mb-3">
+                      学んだ概念を、全く別の分野や状況に応用する思考を展開します。知識の転移能力を高め、創造的思考を促進します。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「私は『アジャイル開発手法』について学びました。この概念を全く異なる分野である『家庭での子育て』に応用するとしたら、どのような実践になるか考えてみます。私のアイデアに対して、さらなる応用の可能性や、思考の飛躍を促すような質問をしてください。」
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="habit-box">
+                    <div class="habit-box-title">形式④：批評対話</div>
+                    <h4 class="font-bold mb-3">学んだ内容に批判的視点を持つ</h4>
+                    <p class="text-gray-700 mb-3">
+                      学習内容に対して「それは本当か？」と批判的に考え、弱点や反論可能点を探る思考法です。これにより多角的な理解が深まります。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「私は『自己啓発における成長マインドセット理論』について学びました。この理論の弱点や、過度に信じることの危険性についての批判的視点を探ってみます。私の批判的分析に対して、さらなる視点や、反対にこの理論の強みを指摘することで、バランスの取れた理解を助けてください。」
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="habit-box">
+                    <div class="habit-box-title">形式⑤：統合対話</div>
+                    <h4 class="font-bold mb-3">複数の学びを統合し関連付ける</h4>
+                    <p class="text-gray-700 mb-3">
+                      別々に学んだ概念や知識を関連付け、より大きな思考の枠組みを構築します。これにより知識のネットワークが形成されます。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「最近、『行動経済学のナッジ理論』と『UXデザインの基本原則』を別々に学びました。これら2つの分野の知識を統合し、どのように相互に強化し合えるか考えてみます。私の統合的な考察に対して、さらなる関連性や応用可能性についてフィードバックをください。」
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">AIリフレクション対話を習慣化するための5ステップ</h3>
+                <div class="relative pl-8 pb-6 border-l-2 border-purple-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">1</div>
+                  </div>
+                  <div>
+                    <h5 class="font-bold">学習直後の5分を確保する</h5>
+                    <p class="text-gray-700">「必ず学習後5分間はAIとの対話時間」というルールを設定します。これがトリガーとなります。</p>
+                  </div>
+                </div>
+
+                <div class="relative pl-8 pb-6 border-l-2 border-purple-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">2</div>
+                  </div>
+                  <div>
+                    <h5 class="font-bold">対話テンプレートを用意する</h5>
+                    <p class="text-gray-700">5つの対話形式のプロンプトテンプレートを用意し、すぐに開始できるようにします。</p>
+                  </div>
+                </div>
+
+                <div class="relative pl-8 pb-6 border-l-2 border-purple-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">3</div>
+                  </div>
+                  <div>
+                    <h5 class="font-bold">小さく始める</h5>
+                    <p class="text-gray-700">最初は「1往復の対話」だけでも良いと決めて、ハードルを下げます。</p>
+                  </div>
+                </div>
+
+                <div class="relative pl-8 pb-6 border-l-2 border-purple-200">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">4</div>
+                  </div>
+                  <div>
+                    <h5 class="font-bold">対話ログを記録する</h5>
+                    <p class="text-gray-700">意味のある対話はNotionなどに保存し、定期的に復習します。</p>
+                  </div>
+                </div>
+
+                <div class="relative pl-8">
+                  <div class="absolute left-[-16px] top-0 bg-white p-1">
+                    <div class="sequence-number">5</div>
+                  </div>
+                  <div>
+                    <h5 class="font-bold">継続のシステム化</h5>
+                    <p class="text-gray-700">AIに「明日はこの続きをやりましょう」と約束させ、次回のきっかけを作ります。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">AIリフレクション対話のさらなる進化形</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 class="font-bold mb-2">マルチモーダル対話</h4>
+                    <p class="text-gray-700 mb-3">
+                      画像や図を含むマルチモーダルなアウトプットをAIに共有し、視覚的思考も促進します。
+                    </p>
+                    <div class="bg-white p-4 rounded-lg text-sm">
+                      <p class="text-gray-700">「手書きの概念図をAIに見せて解説し、フィードバックを得る」</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 class="font-bold mb-2">複数AIとの対話</h4>
+                    <p class="text-gray-700 mb-3">
+                      異なる特性を持つAIエージェントと同時に対話し、多角的視点を得ます。
+                    </p>
+                    <div class="bg-white p-4 rounded-lg text-sm">
+                      <p class="text-gray-700">「同じ学習内容について、批判的視点のAIと支援的視点のAIに同時に説明する」</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <h4 class="font-bold mb-2">継続のための重要ポイント</h4>
+                  <p class="text-gray-700">
+                    AIリフレクション対話を続けるための最も重要なポイントは、<span
+                      class="highlight highlight-primary">完璧を求めないこと</span>です。「今日は疲れているから」と言い訳したくなる日こそ、「たった1往復だけ」と決めて実行することで習慣の連鎖が途切れません。
+                  </p>
+                  <p class="text-gray-700 mt-2">
+                    また、自分の性格や学習スタイルに合った対話形式を見つけることも大切です。5つの形式を試して、最も楽しく続けられるものを中心に習慣化しましょう。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+            <button type="button"
+              class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-purple-600 transition-all text-sm"
+              data-hs-overlay="#output-habit-detail-modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 継続マインドセットセクション -->
+  <section id="mindset" class="section-container py-20">
+    <div class="flex flex-col lg:flex-row gap-12">
+      <div class="lg:w-1/2 fade-in">
+        <div class="relative">
+          <span class="absolute -top-6 -left-6 text-8xl font-black text-purple-100">05</span>
+          <h2 class="section-title relative z-10">
+            解決策④：<span class="text-purple-600">継続マインドセットを育む</span>
+          </h2>
+        </div>
+        <h3 class="text-2xl text-gray-700 mb-8">学び続ける思考パターンを構築する</h3>
+
+        <div class="flex flex-wrap mb-8">
+          <div class="badge">
+            <i class="fas fa-brain"></i>
+            <span>メタ認知</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-route"></i>
+            <span>長期目標</span>
+          </div>
+          <div class="badge">
+            <i class="fas fa-layer-group"></i>
+            <span>Z軸Lv3</span>
+          </div>
+        </div>
+
+        <p class="mb-6 text-gray-700">
+          これまで紹介した仕組みやシステムも大切ですが、最終的には<span
+            class="highlight highlight-primary">継続するための心の姿勢</span>が鍵を握ります。すべてのシステムは完璧ではなく、予期せぬ障害が現れることもあります。そんな時に頼りになるのが「継続マインドセット」です。
+        </p>
+
+        <div class="bg-purple-50 p-6 rounded-lg mb-8">
+          <h4 class="font-bold text-lg mb-3 text-purple-800">継続マインドセットの本質</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+              <span><span class="font-semibold">成長志向：</span> 学習を通じて自分が変わり成長するという強い信念</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+              <span><span class="font-semibold">プロセス重視：</span> 結果よりも学習プロセスそのものを価値あるものと捉える</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-purple-600 mt-1 mr-3"></i>
+              <span><span class="font-semibold">回復力：</span> 挫折や失敗からすぐに立ち直る精神的強さ</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="mb-8 text-gray-700">
+          AIは、この<span
+            class="highlight highlight-primary">継続マインドセット</span>の形成と維持にも貢献します。メタ認知を促すプロンプト、自己内対話の質を高めるガイド、そして長期的な学習の旅の伴走者として、あなたの心の姿勢を支え続けます。
+        </p>
+
+        <div class="mt-10">
+          <div
+            class="inline-flex items-center justify-center px-6 py-3 bg-purple-600 text-white rounded-full shadow-md hover:bg-purple-700 transition-all cursor-pointer"
+            data-hs-overlay="#mindset-detail-modal">
+            <span>継続マインドセットの育み方</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-1/2 slide-in-right">
+        <div class="chart-container bg-white p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-bold text-center text-gray-800 mb-6">継続力の成長推移</h3>
+          <canvas id="continuityGrowthChart"></canvas>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-gray-700 mb-2">従来の継続法</h4>
+              <p class="text-sm text-gray-600">モチベーションに依存した継続は徐々に弱まり、挫折に至りやすい</p>
+            </div>
+            <div class="bg-purple-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-purple-700 mb-2">AI支援型継続システム</h4>
+              <p class="text-sm text-gray-600">システムと心のバランスが取れた継続は時間とともに強化される</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 継続マインドセット詳細モーダル -->
+    <div id="mindset-detail-modal"
+      class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+      <div
+        class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-4xl sm:w-full m-3 sm:mx-auto min-h-[calc(100%-3.5rem)] flex items-center">
+        <div class="flex flex-col bg-white border shadow-sm rounded-xl">
+          <div class="flex justify-between items-center py-3 px-4 border-b">
+            <h3 class="font-bold text-gray-800">
+              継続マインドセットの育み方
+            </h3>
+            <button type="button"
+              class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-700"
+              data-hs-overlay="#mindset-detail-modal">
+              <span class="sr-only">Close</span>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="p-6 overflow-y-auto">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">AIと育む4つの継続マインドセット</h3>
+                <div class="mb-6">
+                  <div class="habit-box">
+                    <div class="habit-box-title">マインドセット①：成長心理メタ認知</div>
+                    <h4 class="font-bold mb-3">学びを通じた自己変容を自覚する</h4>
+                    <p class="text-gray-700 mb-3">
+                      学習を単なる「知識の獲得」としてではなく、「自分自身の変容と成長」として捉えるマインドセットを育みます。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg mb-4">
+                      <h5 class="font-bold mb-2">AIによる支援方法</h5>
+                      <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>定期的な「学びによる変化の振り返り」セッションの実施</li>
+                        <li>学んだことが自分の思考や行動にどう影響したかの言語化サポート</li>
+                        <li>小さな成長の積み重ねを可視化・言語化するリフレクション</li>
+                      </ul>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「過去1ヶ月間の私の学びについて振り返ります。この学習によって、私の思考パターンや意思決定がどのように変化したと思いますか？具体的な変化の兆候があれば指摘してください。また、私の言動や質問から、まだ気づいていない成長点があれば教えてください。」
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="habit-box">
+                    <div class="habit-box-title">マインドセット②：学習旅程意識</div>
+                    <h4 class="font-bold mb-3">長い旅の途上にいることを理解する</h4>
+                    <p class="text-gray-700 mb-3">
+                      知識習得を短期的な成果ではなく、生涯にわたる旅として捉えるマインドセットを育みます。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg mb-4">
+                      <h5 class="font-bold mb-2">AIによる支援方法</h5>
+                      <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>学習ロードマップの定期的な更新と拡張</li>
+                        <li>現在地点の相対的位置付けの可視化</li>
+                        <li>長期的な知識の相互関連性の発見サポート</li>
+                      </ul>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「AIと機械学習の分野における私の学習旅程を地図として表現してください。現在の私の位置、これまでに訪れた『知識の都市』、これから訪れるべき重要地点、そして複数の可能な道筋を示してください。この旅の醍醐味や、長期的な視点で見た時の『旅そのものの価値』についても触れてください。」
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="habit-box">
+                    <div class="habit-box-title">マインドセット③：挫折リカバリー思考</div>
+                    <h4 class="font-bold mb-3">失敗から学び、すぐに再開する</h4>
+                    <p class="text-gray-700 mb-3">
+                      挫折や学習の中断を「終わり」ではなく、学びの過程の一部として捉え、迅速に回復するマインドセットを育みます。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg mb-4">
+                      <h5 class="font-bold mb-2">AIによる支援方法</h5>
+                      <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>挫折パターンの分析と、個別化された回復戦略の提案</li>
+                        <li>中断期間中も維持された知識や能力の確認</li>
+                        <li>再開のための最小ステップ設計と心理的安全性の確保</li>
+                      </ul>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「2週間ほど学習が滞っていました。このブランクに対して自己批判せずに、学習を再開するための最小の一歩を設計してください。また、このような中断が学習プロセスの自然な一部であることを科学的に説明し、私が感じるかもしれない後ろめたさを軽減する視点を提供してください。」
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="habit-box">
+                    <div class="habit-box-title">マインドセット④：複利的知識観</div>
+                    <h4 class="font-bold mb-3">知識は複利で増えることを理解する</h4>
+                    <p class="text-gray-700 mb-3">
+                      学習の成果が線形ではなく、複利的に増加することを理解し、日々の小さな積み重ねを重視するマインドセットを育みます。
+                    </p>
+
+                    <div class="bg-white p-4 rounded-lg mb-4">
+                      <h5 class="font-bold mb-2">AIによる支援方法</h5>
+                      <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>知識の相互連結とノード増加の可視化</li>
+                        <li>新しい学びと既存知識との接続ポイントの発見</li>
+                        <li>複利的成長の長期シミュレーションによるモチベーション強化</li>
+                      </ul>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg text-sm font-mono">
+                      <p class="text-gray-700 italic">
+                        [AIへのプロンプト例]<br>
+                        「私が学んでいるプログラミングの知識について、『知識の複利効果』の観点から分析してください。これまでに学んだ概念や技術が、どのように相互に強化し合い、単純な加算以上の価値を生み出しているかを説明してください。また、今後6ヶ月間、毎日15分の学習を続けた場合と、週に1回3時間学習した場合の『知識複利』の違いをシミュレーションしてください。」
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-purple-700 mb-4">継続マインドセットの日常実践</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="bg-purple-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-lg mb-3">週次振り返りルーティン</h4>
+                    <p class="text-gray-700 mb-3">毎週決まった時間にAIと共に行う振り返り対話で、継続マインドセットを強化します：</p>
+                    <ol class="list-decimal pl-5 space-y-2 text-gray-700">
+                      <li>今週の学びの要約と統合</li>
+                      <li>成長や変化の言語化</li>
+                      <li>挑戦点とその乗り越え方の分析</li>
+                      <li>来週の最小継続コミットメントの設定</li>
+                    </ol>
+                  </div>
+
+                  <div class="bg-purple-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-lg mb-3">AI共創の学習ダイアリー</h4>
+                    <p class="text-gray-700 mb-3">AIとの対話を通じて日々の学習を記録し、継続の可視化と内省を促進します：</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                      <li>学んだ内容のAIによる要約と関連付け</li>
+                      <li>感情やモチベーションの変化のトラッキング</li>
+                      <li>小さな成功体験の強調と称賛</li>
+                      <li>過去記録との比較による成長の可視化</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h3 class="text-xl font-bold text-purple-800 mb-4">究極の継続の秘訣：AI時代の「自己対話の質」</h3>
+                <p class="text-gray-700 mb-4">
+                  継続の真の鍵を握るのは、あなた自身の「内なる対話」の質です。多くの人が学習を続けられない根本原因は、自分自身との否定的な対話パターンにあります：
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div class="bg-white p-4 rounded-lg">
+                    <h4 class="font-bold text-red-500 mb-2">挫折を招く対話パターン</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                      <li>「またサボってしまった…」（自己批判）</li>
+                      <li>「やっぱり私には無理だ」（固定思考）</li>
+                      <li>「周りはもっと進んでいる」（比較思考）</li>
+                      <li>「完璧にできないならやらない」（完璧主義）</li>
+                    </ul>
+                  </div>
+                  <div class="bg-white p-4 rounded-lg">
+                    <h4 class="font-bold text-green-500 mb-2">継続を促す対話パターン</h4>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                      <li>「今日は5分だけでも始めよう」（小さな一歩）</li>
+                      <li>「失敗も学習の一部だ」（成長思考）</li>
+                      <li>「昨日の自分と比べて成長している」（自己比較）</li>
+                      <li>「進歩は完璧でなくても価値がある」（プロセス重視）</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p class="text-gray-700">
+                  AIは、あなたの「内なる対話」の質を高める最高のパートナーとなります。否定的な自己対話パターンを検出し、より建設的で成長志向の対話へと導いてくれます。この「対話の質」の向上こそが、AI時代における継続力の本質なのです。
+                </p>
+
+                <div class="mt-4 bg-white p-4 rounded-lg text-sm font-mono">
+                  <p class="text-gray-700 italic">
+                    [AIへのプロンプト例]<br>
+                    「私は学習が3日間滞っていて『もう無理かも』と感じています。この否定的な内的対話パターンを、より成長志向で建設的なものに変換するのを手伝ってください。また、このような状況での最適な自己対話のスクリプトを提案し、なぜそれが心理学的に効果的なのかも説明してください。」
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+            <button type="button"
+              class="py-2.5 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-purple-600 transition-all text-sm"
+              data-hs-overlay="#mindset-detail-modal">
+              閉じる
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- 次の章へのリンクセクション -->
+  <section class="py-16 bg-gradient-to-r from-purple-900 to-purple-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">次の章へ進みましょう</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        最終章となる第8章（エピローグ）では、AIと共に進化し続けるあなたの未来について考察し、AI超独学の旅を締めくくります。
+      </p>
+      <a href="../../08_エピローグ_AIと共に進化し続けるあなたへ/SITE/index.html"
+        class="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-800 rounded-full shadow-md hover:bg-gray-100 transition-all">
+        <span class="mr-2">エピローグへ</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pt-8 pb-4">
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">AI超独学法</h3>
+          <p class="text-gray-400">
+            TANREN 3Dメソッドで切り拓く、<br>
+            新時代の学びと成長戦略
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">目次</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="../../00_プロローグ_なぜ今、あなたの学び方をアップデートする必要があるのか/SITE/index.html" class="hover:text-white">プロローグ</a>
+            </li>
+            <li><a href="../../01_第1章_AI超独学を起動するマインドセット_使う側から共創する側へ/SITE/index.html" class="hover:text-white">第1章:
+                マインドセット</a></li>
+            <li><a href="../../02_第2章_核理論独学OSTANREN_3Dメソッド完全インストール/SITE/index.html" class="hover:text-white">第2章: TANREN
+                3Dメソッド</a></li>
+            <li><a href="../../03_第3章_AIとの対話設計術_プロンプトで思考を形にする技術/SITE/index.html" class="hover:text-white">第3章: 対話設計術</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">続きの章</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="../../04_第4章_AIエージェント活用術_自動化と共創で生産性を飛躍させる/SITE/index.html" class="hover:text-white">第4章:
+                エージェント活用術</a></li>
+            <li><a href="../../05_第5章_実践編1AI共創によるアウトプット革命_企画・文章・資料作成/SITE/index.html" class="hover:text-white">第5章:
+                アウトプット革命</a></li>
+            <li><a href="../../06_第6章_実践編2リアルな仕事の課題をAIと突破する_職種別シナリオ/SITE/index.html" class="hover:text-white">第6章:
+                職種別シナリオ</a></li>
+            <li><a href="#" class="text-white font-bold">第7章: 継続システム構築法</a></li>
+            <li><a href="../../08_エピローグ_AIと共に進化し続けるあなたへ/SITE/index.html" class="hover:text-white">エピローグ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-4">連絡先</h3>
+          <p class="text-gray-400 mb-4">
+            この章に関するご質問やフィードバックをお待ちしています。
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-icon">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 pb-4 text-center text-gray-500">
+        <p>&copy; 2025 AI超独学法. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Preline UI JS -->
+  <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.js"></script>
+
+  <!-- カスタムJS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

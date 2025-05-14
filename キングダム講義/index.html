@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キングダム - 函谷関の戦い 3D (30フェーズ詳細版 v2)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS2DRenderer.js"></script>
+</head>
+
+<body>
+  <div id="lowerThird"></div>
+  <div id="header">キングダム - <ruby>函谷関<rt>かんこくかん</rt></ruby>の<ruby>戦<rt>たたか</rt></ruby>い</div>
+  <div id="mainContent">
+    <div id="qinChatContainer">
+      <div class="chat-header" id="qinChatHeader">秦軍</div>
+      <div class="chatLog" id="qinChatLog"></div>
+    </div>
+    <div id="container">
+      <!-- 3D表示エリア -->
+      <div id="scenePopup"></div>
+      <div id="focusPopup"></div>
+    </div>
+    <div id="coalitionChatContainer">
+      <div class="chat-header" id="coalitionChatHeader">合従軍（連合軍）</div>
+      <div class="chatLog" id="coalitionChatLog"></div>
+    </div>
+  </div>
+  <div id="infoPanel">
+    <p id="battleDescription"></p>
+  </div>
+  <div id="controls">
+    <span id="phaseIndicator">1 / X</span>
+    <button id="prevButton" disabled><ruby>前<rt>まえ</rt></ruby>へ</button>
+    <button id="nextButton"><ruby>次<rt>つぎ</rt></ruby>へ</button>
+    <button id="resetButton">リセット</button>
+    <button id="autoplayButton"><ruby>自動再生<rt>じどうさいせい</rt></ruby></button>
+    <button id="cameraResetButton"><ruby>視点<rt>してん</rt></ruby>リセット</button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

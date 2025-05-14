@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIエージェント活用術 | 自動化と共創で生産性を飛躍させる</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1a5b66',
+            secondary: '#b3322b',
+            accent: '#653a5e',
+            light: '#f4f1ea',
+            dark: '#2c2c2c',
+          },
+          fontFamily: {
+            sans: ['Noto Sans JP', 'sans-serif'],
+            serif: ['Noto Serif JP', 'serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Preline UI -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline@2.0.2/dist/preline.min.css" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light text-dark">
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="sr-only focus:not-sr-only">コンテンツにスキップ</a>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="text-xl font-serif font-bold text-primary flex items-center">
+        <span class="jp-dot bg-primary mr-2"></span>
+        <span>AI超独学法</span>
+      </a>
+
+      <div class="flex items-center space-x-1 md:space-x-4">
+        <ul class="hidden md:flex space-x-8">
+          <li><a href="#intro" class="nav-link text-dark hover:text-primary transition-colors">はじめに</a></li>
+          <li><a href="#what-is" class="nav-link text-dark hover:text-primary transition-colors">AIエージェントとは</a></li>
+          <li><a href="#levels" class="nav-link text-dark hover:text-primary transition-colors">レベル別解説</a></li>
+          <li><a href="#risks" class="nav-link text-dark hover:text-primary transition-colors">リスクと倫理</a></li>
+          <li><a href="#summary" class="nav-link text-dark hover:text-primary transition-colors">まとめ</a></li>
+        </ul>
+
+        <button id="darkModeToggle" onclick="toggleDarkMode()"
+          class="p-2 rounded-full hover:bg-gray-100 transition-colors">
+          <i class="fas fa-moon"></i> <span class="hidden md:inline">ダークモード</span>
+        </button>
+
+        <button class="md:hidden p-2" data-hs-overlay="#mobile-menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-y-auto bg-white">
+    <div class="p-4">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-xl font-serif font-bold text-primary">AI超独学法</h3>
+        <button type="button" class="p-2" data-hs-overlay="#mobile-menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <ul class="space-y-4 pb-4 border-b">
+        <li><a href="#intro" class="block py-2 text-dark hover:text-primary" data-hs-overlay="#mobile-menu">はじめに</a>
+        </li>
+        <li><a href="#what-is" class="block py-2 text-dark hover:text-primary"
+            data-hs-overlay="#mobile-menu">AIエージェントとは</a></li>
+        <li><a href="#levels" class="block py-2 text-dark hover:text-primary" data-hs-overlay="#mobile-menu">レベル別解説</a>
+        </li>
+        <li><a href="#risks" class="block py-2 text-dark hover:text-primary" data-hs-overlay="#mobile-menu">リスクと倫理</a>
+        </li>
+        <li><a href="#summary" class="block py-2 text-dark hover:text-primary" data-hs-overlay="#mobile-menu">まとめ</a>
+        </li>
+      </ul>
+
+      <div class="mt-4">
+        <button onclick="toggleDarkMode(); document.getElementById('mobile-menu').classList.remove('show')"
+          class="w-full text-left py-2 flex items-center">
+          <i class="fas fa-moon mr-2"></i> ダークモード切替
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-16 md:py-24">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-3xl md:text-5xl font-serif font-bold mb-6 animate-fade-in">
+            AIエージェント活用術
+          </h1>
+          <div class="flex justify-center mb-6">
+            <div class="decorative-line bg-white"></div>
+            <div class="jp-dot bg-white mx-2"></div>
+            <div class="decorative-line bg-white"></div>
+          </div>
+          <p class="text-xl md:text-2xl mb-8 animate-fade-in delay-200">
+            自動化と共創で生産性を飛躍させる
+          </p>
+          <p class="text-lg animate-fade-in delay-300">
+            第4章「AI超独学法：TANREN 3Dメソッドで切り拓く、新時代の学びと成長戦略」
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="intro" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex mb-6">
+            <div class="jp-dot bg-secondary mt-2"></div>
+            <h2 class="text-3xl font-serif font-bold ml-3 animate-fade-in">はじめに</h2>
+          </div>
+
+          <div class="decorative-line bg-secondary mb-8"></div>
+
+          <div class="prose prose-lg max-w-none animate-fade-in delay-200">
+            <p class="mb-6">
+              すでに、AIを戦略的に使いこなし、自らの学習や仕事の生産性を爆発的に向上させている人たちがいる。彼らは、AIを単なる便利な検索エンジンや文章作成ツールとしてではなく、<span
+                class="font-bold text-secondary">思考を深める壁打ち相手として、能力を拡張する共創パートナーとして活用</span>し、驚くべきスピードで新しいスキルを習得し、成果を上げ始めている。
+            </p>
+
+            <div class="bg-light p-6 rounded-lg mb-8">
+              <p class="text-lg font-bold text-primary mb-3">
+                <i class="fas fa-lightbulb mr-2"></i>AIエージェントがもたらす主な変革
+              </p>
+              <ul class="space-y-3">
+                <li class="flex">
+                  <span class="jp-dot bg-primary mt-1.5 shrink-0"></span>
+                  <span class="ml-3"><span class="font-bold">生産性の飛躍的向上</span>：反復的タスクの自動化と知的作業の強化</span>
+                </li>
+                <li class="flex">
+                  <span class="jp-dot bg-primary mt-1.5 shrink-0"></span>
+                  <span class="ml-3"><span class="font-bold">スキル習得の高速化</span>：AIが学習プロセスを最適化し、フィードバックを即時提供</span>
+                </li>
+                <li class="flex">
+                  <span class="jp-dot bg-primary mt-1.5 shrink-0"></span>
+                  <span class="ml-3"><span class="font-bold">創造性の増幅</span>：アイデア生成とブレインストーミングの強力な支援</span>
+                </li>
+                <li class="flex">
+                  <span class="jp-dot bg-primary mt-1.5 shrink-0"></span>
+                  <span class="ml-3"><span class="font-bold">意思決定の質向上</span>：膨大なデータ分析と様々な視点からの検討をサポート</span>
+                </li>
+              </ul>
+            </div>
+
+            <p class="mb-6">
+              本章ではAIエージェントという、これまでのAIツールとは一線を画する「自律性」を持った存在について深掘りし、それを活用して生産性を飛躍的に向上させる方法を探っていきます。
+            </p>
+
+            <div class="flex justify-center my-8">
+              <div class="w-full md:w-3/4 p-4 bg-primary/10 rounded-lg">
+                <blockquote class="text-lg italic text-center">
+                  「AIエージェントは、あなたの指示を超えて、目標達成のために自律的に行動する。それは単なるツールではなく、あなたの能力を拡張する共創パートナーなのだ。」
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is AI Agent Section -->
+    <section id="what-is" class="py-16 bg-light">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex mb-6">
+            <div class="jp-dot bg-primary mt-2"></div>
+            <h2 class="text-3xl font-serif font-bold ml-3 animate-fade-in">
+              AIエージェントとは何か
+            </h2>
+          </div>
+
+          <div class="decorative-line bg-primary mb-8"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-sm hover-card animate-slide-left">
+              <h3 class="text-xl font-bold mb-4 flex items-center text-primary">
+                <i class="fas fa-robot mr-3"></i>
+                AIエージェントの定義
+              </h3>
+
+              <p class="mb-4">
+                AIエージェントとは、ユーザーの指示に基づいて<span class="font-bold">自律的に行動し、複雑なタスクを遂行する</span>AIシステムです。
+              </p>
+
+              <p>
+                従来のAIツールが「会話」に特化していたのに対し、AIエージェントは「行動」に焦点を当て、目標達成のために<span class="font-bold">自ら考え、計画し、実行</span>します。
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm hover-card animate-slide-right">
+              <h3 class="text-xl font-bold mb-4 flex items-center text-secondary">
+                <i class="fas fa-fingerprint mr-3"></i>
+                「自律性」という革命的特性
+              </h3>
+
+              <p class="mb-4">
+                AIエージェントの最大の特徴は「<span class="font-bold">自律性</span>」です。この自律性こそが、単なるAIツールとAIエージェントを分ける決定的な要素です。
+              </p>
+
+              <p>
+                自律性により、AIはユーザーの意図を理解し、その目標達成のために<span class="font-bold">最適な行動を自ら選択</span>できるようになります。
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-sm mb-12 animate-fade-in">
+            <h3 class="text-xl font-bold mb-6 text-center">
+              AIツールとAIエージェントの比較
+            </h3>
+
+            <div class="overflow-x-auto">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead>
+                  <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">特性</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">従来のAIツール
+                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">AIエージェント
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap font-medium">基本的な機能</td>
+                    <td class="px-6 py-4 whitespace-nowrap">質問に回答、内容を生成</td>
+                    <td class="px-6 py-4 whitespace-nowrap bg-green-50">タスクを計画、実行、完了</td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap font-medium">自律性</td>
+                    <td class="px-6 py-4 whitespace-nowrap">低い（指示待ち）</td>
+                    <td class="px-6 py-4 whitespace-nowrap bg-green-50">高い（自ら行動を決定）</td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap font-medium">行動範囲</td>
+                    <td class="px-6 py-4 whitespace-nowrap">テキスト/イメージ生成に限定</td>
+                    <td class="px-6 py-4 whitespace-nowrap bg-green-50">外部システムと連携し行動</td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap font-medium">学習能力</td>
+                    <td class="px-6 py-4 whitespace-nowrap">静的（訓練済みモデル）</td>
+                    <td class="px-6 py-4 whitespace-nowrap bg-green-50">動的（経験から改善）</td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap font-medium">ユーザーとの関係</td>
+                    <td class="px-6 py-4 whitespace-nowrap">アシスタント</td>
+                    <td class="px-6 py-4 whitespace-nowrap bg-green-50">協働パートナー</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="flex justify-center my-10 animate-fade-in">
+            <figure class="max-w-lg text-center">
+              <img src="images/ai-agent-autonomy.svg" alt="AIエージェントの自律性の概念図" class="mx-auto rounded-lg shadow-md">
+              <figcaption class="mt-3 text-sm text-gray-500">
+                AIエージェントは指示を超えて自律的に行動し、目標達成までのプロセスを最適化する
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Levels Section -->
+    <section id="levels" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex mb-6">
+            <div class="jp-dot bg-accent mt-2"></div>
+            <h2 class="text-3xl font-serif font-bold ml-3 animate-fade-in">
+              レベル別に見るAIエージェントの世界
+            </h2>
+          </div>
+
+          <div class="decorative-line bg-accent mb-8"></div>
+
+          <p class="text-lg mb-10 animate-fade-in delay-200">
+            AIエージェントの進化は、複数のレベルに分けて理解することができます。各レベルの特性と活用法を知ることで、あなたの目的に最適なAIエージェントを選び、効果的に活用することができるようになります。
+          </p>
+
+          <!-- Radar Chart for Level Comparison -->
+          <div class="mb-12 p-6 bg-light rounded-lg shadow-sm animate-fade-in">
+            <h3 class="text-xl font-bold mb-6 text-center">AIエージェントのレベル別能力比較</h3>
+            <div class="chart-container">
+              <canvas id="levelComparisonChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Level Cards -->
+          <div class="space-y-8">
+            <!-- Level 0.5 -->
+            <div class="bg-white border rounded-lg shadow-sm overflow-hidden level-card level-0-5 animate-slide-left">
+              <div class="grid grid-cols-1 md:grid-cols-3">
+                <div class="bg-[#e9b949]/10 p-6">
+                  <span
+                    class="inline-block py-1 px-3 rounded-full text-xs font-medium bg-[#e9b949]/20 text-[#e9b949] mb-3">入門</span>
+                  <h3 class="text-2xl font-bold mb-3">レベル 0.5</h3>
+                  <p class="font-medium">カスタムAIによる「一撃回答」の世界</p>
+                </div>
+
+                <div class="col-span-2 p-6">
+                  <h4 class="text-lg font-bold mb-3">これが何か？</h4>
+                  <p class="mb-4">
+                    AIエージェントの世界への最も身近な「入口」です。その代表格が<span class="font-bold">OpenAIの「GPTs」</span>や<span
+                      class="font-bold">GoogleのNotebookLM</span>のような、特定の知識ベースと対話できるツールです。
+                  </p>
+
+                  <h4 class="text-lg font-bold mb-3">何ができる？</h4>
+                  <p class="mb-4">
+                    特定の目的に特化した指示や知識をあらかじめAIに「仕込んで」おくことで、<span
+                      class="font-bold">簡単な指示を与えるだけで、まるでその分野の専門家のように的確な回答や成果物を「一撃」で得られる</span>ようになります。
+                  </p>
+
+                  <div class="bg-light p-4 rounded-lg">
+                    <h4 class="text-md font-bold mb-2 flex items-center">
+                      <i class="fas fa-rocket mr-2 text-[#e9b949]"></i>あなたへのアクション
+                    </h4>
+                    <p>
+                      GPTsで自分だけの「〇〇専門ボット」を作ってみましょう。NotebookLMに自分の資料を放り込んで対話してみましょう。この「<span
+                        class="font-bold">自分で作り、試す</span>」経験こそが、次のレベルへの扉を開く鍵となります。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Level 1 -->
+            <div class="bg-white border rounded-lg shadow-sm overflow-hidden level-card level-1 animate-slide-right">
+              <div class="grid grid-cols-1 md:grid-cols-3">
+                <div class="bg-[#3498db]/10 p-6">
+                  <span
+                    class="inline-block py-1 px-3 rounded-full text-xs font-medium bg-[#3498db]/20 text-[#3498db] mb-3">初級</span>
+                  <h3 class="text-2xl font-bold mb-3">レベル 1</h3>
+                  <p class="font-medium">Deep Research型エージェントの世界</p>
+                </div>
+
+                <div class="col-span-2 p-6">
+                  <h4 class="text-lg font-bold mb-3">これが何か？</h4>
+                  <p class="mb-4">
+                    レベル0.5から一歩進み、AIがより<span
+                      class="font-bold">能動的に外部情報を収集・分析する能力</span>を獲得した段階です。ChatGPTのブラウジング機能、Geminiの検索連携、Perplexity
+                    AIなどがこのレベルに該当します。
+                  </p>
+
+                  <h4 class="text-lg font-bold mb-3">重要な課題：情報の信頼性</h4>
+                  <p class="mb-4">
+                    AIが集めてくる情報は玉石混淆です。<span
+                      class="font-bold">AIが提示した情報を鵜呑みにせず、情報源を確認し、複数のソースで裏付けを取り、批判的に吟味する「ファクトチェック」のスキル</span>が重要になります。
+                  </p>
+
+                  <div class="bg-light p-4 rounded-lg">
+                    <h4 class="text-md font-bold mb-2 flex items-center">
+                      <i class="fas fa-rocket mr-2 text-[#3498db]"></i>あなたへのアクション
+                    </h4>
+                    <p>
+                      Deep Research機能を活用しつつ、常に「<span class="font-bold">この情報のソースは？</span>」「<span
+                        class="font-bold">根拠は？</span>」「<span
+                        class="font-bold">他の意見は？</span>」とAIに問いかけ、対話を通じて情報の質を見極める訓練を積みましょう。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Level 2 -->
+            <div class="bg-white border rounded-lg shadow-sm overflow-hidden level-card level-2 animate-slide-left">
+              <div class="grid grid-cols-1 md:grid-cols-3">
+                <div class="bg-[#2ecc71]/10 p-6">
+                  <span
+                    class="inline-block py-1 px-3 rounded-full text-xs font-medium bg-[#2ecc71]/20 text-[#2ecc71] mb-3">中級</span>
+                  <h3 class="text-2xl font-bold mb-3">レベル 2</h3>
+                  <p class="font-medium">自律型・専門特化型エージェント</p>
+                </div>
+
+                <div class="col-span-2 p-6">
+                  <h4 class="text-lg font-bold mb-3">これが何か？</h4>
+                  <p class="mb-4">
+                    いよいよAIが本格的な「自律性」を持ち始める段階です。特定の業務領域において、<span
+                      class="font-bold">人間のように計画を立て、ツールを使いこなし、問題を解決し、タスクを最後までやり遂げる能力</span>を持ちます。「<span
+                      class="font-bold">Devin</span>」や「<span class="font-bold">神威/KAMUI</span>」などがこのレベルを目指しています。
+                  </p>
+
+                  <h4 class="text-lg font-bold mb-3">インパクト：人件費との比較</h4>
+                  <p class="mb-4">
+                    このレベルのエージェントは、人間一人（例えば初級〜中級エンジニア）を雇用するコスト（月数十万円〜）と比較すれば、<span
+                      class="font-bold">圧倒的に安価</span>です。これにより、これまでコスト的に難しかった業務の自動化が現実的なものとなります。
+                  </p>
+
+                  <div class="bg-light p-4 rounded-lg">
+                    <h4 class="text-md font-bold mb-2 flex items-center">
+                      <i class="fas fa-rocket mr-2 text-[#2ecc71]"></i>あなたへのアクション
+                    </h4>
+                    <p>
+                      自分の専門分野や、自動化したいと考えている業務領域で、どのようなレベル2エージェントが登場しているか、常にアンテナを張っておきましょう。それらを使いこなすためのスキルを磨いておくことが重要です。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Level 3 -->
+            <div class="bg-white border rounded-lg shadow-sm overflow-hidden level-card level-3 animate-slide-right">
+              <div class="grid grid-cols-1 md:grid-cols-3">
+                <div class="bg-accent/10 p-6">
+                  <span
+                    class="inline-block py-1 px-3 rounded-full text-xs font-medium bg-accent/20 text-accent mb-3">上級</span>
+                  <h3 class="text-2xl font-bold mb-3">レベル 3</h3>
+                  <p class="font-medium">完全オーケストレートモデル</p>
+                </div>
+
+                <div class="col-span-2 p-6">
+                  <h4 class="text-lg font-bold mb-3">これが何か？</h4>
+                  <p class="mb-4">
+                    AIエージェント進化の究極形です。<span
+                      class="font-bold">あらゆる知的活動領域に対応し、複数の専門AI機能群をまるでオーケストラの指揮者のように自在に組み合わせ、協調させて、複雑で創造的なタスクを実行する「統合的AIシステム」</span>です。「<span
+                      class="font-bold">Manus AI</span>」や「<span class="font-bold">Genspark
+                      AI</span>」などが、このレベル3の片鱗を見せ始めています。
+                  </p>
+
+                  <h4 class="text-lg font-bold mb-3">鍵となる要素</h4>
+                  <p class="mb-4">
+                    このレベル3の真価を最大化するのが、「<span
+                      class="font-bold">自分専用の知識フォルダ</span>」との連携です。あなたの経験、知識、好み、価値観といったパーソナルデータをAIが深く理解し、それを反映させることで、AIオーケストラはあなただけの「<span
+                      class="font-bold">最高の演奏</span>」を行います。
+                  </p>
+
+                  <div class="bg-light p-4 rounded-lg">
+                    <h4 class="text-md font-bold mb-2 flex items-center">
+                      <i class="fas fa-rocket mr-2 text-accent"></i>あなたへのアクション
+                    </h4>
+                    <p>
+                      レベル3の到来に備え、まず<span class="font-bold">レベル0.5〜2のAIを使いこなし、AIとの対話力、そして何よりも思考OS「TANREN
+                        3Dメソッド」を徹底的に鍛え上げること</span>が重要です。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Level Summary Table -->
+          <div class="mt-16 mb-12 animate-fade-in">
+            <h3 class="text-xl font-bold mb-6 text-center">AIエージェントレベル別サマリー</h3>
+            <div class="overflow-x-auto">
+              <table class="min-w-full bg-white border">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="py-3 px-4 border-b">レベル</th>
+                    <th class="py-3 px-4 border-b">特徴</th>
+                    <th class="py-3 px-4 border-b">代表例/機能</th>
+                    <th class="py-3 px-4 border-b">あなたのアクション</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="py-3 px-4 border-b font-bold text-[#e9b949]">Lv0.5</td>
+                    <td class="py-3 px-4 border-b">カスタムAI／一撃回答</td>
+                    <td class="py-3 px-4 border-b">GPTs, NotebookLM</td>
+                    <td class="py-3 px-4 border-b">まず作ってみる！基本原理を学ぶ！</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="py-3 px-4 border-b font-bold text-[#3498db]">Lv1</td>
+                    <td class="py-3 px-4 border-b">Deep Research／情報収集</td>
+                    <td class="py-3 px-4 border-b">ChatGPT(Browse), Gemini</td>
+                    <td class="py-3 px-4 border-b">ファクトチェック！情報リテラシーを鍛える！</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-4 border-b font-bold text-[#2ecc71]">Lv2</td>
+                    <td class="py-3 px-4 border-b">自律型／専門特化</td>
+                    <td class="py-3 px-4 border-b">Devin, 神威/KAMUI</td>
+                    <td class="py-3 px-4 border-b">自分の分野のエージェントを探し、使いこなす準備！</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="py-3 px-4 border-b font-bold text-accent">Lv3</td>
+                    <td class="py-3 px-4 border-b">完全オーケストレート／共創</td>
+                    <td class="py-3 px-4 border-b">Manus, Genspark</td>
+                    <td class="py-3 px-4 border-b">思考OSを磨き、知識フォルダを育て、未来に備える！</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Risks and Ethics Section -->
+    <section id="risks" class="py-16 bg-light">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex mb-6">
+            <div class="jp-dot bg-secondary mt-2"></div>
+            <h2 class="text-3xl font-serif font-bold ml-3 animate-fade-in">
+              AIエージェント活用の注意点：リスクと倫理
+            </h2>
+          </div>
+
+          <div class="decorative-line bg-secondary mb-8"></div>
+
+          <p class="text-lg mb-10 animate-fade-in delay-200">
+            AIエージェントがもたらす生産性向上、スキル拡張、そして創造性解放の可能性は計り知れません。しかし、その強力な「自律性」には潜在的なリスクも伴います。AIエージェントの光と影の両面を理解し、倫理的な活用を心がけることが重要です。
+          </p>
+
+          <!-- Risks vs Benefits Chart -->
+          <div class="mb-16 p-6 bg-white rounded-lg shadow-sm animate-fade-in">
+            <h3 class="text-xl font-bold mb-6 text-center">AIエージェントのレベル別：メリットとリスクの比較</h3>
+            <div class="chart-container">
+              <canvas id="risksVsBenefitsChart"></canvas>
+            </div>
+            <p class="text-sm text-gray-500 text-center mt-4">
+              AIエージェントのレベルが上がるにつれて、そのメリットとともにリスクも増大する傾向があります
+            </p>
+          </div>
+
+          <!-- Potential Risks -->
+          <h3 class="text-2xl font-serif font-bold mb-6 animate-fade-in">
+            AIエージェントがもたらす潜在的リスク
+          </h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            <!-- Risk Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm risk-card hover-card animate-slide-left">
+              <h4 class="text-xl font-bold mb-4 flex items-center text-secondary">
+                <i class="fas fa-exclamation-triangle mr-3"></i>
+                判断・制御の喪失リスク
+              </h4>
+              <p class="mb-4">
+                AIエージェントに高度な自律性を与えることで、その行動が常に人間の意図通りになるとは限りません。誤った情報やバイアスに基づいた判断、予期せぬ外部要因との相互作用により、<span
+                  class="font-bold">望ましくない行動や損害をもたらす行動</span>を取ってしまうリスクがあります。
+              </p>
+              <div class="bg-gray-50 p-4 rounded">
+                <h5 class="font-bold mb-2">対策の方向性</h5>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                  <li>明確なルール設定（ガードレール）</li>
+                  <li>人間の介入・承認プロセスの組み込み</li>
+                  <li>異常検知システムの構築</li>
+                  <li>過度な権限委譲を避ける</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Risk Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm risk-card hover-card animate-slide-right">
+              <h4 class="text-xl font-bold mb-4 flex items-center text-secondary">
+                <i class="fas fa-user-shield mr-3"></i>
+                情報セキュリティ・プライバシー侵害リスク
+              </h4>
+              <p class="mb-4">
+                AIエージェントは、私たちの機密情報やプライベートなデータに深くアクセスする可能性があります。これが悪用されたり、外部に漏洩したりすれば、個人や組織にとって壊滅的な被害をもたらしかねません。
+              </p>
+              <div class="bg-gray-50 p-4 rounded">
+                <h5 class="font-bold mb-2">対策の方向性</h5>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                  <li>堅牢なセキュリティ対策（暗号化、アクセス制御など）</li>
+                  <li>厳格なデータプライバシーポリシーの策定と遵守</li>
+                  <li>AIにアクセスさせる情報の最小化</li>
+                  <li>AIプラットフォームの信頼性評価</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Risk Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm risk-card hover-card animate-slide-left delay-200">
+              <h4 class="text-xl font-bold mb-4 flex items-center text-secondary">
+                <i class="fas fa-filter mr-3"></i>
+                誤情報・バイアス拡散リスク
+              </h4>
+              <p class="mb-4">
+                AIエージェントは、学習データに含まれる誤情報や偏見（バイアス）を、あたかも客観的な事実であるかのように提示してしまうことがあります。特にDeep
+                Research機能などでインターネット上の情報を参照する場合、そのリスクは高まります。
+              </p>
+              <div class="bg-gray-50 p-4 rounded">
+                <h5 class="font-bold mb-2">対策の方向性</h5>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                  <li>常にAIの応答を批判的に吟味する姿勢（クリティカルシンキング）</li>
+                  <li>情報源の確認とファクトチェックの徹底</li>
+                  <li>多様な視点からの情報収集</li>
+                  <li>AIがバイアスを持つ可能性を念頭に置く</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Risk Card 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm risk-card hover-card animate-slide-right delay-200">
+              <h4 class="text-xl font-bold mb-4 flex items-center text-secondary">
+                <i class="fas fa-brain mr-3"></i>
+                過度の依存とスキル喪失リスク
+              </h4>
+              <p class="mb-4">
+                AIエージェントがあまりにも便利で優秀であるために、私たちが自ら考え、判断し、スキルを磨く努力を怠ってしまうリスクがあります。長期的には私たち自身の能力が退化し、AIなしでは何もできなくなってしまうかもしれません。
+              </p>
+              <div class="bg-gray-50 p-4 rounded">
+                <h5 class="font-bold mb-2">対策の方向性</h5>
+                <ul class="list-disc list-inside text-sm space-y-1">
+                  <li>AIを「思考の代替」ではなく「思考の触媒」として活用する</li>
+                  <li>AIの提案を鵜呑みにせず、必ず自分の頭で考え最終判断を下す</li>
+                  <li>AIに頼らない時間や基礎的なスキルを維持するための学習</li>
+                  <li>人間にしかできない創造性や対人スキルの強化</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Risk Card 5 -->
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm risk-card hover-card animate-slide-left delay-300 md:col-span-2">
+              <h4 class="text-xl font-bold mb-4 flex items-center text-secondary">
+                <i class="fas fa-building mr-3"></i>
+                雇用・社会構造への影響
+              </h4>
+              <p class="mb-4">
+                AIエージェントによる自動化が進めば、特定の職種やスキルが不要になり、雇用が失われる可能性は否定できません。これは社会全体の構造変化を伴う大きな課題であり、失業者の増加、経済格差の拡大といった問題を引き起こす可能性があります。
+              </p>
+              <div class="bg-gray-50 p-4 rounded">
+                <h5 class="font-bold mb-2">対策の方向性</h5>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <h6 class="font-medium">個人レベルでは</h6>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                      <li>AIに代替されにくいスキルを磨く</li>
+                      <li>創造性、共感力、問題解決能力の強化</li>
+                      <li>リスキリング（学び直し）の継続</li>
+                      <li>AI活用能力の獲得</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h6 class="font-medium">社会レベルでは</h6>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                      <li>AIによる富の再分配</li>
+                      <li>セーフティネットの拡充</li>
+                      <li>新しい雇用創出のための政策</li>
+                      <li>AIと共生するための教育システムの変革</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ethics Section -->
+          <h3 class="text-2xl font-serif font-bold mb-6 animate-fade-in">
+            AIエージェント時代の倫理観：私たちが守るべき原則
+          </h3>
+
+          <p class="mb-8 animate-fade-in delay-100">
+            リスクへの備えと同時に、私たちがAIエージェントを開発し、活用していく上で、常に立ち返るべき<span
+              class="font-bold">倫理的な原則</span>があります。技術の進歩だけを追い求めるのではなく、「<span
+              class="font-bold">人間としてどうあるべきか</span>」「<span
+              class="font-bold">どのような社会を築きたいのか</span>」という問いを、私たちは持ち続けなければなりません。
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <!-- Ethics Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm ethics-card hover-card animate-fade-in delay-200">
+              <h4 class="text-xl font-bold mb-4 flex items-center text-primary">
+                <i class="fas fa-user-check mr-3"></i>
+                人間中心の設計
+              </h4>
+              <p class="text-sm">
+                AIエージェントは、あくまで人間の幸福と社会の発展に貢献するために存在するべきです。技術のための技術ではなく、常に「<span
+                  class="font-bold">人間</span>」を中心に据え、その尊厳、自律性、ウェルビーイング（幸福）を高めるように設計・活用されなければなりません。
+              </p>
+            </div>
+
+            <!-- Ethics Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm ethics-card hover-card animate-fade-in delay-300">
+              <h4 class="text-xl font-bold mb-4 flex items-center text-primary">
+                <i class="fas fa-glasses mr-3"></i>
+                透明性と説明責任
+              </h4>
+              <p class="text-sm">
+                AIエージェントがどのように判断し、行動しているのか、そのプロセスは可能な限り<span class="font-bold">透明</span>であるべきです。そして、その行動の結果に対して、誰が<span
+                  class="font-bold">責任</span>を負うのかを明確にしておく必要があります。
+              </p>
+            </div>
+
+            <!-- Ethics Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm ethics-card hover-card animate-fade-in delay-400">
+              <h4 class="text-xl font-bold mb-4 flex items-center text-primary">
+                <i class="fas fa-balance-scale mr-3"></i>
+                公平性とバイアス排除
+              </h4>
+              <p class="text-sm">
+                AIエージェントは、特定の属性（性別、人種、年齢、信条など）に基づいて差別的な判断や行動をしてはなりません。学習データに含まれるバイアスを可能な限り排除し、<span
+                  class="font-bold">公平性</span>を担保するための技術的・制度的な努力が不可欠です。
+              </p>
+            </div>
+
+            <!-- Ethics Card 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm ethics-card hover-card animate-fade-in delay-500">
+              <h4 class="text-xl font-bold mb-4 flex items-center text-primary">
+                <i class="fas fa-lock mr-3"></i>
+                プライバシーとデータ保護
+              </h4>
+              <p class="text-sm">
+                AIエージェントが扱う個人情報は、厳格なルールに基づいて保護されなければなりません。データの収集、利用、管理において、個人の<span
+                  class="font-bold">プライバシー権</span>を最大限に尊重し、不正利用や漏洩を防ぐための万全な対策が求められます。
+              </p>
+            </div>
+
+            <!-- Ethics Card 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm ethics-card hover-card animate-fade-in delay-600">
+              <h4 class="text-xl font-bold mb-4 flex items-center text-primary">
+                <i class="fas fa-shield-alt mr-3"></i>
+                安全性と信頼性
+              </h4>
+              <p class="text-sm">
+                AIエージェントは、意図しない危害を人間や社会に与えることがないよう、<span class="font-bold">安全</span>に設計・運用されなければなりません。その動作は<span
+                  class="font-bold">信頼</span>できるものであり、予測可能で、制御可能であることが基本となります。
+              </p>
+            </div>
+
+            <!-- Ethics Card 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-sm ethics-card hover-card animate-fade-in delay-700">
+              <h4 class="text-xl font-bold mb-4 flex items-center text-primary">
+                <i class="fas fa-leaf mr-3"></i>
+                持続可能性と社会的貢献
+              </h4>
+              <p class="text-sm">
+                AIエージェントの開発と活用は、環境への負荷を考慮し、<span
+                  class="font-bold">持続可能な社会</span>の実現に貢献するものであるべきです。また、教育、医療、福祉、環境問題といった地球規模の課題解決に、その能力が積極的に活用されることが期待されます。
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-sm mb-8 animate-fade-in">
+            <blockquote class="text-lg italic text-center">
+              「AIエージェントは、私たちに計り知れないほどの力を与えてくれる「翼」だ。しかし、その翼を無責任に広げれば、思わぬ場所に墜落してしまう危険性もある。確かな倫理観を持って、この新しい翼を賢く、そして善く使いこなしていくこと。それこそが、AIと共に輝かしい未来へと飛び立つための、私たち自身の責任であり、挑戦なのである。」
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex mb-6">
+            <div class="jp-dot bg-primary mt-2"></div>
+            <h2 class="text-3xl font-serif font-bold ml-3 animate-fade-in">
+              まとめ：AIエージェントという翼を広げる
+            </h2>
+          </div>
+
+          <div class="decorative-line bg-primary mb-8"></div>
+
+          <div class="prose prose-lg max-w-none animate-fade-in delay-200">
+            <p class="mb-6">
+              本章では、AIエージェントという、私たちの働き方と学び方を根底から変える可能性を秘めたテクノロジーについて、その定義、レベル別進化、そして活用に伴うリスクと倫理的課題を探求してきました。
+            </p>
+
+            <div class="bg-light p-8 rounded-lg my-8">
+              <h3 class="text-xl font-bold mb-4 text-primary">第4章の重要ポイント</h3>
+              <ul class="space-y-4">
+                <li class="flex">
+                  <span class="jp-dot bg-primary mt-1.5 shrink-0"></span>
+                  <span class="ml-3">AIエージェントは「<span class="font-bold">自律性</span>」を持ち、人間の指示を超えてタスクを実行する</span>
+                </li>
+                <li class="flex">
+                  <span class="jp-dot bg-primary mt-1.5 shrink-0"></span>
+                  <span class="ml-3">その進化は<span class="font-bold">レベル0.5（カスタムAI）からレベル3（完全オーケストレート）</span>へと向かう</span>
+                </li>
+                <li class="flex">
+                  <span class="jp-dot bg-primary mt-1.5 shrink-0"></span>
+                  <span class="ml-3">活用には<span class="font-bold">リスク（制御喪失、セキュリティ、誤情報、依存、雇用）</span>が伴い、備えが必要</span>
+                </li>
+                <li class="flex">
+                  <span class="jp-dot bg-primary mt-1.5 shrink-0"></span>
+                  <span class="ml-3">開発と活用には、<span class="font-bold">人間中心、透明性、公平性、プライバシー、安全性、持続可能性</span>といった<span
+                      class="font-bold">倫理原則</span>が不可欠</span>
+                </li>
+              </ul>
+            </div>
+
+            <p class="mb-6">
+              思考OS「TANREN 3Dメソッド」で自らの思考を鍛え、プロンプト術でAIとの対話力を磨き、そして何よりも<span
+                class="font-bold">確かな倫理観</span>を持って、この新しい翼を賢く、そして善く使いこなしていくこと。それこそが、AIと共に輝かしい未来へと飛び立つための、私たち自身の責任であり、挑戦なのです。
+            </p>
+          </div>
+
+          <!-- Next Steps Timeline -->
+          <div class="mt-12 relative animate-fade-in delay-300">
+            <h3 class="text-xl font-bold mb-6 text-center">次のステップ</h3>
+
+            <div class="absolute left-1/2 transform -translate-x-1/2 h-full top-12 custom-timeline-bar"></div>
+
+            <div class="space-y-12 relative">
+              <!-- Step 1 -->
+              <div class="flex">
+                <div class="timeline-dot mx-auto"></div>
+                <div class="w-1/2 pr-8 text-right md:mt-0 opacity-0 animate-slide-left delay-400">
+                  <h4 class="text-lg font-bold mb-2">基本を身につける</h4>
+                  <p class="text-sm">
+                    レベル0.5のAIエージェントから始めて、基本的な操作と設定を習得しましょう。GPTsで独自のAIエージェントを作成してみることをおすすめします。
+                  </p>
+                </div>
+                <div class="w-1/2 pl-8 md:mt-0"></div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="flex">
+                <div class="timeline-dot mx-auto"></div>
+                <div class="w-1/2 pr-8 md:mt-0"></div>
+                <div class="w-1/2 pl-8 md:mt-0 opacity-0 animate-slide-right delay-500">
+                  <h4 class="text-lg font-bold mb-2">情報リテラシーを鍛える</h4>
+                  <p class="text-sm">
+                    レベル1のAIエージェントを活用する際に重要な情報リテラシーを身につけましょう。AIの回答を鵜呑みにせず、常にファクトチェックする習慣を。
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="flex">
+                <div class="timeline-dot mx-auto"></div>
+                <div class="w-1/2 pr-8 text-right md:mt-0 opacity-0 animate-slide-left delay-600">
+                  <h4 class="text-lg font-bold mb-2">専門領域のAIを探す</h4>
+                  <p class="text-sm">
+                    あなたの専門分野や業務で活用できるレベル2のAIエージェントをリサーチし、実際に試してみましょう。自動化できるタスクを特定します。
+                  </p>
+                </div>
+                <div class="w-1/2 pl-8 md:mt-0"></div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="flex">
+                <div class="timeline-dot mx-auto"></div>
+                <div class="w-1/2 pr-8 md:mt-0"></div>
+                <div class="w-1/2 pl-8 md:mt-0 opacity-0 animate-slide-right delay-700">
+                  <h4 class="text-lg font-bold mb-2">知識の体系化</h4>
+                  <p class="text-sm">
+                    レベル3に備えて、あなたの知識や経験をデジタルデータとして蓄積・整理しておきましょう。「自分専用の知識フォルダ」を準備します。
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 5 -->
+              <div class="flex">
+                <div class="timeline-dot mx-auto"></div>
+                <div class="w-1/2 pr-8 text-right md:mt-0 opacity-0 animate-slide-left delay-800">
+                  <h4 class="text-lg font-bold mb-2">思考OSを磨く</h4>
+                  <p class="text-sm">
+                    TANREN 3Dメソッドを徹底的に鍛え上げ、AIとの対話力を高めましょう。これがAIエージェントを真のパートナーとして活用するための鍵となります。
+                  </p>
+                </div>
+                <div class="w-1/2 pl-8 md:mt-0"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="text-center mt-16 animate-fade-in delay-500">
+            <p class="text-lg mb-6">
+              これから第5章、第6章では、AIエージェント活用術を企画・文章・資料作成や営業・マーケティングといった具体的なビジネスシーンに応用していきます。
+            </p>
+            <a href="#intro"
+              class="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg transition-colors hover:bg-primary/80">
+              <i class="fas fa-arrow-up mr-2"></i> トップに戻る
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+            <div class="text-2xl font-serif font-bold mb-4 md:mb-0 flex items-center">
+              <span class="jp-dot bg-light mr-2"></span>
+              <span>AI超独学法</span>
+            </div>
+
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-light/80 transition-colors">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-white hover:text-light/80 transition-colors">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="text-white hover:text-light/80 transition-colors">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-white hover:text-light/80 transition-colors">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <h3 class="text-lg font-bold mb-4">関連コンテンツ</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-light/80 hover:text-white transition-colors">第1章：AIマインドセット</a></li>
+                <li><a href="#" class="text-light/80 hover:text-white transition-colors">第2章：TANREN 3Dメソッド</a></li>
+                <li><a href="#" class="text-light/80 hover:text-white transition-colors">第3章：AIとの対話設計術</a></li>
+                <li><a href="#" class="text-light/80 hover:text-white transition-colors">第4章：AIエージェント活用術</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold mb-4">学習リソース</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-light/80 hover:text-white transition-colors">オンラインコース</a></li>
+                <li><a href="#" class="text-light/80 hover:text-white transition-colors">実践ワークシート</a></li>
+                <li><a href="#" class="text-light/80 hover:text-white transition-colors">AI活用事例集</a></li>
+                <li><a href="#" class="text-light/80 hover:text-white transition-colors">コミュニティ</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold mb-4">お問い合わせ</h3>
+              <p class="text-light/80 mb-4">
+                AI超独学法に関するご質問やお問い合わせは以下からお願いします。
+              </p>
+              <a href="mailto:info@ai-tanren.com" class="text-white font-medium hover:underline">
+                info@ai-tanren.com
+              </a>
+            </div>
+          </div>
+
+          <div class="text-center text-light/60 text-sm pt-8 border-t border-white/20">
+            <p>&copy; 2025 AI超独学法：TANREN 3Dメソッド. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Preline UI JS -->
+  <script src="https://cdn.jsdelivr.net/npm/preline@2.0.2/dist/preline.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

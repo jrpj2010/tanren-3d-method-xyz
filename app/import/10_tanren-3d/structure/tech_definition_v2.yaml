@@ -1,0 +1,141 @@
+```yaml
+# 技術定義.yaml (v2)
+
+# 1. システムアーキテクチャ概要
+system_architecture:
+  overview: >
+    大規模言語モデル（LLM）を中心としたマイクロサービスアーキテクチャを想定。
+    各主要機能（TANREN 3D思考エンジン、MVP生成、ファシリテーション等）を独立したサービスとして開発し、API連携を行う。
+    フロントエンドはNext.js、バックエンドの主要ロジックはPython (Flask) を採用し、柔軟性とスケーラビリティを確保する。
+  key_principles:
+    - モジュール性: 各機能は独立して開発・デプロイ可能とする。
+    - LLM中心設計: AIによる高度な自然言語処理、推論、コンテンツ生成能力を最大限に活用する。
+    - 拡張性: 将来的な機能追加や外部サービス連携を容易にする設計。
+    - ユーザー中心: オンボーディングレベルに応じた適応的なインターフェースと体験を提供。
+
+# 2. 技術スタック
+technology_stack:
+  frontend:
+    language: JavaScript / TypeScript
+    framework: Next.js (静的サイト生成、SSR、APIルートを活用)
+    ui_library: React, Tailwind CSS (またはMUI, Chakra UIなどのコンポーネントライブラリ)
+    state_management: Zustand / Redux Toolkit
+    key_considerations: レスポンシブデザイン、高速な表示、SEO対策、PWA化も視野。
+
+  backend:
+    llm_orchestration_and_core_logic:
+      language: Python
+      framework: Flask (APIサーバー、TANREN 3D思考エンジン、各種ジェネレーターのコアロジック)
+      libraries: Langchain, OpenAI SDK, Hugging Face Transformers, Pandas, NumPy
+    database_interaction_and_user_management:
+      language: Python / Node.js (TypeScript)
+      framework: Flask / Express.js (またはFastAPI)
+    key_considerations: LLMとの連携容易性、非同期処理、セキュリティ。
+
+  database:
+    type: NoSQL (MongoDB Atlas) または PostgreSQL
+    reasoning: >
+      NoSQLは柔軟なスキーマでユーザー生成コンテンツや対話ログの保存に適している。
+      PostgreSQLは構造化データ（ユーザープロファイル、プロジェクト管理）や将来的な分析機能に強み。
+      初期はMongoDBを優先し、必要に応じてPostgreSQLを併用または移行を検討。
+    data_models:
+      - UserProfile (認証情報、オンボーディングレベル、進捗)
+      - Project (事業アイデア、関連ドキュメント、生成されたYAML、モックアップ情報)
+      - InteractionLog (ユーザーとAIの対話履歴、コンテキスト管理用)
+      - KnowledgeBase (AIが参照する業界知識、事例、テンプレート等)
+
+  llm_integration:
+    provider: OpenAI または同等以上の性能を持つLLM
+    framework: Langchain (プロンプトエンジニアリング、エージェント、メモリ管理、ツール連携)
+    key_features_utilizing_llm:
+      - 自然言語理解 (NLU) と生成 (NLG)
+      - TANREN 3D思考メソッドに基づく分析・提案
+      - ストーリーテリングコンテンツ生成
+      - MVPモックアップの構造・コンテンツ案生成
+      - YAMLドキュメント生成
+      - コード生成支援（モックアップの一部）
+
+  ai_ml_components: (LLM以外)
+    - 自然言語処理 (NLU/NLG): spaCy, NLTK (LLMの補完、ローカルでの簡易処理用)
+    - パターン認識: Scikit-learn (ユーザー行動分析、コンテンツ推薦の基礎)
+    - ユーザーモデリング: 簡易的なルールベースと機械学習モデルの組み合わせでオンボーディングレベルを推定・調整。
+
+  deployment_and_operations:
+    frontend_deployment: Vercel (Next.jsとの親和性が高い)
+    backend_deployment: Dockerコンテナ化し、AWS ECS/EKS, Google Cloud Run, または Heroku, Render.com (Flaskアプリケーション)
+    database_deployment: MongoDB Atlas, AWS RDS (PostgreSQL)
+    ci_cd: GitHub Actions / GitLab CI
+    monitoring: Sentry, Prometheus, Grafana
+    version_control: Git (GitHub / GitLab)
+
+# 3. 主要コンポーネントとモジュール詳細
+components_and_modules:
+  - name: User Interface (UI) Layer
+    description: ユーザーとの対話インターフェース（チャット、ダッシュボード）。Next.jsで構築。
+    sub_modules:
+      - ChatInterface: AIとの主要な対話ウィンドウ。
+      - Dashboard: プロジェクト進捗、生成物、思考プロセス可視化。
+      - AuthModule: ユーザー認証・認可 (例: NextAuth.js, Firebase Auth)。
+
+  - name: API Gateway
+    description: フロントエンドからのリクエストを受け付け、適切なバックエンドサービスにルーティング。
+    technology: Kong, AWS API Gateway, またはFlask/Express.jsで自作。
+
+  - name: LLM Orchestration Service (Python/Flask + Langchain)
+    description: TANREN 3D思考メソッドのコアロジック、プロンプト管理、LLMとの連携、各種ジェネレーターの制御。
+    sub_modules:
+      - ThreeDMethodEngine: X軸、時間軸、META軸の思考支援ロジック。
+      - PromptManager: LLMへの指示を最適化・管理。
+      - ToolIntegrator: 外部APIや内部ツールをLLMエージェントが利用するためのインターフェース。
+
+  - name: Facilitation Service (Python/Flask)
+    description: 事業スタート日設定、逆算スケジューリング、メンタリング支援機能。
+
+  - name: MVP Mockup Generation Service (Python/Flask + 外部ライブラリ)
+    description: Webサイト、スライド、システムUIのモックアップを生成。
+    technologies_for_generation:
+      - WebSite: HTML, CSS, JavaScript (テンプレートエンジン Jinja2, またはLLMによる直接生成)。
+      - Slides: python-pptx, またはMarkdownからReveal.js/Marp等の形式に変換。
+      - SystemUI: Figma API連携 (将来)、または簡略化されたHTML/CSSコンポーネント生成。
+      - DummyDataGenerator: Fakerライブラリ等。
+      - ManualSiteGenerator: Markdownから静的サイトジェネレーター (MkDocs, Docsify) を利用。
+
+  - name: Document Generation Service (Python/Flask)
+    description: 要件定義.yaml, 技術定義.yaml, Todo定義.yamlを生成。
+    technology: PyYAMLライブラリ。
+
+  - name: Data Persistence Service
+    description: データベースとのやり取りを抽象化するレイヤー。
+    technology: SQLAlchemy (PostgreSQLの場合), PyMongo (MongoDBの場合)。
+
+# 4. データ管理戦略
+data_management:
+  user_data_privacy: >
+    個人情報保護法規を遵守。データ暗号化（保存時・転送時）。
+    ユーザーの事業アイデアは機密情報として扱い、厳格なアクセス制御を行う。
+  data_backup_and_recovery: 定期的な自動バックアップとリストア手順の確立。
+  knowledge_base_management: AIが参照する知識ベースは定期的に更新・拡充。
+
+# 5. 外部APIとサービス連携
+external_apis_and_services:
+  - name: LLM Provider API (e.g., OpenAI API)
+    usage: コアAI機能全般。
+  - name: Market Research APIs (Optional, Future)
+    usage: ディープリサーチ機能の強化 (e.g., Statista, Crunchbase API)。
+  - name: News APIs (Optional, Future)
+    usage: 最新市場トレンド分析。
+
+# 6. セキュリティ考慮事項
+security_considerations:
+  - 認証・認可: OAuth 2.0 / OpenID Connect の採用。
+  - APIセキュリティ: APIキー管理、レートリミット、入力バリデーション。
+  - データセキュリティ: SQLインジェクション対策、XSS対策、CSRF対策。
+  - 依存ライブラリの脆弱性管理: 定期的なスキャンとアップデート。
+
+# 7. 開発・運用プラクティス
+development_and_operations_practices:
+  - Agile Methodology: スクラムまたはカンバン。
+  - Test-Driven Development (TDD) / Behavior-Driven Development (BDD): 品質確保のため可能な範囲で導入。
+  - Code Reviews: コード品質の維持と知識共有。
+  - Logging: 詳細なログ収集による問題追跡と分析。
+```

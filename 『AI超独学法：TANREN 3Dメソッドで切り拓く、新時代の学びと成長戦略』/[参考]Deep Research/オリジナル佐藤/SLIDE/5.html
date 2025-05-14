@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Y軸：時間軸の織り込み（過去・現代・未来）</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+</head>
+
+<body class="bg-black text-white">
+  <div class="slide"
+    style="width: 1920px; min-height: 1080px; position: relative; overflow: hidden; font-family: 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #1e1b4b 0%, #2e1065 100%);">
+
+    <!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <svg viewBox="0 0 1920 1080" preserveAspectRatio="none" class="absolute h-full w-full opacity-15">
+        <path id="timeflow" fill="none" stroke="url(#timeline-gradient)" stroke-width="4"
+          d="M0,540 C400,350 800,650 1200,450 C1600,250 1900,540 1920,540" />
+        <path id="timeflow2" fill="none" stroke="url(#timeline-gradient-alt)" stroke-width="2"
+          d="M0,600 C300,500 700,700 1100,500 C1500,300 1900,600 1920,600" stroke-dasharray="6 8" />
+        <defs>
+          <linearGradient id="timeline-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#9333ea" stop-opacity="0.2" />
+            <stop offset="50%" stop-color="#a855f7" stop-opacity="0.7" />
+            <stop offset="100%" stop-color="#d8b4fe" stop-opacity="0.4" />
+          </linearGradient>
+          <linearGradient id="timeline-gradient-alt" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#7e22ce" stop-opacity="0.2" />
+            <stop offset="50%" stop-color="#c084fc" stop-opacity="0.5" />
+            <stop offset="100%" stop-color="#e9d5ff" stop-opacity="0.3" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-transparent"></div>
+    </div>
+
+    <!-- Page Title -->
+    <div class="absolute top-12 left-0 right-0 text-center z-10">
+      <h1
+        class="text-6xl font-bold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-purple-500">
+        Y軸：時間軸の織り込み
+      </h1>
+      <h2 class="text-3xl font-medium text-purple-200/90">過去・現代・未来</h2>
+      <div class="w-32 h-1 bg-gradient-to-r from-purple-400 to-purple-600 mx-auto mt-3"></div>
+    </div>
+
+    <!-- Timeline Visualization -->
+    <div id="timeline-visualization" class="absolute right-12 top-32 z-10" style="width: 400px; height: 300px;"></div>
+
+    <!-- Main Content - Three Sections -->
+    <div class="absolute top-44 inset-x-0 z-10">
+      <div class="flex justify-between px-12">
+        <!-- Past Section -->
+        <div class="w-[600px] transform -rotate-1">
+          <div
+            class="bg-gradient-to-r from-purple-900/50 to-purple-800/30 backdrop-blur-sm p-7 rounded-xl border border-purple-700/30">
+            <div class="flex items-center mb-5">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-purple-800 to-purple-600 mr-4">
+                <i class="fas fa-history text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-purple-200">過去 (Past)</h2>
+            </div>
+
+            <div class="space-y-5 mb-6">
+              <div>
+                <div class="font-bold text-xl text-purple-300 mb-2">歴史からの学習と経験知の活用</div>
+                <div class="text-purple-100/80">
+                  <div class="flex items-start mb-3">
+                    <i class="fas fa-book text-xl text-purple-400 mr-3 mt-1"></i>
+                    <div>
+                      <div class="font-medium">歴史的教訓と先人の知恵</div>
+                      <div class="text-sm opacity-80">過去の事例・成功失敗体験からのパターン抽出</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-database text-xl text-purple-400 mr-3 mt-1"></i>
+                    <div>
+                      <div class="font-medium">組織のナレッジマネジメント</div>
+                      <div class="text-sm opacity-80">体系化された経験則と暗黙知の形式知化</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-gradient-to-r from-purple-900/60 to-indigo-900/40 p-4 rounded-lg border border-purple-500/30">
+                <div class="flex items-center mb-2">
+                  <i class="fas fa-robot text-xl text-purple-400 mr-2"></i>
+                  <div
+                    class="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-indigo-300">
+                    AIによる拡張
+                  </div>
+                </div>
+                <ul class="list-disc pl-8 text-sm text-purple-100/80 space-y-1">
+                  <li>膨大な過去テキストデータの瞬時参照</li>
+                  <li>忘れ去られていた知見の再発見</li>
+                  <li>個人経験を超えた範囲の事例分析</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-purple-900/20 p-3 rounded-lg flex justify-center items-center">
+              <i class="fas fa-quote-left text-purple-500/60 text-3xl"></i>
+              <div class="px-3 text-center text-purple-200/90 text-sm italic">"歴史は繰り返す。だがその度に価格が上がる" - マーク・トウェイン</div>
+              <i class="fas fa-quote-right text-purple-500/60 text-3xl"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Present Section - Center -->
+        <div class="w-[600px] transform translate-y-6">
+          <div
+            class="bg-gradient-to-r from-purple-800/50 to-purple-700/30 backdrop-blur-sm p-7 rounded-xl border border-purple-600/30">
+            <div class="flex items-center mb-5">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-purple-700 to-purple-500 mr-4">
+                <i class="fas fa-chart-bar text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-purple-200">現代 (Present)</h2>
+            </div>
+
+            <div class="space-y-5 mb-6">
+              <div>
+                <div class="font-bold text-xl text-purple-300 mb-2">現状認識とリアルタイム分析</div>
+                <div class="text-purple-100/80">
+                  <div class="flex items-start mb-3">
+                    <i class="fas fa-search-location text-xl text-purple-400 mr-3 mt-1"></i>
+                    <div>
+                      <div class="font-medium">マクロ環境の変化</div>
+                      <div class="text-sm opacity-80">PEST分析、3C分析による現状把握</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-tachometer-alt text-xl text-purple-400 mr-3 mt-1"></i>
+                    <div>
+                      <div class="font-medium">リアルタイムデータと現場感覚</div>
+                      <div class="text-sm opacity-80">不連続な変化やトレンドの捕捉と分析</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-gradient-to-r from-purple-800/60 to-indigo-800/40 p-4 rounded-lg border border-purple-500/30">
+                <div class="flex items-center mb-2">
+                  <i class="fas fa-robot text-xl text-purple-400 mr-2"></i>
+                  <div
+                    class="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-indigo-300">
+                    AIによる拡張
+                  </div>
+                </div>
+                <ul class="list-disc pl-8 text-sm text-purple-100/80 space-y-1">
+                  <li>ソーシャルメディア・市場データのリアルタイム分析</li>
+                  <li>情報の真偽判断と多角的情報源統合</li>
+                  <li>BI分析と高度なパターン認識</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3">
+              <div class="p-3 bg-purple-800/20 rounded-lg text-center">
+                <i class="fas fa-chart-line text-purple-400 text-2xl mb-1"></i>
+                <div class="text-sm">市場動向</div>
+              </div>
+              <div class="p-3 bg-purple-800/20 rounded-lg text-center">
+                <i class="fas fa-users text-purple-400 text-2xl mb-1"></i>
+                <div class="text-sm">顧客インサイト</div>
+              </div>
+              <div class="p-3 bg-purple-800/20 rounded-lg text-center">
+                <i class="fas fa-cogs text-purple-400 text-2xl mb-1"></i>
+                <div class="text-sm">リソース分析</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Future Section - Right -->
+        <div class="w-[600px] transform rotate-1">
+          <div
+            class="bg-gradient-to-r from-purple-700/50 to-purple-600/30 backdrop-blur-sm p-7 rounded-xl border border-purple-500/30">
+            <div class="flex items-center mb-5">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-to-br from-purple-600 to-purple-400 mr-4">
+                <i class="fas fa-rocket text-2xl"></i>
+              </div>
+              <h2 class="text-3xl font-bold text-purple-200">未来 (Future)</h2>
+            </div>
+
+            <div class="space-y-5 mb-6">
+              <div>
+                <div class="font-bold text-xl text-purple-300 mb-2">予測・洞察とシナリオプランニング</div>
+                <div class="text-purple-100/80">
+                  <div class="flex items-start mb-3">
+                    <i class="fas fa-chess text-xl text-purple-400 mr-3 mt-1"></i>
+                    <div>
+                      <div class="font-medium">複数シナリオの検討</div>
+                      <div class="text-sm opacity-80">不確実性への適応と実現可能性評価</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <i class="fas fa-lightbulb text-xl text-purple-400 mr-3 mt-1"></i>
+                    <div>
+                      <div class="font-medium">フューチャーバック思考</div>
+                      <div class="text-sm opacity-80">未来から現在を逆算した戦略立案</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-gradient-to-r from-purple-700/60 to-indigo-700/40 p-4 rounded-lg border border-purple-500/30">
+                <div class="flex items-center mb-2">
+                  <i class="fas fa-robot text-xl text-purple-400 mr-2"></i>
+                  <div
+                    class="font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-indigo-300">
+                    AIによる拡張
+                  </div>
+                </div>
+                <ul class="list-disc pl-8 text-sm text-purple-100/80 space-y-1">
+                  <li>精度の高い予測モデル構築</li>
+                  <li>複雑システムの動態シミュレーション</li>
+                  <li>多様な未来シナリオの迅速生成</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="flex justify-between gap-3">
+              <div class="p-3 bg-purple-700/20 rounded-lg flex-1 flex flex-col items-center">
+                <div class="font-medium">最善シナリオ</div>
+                <i class="fas fa-arrow-trend-up text-green-400 text-2xl my-2"></i>
+              </div>
+              <div class="p-3 bg-purple-700/20 rounded-lg flex-1 flex flex-col items-center">
+                <div class="font-medium">最悪シナリオ</div>
+                <i class="fas fa-arrow-trend-down text-red-400 text-2xl my-2"></i>
+              </div>
+              <div class="p-3 bg-purple-700/20 rounded-lg flex-1 flex flex-col items-center">
+                <div class="font-medium">変化対応</div>
+                <i class="fas fa-random text-blue-400 text-2xl my-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Quote -->
+    <div class="absolute bottom-28 left-1/2 transform -translate-x-1/2 text-center max-w-3xl z-10">
+      <div class="text-xl font-medium text-purple-200">
+        「時間軸を意識的に往復することで、より洞察に満ちた文脈を踏まえた思考が可能になる」
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="absolute bottom-6 right-10 text-sm text-purple-300/50">
+      思考3Dメソッド[XYZ] | 5
+    </div>
+  </div>
+
+  <script>
+    // D3.js script for timeline visualization
+    document.addEventListener('DOMContentLoaded', function () {
+      // Set up SVG container
+      const svg = d3.select("#timeline-visualization")
+        .append("svg")
+        .attr("width", 400)
+        .attr("height", 300)
+        .append("g");
+
+      // Create circular time flow
+      const centerX = 200;
+      const centerY = 150;
+      const radius = 100;
+
+      // Draw outer circle
+      svg.append("circle")
+        .attr("cx", centerX)
+        .attr("cy", centerY)
+        .attr("r", radius)
+        .attr("fill", "none")
+        .attr("stroke", "rgba(168, 85, 247, 0.3)")
+        .attr("stroke-width", 3);
+
+      // Draw direction arrows along the circle
+      const arrowsCount = 8;
+      const arrowRadius = radius + 5;
+
+      for (let i = 0; i < arrowsCount; i++) {
+        const angle = (i * 2 * Math.PI / arrowsCount);
+        const arrowX = centerX + arrowRadius * Math.cos(angle);
+        const arrowY = centerY + arrowRadius * Math.sin(angle);
+
+        // Arrow direction follows circle
+        const dx = -Math.sin(angle) * 10;
+        const dy = Math.cos(angle) * 10;
+
+        svg.append("path")
+          .attr("d", `M${arrowX},${arrowY} l${dx},${dy} l${-dy / 2},${dx / 2} l${dy / 2},${-dx / 2} l${-dy / 2},${-dx / 2} z`)
+          .attr("fill", "rgba(168, 85, 247, 0.5)");
+      }
+
+      // Create nodes for Past, Present, Future
+      const nodeData = [
+        { id: "past", name: "過去", angle: 7 * Math.PI / 6, icon: "\uf1da", color: "#c084fc" }, // history
+        { id: "present", name: "現代", angle: 11 * Math.PI / 6, icon: "\uf080", color: "#a855f7" }, // chart-bar
+        { id: "future", name: "未来", angle: 3 * Math.PI / 6, icon: "\uf135", color: "#8b5cf6" }  // rocket
+      ];
+
+      // Add node circles
+      const nodeRadius = 30;
+      const nodes = svg.selectAll(".time-node")
+        .data(nodeData)
+        .enter()
+        .append("g")
+        .attr("class", "time-node")
+        .attr("transform", d => {
+          const x = centerX + radius * Math.cos(d.angle);
+          const y = centerY + radius * Math.sin(d.angle);
+          return `translate(${x}, ${y})`;
+        });
+
+      // Add circles for nodes
+      nodes.append("circle")
+        .attr("r", nodeRadius)
+        .attr("fill", d => d.color)
+        .attr("opacity", 0.2)
+        .attr("stroke", d => d.color)
+        .attr("stroke-width", 2);
+
+      nodes.append("circle")
+        .attr("r", nodeRadius - 5)
+        .attr("fill", d => d.color)
+        .attr("opacity", 0.3);
+
+      // Add icons
+      nodes.append("text")
+        .attr("font-family", "FontAwesome")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "central")
+        .attr("font-size", "16px")
+        .attr("fill", "white")
+        .text(d => d.icon);
+
+      // Add labels
+      nodes.append("text")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "central")
+        .attr("y", nodeRadius + 15)
+        .attr("font-size", "14px")
+        .attr("font-weight", "bold")
+        .attr("fill", "white")
+        .text(d => d.name);
+
+      // Draw center AI node
+      svg.append("circle")
+        .attr("cx", centerX)
+        .attr("cy", centerY)
+        .attr("r", 40)
+        .attr("fill", "url(#ai-gradient)");
+
+      // Define gradient for AI node
+      const gradient = svg.append("defs")
+        .append("radialGradient")
+        .attr("id", "ai-gradient")
+        .attr("cx", "50%")
+        .attr("cy", "50%")
+        .attr("r", "50%");
+
+      gradient.append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", "rgba(168, 85, 247, 0.7)");
+
+      gradient.append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", "rgba(139, 92, 246, 0.2)");
+
+      // Add AI text
+      svg.append("text")
+        .attr("x", centerX)
+        .attr("y", centerY - 8)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "12px")
+        .attr("fill", "white")
+        .attr("font-weight", "bold")
+        .text("時間知");
+
+      svg.append("text")
+        .attr("x", centerX)
+        .attr("y", centerY + 14)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "18px")
+        .attr("fill", "white")
+        .attr("font-weight", "bold")
+        .text("AI");
+
+      // Animate flow
+      function pulseAnimation() {
+        nodes.selectAll("circle")
+          .transition()
+          .duration(1800)
+          .attr("opacity", 0.5)
+          .transition()
+          .duration(1800)
+          .attr("opacity", function () {
+            return d3.select(this).attr("r") === `${nodeRadius}` ? 0.2 : 0.3;
+          })
+          .on("end", pulseAnimation);
+
+        svg.select("circle[r='40']")
+          .transition()
+          .duration(2000)
+          .attr("opacity", 0.9)
+          .transition()
+          .duration(2000)
+          .attr("opacity", 0.5)
+          .on("end", () => { });
+      }
+
+      pulseAnimation();
+
+      // Animate timeline in background
+      function animateTimeFlow() {
+        const t = Date.now() * 0.0005;
+
+        // Generate dynamic wave paths
+        let path1 = "M0,540 ";
+        let path2 = "M0,600 ";
+
+        for (let i = 0; i < 5; i++) {
+          const x = i * 400;
+          const y1 = 540 + Math.sin(t + i * 0.7) * 100;
+          const y2 = 600 + Math.cos(t * 0.8 + i * 0.6) * 100;
+
+          const cp1x = x + 200;
+          const cp1y = y1 + (Math.sin(t * 0.9 + i) > 0 ? -100 : 100);
+
+          const cp2x = x + 200;
+          const cp2y = y2 + (Math.cos(t * 0.7 + i) > 0 ? -80 : 80);
+
+          path1 += `C${x + 100},${y1} ${cp1x},${cp1y} ${x + 400},${y1 * 0.8 + 110} `;
+          path2 += `C${x + 150},${y2} ${cp2x},${cp2y} ${x + 400},${y2 * 0.8 + 120} `;
+        }
+
+        d3.select("#timeflow").attr("d", path1);
+        d3.select("#timeflow2").attr("d", path2);
+
+        requestAnimationFrame(animateTimeFlow);
+      }
+
+      animateTimeFlow();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第5章 実践編1:AI共創によるアウトプット革命</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Preline UI CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Google Fonts - Noto Sans JP & Noto Serif JP -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+    rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-gray-50">
+  <!-- Header Navbar - Fixed at top -->
+  <header class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-xl font-serif font-bold text-blue-700">
+        <span class="text-pink-600">AI</span>超独学法 第5章
+      </h1>
+      <nav class="hidden md:block">
+        <ul class="flex space-x-6">
+          <li><a href="#intro" class="nav-link px-1 py-2 hover:text-blue-600 transition-colors">はじめに</a></li>
+          <li><a href="#section-01" class="nav-link px-1 py-2 hover:text-blue-600 transition-colors">企画立案の超加速</a></li>
+          <li><a href="#section-02" class="nav-link px-1 py-2 hover:text-blue-600 transition-colors">あなたらしい文章作成術</a>
+          </li>
+          <li><a href="#section-03" class="nav-link px-1 py-2 hover:text-blue-600 transition-colors">次世代プレゼン資料作成</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Mobile menu button -->
+      <button
+        class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none"
+        data-hs-overlay="#mobile-menu">
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu overlay -->
+  <div id="mobile-menu" class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-y-auto bg-white">
+    <div class="hs-overlay-open:mt-0 mt-0 transition-all duration-300 ease-in-out">
+      <div class="flex items-center justify-between px-4 py-3 border-b">
+        <h3 class="font-bold text-gray-800">メニュー</h3>
+        <button type="button" class="text-gray-600 hover:text-gray-500" data-hs-overlay="#mobile-menu">
+          <span class="sr-only">Close</span>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="py-4 px-6">
+        <ul class="space-y-4">
+          <li><a href="#intro" class="nav-link block hover:text-blue-600 transition-colors"
+              data-hs-overlay="#mobile-menu">はじめに</a></li>
+          <li><a href="#section-01" class="nav-link block hover:text-blue-600 transition-colors"
+              data-hs-overlay="#mobile-menu">企画立案の超加速</a></li>
+          <li><a href="#section-02" class="nav-link block hover:text-blue-600 transition-colors"
+              data-hs-overlay="#mobile-menu">あなたらしい文章作成術</a></li>
+          <li><a href="#section-03" class="nav-link block hover:text-blue-600 transition-colors"
+              data-hs-overlay="#mobile-menu">次世代プレゼン資料作成</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto pt-24 pb-16 px-4 md:px-8">
+    <!-- Introduction Section -->
+    <section id="intro" class="section mb-20">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h1
+          class="text-4xl md:text-5xl font-serif font-bold mb-6 bg-gradient-to-r from-blue-700 to-pink-600 bg-clip-text text-transparent">
+          第5章 実践編1：AI共創によるアウトプット革命
+        </h1>
+        <p class="text-xl text-gray-700 mt-6 mb-10">
+          企画・文章・資料作成における、AIとの新しい共創スタイル
+        </p>
+        <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden mb-12 transition-all hover:shadow-xl">
+        <div class="p-8">
+          <p class="text-gray-700 mb-6">
+            これまでインストールした思考OS「TANREN 3Dメソッド」、培った「AIとの対話設計術」、探求した「AIエージェント」の可能性。
+            これらの武器を携え、日々直面するビジネスのリアルな課題に、AIと共に挑みます。
+          </p>
+          <p class="text-gray-700 mb-6">
+            本章では特に<span class="font-bold text-blue-700">アウトプット</span>に焦点を当て、
+            企画立案、文章作成、プレゼンテーション資料作成という3つの重要な領域で、
+            AIとの共創によって生み出される革命的な可能性を具体的な実践手法とともに探求します。
+          </p>
+        </div>
+      </div>
+
+      <!-- Chapter Overview Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <!-- Card 1 -->
+        <div class="feature-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all">
+          <div class="h-2 bg-blue-600"></div>
+          <div class="p-6">
+            <div class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold font-serif text-gray-800 mb-3">01 企画立案を「超」加速</h3>
+            <p class="text-gray-600 mb-4">AIとの共創による企画立案プロセスで、アイデアから具体的な企画書まで、圧倒的スピードと質を実現する方法を解説します。</p>
+            <a href="#section-01" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+              詳しく見る
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all">
+          <div class="h-2 bg-indigo-600"></div>
+          <div class="p-6">
+            <div class="w-12 h-12 flex items-center justify-center bg-indigo-100 rounded-full mb-4">
+              <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold font-serif text-gray-800 mb-3">02 「あなたらしい」文章作成術</h3>
+            <p class="text-gray-600 mb-4">AIの流暢さと論理性を活かしながら、あなた独自の個性や温かみを文章に注入する「AIパーソナル添削術」を学びます。</p>
+            <a href="#section-02" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
+              詳しく見る
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all">
+          <div class="h-2 bg-pink-600"></div>
+          <div class="p-6">
+            <div class="w-12 h-12 flex items-center justify-center bg-pink-100 rounded-full mb-4">
+              <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold font-serif text-gray-800 mb-3">03 次世代プレゼン資料作成</h3>
+            <p class="text-gray-600 mb-4">手作業による「編集」から、AIとの共創による「生成」へ。SVG/HTMLを活用した革新的なプレゼン作成の世界を探求します。</p>
+            <a href="#section-03" class="inline-flex items-center text-pink-600 hover:text-pink-800 font-medium">
+              詳しく見る
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 01: Enterprise Planning -->
+    <section id="section-01" class="section mb-20">
+      <div class="max-w-4xl mx-auto mb-10">
+        <h2 class="text-3xl font-serif font-bold mb-6 text-gray-800 border-l-4 border-blue-600 pl-4">
+          01 企画立案を「超」加速：AIとの共創プロセス
+        </h2>
+        <p class="text-gray-600 italic mb-6">X軸中心 + Z軸Lv2</p>
+
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg shadow-inner mb-10">
+          <p class="text-gray-700 leading-relaxed">
+            企画立案は、多くのビジネスパーソンにとって創造的でありながらも、時に大きな負荷となるプロセスです。
+            市場調査、競合分析、提供価値の定義、収益計画、リスク評価など、優れた企画書には緻密な思考と膨大な情報処理、
+            そして人を動かす表現力が求められます。
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            AIは、もはや単なる資料作成ツールではありません。あなたのアイデアの種を共に育て、
+            論理的な骨格を与え、説得力のある形へと磨き上げていく「最強の企画共創パートナー」となり得るのです。
+          </p>
+        </div>
+
+        <!-- Illustrative Chart -->
+        <div class="bg-white p-6 rounded-xl shadow-md mb-12">
+          <h3 class="text-xl font-bold mb-4 text-gray-800">企画書作成時間の劇的短縮</h3>
+          <div class="chart-container h-64">
+            <canvas id="enterprisePlanningChart"></canvas>
+          </div>
+          <p class="text-sm text-gray-500 mt-4 text-center">※実際の時間は企画の複雑さやAI活用スキルによって異なります</p>
+        </div>
+
+        <!-- AI Enterprise Planning Essence -->
+        <div class="callout mb-10">
+          <h3 class="text-xl font-bold mb-3 text-blue-700">AI×企画書共創の本質</h3>
+          <p class="mb-4">
+            その本質は「<strong>人間の戦略的思考・創造性と、AIの情報処理・分析能力を融合させ、
+              企画そのものの質と実現可能性を飛躍的に高めること</strong>」にあります。
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-bold text-blue-600 mb-2">人間の貢献</h4>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  企画に込める「想い（Why）」
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  ターゲット顧客への「共感」
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  独自の「変数」（模倣困難な強み）
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-bold text-indigo-600 mb-2">AIの貢献</h4>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-indigo-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  膨大な情報の高速処理と分析
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-indigo-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  多様な分析フレームワークの適用
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-indigo-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  客観的視点からの選択肢提示
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Six-Step Process -->
+        <div class="mb-10">
+          <h3 class="text-2xl font-serif font-bold mb-6 text-center text-gray-800">
+            AIと企画書を共創する実践6ステップ
+          </h3>
+
+          <div class="hs-accordion-group">
+            <!-- Step 1 -->
+            <div class="hs-accordion bg-white border border-gray-200 rounded-xl mb-3" id="step-1-accordion">
+              <button
+                class="hs-accordion-toggle flex justify-between items-center w-full font-semibold text-left text-gray-800 py-4 px-5"
+                aria-controls="step-1-collapse">
+                <span class="flex items-center">
+                  <span
+                    class="mr-3 flex items-center justify-center w-8 h-8 bg-blue-100 text-blue-600 rounded-full font-bold">1</span>
+                  AIへの"OSインストール" ── 思考の型と役割を教え込む
+                </span>
+                <svg class="hs-accordion-active:hidden block w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14M8 2V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <svg class="hs-accordion-active:block hidden w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="step-1-collapse"
+                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="step-1-accordion">
+                <div class="px-5 pb-5">
+                  <p class="text-gray-700 mb-4">
+                    AIに「優れた企画書とは何か」という基本概念と、今回の企画で重視する「思考の型」をインプットします。
+                    これは、AIに企画書作成のためのOSをインストールする作業です。
+                  </p>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">何を教えるか？（X軸：具体化）</h4>
+                      <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                        <li>一般的な企画書構成要素（背景、目的、課題、提案、計画、効果など）</li>
+                        <li>重視する分析フレームワーク（例：SWOT分析、リーンキャンバスなど）</li>
+                        <li>良い企画書の条件（論理、具体性、独自性など）</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">どう教えるか？（X軸：超構造化）</h4>
+                      <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                        <li><strong>役割設定:</strong> 「あなたは経験豊富な新規事業コンサルタントです」</li>
+                        <li><strong>思考の型指示:</strong> 「今回は『課題→原因→解決策→効果』のフレームワークを基本に構成してください」</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 callout-accent">
+                    <p class="text-gray-700">
+                      <strong>ポイント:</strong> ここで第2章で学んだ「超構造化」のスキルを活かし、明確な指示を与えることが重要です。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="hs-accordion bg-white border border-gray-200 rounded-xl mb-3" id="step-2-accordion">
+              <button
+                class="hs-accordion-toggle flex justify-between items-center w-full font-semibold text-left text-gray-800 py-4 px-5"
+                aria-controls="step-2-collapse">
+                <span class="flex items-center">
+                  <span
+                    class="mr-3 flex items-center justify-center w-8 h-8 bg-blue-100 text-blue-600 rounded-full font-bold">2</span>
+                  ゴール共有 ── 企画の核心をAIに伝える
+                </span>
+                <svg class="hs-accordion-active:hidden block w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14M8 2V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <svg class="hs-accordion-active:block hidden w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="step-2-collapse"
+                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="step-2-accordion">
+                <div class="px-5 pb-5">
+                  <p class="text-gray-700 mb-4">
+                    今回の企画で「何を（What）」「なぜ（Why）」「誰に（Who）」届けたいのか、その核心部分をAIと共有します。
+                    ここでの情報の明確さが、たたき台の質を左右します。
+                  </p>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">何を伝えるか？（X軸：具体化）</h4>
+                      <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                        <li>企画の<strong>目的</strong>（売上向上、課題解決など）</li>
+                        <li><strong>ターゲット</strong>顧客とそのペインポイント</li>
+                        <li><strong>提供価値</strong>（ユニークな価値提案、競合優位性）</li>
+                        <li><strong>期待成果</strong>（KPI、達成時期）</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">どう伝えるか？（X軸：超構造化）</h4>
+                      <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                        <li>情報を箇条書きで整理して伝える。</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 callout-accent">
+                    <p class="text-gray-700">
+                      <strong>ポイント:</strong> あなたの「想い」や背景にあるストーリーも簡潔に伝えることで、AIの文脈理解が深まる場合があります。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="hs-accordion bg-white border border-gray-200 rounded-xl mb-3" id="step-3-accordion">
+              <button
+                class="hs-accordion-toggle flex justify-between items-center w-full font-semibold text-left text-gray-800 py-4 px-5"
+                aria-controls="step-3-collapse">
+                <span class="flex items-center">
+                  <span
+                    class="mr-3 flex items-center justify-center w-8 h-8 bg-blue-100 text-blue-600 rounded-full font-bold">3</span>
+                  設計図の共創 ── AIと構成案を練り上げる
+                </span>
+                <svg class="hs-accordion-active:hidden block w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14M8 2V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <svg class="hs-accordion-active:block hidden w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="step-3-collapse"
+                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="step-3-accordion">
+                <div class="px-5 pb-5">
+                  <p class="text-gray-700 mb-4">
+                    企画の核心を共有したら、次はAIと共に企画書全体の<strong>構成（目次）</strong>と、
+                    各セクションで記述すべき<strong>内容</strong>を具体化していきます。
+                    AIのリサーチ能力や分析能力もここで活用できます。
+                  </p>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">何を指示するか？（X軸：具体化）</h4>
+                      <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                        <li>AIに目次案を提案させ、それを叩き台に議論する。</li>
+                        <li>各セクションで分析・記述してほしい内容を具体的に指示する。</li>
+                        <li>全体の論理展開（ストーリーライン）を指定する。</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">どう指示するか？（X軸：超構造化）</h4>
+                      <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                        <li>目次案は階層構造で示す。</li>
+                        <li>各セクションへの指示は箇条書きで明確に。</li>
+                        <li>必要に応じてステップ・バイ・ステップで指示。</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 callout-accent">
+                    <p class="text-gray-700">
+                      <strong>ポイント:</strong> AIを単なる書き手ではなく、調査・分析パートナーとしても活用する意識を持ちましょう。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="hs-accordion bg-white border border-gray-200 rounded-xl mb-3" id="step-4-accordion">
+              <button
+                class="hs-accordion-toggle flex justify-between items-center w-full font-semibold text-left text-gray-800 py-4 px-5"
+                aria-controls="step-4-collapse">
+                <span class="flex items-center">
+                  <span
+                    class="mr-3 flex items-center justify-center w-8 h-8 bg-blue-100 text-blue-600 rounded-full font-bold">4</span>
+                  骨子フォーマット活用 ── AIによる肉付けを高速化
+                </span>
+                <svg class="hs-accordion-active:hidden block w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14M8 2V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <svg class="hs-accordion-active:block hidden w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="step-4-collapse"
+                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="step-4-accordion">
+                <div class="px-5 pb-5">
+                  <p class="text-gray-700 mb-4">
+                    もし、あなたが普段使っているテンプレート（<strong>骨子フォーマット</strong>）があれば、
+                    それをAIに提示することで、作業はさらに加速します。AIに明確な「レール」を敷いてあげるのです。
+                  </p>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">何を提示するか？（X軸：具体化）</h4>
+                      <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                        <li>テンプレートの各見出しと、記述内容の指示やプレースホルダーをテキスト形式で。</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">どう提示するか？（X軸：超構造化）</h4>
+                      <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                        <li>Markdown形式などで構造的にテンプレートを示す。</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 callout-accent">
+                    <p class="text-gray-700">
+                      <strong>ポイント:</strong> これぞ、「<strong>ペンパイナップルでエンヤ！</strong>」と表現した、
+                      構造（ペン）に情報（パイナップル）をAIが流し込み、一気に形（企画書）にする高速共創プロセスです！
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="hs-accordion bg-white border border-gray-200 rounded-xl mb-3" id="step-5-accordion">
+              <button
+                class="hs-accordion-toggle flex justify-between items-center w-full font-semibold text-left text-gray-800 py-4 px-5"
+                aria-controls="step-5-collapse">
+                <span class="flex items-center">
+                  <span
+                    class="mr-3 flex items-center justify-center w-8 h-8 bg-blue-100 text-blue-600 rounded-full font-bold">5</span>
+                  「一撃たたき台AI」育成 ── システムプロンプトによる自動化
+                </span>
+                <svg class="hs-accordion-active:hidden block w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14M8 2V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <svg class="hs-accordion-active:block hidden w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="step-5-collapse"
+                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="step-5-accordion">
+                <div class="px-5 pb-5">
+                  <p class="text-gray-700 mb-4">
+                    ここまでのステップでAIに与えた指示（役割、思考の型、目的、構成、骨子など）を、
+                    <strong>システムプロンプト</strong>としてAIに記憶させます（例：GPTsのInstructions欄に記述）。
+                  </p>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">何が起こるか？（X軸：具体化）</h4>
+                      <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                        <li>
+                          次回以降、企画の概要を伝えるだけで、AIがあなたのスタイルに合った高品質な企画書の「<strong>たたき台</strong>」を<strong>一撃で</strong>生成してくれるようになります。
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">効果</h4>
+                      <p class="text-gray-700">
+                        企画書作成の初期フェーズにかかる時間が劇的に短縮され、あなたはより本質的な検討に集中できます。
+                        まさに<strong>Lv0.5エージェント</strong>の考え方を応用した効率化です。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="hs-accordion bg-white border border-gray-200 rounded-xl mb-3" id="step-6-accordion">
+              <button
+                class="hs-accordion-toggle flex justify-between items-center w-full font-semibold text-left text-gray-800 py-4 px-5"
+                aria-controls="step-6-collapse">
+                <span class="flex items-center">
+                  <span
+                    class="mr-3 flex items-center justify-center w-8 h-8 bg-blue-100 text-blue-600 rounded-full font-bold">6</span>
+                  人間による「魂入れ」 ── AI生成物を超える最終工程
+                </span>
+                <svg class="hs-accordion-active:hidden block w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14M8 2V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                <svg class="hs-accordion-active:block hidden w-4 h-4 text-gray-600" width="16" height="16"
+                  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 8H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div id="step-6-collapse"
+                class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                aria-labelledby="step-6-accordion">
+                <div class="px-5 pb-5">
+                  <p class="text-gray-700 mb-4">
+                    AIが生成した素晴らしい「たたき台」。しかし、これで完成ではありません。
+                    最後に、<strong>人間の知性と感性</strong>で「魂」を吹き込み、真に心を動かす企画書へと昇華させる必要があります。
+                  </p>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">人間の役割</h4>
+                      <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                        <li><strong>戦略的判断:</strong> AI分析を踏まえ、最終的な戦略を選択・決定する。</li>
+                        <li><strong>創造的表現:</strong> ロジックに、ストーリー、情熱、共感を加える。</li>
+                        <li><strong>独自変数の注入:</strong> あなただけの模倣困難な価値を織り込む。</li>
+                        <li><strong>最終責任:</strong> その企画がもたらす結果に責任を持つ。</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-blue-600 mb-2">AIの役割（共創的推敲パートナー）</h4>
+                      <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                        <li>壁打ち相手（リスク分析、表現の妥当性確認）</li>
+                        <li>追加リサーチ（データ補強、競合再調査）</li>
+                        <li>ファクトチェック、論理矛盾チェック</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 callout-accent">
+                    <p class="text-gray-700">
+                      <strong>ポイント:</strong> この人間とAIの<strong>協調的な推敲プロセス</strong>こそが、
+                      AI時代の企画書作成の醍醐味であり、最終的な質を決定づけます。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conclusion for Section 1 -->
+        <div class="bg-blue-50 p-6 rounded-xl shadow-inner mt-10">
+          <h3 class="text-xl font-bold text-blue-700 mb-4">AIと共に、アイデアを「最速で、最高の形」へ</h3>
+          <p class="text-gray-700 mb-4">
+            AIとの共創プロセスを取り入れることで、企画立案が、孤独で骨の折れる作業から、
+            ダイナミックで、効率的で、そして創造的な活動へと変貌する可能性を感じていただけたでしょうか。
+          </p>
+          <p class="text-gray-700">
+            AIは、思考を深める触媒となり、情報を整理する構造化エンジンとなり、そしてアウトプットを加速するブースターとなります。
+            しかし、その舵を取り、目的地を定め、そして最後の「魂」を吹き込むのは、他の誰でもない、あなた自身なのです。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02: Personalized Writing -->
+    <section id="section-02" class="section mb-20">
+      <div class="max-w-4xl mx-auto mb-10">
+        <h2 class="text-3xl font-serif font-bold mb-6 text-gray-800 border-l-4 border-indigo-600 pl-4">
+          02 「あなたらしい」文章作成術：AIパーソナル添削
+        </h2>
+        <p class="text-gray-600 italic mb-6">Y軸的視点 + Z軸Lv1-2</p>
+
+        <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg shadow-inner mb-10">
+          <p class="text-gray-700 leading-relaxed">
+            生成AIは、驚くほど流暢で、論理的な文章を瞬時に紡ぎ出してくれます。
+            メールの下書き、報告書の要約、文章の校正… その効率性は、もはや疑いようがありません。
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            しかし、AIが書いた文章に「どこか他人行儀で、無機質に感じてしまう」という経験はありませんか？
+            「これ、本当に『私』が送って大丈夫か？」と、送信ボタンを押す手が、一瞬ためらわれることもあるでしょう。
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            AIは時に、「<strong>効率」と引き換えに「魂」を奪ってしまう</strong>ことがあるのです。
+          </p>
+        </div>
+
+        <!-- Illustrative Chart for Writing Comparison -->
+        <div class="bg-white p-6 rounded-xl shadow-md mb-12">
+          <h3 class="text-xl font-bold mb-4 text-gray-800">AIパーソナル添削の効果</h3>
+          <div class="chart-container h-80">
+            <canvas id="writingImprovementChart"></canvas>
+          </div>
+          <p class="text-sm text-gray-500 mt-4 text-center">
+            AIだけで作成した文章とAIパーソナル添削を活用した文章の比較
+          </p>
+        </div>
+
+        <!-- Why Personalization Matters -->
+        <div class="callout mb-10">
+          <h3 class="text-xl font-bold mb-3 text-indigo-700">なぜ「あなたらしさ」がビジネスで武器になるのか？</h3>
+          <p class="mb-4">
+            ビジネスコミュニケーションにおいて「あなたらしさ」が重要な理由を、<strong>超抽象化</strong>して捉え直してみましょう。
+          </p>
+
+          <p class="mb-4">
+            「あなたらしさ」とは、あなたの<strong>思考の癖、価値観、経験、そして感情が、言葉遣いや表現、文章のトーン＆マナーに滲み出たもの</strong>です。それは以下のような価値をもたらします：
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-indigo-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <div>
+                    <strong class="text-indigo-700">信頼の礎となる:</strong>
+                    <span>相手は、その人固有の言葉遣いや考え方に触れることで、書き手の「人となり」を感じ取り、親近感や信頼感を抱きやすくなります。</span>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-indigo-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <div>
+                    <strong class="text-indigo-700">共感を呼び覚ます:</strong>
+                    <span>論理だけでは動かない人の心を、あなたの言葉に込められた熱意や誠実さ、あるいはちょっとしたユーモアが動かすことがあります。</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-indigo-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <div>
+                    <strong class="text-indigo-700">記憶に残る:</strong>
+                    <span>個性のない平均的な文章は忘れられやすいですが、「あなたらしい」特徴的な文章は、相手の記憶に残り、強い印象を与えます。</span>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-indigo-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                  <div>
+                    <strong class="text-indigo-700">関係性を深める:</strong>
+                    <span>一貫した「あなたらしさ」は、相手との長期的な関係性を築く上での、目に見えない「絆」となります。</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- RAG and ICL Explanation -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-10">
+          <h3 class="text-xl font-bold mb-4 text-indigo-700">AIに「あなた」を教える魔法</h3>
+          <h4 class="font-bold text-gray-800 mb-3">RAGとインコンテキストラーニング（ICL）</h4>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <div class="bg-indigo-100 p-4 rounded-lg mb-4">
+                <h5 class="font-bold text-indigo-700 mb-2">RAG（検索拡張生成）とは</h5>
+                <p class="text-gray-700">
+                  難しく考える必要はありません。<strong>超具体化</strong>して言えば、これは「<strong>AIにカンニングペーパーを見せる</strong>」ようなものです。
+                </p>
+                <p class="text-gray-700 mt-2">
+                  AIが文章を生成したり、添削したりする際に、一般的な知識だけでなく、<strong>あなたが用意した「お手本」を参照させる</strong>ことで、
+                  AIの応答をあなたのスタイルに近づけることができます。
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="bg-purple-100 p-4 rounded-lg mb-4">
+                <h5 class="font-bold text-purple-700 mb-2">ICL（インコンテキストラーニング）とは</h5>
+                <p class="text-gray-700">
+                  「お手本を見せる」という行為を、プロンプトの中で手軽に実現するのが「<strong>インコンテキストラーニング</strong>」という能力です。
+                </p>
+                <p class="text-gray-700 mt-2">
+                  あなたは、特別な設定やプログラミングなしに、<strong>プロンプトの中にお手本となる文章をいくつか含めるだけで、
+                    AIにあなたの文体や言葉遣いを「その場で」学習させることができます</strong>。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-Step Process -->
+        <div class="mb-10">
+          <h3 class="text-2xl font-serif font-bold mb-6 text-center text-gray-800">
+            実践！AIパーソナル添削 3ステップ
+          </h3>
+          <p class="text-center text-gray-600 mb-8">あなただけのAIライティングコーチを育てる方法</p>
+
+          <!-- Step Cards -->
+          <div class="space-y-6">
+            <!-- Step 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all">
+              <div class="flex flex-col md:flex-row">
+                <div class="bg-indigo-600 text-white p-6 flex items-center justify-center md:w-1/4">
+                  <div class="text-center">
+                    <div class="text-3xl font-bold mb-2">Step 1</div>
+                    <div class="text-sm opacity-80">お手本を用意する</div>
+                  </div>
+                </div>
+                <div class="p-6 md:w-3/4">
+                  <h4 class="text-xl font-bold text-gray-800 mb-3">最強のお手本を用意する ── あなたの「言葉のDNA」を抽出</h4>
+                  <p class="text-gray-700 mb-4">
+                    まず、AIに学習させるための「お手本」となる、<strong>「あなたらしい」文章サンプル</strong>を準備します。
+                    これがAIパーソナライズの質を決定づける、最も重要なステップです。
+                  </p>
+
+                  <h5 class="font-bold text-indigo-700 mb-2">選び方のコツ:</h5>
+                  <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                    <li><strong>質を重視:</strong> 量よりも、「これは本当に自分らしい」と思える、自信のある文章を選ぶ。</li>
+                    <li><strong>多様性:</strong> あなたの異なる側面（丁寧さ、論理性、情熱、ユーモアなど）が表れているサンプルを複数用意すると、AIはより多角的にあなたのスタイルを学習できる。
+                    </li>
+                    <li><strong>成功体験:</strong> 特に相手から良い反応が得られたメールなどは、効果的な「お手本」となる可能性が高い。</li>
+                  </ul>
+
+                  <div class="bg-red-50 border-l-4 border-red-500 p-4 mt-4">
+                    <h5 class="font-bold text-red-700 mb-1">【最重要注意喚起】機密情報・個人情報の徹底的なマスキング！</h5>
+                    <p class="text-gray-700 text-sm">
+                      お手本文書をAIに提示する際は、<strong>絶対に、個人名、会社名、具体的な取引内容、その他一切の機密情報や個人情報を含めてはなりません！</strong>
+                      必ず、それらを「〇〇様」「△△社」「□□の件」といったダミー情報に置き換えるか、黒塗りするなどして、<strong>完全にマスキング</strong>することが必要です。
+                      コンプライアンス意識を高く持ち、細心の注意を払いましょう。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all">
+              <div class="flex flex-col md:flex-row">
+                <div class="bg-indigo-600 text-white p-6 flex items-center justify-center md:w-1/4">
+                  <div class="text-center">
+                    <div class="text-3xl font-bold mb-2">Step 2</div>
+                    <div class="text-sm opacity-80">プロンプトを設計する</div>
+                  </div>
+                </div>
+                <div class="p-6 md:w-3/4">
+                  <h4 class="text-xl font-bold text-gray-800 mb-3">「魂入れ」プロンプトを設計する ── AIに「あなたスタイル」を指示</h4>
+                  <p class="text-gray-700 mb-4">
+                    お手本が準備できたら、いよいよAIに「あなたらしく」添削させるためのプロンプトを設計します。
+                    第3章で学んだ「<strong>AI対話 6つの必須要素</strong>」をフル活用しましょう。
+                  </p>
+
+                  <div class="bg-gray-100 p-4 rounded-lg mb-4 overflow-auto">
+                    <h5 class="font-bold text-gray-800 mb-2">プロンプトテンプレート（メール添削用）</h5>
+                    <pre class="text-xs md:text-sm text-gray-700 whitespace-pre-wrap">
+# 命令: あなたは、私の文章スタイルを熟知した、優秀なライティングアシスタントです。
+
+# 私の文体のお手本（マスキング済み）:
+---お手本開始---
+[お手本メール1：丁寧な依頼]
+[お手本メール2：簡潔な報告]
+[お手本メール3：感謝の表現]
+---お手本終了---
+
+# 添削対象の下書き:
+---添削対象開始---
+[ここに添削してほしいメール下書きを貼り付け]
+---添削対象終了---
+
+# 実行指示:
+上記のお手本から私の文章スタイル（言葉遣い、トーン、構成など）を学習し、
+添削対象の下書きを、**私のスタイルに合わせて**、より**[例：プロフェッショナルかつ温かみのある]**表現に修正してください。
+特に、以下の点を考慮してください。
+*   相手への敬意と感謝の気持ちが伝わるように。
+*   結論や要点を最初に明確に示す構成にする。
+*   私がよく使う「[例：～について、確認させていただけますでしょうか]」といった表現を自然に取り入れる。
+
+修正後のメール全文と、主な修正ポイント（なぜそう修正したか）を簡潔に説明してください。
+                    </pre>
+                  </div>
+
+                  <p class="text-gray-700">
+                    このプロンプトのポイントは、単に添削を依頼するだけでなく、「<strong>お手本から私のスタイルを学習し、それに合わせて修正して</strong>」と
+                    明確に指示している点です。これが、AIに「あなたらしさ」を注入するための「魔法の呪文」となります。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition-all">
+              <div class="flex flex-col md:flex-row">
+                <div class="bg-indigo-600 text-white p-6 flex items-center justify-center md:w-1/4">
+                  <div class="text-center">
+                    <div class="text-3xl font-bold mb-2">Step 3</div>
+                    <div class="text-sm opacity-80">対話的改善</div>
+                  </div>
+                </div>
+                <div class="p-6 md:w-3/4">
+                  <h4 class="text-xl font-bold text-gray-800 mb-3">AIとの対話的リファインメント ── 「うちの子」を育てる喜び</h4>
+                  <p class="text-gray-700 mb-4">
+                    AIが提示した添削結果は、最初のトライとしては素晴らしいものかもしれません。
+                    しかし、まだ完璧ではないかもしれません。ここからが、AIをあなただけの「最高の相棒」へと育て上げるための、
+                    <strong>対話的な改善プロセス</strong>です。
+                  </p>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                      <h5 class="font-bold text-purple-700 mb-2">フィードバックを与える</h5>
+                      <p class="text-gray-700 text-sm">
+                        「ありがとう！かなり私らしくなった。でも、〇〇の部分はもう少し簡潔にしたいな。再提案してくれる？」
+                      </p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                      <h5 class="font-bold text-blue-700 mb-2">理由を尋ねる</h5>
+                      <p class="text-gray-700 text-sm">
+                        「なぜ、ここはこういう表現にしたの？ 私のどのスタイルを参考にした？」
+                      </p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                      <h5 class="font-bold text-green-700 mb-2">褒めて伸ばす</h5>
+                      <p class="text-gray-700 text-sm">
+                        「この表現、まさに私らしい！素晴らしい！」
+                      </p>
+                    </div>
+                  </div>
+
+                  <p class="text-gray-700 mt-4">
+                    この改善ループを繰り返すことで、AIはあなたの好みやニュアンスを驚くほど正確に学習し、どんどん「あなた化」していきます。
+                    それはまるで、言葉を覚えたての子供に根気強く教え込み、やがて流暢に話せるようになるのを見守るような、
+                    「<strong>AIを育てる</strong>」という新しい喜びを与えてくれるでしょう。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Time and Level Axes -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-10">
+          <h3 class="text-xl font-bold mb-4 text-indigo-700">時間軸（Y軸）とレベル（Z軸）で見る、パーソナル添削の進化</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Y軸（時間軸）</h4>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start">
+                  <span
+                    class="inline-flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full mr-3 mt-0.5 text-sm font-bold">過</span>
+                  <div>
+                    <p><strong>過去</strong>: 文章を磨くのは、人間の「赤ペン先生」の役割だった</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span
+                    class="inline-flex items-center justify-center w-6 h-6 bg-indigo-200 rounded-full mr-3 mt-0.5 text-sm font-bold">現</span>
+                  <div>
+                    <p><strong>現代</strong>: AIが基本的な校正や表現提案を行い、ICL/RAGによって「あなたらしさ」を反映させる試みが始まっている</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span
+                    class="inline-flex items-center justify-center w-6 h-6 bg-purple-200 rounded-full mr-3 mt-0.5 text-sm font-bold">未</span>
+                  <div>
+                    <p><strong>未来</strong>: あなたの文体を完全に再現する「パーソナル文体AI」が登場し、「何を伝えるか」という人間の本質的な役割がより重要になる</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Z軸（レベル）</h4>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start">
+                  <span
+                    class="inline-flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full mr-3 mt-0.5 text-sm font-bold">1</span>
+                  <div>
+                    <p><strong>Lv1</strong>: AIに基本的な校正を依頼する</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span
+                    class="inline-flex items-center justify-center w-6 h-6 bg-indigo-200 rounded-full mr-3 mt-0.5 text-sm font-bold">2</span>
+                  <div>
+                    <p><strong>Lv2</strong>: ICLを活用し、お手本から「あなたらしさ」を注入する</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span
+                    class="inline-flex items-center justify-center w-6 h-6 bg-purple-200 rounded-full mr-3 mt-0.5 text-sm font-bold">3</span>
+                  <div>
+                    <p><strong>Lv3</strong>: 高度なRAGシステムを構築・活用し、AIを究極の「代筆パートナー」へと育成していく</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conclusion for Section 2 -->
+        <div class="bg-indigo-50 p-6 rounded-xl shadow-inner mt-10">
+          <h3 class="text-xl font-bold text-indigo-700 mb-4">「あなただけの言葉」で、心を動かすコミュニケーションを</h3>
+          <p class="text-gray-700 mb-4">
+            AIパーソナル添削術は、AI時代の新しいコミュニケーションスキルです。
+            それは、AIの効率性と、人間ならではの個性・感情・信頼といった価値を両立させるための、強力な武器となります。
+          </p>
+          <p class="text-gray-700">
+            お手本を選び、プロンプトを設計し、AIと対話しながら「あなたらしい」言葉を紡ぎ出す。
+            このプロセスは、単に文章が上手くなるだけでなく、あなた自身の思考を整理し、
+            コミュニケーションにおける価値観を再確認する機会ともなるでしょう。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 03: Next-gen Presentation -->
+    <section id="section-03" class="section mb-20">
+      <div class="max-w-4xl mx-auto mb-10">
+        <h2 class="text-3xl font-serif font-bold mb-6 text-gray-800 border-l-4 border-pink-600 pl-4">
+          03 次世代プレゼン資料作成：AI×SVG/HTMLで「編集」を超える
+        </h2>
+        <p class="text-gray-600 italic mb-6">X軸(構造) + Z軸Lv2-3</p>
+
+        <div class="bg-gradient-to-r from-pink-50 to-purple-50 p-6 rounded-lg shadow-inner mb-10">
+          <p class="text-gray-700 leading-relaxed">
+            PowerPointやKeynoteと格闘した、あの長く、時に苦しい夜を思い出してください。
+            スライド一枚一枚のレイアウト調整、フォントサイズの微調整、最適な画像の探索、そして「あとちょっとだけ…」と繰り返される修正作業。
+            私たちは、資料の「<strong>見た目</strong>」を整えるという、膨大な「<strong>編集</strong>」作業に、
+            どれほどの貴重な時間とエネルギーを費やしてきたでしょうか？
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            しかし、もし、その「編集」という概念そのものが、過去のものになるとしたら？
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            MicrosoftのCEO、サティア・ナデラ氏が「SaaS is dead」と語った衝撃は、まさにこの未来を示唆しています。
+            AIが私たちの意図を汲み取り、最終的な成果物そのものを「<strong>生成</strong>」してくれるなら、
+            もはや私たちがソフトウェアを開き、一つ一つオブジェクトを<strong>手作業で「編集」する必要はなくなる</strong>かもしれないのです。
+          </p>
+        </div>
+
+        <!-- Illustrative Chart for Presentation Evolution -->
+        <div class="bg-white p-6 rounded-xl shadow-md mb-12">
+          <h3 class="text-xl font-bold mb-4 text-gray-800">プレゼン資料作成の進化</h3>
+          <div class="chart-container h-64">
+            <canvas id="presentationEvolutionChart"></canvas>
+          </div>
+          <p class="text-sm text-gray-500 mt-4 text-center">
+            作成方法による制作時間とクオリティの比較
+          </p>
+        </div>
+
+        <!-- Why AI+SVG/HTML -->
+        <div class="callout mb-10">
+          <h3 class="text-xl font-bold mb-3 text-pink-700">なぜAI×SVG/HTMLなのか？ 「生成」時代の最強タッグ</h3>
+          <p class="mb-4">
+            なぜ、従来のプレゼンソフトではなく、SVGやHTMLがAIとの共創において注目されるのか？ それには明確な理由があります。
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div>
+              <div class="bg-white p-5 rounded-lg shadow-sm h-full">
+                <div class="rounded-full bg-pink-100 w-10 h-10 flex items-center justify-center mb-3">
+                  <span class="text-pink-600 font-bold">1</span>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">AIにとって「理解しやすい」言語</h4>
+                <p class="text-gray-700">
+                  SVGもHTMLも、その実体は<strong>テキストベースのコード</strong>です。AIは、PowerPointのような複雑な独自ファイル形式よりも、
+                  構造が明確なコードを読み解き、生成・編集する方が遥かに得意なのです。
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="bg-white p-5 rounded-lg shadow-sm h-full">
+                <div class="rounded-full bg-pink-100 w-10 h-10 flex items-center justify-center mb-3">
+                  <span class="text-pink-600 font-bold">2</span>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">ベクター形式（SVG）の圧倒的メリット</h4>
+                <p class="text-gray-700">
+                  SVGは、点ではなく線や数式で図形を表現する<strong>ベクター形式</strong>。そのため、どれだけ拡大・縮小しても画質が劣化せず、
+                  常にシャープで美しい表示が可能です。さらに、ファイルサイズも比較的軽量です。
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="bg-white p-5 rounded-lg shadow-sm h-full">
+                <div class="rounded-full bg-pink-100 w-10 h-10 flex items-center justify-center mb-3">
+                  <span class="text-pink-600 font-bold">3</span>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">ウェブ標準技術（HTML）の高い拡張性</h4>
+                <p class="text-gray-700">
+                  HTMLは、CSSで見栄えを、JavaScriptで動きやインタラクティブ性を加えることができます。これにより、
+                  静的なスライドを超えた、<strong>動的で、データと連動し、聴衆が操作できる</strong>ような、
+                  表現力豊かなプレゼンテーション体験を構築できます。
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="bg-white p-5 rounded-lg shadow-sm h-full">
+                <div class="rounded-full bg-pink-100 w-10 h-10 flex items-center justify-center mb-3">
+                  <span class="text-pink-600 font-bold">4</span>
+                </div>
+                <h4 class="font-bold text-gray-800 mb-2">プラットフォーム非依存</h4>
+                <p class="text-gray-700">
+                  SVGやHTMLファイルは、特別なソフトウェアなしに、<strong>あらゆるウェブブラウザで表示可能</strong>です。
+                  OSやデバイスの違いを気にする必要がなく、共有も容易です。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-6 text-gray-700">
+            AIの「コード生成能力」と、SVG/HTMLの「構造的な分かりやすさ」「表現力」「普遍性」。
+            この二つが組み合わさることで、「<strong>AIによるプレゼン資料の一撃生成</strong>」という、
+            かつては夢物語だったことが、現実のものとなりつつあるのです。
+          </p>
+        </div>
+
+        <!-- 4-Step Process -->
+        <div class="mb-10">
+          <h3 class="text-2xl font-serif font-bold mb-6 text-center text-gray-800">
+            AIと共創する次世代プレゼン作成プロセス
+          </h3>
+          <p class="text-center text-gray-600 mb-8">概念的な4ステップ</p>
+
+          <!-- Timeline UI Component -->
+          <div
+            class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-pink-400 before:via-pink-500 before:to-pink-600">
+            <!-- Step 1 -->
+            <div class="relative flex items-start md:flex-col md:items-center">
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-pink-500 bg-white text-pink-600 font-bold shadow shrink-0 md:mx-auto z-10">
+                1
+              </div>
+              <div class="ml-8 md:ml-0 md:mt-3">
+                <div class="bg-white p-5 rounded-lg shadow-md md:mx-4">
+                  <h4 class="text-xl font-bold text-pink-600 mb-2">AIへの「設計指示」</h4>
+                  <p class="text-gray-700 mb-3">
+                    ここが最も重要であり、思考OS「TANREN 3Dメソッド」の<strong>X軸（超構造化、超具体化）</strong>と、
+                    第3章で学んだ<strong>プロンプト設計術（6つの必須要素）</strong>がフルに活きる場面です。
+                  </p>
+                  <p class="text-gray-700 mb-2">AIに対して、以下の情報を<strong>具体的かつ構造的に</strong>指示します：</p>
+                  <ul class="space-y-1 ml-6 list-disc text-gray-700">
+                    <li><strong>目的・テーマ:</strong> 何のためのプレゼンか？ 誰に何を伝えたいか？</li>
+                    <li><strong>構成:</strong> 全体の流れ、スライド枚数、各スライドの役割。</li>
+                    <li><strong>コンテンツ:</strong> 盛り込むべきテキスト情報、データ、キーワード。</li>
+                    <li><strong>デザインルール:</strong> レイアウト、配色、タイポグラフィ、視覚要素のスタイル。</li>
+                    <li><strong>出力形式:</strong> SVGファイル、あるいはHTML/CSS/JSファイルの形式。</li>
+                  </ul>
+                  <div class="mt-3 bg-pink-50 p-3 rounded-lg">
+                    <p class="text-gray-700 text-sm">
+                      この「設計指示」の質が、AIが生成する「たたき台」の質を決定づけます。
+                      まさに、AIに<strong>プレゼンテーションの「思考の設計図」</strong>を渡す作業です。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative flex items-start md:flex-col md:items-center">
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-pink-500 bg-white text-pink-600 font-bold shadow shrink-0 md:mx-auto z-10">
+                2
+              </div>
+              <div class="ml-8 md:ml-0 md:mt-3">
+                <div class="bg-white p-5 rounded-lg shadow-md md:mx-4">
+                  <h4 class="text-xl font-bold text-pink-600 mb-2">AIによる「コード生成」</h4>
+                  <p class="text-gray-700 mb-3">
+                    設計指示に基づき、AI（特にコード生成能力に優れたLLMや、専門のAIエージェント）が、
+                    SVGやHTML/CSS/JavaScriptの<strong>コードを自動生成</strong>します。
+                  </p>
+                  <p class="text-gray-700">
+                    AIは、コンテンツ情報を抽出し、構成指示に従って配置し、デザインルールに基づいてスタイルを適用し、
+                    それをコードとしてアウトプットします。AIエディタ（Cursorなど）を使えば、このプロセスを効率化し、
+                    複数スライドの連続生成も可能になります。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative flex items-start md:flex-col md:items-center">
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-pink-500 bg-white text-pink-600 font-bold shadow shrink-0 md:mx-auto z-10">
+                3
+              </div>
+              <div class="ml-8 md:ml-0 md:mt-3">
+                <div class="bg-white p-5 rounded-lg shadow-md md:mx-4">
+                  <h4 class="text-xl font-bold text-pink-600 mb-2">人間による「最終調整」</h4>
+                  <p class="text-gray-700 mb-3">
+                    AIが生成したコード（SVGファイルやHTMLファイル）は、多くの場合、非常に高品質なたたき台となります。
+                    しかし、完璧ではないかもしれません。ここからは、人間の出番です。
+                  </p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                    <div>
+                      <h5 class="font-bold text-gray-800 mb-2">デザインツールでの微調整</h5>
+                      <p class="text-gray-700 text-sm">
+                        生成されたSVGファイルをFigmaなどのデザインツールに読み込み、テキストの改行、要素の配置、
+                        色の微調整など、<strong>人間の感性</strong>に基づいた最終調整を行います。
+                      </p>
+                    </div>
+                    <div>
+                      <h5 class="font-bold text-gray-800 mb-2">AIとの協調編集</h5>
+                      <p class="text-gray-700 text-sm">
+                        微調整の過程で、「このグラフをもっと分かりやすくするには？」など再びAIに相談し、
+                        アイデアやコードの修正案を得ることも可能です。人間とAIが<strong>共創</strong>して完成度を高めていきます。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mt-3 bg-pink-50 p-3 rounded-lg">
+                    <p class="text-gray-700 text-sm">
+                      <strong>ポイント:</strong> このステップは、AIの生成物を鵜呑みにせず、人間の<strong>戦略的・創造的視点</strong>と
+                      <strong>美的感覚</strong>を注入する、極めて重要な工程です。AIにできない「魂入れ」の作業と言えます。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="relative flex items-start md:flex-col md:items-center">
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-pink-500 bg-white text-pink-600 font-bold shadow shrink-0 md:mx-auto z-10">
+                4
+              </div>
+              <div class="ml-8 md:ml-0 md:mt-3">
+                <div class="bg-white p-5 rounded-lg shadow-md md:mx-4">
+                  <h4 class="text-xl font-bold text-pink-600 mb-2">「届ける」</h4>
+                  <p class="text-gray-700 mb-3">
+                    完成したSVG/HTMLベースのプレゼンテーションは、特定のソフトウェアに依存しません。
+                  </p>
+                  <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                    <li><strong>ウェブブラウザ</strong>でそのまま表示・共有できる。</li>
+                    <li>Figmaなどのツールを使えば、高品質な<strong>スライドショー</strong>も可能。</li>
+                    <li>HTML/CSS/JavaScriptを活用すれば、<strong>アニメーション、動画埋め込み、データ連動グラフ、クリック操作</strong>など、
+                      従来の静的なスライドでは不可能だった、<strong>豊かでインタラクティブな体験</strong>を聴衆に提供できる。</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pros and Cons -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-10">
+          <h3 class="text-xl font-bold mb-4 text-pink-700">次世代プレゼンがもたらす「メリット」と乗り越えるべき「課題」</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-bold text-green-600 mb-3 flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                メリット
+              </h4>
+              <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                <li>圧倒的な時間効率</li>
+                <li>デザイン品質の向上・均一化</li>
+                <li>メンテナンス性・再利用性の高さ</li>
+                <li>軽量・高画質</li>
+                <li>表現力の拡張（動的・インタラクティブ）</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-red-600 mb-3 flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                課題
+              </h4>
+              <ul class="space-y-2 ml-6 list-disc text-gray-700">
+                <li>初期学習コスト（ツールの習得、基本的なコード理解）</li>
+                <li>AIの限界（ニュアンス、倫理）</li>
+                <li>ツールの進化への追随</li>
+                <li>複雑なインタラクション実装の難易度</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="mt-6 text-gray-700">
+            成功の鍵は、これらのメリットを最大化し、課題を乗り越えるために、
+            <strong>人間とAIの役割分担を明確にし、共創プロセスを効果的に設計・運用していく</strong>ことにあります。
+          </p>
+        </div>
+
+        <!-- Time and Level Axes -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-10">
+          <h3 class="text-xl font-bold mb-4 text-pink-700">時間軸（Y軸）とレベル（Z軸）で見る、プレゼンの未来</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Y軸（時間軸）</h4>
+              <div class="space-y-3">
+                <div class="flex">
+                  <div class="w-20 shrink-0 font-bold text-gray-600">過去</div>
+                  <div class="text-gray-700">手書きフリップ</div>
+                </div>
+                <div class="flex">
+                  <div class="w-20 shrink-0 font-bold text-gray-600">現代前半</div>
+                  <div class="text-gray-700">PowerPointによる編集中心</div>
+                </div>
+                <div class="flex">
+                  <div class="w-20 shrink-0 font-bold text-pink-600">現代後半</div>
+                  <div class="text-gray-700">AI×SVG/HTMLによる生成中心</div>
+                </div>
+                <div class="flex">
+                  <div class="w-20 shrink-0 font-bold text-purple-600">未来</div>
+                  <div class="text-gray-700">リアルタイム・オーディエンス最適化、AR/VRによる空間プレゼン</div>
+                </div>
+              </div>
+              <p class="mt-3 text-gray-700">
+                人間の役割は「表現者」から「戦略家・演出家」へとシフトしていきます。
+              </p>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 mb-3">Z軸（レベル）</h4>
+              <ul class="space-y-4 text-gray-700">
+                <li class="flex items-start">
+                  <span
+                    class="inline-flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full mr-3 mt-0.5 text-sm font-bold">1</span>
+                  <div>
+                    <p><strong>Lv1</strong>: AIにテキスト案や構成案を出してもらう</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span
+                    class="inline-flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full mr-3 mt-0.5 text-sm font-bold">2</span>
+                  <div>
+                    <p><strong>Lv2</strong>: AIにSVG/HTMLのたたき台を生成させ、Figma等で自分で調整する</p>
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span
+                    class="inline-flex items-center justify-center w-6 h-6 bg-purple-200 rounded-full mr-3 mt-0.5 text-sm font-bold">3</span>
+                  <div>
+                    <p><strong>Lv3</strong>: AIエージェントにインタラクティブな次世代プレゼンコンテンツを共創させる</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conclusion for Section 3 -->
+        <div class="bg-pink-50 p-6 rounded-xl shadow-inner mt-10">
+          <h3 class="text-xl font-bold text-pink-700 mb-4">AIと共に、「伝える力」の新次元へ</h3>
+          <p class="text-gray-700 mb-4">
+            「編集」の呪縛から解放され、AIとの「共創」によって「生成」される次世代のプレゼンテーション。
+            それは、単なる資料作成の効率化ではありません。私たちの「伝える力」そのものを、新たな次元へと引き上げる革命なのです。
+          </p>
+          <p class="text-gray-700">
+            SVGやHTMLといった、一見すると専門的に見える技術も、AIという強力なパートナーがいれば、決して乗り越えられない壁ではありません。
+            思考OS「TANREN 3Dメソッド」で伝えたいことの本質を掴み、構造化し、AIへの「思考の設計図」（プロンプト）を描きましょう。
+            そのプロセスを通じて、あなたはAIと共に、聴衆の心を動かし、行動を促す、かつてないほどパワフルなコミュニケーションを実現できるようになるでしょう。
+          </p>
+        </div>
+
+        <!-- Chapter Conclusion -->
+        <div
+          class="max-w-3xl mx-auto bg-gradient-to-r from-blue-500 to-pink-500 text-white rounded-xl shadow-lg overflow-hidden mt-20">
+          <div class="p-8">
+            <h3 class="text-2xl font-serif font-bold mb-4">第5章を終えて</h3>
+            <p class="mb-4">
+              AIとの共創によるアウトプット革命の世界を、企画立案、文章作成、プレゼンテーション資料作成という3つの重要な領域を通じて探求してきました。
+            </p>
+            <p class="mb-4">
+              次の第6章では、これらのAI共創スキルを、営業、マーケティング、人材育成といった、より具体的なビジネスの現場でどう活かしていくのか、
+              リアルな実践シナリオを通じて探求していきます。あなたの仕事が、AIと共にどう変わるのか？ その変革の最前線へ、共に進みましょう。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <h2 class="text-xl font-bold mb-2">AI超独学法：TANREN 3Dメソッド</h2>
+          <p class="text-gray-400">第5章 実践編1:AI共創によるアウトプット革命</p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#intro" class="hover:text-blue-400 transition-colors">トップへ戻る</a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+        &copy; 2025 AI超独学法：TANREN 3Dメソッド. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Preline UI JS -->
+  <script src="https://cdn.jsdelivr.net/npm/preline/dist/preline.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

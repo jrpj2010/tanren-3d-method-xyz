@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X軸：思考のエンジン（抽象化・構造化・具体化）</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script>
+</head>
+
+<body class="bg-black text-white">
+  <div class="slide"
+    style="width: 1920px; min-height: 1080px; position: relative; overflow: hidden; font-family: 'Noto Sans JP', sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+
+    <!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <svg width="100%" height="100%" class="absolute opacity-10">
+        <defs>
+          <pattern id="hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+            <path d="M25,0 L50,14.5 L50,43.4 L25,57.9 L0,43.4 L0,14.5 Z" fill="none" stroke="rgba(59, 130, 246, 0.2)"
+              stroke-width="0.5" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hexagons)" />
+      </svg>
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-transparent"></div>
+    </div>
+
+    <!-- Page Title -->
+    <div class="absolute top-12 left-0 right-0 text-center z-10">
+      <h1
+        class="text-6xl font-bold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-500">
+        X軸：思考のエンジン
+      </h1>
+      <h2 class="text-3xl font-medium text-blue-200/90">抽象化・構造化・具体化</h2>
+      <div class="w-32 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mt-3"></div>
+    </div>
+
+    <!-- Central Cycle Visualization -->
+    <div id="cycle-visualization" class="absolute" style="width: 600px; height: 600px; left: 660px; top: 180px;"></div>
+
+    <!-- Three Sections -->
+    <div class="absolute inset-0 flex justify-between px-16 pt-64 pb-20 z-10">
+      <!-- Left Section: Abstraction -->
+      <div class="w-[560px]">
+        <div
+          class="bg-gradient-to-b from-blue-900/40 to-blue-800/20 backdrop-blur-sm p-6 rounded-xl border border-blue-700/30">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center mr-3">
+              <i class="fas fa-lightbulb text-lg"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-blue-300">抽象化（Abstraction）</h2>
+          </div>
+
+          <div class="space-y-4 mb-6">
+            <div>
+              <div class="font-semibold text-blue-200">定義</div>
+              <div class="text-blue-100/80 text-sm">
+                複雑な事象から本質的特徴や普遍的法則を抜き出す思考プロセス
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold text-blue-200">アプローチ</div>
+              <ul class="text-blue-100/80 text-sm list-disc pl-5 space-y-1">
+                <li>「抽象の梯子」モデル（S.I.ハヤカワ）</li>
+                <li>帰納的方法による概念形成</li>
+                <li>具体から抽象への漸進的移行</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- AI Enhancement -->
+          <div class="bg-gradient-to-r from-blue-900/60 to-indigo-900/60 p-4 rounded-lg border border-blue-500/30">
+            <div class="flex items-center">
+              <i class="fas fa-robot text-xl text-blue-400 mr-2"></i>
+              <h3 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-indigo-300">
+                超抽象化
+              </h3>
+            </div>
+            <div class="ml-8 mt-2 text-sm text-blue-100/80">
+              <ul class="list-disc space-y-1">
+                <li>人間の直感を超えた深層パターン抽出</li>
+                <li>複雑データからの本質やメタ法則の発見</li>
+                <li>異分野間の非自明な関連性の検出</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right-Top Section: Structuring -->
+      <div class="w-[560px]">
+        <div
+          class="bg-gradient-to-b from-blue-800/40 to-blue-700/20 backdrop-blur-sm p-6 rounded-xl border border-blue-600/30">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center mr-3">
+              <i class="fas fa-sitemap text-lg"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-blue-200">構造化（Structuring）</h2>
+          </div>
+
+          <div class="space-y-4 mb-6">
+            <div>
+              <div class="font-semibold text-blue-200">定義</div>
+              <div class="text-blue-100/80 text-sm">
+                情報や概念を関係性に基づいて整理し、秩序だった体系にする思考プロセス
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold text-blue-200">応用フレームワーク</div>
+              <div class="grid grid-cols-3 gap-2 mt-2">
+                <div class="p-2 bg-blue-800/30 rounded text-center text-sm">MECE</div>
+                <div class="p-2 bg-blue-800/30 rounded text-center text-sm">ロジックツリー</div>
+                <div class="p-2 bg-blue-800/30 rounded text-center text-sm">ピラミッド構造</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Enhancement -->
+          <div class="bg-gradient-to-r from-blue-800/60 to-indigo-800/60 p-4 rounded-lg border border-blue-500/30">
+            <div class="flex items-center">
+              <i class="fas fa-robot text-xl text-blue-400 mr-2"></i>
+              <h3 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-indigo-300">
+                超構造化
+              </h3>
+            </div>
+            <div class="ml-8 mt-2 text-sm text-blue-100/80">
+              <ul class="list-disc space-y-1">
+                <li>超複雑システムの多層的モデル化</li>
+                <li>動的で相互依存的な関係性の可視化</li>
+                <li>ナレッジグラフと生成AIの融合</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section: Concretization -->
+    <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-[800px] z-10">
+      <div
+        class="bg-gradient-to-b from-blue-700/40 to-blue-600/20 backdrop-blur-sm p-6 rounded-xl border border-blue-500/30">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-blue-300 flex items-center justify-center mr-3">
+            <i class="fas fa-cubes text-lg text-blue-900"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-blue-200">具体化（Concretization）</h2>
+        </div>
+
+        <div class="flex space-x-6">
+          <div class="space-y-4 flex-1">
+            <div>
+              <div class="font-semibold text-blue-200">定義</div>
+              <div class="text-blue-100/80 text-sm">
+                抽象的アイデアを詳細で実用的な形に落とし込み、実装するプロセス
+              </div>
+            </div>
+            <div>
+              <div class="font-semibold text-blue-200">応用例</div>
+              <div class="flex space-x-2 mt-2">
+                <div class="p-2 bg-blue-700/30 rounded text-center text-sm flex-1">プロトタイピング</div>
+                <div class="p-2 bg-blue-700/30 rounded text-center text-sm flex-1">アクションプラン</div>
+                <div class="p-2 bg-blue-700/30 rounded text-center text-sm flex-1">ストーリー</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Enhancement -->
+          <div
+            class="bg-gradient-to-r from-blue-700/60 to-indigo-700/60 p-4 rounded-lg border border-blue-400/30 flex-1">
+            <div class="flex items-center">
+              <i class="fas fa-robot text-xl text-blue-300 mr-2"></i>
+              <h3 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-indigo-300">
+                超具体化
+              </h3>
+            </div>
+            <div class="ml-8 mt-2 text-sm text-blue-100/80">
+              <ul class="list-disc space-y-1">
+                <li>アイデアの精緻かつ迅速な実装</li>
+                <li>テキスト・画像・音声・コードの生成</li>
+                <li>「ポン出し」によるプロトタイプ高速化</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="absolute bottom-6 right-10 text-sm text-blue-300/50">
+      思考3Dメソッド[XYZ] | 4
+    </div>
+  </div>
+
+  <script>
+    // D3.js script for cycle visualization
+    document.addEventListener('DOMContentLoaded', function () {
+      // Set up SVG container
+      const svg = d3.select("#cycle-visualization")
+        .append("svg")
+        .attr("width", 600)
+        .attr("height", 600)
+        .append("g")
+        .attr("transform", "translate(300, 300)");
+
+      // Cycle data
+      const cycleData = [
+        { id: "abstraction", name: "抽象化", color: "#3B82F6", icon: "\uf0eb" },  // lightbulb
+        { id: "structuring", name: "構造化", color: "#60A5FA", icon: "\uf0e8" },  // sitemap
+        { id: "concretization", name: "具体化", color: "#93C5FD", icon: "\uf1b3" }  // cubes
+      ];
+
+      const radius = 180;
+
+      // Draw outer circle
+      svg.append("circle")
+        .attr("r", radius + 20)
+        .attr("fill", "none")
+        .attr("stroke", "rgba(59, 130, 246, 0.2)")
+        .attr("stroke-width", 2)
+        .attr("stroke-dasharray", "4,4");
+
+      // Draw inner circle
+      svg.append("circle")
+        .attr("r", radius - 40)
+        .attr("fill", "none")
+        .attr("stroke", "rgba(59, 130, 246, 0.15)")
+        .attr("stroke-width", 1.5);
+
+      // Draw cycle elements
+      const angle = 2 * Math.PI / cycleData.length;
+
+      // Add cycle nodes
+      const nodes = svg.selectAll(".cycle-node")
+        .data(cycleData)
+        .enter()
+        .append("g")
+        .attr("class", "cycle-node")
+        .attr("transform", (d, i) => `translate(${radius * Math.cos(i * angle - Math.PI / 2)}, ${radius * Math.sin(i * angle - Math.PI / 2)})`);
+
+      // Add circles for nodes
+      nodes.append("circle")
+        .attr("r", 50)
+        .attr("fill", d => d.color)
+        .attr("opacity", 0.2)
+        .attr("stroke", d => d.color)
+        .attr("stroke-width", 2);
+
+      nodes.append("circle")
+        .attr("r", 40)
+        .attr("fill", d => d.color)
+        .attr("opacity", 0.3);
+
+      // Add icons
+      nodes.append("text")
+        .attr("font-family", "FontAwesome")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .attr("font-size", "24px")
+        .attr("fill", "white")
+        .text(d => d.icon);
+
+      // Add labels
+      nodes.append("text")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .attr("font-size", "16px")
+        .attr("font-weight", "bold")
+        .attr("y", 70)
+        .attr("fill", "white")
+        .text(d => d.name);
+
+      // Draw arrows connecting the nodes
+      const arrowData = [
+        { source: 0, target: 1 },
+        { source: 1, target: 2 },
+        { source: 2, target: 0 }
+      ];
+
+      // Calculate positions for arrows
+      const arrowPositions = arrowData.map(d => {
+        const sourceAngle = d.source * angle - Math.PI / 2;
+        const targetAngle = d.target * angle - Math.PI / 2;
+
+        // Control points for curves
+        const midAngle = (sourceAngle + targetAngle) / 2;
+        const controlRadius = radius * 0.8;
+
+        return {
+          source: {
+            x: radius * Math.cos(sourceAngle) * 0.8,
+            y: radius * Math.sin(sourceAngle) * 0.8
+          },
+          target: {
+            x: radius * Math.cos(targetAngle) * 0.8,
+            y: radius * Math.sin(targetAngle) * 0.8
+          },
+          control: {
+            x: controlRadius * Math.cos(midAngle + (d.target - d.source > 1 ? -0.5 : 0.5)),
+            y: controlRadius * Math.sin(midAngle + (d.target - d.source > 1 ? -0.5 : 0.5))
+          }
+        };
+      });
+
+      // Create arrow markers
+      svg.append("defs").selectAll("marker")
+        .data(["arrow-blue", "arrow-mid-blue", "arrow-light-blue"])
+        .enter().append("marker")
+        .attr("id", d => d)
+        .attr("viewBox", "0 -5 10 10")
+        .attr("refX", 10)
+        .attr("refY", 0)
+        .attr("markerWidth", 8)
+        .attr("markerHeight", 8)
+        .attr("orient", "auto")
+        .append("path")
+        .attr("d", "M0,-5L10,0L0,5")
+        .attr("fill", (d, i) => [cycleData[0].color, cycleData[1].color, cycleData[2].color][i]);
+
+      // Draw the path with quadratic curves
+      svg.selectAll(".connection")
+        .data(arrowPositions)
+        .enter()
+        .append("path")
+        .attr("class", "connection")
+        .attr("d", d => `M${d.source.x},${d.source.y} Q${d.control.x},${d.control.y} ${d.target.x},${d.target.y}`)
+        .attr("fill", "none")
+        .attr("stroke", (d, i) => cycleData[arrowData[i].source].color)
+        .attr("stroke-width", 2.5)
+        .attr("marker-end", (d, i) => `url(#arrow-${i === 0 ? "blue" : i === 1 ? "mid-blue" : "light-blue"})`)
+        .attr("opacity", 0.7);
+
+      // Central AI node
+      const centerGroup = svg.append("g")
+        .attr("class", "center-node");
+
+      centerGroup.append("circle")
+        .attr("r", 65)
+        .attr("fill", "url(#ai-gradient)")
+        .attr("opacity", 0.2);
+
+      centerGroup.append("circle")
+        .attr("r", 55)
+        .attr("fill", "url(#ai-gradient)")
+        .attr("opacity", 0.3);
+
+      // Define gradient
+      const gradient = svg.append("defs")
+        .append("radialGradient")
+        .attr("id", "ai-gradient")
+        .attr("cx", "50%")
+        .attr("cy", "50%")
+        .attr("r", "50%");
+
+      gradient.append("stop")
+        .attr("offset", "0%")
+        .attr("stop-color", "#3B82F6");
+
+      gradient.append("stop")
+        .attr("offset", "100%")
+        .attr("stop-color", "#6366F1");
+
+      // Add AI icon
+      centerGroup.append("text")
+        .attr("font-family", "FontAwesome")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .attr("font-size", "30px")
+        .attr("fill", "white")
+        .text("\uf544");  // brain icon
+
+      centerGroup.append("text")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .attr("font-size", "18px")
+        .attr("font-weight", "bold")
+        .attr("y", 40)
+        .attr("fill", "white")
+        .text("AI");
+
+      // Animate cycle - subtle pulse
+      function pulseAnimation() {
+        nodes.selectAll("circle")
+          .transition()
+          .duration(1500)
+          .attr("opacity", 0.5)
+          .transition()
+          .duration(1500)
+          .attr("opacity", function () {
+            return d3.select(this).attr("r") === "50" ? 0.2 : 0.3;
+          })
+          .on("end", pulseAnimation);
+
+        centerGroup.selectAll("circle")
+          .transition()
+          .duration(2000)
+          .attr("opacity", 0.6)
+          .transition()
+          .duration(2000)
+          .attr("opacity", function () {
+            return d3.select(this).attr("r") === "65" ? 0.2 : 0.3;
+          })
+          .on("end", () => { });
+      }
+
+      pulseAnimation();
+    });
+  </script>
+</body>
+
+</html>
