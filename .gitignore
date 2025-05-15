@@ -1,6 +1,21 @@
 # Node.js dependencies
 node_modules/
 
+# Next.js
+.next/
+out/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Docker
+docker-compose.override.yml
+
+# Archives
+*.zip
+
 # Logs
 logs
 *.log
@@ -26,6 +41,8 @@ out
 ._*
 .Spotlight-V100
 .Trashes
+ehthumbs.db
+Thumbs.db
 
 # VS Code specific files
 .vscode/*
@@ -77,3 +94,7 @@ vibecoding-site/
 .specstory/.what-is-this.md
 
 **/.claude/settings.local.json
+
+# Specific to this project structure
+商談管理/警視庁様/app/conversation-analysis-system/node_modules/
+商談管理/警視庁様/app/conversation-analysis-system/.next/

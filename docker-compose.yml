@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./商談管理/警視庁様/app
+      dockerfile: Dockerfile
+    ports:
+      - "8088:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - PORT=3001
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      # <--- この backend サービスに networks を追加
+      - app-network
+
+  conversation-analysis-system:
+    build:
+      context: ./商談管理/警視庁様/app/conversation-analysis-system
+      dockerfile: Dockerfile
+    ports:
+      - "8089:80"
+    depends_on:
+      - backend
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    volumes:
+      - ./商談管理/警視庁様/app/conversation-analysis-system/app:/usr/share/nginx/html
+      - ./商談管理/警視庁様/app/conversation-analysis-system/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      # <--- この conversation-analysis-system サービスにも networks を追加
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

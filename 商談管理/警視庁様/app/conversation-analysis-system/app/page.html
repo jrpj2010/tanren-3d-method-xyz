@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>思考3DXYZ会話分析システム</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Font Awesome Kit代替 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <style>
+    /* 追加のカスタムスタイル */
+    .bg-gradient-to-br {
+      background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+    }
+
+    .from-slate-50 {
+      --tw-gradient-from: #f8fafc;
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(248, 250, 252, 0));
+    }
+
+    .to-blue-50 {
+      --tw-gradient-to: #eff6ff;
+    }
+
+    .backdrop-blur-md {
+      backdrop-filter: blur(12px);
+    }
+
+    .bg-gradient-to-r {
+      background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    }
+
+    .from-blue-600 {
+      --tw-gradient-from: #2563eb;
+      --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(37, 99, 235, 0));
+    }
+
+    .to-indigo-600 {
+      --tw-gradient-to: #4f46e5;
+    }
+
+    /* タグ専用のスタイル */
+    .tag-gutaika {
+      background-color: #38b2ac;
+      color: white;
+    }
+
+    .tag-chushoka {
+      background-color: #805ad5;
+      color: white;
+    }
+
+    .tag-kouzouka {
+      background-color: #38a169;
+      color: white;
+    }
+
+    .tag-kako {
+      background-color: #dd6b20;
+      color: white;
+    }
+
+    .tag-gendai {
+      background-color: #38a169;
+      color: white;
+    }
+
+    .tag-mirai {
+      background-color: #3182ce;
+      color: white;
+    }
+
+    .tag-shokyu {
+      background-color: #d53f8c;
+      color: white;
+    }
+
+    .tag-chukyu {
+      background-color: #d69e2e;
+      color: white;
+    }
+
+    .tag-jokyu {
+      background-color: #4a5568;
+      color: white;
+    }
+
+    /* 設定モーダル */
+    .settings-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 50;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .settings-content {
+      background-color: white;
+      padding: 24px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+  <!-- ヘッダー -->
+  <header class="sticky top-0 z-10 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <div
+          class="h-10 w-10 rounded-lg bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center">
+          <span class="text-white font-bold text-xl">3D</span>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold text-slate-800">思考3DXYZ分析</h1>
+          <p class="text-sm text-slate-500">コミュニケーション戦略分析ツール</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="settingsButton"
+          class="flex items-center gap-1 px-3 py-1.5 rounded-md border border-slate-300 text-slate-700 text-sm bg-white hover:bg-slate-50">
+          <i class="fas fa-cog h-4 w-4"></i>
+          <span class="hidden sm:inline">設定</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
+    <!-- サイドバー -->
+    <div class="w-full lg:w-80 flex-shrink-0">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 p-4">
+          <h2 class="text-white font-bold text-lg">トーク分析ナビ</h2>
+          <p class="text-blue-100 text-sm mt-1">会話の深層を可視化</p>
+        </div>
+
+        <div class="p-4 border-b border-slate-200">
+          <h3 class="font-medium text-slate-700 mb-3 flex items-center">
+            <span
+              class="h-5 w-5 rounded-full bg-blue-100 text-blue-600 inline-flex items-center justify-center mr-2 text-xs">
+              1
+            </span>
+            会話テーマ一覧
+          </h3>
+          <div class="text-sm text-slate-500 pl-7 italic">スクリプト分析待ち...</div>
+        </div>
+
+        <div class="p-4">
+          <h3 class="font-medium text-slate-700 mb-3">XYZタグ凡例</h3>
+
+          <div class="space-y-4">
+            <div>
+              <h4 class="text-sm font-medium text-slate-600 mb-2">X軸 (思考の型)</h4>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <span
+                    class="tag-gutaika inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium">具体化</span>
+                  <span class="text-xs text-slate-600">具体的な事例、詳細な説明</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="tag-chushoka inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium">抽象化</span>
+                  <span class="text-xs text-slate-600">概念、全体像、大局的視点</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="tag-kouzouka inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium">構造化</span>
+                  <span class="text-xs text-slate-600">仕組み、体系、関係性の整理</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-sm font-medium text-slate-600 mb-2">Y軸 (時間軸)</h4>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <span class="tag-kako inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium">過去</span>
+                  <span class="text-xs text-slate-600">経験、歴史、以前の出来事</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="tag-gendai inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium">現代</span>
+                  <span class="text-xs text-slate-600">現状、課題、今の状況</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="tag-mirai inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium">未来</span>
+                  <span class="text-xs text-slate-600">予測、展望、将来の計画</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-sm font-medium text-slate-600 mb-2">Z軸 (知識レベル)</h4>
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <span
+                    class="tag-shokyu inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium">初級</span>
+                  <span class="text-xs text-slate-600">基礎知識、入門レベル</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="tag-chukyu inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium">中級</span>
+                  <span class="text-xs text-slate-600">応用知識、ある程度の経験</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span
+                    class="tag-jokyu inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium">上級</span>
+                  <span class="text-xs text-slate-600">専門知識、高度な知見</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div class="flex-grow">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-6">
+        <div class="p-6">
+          <h2 class="text-2xl font-bold text-slate-800 mb-1">会話分析＆フィードバック</h2>
+          <p class="text-slate-500 mb-6">思考3DXYZメソッドによるコミュニケーション戦略分析</p>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-medium text-slate-700 flex items-center gap-2">
+                  <span
+                    class="h-6 w-6 rounded-full bg-blue-100 text-blue-600 inline-flex items-center justify-center text-xs">
+                    1
+                  </span>
+                  トークスクリプト入力
+                </h3>
+              </div>
+              <div class="bg-slate-50 rounded-lg p-4 border border-slate-200">
+                <textarea id="scriptInput"
+                  class="min-h-[150px] w-full px-3 py-2 rounded-md bg-white border-slate-300 focus:border-blue-500 focus:ring-blue-500"
+                  placeholder="会話内容をタイムスタンプ付きで入力してください。例: [01:01:21.338] 話者A: こんにちは"></textarea>
+                <div class="mt-4 flex justify-end">
+                  <button id="analyzeButton"
+                    class="py-2 px-4 rounded-md bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white flex gap-2 items-center">
+                    <i class="fas fa-search h-4 w-4"></i>
+                    分析実行
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="p-6">
+          <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center justify-between">
+            <span>分析結果</span>
+            <span
+              class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-slate-300 text-slate-500">
+              待機中
+            </span>
+          </h2>
+
+          <div
+            class="bg-slate-50 rounded-lg p-8 border border-dashed border-slate-300 flex flex-col items-center justify-center text-center">
+            <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+              <i class="fas fa-chevron-right h-8 w-8 text-blue-600"></i>
+            </div>
+            <h3 class="text-lg font-medium text-slate-700 mb-2">分析を開始しましょう</h3>
+            <p class="text-slate-500 max-w-md">
+              トークスクリプトを入力して「分析実行」ボタンをクリックすると、思考3DXYZメソッドによる分析結果が表示されます。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-slate-800 text-slate-300 py-6 mt-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <p class="text-sm">© 2024 AI Conversation Analysis Project</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-4">
+          <div class="text-xs px-3 py-1 rounded-full bg-slate-700">API準備完了</div>
+          <div class="text-xs px-3 py-1 rounded-full bg-slate-700 whitespace-nowrap">モデル: gemini-2.5-flash-preview-04-17
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 設定モーダル -->
+  <div id="settingsModal" class="settings-modal">
+    <div class="settings-content">
+      <h2 class="text-xl font-bold text-slate-800 mb-4">設定</h2>
+
+      <div class="mb-4">
+        <label for="apiKeyInput" class="block text-sm font-medium text-slate-700 mb-1">Gemini API キー</label>
+        <input type="text" id="apiKeyInput"
+          class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="APIキーを入力してください">
+      </div>
+
+      <div class="mb-6">
+        <label for="modelSelect" class="block text-sm font-medium text-slate-700 mb-1">使用モデル</label>
+        <select id="modelSelect"
+          class="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="gemini-2.5-pro-preview-05-06">gemini-2.5-pro-preview-05-06 (高性能)</option>
+          <option value="gemini-2.5-flash-preview-04-17" selected>gemini-2.5-flash-preview-04-17 (デフォルト)</option>
+        </select>
+      </div>
+
+      <div class="flex justify-end gap-2">
+        <button id="closeSettingsButton"
+          class="px-4 py-2 border border-slate-300 rounded-md text-slate-700 hover:bg-slate-50">キャンセル</button>
+        <button id="saveSettingsButton"
+          class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // バックエンドAPI連携機能
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('思考3DXYZ会話分析システム 読み込み完了');
+
+      const settingsButton = document.getElementById('settingsButton');
+      const settingsModal = document.getElementById('settingsModal');
+      const closeSettingsButton = document.getElementById('closeSettingsButton');
+      const saveSettingsButton = document.getElementById('saveSettingsButton');
+      const apiKeyInput = document.getElementById('apiKeyInput');
+      const modelSelect = document.getElementById('modelSelect');
+      const analyzeButton = document.getElementById('analyzeButton');
+      const scriptInput = document.getElementById('scriptInput');
+
+      // 設定を読み込む
+      const savedApiKey = localStorage.getItem('geminiApiKey_v3') || '';
+      const savedModel = localStorage.getItem('geminiModel_v3') || 'gemini-2.5-flash-preview-04-17';
+
+      apiKeyInput.value = savedApiKey;
+      modelSelect.value = savedModel;
+
+      // 設定モーダルを開く
+      settingsButton.addEventListener('click', function () {
+        settingsModal.style.display = 'flex';
+      });
+
+      // 設定モーダルを閉じる
+      closeSettingsButton.addEventListener('click', function () {
+        settingsModal.style.display = 'none';
+      });
+
+      // 背景クリックで閉じる
+      settingsModal.addEventListener('click', function (event) {
+        if (event.target === settingsModal) {
+          settingsModal.style.display = 'none';
+        }
+      });
+
+      // 設定を保存
+      saveSettingsButton.addEventListener('click', function () {
+        localStorage.setItem('geminiApiKey_v3', apiKeyInput.value);
+        localStorage.setItem('geminiModel_v3', modelSelect.value);
+        alert('設定を保存しました');
+        settingsModal.style.display = 'none';
+        updateFooterStatus();
+      });
+
+      // フッターステータス更新
+      function updateFooterStatus() {
+        const apiStatusElement = document.querySelector('footer .rounded-full:first-child');
+        const modelNameElement = document.querySelector('footer .rounded-full:last-child');
+
+        const apiKey = localStorage.getItem('geminiApiKey_v3');
+        const modelName = localStorage.getItem('geminiModel_v3') || 'gemini-2.5-flash-preview-04-17';
+
+        if (apiKey && apiKey.trim() !== '') {
+          apiStatusElement.textContent = 'API準備完了';
+          apiStatusElement.classList.add('bg-green-700');
+          apiStatusElement.classList.remove('bg-slate-700');
+        } else {
+          apiStatusElement.textContent = 'APIキー未設定';
+          apiStatusElement.classList.add('bg-red-700');
+          apiStatusElement.classList.remove('bg-slate-700', 'bg-green-700');
+        }
+
+        modelNameElement.textContent = `モデル: ${modelName}`;
+      }
+
+      // 初期表示時にフッターステータスを更新
+      updateFooterStatus();
+
+      // 分析実行ボタン
+      analyzeButton.addEventListener('click', function () {
+        const scriptText = scriptInput.value.trim();
+        if (!scriptText) {
+          alert('トークスクリプトを入力してください');
+          return;
+        }
+
+        // APIキーチェック
+        const apiKey = localStorage.getItem('geminiApiKey_v3');
+        if (!apiKey || apiKey.trim() === '') {
+          alert('APIキーが設定されていません。設定ボタンからAPIキーを入力してください。');
+          // デモモードで実行
+          console.log('APIキーが設定されていないため、デモモードで実行します');
+          demoData.activateSample();
+          return;
+        }
+
+        // 分析開始 - ローディング表示
+        const resultSection = document.querySelector('.bg-slate-50.rounded-lg.p-8.border.border-dashed');
+        resultSection.innerHTML = `
+          <div class="flex flex-col items-center justify-center">
+            <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4 animate-pulse">
+              <i class="fas fa-sync-alt fa-spin h-8 w-8 text-blue-600"></i>
+            </div>
+            <h3 class="text-lg font-medium text-slate-700 mb-2">分析処理中...</h3>
+            <p class="text-slate-500">しばらくお待ちください</p>
+          </div>
+        `;
+
+        // ステータスバッジを「処理中」に変更
+        const statusBadge = document.querySelector('h2.text-2xl.font-bold.text-slate-800.mb-6 span');
+        statusBadge.textContent = '処理中';
+        statusBadge.classList.remove('border-slate-300', 'text-slate-500');
+        statusBadge.classList.add('bg-blue-500', 'text-white', 'border-blue-500');
+
+        // スクリプトをパース
+        const parsedScript = parseScript(scriptText);
+
+        // スピーカーブロックに変換
+        const speakerBlocks = parseScriptToSpeakerBlocks(parsedScript);
+
+        // 実際のAPI呼び出し処理
+        try {
+          const apiKey = localStorage.getItem('geminiApiKey_v3');
+          const modelName = modelSelect.value;
+
+          // 構造分析API呼び出し (バックエンド経由)
+          fetch('/api/structure', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              apiKey: apiKey,
+              modelName: modelName,
+              speakerBlocks: speakerBlocks
+            })
+          })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error(`構造分析APIエラー: ${response.status} ${response.statusText}`);
+              }
+              return response.json();
+            })
+            .then(structuredData => {
+              const thematicChunks = structuredData;
+
+              if (!thematicChunks || !Array.isArray(thematicChunks) || thematicChunks.length === 0) {
+                throw new Error('構造分析結果が空か、期待される形式ではありません。');
+              }
+
+              // 各テーマの詳細分析
+              const themeAnalysisPromises = thematicChunks.map(theme => {
+                const speakerBlocksInTheme = theme.speaker_block_ids
+                  .map(id => speakerBlocks.find(b => b.blockId === id))
+                  .filter(b => b);
+
+                // テーマに関連する会話内容を整形
+                const themeConversationText = speakerBlocksInTheme.map(block => {
+                  return `【${block.speaker}】: ${block.messages.join(' ')}`;
+                }).join('\n\n');
+
+                // テーマ分析プロンプト
+                const themePrompt = `
+あなたは思考3DXYZメソッドに基づく会話分析の専門家です。
+特定のテーマに関する会話を受け取り、X軸（思考の型）、Y軸（時間軸）、Z軸（知識レベル）の観点から分析してください。
+
+■テーマ: ${theme.theme_title}
+
+■会話内容:
+${themeConversationText}
+
+■分析指示:
+以下の思考3DXYZ分析フレームワークに基づいて、このテーマの会話を分析してください。
+
+1. X軸（思考の型）分析:
+   - 具体化: 具体的事例、詳細な説明、現実の例示
+   - 抽象化: 概念、全体像、大局的視点
+   - 構造化: 仕組み、体系、関係性の整理
+
+2. Y軸（時間軸）分析:
+   - 過去: 経験、歴史、以前の出来事
+   - 現代: 現状、課題、今の状況
+   - 未来: 予測、展望、将来の計画
+
+3. Z軸（知識レベル）分析:
+   - 初級: 基礎知識、入門レベル
+   - 中級: 応用知識、ある程度の経験
+   - 上級: 専門知識、高度な知見
+
+■出力形式:
+分析結果を以下のJSON形式で出力してください。JSONフォーマット以外の出力は含めないでください。
+
+{
+  "theme_id": ${theme.theme_id},
+  "theme_title": "${theme.theme_title}",
+  "theme_summary": "テーマの概要を簡潔に説明",
+  "analysis_X": {
+    "category": "「具体化」「抽象化」「構造化」のいずれか",
+    "reason": "その判断理由（特徴的な表現や内容に基づく説明）"
+  },
+  "analysis_Y": {
+    "category": "「過去」「現代」「未来」のいずれか",
+    "reason": "その判断理由（時間軸に関する特徴的な表現や内容）"
+  },
+  "analysis_Z": {
+    "category": "「初級」「中級」「上級」のいずれか",
+    "reason": "その判断理由（知識レベルを示す専門用語や説明の深さ）"
+  },
+  "communication_feedback": {
+    "evaluation": "「Good」「Neutral」「Needs Improvement」のいずれか",
+    "advice": "コミュニケーションに関するアドバイス",
+    "highlight_points_optional": "特に良かった点（任意・ある場合のみ）",
+    "improvement_points_optional": "改善点（任意・ある場合のみ）"
+  }
+}
+`;
+
+                // テーマ分析API呼び出し (バックエンド経由)
+                return fetch('/api/analyze-theme', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({
+                    apiKey: apiKey,
+                    modelName: modelName,
+                    themeId: theme.theme_id,
+                    themeTitle: theme.theme_title,
+                    speakerBlocksInTheme: speakerBlocksInTheme
+                  })
+                })
+                  .then(response => {
+                    if (!response.ok) {
+                      throw new Error(`テーマ分析APIエラー (ID: ${theme.theme_id}): ${response.status}`);
+                    }
+                    return response.json();
+                  })
+                  .then(analysisResult => {
+                    return analysisResult;
+                  });
+              });
+
+              return Promise.all(themeAnalysisPromises);
+            })
+            .then(themeResults => {
+              // 分析結果を表示
+              displayResults(themeResults);
+
+              // 結果を保存
+              saveAnalysisResults(themeResults, scriptText);
+            })
+            .catch(error => {
+              console.error('API呼び出しエラー:', error);
+              displayError(error);
+
+              // エラー時にデモモードにフォールバック
+              if (confirm('API接続エラーが発生しました。デモモードで表示しますか？')) {
+                demoData.activateSample();
+              }
+            });
+        } catch (error) {
+          console.error('API呼び出しエラー:', error);
+          displayError(error);
+
+          // エラー時にデモモードにフォールバック
+          if (confirm('API接続エラーが発生しました。デモモードで表示しますか？')) {
+            demoData.activateSample();
+          }
+        }
+      });
+
+      // スクリプトパーサー
+      function parseScript(scriptText) {
+        const lines = scriptText.split('\n').filter(line => line.trim() !== '');
+        const parsedUtterances = [];
+        const timeRegex = /^\s*\[(\d{2}:\d{2}:\d{2}(?:\.\d{3})?)\]\s*/;
+        const speakerRegex = /^\s*([^:]+):\s*(.*)$/;
+
+        lines.forEach((line, index) => {
+          let timestamp = null;
+          let remainingLine = line;
+
+          const timeMatch = line.match(timeRegex);
+          if (timeMatch) {
+            timestamp = timeMatch[1];
+            remainingLine = line.substring(timeMatch[0].length);
+          }
+
+          const speakerMatch = remainingLine.match(speakerRegex);
+          if (speakerMatch) {
+            parsedUtterances.push({
+              id_in_script: index,
+              speaker: speakerMatch[1].trim(),
+              message: speakerMatch[2].trim(),
+              timestamp: timestamp
+            });
+          } else if (remainingLine.trim()) {
+            parsedUtterances.push({
+              id_in_script: index,
+              speaker: "不明",
+              message: remainingLine.trim(),
+              timestamp: timestamp
+            });
+          }
+        });
+
+        return parsedUtterances;
+      }
+
+      // 発言ブロック化
+      function parseScriptToSpeakerBlocks(parsedScript) {
+        if (!parsedScript || parsedScript.length === 0) return [];
+
+        const speakerBlocks = [];
+        let currentBlock = null;
+
+        parsedScript.forEach((utterance, index) => {
+          const utteranceTimestamp = utterance.timestamp || `発言ID:${utterance.id_in_script}`;
+
+          if (!currentBlock || currentBlock.speaker !== utterance.speaker) {
+            if (currentBlock) {
+              speakerBlocks.push(currentBlock);
+            }
+
+            currentBlock = {
+              speaker: utterance.speaker,
+              messages: [utterance.message],
+              original_utterance_objects: [utterance],
+              startTime: utteranceTimestamp,
+              endTime: utteranceTimestamp,
+              blockId: speakerBlocks.length
+            };
+          } else {
+            currentBlock.messages.push(utterance.message);
+            currentBlock.original_utterance_objects.push(utterance);
+            currentBlock.endTime = utteranceTimestamp;
+          }
+        });
+
+        if (currentBlock) {
+          speakerBlocks.push(currentBlock);
+        }
+
+        return speakerBlocks;
+      }
+
+      // 結果表示
+      function displayResults(results) {
+        // ステータスバッジを「完了」に変更
+        const statusBadge = document.querySelector('h2.text-2xl.font-bold.text-slate-800.mb-6 span');
+        statusBadge.textContent = '完了';
+        statusBadge.classList.remove('border-slate-300', 'text-slate-500', 'bg-blue-500', 'border-blue-500');
+        statusBadge.classList.add('bg-green-500', 'text-white', 'border-green-500');
+
+        // 結果表示エリア
+        const resultSection = document.querySelector('.bg-slate-50.rounded-lg.p-8.border.border-dashed');
+
+        // テーマリスト更新
+        const themeList = document.querySelector('.text-sm.text-slate-500.pl-7.italic');
+        if (results.length > 0) {
+          let themeListHTML = '';
+          results.forEach((theme, index) => {
+            themeListHTML += `<div class="py-1 pl-7">
+              <a href="#theme-${theme.theme_id}" class="text-blue-600 hover:underline">${theme.theme_title}</a>
+            </div>`;
+          });
+          themeList.className = 'text-sm';
+          themeList.innerHTML = themeListHTML;
+        }
+
+        // 分析結果の表示
+        let resultsHTML = '';
+
+        results.forEach(theme => {
+          resultsHTML += `
+            <div class="mb-8 border border-slate-200 rounded-lg overflow-hidden bg-white" id="theme-${theme.theme_id}">
+              <div class="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 text-white">
+                <h3 class="font-bold text-lg">${theme.theme_title}</h3>
+                <div class="text-sm text-blue-100">テーマID: ${theme.theme_id}</div>
+              </div>
+
+              <div class="p-4">
+                <div class="mb-4 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <h4 class="font-medium text-blue-800 mb-1">テーマ要約</h4>
+                  <p>${theme.theme_summary || '要約なし'}</p>
+                </div>
+
+                <div class="mb-4">
+                  <h4 class="font-medium text-slate-700 mb-2">XYZ分析</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <div class="bg-slate-50 p-3 rounded-lg">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="tag-${theme.analysis_X?.category?.toLowerCase().replace(/[\s超]/g, '') || 'gutaika'} px-2 py-0.5 rounded text-xs font-medium">
+                          X軸: ${theme.analysis_X?.category || '不明'}
+                        </span>
+                      </div>
+                      <p class="text-sm text-slate-600">${theme.analysis_X?.reason || '分析なし'}</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-3 rounded-lg">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="tag-${theme.analysis_Y?.category?.toLowerCase().replace(/[\s超]/g, '') || 'gendai'} px-2 py-0.5 rounded text-xs font-medium">
+                          Y軸: ${theme.analysis_Y?.category || '不明'}
+                        </span>
+                      </div>
+                      <p class="text-sm text-slate-600">${theme.analysis_Y?.reason || '分析なし'}</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-3 rounded-lg">
+                      <div class="flex items-center gap-2 mb-2">
+                        <span class="tag-${theme.analysis_Z?.category?.toLowerCase().replace(/[\s超]/g, '') || 'chukyu'} px-2 py-0.5 rounded text-xs font-medium">
+                          Z軸: ${theme.analysis_Z?.category || '不明'}
+                        </span>
+                      </div>
+                      <p class="text-sm text-slate-600">${theme.analysis_Z?.reason || '分析なし'}</p>
+                    </div>
+                  </div>
+                </div>
+
+                ${theme.communication_feedback ? `
+                <div class="mt-6 border-t border-slate-200 pt-4">
+                  <h4 class="font-medium text-slate-700 mb-2">コミュニケーション評価</h4>
+                  <div class="bg-slate-50 p-3 rounded-lg">
+                    <div class="flex items-start gap-3">
+                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                        ${theme.communication_feedback.evaluation || '評価なし'}
+                      </span>
+                      <p class="text-sm text-slate-600 flex-1">${theme.communication_feedback.advice || 'アドバイスなし'}</p>
+                    </div>
+
+                    ${theme.communication_feedback.highlight_points_optional ? `
+                    <div class="mt-3 bg-green-50 p-3 rounded border-l-3 border-green-500">
+                      <p class="text-sm text-green-800">${theme.communication_feedback.highlight_points_optional}</p>
+                    </div>
+                    ` : ''}
+
+                    ${theme.communication_feedback.improvement_points_optional ? `
+                    <div class="mt-3 bg-red-50 p-3 rounded border-l-3 border-red-500">
+                      <p class="text-sm text-red-800">${theme.communication_feedback.improvement_points_optional}</p>
+                    </div>
+                    ` : ''}
+                  </div>
+                </div>
+                ` : ''}
+              </div>
+            </div>
+          `;
+        });
+
+        // 結果がない場合
+        if (results.length === 0) {
+          resultsHTML = `
+            <div class="flex flex-col items-center justify-center text-center">
+              <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mb-4">
+                <i class="fas fa-exclamation-triangle h-8 w-8 text-yellow-600"></i>
+              </div>
+              <h3 class="text-lg font-medium text-slate-700 mb-2">分析結果がありません</h3>
+              <p class="text-slate-500">会話テーマを特定できませんでした。別のスクリプトで試してください。</p>
+            </div>
+          `;
+        }
+
+        resultSection.innerHTML = resultsHTML;
+      }
+
+      // エラー表示
+      function displayError(error) {
+        // ステータスバッジを「エラー」に変更
+        const statusBadge = document.querySelector('h2.text-2xl.font-bold.text-slate-800.mb-6 span');
+        statusBadge.textContent = 'エラー';
+        statusBadge.classList.remove('border-slate-300', 'text-slate-500', 'bg-blue-500', 'border-blue-500');
+        statusBadge.classList.add('bg-red-500', 'text-white', 'border-red-500');
+
+        // エラー表示
+        const resultSection = document.querySelector('.bg-slate-50.rounded-lg.p-8.border.border-dashed');
+        resultSection.innerHTML = `
+          <div class="flex flex-col items-center justify-center text-center">
+            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-4">
+              <i class="fas fa-exclamation-circle h-8 w-8 text-red-600"></i>
+            </div>
+            <h3 class="text-lg font-medium text-slate-700 mb-2">エラーが発生しました</h3>
+            <p class="text-red-600 mb-2">${error.message}</p>
+            <p class="text-slate-500 text-sm">APIキーが正しいか、ネットワーク接続を確認してください</p>
+          </div>
+        `;
+      }
+
+      // 分析結果を保存
+      function saveAnalysisResults(analysisResults, scriptText) {
+        // ローカルストレージに保存
+        try {
+          const savedResults = localStorage.getItem('savedAnalysisResults') ?
+            JSON.parse(localStorage.getItem('savedAnalysisResults')) : [];
+
+          const newResult = {
+            id: Date.now().toString(),
+            timestamp: new Date().toISOString(),
+            scriptText: scriptText,
+            analysisResults: analysisResults
+          };
+
+          savedResults.push(newResult);
+          localStorage.setItem('savedAnalysisResults', JSON.stringify(savedResults));
+          console.log('分析結果をローカルストレージに保存しました');
+        } catch (error) {
+          console.error('分析結果の保存に失敗しました:', error);
+        }
+      }
+
+      // デモ用データ
+      const demoData = {
+        sampleDataAvailable: true,
+        activateSample: function () {
+          scriptInput.value = `[01:03:20.910] 今石から高師氏、島表氏へTeamsで別途連絡 [会話記]
+[01:03:30.470] 佐藤勝彦: テレビ電話で本人確認するというプロセスがあって、そこで何か顔を偽装しようとするケースがないか気にしています。
+[01:03:45.820] 警察: その通りです。現在この方法が多く使われています。具体的に可能性はあるのでしょうか？
+[01:04:02.150] 佐藤勝彦: 技術的には完全にリアルタイムで顔を入れ替えることが可能です。スマホのカメラから入力した映像をAIで変換してそのまま出力できます。
+[01:04:20.630] 佐藤勝彦: ただし、日本のAI活用レベルはまだ高くありません。高度なフェイクを実現するには相応の技術リテラシーが必要です。顔のフェイク精度は高いものが作れますが、声まで自然に被せるのはまだ難しい部分もあります。
+[01:04:45.300] 佐藤勝彦: 私たちは企業教育の一環でAI技術を扱っており、犯罪を助長するようなソリューションは提供しません。しかし、世の中にはアンダーグラウンドなツール、特に中国製のものが多く存在し、それらを使えば悪用は容易に想像できます。
+[01:05:10.750] 警察: なるほど。具体的にどういったツールがあるのでしょうか？
+[01:05:20.120] 佐藤勝彦: 例えば「DeepFake」と呼ばれる技術があります。これは十分な量の顔画像さえあれば、動画内の人物の顔を別の人物の顔に差し替えられます。最近では、わずか1枚の写真からでもリアルタイムでフェイクを生成できる技術も登場しています。`;
+
+          // 分析ボタンクリックをシミュレート
+          setTimeout(() => {
+            // デモデータを使用した分析結果表示
+            const results = [
+              {
+                theme_id: 1,
+                theme_title: "AI顔偽装技術の現状と脅威",
+                theme_summary: "テレビ電話による本人確認プロセスにおけるAI顔偽装技術の可能性と脅威について、技術的実現性、必要なスキルレベル、および潜在的な悪用シナリオが議論されている。",
+                analysis_X: {
+                  category: "具体化",
+                  reason: "DeepFakeなどの具体的な技術名やツールに言及し、実際の使用シナリオや技術的な詳細（「1枚の写真からでもリアルタイムでフェイク生成」など）を具体的に説明している。"
+                },
+                analysis_Y: {
+                  category: "現代",
+                  reason: "「現在この方法が多く使われています」という発言や、現在のAI技術の状況、現存するツールについて述べており、現在の技術状況と課題を中心に議論している。"
+                },
+                analysis_Z: {
+                  category: "中級",
+                  reason: "単なる基礎知識を超え、「DeepFake」などの専門用語や技術的な詳細に踏み込んでいるが、極めて専門的・技術的な内容（実装方法など）には至っていない中程度の専門性。"
+                },
+                communication_feedback: {
+                  evaluation: "Good",
+                  advice: "技術的な可能性と現実的な制約のバランスが取れた説明ができています。企業倫理に関する立場を明確にしつつ、技術的事実を客観的に伝えている点が適切です。",
+                  highlight_points_optional: "警察の質問に対して具体例を交えながら分かりやすく回答しており、専門知識を持たない相手にも理解しやすい説明ができています。",
+                  improvement_points_optional: null
+                }
+              },
+              {
+                theme_id: 2,
+                theme_title: "日本のAI活用レベルと技術的障壁",
+                theme_summary: "日本における顔偽装技術の活用レベルの現状と、高度なフェイク技術を実現する際の技術的障壁について述べられている。",
+                analysis_X: {
+                  category: "抽象化",
+                  reason: "「日本のAI活用レベル」という抽象的な概念について言及し、全体的な技術普及状況を俯瞰的に述べている。具体的な事例よりも、一般化された技術状況の分析に重点を置いている。"
+                },
+                analysis_Y: {
+                  category: "現代",
+                  reason: "「日本のAI活用レベルはまだ高くありません」など、現在の状況を中心に述べており、過去の経緯や将来予測には特に焦点を当てていない。"
+                },
+                analysis_Z: {
+                  category: "中級",
+                  reason: "AI技術の普及度や技術リテラシーといった専門的な観点から分析しているが、極めて技術的な詳細には踏み込んでいない。AI分野の一般的な知識を持つ人向けの内容である。"
+                },
+                communication_feedback: {
+                  evaluation: "Neutral",
+                  advice: "技術的な制約について説明していますが、「まだ高くありません」「難しい部分もあります」などやや曖昧な表現が見られます。より具体的な指標や例を加えるとさらに説得力が増すでしょう。",
+                  highlight_points_optional: null,
+                  improvement_points_optional: "「日本のAI活用レベル」について言及する際、国際比較や具体的な指標を示すとより説得力が増します。"
+                }
+              }
+            ];
+            displayResults(results);
+          }, 2000);
+
+          // ローディング表示
+          const resultSection = document.querySelector('.bg-slate-50.rounded-lg.p-8.border.border-dashed');
+          resultSection.innerHTML = `
+            <div class="flex flex-col items-center justify-center">
+              <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-4 animate-pulse">
+                <i class="fas fa-sync-alt fa-spin h-8 w-8 text-blue-600"></i>
+              </div>
+              <h3 class="text-lg font-medium text-slate-700 mb-2">分析処理中...</h3>
+              <p class="text-slate-500">しばらくお待ちください</p>
+            </div>
+          `;
+
+          // ステータスバッジを「処理中」に変更
+          const statusBadge = document.querySelector('h2.text-2xl.font-bold.text-slate-800.mb-6 span');
+          statusBadge.textContent = '処理中';
+          statusBadge.classList.remove('border-slate-300', 'text-slate-500');
+          statusBadge.classList.add('bg-blue-500', 'text-white', 'border-blue-500');
+        }
+      };
+    });
+  </script>
+</body>
+
+</html>
